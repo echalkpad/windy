@@ -1,0 +1,182 @@
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:15
+**************************************************/
+
+// @import '../common/common.less';   //公用样式
+
+.mbbody,.mbtitle,.mbnavadd,.mbfooter{display: none;}
+
+.clear {
+  clear: both;
+}
+
+.main_body{
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    
+    h3{
+        width: 96%;
+        height: 45px;
+        font-size: 1.4em;
+        color: #2AC9EC;
+        line-height: 30px;
+        margin-left: 2%;
+        font-weight: 700;
+        margin-top: 20px;
+        border-bottom: 1px solid #ccc;
+        i{
+            font-size: 1.8em;
+        }
+    }
+    .content{
+        .first{
+            p{
+                display: inline-block;
+                color: #aea7d4;
+                margin: 10px 0;
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+            width: 96%;
+            margin: 10px 2%;
+            ul{
+                  display: inline-block;
+                  margin-left: 3%;
+                  width: 100%;
+                a{
+                    li{
+                      float: left;  
+                      color: #666;  
+                      margin-right: 25px;
+                      line-height: 30px;
+                    }
+                    li:hover{color: #6FD0FA !important;}
+                }  
+            }
+        }
+        
+        .second{
+            p{
+                display: inline-block;
+                color: #aea7d4;
+                margin: 10px 0;
+                cursor: pointer;
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+            width: 96%;
+            margin: 10px 2%;
+            .cont{
+                margin-left: 3%;
+                padding-bottom: 25px;
+                p{
+                    display: inline-block;
+                    color: #000;
+                    margin: 10px 0;
+                    cursor: pointer;
+                }
+                p:hover{color: #6FD0FA;}
+                
+                ul{
+                      display: inline-block;
+                      width: 100%;
+                    a{
+                        li{
+                          float: left;
+                          color: #666;  
+                          margin-right: 25px;
+                          line-height: 30px;
+                        }
+                        li:hover{color: #96D5E4 !important;}
+                    }  
+                }
+            }
+            
+        }
+        
+        .third{
+            p{
+                display: inline-block;
+                color: #aea7d4;
+                margin: 10px 0;
+                cursor: pointer;
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+            width: 96%;
+            margin: 10px 2%;
+            ul{
+                  display: inline-block;
+                  width: 100%;
+                  margin-left: 3%;
+                a{
+                    li{
+                      float: left;  
+                      color: #666;  
+                      margin-right: 25px;
+                      line-height: 30px;
+                    }
+                    li:hover{color: #6FD0FA !important;}
+                }  
+            }
+        }
+    }
+}
+
+a, li {
+  transition: 0s !important;
+  -moz-transition: 0s !important;
+  -webkit-transition: 0s !important; 
+  -o-transition: 0s !important;
+  -ms-transition: 0s !important;  
+}
+
+
+.gotop{display: none;}
+
+@media screen and (max-width: 1199px) {
+    .main_body{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 774px) {
+    .gtopttl nav h2{width: 110px;}
+    .webbody,.gtopttl,nav{display: block;}
+    .gtopttl nav ul{width: 350px;}
+}
+@media screen and (max-width: 640px) {
+    .glyphicon{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .mmenu-page{background: #fff;}
+    .main_body{
+        width: 90%;
+    }
+    .mbnavadd{
+        background: rgb(93, 196, 226);
+    }
+    .gotop{display: block;}
+    .webbody,footer{display: none;}
+    .mbbody,.mbtitle,.mbfooter{display: block;}
+}
+
+
+
+
+
+
+
+
+
+
+

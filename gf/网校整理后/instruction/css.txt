@@ -1,0 +1,72 @@
+common
+	=common.less
+	=findpwd.less
+
+course
+	=main.less
+	font
+
+
+页面整理：
+1、gfschool.html
+	删main.css、reset.css
+
+2、login.html  /  register.html  /  findpwd.html
+	删main.css
+	用<link href="css2015/form/login.css" rel="stylesheet" type="text/css">
+
+3、Coursedetail.html
+	删<link href="css2015/login_after.css" rel="stylesheet" type="text/css" />
+	将<link href="css2015/main.css" rel="stylesheet" type="text/css" />改为
+	<link href="css2015/course/main.css" rel="stylesheet" type="text/css" />
+
+4、webmap.html
+	删main.css
+	用<link rel="stylesheet" href="css2015/webmap/webmap.css" />
+
+5、cfanx.html
+	用<link href="css2015/form/cfanx.css" rel="stylesheet" type="text/css">
+
+6、cfa.html
+	删<link href="css2015/main.css" rel="stylesheet" type="text/css" />
+
+7、cfaAll.html / cfa1.html / cfa2.html
+	<link href="css2015/main.css" rel="stylesheet" type="text/css" />改为
+	<link href="css2015/course/main.css" rel="stylesheet" type="text/css" />
+
+8、商城首页/详情/列表.html     +    zhibo.html
+	引入<link href="css2015/common/common.css" rel="stylesheet" type="text/css">
+	       <link href="css2015/css/addLogin.css" rel="stylesheet" type="text/css">
+	（注：列表页需再引用 <link href="css2015/css/aelse.css" rel="stylesheet" type="text/css">）
+	<!--登录End-->
+	       <script src="script2015/jquery.mmenu.min.all.js"></script>
+	       <script type="text/javascript" src="script2015/loginreg/script.js"></script>
+	       <script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+	       <script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+
+
+
+
+所有注册登录js均引用以下路径：
+	<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+	<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+	<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

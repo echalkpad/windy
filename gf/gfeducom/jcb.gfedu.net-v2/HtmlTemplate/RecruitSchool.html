@@ -1,0 +1,38 @@
+<div class="school">
+    <h4>走进高校</h4>
+    $Porschev[0]$
+</div>
+<!-- 当前高亮 -->
+<script type="text/javascript">
+    $(function () {
+        SetSchoolCurrent();
+        $(".school ul li").unbind("mouseover");
+    });
+    function SetSchoolCurrent() {
+
+        $(".school ul li").each(function (index) {
+            if (CompareDate($(this).attr('date'))) {
+                $(this).addClass("selected");
+                $(".school section ol li:eq(" + $(this).index() + ")").addClass("current");
+            }
+        })
+    }
+
+    //date1<date2 返回true
+    function CompareDate(strdate) {
+        var arr = strdate.split("-");
+        var date1 = new Date(arr[0], arr[1], arr[2]);
+        var datetime1 = date1.getTime();
+        var today = new Date();
+        var date2 = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        var datetime2 = date2.getTime();
+
+        if (datetime1 < datetime2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+

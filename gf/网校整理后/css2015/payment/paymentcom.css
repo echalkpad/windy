@@ -1,0 +1,287 @@
+/*
+ * ==> 支付流程公用
+*  author: windy
+*  date: 2015-11-2 17:35
+*********************************************/
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+body {
+  background: #f7f8f8;
+}
+.webbody {
+  display: block !important;
+}
+.webbody .login_after {
+  display: none;
+}
+@media (min-width: 768px) {
+  .webbody .login_after {
+    display: none;
+  }
+}
+/* 头部  */
+.gtopttl h6 {
+  left: 60px;
+}
+.gtopttl h6 span {
+  display: none;
+}
+.gtopttl nav {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+}
+.gtopttl nav a {
+  font-family: '微软雅黑';
+  color: #ffffff;
+  display: inline-block;
+  display: none;
+  height: 50px;
+  font-size: 14px;
+}
+.gtopttl nav a:last-child {
+  display: inline-block;
+}
+.gtopttl nav a i {
+  display: none;
+  border-width: 6px;
+  border-color: transparent transparent #ea3a3c transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  margin-left: -30px;
+}
+.gtopttl nav a em {
+  border-width: 6px;
+  border-color: #cccccc transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 47%;
+  margin-left: 6px;
+}
+.gtopttl section {
+  display: none;
+  background: #ffffff;
+  position: absolute;
+  z-index: 99;
+  padding: 30px 20px;
+  border-top: 1px solid #ea3a3c;
+  border-bottom: 1px solid #ea3a3c;
+}
+.gtopttl section dl {
+  display: block !important;
+  margin-bottom: 30px;
+}
+.gtopttl section dt {
+  border-bottom: 3px solid #cccccc;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+.gtopttl section dt h5 {
+  display: inline-block;
+  height: 100%;
+  border-bottom: 3px solid #ea3a3c;
+  color: #333333;
+}
+.gtopttl section dd {
+  line-height: 20px;
+}
+.gtopttl section dd a {
+  display: inline-block;
+  padding: 10px 22px 0 0;
+  color: #333333;
+  font-size: 12px;
+}
+.gtopttl section dd a:hover {
+  color: #ea3a3c;
+}
+.gtopttl #school {
+  position: relative;
+  margin-left: 30px;
+}
+@media (min-width: 640px) {
+  .gtopttl nav {
+    margin-left: 40px;
+  }
+  .gtopttl nav a {
+    display: inline-block;
+    padding-right: 50px;
+  }
+  .gtopttl #school {
+    margin-left: 0;
+  }
+  .gtopttl section {
+    padding: 30px 0 10px;
+  }
+  .gtopttl section dl {
+    width: 28%;
+    margin: 0 2.6%;
+    height: 200px;
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  .gtopttl h6 span {
+    display: inline-block;
+    float: right;
+  }
+  .gtopttl h6 span a {
+    color: #fff;
+    padding: 0 20px;
+    display: block;
+    float: left;
+  }
+  .gtopttl h6 span a:hover {
+    color: #33b0c4;
+    border-bottom: solid 2px #33b0c4;
+  }
+  .gtopttl nav {
+    margin-left: 0;
+  }
+  .gtopttl section {
+    width: 650px;
+    border: 1px solid #ea3a3c;
+    top: 50px;
+    left: 50%;
+    margin-left: -325px;
+    padding-left: 30px 0 0;
+  }
+  .gtopttl section dl {
+    padding-left: 0;
+    height: 200px;
+  }
+  .gtopttl section dt {
+    display: block;
+    border-left: 0;
+    float: none;
+    font-size: 14px;
+  }
+  .gtopttl section dd a {
+    height: auto;
+    padding: 10px 16px 0 0;
+  }
+}
+@media (min-width: 1200px) {
+  .gtopttl nav {
+    width: auto;
+  }
+  .gtopttl h6 {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .gtopttl section {
+    left: 380px;
+    margin-left: 0;
+  }
+}

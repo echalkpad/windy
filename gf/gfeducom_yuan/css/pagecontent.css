@@ -1,0 +1,859 @@
+/* LESS Document */
+/* LESS Document */
+/* 清除浮动 */
+/*常用颜色*/
+/*常用字号*/
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*边框圆角*/
+/* 圆角  */
+/*配模式定位*/
+/*下阴影*/
+/*弹出窗口半透明灰*/
+/*1200屏*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* 背景自适应 */
+/* 右侧导航 */
+.proaside {
+  display: none;
+}
+@media (min-width: 992px) {
+  .proaside {
+    display: block;
+    float: right;
+    width: 280px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+  }
+}
+/* 左侧课程列表页mb面包屑的出现 */
+.clist_crumb {
+  display: block;
+  padding: 20px 20px 10px;
+  font-size: 14px;
+}
+@media (min-width: 640px) {
+  .clist_crumb {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .clist_crumb {
+    padding: 10px 20px;
+  }
+}
+/* 左侧内容 */
+.procontent {
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  min-height: 1365px;
+  border: 1px solid #dddddd;
+}
+.procontent h1 {
+  font-size: 18px;
+  color: #333333;
+  padding: 20px 10px;
+  text-align: center;
+}
+.procontent .proconinfo {
+  padding: 10px 0;
+  color: #666;
+  text-align: center;
+}
+.procontent .proconinfo time {
+  padding: 0 10px;
+}
+.procontent .proconinfo span {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 15PX;
+}
+.procontent .proconinfo span a {
+  margin-left: 10px;
+  color: #666;
+}
+.procontent .proconinfo span a:hover {
+  color: #C00;
+}
+.procontent .proconinfo span a:active {
+  color: #666;
+}
+.procontent .proconinfo img {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.procontent .article {
+  padding: 15px;
+  background: #f8f8f8;
+  margin: 15px 0;
+  color: #999;
+  line-height: 24px;
+}
+.procontent p {
+  padding-bottom: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.procontent p.proconinfopic {
+  text-align: center;
+}
+.procontent p.proconinfopic img {
+  width: 100%;
+}
+.procontent p a {
+  font-size: 16px;
+  color: #33b0c4;
+}
+.procontent p a:hover {
+  color: #a6946e;
+}
+.procontent h3 {
+  font-size: 18px;
+  color: #333;
+  line-height: 40px;
+  margin: 10px 0;
+}
+.procontent .section {
+  *zoom: 1;
+  background: #f8f8f8;
+  margin: 10px 0;
+  border-top: solid 1px #eee;
+  padding: 10px;
+}
+.procontent .section:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.procontent .section li {
+  width: 50%;
+  float: left;
+}
+.procontent .section a {
+  font-size: 14px;
+  display: block;
+  padding: 10px 0;
+  color: #262626;
+}
+.procontent .section a:hover,
+.procontent .section a:active {
+  color: #666;
+}
+.procontent_clist {
+  padding: 10px 0;
+  min-height: 600px;
+}
+.procontent_tlist {
+  min-height: 600px;
+  padding: 0 !important;
+}
+@media (min-width: 640px) {
+  .procontent_clist {
+    padding: 10px 0 0 !important;
+  }
+  .procontent_clist .listimgtxt1 .img270 {
+    padding-left: 270px;
+  }
+  .procontent_clist .listimgtxt1 dl {
+    padding-right: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .procontent {
+    overflow: hidden;
+    padding: 40px;
+    border-radius: 2px;
+    border: solid 1px #dddddd;
+  }
+  .procontent p.proconinfopic {
+    text-align: center;
+  }
+  .procontent p.proconinfopic img {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .procontent_clist {
+    min-height: 1365px;
+  }
+}
+/* 课程列表页导航内容 */
+.secnavbar {
+  width: 99%;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  margin: 0 auto;
+}
+.secnavbar li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.secnavbar li:hover {
+  border-bottom: 2px solid #006c99;
+  color: #006c99;
+}
+.secnavbar .selected {
+  border-bottom: 2px solid #006c99;
+  color: #006c99;
+}
+.secnavbar .selected a {
+  color: #006c99;
+}
+.secNav h5 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .secNav {
+    padding: 0 40px;
+  }
+  .secnavbar {
+    border: 0;
+    border-bottom: 1px solid #dddddd;
+  }
+  .secnavbar li {
+    font-size: 18px;
+    width: 120px;
+  }
+}
+@media (min-width: 992px) {
+  .secNav h5 {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 22px 5px 5px;
+    font-size: 14px;
+    color: #999999;
+  }
+}
+/* 小图加标题内容 */
+.listimgtxt {
+  *zoom: 1;
+  border-bottom: dashed 1px #dddddd;
+  padding: 20px 0 30px;
+}
+.listimgtxt:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.listimgtxt:hover {
+  background-color: #f0f0f0;
+}
+.listimgtxt img {
+  width: 120px;
+  height: 80px;
+  float: left;
+  padding-left: 20px;
+}
+.listimgtxt .img270 {
+  width: 270px;
+  height: 180px;
+  padding: 20px 0;
+  float: inherit;
+  text-align: center;
+}
+.listimgtxt dl {
+  overflow: hidden;
+  padding: 0 10px;
+}
+.listimgtxt dt a {
+  line-height: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+.listimgtxt dt span {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  padding-bottom: 5px;
+}
+.listimgtxt dd {
+  font-size: 0;
+  color: #666666;
+  line-height: 22px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 课程列表页图+标题+内容 */
+.listimgtxtl {
+  *zoom: 1;
+  clear: both;
+  text-align: center;
+  border-bottom: 0;
+  padding: 20px 10px;
+}
+.listimgtxtl:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.listimgtxtl:hover {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.listimgtxtl dt {
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #dddddd;
+}
+.listimgtxtl dt a {
+  font-size: 16px;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.listimgtxtl dd {
+  padding: 5px 0;
+  border-bottom: 1px solid #dddddd;
+  font-size: 12px !important;
+}
+.listimgtxtl dd h3 {
+  margin: 0;
+  text-align: left;
+  color: #d76351;
+}
+.listimgtxtl dd h3 s {
+  color: #999999;
+  padding-right: 5px;
+}
+.listimgtxtl dd h4 {
+  width: 100%;
+  padding-bottom: 0;
+}
+.listimgtxtl dd h4 a {
+  width: 119px;
+  padding: 8px 0;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  margin: 0 10px;
+}
+.listimgtxtl dd h4 a:first-child {
+  background: #006c99;
+}
+.listimgtxtl dd h4 a i {
+  font-size: 18px;
+  padding-right: 5px;
+}
+.listimgtxtl dd h4 .zxline {
+  background: #49b19a;
+}
+.listimgtxtl dd:last-child {
+  border-bottom: 0;
+}
+@media (min-width: 480px) {
+  .listimgtxt dt a {
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .listimgtxt dd {
+    font-size: 12px;
+  }
+  .listimgtxtl dt {
+    text-align: left;
+  }
+  .listimgtxtl dd h4 a {
+    width: 30%;
+  }
+}
+@media (min-width: 640px) {
+  .listimgtxt .img270 {
+    float: left;
+    padding-left: 20px;
+  }
+  .listimgtxt dl {
+    padding: 10px;
+  }
+  .listimgtxtl {
+    text-align: left;
+  }
+  .listimgtxtl dd h4 a {
+    width: 120px;
+  }
+  .listimgtxtl dd h4 .zxline {
+    float: left;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .listimgtxt {
+    padding: 30px 0 40px;
+  }
+  .listimgtxt img {
+    width: 180px;
+    height: 120px;
+  }
+  .listimgtxt dl {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+  .listimgtxt dt a {
+    font-size: 16px;
+  }
+  .listimgtxt dd {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .listimgtxtl .img270 {
+    padding-left: 40px;
+  }
+  .listimgtxtl dl {
+    padding-right: 40px;
+  }
+}
+.prorecommend {
+  *zoom: 1;
+  padding: 30px 0 20px;
+  margin-bottom: 30px;
+}
+.prorecommend:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.prorecommend .hd {
+  padding-bottom: 10px;
+}
+.prorecommend .hd h2 {
+  font-size: 24px;
+  color: #333333;
+  padding-left: 20px;
+}
+.prorecommend .hd span {
+  display: none;
+  float: right;
+  padding-right: 10px;
+}
+.prorecommend .hd span a {
+  line-height: 40px;
+}
+.prorecommend .hd a {
+  text-decoration: none;
+}
+.prorecommend .bd {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.prorecommend .madegame {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+.prorecommend #kwod {
+  position: relative !important;
+}
+.prorecommend #kwod li {
+  position: relative;
+  float: left;
+}
+.prorecommend ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.prorecommend li {
+  float: left;
+  padding: 10px;
+  _display: inline;
+  overflow: hidden;
+}
+.prorecommend li img {
+  width: 180px;
+  height: 120px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+.prorecommend li h3 {
+  margin: 0 auto;
+  font-size: 14px;
+  color: #333333;
+  line-height: 30px;
+}
+.prorecommend li span {
+  float: right;
+  font-size: 12px;
+  color: #666666;
+}
+.prorecommend li:hover {
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .prorecommend .hd span {
+    display: block;
+  }
+}
+.cfacontent {
+  display: none;
+}
+.cfaAll {
+  display: block;
+}
+/* teacherlist 顶部banner */
+.banner {
+  background: #fafafa url(../../images/teacherbg.png) no-repeat 50%;
+  background-size: cover;
+  height: 320px;
+}
+.banner dl {
+  position: absolute;
+  z-index: 2;
+  padding: 30px 20px;
+}
+.banner dl dt {
+  font-size: 40px;
+}
+.banner dl dd {
+  font-size: 16px;
+}
+.banner dl dd i {
+  padding-right: 10px;
+}
+.banner dl .firstdd {
+  font-size: 14px;
+  color: #333333;
+  padding-bottom: 30px;
+}
+@media (min-width: 480px) {
+  .banner {
+    height: 380px;
+  }
+  .banner dl {
+    position: inherit;
+  }
+  .banner dl dt {
+    font-size: 48px;
+  }
+  .banner dl dd {
+    font-size: 20px;
+  }
+  .banner dl .firstdd {
+    font-size: 18px;
+  }
+  .banner .shadow {
+    margin-top: 105px;
+  }
+}
+@media (min-width: 1200px) {
+  .banner dl {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+/*teacherlist 图+内容*/
+.procontent_teacher {
+  min-height: 300px;
+}
+.listeacher {
+  *zoom: 1;
+  padding: 20px 0;
+}
+.listeacher:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.listeacher:hover {
+  background-color: #f0f0f0;
+}
+.listeacher .img420 {
+  width: 80%;
+  padding: 0 10%;
+  text-align: center;
+}
+.listeacher article {
+  width: 100%;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+}
+.listeacher article h3 {
+  border-bottom: 1px solid #cccccc;
+}
+.listeacher article h3 span {
+  display: none;
+}
+.listeacher article p {
+  color: #666666;
+  line-height: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cccccc;
+}
+.listeacher article .cont img {
+  display: none;
+  float: right;
+}
+.listeacher article .cont ul {
+  overflow: hidden;
+  color: #666666;
+}
+@media (min-width: 480px) {
+  .listeacher .img420 {
+    float: left;
+    width: 30%;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+  }
+  .listeacher article {
+    float: right;
+    width: 70%;
+    padding: 0 30px;
+  }
+  .listeacher article .cont img {
+    display: block;
+    padding-top: 10px;
+  }
+  .listeacher:first-child {
+    padding-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .listeacher article h3 span {
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+  }
+  .listeacher article h3 span i {
+    font-size: 20px;
+    vertical-align: middle;
+    padding-left: 5px ;
+  }
+}
+/* teacherlist 免费索取资料弹窗 */
+.sbtbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.sbtbox .sb_content {
+  position: relative;
+  margin: 6% auto;
+  width: 760px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sbtbox .sb_content .close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #999999;
+  border: 1px solid #dddddd;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.sbtbox .sb_content .sb_contop {
+  width: 100%;
+  background: #ffffff url(../../images/submit.png);
+  height: 275px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sbtbox .sb_content .sb_contop i {
+  font-size: 56px;
+  color: #49b19a;
+  float: left;
+}
+.sbtbox .sb_content .sb_contop dl {
+  width: 350px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.sbtbox .sb_content .sb_contop dl dt {
+  font-size: 28px;
+  color: #333333;
+  font-weight: bold;
+}
+.sbtbox .sb_content .sb_contop dl dd {
+  font-size: 18px;
+}
+.sbtbox .sb_content .sb_contop dl dd:last-child {
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  width: 145px;
+  height: 45px;
+  line-height: 45px;
+  background: #666666;
+  margin: 30px auto;
+  border-radius: 23px;
+  -moz-border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
+}
+.sbtbox .sb_content dl {
+  text-align: center;
+  padding: 30px 0;
+}
+.sbtbox .sb_content dl dt {
+  font-size: 18px;
+}
+.sbtbox .sb_content dl dd a {
+  display: inline-block;
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+}
+/* 首页课程中心弹窗 */
+.coursebox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  background-color: rgba(50, 50, 50, 0.7);
+}
+.coursebox .cbox {
+  width: 100%;
+  height: 370px;
+  background: #ffffff;
+  color: #666666;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6% auto;
+}
+.coursebox .cbox span {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  display: inline-block;
+  float: right;
+  text-align: center;
+  line-height: 20px;
+}
+.coursebox .cbox h3 {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+.coursebox .cbox ul {
+  width: 290px;
+  margin: 0 auto;
+}
+.coursebox .cbox ul li {
+  padding: 10px;
+}
+.coursebox .cbox ul li select {
+  height: 30px;
+  border-color: #cccccc;
+  color: #999999;
+  box-sizing: border-box;
+}
+.coursebox .cbox ul li select:first-child {
+  width: 270px;
+  height: 40px;
+  padding-left: 10px;
+}
+.coursebox .cbox ul li .adress {
+  display: none;
+}
+.coursebox .cbox ul li .fl {
+  float: left;
+}
+.coursebox .cbox ul li #city {
+  margin-right: 10px;
+}
+.coursebox .cbox ul li label.fl {
+  height: 30px;
+  line-height: 30px;
+}
+.coursebox .cbox input {
+  width: 120px;
+  height: 45px;
+  color: #ffffff;
+  margin: 30px auto;
+  font-size: 16px;
+  display: inherit;
+}
+@media (min-width: 640px) {
+  .coursebox .cbox {
+    width: 550px;
+    height: 360px;
+  }
+  .coursebox .cbox .cbcont {
+    width: 270px;
+    margin: 0 auto;
+  }
+}

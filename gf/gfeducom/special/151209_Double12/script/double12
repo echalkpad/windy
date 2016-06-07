@@ -1,0 +1,63 @@
+
+$(function(){
+    $(".sc").css("height",600);
+    /*设置每一个 sc的高度*/
+    $(".sc:odd").css("background","#ff3");
+/*隔行换色*/
+$(".fi ul li").click(function(){//单击谁 让屏幕滚动到相应的位置
+$(".fi ul .ho").removeClass("ho");
+$(this).addClass("ho");
+    var num=$(".fi ul li").index($(this));//得出当前单击的是第几个
+    $("body").animate({"scrollTop":num*600},600);//动画滚动到第几屏幕
+    
+    })
+    
+$("#elevator ul li").click(function(){
+    $("#elevator ul li.current").removeClass("current");
+$(this).addClass("current");
+    var num=$("#elevator ul li").index($(this));//得出当前单击的是第几个
+    $("body").animate({"scrollTop":num*600},600);//动画滚动到第几屏幕
+    
+    })
+$(window).scroll(function(){
+    
+    var top=$("body").scrollTop();//滚动的距离
+    
+    var sc1=$(".sc:eq(0)").offset().top;//元素离顶部的距离
+    var sc2=$(".sc:eq(1)").offset().top;//元素离顶部的距离
+    var sc3=$(".sc:eq(2)").offset().top;//元素离顶部的距离
+    var sc4=$(".sc:eq(3)").offset().top;//元素离顶部的距离
+    var sc5=$(".sc:eq(4)").offset().top;//元素离顶部的距离
+    var sc6=$(".sc:eq(5)").offset().top;//元素离顶部的距离
+    var sc7=$(".sc:eq(6)").offset().top;//元素离顶部的距离
+    console.log(sc1+"----"+sc2+"----"+sc5+"----"+top);
+   if(top>=sc7-50){
+        $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(6)").addClass("current");
+    }else if(top>=sc6-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(5)").addClass("current"); 
+        }else if(top>=sc5-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(4)").addClass("current"); 
+        }else if(top>=sc4-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(3)").addClass("current"); 
+        }else if(top>=sc3-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(2)").addClass("current"); 
+        }else if(top>=sc2-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(1)").addClass("current"); 
+        }else if(top>=sc1-50){
+    $("#elevator ul li.current").removeClass("current");
+    $("#elevator ul li:eq(0)").addClass("current"); 
+        }
+    
+   
+
+    
+    })
+    
+    
+    })

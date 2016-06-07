@@ -1,0 +1,435 @@
+/* LESS Document */
+
+/* 模块集 */
+
+/* 基本 */
+@import "../reset.less";
+@import "../variable.less";
+@import "../core.less";
+@import "../global.less";
+
+/* 头部及尾部 */
+@import "../headfoot.less";
+@import "../jMmenu.less";
+/* 全国分校 */
+@import "../common.less";
+
+/* 右栏内容 */
+@import "../proaside.less";
+
+/* 左栏内容 */
+@import "../pagecontent.less";
+
+
+/* 颜色设置 */
+@import "../../cfa/css/cfavariable.less";
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-ivr5ln');
+    src:url('fonts/icomoon.eot?#iefix-ivr5ln') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?-ivr5ln') format('truetype'),
+        url('fonts/icomoon.woff?-ivr5ln') format('woff'),
+        url('fonts/icomoon.svg?-ivr5ln#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{background: #f8f8f8;}
+
+/* 项目头部 */
+.proheader{
+    .protitle{h1{color:@proc1;}}
+    .prosearch{input[type="text"]{border: solid 2px @proc1;}input[type="button"]{background-color:@proc1;}}
+}
+.navbar{
+    background-color:@proc2;
+    li{
+        a{color:@proc3;&:hover{background-color:@proc1;}}
+        &.selecded{background-color:@proc1;}
+    }
+}
+/* 小图加标题内容 */
+.listimgtxt:hover{
+    dt{a{color:@proc1;}}
+}
+
+
+/* 左侧类容区 icon*/
+.listeacher{
+    dt{span{i{color:@proc1;}}}
+}
+.listeacher{
+ article{
+    h3{
+        span{i{color: @proc1;}}
+    }
+ }
+}
+/*顶部banner*/
+.banner{
+    position: relative;
+    background: #f9f9f9 url(../../images/teacher/bannerbg.png) no-repeat 50%;
+    background-size: cover;
+    height: auto;
+    margin-bottom: 50px;
+    p{padding: 20px; span{color: @c9;}}
+    .teacherinfo{
+        img{width: 44%; padding: 0 20px; float: left;}
+        h3{
+            .f28();
+            color: @c3;
+            line-height: 32px;
+            em{.f20(); display: block; padding: 5px 0 10px;}
+            span{.f14(); display: block; margin-top: -10px;}
+            i{ padding-left: 5px;.f24();color: @csblue; vertical-align: middle; cursor: pointer;}
+        }
+        h1{display: none;}
+        p{display: none;}
+        .cont{
+            img{width: 23%; padding: 0;}
+        }
+        ul{
+            .cf();
+            clear: both;
+            display: block;
+            border-top: 1px solid @cd;
+            padding: 20px 30px 50px;
+            line-height: 28px;
+            .f14();
+            color: @c6;
+            span{color: #d76351; .f18();}
+        }
+    }
+    
+    .gray{  
+         position: absolute;
+         bottom: -30px;
+         left: 0;
+         padding: 0;
+         width: 100%;
+         height: 30px;
+         background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, #ddd 100%);
+         background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, #ddd 100%);
+         background: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, #ddd 100%);
+         background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, #ddd 100%);
+  }
+}
+
+@media(min-width:480px){
+  .banner{
+    .teacherinfo{
+        img{width: 180px;}
+        .cont{
+            img{width: 90px;}
+        }
+        ul{padding: 20px;}
+      }
+   }  
+}
+@media(min-width:640px){
+  .banner{
+     p{padding: 20px 40px;}
+    .teacherinfo{
+        img{width: 200px; padding: 0 80px;}
+        article{
+            
+            position: relative;
+        }
+        h3{
+            padding-left: 280px;
+            height: 240px;
+            .f36();
+        }
+        h1{
+         display: block;
+         border-top: 1px solid @cc;
+         margin-top: 10px;
+         color: @csblue;
+         padding: 15px 0 5px 60px;
+         box-sizing: border-box;
+         .f24();
+         font-style: italic;
+        }
+        p{
+            display: block;
+            color: @c6;
+            .f14();
+            padding: 0 20px 15px 60px;
+            border-bottom: 1px solid @cd;
+            font-style: italic;
+        }
+        .cont{
+            img{
+                padding-left: 355px;
+                width: 100px; 
+                position: absolute;
+                top: 100px;
+            }
+        }
+        ul{
+            .cf();
+            line-height: 24px;
+            display: inline-block; border-top: 0;
+            padding: 15px 0 40px 60px;
+            li{line-height: 28px;}
+       }
+    }
+   }  
+}
+
+@media(min-width:768px){
+  .banner{
+      p{padding: 20px 40px 40px;}
+    .teacherinfo{
+        img{padding: 0 40px; width: 280px; position: absolute; bottom: 0;}
+        
+        article{
+            padding-left: 360px;
+        }
+        h3{
+            height: 50px;
+            padding-left: 0;
+            em,span{display: inline;}
+            em{padding: 0 20px;}
+        }
+        
+        h1{margin-top: 0; padding-left: 0;}
+        p{display: inline-block; padding: 0 15px 20px 0;}
+        .cont{
+            img{padding-top: 15px; padding-right: 20px; position: inherit; float: right; padding-left: 0;}
+        }
+        
+        ul{padding-left: 0;}
+    }
+   }
+}
+
+@media(min-width:1200px){
+  .banner{
+     p{width: 1200px; margin: 0 auto;}
+    .teacherinfo{
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+  }
+}
+
+.procontent{
+    padding: 0;
+    min-height: 600px;
+    p{padding-bottom: 0;}
+    ul{
+        .cf();
+        width: 100%;
+     
+        li{
+          width: 25%;
+          padding: 10px 0;
+          float: left;
+          background: #F0F0F0;
+          text-align: center;
+          margin-right: 0;
+          a{display: block;}
+        }
+        .selected,li:hover{background: @csblue;a{color: @cw;}}
+    }
+}
+.secTabs2 li.selected, .secTabs2 li:hover{background: @csblue !important;a{color: @cw;}}
+@media(min-width:640px){
+ .procontent{
+     ul{
+         li{.f16(); margin-right: 0;}
+     }
+ }   
+}
+@media(min-width:992px){
+ .procontent{
+     min-height: 1000px;
+     ul{
+         li{.f18();}
+     }
+  }   
+}
+
+/**  **/
+
+
+.sideproblem{
+  li{ 
+     i{.f16();}
+   }
+}
+
+.secTabs2{ 
+    margin-bottom: 0;
+    ul{padding: 0}
+    li a{padding: 0;}
+}
+.soldcourse,.introcontent,.stucomment{display: none;}
+
+.paginator{padding: 50px 0;}
+
+/* 师资详情公用  */
+/* QQ表情框 */
+.comment{width:680px; margin:20px auto; position:relative}
+.comment h3{height:28px; line-height:28px}
+.com_form{width:100%; position:relative}
+.input{width:99%; height:60px; border:1px solid #ccc}
+.com_form p{height:28px; line-height:28px; position:relative}
+span.emotion{width:42px; height:20px; background:url(icon.gif) no-repeat 2px 2px; padding-left:20px; cursor:pointer}
+span.emotion:hover{background-position:2px -28px}
+.qqFace{margin-top:7px;background:#fff;padding:20px;border:1px #d86654 solid;}
+.qqFace table{background: #f6fbfe;}
+.qqFace table td{padding:0px; border: 1px solid @cd;}
+.qqFace table td img{cursor:pointer;border:1px #fff solid;}
+.qqFace table td img:hover{border:1px #0066cc solid;}
+#show{width:680px; margin:20px auto}
+.qqFace i{
+     position: absolute;
+     top: -5px;
+     left: 4px;
+     display: inline-block;
+     width: 6px;
+     height: 9px;
+     background: @cw;
+     border-left: 1px solid #db7262;
+     border-top: 1px solid #db7262;
+     transform: rotate(45deg);
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+}
+
+@media(min-width:640px){
+  .qqFace i{
+      width: 6px;
+      height: 6px;
+  }  
+}
+
+/* 切图框   */
+.pic_road{
+background: @cw;
+ width: 285px;
+ border: 1px  solid #49b19a; 
+ box-sizing: border-box;
+ position: relative;
+ margin-top: 5px;
+ i{
+     position: absolute;
+     top: -5px;
+     left: 33px;
+     display: inline-block;
+     width: 6px;
+     height: 6px;
+     background: @cw;
+     border-left: 1px solid #49b19a;
+     border-top: 1px solid #49b19a;
+     transform: rotate(45deg);
+     -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     -o-transform: rotate(45deg);
+ }   
+ em{
+     display: inline-block;
+     color: @cc;
+     width: 15px;
+     height: 15px;
+     text-align: center;
+     line-height: 15px;
+     border: 1px solid@cc;
+     float: right;
+     cursor: pointer;
+     margin: 10px 10px 20px;
+ }
+ h5{clear: both; text-align: center;}
+ 
+ input{height: 30px; line-height: 30px;}
+ input[type="text"]{
+     width: 65%;
+ }
+ input[type="button"]{
+     padding: 0 10px;
+ }
+ 
+ img{
+     display: block;
+     width: 100px;
+     height: 100px;
+     margin: 20px auto;
+ }
+ 
+ p{
+     font-size: 12px;
+     margin: 10px 5%;
+     span{
+        color: #49b19a;
+        cursor: pointer;
+        padding-left: 10px;
+     }
+ }
+ 
+}
+@media(min-width:640px){
+    .pic_road{
+        width: 450px;
+        input[type="text"]{
+            width: 73%;
+        }
+    }
+}
+
+.pic_roadok{
+   h5{margin-bottom: 40px;} 
+}
+@media(min-width:640px){
+    .pic_road{
+        i{left: 65px;}
+    }
+}
+
+/* 回复-评论 start */
+.success{
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    z-index: 9;
+    .f24();
+    border: 1px solid #49b19a;
+    box-sizing: border-box;
+    background: @cw;
+    margin: -28px -90px;
+    color: #49b19a;
+    top: 50%;
+    left:50%;
+    .bdr5();
+    i{
+       .f40();
+       vertical-align: middle;
+       padding-bottom: 10px;
+       padding-right: 10px;
+    }
+}
+

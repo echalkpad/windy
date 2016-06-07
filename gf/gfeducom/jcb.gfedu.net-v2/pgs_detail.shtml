@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯－问鼎未来CFO之路</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2014年金程杯全国大学生职业规划大赛圆满落幕</h3>
+            <span>时间xxxxxxxxxxx</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+        <h4>详情页的小标题</h4>
+        <p>
+            详情页的内容，而大多数青年是在大学里“修炼”的。当前就业竞争压力的增大以及人才培养与社会需求不相适应，使得这群朝气蓬勃的大学生在通向梦想的路途上，屡屡受挫。为了帮助大学生实现自己的梦想，拥有一个精彩无限的未来。金程教育特意携手***（加入赞助单位）举办2015年“金程杯”大学生圆梦计划。<br><br>
+2015年“金程杯”大学生圆梦计划是在以往金程杯赛制的基础上，面向全国大学生群体，针对学校和大学生最关心的三个方面“经济压力”“学术培养”和“就业”，采用全面化、系统化和公益化的模式，来助力学校培养人才，帮助大学生实现梦想。本次金程杯是金程教育主办的第四届金程杯，共包括3个部分： “金程圆梦”助学金计划、2015年全国大学生会计案例大赛和“金程教育”校园招聘计划三个部分。
+金程圆梦助学金计划主要针对学业方面有经济以及其他困难的高校学生。
+2015年全国大学生会计案例大赛是测试大学生对于当前学术能力的了解和掌握，创造一个平台，让大学生提前适应社会竞争的压力，在接下来的学习和生活上，有针对性的提高自己的相关能力。
+“金程教育”校园招聘计划是对于那些渴望提前接触社会的优秀大学生群体，按照一定的标准，为符合条件的大学生提供实习或就业岗位。<br><br>
+        </p>
+        <img src="images/t16.jpg">
+        <span>图片标题</span><div class="hr"></div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+
+</body>
+</html>

@@ -1,0 +1,706 @@
+/*
+ * ==> CMA 周末班
+ *********************************************/
+@import "../../../css2015/common/common.less";
+@import "../../../css2015/project/project.less";
+
+//iconfont
+
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mm-menu {
+  background-image: url(../../../images2015/mbnavbg.jpg);
+}
+
+//banner
+.cmaconten{
+  .banner{
+    background: url(../images/banner.png) no-repeat;
+    padding: 40px 0;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    
+    img{
+        width: 90%;
+        margin-left: 5%;
+    }      
+  }
+
+}
+
+@media(min-width:640px){
+ .cmaconten{
+   .banner{
+      padding: 90px 0;
+   }
+  }   
+}
+@media(min-width:768px){
+  .cmaconten{
+   .banner{
+      background-color: #ece1e4;
+   }
+  }   
+    
+}
+@media(min-width:992px){
+ .cmaconten{
+   .banner{
+      padding: 160px 0;
+   }
+  }   
+}
+@media(min-width:1200px){
+ .cmaconten{
+   .banner{
+      img{
+          display: block;
+          width: 1100px;
+          margin: 0 auto;
+      }
+   }
+  }   
+}
+
+//CMA薪资展示
+.cmasecb{
+    padding: 50px 10px 0;
+    p{
+        background: #3b3b3b;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        color: @cw;
+        line-height: 26px;
+        span{
+            display: block;
+            text-indent: 2em;
+        }
+    }
+    img{width: 100%; padding: 30px 0;}
+    
+}
+@media(min-width:768px){
+ .cmasecb{
+    padding: 90px 0 0;
+    background: #ece1e4;
+    section{
+        .cf();
+        padding: 0 20px;
+    }
+    p{ width: 50%; float: left; }
+    img{ padding: 0; width: 48%; padding-left: 2%; }
+ }
+}
+@media(min-width:992px){
+ .cmasecb{
+    p{ width: 48%; float: left; .f16(); line-height: 28px; }
+    img{ padding: 0; width: 46%; padding-left: 6%; }
+ }
+}
+@media(min-width:1024px){
+ .cmasecb{
+    p{line-height: 30px; padding: 40px 20px;}
+    img{ padding: 0; width: 45%; padding-left: 7%; }
+ }
+}
+@media(min-width:1200px){
+  .cmasecb{
+     section{
+         width: 1200px;
+         margin: 0 auto;
+     }
+     p{
+         padding: 50px 30px;
+     }
+     img{
+         width: 38%;
+         padding-left: 14%;
+     }
+  }   
+}
+
+//公用h2
+.h2_jc{
+    font-weight: bold;
+    font-size: 22px;
+    border-bottom: 1px solid @c6;
+    padding-bottom: 10px;
+    position: relative;
+    em{
+        width: 60px;
+        height: 8px;
+        background: #a40035;
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+    }
+    aside{
+        position: absolute;
+        bottom: -8px;
+        background: @cw;
+        width: 60px;
+        right: 30px;
+        height: 16px;
+        line-height: 16px;
+        text-align: right;
+        i{
+            line-height: 16px;
+            float: right;  
+            &:first-child{float: left;}
+        }
+    }
+}
+@media(min-width:640px){
+  .h2_jc{ .f40(); }
+}
+
+@media(min-width:992px){
+  .h2_jc{ span{ display: block; } }
+}
+
+
+//财会人员的“平凡之路” 
+.cmafan{
+    padding: 50px 10px;
+    
+    ul{ display: none; }
+    h3{
+        margin: 30px 0;
+        color: #fff;
+        background: #6d6d6e;
+        padding: 10px;
+    }
+    
+    section{
+        text-align: center;
+        dl{
+            background: #a40035;
+            width: 28%;
+            display: inline-block;
+            box-sizing: border-box;
+            color: @cw;
+            padding: 0 0 10px;
+            vertical-align: middle;
+            dt{padding: 20px 20px 10px;}
+            img{
+                width: 100%;
+            }
+            
+            &:nth-child(7),&:nth-child(9){ margin-top: 20px; }
+            &:hover{
+                background: #33b0c4;
+            }
+        }
+        span{
+            display: inline-block;
+            width: 2%;
+            .triangle(right,@w:8px,@c:#999);
+        }
+    }
+    
+}
+
+@media(min-width:640px){
+  .cmafan{
+      h2{ .f40(); }
+      ul{
+          display: block;
+          .cf();
+          background: url(../images/person.png) no-repeat;
+          background-size: 100% 100%;
+          margin: 40px 0;
+          li{
+              float: left;
+              text-align: center;
+              width: 18%;
+              margin-left: 2.5%;
+              text-align: center; 
+              font-weight: bold;
+              
+              
+             &:first-child{margin-left: 0;}
+          }
+         /* &:first-child{margin-left: 0;}
+          for(var i=0;i<5;i++){
+              &:nth-child(i){
+                  padding: 30px;
+              }
+          }*/
+         
+         .ou1{padding: 220px 0 5px;}
+         .ou2{padding: 205px 0 15px;}
+         .ou3{padding: 185px 0 0;}
+         .ou4{padding: 170px 0 0;}
+         .ou5{padding: 160px 0 0;}
+      }
+      h3{
+          .f30();
+          font-weight: bold;
+          text-align: center;
+      }
+      section{
+          dl{
+              width: 16.5%;
+              min-height: 150px;
+              &:nth-child(7),&:nth-child(9){ margin-top: 0; }
+          }
+      }
+  }
+}
+@media(min-width:768px){
+ .cmafan{
+    padding: 90px 0 0;
+    section{
+        dl{
+            width: 17.4%;
+        }
+    }
+ }
+}
+@media(min-width:992px){
+  .cmafan{
+      ul{
+          li{ .f16(); }
+         .ou1{padding: 350px 0 15px;}
+         .ou2{padding: 320px 0 0;}
+         .ou3{padding: 290px 0 0;}
+         .ou4{padding: 270px 0 0;}
+         .ou5{padding: 240px 0 0;} 
+      }
+      
+      section{
+          dl{
+              .f18();
+              width: 18%;
+              font-weight: bold;
+              padding: 0 0 30px;
+              dt{ padding: 30px 70px 20px; }
+          }
+      }
+  }  
+}
+@media(min-width:1200px){
+  .cmafan{
+      width: 1200px;
+      margin: 0 auto;
+      
+      section{
+          dl{
+              
+          }
+          span{
+             .triangle(right,@w:10px,@c:#999);
+          }
+      }
+  }  
+}
+
+// 证书，就是选最适合自己的！ 
+.zself{ display: none; }
+@media(min-width:640px){
+ .zself{ 
+   display: block; 
+   background: url(../images/zself.png) no-repeat;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -ms-background-size: cover;
+   -o-background-size: cover;
+   margin: 50px 0 0;
+   h3{
+      color: @cw;
+      .f40();
+      text-align: center;
+      font-weight: bold;
+      padding: 30px 0;
+   }
+ }   
+}
+@media(min-width:768px){
+  .zself{
+      margin: 90px 0 0;
+  }  
+}
+@media(min-width:992px){
+ .zself{
+   h3{
+      font-size: 60px;
+      padding: 60px 0;
+   }   
+  }    
+}
+
+
+//零基础
+.zeroc{
+    padding: 50px 10px 30px;
+    
+    h3{
+        padding: 30px 0;
+        .f18();
+        font-weight: bold;
+    }
+    img{ width: 100%; }
+    
+    a{
+        display: block;
+        .f18();
+        color: @cw;
+        font-weight: bold;
+        background: #a40035;
+        
+        width: 220px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        .bdr(8px);
+        
+        &:hover{
+            background: #33b0c4;
+        }
+    }
+}
+
+@media(min-width:640px){
+  .zeroc{
+     h3{ text-align: center; 
+        font-size: 22px;
+     }
+     img{
+         padding: 50px 0;
+     }
+     a{ width: 270px; .f20(); }
+  }  
+}
+@media(min-width:768px){
+  .zeroc{
+     background: #ece1e4;
+     h3{ .f26(); } 
+     .h2_jc{aside{background: #ece1e4;} }
+  }  
+}
+@media(min-width:1200px){
+ .zeroc{
+   section{
+       width: 1200px;
+       margin: 0 auto;
+       padding: 0 60px;
+       box-sizing: border-box;
+   }
+ }   
+}
+
+//CMA免考ACCA7科
+.acca7{
+   padding: 50px 10px 0;
+   dl{
+       padding: 40px 0 0;
+   }
+   dt{
+       font-weight: bold;
+       .f16();
+       color: @c0;
+       line-height: 28px;
+   }
+   dd{
+       padding: 30px 0;
+       text-align: center;
+   }
+   
+    a{
+        display: block;
+        .f18();
+        color: @cw;
+        font-weight: bold;
+        background: #a40035;
+        
+        width: 220px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        .bdr(8px);
+        
+        &:hover{
+            background: #33b0c4;
+        }
+    }
+}
+@media(min-width:640px){
+  .acca7{
+     dl{ .cf(); padding: 40px 0; }
+     dt{
+       width: 55%;  
+       float: left;
+       .f20();
+       line-height: 34px;
+     }
+     dd{
+         padding: 0;
+         width: 42%;
+         float: right;
+         img{width: 100%;}
+     }
+     a{ width: 270px; .f20(); }
+  }  
+}
+@media(min-width:768px){
+ .acca7{
+   padding: 90px 0 0;
+   dd{
+     img{
+         width: 52%;
+         &:first-child{ width: 45%; margin-right: 2%;}
+     }  
+   }
+ }   
+}
+@media(min-width:1200px){
+ .acca7{
+   width: 1200px;
+   margin: 0 auto;
+   padding: 90px 60px 0;
+   box-sizing: border-box;
+ }   
+}
+
+//一次收费，直到通过为止
+.cmafee{
+  padding: 90px 10px 0;
+  ul{
+      padding: 40px 0;
+    li{
+       background: #ae4b54;
+       text-align: center;
+       margin-bottom: 20px;
+       
+       img{width: 100%;}
+       em{
+          display: block;
+           width: 100%;
+           padding: 7px;
+           color: @cw;
+           font-weight: bold;
+           .f16();
+       }
+    }
+  }
+  
+    a{
+        display: block;
+        .f18();
+        color: @cw;
+        font-weight: bold;
+        background: #a40035;
+        
+        width: 220px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        margin: 10px auto;
+        .bdr(8px);
+        
+        &:hover{
+            background: #33b0c4;
+        }
+    }
+}
+@media(min-width:640px){
+ .cmafee{
+  ul{
+    .cf();
+    li{
+        width: 46%;
+        margin: 2%;
+        float: left;
+        em{
+            .f24();
+        }
+    }  
+  }   
+  
+  a{ width: 270px; .f20(); }
+ }
+}
+@media(min-width:768px){
+ .cmafee{
+  padding: 90px 0 0;
+ }
+}
+@media(min-width:1200px){
+ .cmafee{
+  padding: 90px 60px 0;
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+ }
+}
+
+
+//考出CMA，转角遇到好工作！
+.getwork{
+   background: url(../images/testbg.png) no-repeat; 
+   background-size: cover; 
+   -webkit-background-size: cover; 
+   -moz-background-size: cover; 
+   -ms-background-size: cover; 
+   -o-background-size: cover; 
+   padding: 50px 0;
+   color: @cw;
+   margin: 90px 0 0;
+   .h2_jc{ border-bottom-color: @cw; aside{ background-color:#60334D;} }
+   h3{
+      padding: 30px 0;
+      font-weight: bold;
+      .f16();
+      text-align: center;
+   }
+   
+   ul{
+       .cf();
+       width: 320px;
+       margin: 0 auto;
+       text-align: center;
+       .f12();
+       li{ 
+           background: url(../images/circle.png) no-repeat; 
+           padding: 35px 15px 75px;
+           display: inline-block;
+           width: 30%;
+           background-size: 100% ;
+           margin: 1% ;
+           box-sizing: border-box;
+           text-align: center;
+           &:first-child{padding: 25px 15px 60px;  vertical-align: middle;}
+        }
+   }
+   a{
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: bold;
+      background: #a40035;
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      margin: 10px auto;
+      .bdr(7px);
+      
+      &:hover{
+          background: @cw;
+          color: #a40035;
+      }
+   }
+}
+
+@media(min-width:480px){
+ .getwork{
+     ul{
+         width: 480px;
+         li{
+             .f14();
+             padding: 60px 20px 70px;
+             &:first-child{padding: 40px 25px 50px;}
+             &:nth-child(3){ vertical-align: middle; margin-top: 20px; }
+         }
+     }
+     a{
+         width: 360px;
+         margin-top: 50px;
+     }
+ }   
+}
+@media(min-width:640px){
+ .getwork{
+   h3{ font-size: 22px; }
+   ul{
+       width: 640px;
+       li{
+           width: 25%;
+           margin: 4%;
+           padding: 70px 20px 70px;
+           &:first-child{padding: 60px 25px 60px;}
+       }
+   }
+   a{
+       .f20();
+       width: 400px;
+   }
+ }   
+}
+
+@media(min-width:768px){
+ .getwork{
+  margin: 90px 0 0;
+   .h2_jc{ aside{ background-color: #854056;} }
+   h3{ font-size: 26px;   padding: 50px 0; }
+   ul{
+       width: 768px;
+       li{
+           width: 17%;
+           margin: 1%;
+           box-sizing: border-box;
+           .f12();
+           padding: 56px 15px;
+           &:first-child{ padding: 46px 15px; }
+       }
+   }
+ }   
+}
+@media(min-width:992px){
+ .getwork{
+   .h2_jc{ aside{ background-color: #954556; } }
+   ul{
+       width: 992px;
+       margin: 40px auto;
+       li{
+           .f16();
+           padding: 76px 15px;
+           &:first-child{padding: 65px 15px; }
+       }
+    }
+ }    
+}
+@media(min-width:1200px){
+ .getwork{
+   .h2_jc{ aside{ background-color: #A74959; } }
+   section{
+       width: 1200px;
+       margin: 0 auto;
+       padding: 0 60px;
+       box-sizing: border-box;
+   }
+   
+   ul{
+       width: 1080px;
+   }
+  }   
+}
+
+
+
+
+
+
+

@@ -1,0 +1,900 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>CFA</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+<link rel="shortcut icon" href="images2015/gfico.ico">
+
+<!--头尾的样式-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css2015/project/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css2015/common/friend.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script2015/html5shiv.js"></script>
+    <script type="text/javascript" src="http://www.gfedu.cn/script2015/respond.min.js"></script>
+    <script type="text/javascript">
+        alert('IE版本太低，请升级后使用');
+    </script>
+<![endif]-->
+
+<script type="text/javascript" src="script2015/jquery.min.js"></script>
+<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+<script type="text/javascript" src="script2015/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('nav#menu').mmenu();
+    });
+</script>
+<!--切换-->
+<script type="text/javascript">
+/* secTabs */
+$(function(){
+	$(".J_secTabs").each(function(){
+		var timeout = 300;
+		var delay = 0;
+		var a = $(this).find("li"), b = $(this).next().children(), c = $(this).find("em"); 
+		
+		//a.hover(function(){ var	obj = $(this); item_show(obj); },function(){ item_hide(); });
+		a.click(function(){ var	obj = $(this); item_show(obj); },function(){ item_hide(); });
+		a.click(function(){ var obj = $(this); item_action(obj); });
+		
+		function item_action(obj){
+			a.removeClass("selected");
+			c.css("cursor","")
+			obj.addClass("selected");
+			obj.children("em").css("cursor","default");
+			var i = a.index(obj); 
+			b.hide();  
+			$(b.get(i)).show();  
+		}
+		function item_show(obj){
+			clearTimeout(delay);
+			delay = setTimeout(function(){
+				item_action(obj);
+				clearTimeout(delay);
+			},timeout);
+		}
+		function item_hide(){
+			clearTimeout(delay);
+		}
+	}); 
+});
+</script>
+</head>
+
+<body>
+<!--phonenav start-->
+<div class="mbbody">
+<div class="mbttl"><i><a href="javascript:;"></a></i><h2>CFA</h2></div>
+</div>
+<!--phonenav end-->
+
+<div class="mbtitle">
+    <div class="mbnav">
+        <a href="#menu" class="glyphicon glyphicon-th-large"><img src="images2015/phoneNav.png"  alt=""/></a>
+        <input type="hidden" id="divdiscon" name="divdiscon" value="0">
+    </div>
+</div>
+<nav id="menu" class="mbnavadd">
+    <h2 id="mobileLoginSpan"><a href="/2015/Login.shtml"><i><img src="images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+    <ul>
+        <!--#﻿<!--menu--> 
+<li><a href="/classify.aspx" class="newTopHover">课程</a></li>
+<li><a href="/intro.shtml">题库</a></li>
+<li><a href="/Live/List_1.shtml">直播</a></li>
+<li><a href="/cfa/">资讯</a></li>
+<li><a href="/BookStore/">商城</a></li>
+<li><a href="/app.shtml">应用</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+
+<!--webnav start-->
+<div class="webbody">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="images2015/logo.png"  alt=""/></h2>
+    <span><a href="javascript:void(0);" onClick="login();">登录</a><a href="javascript:void(0);" onClick="reg();">注册</a></span>
+    <ul>
+    <li><a href="">课程</a></li>
+    <li><a href="">题库</a></li>
+    <li><a href="">直播</a></li>
+    <li><a href="">资讯</a></li>
+    <li><a href="">商城</a></li>
+    <li><a href="">应用</a></li>
+    </ul>
+    </nav>
+    </div>
+</div>
+<!--webnav end-->
+
+<!--二级导航 start-->
+<div class="hero">
+	<div class="herother"><h1><strong><a href="/cfa/">CFA</a></strong>
+    <span>
+    <a href="#">其它课程</a>
+    <ul>
+    <!--#﻿<!--InfoOtherMenu--> 
+    <li><a href="/cfa/" title="CFA">CFA</a></li>
+    <li><a href="/frm/" title="FRM">FRM</a></li>
+    <!--<li><a href="/cpa/" title="CPA">CPA</a></li>-->
+    <li><a href="/acca/" title="ACCA">ACCA</a></li>
+    <li><a href="/cjjjs/" title="初级经济师">初级经济师</a></li>
+    <li><a href="/zjjjs/" title="中级经济师">中级经济师</a></li>
+    <li><a href="/lcghs/" title="理财规划师">理财规划师</a></li>
+    <li><a href="/kjcy/" title="会计从业">会计从业</a></li>
+    <li><a href="/cma/" title="CMA">CMA</a></li>
+    </ul></span>
+    <q>金程教育 · 金色前程 · 在你我手中</q></h1></div>
+
+    <p><input type="text" name="name" id="name" placeholder="请输入搜索内容"  /><input type="button" value="搜索"></p>
+</div>
+<div class="heronav">
+	<p>CFA导航：<a href="" title="CFA考试">考试</a><a href="" title="CFA课程">题库</a><a href="" title="CFA题库">课程</a><a href="" title="CFA直播">直播</a><a href="" title="CFA资料">资料</a><a href="" title="同学论坛">论坛</a></p>
+    <ul>
+    	<li><a href="" title="CFA考试">CFA考试</a></li>
+        <li><a href="" title="CFA课程">CFA课程</a></li>
+        <li><a href="" title="CFA题库">CFA题库</a></li>
+        <li><a href="" title="CFA直播">CFA直播</a></li>
+        <li><a href="" title="CFA资料">CFA资料</a></li>
+        <li><a href="" title="同学论坛">同学论坛</a></li>
+    </ul>
+</div>
+<div class="herolink">
+<article>
+	<div class="prolink">
+    <ul>
+    	<li><a href="" title="题库"><i><img src="images2015/prolinkicon01.png"  alt=""/></i>题库</a></li>
+        <li><a href="" title="直播"><i><img src="images2015/prolinkicon02.png"  alt=""/></i>直播</a></li>
+        <li><a href="" title="公开课"><i><img src="images2015/prolinkicon03.png"  alt=""/></i>公开课</a></li>
+        <li><a href="" title="APP"><i><img src="images2015/prolinkicon04.png"  alt=""/></i>APP</a></li>
+        <li><a href="" title="QQ群"><i><img src="images2015/prolinkicon05.png"  alt=""/></i>QQ群</a></li>
+        <li><a href="" title="微信"><i><img src="images2015/prolinkicon06.png"  alt=""/></i>微信</a></li>
+        <li><a href="" title="微博"><i><img src="images2015/prolinkicon07.png"  alt=""/></i>微博</a></li>
+        <li><a href="" title="图书"><i><img src="images2015/prolinkicon08.png"  alt=""/></i>图书</a></li>
+        <li><a href="" title="活动"><i><img src="images2015/prolinkicon09.png"  alt=""/></i>活动</a></li>
+    </ul>
+    </div>
+<!--轮翻广告 end-->
+    <div class="index_focus">
+
+	<a href="javascript:;" class="index_focus_pre" title="上一张">上一张</a>
+	<a href="javascript:;" class="index_focus_next" title="下一张">下一张</a>
+	
+    <div class="bd">
+		<ul>
+			<li><a class="pic" href="" title="" target="_blank"><img class="pic" src="images2015/2829.jpg"></a></li>
+			<li><a class="pic" href="" title="" target="_blank"><img class="pic" src="images2015/2868.jpg"></a></li>
+			<li><a class="pic" href="" title="" target="_blank"><img class="pic" src="images2015/2829.jpg"></a></li>
+
+		</ul>
+	</div>
+    
+	<!--div class="bd">
+		<ul>
+			<li>
+				<a href="" class="pic">
+					<img class="pic" src="images2015/2829.jpg" width="960" height="400" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="" class="pic">
+					<img class="pic" src="images2015/2868.jpg" width="960" height="400" alt="">
+				</a>
+			</li>
+		</ul>
+	</div-->
+	
+	
+</div>
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".index_focus").hover(function(){
+		$(this).find(".index_focus_pre,.index_focus_next").stop(true, true).fadeTo("show", 1)
+	},function(){
+		$(this).find(".index_focus_pre,.index_focus_next").fadeOut()
+	});
+	
+	$(".index_focus").slide({
+		titCell: ".slide_nav a ",
+		mainCell: ".bd ul",
+		delayTime: 500,
+		interTime: 3500,
+		prevCell:".index_focus_pre",
+		nextCell:".index_focus_next",
+		effect: "fold",
+		autoPlay: true,
+		trigger: "click",
+		startFun:function(i){
+			$(".index_focus_info").eq(i).find("h3").css("display","block").fadeTo(1000,1);
+			$(".index_focus_info").eq(i).find(".text").css("display","block").fadeTo(1000,1);
+		}
+	});
+
+});
+</script>
+</article>
+</div>
+
+<!--二级导航 end-->
+
+<!--资讯 start-->
+<div class="proinfo">
+<h2>CFA资讯</h2>
+<ul>
+<li><a href="" title="协会介绍">协会介绍</a></li>
+<li><a href="" title="职业发展">职业发展</a></li>
+<li><a href="" title="报考条件">报考条件</a></li>
+<li><a href="" title="考试流程">考试流程</a></li>
+<li><a href="" title="考试费用">考试费用</a></li>
+<li><a href="" title="考试教材">考试教材</a></li>
+<li><a href="" title="考试科目">考试科目</a></li>
+<li><a href="" title="国内考点">国内考点</a></li>
+<li><a href="" title="代理报名">代理报名</a></li>
+<li><a href="" title="获证流程">获证流程</a></li>
+<li><a href="" title="评分标准">评分标准</a></li>
+<li><a href="" title="备考指南">备考指南</a></li>
+</ul>
+</div>
+<!--资讯 end-->
+
+<!--课程 start-->
+<div class="wrap">
+    <div class="progttl"><h2>CFA课程</h2></div>
+
+    <div class="procourse">
+    <!--最新开班 start-->
+    <div class="procoursenew">
+    <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>最新开班</h2></div>
+    <h3>预科</h3>
+    <ul class="listtxtime">
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班双证精英班双证精英班双证精英班</a></li>
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班</a></li>
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班</a></li>
+    </ul>
+    <h3>独立</h3>
+    <ul class="listtxtime">
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班</a></li>
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班</a></li>
+    <li><span>2015-02-22</span><a href="" title="">CFA-FRM双证精英班</a></li>
+    </ul>
+    </div>
+    <!--最新开班 end-->    
+    
+    <!--课程切换 start-->
+    <div class="procoursetab">
+    <div class="procttl J_secTabs">
+    <i></i><strong></strong>
+     <ul>
+     <li class="selected"><a href="javascript:void(0);">CFA一级</a></li>
+     <li><a href="javascript:void(0);">CFA二级</a></li>
+     <li><a href="javascript:void(0);">CFA三级</a></li>
+     </ul>
+    </div>
+    <div class="ctn">
+        <div class="proctbox">
+        	<div class="proctinfo">
+            <p><img src="images2015/procourseimgbig.jpg"  alt=""/></p>
+            <dl>
+            <dt><a href="" title="">111CFA一+二+三级取证班三级取证班三级取证班三级取证班</a><span>原价:<s>¥11800</s>原价:<strong><small>¥</small>7880</strong></span></dt>
+            <dd><span>课时：888 </span>开班时间：2015年2月22日</dd>
+            <dd class="proctinfodd">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+            <dd><a href="" title="" class="wtenroll">我要报名</a><a href="" title="" class="wtconsult">我要咨询</a></dd>
+            </dl>
+            </div>
+            <div class="courseimgtxt pad20">
+            <ul>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="proctbox">
+        	<div class="proctinfo">
+            <p><img src="images2015/procourseimgbig.jpg"  alt=""/></p>
+            <dl>
+            <dt><a href="" title="">2222CFA一+二+三级取证班三级取证班三级取证班三级取证班</a><span>原价:<s>¥11800</s>原价:<strong><small>¥</small>7880</strong></span></dt>
+            <dd><span>课时：888 </span>开班时间：2015年2月22日</dd>
+            <dd class="proctinfodd">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+            <dd><a href="" title="" class="wtenroll">我要报名</a><a href="" title="" class="wtconsult">我要咨询</a></dd>
+            </dl>
+            </div>
+            <div class="courseimgtxt pad20">
+            <ul>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="proctbox">
+        	<div class="proctinfo">
+            <p><img src="images2015/procourseimgbig.jpg"  alt=""/></p>
+            <dl>
+            <dt><a href="" title="">333CFA一+二+三级取证班三级取证班三级取证班三级取证班</a><span>原价:<s>¥11800</s>原价:<strong><small>¥</small>7880</strong></span></dt>
+            <dd><span>课时：888 </span>开班时间：2015年2月22日</dd>
+            <dd class="proctinfodd">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+            <dd><a href="" title="" class="wtenroll">我要报名</a><a href="" title="" class="wtconsult">我要咨询</a></dd>
+            </dl>
+            </div>
+            <div class="courseimgtxt pad20">
+            <ul>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><p>CFA一+二+三级取证班</p></a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--课程切换 end-->
+   
+    </div>
+</div>
+<!--课程 end-->
+
+
+<!--切换 start-->
+<div class="proattention">
+    <article>
+    <h3>学CFA您必须关注的</h3>
+    <p>我们只给您有用的信息</p>
+    <div class="protabttl J_secTabs">
+     <ul>
+     <li class="selected"><a href="javascript:void(0);">信息之窗</a></li>
+     <li><a href="javascript:void(0);">学院研发</a></li>
+     <li><a href="javascript:void(0);">金程资料</a></li>
+     <li><a href="javascript:void(0);">学员关注</a></li>
+     </ul>
+    </div>
+    <div class="ctn">
+        <div class="proatwind">
+        	<div class="proctnright">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>行业动态</h2></div>
+                <div class="listtxt">
+                <ul>
+                <li><a href="" title="">关于CFA协会考试报名的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                </ul>
+                </div>
+                <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>考试资讯</h2></div>
+                <div class="listtxt">
+                <ul>
+                <li><a href="" title="">关于CFA协会考试报名的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="proctnleft">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>最新公告</h2></div>
+                <div class="listimgtxt">
+           	    <a href="#" title=""><img src="images2015/procourseimg01.jpg"  alt=""/></a>
+                <dl>
+                <dt><a href="#" title="">金程教育汤震宇博士受聘为对外经贸大学教授</a><span>10-29  19：00-20：00</span></dt>
+                <dd>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建迅速帮助您搭建迅速迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+                </dl>
+                </div>
+                <div class="listimgtxt">
+           	    <a href="#" title=""><img src="images2015/procourseimg01.jpg"  alt=""/></a>
+                <dl>
+                <dt><a href="#" title="">金程教育汤震宇博士受聘为对外经贸大学教授</a><span>10-29  19：00-20：00</span></dt>
+                <dd>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建迅速帮助您搭建迅速迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+                </dl>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="proatdev">
+        
+        	<div class="proctnright">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>学院成果</h2></div>
+                <div class="listbook">
+                <a href="#" title=""><img src="images2015/prolistbook.png"  alt=""/></a>
+                <dl>
+                <dt> <a href="#" title="">《读者原创版》2014年季度精选集-春季卷</a></dt>
+                <dd>金程研究院</dd>
+                <dd><strong><small>¥</small>7880</strong></dd>
+                </dl>
+                </div>
+                <div class="listbook">
+                <a href="#" title=""><img src="images2015/prolistbook.png"  alt=""/></a>
+                <dl>
+                <dt> <a href="#" title="">《读者原创版》2014年季度精选集-春季卷</a></dt>
+                <dd>金程研究院</dd>
+                <dd><strong><small>¥</small>7880</strong></dd>
+                </dl>
+                </div>
+            </div>
+            <div class="proctnleft">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>学院动态</h2></div>
+                <div class="listimgtxt">
+           	    <a href="#" title=""><img src="images2015/procourseimg01.jpg"  alt=""/></a>
+                <dl>
+                <dt><a href="#" title="">金程教育汤震宇博士受聘为对外经贸大学教授</a><span>10-29  19：00-20：00</span></dt>
+                <dd>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建迅速帮助您搭建迅速迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+                </dl>
+                </div>
+                <div class="listimgtxt">
+           	    <a href="#" title=""><img src="images2015/procourseimg01.jpg"  alt=""/></a>
+                <dl>
+                <dt><a href="#" title="">金程教育汤震宇博士受聘为对外经贸大学教授</a><span>10-29  19：00-20：00</span></dt>
+                <dd>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建迅速帮助您搭建迅速迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</dd>
+                </dl>
+                </div>
+                
+            </div>
+        
+        </div>
+        <div class="proatsc">
+        
+        	<div class="proctnright">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>共享资料</h2></div>
+                <div class="listtxt">
+                <ul>
+                <li><a href="" title="">关于CFA协会考试报名协会考试报名的营业税费的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学协会考试报名的营业税费金申请相</a></li>
+                <li><a href="" title="">关于CFA协会考试报协会考试报名的营业税费名的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电协会考试报名的营业税费子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                <li><a href="" title="">关于CFA协会考试报协会考试报名的营业税费名的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电协会考试报名的营业税费子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="proctnleft">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>推荐资料</h2></div>
+                <div class="listtxt">
+                <ul>
+                <li><a href="" title="">关于CFA协会考试报名的协会考试报名的营业税费营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子版协会考试报名的营业税费教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金协会考试报名的营业税费申请相</a></li>
+                <li><a href="" title="">关于CFA协会考试报名协会考试报名的营业税费的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金协会考试报名的营业税费申请相</a></li>
+                <li><a href="" title="">关于CFA协会考试报协会考试报名的营业税费名的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电协会考试报名的营业税费子版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                </ul>
+                </div>
+                <div class="listbtn">
+                <ul>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                <li><a href="" title="">组卷模块</a></li>
+                </ul>
+                </div>
+            </div>
+        
+        </div>
+        <div class="proatstu">
+        	<div class="proctnright">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>常见问答</h2></div>
+                <div class="listqa">
+                <dl>
+                <dt><span><q>lilian wang</q>2014-08-26 12:30:30</span><i>A</i>如果没有学会怎么办啊如果没有学会怎么办啊如果没有学会怎么办啊如果没有学会怎么办啊如果没有学会怎么办啊没有学会怎么办啊</dt>
+                <dd><i>Q</i>性化的空间安排，毕竟是大机构，尤其是当中那块学员看电影的区域，很高的楼梯坡度和宽度，说是每到下午就会拉下很大的投影幕布，会给学员每人发个垫子，舒舒服服地靠在宽大的楼梯台阶上，欣赏原声电影<p>2014-08-26 12:30:30</p></dd>
+                </dl>
+                <dl>
+                <dt><span><q>lilian wang</q>2014-08-26 12:30:30</span><i>A</i>如果没有学会怎么办啊</dt>
+                <dd><i>Q</i>性化的空间安排，毕竟是大机构，尤其是当中那块学员看电影的区域，很高的楼梯坡度和宽度，说是每到下午就会拉下很大的投影幕布，会给学员每人发个垫子，舒舒服服地靠在宽大的楼梯台阶上，欣赏原声电影<p>2014-08-26 12:30:30</p></dd>
+                </dl>
+                </div>
+            </div>
+            <div class="proctnleft">
+            	<div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>学员心声</h2></div>
+                <div class="listtxt">
+                <ul>
+                <li><a href="" title="">关于CFA协会考试报名的协会考试报名的营业税费营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子协会考试报名的营业税费版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                <li><a href="" title="">关于CFA协会考试报名协会考试报名的营业税费的营业税费</a></li>
+                <li><a href="" title="">CFA考试报名官方电子协会考试报名的营业税费版教材下载</a></li>
+                <li><a href="" title="">2014年CFA协会奖学金申请相</a></li>
+                </ul>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    </article>
+</div>
+<!--切换 end-->
+
+
+<div class="wrap">
+    <!--名师 start-->
+    <div class="progttl"><h2>金程名师</h2></div>
+    <div class="gfteacher">
+    <ul>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><h3>金程名师</h3><p>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><h3>金程名师</h3><p>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><h3>金程名师</h3><p>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><h3>金程名师</h3><p>梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p></a></li>
+    </ul>
+    <h4><a href="#" title="">更多名师</a></h4>
+    </div>
+  <!--名师 end-->
+    <div class="mbprolink">
+    <ul>
+    <li><a href="#" title="">我要做题</a></li>
+    <li><a href="#" title="">精彩直播</a></li>
+    </ul>
+    </div>
+    <div class="webbody">
+    <!--做题 start-->
+    <div class="procfbox">
+    <div class="progttl"><h2>我要做题</h2></div>
+    <div class="proexercise">
+    <ul>
+    <li><a href="#" title=""><img src="images2015/proexicon01.png" alt=""/><strong>按知识点选题</strong><span>开始练习</span></a></li>
+    <li><a href="#" title=""><img src="images2015/proexicon02.png" alt=""/><strong>智能选题</strong><span>开始练习</span></a></li>
+    <li><a href="#" title=""><img src="images2015/proexicon03.png" alt=""/><strong>真题模考</strong><span>开始练习</span></a></li>
+    <li><a href="#" title=""><img src="images2015/proexicon04.png" alt=""/><strong>组卷模考</strong><span>开始练习</span></a></li>
+    </ul>
+    </div>
+    <div class="prosuper">
+    <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>做题牛人榜</h2></div>
+    <ul>
+    <li><i class="goldc">1</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i class="goldc">2</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i class="goldc">3</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>4</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>5</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>6</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>7</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>8</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>9</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    <li><i>10</i><span><strong>23355</strong>道</span><a href="#"><img src="images2015/tang.png" alt=""/>supername</a></li>
+    </ul>
+    </div>
+    <div class="prodoing">
+    <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>大家都在做</h2></div>
+    <ul>
+    <li>4分钟前，<a href="#">丽姐</a> 做了智能选题15首<strong>11</strong>共得：9分<span><a href="#">我也做一套</a></span></li>
+    <li>4分钟前，<a href="#">丽姐</a> 做了智能选题15首<strong>11</strong>共得：9分<span><a href="#">我也做一套</a></span></li>
+    <li>4分钟前，<a href="#">丽姐</a> 做了智能选题15首<strong>11</strong>共得：9分<span><a href="#">我也做一套</a></span></li>
+    <li>4分钟前，<a href="#">丽姐</a> 做了智能选题15首<strong>11</strong>共得：9分<span><a href="#">我也做一套</a></span></li>
+    <li>4分钟前，<a href="#">丽姐</a> 做了智能选题15首<strong>11</strong>共得：9分<span><a href="#">我也做一套</a></span></li>
+    </ul>
+    </div>
+    </div>
+    <!--做题 end-->
+    
+    <!--直播 start-->
+    <div class="progttl"><h2>精彩直播</h2></div>
+    <div class="procfbox">
+    <div class="provodiel">
+    <img src="images2015/videopic.png"  alt=""/>
+    <h3><a href="">CFA01前导课程实录第一系列课程</a></h3>
+    <p><a href="">一键预约</a><a href="">添加提醒</a><a href="">查看详情</a></p>
+     </div>
+    <div class="provodier">
+    <h3>快速预约</h3>
+    <div class="courseimgtxt">
+    <ul>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>经济法</span><p>CFA一+二+三级取证班三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>会计</span><p>CFA一+二+三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>CFA一级</span><p>CFA一+二+三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    </ul>
+    </div>
+    <h3>往期回顾</h3>
+     <div class="courseimgtxt">
+    <ul>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>经济法</span><p>CFA一+二+三级取证班三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>会计</span><p>CFA一+二+三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    <li><a href="" title=""><img src="images2015/procourseimg01.jpg"  alt=""/><span>CFA一级</span><p>CFA一+二+三级取证班</p><p><q>一键预约</q><small>10-29  19：00</small></p></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <!--直播 end-->
+    
+    <div class="procfbox">
+    <!--班级热帖 start-->
+    <div class="prohotpost">
+    <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>班级热帖</h2></div>
+    <dl>
+    <dt><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></dt>
+    <dd>
+        <span>466</span>
+        <h3>CFA一+二+三级取证班我领先</h3>
+        <p><a href="#" title=""><i><img src="images2015/prohotpost01.png"  alt=""/></i>分享发现</a><i><img src="images2015/prohotpost02.png"  alt=""/></i>10-29  19：00-20：00</p>
+    </dd>
+    </dl>
+    <dl>
+    <dt><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></dt>
+    <dd>
+        <span>466</span>
+        <h3>CFA一+二+三级取证班我领先</h3>
+        <p><a href="#" title=""><i><img src="images2015/prohotpost01.png"  alt=""/></i>分享发现</a><i><img src="images2015/prohotpost02.png"  alt=""/></i>10-29  19：00-20：00</p>
+    </dd>
+    </dl>
+    <dl>
+    <dt><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></dt>
+    <dd>
+        <span>466</span>
+        <h3>CFA一+二+三级取证班我领先三级取证班我领先三级取证班我领先三级取证班我领先三级取证班我领先三级取证班我领先</h3>
+        <p><a href="#" title=""><i><img src="images2015/prohotpost01.png"  alt=""/></i>分享发现</a><i><img src="images2015/prohotpost02.png"  alt=""/></i>10-29  19：00-20：00</p>
+    </dd>
+    </dl>
+    <dl>
+    <dt><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></dt>
+    <dd>
+        <span>466</span>
+        <h3>CFA一+二+三级取证班我领先</h3>
+        <p><a href="#" title=""><i><img src="images2015/prohotpost01.png"  alt=""/></i>分享发现</a><i><img src="images2015/prohotpost02.png"  alt=""/></i>10-29  19：00-20：00</p>
+    </dd>
+    </dl>
+    <dl>
+    <dt><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></dt>
+    <dd>
+        <span>466</span>
+        <h3>CFA一+二+三级取证班我领先</h3>
+        <p><a href="#" title=""><i><img src="images2015/prohotpost01.png"  alt=""/></i>分享发现</a><i><img src="images2015/prohotpost02.png"  alt=""/></i>10-29  19：00-20：00</p>
+    </dd>
+    </dl>
+    </div>
+    <!--班级热帖 end-->
+    
+    <!--同班同学 start-->
+    <div class="proclassmate">
+    <div class="progttl2"><span><a href="">更多</a></span><i></i><strong></strong><h2>同班同学</h2></div>
+    <ul>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    <li><a href="#" title=""><img src="images2015/tangf.jpg"  alt=""/><span>supername</span></a></li>
+    </ul>
+    </div>
+    <!--同班同学 end-->
+
+
+    </div>
+    
+    </div>
+    <!-- 友情链接 strat-->
+<div class="friend">
+    <h2><span>友情链接</span></h2>
+    <p>
+        <a href="http://cfa.gfedu.com/">CFA</a>
+        <a href="http://www.frmchina.com/">CFA论坛</a>
+    </p>
+</div>
+
+    <!-- 友情链接 end-->
+</div>
+
+
+
+<div class="mbbody">
+<!--手机底部 start-->
+<div class="mbfooter">
+<ul>
+<li><a href="">登录</a></li>
+<li><a href="">注册</a></li>
+<li><a href="">下载APP</a></li>
+<li><a href="">用户反馈</a></li>
+</ul>
+<dl>
+<dt>400-700-9596 </dt>
+<dd>（每日9:00-21:00免长途费 ）</dd>
+</dl>
+<p>©2014金程网校保留所有权利 </p>
+</div>
+<div class="gotop"><a href="#mbbody"><strong>&and;</strong>TOP</a></div>
+<!--手机底部 end-->
+</div>
+
+
+<div class="webbody">
+<!--底部-->
+<footer>
+  <div class="newlinks">
+    <dl>
+    <dt>新手指南</dt>
+    <dd><a href="#">如何注册会员</a></dd>
+    <dd><a href="#">如何购买课程</a></dd>
+    <dd><a href="#">如何观看课程</a></dd>
+    </dl>
+    <dl>
+    <dt>学习须知</dt>
+    <dd><a href="#">网校学习方式</a></dd>
+    <dd><a href="#">学习效果如何保障</a></dd>
+    <dd><a href="#">学习条件</a></dd>
+    </dl>
+    <dl>
+    <dt>支付方式</dt>
+    <dd><a href="#">网上支付</a></dd>
+    <dd><a href="#">开通支付宝</a></dd>
+    </dl>
+    <dl>
+    <dt>关于金程</dt>
+    <dd><a href="#">关于我们</a></dd>
+    <dd><a href="#">联系我们</a></dd>
+    <dd><a href="#">加入我们</a></dd>
+    </dl>
+    <dl>
+    <dt>400 - 700 - 9596</dt>
+    <dd>（每日9:00-21:00    免长途费）</dd>
+    <dd><img src="images2015/bottomWX.png"></dd>
+    </dl>
+</div>
+<div class="copyright">
+<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+    </div>
+</footer>
+<!--底部--> 
+</div>
+<!-- login start -->
+<!--登录-->
+
+<div class="body_main body_login" id="loginDialog">
+  <div class="box_main">
+    <div id="login" class="login">
+      <form action="/web/Check/CheckCurent.asp" method="post" name="LoginForm" id="LoginForm">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closelogin();">X</a>
+              <p class="phoneReg">登录金程网校</p>
+            </div>
+            <div class="login_msg_wrap">
+                <p class="login_msg">
+                    <i class="iconfont">&#xf0002;</i>用户名或密码不匹配，请重新输入
+                </p>
+            </div>            
+            <div class="field-all">
+              <div class="field-group"><input type="hidden" name="S_Login" value="5"> <span class="control-group" id="mobile_input">
+                <div class="input_add_long_background">
+                    <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+                    <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="field-group"> <span class="control-group" id="password_input">
+                <div class="input_add_long_background">
+                    <input type="password" id="Field_PassWord" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwdL('Field_PassWord');">
+                    <p class="noticeLR" id="noticeLR_Field_PassWord"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="mianDL">
+                  <p><input type="checkbox" checked="checked">两周内免登录</p>
+                  <a href="/GetPass.shtml">忘记密码？</a>
+              </div>
+              
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="loginB" type="button" value="登录" class="button_button disabled">
+                </div>
+              </div>
+              <div class="hzzh">
+                <div class="zjdl">
+                    <span>直接登录：</span>
+                    <a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+                <p><a id="nowReg" href="javascript:;" onclick="LtR();">注册</a>金程账号</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register start -->
+<!--注册-->
+
+<div class="body_main" id="regDialog">
+  <div class="box_main">
+    <div id="register" class="register">
+      <form id="form_reg" name="form_reg" action="http://user.gfedu.net/UserReg.aspx" method="post" onSubmit="return checkReg()">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closereg();">X</a>
+              <p class="phoneReg">注册金程网校</p>
+            </div>
+            <div class="field-all">
+              <div class="field-group"> <span class="control-group" id="realname_input">
+                <div class="input_add_long_background">
+                  <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+                  <p class="noticeLR" id="noticeLR_realnameM"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group handphone"> <span class="control-group" id="tel_input">
+                <div class="input_add_long_background">
+                   <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+                   <p class="noticeLR" id="noticeLR_tel"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="code_input">
+                <div class="input_add_background">
+                  
+                   <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+                <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+                
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="password1_input">
+                <div class="input_add_long_background">
+                 <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+                 <p class="noticeLR" id="noticeLR_passwd"></p>
+                
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              <div class="xieyi">
+                <input type="checkbox">
+                同意金程的《用户协议》 </div>
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="reg_But" type="submit" value="注册" class="button_button disabled"><input type="hidden" name="furl" id="furl" value=""><input type="hidden" name="stationid" id="stationid" value="5"><input type="hidden" name="username" id="Hidden1" value="username"><input type="hidden" name="email" id="email" value="nomail">
+                </div>
+              </div>
+             <div class="hzzh">
+                <div class="zjdl">
+                    <span>直接登录：</span>
+                    <a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+                <p>已有账号<a id="nowLogin" href="javascript:;" onclick="RtL();">登录</a></p>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register end -->
+
+<script type="text/javascript" src="script2015/carousel.js"></script>
+</body>
+</html>

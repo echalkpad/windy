@@ -1,0 +1,449 @@
+@import url('variable.less');
+@import url('share.less');
+
+
+/* cfa信息介绍 start */
+.nj_marking{
+	.mk_info{
+		margin: 35px auto 50px;
+		width: 1200px;
+		p{
+			width: 790px;
+			margin: 15px auto;
+			color: @c9;
+			text-indent: 2em;
+			line-height: 24px;
+		}
+		ul{.cf();}
+
+		li{
+			.left();
+			width: 350px;
+			height: 400px;
+			background:rgba(207, 241, 249, 0.5);
+			padding: 18px 24px;
+			box-sizing: border-box;
+			overflow: hidden;
+			.f18();
+			color:@c6;
+			margin-right: 75px;
+			&:last-child{
+				margin-right: 0;
+			}
+			img{margin-bottom:20px;}
+			h3{
+				font-weight: bold;
+			}
+			p{
+				margin:0;
+				line-height: 28px;
+				text-indent: 0;
+			}
+		}
+	}
+}
+
+/* cfa信息介绍 end */
+
+/* 课程安排 start */
+.nj_marking{
+	.mk_curriculum{
+		background: #e9e6f3;
+		h4{font-size: 22px;}
+	}
+	.mk_cur{
+		background:rgba(250, 250, 250, 0.5);
+		border-bottom: #eee solid 1px;
+		.cf();
+		ul{
+			padding:20px 30px 10px;
+			.left();
+			.cf();
+			width: 800px;
+		}
+		li{
+			color:@c3;
+			.left();
+			width:40%;
+			margin-right: 15%;
+			line-height: 28px;
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+		a{
+			display: inline-block;
+			margin: 20px 0 0 35px;
+		}
+	}
+}
+
+/* 课程安排 end */
+
+/* 班级生活 start */
+.nj_marking{
+	.mk_life{
+		width: 1200px;
+		margin:10px auto 0;
+		ul{
+			.cf();
+			li{
+				.left();
+				.cf();
+				position: relative;
+			}
+			p{
+				width:950px;
+				span{
+					margin-left:16%;
+					.f28();
+					&:first-child{
+						margin-left: 22%;
+					}
+				}
+				position: absolute;
+				bottom:26px;
+				left:0;
+			}
+		}
+		.mk_life_show{
+			li{
+				height: 200px;
+				div{
+				width:200px;
+				text-align: center;
+				height: 200px;
+				.left();
+				background: #5c068b;
+				.f18();
+				color:#fdfdfd;
+				line-height: 200px;
+				}
+				img{.left();}
+				&:nth-child(2){
+					div{
+						line-height: 24px;
+						padding-top:70px;
+						box-sizing: border-box;
+					}
+				}
+				&:nth-child(3){
+					div{background: #78be20;}
+				}
+				&:nth-child(4){
+					div{background: #009966;}
+				}
+				&:nth-child(5){
+					div{background: #009966;}
+				}
+				&:nth-child(6){
+					div{
+						background: #5b77cc;
+						width: 400px;
+					}
+				}
+				&:nth-child(7){
+					div{background: #0db9e3;}
+				}
+			}
+			li:first-child{
+				h3{
+					margin:20px auto;
+					width: 276px;
+					height: 56px;
+					background: url(../images/life_hg.png) 0 0 no-repeat;
+					color:@cw;
+					text-align: center;
+					line-height: 56px;
+					.f24();
+				}
+				ul{
+					width: 800px;
+					margin:5px 0;
+				}
+				li{
+					width: 56px;
+					height: 76px;
+					background: url(../images/life_01.png) 0 0 no-repeat;
+					margin-left: 10px;
+					&:nth-child(4),&:nth-child(6),&:nth-child(8){
+						margin-left: 60px;
+					}
+					img{
+						width: 90%;
+    					margin: -10px 8%;
+					}
+				}
+			}
+		}
+	}
+}
+/* 班级生活 end */
+
+/* 选择的理由 start */
+.nj_marking{
+	.mk_reason{
+		position: relative;
+		margin-top:20px;
+		width: 100%;
+		height: 400px;
+		background: url(../images/reason_bg.jpg) right 0 no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		-o-background-size: cover;
+		ul{
+			position: absolute;
+			left: 0;
+			top:30px;
+		}
+		li{
+			height: 58px;
+			line-height: 58px;
+			color:@cw;
+			font-size: 32px;
+			width: 360px;
+			background: #009966;
+			box-sizing: border-box;
+			padding-left: 100px;
+			&:nth-child(2){
+				width: 320px;
+				background: #78be20;
+			}
+			&:nth-child(3){
+				width: 430px;
+				background: #5b77cc;
+			}
+			&:nth-child(4){
+				width: 475px;
+				background: #5c068c;
+			}
+			&:nth-child(5){
+				width: 360px;
+				background: #00b5e2;
+			}
+			a{color: @cw;}
+		}
+		p{
+			width:650px;
+			position: absolute;
+			text-indent: 2em;
+			right:50%;
+			margin-right: -400px;
+			top:20%;
+			line-height: 26px;
+			color:@c9;
+			strong{
+				.f16();
+				display: block;
+				text-indent: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+/* 选择的理由 end */
+
+/* 课程介绍 start */
+.nj_marking{
+	.mk_introduce{
+		border-bottom: 1px solid #eee;
+		background: #d3ffe7;
+	}
+	.mk_int{
+		padding:20px 0;
+		p{
+			line-height: 35px;
+			padding-left: 10px;
+			.f16();
+			span{
+				color:#af2029;
+				font-weight:bold;
+			}
+		}
+	}
+}
+
+
+/* 课程介绍 end */
+
+/* 课程表 start */
+.nj_marking{
+	.mk_schedule{
+		background: #d4defd;
+		h4{font-size: 22px;}
+	}
+	.mk_sch{
+		div{
+			position: relative;
+			margin-top: 10px;
+			height: 508px;
+			background: url(../images/schedule_01.png) 0 0 no-repeat;
+			&:nth-child(2){
+				height: 550px;
+				margin-top: 40px;
+				background: url(../images/schedule_02.png) 0 0 no-repeat;
+			}
+			&:hover{
+				a{display: block;}
+			}
+		}
+		a{
+			display:none;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-left: -85px;
+			line-height: 45px;
+			color:@cw;
+			font-weight: bold;
+			.f18();
+			text-align: center;
+			width: 175px;
+			height: 45px;
+			.bdr(5px);
+			background:rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+/* 课程表 end */
+
+/* 点击报名 start */
+.nj_marking{
+	.mk_apply{
+		margin-top:20px;
+		width: 100%;
+		height: 454px;
+		background: url(../images/apply_01.jpg) left 0 no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-ms-background-size: cover;
+		article{
+			width: 950px;
+			margin: 0 auto;
+			padding-top:100px;
+			.cf();
+		}
+		h3{
+			.left();
+			color:@c9;
+			.f48();
+			strong{
+				font-size: 60px;
+				color:#ff0000;
+			}
+		}
+		form{
+			label{
+			color:@c6;
+			position: absolute;
+			left:10px;
+			.f18();
+			}
+			.name{top:8px;}
+			.phone{top:58px;}
+			.right();
+			position: relative;
+			input,select{
+			width: 387px;
+			height: 40px;
+			line-height: 40px;
+			color:@c6;
+			.f18();
+			padding-left: 10px;
+			background: #ffe5c9;
+			margin-bottom:10px;
+			box-sizing: border-box;
+			border:0;
+			.bdr(3px);
+			}
+			input{
+				padding-left:55px;
+			}
+			a{
+				display: block;
+				width: 150px;
+				height: 36px;
+				line-height: 36px;
+				.bdr(18px);
+				.f18();
+				color:@c3;
+				font-weight: bold;
+				margin:20px auto;
+				text-align: center;
+				background: #ffe5c9;
+			}
+		}
+	}
+}
+
+/* 点击报名 end */
+
+/* 更多朋友 start */
+.nj_marking{
+	.mk_mfriends{
+		background: #f0dcfb;
+	}
+	.mk_mfr{
+		width: 100%;
+		height: 620px;
+		box-sizing: border-box;
+		padding-top: 40px;
+		background: url(../images/mfriends_01.jpg) center center no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-ms-background-size: cover;
+	}
+}
+/* 更多朋友 end */
+
+/* 师资团队 start */
+.nj_marking{
+	.mk_team{
+		background: #d4defd;
+	}
+	.mk_teacher{
+		background: #00b5e2;
+		ul{
+			width: 1200px;
+			margin: 0 auto;
+			height: 380px;
+			li{
+				padding-top:70px;
+				width:171px;
+				margin-right: 34px;
+				.left();
+				&:last-child{
+					margin-right: 0;
+				}
+				img{
+					width: 171px;
+					height: 170px;
+					border:6px solid #00b5e2;
+					box-sizing: border-box;
+					.bdr(50%);
+					&:hover{
+					border:6px solid #219363;
+					}
+				}
+				p{
+					margin-top: 25px;
+					text-align: center;
+					color:@cw;
+					.f18();
+					strong{
+						.f24();
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 师资团队 end */

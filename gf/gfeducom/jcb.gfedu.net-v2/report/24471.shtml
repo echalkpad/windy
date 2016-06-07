@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>金程杯初赛试题及答案公布</h3>
+            <span>时间：2015/11/9 11:20:57</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <span style="line-height: 26px;"><span style="font-size: small;"><span style="font-family: 宋体;">&nbsp; &nbsp;&nbsp;<span style="text-indent: 21pt;">为迎合国家财经人才培养需求，配合《上海会计人才培养工程规划（</span><span lang="EN-US" style="text-indent: 21pt;">2014-2020</span><span style="text-indent: 21pt;">年）》，</span><span lang="EN-US" style="text-indent: 21pt;"> 2015</span><span style="text-indent: 21pt;">年，金程教育再度开启&ldquo;金程杯&rdquo;全国大学生案例大赛，本届竞赛以&ldquo;会计案例分析&rdquo;为比赛内容，以&ldquo;问鼎未来</span><span lang="EN-US" style="text-indent: 21pt;">CFO</span><span style="text-indent: 21pt;">之路&rdquo;为大赛主题。</span>  </span></span></span>
+<p class="MsoNormal" style="text-indent: 21pt;"><font face="宋体" size="2"><span style="line-height: 26px;">经过组委会着重考虑，决定公布</span></font><span lang="EN-US" style="font-family: 宋体; font-size: small; line-height: 26px;">2015</span><font face="宋体" size="2"><span style="line-height: 26px;">年&ldquo;金程杯&rdquo;全国大学生会计案例大赛初赛试题和答案。以下为初赛真题和答案</span></font><br />
+<font face="宋体" size="2"><span style="line-height: 26px;">&nbsp; &nbsp; 初赛真题：<a href="http://jcb.gfedu.net/down/V1_20151109_初赛真题.pdf"><span style="background-color: rgb(255, 255, 0);"><span style="color: rgb(255, 0, 0);">http://jcb.gfedu.net/down/V1_20151109_初赛真题.pdf</span></span></a></span></font><br />
+<font face="宋体" size="2"><span style="line-height: 26px;">&nbsp; &nbsp; 初赛真题答案：<a href="http://jcb.gfedu.net/down/V1_20151109_初赛真题答案.pdf"><span style="background-color: rgb(255, 255, 0);"><span style="color: rgb(255, 0, 0);">http://jcb.gfedu.net/down/V1_20151109_初赛真题答案.pdf</span></span></a><br />
+&nbsp; &nbsp;&nbsp;</span></font><span style="font-family: 宋体; font-size: small; line-height: 26px;">希望广大参赛选手，能予以参考，继续支持金程杯。<br />
+</span><font face="宋体" size="2"><span style="line-height: 26px;"><br />
+&nbsp; &nbsp;&nbsp;</span></font><span style="font-size: small;"><span style="line-height: 26px;"><b style="line-height: 150%;"><span style="font-family: 宋体;">金程圆梦计划组委会</span></b></span></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 上海金程教育培训有限公司</span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 地址：松花江路<span lang="EN-US">2539</span>号复旦科技大厦<span lang="EN-US">1</span>号楼<span lang="EN-US">11</span>楼（<span lang="EN-US">200437</span>）</span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 电话：<span lang="EN-US">021-61323513</span></span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 邮箱：<span lang="EN-US">jcb@gfedu.net</span></span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 金程教育官网网址<span lang="EN-US">:</span><span lang="EN-US" style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">&nbsp;www.gfedu.net</span></span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 金程圆梦计划网址<span lang="EN-US">: jcb.gfedu.net</span></span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+<p class="MsoNormal" style="line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp; 咨询热线：<span lang="EN-US">15200510088<br />
+<br />
+<img src="http://manager.gfedu.net/GfeduFile/Folder23/121212(2).jpg" width="220" height="220" alt="" /></span></span></span></span><span lang="EN-US" style="line-height: 150%;"><o:p></o:p></span></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

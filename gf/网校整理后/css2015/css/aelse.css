@@ -1,0 +1,52 @@
+@media(max-width:640px){
+	.book_shoplist .listimg .author, .book_shoplist .listimg .publishing, .book_shoplist .listimg .publishing_time{
+		margin:90px 0 0 0;	
+	}	
+}
+.copyright{
+	background:#21292a !important;
+	border-top: 0 !important;
+}
+.top_banner{
+	display:none;
+	padding-top:15px !important;
+	margin: 0 auto !important;
+}
+.topbanner_all {
+  padding-top: 15px !important;
+}
+.topbanner_all div{
+	border:0 !important;	
+}
+@media(min-width:640px){
+   .top_banner{
+	  display:block;
+   }
+}
+@media screen and (max-width: 659px) and (min-width: 0){
+
+  .bd{
+     margin: 15px auto 20px !important;
+  }
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 660px){
+.book_1ad, .storey_one_center .tab_box_aa, .book_online_title, .newsing, .right, .dianzibang, .topbanner_all, .aside, .storey_four .storey_four_left, .head {
+  display: block !important;
+}
+}
+@media screen and (max-width: 1229px) and (min-width: 1000px){
+.topbanner_all {
+  display: block !important;
+}
+}
+
+/* app+wx */
+.banner{margin-top: 0; padding-top: 5px !important;}
+.banner_title a:hover{text-decoration: none !important;}
+.body_main{z-index: 99999;}
+
+/*  help页面   */
+.helpage{background: #ebe9df !important;}
+#breadNav{  padding: 20px 0 15px;}

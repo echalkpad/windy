@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯赛事速递-金程杯</title>
+<meta name="keywords" content="金程杯动态">
+<meta name="description" content="金程杯赛事速递，及时公布大赛进度，及时公布赛事结果，期待您的关注-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe616;</i>
+    <h2>赛事速递</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p6_review">
+            <a href="/report/25308.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151228132608163.jpg" alt="思维碰撞?头脑激荡 2015金程杯全国大学生会计案例大赛终极PK 深圳大学金程观光队夺魁">
+<h4>思维碰撞?头脑激荡 2015金程杯全国大学生会计案例大赛终极PK 深圳大学金程观光队夺魁</h4>
+<p></p>
+</a><a href="/report/25175.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151221164041298.jpg" alt="决赛终极对决——2015金程杯全国大学生会计案例大赛">
+<h4>决赛终极对决——2015金程杯全国大学生会计案例大赛</h4>
+<p></p>
+</a><a href="/report/24954.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151207090157829.jpg" alt="决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛">
+<h4>决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛</h4>
+<p></p>
+</a>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index.shtml">上一页</a>
+	<span>1/6</span>
+	<a href="index_2.shtml">下一页</a>
+	<a href="index_6.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',6)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

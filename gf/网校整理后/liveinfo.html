@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+<link rel="shortcut icon" href="images2015/gfico.ico">
+<title>直播</title>
+<link rel="stylesheet" type="text/css" href="css2015/common/common.css">
+<link rel="stylesheet" type="text/css" href="css2015/live/liveinfo/style.css">
+<!--[if lt IE 9]><link href="css/main.lte8.css" rel="stylesheet" type="text/css"><![endif]-->
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script2015/html5shiv.js"></script>
+    <script type="text/javascript" src="script2015/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="script2015/jquery.min.js"></script>
+<script type="text/javascript" src="script2015/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+<script type="text/javascript" src="script2015/live/liveinfo/liveinfo.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('nav#menu').mmenu();
+    });
+</script>
+
+</head>
+<body>
+<!--phonenav start-->
+<div class="mbbody">
+<div class="mbttl"><i><a href="javascript:;"></a></i><h2>直播</h2></div>
+</div>
+<!--phonenav end-->
+
+<!--手机title start-->
+<div class="mbtitle">
+    <div class="mbnav">
+        <a href="#menu" class="glyphicon glyphicon-th-large"><img src="http://www.gfedu.cn/images2015/phoneNav.png"  alt=""/></a>
+        <input type="hidden" id="divdiscon" name="divdiscon" value="0">
+    </div>
+</div>
+<nav id="menu" class="mbnavadd">
+    <h2><a href=""><i><img src="http://www.gfedu.cn/images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+    <ul>
+        <li class="Selected"><a href="classify.html">课程</a></li>
+        <li><a href="intro.html">题库</a></li>
+        <li><a href="list_1.html">直播</a></li>
+        <li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+        <li><a href="bookstore.html">商城</a></li>
+        <li><a href="app.html">应用</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+
+<!--webnav start-->
+<div class="webbody">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="http://www.gfedu.cn/images2015/logo.png"  alt=""/></h2>
+    <span><a href="javascript:void(0);" onClick="login();">登录</a><a href="javascript:void(0);" onClick="reg();">注册</a></span>
+    <ul>
+        <li><a href="classify.html">课程</a></li>
+        <li><a href="intro.html">题库</a></li>
+        <li><a href="list_1.html">直播</a></li>
+        <li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+        <li><a href="bookstore.html">商城</a></li>
+        <li><a href="app.html">应用</a></li>
+    <!--#<!-- #include file = "menu.html" -->
+    <!--menu end-->
+    </ul>
+    </nav>
+    </div>
+    <!-- <div style="position:fixed; width:100px;height:100px; background:red;"></div> -->
+</div>
+<!--导航-->
+<div id="crumb">
+	<p>
+		<a href="">直播</a> &gt; 
+		<a href="">直播列表</a> &gt; 
+		<span>直播详情</span>
+	</p>
+</div>
+<!--头部标题-->
+<div id="info_title">
+	<h1>CPA考前串讲100题（下）</h1>
+	<div class="info_title_right">
+		<div class="share cf">
+			<span class="text">分享</span>
+			<div class="bshare-custom">
+				<span class="pd"><a title="分享到微信" class="bshare-weixin"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到QQ空间" class="bshare-qzone"></a></span><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span>
+			</div>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+		</div>
+		<div class="collect">
+			<span class="text">收藏</span>
+		</div>
+	</div>
+</div>
+<!--课程简介-->
+<div id="lesson_introduction" class="cf">
+	<div class="introduction_pic">
+		<img src="images2015/liveinfo/lesson_introduction.jpg" alt="CPA考前串讲100题（下）">
+	</div>
+	<div class="introduction_text">
+		<div class="times">
+			<span class="text">开课时间</span>
+			<span class="date text2">2015/06/15</span>
+			<span class="hour text3">15:00-21:00</span>
+		</div>
+		<div class="people_nums">
+			<span class="text">预约人数</span>
+			<span class="nums text2">228</span>
+			<span class="surplus text3">剩余：20</span>
+		</div>
+		<div class="price">
+			<span class="text">课程价格</span>
+			<span class="new_price text2">免费</span>
+			<span class="old_price text3">原价：￥900</span>
+		</div>
+	</div>
+	<button class="btns now_appointment">立即预约</button>
+	<button class="btns appointment_success">预约成功</button>
+	<button class="btns playing">正在直播</button>
+	<button class="btns back_look">查看回放</button>
+	<button class="btns finish">已结束</button>
+</div>
+<!--c主体内容-->
+<div class="content_wrap cf">
+	<div class="cont_left">
+		<!--课程介绍内容-->
+		<div id="lesson_info">
+			<div class="title_wrap">
+				<h3><span></span>课程介绍</h3>
+				<p class="dowload"><a href="#">讲义下载</a></p>
+			</div>
+			<div class="info_text">
+				<p>长期以来，我国没有单独的合营安排准则，而是将相关内容放在长期股权投资准则应用指南和相关讲解中予以规范。
+
+				</p>
+				<!-- <p>为了满足现今我们市场经济的发展，以及为了能和国际会计准则的趋同，我们国家于2014年发布了最新制定的《企业会计准则第40号—合营安排》。</p> -->
+
+			</div>
+		</div>
+		
+		<!--套餐介绍-->
+		<div class="package cf" >
+			<div class="cont_inner cf">
+				<div class="images">
+					<a href="#"><img src="images2015/liveinfo/list.jpg"></a>
+					<p class="img_mask"></p>
+					<p class="img_mask_text">6月1日16:00开课</p>
+				</div>
+				<div class="cont_info">
+					<h3><a href="#"><a href="#"><strong>FRM</strong> 二级无忧全景套餐班</a></a></h3>
+					<p class="introduction">
+						被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前
+					</p>
+					<div class="teacher cf">
+						<p class="name"><img src="images2015/liveinfo/teacher.png" />讲师：纪慧诚</p>
+						<p class="nums">已预约：163人</p>
+					</div>
+				</div>
+			</div>
+			<div class="cont_inner cf">
+				<div class="images">
+					<a href="#"><img src="images2015/liveinfo/list.jpg"></a>
+					<p class="img_mask"></p>
+					<p class="img_mask_text">6月1日16:00开课</p>
+				</div>
+				<div class="cont_info">
+					<h3><a href="#"><a href="#"><strong>FRM</strong> 二级无忧全景套餐班</a></a></h3>
+					<p class="introduction">
+						被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前
+					</p>
+					<div class="teacher cf">
+						<p class="name"><img src="images2015/liveinfo/teacher.png" />讲师：纪慧诚</p>
+						<p class="nums">已预约：163人</p>
+					</div>
+				</div>
+			</div>
+			<div class="cont_inner cf margin_right_none">
+				<div class="images">
+					<a href="#"><img src="images2015/liveinfo/list.jpg"></a>
+					<p class="img_mask"></p>
+					<p class="img_mask_text">6月1日16:00开课</p>
+				</div>
+				<div class="cont_info">
+					<h3><a href="#"><a href="#"><strong>FRM</strong> 二级无忧全景套餐班</a></a></h3>
+					<p class="introduction">
+						被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前被誉为“华尔街的入场券”的特许金融分析师（CFA）考试已经进入倒计时！面对备考时间长、考试费用高的CFA考试，众考生无不希望在临考前，能提前
+					</p>
+					<div class="teacher cf">
+						<p class="name"><img src="images2015/liveinfo/teacher.png" />讲师：纪慧诚</p>
+						<p class="nums">已预约：163人</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cont_right">
+		<!--讲师介绍-->
+		<div id="teacher" class="cf">
+			<div class="title_wrap">
+				<h3><span></span>讲师介绍</h3>
+			</div>
+			<div class="cont cf">
+				<img src="images2015/liveinfo/teacher.png" alt="汤震宇" />
+				<div class="teacher_info">
+					<h4>汤震宇<i> — — 金程首席培训师</i></h4>
+					<p class="field">授课领域：<span>CFA、FRM、CPA</span></p>
+					<p class="class_hour">授课课时：<span>10000课时</span></p>
+				</div>
+			</div>
+			<div class="ewm cf">
+				<p class="satisfied_wrap">
+					<span class="satisfied">98.7%</span>
+					<span class="satisfied_text">学生满意度</span>
+				</p>
+				<p class="erweima">
+					
+				</p>
+			</div>
+		</div>
+		<!--相关推荐-->
+		<div id="recommend">
+			<div class="title_wrap">
+				<h3><span></span>相关推荐</h3>
+			</div>
+			<div class="recommend_cont_wrap cf">
+				<ul class="recommend_cont cont1">
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+				</ul>
+				<ul class="recommend_cont cont2">
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+					<li><a href="#">CPA会计股权投资专题十讲之一 股权投</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mbbody">
+<!--手机底部 start-->
+<div class="mbfooter">
+<ul>
+<li><a href="">登录</a></li>
+<li><a href="">注册</a></li>
+<li><a href="">下载APP</a></li>
+<li><a href="">用户反馈</a></li>
+</ul>
+<dl>
+<dt>400-700-9596 </dt>
+<dd>（每日9:00-21:00免长途费 ）</dd>
+</dl>
+<p>©2014金程网校保留所有权利 </p>
+</div>
+<div class="gotop"><a href="#"><strong>&and;</strong>TOP</a></div>
+<!--手机底部 end-->
+</div>
+
+
+<div class="webbody">
+<!--底部-->
+<footer>
+  <div class="newlinks">
+    <dl>
+    <dt>新手指南</dt>
+    <dd><a href="#">如何注册会员</a></dd>
+    <dd><a href="#">如何购买课程</a></dd>
+    <dd><a href="#">如何观看课程</a></dd>
+    </dl>
+    <dl>
+    <dt>学习须知</dt>
+    <dd><a href="#">网校学习方式</a></dd>
+    <dd><a href="#">学习效果如何保障</a></dd>
+    <dd><a href="#">学习条件</a></dd>
+    </dl>
+    <dl>
+    <dt>支付方式</dt>
+    <dd><a href="#">网上支付</a></dd>
+    <dd><a href="#">开通支付宝</a></dd>
+    </dl>
+    <dl>
+    <dt>关于金程</dt>
+    <dd><a href="#">关于我们</a></dd>
+    <dd><a href="#">联系我们</a></dd>
+    <dd><a href="#">加入我们</a></dd>
+    </dl>
+    <dl>
+    <dt>400 - 700 - 9596</dt>
+    <dd>（每日9:00-21:00    免长途费）</dd>
+    <dd><img src="http://www.gfedu.cn/2015/images2015/bottomWX.png"></dd>
+    </dl>
+</div>
+<div class="copyright" style="background:none; border:none;">
+<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+    </div>
+</footer>
+<!--底部--> 
+</div>
+<!-- login start -->
+<!--登录-->
+
+<div class="body_main body_login" id="loginDialog">
+  <div class="box_main">
+    <div id="login" class="login">
+      <form action="/web/Check/CheckCurent.asp" method="post" name="LoginForm" id="LoginForm">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closelogin();">X</a>
+              <p class="phoneReg">登录金程网校</p>
+            </div>
+            <div class="login_msg_wrap">
+              <p class="login_msg">
+                <i class="iconfont">&#xf0002;</i>用户名或密码不匹配，请重新输入
+              </p>
+            </div>            
+            <div class="field-all">
+              <div class="field-group"><input type="hidden" name="S_Login" value="5"> <span class="control-group" id="mobile_input">
+                <div class="input_add_long_background">
+                  <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+                    <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="field-group"> <span class="control-group" id="password_input">
+                <div class="input_add_long_background">
+                  <input type="password" id="Field_PassWord" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwdL('Field_PassWord');">
+                <p class="noticeLR" id="noticeLR_Field_PassWord"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="mianDL">
+                  <p><input type="checkbox" checked="checked">两周内免登录</p>
+                  <a href="/GetPass.shtml">忘记密码？</a>
+              </div>
+              
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="loginB" type="button" value="登录" class="button_button disabled">
+                </div>
+              </div>
+              <div class="hzzh">
+                <div class="zjdl">
+                  <span>直接登录：</span>
+                  <a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+                <p><a id="nowReg" href="javascript:;" onclick="LtR();">注册</a>金程账号</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register start -->
+<!--注册-->
+
+<div class="body_main" id="regDialog">
+  <div class="box_main">
+    <div id="register" class="register">
+      <form id="form_reg" name="form_reg" action="http://user.gfedu.net/UserReg.aspx" method="post" onSubmit="return checkReg()">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closereg();">X</a>
+              <p class="phoneReg">注册金程网校</p>
+            </div>
+            <div class="field-all">
+              <div class="field-group"> <span class="control-group" id="realname_input">
+                <div class="input_add_long_background">
+                  <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+                  <p class="noticeLR" id="noticeLR_realnameM"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group handphone"> <span class="control-group" id="tel_input">
+                <div class="input_add_long_background">
+                   <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+                   <p class="noticeLR" id="noticeLR_tel"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="code_input">
+                <div class="input_add_background">
+                  
+                   <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+                <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+                
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="password1_input">
+                <div class="input_add_long_background">
+                 <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+                 <p class="noticeLR" id="noticeLR_passwd"></p>
+                
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              <div class="xieyi">
+                <input type="checkbox">
+                同意金程的《用户协议》 </div>
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="reg_But" type="submit" value="注册" class="button_button disabled"><input type="hidden" name="furl" id="furl" value=""><input type="hidden" name="stationid" id="stationid" value="5"><input type="hidden" name="username" id="Hidden1" value="username"><input type="hidden" name="email" id="email" value="nomail">
+                </div>
+              </div>
+             <div class="hzzh">
+                <div class="zjdl">
+                  <span>直接登录：</span>
+                  <a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+                <p>已有账号<a id="nowLogin" href="javascript:;" onclick="RtL();">登录</a></p>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register end -->
+</body>
+</html>

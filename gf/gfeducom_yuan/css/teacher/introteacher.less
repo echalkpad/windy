@@ -1,0 +1,79 @@
+
+@import "teachereset.less";
+
+.procontent{
+    padding: 0;
+    .introcontent{
+    ul{
+        .cf();
+        width: 100%;
+     
+        li{
+          width: 25%;
+          padding: 10px 0;
+          float: left;
+          background: #F0F0F0;
+          text-align: center;
+        }
+        .selecded,li:hover{background: @csblue;a{color: @cw;}}
+    }
+    dl{
+        .cf();
+        padding: 20px 20px 0px;
+        .f14();
+        color: @c6;
+        line-height: 28px;
+        dt{padding: 50px 0 20px; .cf(); clear: both; .f18();color: @csblue; i{padding-right: 10px;}}
+        dd{
+            padding: 0 20px;
+            box-sizing: border-box;
+            img{float: left; padding-right: 20px;}
+            span{
+                display: inline-block;
+                box-sizing: border-box;
+                border: 1px solid @c9;
+                width: 48.5%;
+                height: 50px;
+                float: left;
+                margin-bottom: 2%;
+                img{height: 40px; padding-right: 0; width: 100%;padding-top: 5px;}
+                &:nth-child(2n+1){margin-right: 2%;}
+            }
+        }
+        
+    }
+}
+}
+
+@media(min-width:640px){
+ .procontent{
+   .introcontent{
+    dl{
+        padding: 0px 60px 60px;
+        dt{}
+        dd{
+            padding: 0 0 0 20px;
+            span{
+                width: 31%;
+                margin:0 2% 2% 0;
+                
+            }
+        }
+    }
+ }   
+}
+}
+@media(min-width:992px){
+ .procontent{
+     .introcontent{
+    dl{dd{span{width: 23%;}}}
+ }   
+ }
+}
+@media(min-width:1200px){
+ .procontent{
+     .introcontent{
+    dl{dd{span{width: 18%;}}}
+ }   
+ }
+}

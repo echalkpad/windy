@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.leibie h3{width:150px;}
+.search{margin-left:50px;}
+.bannerB{width:1160px;height:133px;margin:30px auto 20px;}
+.otherLeft{width:845px;float:left;}
+.otherNav{width:805px;height:46px;background:#f6f6f6;margin-bottom:39px;padding:0 20px;position:relative;}
+.otherNav li{float:left;margin-right:38px;}
+.otherNav li a,.otherNav span{color:#666;font-size:15px;line-height:46px;font-weight:bold;}
+.otherNav li a:hover{color:#17b3f1;text-decoration:none;}
+.otherNav .noMR{margin:0;}
+.otherNav .noMR ul{display:none;position:absolute;top:46px;width:100px;right:0;background:#f6f6f6;z-index:999;}
+.otherNav .noMR ul li{margin:0;float:none;}
+.otherNav .noMR ul li a{text-align:center;display:block;}
+.otherNav .noMR:hover ul{display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

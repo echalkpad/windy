@@ -1,0 +1,148 @@
+/* LESS Document */
+
+
+@import "variable.less";
+
+/* 布局 */
+.wrap{width:100%;.cf();}@media (min-width:1200px){.wrap{width:1200px;margin:0 auto;}}
+.mbbody{width:100%;}@media (min-width:768px){.mbbody{display:none;}}
+.webbody{display:none;}@media (min-width:768px){.webbody{display:block;}}
+
+.bodygreyish{}
+@media (min-width:768px){
+	.bodygreyish{
+		background-color:#f8f8f8;
+		.cf();
+	}
+}
+
+
+/* 顶部广告位 */
+.topads{
+	display:none;
+}
+@media (min-width:768px){
+	.topads{
+		display:block;
+		width:100%;
+		background-color:@cw;
+		.shadowbtm();
+		p{
+			img{
+				width:100%;
+				max-width:1200px;
+			}
+		}
+	}
+}
+@media (min-width:1200px){
+	.topads{
+		p{
+			height:65px;
+			.lgscreen();
+		}
+	}
+}
+
+
+/* 标题下的间隔符 */
+.hline{
+	width:180px;
+	height:10px;
+	border-bottom: solid 1px @c3;
+	position:relative;
+	margin:10px auto;
+	i{
+		position:absolute;
+		top:5px;
+		left:50%;
+		margin-left:-5px;
+		width:10px;
+		height:10px;
+		border: solid 1px @c3;
+		border-radius:50%;
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		background-color:@cw;
+		display:block;
+	}
+}
+
+/* 空间距 */
+.bk20{
+	.cf();
+	width:100%;
+	padding-top:20px;
+}
+.bk30{
+	.cf();
+	width:100%;
+	padding-top:30px;
+}
+
+.blk20{
+	.cf();
+	width:100%;
+	padding-top:20px;
+}
+.blk30{
+	.cf();
+	width:100%;
+	padding-top:30px;
+}
+.blk40{
+	.cf();
+	width:100%;
+	padding-top:40px;
+}
+.blk50{
+	.cf();
+	width:100%;
+	padding-top:50px;
+}
+.blk60{
+	.cf();
+	width:100%;
+	padding-top:60px;
+}
+.hr{
+	margin:10px auto;
+	border-bottom:1px solid #ddd;
+}
+@media(min-width:640px){
+	.hr{margin:20px auto;}
+}
+//三角
+
+//三角匹配模式
+.triangle(top,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color:transparent transparent @c transparent;
+	border-style:dashed dashed solid dashed;
+}
+.triangle(bottom,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color:@c transparent transparent transparent;
+	border-style:solid dashed dashed dashed;
+}
+.triangle(left,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color:transparent @c transparent transparent;
+	border-style:dashed solid dashed dashed;
+}
+.triangle(right,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color:transparent transparent transparent @c;
+	border-style: dashed dashed dashed solid;
+}
+.triangle(@_,@w:5px,@c:#ccc){
+	width:0;
+	height:0;	
+	overflow:hidden;
+}
+
+.sanjiao{
+	.triangle(top,20px);
+}
+
+

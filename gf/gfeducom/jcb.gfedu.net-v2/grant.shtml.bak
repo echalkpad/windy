@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>“金程圆梦”助学金计划，立即申请！-金程杯</title>
+<meta name="keywords" content="金程助学金,金程助学金计划,金程助学金申请">
+<meta name="description" content="“金程圆梦”助学金计划，旨在义无反顾的为在校学生敞开提升专业能力的大门，是帮助高校学生实现个人梦想的平台，马上申请吧-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe619;</i>
+    <h2>圆梦助学金</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p5_grant">
+            <h4>“金程圆梦”助学金计划<br>
+                你与成功之间的距离，只差一个金程！
+            </h4>
+            <p>
+                作为“2015年金程大学生圆梦计划”的一部分，“金程圆梦”助学金旨在义无反顾的为在校学生敞开提升专业能力的大门，是帮助高校学生实现个人梦想的平台。
+    申请学生通过扫描金程杯组委会官方二维码，回复指定内容，就有机会获得价值万元的财经学习礼包，丰富财经课程，尽在掌握。
+    同时，针对全国各大院校，组委会将特辟十万元助学金，以帮助有需要的学生顺利完成学业。
+       
+            </p>
+            <div class="bk30"></div>
+            <dl>
+                <dt><i></i><span>01</span></dt>
+                <dd>
+                    <h5>申请时间</h5>
+                    <p>2015年9月30日至12月10日（以后每年均评选）</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><i></i><span>02</span></dt>
+                <dd>
+                    <h5>设立奖项及内容</h5>
+                    <span>1）针对学生：梦想新生代<span>
+                    <p>
+                        助学内容：学习礼包（课程）/人（5,000元）<br>
+                        助学范围：50名学生
+                    </p>
+                    <span>2）针对高校：圆梦助学金</span>
+                    <p>
+                        助学内容：10,000元现金+学习礼包（课程）40,000元/校园<br>
+                        助学范围：2所院校
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><i></i><span>03</span></dt>
+                <dd>
+                    <h5>申请形式</h5>
+                    <span>1）梦想新生代</span>
+                    <p>
+                        高校学生通过扫描本次“金程圆梦”助学金计划二维码，回复“姓名+手机号+申请<br>
+                        助学金”，活动组委会将对参与学生进行抽奖；<br>
+                        最终获得奖学金的学生将于2015年12月19日（“金程杯”决赛当天揭晓）。
+                    </p>
+                    <span>2）圆梦助学金</span>
+                    <p>
+                        活动组委会将为全国2所高校提供助学金，由高校推动助学活动;<br>
+                        最终获得奖学金的高校将于2015年12月19日（“金程杯”决赛当天揭晓）。
+                    </p>
+                </dd>
+                <dt>&nbsp;</dt>
+                <dd><img src="/images/grantQRCode.png" width="100%"/></dd>
+            </dl>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(4)").addClass("selecded");
+</script>
+
+</body>
+</html>

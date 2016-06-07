@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯招聘计划-金程杯</title>
+<meta name="keywords" content="金程招聘,金程招聘计划">
+<meta name="description" content="金程教育”校园招聘计划针对现阶段高校学生就业难的状况，将“模拟求职生涯”贯穿整个活动；招聘职位：金融、财会研究院，管理培训生，辅导师、培训助理，市场活动策划与推广，销售培训生等-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+<style type="text/css">
+    .infocontent {
+        font-size:12px;
+        color:gray;
+        line-height:25px;
+        display:block;
+        background-color:cornsilk;
+        padding:15px;
+    }
+    .p8_recruit h4{text-align: center;}
+    .p8_recruit h4 span{display: block;}
+    .p8_recruit .right{float: right; margin: 10px 140px 0 0px;}
+</style>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe003;</i>
+    <h2>联系我们</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p8_recruit">
+          
+            <h4>CONTACT &nbsp;&nbsp; &nbsp;US<span>———联系我们———</span></h4>
+            <br/><br/>
+            <img src="images/wx_jcb.jpg" class="right">
+            <p>
+                大赛QQ交流群：261838433<br>
+                金程杯微信号：gfedu2015<br>
+                组委会电话：021-61323513<br>
+                组委会邮箱：jcb@gfedu.net<br>
+                组委会地址：上海市虹口区松花江路2539号复旦科技园1号楼11层<br>
+            </p>
+            <!-- 走进高校 Start -->
+           
+            <!-- 走进高校 End -->
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(8)").addClass("selecded");
+</script>
+
+</body>
+</html>

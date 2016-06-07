@@ -1,0 +1,169 @@
+/*
+ * == 专题之报名时间与费用
+ *************************************************/
+
+@import 'kscom.less';
+
+
+.content{
+    article{
+        display: none;
+        padding: 30px 20px 50px;
+        h3{
+            .f14();
+            color: #c3;
+            text-align: center;
+            line-height: 28px;
+            span{ display: block; }
+            p{
+                padding: 20px 0;
+            }
+        }
+    }
+}
+@media(min-width:768px){
+.content{
+ article{
+     display: block;
+    padding: 50px 0 70px;
+    h3{
+       .f16();
+    }
+ }
+}
+}
+@media(min-width:1200px){
+    .content{
+         article{
+            h6{
+                width: 70%;
+                margin-left: 15%;
+            }
+         }
+    }
+}
+/* 报名时间及费用  */
+.feecont{
+    .secTab{
+        .cf();
+        width: 300px;
+        margin: 40px auto 0;
+      h2{ .f12(); float: left; i{.f18();} }
+      ul{
+          .cf();
+          width: 185px;
+          float: left;
+          border-bottom: 2px solid @cksblue;
+          li{
+              float: left;
+              padding: 3px 10px;
+              background: @cksblue;
+              margin: 0 5px;
+              a{ color: @cw; .f12(); }
+          }
+      }    
+    }
+    
+    .ctnfee{
+        display: none;
+        margin: 30px 0;
+        
+        p{
+           width: 100%;
+           text-align: center; 
+           padding: 20px 0;
+        }
+        table{
+            width: 100%;
+            overflow: scroll;
+            background: #fafafa;
+            tr{
+                height: 70px;
+                border-top: 2px solid #d3d3d3;
+                &:first-child{border-top: 0;}
+            }
+            td{
+             text-align: center;
+             width: 25%;
+             &:nth-child(2n){background: #ededed;}
+            }
+        }
+        
+        &:first-child{display: block;}
+    }
+    
+    h3{
+      padding: 10px 40px;
+      text-align: center;  
+    }
+}
+
+.ctn{overflow-x: scroll;}
+
+@media(min-width:480px){
+    .feecont{
+      .secTab {
+        width: 400px;
+        h2{
+          .f16();
+         }
+         ul{
+             width: 250px;
+            li{margin: 0 10px;
+                a{.f16();}
+            }
+         }
+      }
+  }
+}
+@media(min-width:640px){
+    .feecont{    
+       .ctnfee{
+           table{
+               width: 100%;
+           }
+       }
+       
+       h3{ padding: 0; .f16();}
+    }
+    .ctn{overflow-x: hidden;}
+}
+
+@media(min-width:992px){
+    .feecont{
+       .ctnfee{
+           table{
+               width: 970px;
+               margin: 0 auto;
+           }
+       }
+    }
+}
+
+/* 如何报名 */
+.feebm{
+    margin: 80px auto;
+    h2{
+        color: #134577;
+        .f20();
+        width: 150px;
+        border-bottom: 3px solid @cksblue;
+        text-align: center;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    
+    p{
+        text-align: center;
+        padding: 30px 20px;
+        line-height: 28px;
+        color: @c6;
+        a{
+            color: @c6;
+            &:hover{color: #d73240; text-decoration: none; }
+        }
+        em{color: @cksblue; .f16();display: block;}
+    }
+}
+
+

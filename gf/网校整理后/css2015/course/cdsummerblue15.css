@@ -1,0 +1,163 @@
+@media (min-width: 1200px) {
+  .cicmodesummerblue {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+.cicmodesummerblue h3 {
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  background: #30aec5;
+}
+/* 顶部标题 */
+.summerbluetitle {
+  padding: 30px 20px;
+}
+.summerbluetitle img {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .summerbluetitle img {
+    width: 470px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.summerbluebt {
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+.summerbluebt .sbtext {
+  padding: 0 20px 30px;
+  font-size: 14px;
+}
+.summerbluebt .sbtext p {
+  padding: 20px 0 0;
+}
+.summerbluebt .sbtext span {
+  /* color: #000;
+            font-weight: bold; */
+}
+.summerbluebt .sbtext .sbtextlast {
+  font-size: 16px;
+  color: #30aec5;
+}
+@media (min-width: 992px) {
+  .summerbluebt .sbtext {
+    padding: 0 30px 30px;
+  }
+}
+/* 招生对象 + ... */
+.summerbluezk {
+  margin: 10px 0;
+  border: 1px solid #eee;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+.summerbluezk .sbzk {
+  border-bottom: 1px solid #eee;
+}
+.summerbluezk .sbzktitle {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+.summerbluezk .sbzktitle img {
+  float: left;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.summerbluezk .sbzktext {
+  padding: 0 20px;
+}
+.summerbluezk .sbzktext p {
+  padding-bottom: 5px;
+}
+@media (min-width: 640px) {
+  .summerbluezk .sbzk {
+    display: inline-block;
+    width: 30%;
+    height: 290px;
+    border-bottom: 0;
+    border-right: 1px solid #eee;
+    vertical-align: top;
+  }
+  .summerbluezk .sbzk:first-child {
+    width: 38%;
+  }
+  .summerbluezk .sbzk:last-child {
+    border-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .summerbluezk .sbzk {
+    height: 220px;
+  }
+}
+/* 课程安排  */
+.summerbluebt {
+  clear: both;
+  margin-bottom: 10px;
+}
+.summerbluebt .sbkc .sbkcspan {
+  display: inline-block;
+  padding: 0 20px 10px;
+}
+.summerbluebt .sbkc .sbkcspan:first-child {
+  padding-top: 10px;
+}
+.summerbluebt .sbtextzs {
+  padding: 20px;
+}
+.summerbluebt .sbtextzs p {
+  line-height: 28px;
+}
+.summerbluebt .sbtextfriend {
+  width: 300px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.summerbluebt .sbtextteach {
+  padding: 20px 0;
+  text-align: center;
+}
+.summerbluebt .sbtextzs {
+  padding: 20px;
+}
+.summerbluebt .sbtextzs .sbtextzstxt p {
+  line-height: 24px;
+  /* span{
+                    color: #000;
+                    font-weight: bold;
+                } */
+}
+.summerbluebt .sbtextzs img {
+  padding-top: 20px;
+}
+@media (min-width: 640px) {
+  .summerbluebt .sbtextfriend {
+    width: 100%;
+  }
+  .summerbluebt .sbtextteach p {
+    display: inline-block;
+    width: 32%;
+  }
+  .summerbluebt .sbtextzs .sbtextzstxt {
+    display: inline-block;
+  }
+}
+@media (min-width: 1200px) {
+  .summerbluebt .sbtextzs .sbtextzstxt {
+    display: inline-block;
+  }
+}
+/* 回顾 */
+.summerbluereview {
+  width: 100%;
+  padding: 20px 0;
+}

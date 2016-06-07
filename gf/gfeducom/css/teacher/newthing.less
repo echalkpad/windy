@@ -1,0 +1,248 @@
+/*
+ * == 新鲜事
+ * *******************************/
+@import "teachereset.less";
+
+.procontent{
+    p{line-height: 18px; .f12(); }
+    .newthing{background: @cw;}
+    .onenthing{
+        margin: 20px 20px 0;
+        border-bottom: 1px solid @cd;
+        
+        dl{ padding-bottom: 10px; a{color: @csblue;} }
+
+        dt{
+            float: left;
+            img{
+                .bdrhalf();
+                width: 60px;
+                height: 60px;  
+            }
+        }
+        
+        dd{
+            padding-left: 70px;
+            .f12();
+            line-height:18px;
+            
+            .name{
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            &:last-child{
+                padding-top: 6px; text-align: right; 
+                .dtime{float: left;}
+                em{
+                    color: @csblue;
+                    cursor: pointer;
+                    padding-left: 20px;
+                    span{
+                        padding-left: 4px;
+                    }
+                    &:last-child{color: #d86654;}
+                }
+            }
+        }
+    }
+    
+    .comments{
+        display: none;
+        background: @cfa;
+        position: relative;
+        border: 1px solid @cc;
+        box-sizing: border-box;
+        padding: 20px;
+        box-sizing: border-box;
+        .topsj{
+            width: 14px;
+            height: 14px;
+            border-left:1px solid @cc;
+            border-top: 1px solid @cc;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            
+            background: #fafafa;
+            position: absolute;
+            top: -9px;
+            right: 93px;
+            margin-left: -8px;
+        }
+        p{
+            .cf();
+            .closecomt{
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                border: 1px solid @cc;
+                text-align: center;
+                line-height: 17px;
+                float: right;
+                color: @cc;
+                cursor: pointer;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+            span{
+                a{
+                    background: @csblue;
+                    .bdr2();
+                    .f14();
+                    color: @cw;
+                    padding: 5px 10px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .comtxtbtn{
+            padding-left: 0 !important;
+            i{.f18(); padding-right: 10px; cursor: pointer; vertical-align: middle;}
+            em{padding-right: 5px; display: none; }
+            .icon-smile{color: #db7262;}
+            .icon-pic{color: #49b19a;}
+            span{float: right;}
+        }
+        textarea{
+            width: 100%;
+            height: 70px;
+            margin: 10px 0;
+            padding-left: 10px;
+            box-sizing: border-box;
+            .bdr2();
+            margin: 10px 0;
+        }
+        
+        .reply{
+            padding: 30px 0;
+            border-bottom: 1px solid @cc;
+            img{float: left;}
+            .elsePic img{float: none;}
+            p{  padding-left: 60px;  }
+            .elsename{color: @csblue;padding: 0 5px; cursor: pointer;}
+            .comentnum{
+                text-align: right;
+                .zftime{float: left; color: @c9;}
+                em{color: @csblue; padding-left: 20px; cursor: pointer; &:last-child{span{color: @csblue;}}} 
+            }
+            
+            .replyagain{padding: 10px 0; textarea{height: 40px;}}
+            textarea{height: 40px;}
+        }
+        .morecomt{
+            padding: 10px 0;
+            text-align: right;
+            a{color: @csblue; .f14();}
+        }
+    }
+    
+}
+
+@media(min-width:480px){
+    .procontent{ 
+      .onenthing{
+        .comentnum{ 
+           display: block;
+          .comtime{ display: inline-block; float: left;}
+        }
+      }
+    }
+}
+
+@media(min-width:640px){
+  .procontent{
+    .comments{
+        margin: 0 20px;
+        .topsj{
+            right: 78px;
+        }
+        .comtxtbtn{
+            i{padding-right: 5px;}
+            em{display: inline-block; padding-right: 10px;}
+        }
+    }
+  }  
+}
+
+@media(min-width:992px){
+  .procontent{
+    .comments{margin: 0 60px 0 100px;
+        .topsj{right: 77px;}
+    }
+    .onenthing{margin: 40px 60px 0;}
+  }
+}
+@media(min-width:992px){
+    .meforward{
+        .comments{
+            margin: 10px 0 0 60px;
+        }
+    }
+}
+
+.write_box{
+ textarea{
+    height: 40px !important;
+ }
+}
+
+
+.inputtext{
+       //     display: none;
+            background: #F0F0F0;
+            position: relative;
+            padding: 20px;
+            margin-left: 70px;
+            .arror{
+                width: 14px;
+                height: 14px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                
+                background: #F0F0F0;
+                position: absolute;
+                top: -8px;
+                right: 70px;
+                margin-left: -8px;
+            }
+            .icon-close{
+                border: 1px solid @cd;
+                padding: 3px;
+                float: right;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+            textarea{
+                width: 100%;
+                height: 70px;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+            }
+            p{
+                i{vertical-align: middle; cursor: pointer; }
+                em{
+                    color: @csblue;
+                    padding: 1px 10px 0 5px;
+                }
+                span{
+                    float: right;
+                    a{
+                        cursor: pointer;
+                        padding: 3px 8px;
+                        background: @csblue;
+                        color: @cw;
+                        .f14();
+                        .bdr2();
+                        margin-left: 5px;
+                    }
+                }
+            }
+            
+            .comet{padding-top: 30px;}
+        }
+

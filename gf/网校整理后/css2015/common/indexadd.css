@@ -1,0 +1,399 @@
+/* LESS Document */
+/*侧边漂浮栏*/
+#navigationMenu li {
+  list-style: none;
+  height: 46px;
+  width: 46px;
+}
+#navigationMenu span {
+  width: 0;
+  right: 100%;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+  font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  line-height: 46px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  transition: 0.25s;
+}
+#navigationMenu a {
+  height: 46px;
+  width: 46px;
+  display: block;
+  position: relative;
+}
+#navigationMenu {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+#navigationMenu a:hover span {
+  width: auto;
+  padding: 0 20px;
+  overflow: visible;
+}
+#main {
+  position: fixed;
+  bottom: 293px;
+  right: 20px;
+  background: #fff;
+}
+.nav-border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.topWeixin {
+  background: url(../images2015/topWeixin.png) center center no-repeat;
+}
+.topKF {
+  background: url(../images2015/topKF.png) center center no-repeat;
+}
+.topFK {
+  background: url(../images2015/topFK.png) center center no-repeat;
+}
+.topBack {
+  background: url(../images2015/topBack.png) center center no-repeat;
+}
+.topKF span {
+  position: relative;
+}
+.topNav {
+  position: absolute;
+  right: 8px;
+}
+.topKF span p {
+  background: #fff;
+  border: 1px solid #e9e8e8;
+  padding: 5px 10px 0;
+}
+.topKF span p img {
+  padding: 5px;
+}
+.topWeixin span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.topWeixin .topNav {
+  position: absolute;
+  right: 13px;
+}
+.topWeixin span p {
+  background: #fff;
+  border: 1px solid #e9e8e8;
+  padding: 15px 15px 0;
+  overflow: hidden;
+}
+.topWeixin span p em {
+  padding: 5px;
+}
+/*登录框、注册框*/
+.noticeLR {
+  background-image: url(../../images2015/inputnotice.png);
+  background-position: 0px 1px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+  text-indent: 10px;
+  color: #f26e6b;
+  padding-bottom: 0;
+  padding-left: 5px;
+  position: absolute;
+}
+.noticeLR a {
+  line-height: 10px !important;
+}
+/*index start*/
+.body_main {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.box_title {
+  width: 410px;
+  height: 80px;
+  padding: 0;
+  position: relative;
+}
+.box_title .text_content {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+.box_title .text_content h1 {
+  font-weight: normal;
+}
+.box_main {
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: #ffffff;
+  width: 295px;
+  margin: 2% auto 50%;
+}
+.box_bottom {
+  width: 477px;
+  height: 7px;
+  padding: 0;
+}
+/*Tooltips*/
+.tooltips_main {
+  position: absolute;
+  left: 0;
+  margin: -5px 0 0 2px;
+  z-index: 999;
+  bottom: -55px;
+}
+.tooltips_box,
+.tooltips,
+.msg {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  top: 2px;
+}
+.tooltips_box {
+  line-height: 1.5;
+}
+.tooltips {
+  margin: 0 -2px;
+}
+.msg {
+  color: #f26e6b;
+  text-shadow: 0 1px 0 #FFFFFF;
+  font-size: 12px;
+}
+.ov {
+  position: absolute;
+  left: 30%;
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  margin: 16px 0 0 0;
+  display: inline;
+}
+.field-all {
+  width: 260px;
+  margin: 0 auto;
+}
+.field-all input {
+  color: #bbbbba;
+  width: 100%;
+  padding: 0 6px;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 3px;
+  outline-color: #4ac7e7;
+  border: 1px solid #d9d9d9;
+  font-size: 14px;
+}
+/*regist*/
+.field-group {
+  height: 40px;
+  position: relative;
+}
+.register .form_submit .fieldset .field-group .title {
+  float: left;
+  width: 120px;
+  text-align: right;
+  margin: 4px 0 0 0;
+  font-size: 14px;
+}
+.register .form_submit .fieldset .field-group .tips {
+  float: left;
+  width: 250px;
+  color: #8E8E8E;
+}
+.input_add_background img {
+  padding-left: 10px;
+}
+/*end regist*/
+.newLoginB {
+  display: block;
+  text-align: right;
+  padding: 10px 12px 0 0;
+  color: #1ca3b6;
+}
+.newclosereg {
+  display: block;
+  position: absolute;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 13px 4px 18px;
+  color: #fff;
+  font-size: 22px;
+  top: -20px;
+  border-radius: 3px;
+}
+.newclosereg:hover {
+  text-decoration: none;
+}
+/*手机注册*/
+.phoneReg {
+  margin: 20px 12px 15px;
+  color: #323232;
+  font-size: 22px;
+  text-align: center;
+}
+.xieyi input {
+  width: 16px;
+  height: 16px;
+}
+input[type="submit"],
+#loginB {
+  width: 100%;
+  background: #33b0c4;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 10px;
+}
+#code_input input {
+  width: 45%;
+  float: left;
+  vertical-align: middle;
+  border: 1px solid #d9d9d9;
+  line-height: 20px;
+}
+#code_input input[type="button"] {
+  padding: 0 9px;
+  box-sizing: border-box;
+  height: 30px;
+  float: right;
+  border-radius: 3px;
+  border: none;
+  background: #c1c1c2;
+  color: #fff;
+  width: 50%;
+  font-size: 16px;
+}
+.div_submit {
+  margin: 15px 0;
+}
+.div_submit_button input {
+  padding: 8px 0;
+}
+.msdl {
+  text-align: right;
+  color: #989898;
+  padding-bottom: 15px;
+}
+.msdl a {
+  color: #1ca3b6;
+}
+.handphone .msg {
+  top: 66px;
+}
+.register,
+#login {
+  position: relative;
+}
+/*登录*/
+.mianDL {
+  overflow: hidden;
+}
+.mianDL p {
+  float: left;
+}
+.mianDL a {
+  display: inline-block;
+  float: right;
+}
+.mianDL a:hover {
+  color: #4ebed1;
+}
+.mianDL input {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.hzzh {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.hzzh p {
+  float: right;
+}
+.hzzh a {
+  color: #1ca3b6;
+}
+.zjdl {
+  float: left;
+}
+.zjdl span {
+  color: #656666;
+  position: relative;
+  top: -15px;
+}
+.qq {
+  background: url(../images2015/qq.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.weibo {
+  background: url(../images2015/weibo.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 7px;
+}
+.qq:hover {
+  background: url(../images2015/qqH.png) no-repeat;
+}
+.weibo:hover {
+  background: url(../images2015/weiboH.png) no-repeat;
+}
+.login_msg_wrap {
+  display: none;
+  width: 340px;
+  height: 30px;
+  margin: 10px auto;
+}
+.login_msg {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #f26e6b;
+  line-height: 28px;
+  color: #f26e6b;
+  box-sizing: border-box;
+}
+.login_msg i {
+  display: inline-block;
+  padding: 0 5px;
+}
+@media (min-width: 640px) {
+  .box_main {
+    width: 410px;
+  }
+  .box_main .phoneReg {
+    margin: 36px 12px 25px;
+  }
+  .box_main .newclosereg {
+    right: -45px;
+    top: -36px;
+  }
+  .box_main .field-all {
+    width: 340px;
+    margin: 0 auto;
+  }
+  .box_main .field-group {
+    height: 65px;
+  }
+  .box_main input[type="text"],
+  .box_main input[type="password"] {
+    height: 40px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .box_main #code_input input[type="button"],
+  .box_main .div_submit_button input {
+    height: 40px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯－问鼎未来CFO之路</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/jcb404.css">
+<link rel="stylesheet" href="/css/headfoot.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<div class="nopage">
+	<div class="nopage_con">
+	<div class="contentmsg">
+	<img src="/images/404.png" />
+	<dl>
+		<dt>&nbsp;&nbsp;迷路了！</dt>
+		<dd>你所访问的页面无法访问</dd>
+		<dd><a href="/index.shtml">返回首页</a><a href="javascript:history.go(-1);location.reload()">返回上一页</a></dd>
+	</dl>		
+	</div>
+	</div>
+	
+	<div class="elsepage">
+     <dl>
+        <dt>您还可以点击一下链接继续浏览网站</dt>
+        <dd>
+            <a href="/intro.shtml">赛事介绍</a><a href="/schedule.shtml">赛制赛程</a><a href="/payoffs.shtml">大赛收益</a><a href="/grant.shtml">圆梦助学金</a>
+        </dd>
+    </dl>   
+    </div>
+</div>
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+
+</body>
+</html>

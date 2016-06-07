@@ -1,0 +1,216 @@
+/* 项目头部 */
+@import '../../commoncss/common.less';
+
+
+
+footer {
+  background-image: url(../../../../images/footerbg.png);
+}
+body{min-width: 320px;}
+
+// banner展示
+.pufa_banner{
+	width: 100%;
+	height:auto;
+	background:url(../images/banner1_sss.jpg) top center no-repeat;
+	background-size: cover;
+	-webkit-background-size:cover;
+    -moz-background-size:cover;
+    -ms-background-size: cover;
+    -o-background-size:cover;
+		img{
+			width: 100%;
+			padding: 10% 5%;
+			box-sizing: border-box;
+			display: block;
+		}
+}
+
+@media(min-width:768px){
+	.pufa_banner{
+		img{
+		padding:10% 8%;
+		}
+	}
+}
+.pufa_banner2{
+	width: 100%;
+	height:auto;
+	background: url(../images/banner1_big.jpg) center center no-repeat;
+	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	overflow: hidden;
+	.ren{display: none;}
+	.pufa_form{
+		width: 100%;
+		height:auto;
+		padding-bottom: 8%;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background:rgba(220, 220, 220, 0.3);
+		background-size: 100% 100%;
+	    -webkit-background-size: 100% 100%;
+	    -moz-background-size: 100% 100%;
+	    -ms-background-size: 100% 100%;
+	    -o-background-size: 100% 100%;
+		border-radius: 35px;
+		-webkit-border-radius: 35px;
+		-o-border-radius: 35px;
+		-ms-border-radius: 35px;
+		-moz-border-radius: 35px;
+		margin:0 auto;
+		h2{
+			padding:15% 0 5%;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: center;
+		}
+		p{
+			width: 195px;
+			margin: 0 auto;
+			font-size: 18px;
+		}
+		li{
+			width: 224px;
+			margin:15px auto 0;
+			position: relative;
+		}
+		label{
+			position: absolute;
+			color:#595757;
+			left:14px;
+			top:5px;
+		}
+		input,select{
+			width:100%;
+			height: 100%;
+			height: 31px;
+			padding-left:50px;
+			line-height: 31px;
+			font-size: 14px;
+			color:#595757;
+		}
+		.pufa_form_last{
+			position: relative;
+			select{
+				padding-left: 10px;
+				border: 0;
+			}
+		}
+		button{
+			width: 127px;
+			height: 35px;
+			border-radius:8px;
+			font-size: 20px;
+			background: #00b7ee;
+			border: 0;
+			color: #fefcfc;
+			box-shadow: 2px 2px 1px rgb(0, 0, 0);
+			font-size: 20px;
+			margin:12% auto 0;
+			box-sizing: border-box;
+			display: block;
+			line-height: 35px;
+		}
+	}
+}
+
+@media(min-width:640px){
+	.pufa_banner2{
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		margin-bottom:10px;
+		padding-top: 10%;
+		section{
+			width: 95%;
+			overflow: hidden;
+			margin:0 auto;
+		}
+		.ren{
+			width: 49%;
+			height: 450px;
+			display: block;
+			float: left;
+		}
+		.pufa_form{
+		width:49%;
+		height: 450px;
+		float: right;
+			li{
+			width:64%;
+			}
+			label{
+			font-size: 18px;
+			top:3px;
+			}
+			input,select{
+			font-size: 18px;
+			padding-left: 58px;
+		}
+		}
+	}
+}
+@media(min-width:920px){
+	.pufa_banner2{
+		.ren{
+			height: 576px;
+		}
+		.pufa_form{
+		height:576px;
+		}
+	}
+}
+@media(min-width:1200px){
+	.pufa_banner2{
+		section{ width:1200px;}
+		.ren{
+			height: 685px;
+		}
+		.pufa_form{
+			height: 685px;
+		h2{
+		font-size: 30px;
+		}
+		p{
+			width:300px;
+			font-size: 24px;
+		}
+		label{
+			font-size: 24px;
+			top:8px;
+		}
+		input,select{
+			height:50px;
+			line-height:50px;
+			font-size: 24px;
+			padding-left: 74px;
+		}
+		button{
+		width: 210px;
+		height: 60px;
+		line-height: 60px;
+		margin:48px auto;
+		font-size: 30px;
+		}
+		}
+	}
+}
+.recommend{
+	margin-bottom: 0;
+	background: #fff;
+	li{
+		&:hover{
+			background: #f0f0f0;
+			a,h3{
+				color: #00348B;
+			}
+		}
+	} 
+} 
+
+

@@ -1,0 +1,217 @@
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+/*配模式定位*/
+/*1200屏*/
+/* 背景自适应 */
+h3 {
+  color: #ffffff;
+  font-size: 30px!important;
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 1px;
+}
+@media (min-width: 1200px) {
+  .RFP_step3 .left img,
+  .RFP_step3 .right img {
+    width: 80%;
+  }
+}
+@media (min-width: 1600px) {
+  .RFP_step3 .left img,
+  .RFP_step3 .right img {
+    width: 86%;
+  }
+}
+.RFP_plan {
+  *zoom: 1;
+  zoom: 1;
+}
+.RFP_plan:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.RFP_plan a {
+  display: block;
+}
+.RFP_plan a img {
+  width: 100%;
+  margin-top: -2px;
+}
+.RFP_step1 {
+  background: url(../images/rfp_02.png) no-repeat;
+  text-align: center;
+}
+.RFP_step3 {
+  position: relative;
+}
+.RFP_step3 img {
+  width: 100%;
+}
+.RFP_step3 span {
+  position: absolute;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #f29700;
+  display: block;
+  margin: 0 auto;
+  left: 50%;
+  top: 38%;
+  font-size: 15px;
+  border-radius: 6px;
+  transform: translate(-50%);
+}
+.RFP_step3 span a {
+  color: #ffffff;
+}
+.RFP_step3 .left {
+  position: absolute;
+  left: 30%;
+  top: 12%;
+}
+.RFP_step3 .right {
+  position: absolute;
+  right: 30%;
+  top: 12%;
+}
+.RFP_step6 {
+  text-align: center;
+  margin: -296px auto;
+  padding-bottom: 260px;
+}
+.RFP_step6 h3 {
+  color: #333333;
+  padding-top: 20px;
+}
+.RFP_step6 .list img {
+  margin-top: 30px;
+}
+.RFP_step6 .list span {
+  font-size: 16px;
+  display: block;
+  padding-top: 40px;
+}
+.RFP_step6 .list a {
+  width: 90px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #f29700;
+  display: block;
+  color: #ffffff;
+  margin: 20px auto;
+}
+@media (min-width: 1500px) {
+  .RFP_step6 {
+    margin: -342px auto;
+  }
+}
+.RFP_foot img {
+  margin-top: -20px;
+  width: 100%;
+}

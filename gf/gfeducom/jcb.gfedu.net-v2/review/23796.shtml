@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2014年第三届“金程杯”全国大学生职业规划大赛回顾</h3>
+            <span>时间：2015/9/28 13:43:15</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; 2014年5月16日第三届&ldquo;金程杯&rdquo;全国大学生职业规划大赛总决赛在上海财大豪生酒店完美收官。本届大赛由中国市场协会金融服务工作委员会指导，上海金程国际金融专修学院（金程教育）主办，旨在进一步培养和加强高校金融相关专业毕业生的就业竞争力，提升毕业生专业水平与职业素养，深化校企合作和帮助用人单位选拔优质人才，共历时三个月二十天，吸引了来自复旦大学、同济大学、上海财经大学、香港大学、南京大学、西安大学等全国85所高校的1500多名学生参与其中，受到了来自国内多家主流媒体的关注与报道。</p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 经过初赛、复赛的层层激烈角逐，脱颖而出的8所高校的优秀大学生（2名参赛选手中途退出）以最饱满的状态汇聚在总决赛的现场；最终，来自南京大学金陵学院大学的石天琪拨得头筹，南京信息大学的陆莹和山东交通学院郝继秀分获亚军和季军。</p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 在下午的决赛现场，组委会邀请了金程教育、交通银行、华大咨询等八家金融机构的高管与HR组成评审委员会，对参赛选手进行个人素质、专业能力、职场经验等综合实力考核。在长达4个小时的精彩比赛中，参赛选手充分发挥出了各自的综合素质与专业技能，每人10分钟的职场规划演讲对尚未进入社会的大学生们是不小的考验，每位评委犀利的问题更是让听众为场上的选手捏了一把汗，但选手们皆以优异的演讲技巧和扎实的专业功底一一化解，博得了评委以及观众的掌声。最后，8名选手用他们堪称完美的表现展示了自己的实力，我们相信，比赛收获到的不仅仅是奖杯，也在竞争中收获到了成功的喜悦和那份坚忍不拔的执着精神，是成长中无法替代的宝贵经验。</p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 在比赛过后，本届大赛的总决赛现场更是独具匠心的与2014上海高校应届毕业生校园招聘会相结合，多家金融企业HR的到来让众多优秀的大学应届毕业生趋之若鹜，我们在这里向所有应聘成功的毕业生们送上最真挚的祝福！</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 金融领域的&quot;高薪资&quot;、&quot;高福利&quot;使得无数初出茅庐的大学生对之趋之若鹜，但其中的&quot;高门槛&quot;犹如天堑阻隔了通往就业的大门。加之，当今社会的快速发展，致使金融行业对人才的定义已不仅仅停留在只具备金融理论上，他们更关注大学生是否具备良好的职业道德素养，拥有独立、客观的分析能力和良好的职业规划意识。因此，大学生的职业规划培养与塑造成为了个人、政府以及社会的当务之急。</p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 作为本次大赛的主办单位金程教育自设立以来一直关注在校学生的个人成长和职业规划，2012年起，金程教育启动针对高校学生的&ldquo;金程杯&rdquo;高校竞赛，已经成功举办三届（2012年&ldquo;金程杯&rdquo;全国大学生理财案例大赛、2013年&ldquo;金程杯&rdquo;全国大学生Excel金融建模大赛、2014年第三届&ldquo;金程杯&rdquo;全国大学生职业规划大赛），受到了来自国内百余家高校的欢迎和好评。我们希望通过我们不断的努力，践行金程一直以来的追求和目标&ldquo;金融，让人生更美好&rdquo;。明年，我们将继续为在校大学生提供类似的平台，通过专题讲座、校际大赛、职业规划、课外实习等活动帮助学生迅速从&ldquo;校园人&rdquo;成长为&ldquo;职业人&rdquo;，提升个人核心竞争力。让我们一起期待2015年第四届&ldquo;金程杯&rdquo;全国大学生大赛的盛况！</p>
+<p></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 本届&ldquo;金程杯&rdquo;总决赛10强选手：</p>
+<p style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/3333(5).jpg" width="600" height="294" alt="" /><br />
+<br />
+<img src="http://manager.gfedu.net/GfeduFile/Folder23/wawa(3).jpg" width="600" height="388" alt="" /></p>
+<p></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+
+</body>
+</html>

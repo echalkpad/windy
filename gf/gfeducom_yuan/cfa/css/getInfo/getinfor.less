@@ -1,0 +1,109 @@
+
+/* 模块集 */
+
+/* 基本 */
+@import "../../../css/reset.less";
+@import "../../../css/variable.less";
+@import "../../../css/core.less";
+@import "../../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../../css/headfoot.less";
+@import "../../../css/jMmenu.less";
+/* 全国分校 */
+@import "../../../css/common.less";
+
+/* 右栏内容 */
+@import "../../../css/proaside.less";
+
+/* 左栏内容 */
+@import "../../../css/pagecontent.less";
+
+
+/* 颜色设置 */
+@import "../cfavariable.less";
+
+/*导入字体*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../../fonts/cfaexam/icomoon.eot?kabozi');　
+    src:url('../../fonts/cfaexam/icomoon.eot?#iefixkabozi') format('embedded-opentype'),
+        url('../../fonts/cfaexam/icomoon.woff?kabozi') format('woff'),
+        url('../../fonts/cfaexam/icomoon.ttf?kabozi') format('truestype'),
+        url('../../fonts/cfaexam/icomoon.svg?kabozi#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+ 
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mm-menu ul li a {
+  color: #a18f69 !important;
+  text-align: left;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+.mm-menu {
+  background-image: url(../../../images/sidebarbg.png);
+}
+
+/* 项目头部 */
+.proheader{
+    .protitle{h1{color:@proc1;}}
+    .prosearch{input[type="text"]{border: solid 2px @proc1;}input[type="button"]{background-color:@proc1;}}
+}
+.navbar{
+    background-color:@proc2;
+    li{
+        a{color:@proc3;&:hover{background-color:@proc1;}}
+        &.selecded{background-color:@proc1;}
+        .navbar2{
+            width: auto;
+            margin-top: -1px;
+            background: @proc1;
+            a:hover{background: @proc2;}
+        }
+    }
+}
+/* 小图加标题内容 */
+.listimgtxt:hover{
+    dt{a{color:@proc1;}}
+}
+
+/*考试推荐*/
+.prorecommend{
+    li:hover{h3{color:@proc1;}}
+}
+
+/* 右侧导航 */
+.proaside{
+    li:hover{a{color:@proc1;}}
+}
+
+/* page内图片处理  */
+.proconpage{
+    img{
+        width: 100%;
+    }
+}
+@media(min-width:640px){
+ .proconpage{
+    img{
+        display: block;
+        width: auto;
+        margin: 10px auto;
+    }
+ }   
+}
+

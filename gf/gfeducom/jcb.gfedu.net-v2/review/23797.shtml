@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>第二届“金程杯”决赛即将打响 花落谁家——84支名校参赛队激励角逐</h3>
+            <span>时间：2015/9/28 13:43:37</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div>&nbsp; &nbsp; &nbsp; &nbsp;2013年4月23日-5月3日上午九点，第二届&ldquo;金程杯&rdquo;全国大学生EXCEL金融建模大赛的复赛阶段顺利收官。来自北京城市学院、汕头大学、湖北经济学院、上海财经大学、浙江大学、深圳大学、复旦大学、同济大学、华东师范大学、上海海洋学院等院校的84支初赛入围团队进行了激烈的复赛角逐，各支队伍的表现普遍体现了其坚实的金融专业背景。本次复赛的成绩将于5月10日下午5点在大赛官网（http://jcb.gfedu.net）公布复赛成绩，各参赛队员及导师们可及时查询入围名单。<br />
+</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp;来自金程研究院的大赛组委会专家表示，本次复赛再度突围的参赛队将进入最终决赛，角逐&ldquo;金程杯&rdquo;全国大学生EXCEL金融建模大赛冠军头衔，届时将由高校名师、金融行业职业标杆人士、金程研究院组成的专家组对决赛进行评审。10000元奖金到底花落谁家，让我们拭目以待！</div>
+<div></div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp;<b>晋级决赛队伍将在5月10日17：00正式发布，届时，决赛时间及内容也将同时公布。</b></div>
+<div>&nbsp;</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp;<b>大赛组委会联系方式</b>： 冯老师：（021）55888950*8344、18301901645</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 曹老师：（021）33926711*8041、13524623432</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 孙老师：（021）33926711*8300、15900663360</div>
+<div>&nbsp;</div>
+<div style="text-align: right;">&nbsp;</div>
+<div style="text-align: right;"><b>2013年&ldquo;金程杯&rdquo;全国大学生</b></div>
+<div style="text-align: right;"><b>EXCEL金融建模大赛组委会</b></div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+
+</body>
+</html>

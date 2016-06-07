@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2015年“金程圆梦计划”第三站：武汉大学圆满落幕</h3>
+            <span>时间：2015/10/23 11:03:47</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp;&nbsp;<span lang="EN-US" style="text-indent: 21pt;">2015</span><span style="text-indent: 21pt;">年</span><span lang="EN-US" style="text-indent: 21pt;">10</span><span style="text-indent: 21pt;">月</span><span lang="EN-US" style="text-indent: 21pt;">22</span><span style="text-indent: 21pt;">日，</span><span lang="EN-US" style="text-indent: 21pt;">2015</span><span style="text-indent: 21pt;">年金程圆梦计划全国高校巡讲第三站在武汉大学顺利启动，金程教育的杨璐老师亲赴现场，为武汉大学的学生奉上了一份&ldquo;别开生面&rdquo;、融合&ldquo;专业能力提升&rdquo;、&ldquo;职业素质养成&rdquo;的大礼。在场的近百名学子，在本次活动中聆听了来自行业一线金融机构的心声，近距离感受了从学生人到职业人所需付出的努力。<br />
+<br />
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/webwxgetmsgimg.jpg" width="158" height="210" alt="" /><img src="http://manager.gfedu.net/GfeduFile/Folder23/webwxgetmsgimg (5).jpg" width="280" height="210" alt="" /></div>
+</span>  </span></span></span>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">紧接着杨璐老师对金程教育的历史做了更详细的介绍，宣讲会笼罩在一种轻松地氛围中。她指出此次圆梦计划的宗旨是为大学生提供一个收获知识、结识朋友、交流合作的广阔平台，更好的培养大学生。现场爆发出热烈的掌声。</span></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">最后，杨璐老师就现场同学关于学习、生活、职业规划等现代大学生关注的话题及提问为大家&ldquo;现场定做&rdquo;了一堂生动的演讲。在绘声绘色的演讲中杨璐老师告诫同学们五点成功要素：<span lang="EN-US">1</span>、关注你的局限性，扩大可能性；<span lang="EN-US">2</span>、发展优势、<span lang="EN-US">3</span>、不要对人冷漠和嫉妒他人，要学会爱和宽容；<span lang="EN-US">4</span>、活在当下，为自己选定一个远大的目标；<span lang="EN-US">5</span>、要有信念，并引用电影中的一句话：&ldquo;如果你有信念，你的一生都会改变！&rdquo;作结，同学们反响强烈，现场爆发出热烈的掌声。</span></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">本次宣讲会为武汉大学的学生提供了一个了解金程教育的平台，为武汉大学的大学生参加会计案例大赛提供了更多的机会。</span></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&ldquo;金程杯&rdquo;全国大学生竞赛是由金程教育组织的全国性校园公益活动。该赛事自<span lang="EN-US">2012</span>年设立以来，已经成功举办三届，分别以&ldquo;理财案例分析&rdquo;、&ldquo;<span lang="EN-US">Excel</span>金融建模&rdquo;以及&ldquo;职业规划&rdquo;为大赛主题。<span lang="EN-US">2015</span>年，金程教育将&ldquo;金程杯&rdquo;全国大学生竞赛全新升级为&ldquo;金程大学生圆梦计划&rdquo;，突破性地将活动形式由原本纯粹的&ldquo;专业知识竞赛&rdquo;扩展为涵盖：助学计划、职业规划、以及知识竞赛三个模块的综合性高校学生活动，为更多学生搭建了一个促进学习交流、展现自我风采、加强团队协作、提升职业竞争力的平台。<br />
+<strong>在这里将获得【丰厚活动奖品】<span lang="EN-US">+</span>【优质职业前景】<span lang="EN-US">+</span>【专业能力提升】<span lang="EN-US">+</span>【自我个性展现】<span lang="EN-US">+</span>【<span lang="EN-US">.......</span>】</strong><b><span lang="EN-US"><br />
+</span><strong>组委会电话：<span lang="EN-US">021-61323513</span></strong><span class="apple-converted-space"><span lang="EN-US">&nbsp;</span></span><strong>刘老师、韩老师<br />
+<br />
+</strong></b></span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; text-align: center; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><b><strong><img src="http://manager.gfedu.net/GfeduFile/Folder23/qrcode_for_gh_00bdd6c56c95_1280(7).jpg" width="300" height="300" alt="" /></strong></b></span></span></span><span style="font-size: 10.5pt; line-height: 150%;"><span lang="EN-US"><o:p></o:p></span></span></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

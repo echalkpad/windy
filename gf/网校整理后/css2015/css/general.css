@@ -1,0 +1,902 @@
+/*头部*/
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.header1 {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65px;
+	padding: 10px 0 0 0;
+background:#026697;}
+#nicemenu {
+	float: right;
+	display: none;
+	width: 16px;
+	height: 32px;
+	line-height: 32px;
+}
+.htLogo img {
+	width: 150px;
+	height: 40px;
+	padding: 0.0625em 0;
+}
+.htMenu {
+	float: left;
+	padding-left: 50px;
+}
+.shopcar{width:113px;overflow:hidden;}
+.htmNav, .htmSign, .htmSearch {
+	float: left;
+}
+.htmNav {
+	z-index: 998;
+	position: relative;
+	width: 550px;
+}
+.htmNav li {
+	float: left;
+	width: 80px;
+	line-height: 2em;
+	text-align: center;
+}
+.htmNav span a {
+	font-size: 20px;
+	color: #fff;
+	line-height: 30px;
+	font-family: "微软雅黑";
+}
+.htmNav span a:hover {
+	color: #fff;
+}
+.htmSign a {
+	display: block;
+	width: 5.625em;
+	height: 2em;
+	font-size: 1em;
+	line-height: 2em;
+	text-align: center;
+	color: #fff;
+	background: #f7744f;
+}
+.htmSign a:hover {
+	background: #de6847;
+}
+.htmnSt span a {
+	display: block;
+	background: url(../images/studyaron.png) no-repeat 70px 15px;
+}
+.htmnSt span a:hover {
+	background-image: url(../images/studyaron_hover.png);
+}
+.navlist {
+	z-index: 999;
+	display: none;
+	position: absolute;
+	background: #fff;
+	width: 200px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.htmnSt:hover .navlist {
+	display: block;
+	padding: 5px;
+}
+.navlist dt {
+	font: 14px/24px "微软雅黑";
+	text-align: left;
+	clear: both;
+}
+.navMore{width:60px;margin-left:12px;}
+.navMore dt{text-align:center;}
+.navlist dd {
+	float: left;
+	margin: 0 5px;
+	font: 12px/24px "宋体";
+}
+.nvLine, .nvLineBt {
+	border-top: 1px dashed #ccc;
+}
+.nvLineBt {
+	border-bottom: 1px dashed #ccc;
+}
+.navlist dt a {
+	color: #2282be;
+}
+.navlist dd a {
+	color: #777;
+}
+.htmSearch {
+	position: relative;
+	width: 195px;
+}
+.search {
+	width: 12.5em;
+	height: 30px;
+	padding: 0 0 0 .375em;
+	margin: 0 0 0 1.25em;
+	line-height: 24px;
+	color: #bbb;
+}
+.secBtn button {
+	background: none;
+	background-color: transparent!important;
+}
+.secBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 18px;
+	height: 20px;
+	text-indent: -9999px;
+	background: url(../images/searchBtn.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.shopping {
+	width: 510px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 15px;
+}
+.shopping a {
+	float: right;
+	color: #FFF;
+	font-size: 15px;
+}
+.shopping img {
+	margin-left: 435px;
+}
+.shoppinCar span a {
+	display: block;
+}
+#navv {
+	height: 32px;
+}
+#navv .jquery_out {
+	float: left;
+	line-height: 32px;
+	display: block;
+	border-right: 1px solid #fff;
+	text-align: center;
+	color: #fff;
+	font: 18px/32px "微软雅黑";
+}
+#navv .jquery_out .smile {
+	padding-left: 1em;
+}
+#navv .jquery_inner {
+	margin-left: 16px;
+}
+#navv .jquery {
+	margin-right: 1px;
+	padding: 0 2em;
+}
+.mainlevel ul img {
+	position: absolute;
+	top: -10px;
+	left: 50px
+}
+.loginName {
+	color: #FFF !important;
+	font-size: 14px !important
+}
+#navv .mainlevel {
+	float: left;
+	width: 140px;/*IE6 only*/
+}
+#navv .mainlevel a {
+	color: #666;
+	text-decoration: none;
+	line-height: 25px;
+	display: block;
+	padding: 0 20px;
+	width: 100px;
+	font-size: 12px;
+}
+#navv .mainlevel a:hover, #nav .mainlevel a.cur {
+	color: #f7744f;
+	text-decoration: none;
+}
+#navv .mainlevel ul {
+	display: none;
+	position: relative;
+	width: 150px;
+	background: #fff;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	left: -27px;
+	top: 10px;
+}
+#navv .mainlevel li {
+	width: 140px;/*IE6 only*/
+}
+.exiting {
+	border-top: dotted 1px #999
+}
+#topNav .rgt .lgAfter {
+	margin-top: 4px;
+}
+#topNav .rgt .lgAfter .lft {
+	margin: 5px 0 0 10px;
+	float: right;
+}
+#topNav .rgt .personIf em {
+	margin: 3px 2px 0 4px;
+	font-size: 15px;
+	display: inline-block
+}
+.aftLg {
+	width: 550px !important;
+}
+/*窄屏导航*/
+#nicemenu {
+	float: right;
+	display: none;
+	width: 16px;
+	height: 32px;
+	line-height: 32px;
+}
+#nicemenu {
+	position: relative;
+}
+#nicemenu .sub_menu {
+	position: absolute;
+	right: 0;
+	display: none;
+	width: 45px;
+	text-align: center;
+	background: #fff;
+}
+.sub_menu a {
+	color: #f7744f;
+}
+.sub_menu a:hover {
+	color: #fff;
+	background: #f7744f;
+}
+.htmSearch {
+	position: relative;
+	width: 200px;
+}
+.search {
+	width: 12.5em;
+	height: 32px;
+	padding: 0 0 0 .375em;
+	margin: 0 0 0 1.25em;
+	line-height: 24px;
+	color: #bbb;
+}
+.secBtn button {
+	background: none;
+	background-color: transparent!important;
+}
+.secBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 18px;
+	height: 20px;
+	text-indent: -9999px;
+	background: url(../images/searchBtn.png) no-repeat 0 0;
+	cursor: pointer;
+}
+.nav-items {
+	display: none
+}
+.down {
+	width: 10px !important;
+	height: 5px !important;
+	position: absolute;
+	right: -5px;
+	top: 30px
+}
+.downn {
+	width: 10px !important;
+	height: 5px !important;
+	position: absolute;
+	left: 65px;
+	top: 12px
+}
+/*版权*/
+footer {
+	width: 100%;
+}
+.links {
+	padding: 30px 0;
+	background: #313233;
+	border-bottom: #1f1f1f solid 1px;
+}
+.links li {
+	float: left;
+	width: 112px;
+	height: 140px;
+	margin: 10px 0 0 155px;
+	font: .875em/2em "微软雅黑";
+	color: #fff;
+}
+.links a {
+	display: block;
+	font-size: 12px;
+	color: #ccc;
+}
+.links a:hover {
+	text-decoration: underline;
+}
+.copyright {
+	padding: 20px 0;
+	font: 12px/30px "宋体";
+	color: #fff;
+	background: #1f1f1f;
+	border-top: #313233 solid 1px;
+}
+.about {
+	float: left;
+}
+.allright {
+	float: right;
+}
+.about a {
+	color: #fff;
+}
+.about a:hover {
+	color: #08c;
+}
+.classNav {
+	display: none
+}
+/**************************************************************/
+
+
+/*专题页*/
+.zhuanti {
+	width: 1170px;
+	margin: 0 auto;
+}
+.ztDetail {
+	margin: 50px auto;
+}
+.zhuanti {
+	margin-top: 65px;
+}
+.ztPic {
+	margin: 0 auto;
+}
+.ztDetail {
+	background: url(../images/computer.png) no-repeat;
+	height: 520px;
+}
+.ztLog {
+	width: 280px;
+	height: 258px;
+	float: right;
+	margin: 80px 220px 0 0;
+	background: url(../images/ztLogKuang.png);
+	color: #FFF
+}
+.user, .passWord {
+	padding: 6px 50px 6px 10px !important;
+}
+.user {
+margin-top:
+}
+.logKuang {
+	width: 240px;
+	margin: 10px auto;
+}
+.userName, .pass, .user, .passWord, .logKuang button {
+	margin-top: 3px;
+}
+.logKuang button {
+	width: 240px;
+}
+.logKuang button {
+	cursor: pointer
+}
+.freeReg {
+	text-align: right;
+}
+.freeReg a {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #FF0;
+	line-height: 43px;
+}
+.freeReg span {
+	margin-left: 5px;
+}
+.selected {
+	width: 660px;
+	overflow:hidden;
+	margin: 50px auto;
+}
+.selected a span {
+	margin-top: 70px;
+	display: block;
+}
+.selected a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+	font-size: 20px;
+	margin-top: 70px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #2282be;
+	float: left;
+	margin: 0 30px 30px 0;
+	cursor: pointer;
+	width: 300px;
+	height: 200px;
+}
+#logoNone{float:left}
+@media screen and (min-width:1000px) and (max-width:1229px) {
+/*1024宽屏*/
+.login{margin:-308px 0}
+.logKuang button {
+	width: 190px;
+}
+.ztDetail {
+	background: url(../images/computer_1000px.png) no-repeat;
+	height: 620px;
+}
+.ztLog {
+	width: 250px;
+	background: url(../images/ztLogKuang_1000px.png) no-repeat;
+	margin: 65px 160px 0 0;
+	font-size: 12px;
+}
+.logKuang {
+	width: 220px;
+	margin: 10px 20px;
+}
+.logKuang button {
+	margin-right: 30px;
+	margin-top: -5px;
+}
+.freeReg {
+	width: 190px;
+}
+.freeReg a {
+	font-size: 12px;
+}
+.nav-items {
+	display: none
+}
+.width {
+	width: 990px;
+}
+.widthPd {
+	width: 1000px;
+}
+.intro {
+	width: 400px;
+}
+.topic {
+	width: 320px;
+}
+.column {
+	width: 300px;
+	margin: 0 15px 30px;
+}
+.aPlay i {
+	left: 120px;
+}
+.links li {
+	margin: 10px 0 0 113px;
+}
+.studys {
+	width: 960px;
+}
+#breadNav {
+	width: 840px !important
+}
+.ccList,.studylist,.class{width:718px;}
+.columnC{width:329px;}
+.ccList,.class{margin:10px 25px !important;}
+}
+
+@media screen and (min-width:1000px) and (max-width:1165px) {
+/*800宽屏*/
+#column{width:298px;margin:0 15px 40px 2px;}
+.width {
+	width: 990px;
+}
+.cmBox {
+	width: 100%;
+}
+.topic {
+	width: 315px;
+	margin: 20px auto 0;
+}
+.column {
+	width: 300px;
+	margin: 0 15px 30px;
+}
+.aText {
+	display: none;
+}
+.aPlay {
+	display: block;
+}
+.aPlay i {
+	left: 120px;
+}
+.links li {
+	margin: 10px 0 0 113px;
+}
+.intro h1{font-size:2.3em}
+.ccList,.studylist,.class{width:717px;}
+.columnC{width:328px;}
+.ccList,.class{margin:10px 24px !important;}
+}
+@media screen and (min-width:660px) and (max-width:1000px) {
+/*800宽屏*/
+#column{width:298px}
+.arti{width:604px;}
+#topNav{width:90%;}
+.navNone,.content_show{display:none !important;}
+.wangxiao {
+	display: none;
+}
+.logKuang img {
+	height: 20px;
+}
+.zhuanti {
+	height: 400px;
+}
+.user, .passWord {
+	padding: 0 !important;
+}
+.ztDetail {
+	background: url(../images/computer_800px.png) no-repeat;
+	height: 620px;
+}
+.ztLog {
+	width: 150px;
+	background: url(../images/ztLogKuang_800px.png) no-repeat;
+	margin: 42px 120px 0 0;
+	font-size: 12px;
+}
+.logKuang {
+	width: 130px;
+	margin: 2px auto;
+}
+.logKuang button {
+	margin-right: 30px;
+	margin-top: -10px;
+	width: 130px;
+}
+.freeReg {
+	width: 130px;
+	margin-top: -10px
+}
+.freeReg a {
+	font-size: 12px;
+}
+.freeplay, #breadNav, .bdNavbg {
+	width: 100% !important
+}
+.width {
+	width: 645px;
+}
+.widthPd,.cMain2{
+	margin:0 auto !important;
+	width:630px !important;
+}
+.popular{width:auto;}
+.popular li{width:256px;margin:20px 29px 20px 30px;}
+.popular li a img{height:144px;}
+.studys {
+	width: 650px;
+}
+.htmnSt{width:80px !important;}
+.htmNav li{width:70px;}
+.htMenu{padding-left:0;}
+.htmNav{width:390px;}
+.indent{width:685px;}
+.cMain {
+	background: none;
+	width:100%;
+}
+section.width{width:630px !important;}
+.intro {
+	margin:50px 0 0 30px;
+	width:43%
+	
+}
+.intro h1{font-size:2.0em}
+.cmBox {
+	width: 100%;
+}
+.login {
+	float: none;
+	margin: 140px auto 60px;
+}
+.slogan,.connection{margin:0 auto;float:none;}
+.topic {
+	width: 302px;
+	margin: 20px 0;
+}
+.column {
+	width: 252px;
+	margin: 20px 29px 20px 30px;
+}
+.aText {
+	display: none;
+}
+.aPlay {
+	display: block;
+}
+.aPlay i {
+	left: 120px;
+}
+.links li {
+	margin: 10px 0 0 43px;
+}
+.loginName img {
+	margin-right: 5px;
+	margin-top: 10px;
+}
+.loginName {
+	float: right;
+	margin-top: 10px;
+	margin-right: 8px;
+	padding: 0 !important
+}
+
+center{position:absolute}
+.htmNavv{display:none;}
+.ccList,.studylist,.class{width:500px;}
+.columnC{width:229px;}
+.ccList,.class{margin:10px 14px !important;}
+.htmNavs{width:380px;}
+.container{padding:0}
+}
+@media screen and (min-width:0) and (max-width:659px) {
+	
+/*800宽屏*/
+
+section.width,aside.widthPd{width:300px;padding:0 5px}
+.slogan{padding:0}
+.selected {
+	width: 310px;
+	height: auto;
+}
+.selected a {
+	float: none;
+	height: auto;
+	width: 280px;
+	font-size: 18px;
+}
+.ztDetail {
+	height: 280px;
+}
+.ztLog {
+	margin: 0 auto
+}
+.lftNav ul {
+	margin-left: 30px !important;
+}
+.downn {
+	top: 10px
+}
+.rgtNav {
+	position: absolute;
+	top: -35px;
+}
+#logoNone,.content_show {
+	display: none
+}
+.default {
+	margin-top: 2px !important
+}
+.loginName {
+	float: right;
+	margin-top: 2px;
+	margin-right: 8px;
+	padding: 0 !important
+}
+.lt img {
+	width: 70%;
+	height: auto;
+	float: right
+}
+.ztDetail, .cMain {
+	background: none !important
+}
+
+.nav-items {
+	display: block
+}
+.htmNav {
+	display: none
+}
+.classNav {
+	display: block
+}
+.htMenu {
+	display: none;
+}
+#nicemenu, #nicemenu a {
+	display: block;
+}
+.cMain {
+	background: none;
+}
+.intro {
+	display: none;
+}
+.cmBox {
+	width: 100%;
+}
+.cBr {
+	display: none;
+}
+.lt {
+	margin-top: 10px
+}
+.width {
+	width: 300px;
+}
+.widthPd {
+	width: 300px;
+}
+.htMenu {
+	display: none;
+}
+.htLogo, #nicemenu {
+	margin: 0 10px 0 0;
+}
+/*登录*/
+.logBefore img {
+	top: 20px !important
+}
+.before {
+	width: 250px;
+	float: left;
+	width:80%;
+	margin-left:10px;
+}
+.indent {
+	width: 80% !important;
+	float: left !important
+}
+center {
+	display: block
+}
+#navv .mainlevel ul {
+	width: 100px
+}
+.header1 {
+	height: 65px;
+}
+#nicemenu img {
+	margin-top: 5px;
+}
+.navNone img {
+	margin-top: 8px !important
+}
+.zhuanti, .lBg {
+	width: 280px;
+}
+.lFrom {
+	width: 230px;
+	padding: 0 15px;
+}
+.lFrom .use, .lFrom .pwd {
+	width: 210px;
+	padding: 2px 10px 0 30px;
+}
+.topic {
+	float: none;
+	width: 280px;
+	margin: 20px -5px 0;
+}
+.column {
+	float: none;
+	width: 280px;
+	margin: 10px -10% 30px;
+}
+.aText {
+	display: none;
+}
+.aPlay {
+	display: block;
+}
+.aPlay i {
+	left: 110px;
+}
+.links li {
+	margin: 10px 0 0 30px;
+}
+.about, .allright {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+.zhuanti {
+	margin-top: 50px;
+}
+.login {
+	float: none;
+	width: 280px;
+	margin: 142px auto 115px;
+}
+.lBg {
+	width: 280px;
+}
+.lFrom {
+	width: 280px;
+	padding: 0 15px;
+}
+.container2 h1{padding-left:0}
+.lFrom .use, .lFrom .pwd {
+	width: 248px;
+	padding: 2px 10px 0 30px;
+}
+.popular li{margin:20px auto;}
+.topic {
+	float: none;
+	width: 280px;
+	margin: 20px auto 0;
+}
+.column {
+	float: none;
+	width: 280px;
+	margin: 0 auto 30px;
+}
+.aText {
+	display: none;
+}
+.aPlay {
+	display: block;
+}
+.aPlay i {
+	left: 110px;
+}
+.links li {
+	margin: 10px 0 0 30px;
+}
+.about, .allright {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+/*分类*/
+.freeplay, #breadNav, .bdNavbg {
+	width: 100% !important
+}
+.class {
+	margin: 51px auto 10px !important;
+}
+.class li {
+	margin: 0 5px;
+}
+.class li a {
+	padding: 0 5px;
+}
+.class .clOnck a {
+	color: #f7744f;
+}
+.ccList a {
+	padding: 0 10px;
+}
+.ccList {
+	margin: 0 auto 10px !important
+}
+.reg a {
+	float: left
+}
+.fomCont li .ipt{width:69% !important;}
+.arti{width:auto;}
+}

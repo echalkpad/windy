@@ -1,0 +1,587 @@
+/* clearfix */
+.cf { *zoom:1}
+.cf:after { content:"."; clear:both; display:block; overflow:hidden; visibility:hidden; height:0; font-size:0}
+/*大图*/
+.ss-banner{ width:100%; height:470px; background-color:#35495d; text-align:center; padding-top:50px; box-sizing:border-box;}
+.ss-banner h2{ color:#fff; font-size:30px;line-height: 1.1;}
+.ss-banner p{ color:#9599a4; font-size: 1pc;width:770px;margin:0 auto; padding-top:20px;}
+.ss-banner ul{ width:770px; margin:0 auto; padding-top:50px;}
+.ss-banner li{ float:left; width:50%; text-align:left;}
+.ss-banner li a{ width:360px; height:198px; display:block; position:relative;}
+.ss-banner li a img:hover{opacity:0.4;filter:alpha(opacity=40);}
+.ss-banner li a i{ position:absolute; top:50%; left:50%; margin-left:-30px; margin-top:-30px; color:#fff;font-size: 46px;width: 60px;height: 60px;font-weight: 700;padding-top: 6px}
+
+
+/*课程导航*/
+.ss-coursettl{
+	background-color: #fff;
+	border-bottom: 1px solid #28ada0;
+	margin-bottom: 50px;
+	min-height: 70px;
+	line-height: 70px;
+}
+.ss-coursettl h3{line-height:70px;}
+.container {padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;width: 930px}
+/*@media (min-width:768px) {.container {width: 750px}}
+@media (min-width:992px) {.container {width: 970px}}
+@media (min-width:1200px) {.container { width: 1170px}}*/
+.container h3{font-size: 24px;color:#1f2a35;float: left;}
+.container .btn{margin-left: 30px;margin-top: 20px; height:34px; line-height:34px; padding:0 20px; box-sizing:border-box;float: right;display: inline-block;border-radius: 3px;color: #fff !important;background-color: #e97692;border-color: #e97692}
+.container .btn:hover{background-color: #df5476;border-color: #df5476;}
+.container ul{width: auto;margin: 0 auto;list-style: none;text-align: center;padding: 0;float: right}
+.container li{display: inline-block;margin: 0 3px 0 30px}
+.container li a{display: block;font-size: 15px;color: #9599a4;text-decoration: none;}
+.container li a em,.container li a i{position: absolute;left: 50%;margin-left: -9pt;width: 0;height: 0;border-width: 9pt;border-style: solid;font-size: 0;line-height: 0;display: none;}
+.container li a em{bottom: 0;border-color: transparent transparent #28ada0}
+.container li a i{bottom: -1px;border-color: transparent transparent #ecf0f1}
+.container li a.active {color: #34495e;text-decoration: none;position: relative}
+.container li a.active em, .container li a.active i {display: block}
+.container li a:hover {text-decoration: none;color: #34495e}
+
+/*课程信息*/
+.learning-progress{ width:930px; margin:30px auto;
+    background: #fff; padding:30px 50px; box-sizing:border-box;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03);border-radius: 4px}
+.learning-progress:after{ content: " "; clear: both; display: table;}
+.col-1,.col-3{ width:320px; float:left;}
+.col-1 section,.col-3 section{float:left; width:120px; height:120px;position: relative;}
+
+.circle{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  background: #28ADA0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+.circle .pie_left,.circle .pie_right {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle .left,.circle .right {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #ECF0F1;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle .pie_right,.circle .right {
+  clip: rect(0, auto, auto, 50px);
+}
+.circle .pie_left,.circle .left {
+  clip: rect(0, 50px, auto, 0);
+}
+.circle .mask {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  left: 7px;
+  top: 7px;
+  background: #FFF;
+  position: absolute;
+  text-align: center;
+  line-height:86px;
+  color: #28ADA0;
+  font-size: 18px;
+}
+.circle .mask em {
+  font-size: 12px;
+}
+.circle  i{
+    color: #28ada0;
+    font-size:50px;
+    text-align:center;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+
+.col-1 ul,.col-3 ul{list-style: none;float: left;margin-top: 30px;margin-left: 20px;padding: 0;}
+.col-1 li,.col-3 li{margin-bottom: 10px}
+.col-1 li span,.col-3 li span{font-size: 22px;color: #28ada0;}
+.col-1 li small,.col-3 li small{font-size: 14px;}
+.col-1 li:last-child span,.col-3 li:last-child span{color: #e97692;}
+.col-2{ width:160px;  height:120px;float:left;}
+.col-2-line{height:120px;width: 1px; display:block;background:#ecf0f1;margin: 0 auto}
+/*等级分类*/
+.ss_lever1,.ss_lever2,.ss_lever3{margin-bottom: 5pc;}
+
+/*课程列表*/
+.learning-row{ width:960px; margin:30px auto 110px;}
+.learning-row:after{ content: " "; clear: both; display: table;}
+.learning-row li{ width:320px; box-sizing:border-box; padding:15px; float:left; position:relative;}
+.learning-row li a{ width:100%; height:200px;color: #28ada0; background: #fff; display:block; text-align:center; box-sizing:border-box; padding:15px;box-shadow: 0 2px 2px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03);border-radius: 4px}
+.learning-row li a:hover{ background-color: #28ada0;color: #fff;}
+.learning-row li:first-child a{background-color:#28ada0; color:#fff;}
+.learning-row li:first-child h4{ font-size:30px;padding:30px 0; display:block;}
+.learning-row li:first-child button{ width:98px; height:34px; font-size:14px;color:#fff; line-height:34px;border-radius: 4px;background-color:#28ada0; border:solid 1px #fff;}
+.learning-row li button:hover{
+    background-color:#fff;
+    color:#28ada0;
+}
+.learning-row li i{font-size: 60px; padding:15px 0; display:block;}
+.learning-row li p{font-size: 14px;line-height: 20px; font-weight:normal;}
+.learning-row li em{position: absolute;right: 13px;top: 13px;width:0;height: 0;border-style: solid;font-size: 0;line-height: 0;border-width: 22px;border-color: #ecf0f1 #ecf0f1 #e97692 #e97692;-webkit-border-bottom-left-radius: 6px;
+border-radius: 0 0 0 6px;box-shadow: 0 2px 2px rgba(0, 0, 0, .05), -1px 1px 1px rgba(0, 0, 0, .05)}
+.learning-row li em span{position: absolute;left: -20px;top: 9px;color: #fff;font-size: 9pt;width: 30px;display: block;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg)}
+
+
+/*学习计划*/
+.ss-studyplan{padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
+/*学习计划弹窗*/
+.ss-pop{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60pc!important;
+    max-width: none!important;
+}
+.ss-pop>div{ width:450px; height:280px;margin-left: 25%;margin-bottom: 20px;
+background-color: #fff; text-align:center; box-sizing:border-box; padding:15px;border: 1px solid transparent;border-radius: 4px;box-shadow: 0 2px 5px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03)}
+.ss-pop .ss_remain .panel_body{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    color: #e97692;
+    font-weight: 300;
+    overflow:hidden;
+}
+.ss-pop .ss_remain h1{
+    font-size: 5pc;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.ss-pop .ss_remain small{
+    color: #e97692;
+    font-size: 18px;
+    line-height:1;
+}
+.ss-pop .ss_remain p{
+    margin-top: 20px;
+    padding:0;
+    text-align: center;
+}
+.ss-pop .ss_remain button{
+    color: #fff!important;
+    background-color: #28ada0;
+    border-color: #28ada0;
+}
+.ss-pop .ss_date input{width:270px; height:42px;line-height:42px; padding:0 60px 0 10px; box-sizing:border-box;cursor: auto;}
+.ss-pop .ss_date i{ position:absolute; top:0; right:0; width:53px; height:42px;line-height:42px; font-size:30px;background: #34495e; color:#fff; text-align:center;cursor:pointer;}
+
+.ss-pop .ss_duration .progress_bar{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    margin: 35px 0 15px;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ss-pop .ss_duration .progress_bar q,.ss-pop .ss_duration .progress_bar span,.ss-pop .ss_duration .progress_bar i,.ss-pop .ss_duration .progress_bar em,.ss_duration .progress_bar input{
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+}
+.ss-pop .ss_duration .progress_bar q{
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 2pc;
+    padding-top: 1pc;
+    margin-top: -1pc;
+    box-sizing: border-box;
+}
+.ss-pop .ss_duration .progress_bar span,.ss-pop .ss_duration .progress_bar input{
+    left: 0;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+}
+.ss-pop .ss_duration .progress_bar span{
+    background:#ecf0f1;
+    z-index: 1;
+}
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  z-index:3;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+
+ .ss-pop .ss_duration .progress_bar input[type=range]::-webkit-slider-runnable-track{
+    cursor: pointer;
+    left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+}
+.ss-pop .ss_duration .progress_bar input[type=range]::-moz-range-track{
+    cursor: pointer;
+    left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+}
+.ss-pop .ss_duration .progress_bar input[type=range]::-ms-track{
+    cursor: pointer;
+    left: 0;
+    z-index: 9998;
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    z-index: 9999;
+    width: 2pc;
+    height: 2pc;
+    cursor: pointer;
+    background: pink;
+    border-radius: 1pc;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    z-index: 9999;
+    width: 2pc;
+    height: 2pc;
+    cursor: pointer;
+    background:pink;
+    border-radius: 1pc;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    -ms-appearance: none;
+    z-index: 9999;
+    width: 2pc;
+    height: 2pc;
+    cursor: pointer;
+    background:pink;
+    border-radius: 1pc;
+}
+
+
+.ss-pop .ss_duration .progress_bar .progress_bar_bg{
+    width:16px;
+}
+.ss-pop .ss_duration .progress_bar_bg span{
+    z-index: 2;
+    background: #28ada0;
+    border-radius: 8px;
+}
+.ss-pop .ss_duration .progress_bar i{
+    top: -14px;
+    z-index: 3;
+    width: 2pc;
+    height: 2pc;
+    cursor: pointer;
+    background-color: #28ada0;
+    border-radius: 1pc;
+    left:0;
+}
+
+.ss-pop .ss_duration .progress_bar i:after{
+    position: absolute;
+    top: 9pt;
+    left: 9pt;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 4px;
+    content: '';
+}
+.ss-pop .ss_duration .progress_bar em{
+    bottom: 1pc;
+    font-size: 24px;
+    padding: 5px 0;
+    color: #e97692;
+    cursor: default;
+    width: 2pc;
+    text-align: center;
+    left:0;
+}
+.ss-pop .ss_duration .bottom-text{
+    margin: 0 -15px;
+}
+.ss-pop .ss_duration .pull-left{
+    color: #b9b9b9;
+    float: left;
+}
+.ss-pop .ss_duration .pull-right{
+    color: #b9b9b9;
+    float: right;
+}
+/*学习计划－头部信息*/
+.spttl{ padding:10px;}
+.spttl:after{ content: " "; clear: both; display: table;}
+.spttl button{ float:right; margin-bottom:10px; width:154px; height:34px; line-height:34px; font-size:14px;text-align:center; color:#fff;background-color: #28ada0;border: 1px solid transparent;border-radius: 4px;}
+.spttl button:hover{background: #208A80;}
+.spttl ul{list-style: none;padding: 0;}
+.spttl li{ float:left; width:150px;line-height:34px;}
+.spttl li span{font-size: 22px;color: #28ada0;}
+.spttl small{font-size: 14px;}
+.spttl li:last-child span{color: #e97692;}
+
+/*学习计划－主体内容*/
+.sprow{background: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03);box-sizing: border-box;}
+.sprow:after{ content: " "; clear: both; display: table;}
+.sprow .sprowtree{ padding:26px 0 0 15px; float:left;width: 33.33333333%; box-sizing:border-box;}
+.sprow .sprowtree dt{ height:25px;}
+.sprow .sprowtree dd{
+    margin-left:15px;
+    padding-left:5px;
+    line-height:22px;
+}
+.sprow .sprowhandle{ overflow-x:auto; background-image:url(../images/sprowhandlebg.jpg);}
+.sprow .sprowhandle .shdate{}
+.sprow .sprowhandle .shdate:after{ content: " "; clear: both; display: table;}
+.sprow .sprowhandle .shdate dl{ float:left;}
+.sprow .sprowhandle .shdate dt{background: #9599a4;text-align:center; margin-bottom:1px;background: #9599a4;color: #fff; border-right:solid 1px #fff;}
+.sprow .sprowhandle .shdate dd{ float:left; width:29px; text-align:center; margin-right:1px;background: #9599a4;color: #fff}
+.sprow .sprowhandle .shdate dd.today{background: #e97692;}
+.sprow .sprowhandle ul{}
+.sprow .sprowhandle li{ width:100%; height:22px;display:block; box-sizing:border-box; position:relative;}
+.sprow .sprowhandle li:hover{background: #ddd;}
+.sprow .sprowhandle .shbar{margin: 1px 0;display:block; position:absolute; top:0; z-index:0; display:block;background: #ecf0f1;height: 20px;border-radius: 4px;box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);}
+.sprow .sprowhandle .shbar small{
+    font-size: 9pt;
+    line-height: 20px;
+    color: #000;
+    display:block;
+}
+.sprow .sprowhandle .shbar span{background: #28ada0;font-size: 9pt;color: #000;float: left;width: 2%;height: 100%;font-size: 9pt;line-height: 20px;}
+.sprow .sprowhandle .learningcon{ padding-bottom:25px;}
+.sprow .sprowhandle .learningcon li a,.sprow .sprowhandle .bankcon li a{
+    width:20px;
+}
+.sprow .sprowhandle .learningcon li:nth-child(1) .shbar{ left:0;width: 30px; }
+.sprow .sprowhandle .learningcon li:nth-child(2) .shbar{ left:30px;width:60px; }
+.sprow .sprowhandle .learningcon li:nth-child(3) .shbar{left:90px;width:50px;}
+
+
+
+.shcontent{ float:left;}
+.shcontent:after{ content: " "; clear: both; display: table;}
+.shreview{
+    overflow:hidden;
+    background-color:#d5eeec;
+    position: relative;
+}
+.shreview h4{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    margin-top: -30px;
+    font-size: 30px;
+    color: #7ecdc6;
+    margin-bottom: 10px;
+}
+
+
+/*学习计划－修改私人学习计划*/
+.ss-pop>div h3{margin: 10px 0;
+font-size: 20px;
+color: #34495e}
+.ss-pop .panel_body{
+    height: 5pc;
+    width: 270px;
+    margin: 50px auto;
+}
+.ss-pop>div h4{position:relative;margin:50px auto; width:270px; height:42px; line-height:42px;}
+.ss-pop>div p{
+    margin-top: 20px;
+    overflow:hidden;
+    _zoom:1;
+}
+.ss-pop>div button:hover{
+	background: #208A80;
+	border-color: #208A80;
+	color:#fff;
+}
+.ss-pop>div .default{
+	color: #28ada0;
+    background-color: transparent;
+    border-color: #28ada0;
+    float:left;
+}
+.ss-pop>div .next{
+	float:right;
+	color: #fff!important;
+    background-color: #28ada0;
+    border-color: #28ada0;
+}
+
+/* 日期限制 */
+.date_limit{
+    position: fixed;
+    z-index: 9999;
+    width: 300px;
+    color: #fff;
+    text-align: center;
+    top:60px;
+    left:50%;
+    margin-left:-150px;
+    -webkit-animation:temp 1s linear forwards;
+    -moz-animation:temp 1s linear forwards;
+    -ms-animation:temp 1s linear forwards;
+    -o-animation:temp 1s linear forwards;
+    animation:temp 1s linear forwards;
+}
+.date_limit h3{
+    color: #fff;
+    background: #F2CA68;
+    line-height:20px;
+    padding:15px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    font-size:15px 12px;
+}
+/*弹出窗口*/
+.modal{position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1050;display: none;-webkit-overflow-scrolling: touch;outline: 0;overflow-x: hidden;overflow-y: auto;
+filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#44000000',endColorstr='#44000000');/* IE */
+background-color:rgba(0, 0, 0, 0.8);/* Firefox */}
+.modal .modaldialog{width: 600px;margin: 30px auto;-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);box-sizing: border-box;}
+.modal .modalopen{position: relative;background-color: #fff;background-clip: padding-box;border: 1px solid #999;border: 1px solid rgba(0, 0, 0, .2);border-radius: 6px;outline: 0;box-shadow: 0 5px 15px rgba(0, 0, 0, .5);}
+.modal .modalopen .close{ font-size:18px; position:absolute; top:10px; right:20px;}
+.modal .modalopen .close a{ color:#ddd;}
+
+.modal .modalopen li{ padding:10px; border-bottom:solid 1px #ddd;display: block;background-color: #fff;border-radius: 4px;padding: 14px 20px;box-shadow: 0 2px 2px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03);overflow: hidden}
+.modal .modalopen li:after{ content: " "; clear: both; display: table;}
+.modal .modalopen p{ width:140px; float:right; padding-top:10px;color: #999;font-size: 9pt;}
+.modal .modalopen p span{height: 10px;display: block;width:70px;background: #ecf0f1;border-radius: 10px;}
+.modal .modalopen p em{background: #28ada0; width:10%;border-radius: 10px;display: block;height: 10px;padding: 0 5px;font-size: 8px;overflow: hidden}
+.modal .modalopen p small{font-size: 9pt;line-height: 20px;}
+.modal .modalopen li p{width:120px;}
+.modal .modalopen li p span{height: 5px;}
+.modal .modalopen li p em{height: 5px;}
+.modal .modalopen h3,.modal .modalopen dl{ overflow:hidden; padding-right:20px;}
+.modal .modalopen h3{color: #34495e;font-size: 18px;line-height: 1.42857143; padding:20px 0 0 20px; border-bottom:solid 2px #ddd;}
+.modal .modalopen dt{color: #28ada0;font-size: 14px;line-height: 1.5em;font-weight: 300; padding-bottom:10px;}
+.modal .modalopen dd{border-right: 1px solid #e2e2e2;padding: 0;padding-right: 15px;margin-right: 15px;height: 15px;line-height: 15px;overflow: hidden;font-size: 11px;display: inline-block}
+.modal .modalopen dd:last-child{border-right:none;}
+.modal .modalopen li:hover{background-color: #28ada0;color: #fff;}
+.modal .modalopen li:hover dt{color: #fff;}
+.modal .modalopen li:hover p{color: #fff;}
+.modal .modalopen li:hover p em{background: #fff; }
+
+
+/*弹出宣传视频*/
+.video-modal .modaldialog{
+    width: 515px;
+}
+.video-modal .modaldialog .modalopen{
+
+}
+.video-modal .modaldialog .modalopen h3{
+    min-height: 16.42857143px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.video-modal .modaldialog .modal-body{
+    height:296px;
+    width:100%;
+}
+.video-modal .modaldialog .modal-body div img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+
+/*我的课程*/
+
+.myttl{ width:100%; background-color:#35495d; text-align:center; padding-top:50px; box-sizing:border-box;}
+.myttl h2{ color:#fff; font-size:30px;line-height: 1.1;}
+.myttl p{ color:#9599a4; font-size: 1pc;width:770px;margin:0 auto; padding:20px 0 50px ;}
+.myttl ul{width: auto;margin: 0 auto;list-style: none;text-align: center;padding: 0}
+.myttl li{ display: inline-block;margin: 0 3px}
+.myttl li a{ background: #9599a4;
+padding: 10px 30px;
+display: block;
+font-size: 18px;
+color: #ecf0f1;
+text-decoration: none}
+.myttl li.active a{ background: #fff;
+color: #34495e;
+text-decoration: none；}
+.myttl li a img:hover{opacity:0.4;filter:alpha(opacity=40);}
+.myttl li a i{ position:absolute; top:50%; left:50%; margin-left:-30px; margin-top:-30px; color:#fff;font-size: 46px;width: 60px;height: 60px;font-weight: 700;padding-top: 6px}
+
+.ss_ctn{display:none;}
+
+.mylearning{ width:960px; margin:30px auto 110px;}
+.mylearning:after{ content: " "; clear: both; display: table;}
+.mylearning li{ width:320px; box-sizing:border-box; padding:15px; overflow:hidden; float:left; }
+.mylearning li a{ position:relative;width:100%; height:200px; overflow:hidden; box-sizing:border-box;color: #28ada0; background: #fff; display:block; text-align:center; box-sizing:border-box; padding:15px;box-shadow: 0 2px 2px rgba(0, 0, 0, .03), 0 1px 0 rgba(0, 0, 0, .03);border-radius: 4px}
+
+.mylearning li a:hover{ background-color: #28ada0;color: #fff;}
+.mylearning li a:hover li{color: #fff;}
+.mylearning li:first-child a{background-color:#28ada0; color:#fff;}
+.mylearning li:first-child h4{ font-size:30px;padding:30px 0; display:block;}
+.mylearning li:first-child button{ width:98px; height:34px; font-size:14px;color:#fff; line-height:34px;border-radius: 4px;background-color:#28ada0; border:solid 1px #fff;}
+.mylearning li button:hover{
+    background-color:#fff;
+    color:#28ADA1;
+}
+.mylearning li i{font-size: 60px; padding:15px 0; display:block;}
+.mylearning li p{font-size: 14px;line-height: 20px; font-weight:normal;}
+.mylearning li em{position: absolute;right: -2px;top: -2px;width:0;height: 0;border-style: solid;font-size: 0;line-height: 0;border-width: 22px;border-color: #ecf0f1 #ecf0f1 #e97692 #e97692;-webkit-border-bottom-left-radius: 6px;
+border-radius: 0 0 0 6px;box-shadow: 0 2px 2px rgba(0, 0, 0, .05), -1px 1px 1px rgba(0, 0, 0, .05)}
+.mylearning li em span{position: absolute;left: -20px;top: 9px;color: #fff;font-size: 9pt;width: 30px;display: block;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg)}
+.mylearning li.myprogress p{ text-align:left; padding-right:30px;}
+.mylearning li.myprogress ul{position: absolute; left:15px; bottom:15px;}
+.mylearning li.myprogress li{ text-align:left; line-height:30px; padding:0;}
+.mylearning li.myprogress li.last{color: #aaa;}
+.mylearning li.myprogress a:hover li.last{color: #fff;}
+.mylearning li.myprogress i{position: absolute;right: -30px;bottom: -50px;font-size: 150px;filter: alpha(opacity=15);-moz-opacity: .15;-khtml-opacity: .15;opacity: .15}
+
+

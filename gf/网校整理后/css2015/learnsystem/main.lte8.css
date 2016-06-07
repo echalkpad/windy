@@ -1,0 +1,256 @@
+/* @media-breakpoint:1150 */
+  .crumb {
+    display: block;
+    zoom: 1;
+    *zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+
+  .mbbody {
+    display: none;
+  }
+
+  .webbody {
+    display: block;
+  }
+
+  .bodygreyish {
+    background-color: #f8f8f8;
+    zoom: 1;
+    *zoom: 1;
+  }
+  .bodygreyish:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .bodygreyish:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+
+  .specialtopttl ul {
+    display: block;
+    overflow: hidden;
+  }
+  .specialtopttl ul li {
+    float: left;
+  }
+  .specialtopttl ul li a {
+    color: #fff;
+    padding: 0 5px;
+    display: block;
+  }
+  .specialtopttl ul li a:hover {
+    color: #33b0c4;
+    border-bottom: solid 2px #33b0c4;
+  }
+
+  .specialtopttl span {
+    font-size: 24px;
+    width: 200px;
+  }
+  .specialtopttl ul li {
+    float: left;
+  }
+  .specialtopttl ul li a {
+    padding: 0 20px;
+  }
+
+  .mmenu.mmenu-horizontal {
+    width: 5000px;
+  }
+  .mmenu.mmenu-horizontal nav {
+    width: 140px;
+  }
+  .mmenu-right .mmenu.mmenu-horizontal {
+    left: auto;
+    right: -4500px;
+  }
+  .mmenu-left.mmenu-opening .mmenu-page,
+  .mmenu-left.mmenu-opening #mmenu-blocker {
+    left: 200px;
+  }
+
+  input[placeholder] {
+    font-size: 16px;
+  }
+
+  input[type="button"] {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+  }
+
+  .leansttl {
+    height: 450px;
+    padding-top: 120px;
+  }
+  .leansttl h1 {
+    font-size: 36px;
+  }
+  .leansttl p {
+    font-size: 18px;
+    line-height: 35px;
+    width: 720px;
+  }
+
+  .learnsys01 {
+    padding: 40px 0;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .learnsys01 li:last-child input[type="button"] {
+    width: 80%;
+    background-position: 20px 10px;
+  }
+  .learnsys01 dd {
+    width: 33.33%;
+  }
+
+  .learnsys01 {
+    padding: 80px 0;
+  }
+
+  .review h1 {
+    font-size: 30px;
+  }
+  .review p {
+    font-size: 18px;
+    line-height: 35px;
+    width: 720px;
+  }
+
+  .revsugges {
+    padding-top: 60px;
+    font-size: 20px;
+  }
+  .revsugges strong {
+    display: inline;
+    font-size: 48px;
+    padding: 0 20px;
+  }
+
+  .learnsys03 p:last-child {
+    padding-top: 40px;
+  }
+  .learnsys03 p:last-child input[type="button"] {
+    width: 160px;
+    margin: 0 5px;
+    padding-left: 55px;
+    background-position: 15px 10px;
+  }
+
+  .learnsys03 {
+    padding-bottom: 80px;
+  }
+  .learnsys03 p {
+    font-size: 18px;
+  }
+  .learnsys03 table {
+    margin: 40px 0;
+  }
+  .learnsys03 th {
+    padding: 20px 10px;
+    font-size: 20px;
+  }
+  .learnsys03 td {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+
+  .learnsys03 p input[type="button"] {
+    width: 180px;
+    margin: 0 15px;
+    padding-left: 60px;
+    background-position: 20px 10px;
+  }
+  .learnsys03 ul {
+    height: 200px;
+    overflow: hidden;
+  }
+  .learnsys03 li {
+    width: 33.33%;
+    height: 200px;
+    float: left;
+    padding-top: 60px;
+    border-bottom: none;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    border-right: solid 1px #7fc1cb;
+  }
+  .learnsys03 li span {
+    top: 110px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .learnsys04 {
+    padding: 40px 0;
+    width: 360px;
+    margin: 0 auto;
+  }
+  .learnsys04 li:last-child {
+    padding-top: 40px;
+  }
+  .learnsys04 li:last-child input[type="button"] {
+    width: 160px;
+    margin: 0 5px;
+    padding-left: 55px;
+    background-position: 15px 10px;
+  }
+
+  .learnsys04 {
+    width: 760px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+  .learnsys04 li {
+    width: 50%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .learnsys04 li:nth-child(2) {
+    height: 61px;
+  }
+  .learnsys04 li:last-child {
+    width: 100%;
+  }
+  .learnsys04 li:last-child input[type="button"] {
+    width: 180px;
+    margin: 0 15px;
+    padding-left: 60px;
+    background-position: 20px 10px;
+  }
+
+  .popbox dl {
+    width: 700px;
+    margin: auto auto;
+  }

@@ -1,0 +1,149 @@
+@import "../../../css/variable.less";
+
+
+//tab切换
+.secTabs{
+	.cf();
+	margin:0px auto 20px;
+	padding: 35px 0px 0px;
+	.f16();
+	color:@c3;
+	ul{
+		.cf();
+		border-bottom: 2px solid #e8e8e8;
+	}
+	li{
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		padding-bottom: 15px;
+		box-sizing: border-box;
+		margin-bottom: -2px;
+		transition: 0s;
+		-moz-transition: 0s;
+		-webkit-transition: 0s;
+	}
+	.selected{
+			border-bottom:2px solid #ef3739;
+			a{color:#ef3739;}
+		 }
+}
+@media(min-width:640px){
+	.secTabs{
+			a{font-size: 22px;}
+		}
+
+}
+@media(min-width:992px){
+	.secTabs{
+			padding-top: 50px;
+			li{width: 160px;}
+		}
+}
+@media(min-width:1200px){
+	.secTabs{
+		.lgscreen();
+		margin:0px auto 20px;
+	}
+}
+
+//金程动态
+.fc_wrap{
+	.cf();
+	background-color: #f8f8f8;
+	padding:0 10px;
+}
+
+	.fc_information{
+		.cf();
+		padding-bottom: 40px;
+		display: none;
+		&:first-child{display: block;}
+		ul{
+			.cf();
+			margin:40px auto auto;
+		}
+		li{
+			.cf();
+			float: left;
+			width: 48%;
+			display: none;
+			box-sizing:border-box;
+			&:first-child{margin-right: 4%;}
+			a{
+				display:block;
+				background-color: @cw;
+				padding-bottom: 25px;
+				border:1px solid #f8f8f8;
+				img{width: 100%;}
+				&:hover{
+					border-color:#dedede;
+					h3{color:#ea3a3c;}
+				}
+			}
+		}
+		li:nth-child(-n+2){display: block;}
+
+		h3{
+			overflow:hidden;
+			.spill2();
+			color:@c3;
+			.f16();
+			margin:10px 10px 5px;
+			&:hover{color:#ea3a3c;}
+		}
+		p{
+			.spill3();
+			color:@c9;
+			.f12();
+			padding:5px 10px 0px;
+		}
+	}
+
+	@media (min-width: 640px){
+	.fc_wrap{
+		padding:0 30px;
+		.fc_information{
+			ul{}
+			li{padding:0px;}
+		}
+	}
+}
+@media(min-width:768px){
+	.fc_information{
+		li{
+			width: 32.3333%;
+			&:first-child{margin-right: 0;}
+			&:nth-child(2){margin:auto 1.33333%;}
+		}
+		li:nth-child(-n+3){display: block;}
+	}
+}
+@media (min-width:992px){
+	.fc_wrap{
+		.fc_information{
+			ul{}
+			li{
+				width: 24%;
+				&:nth-child(2){margin:auto 0;}
+				&:not(:first-child){margin-left:1.33333%;}
+			}
+			li:nth-child(-n+4){display: block;}
+		}
+	}
+}
+
+@media (min-width:1200px){
+	.fc_wrap{
+		padding: 0!important;
+			.fc_information{
+				.lgscreen();
+					li{
+						width:19.1%;
+						display: block;
+						&:not(:first-child){margin-left:1.111%;}
+                        p{.f14();}
+					}
+			}
+	}
+}

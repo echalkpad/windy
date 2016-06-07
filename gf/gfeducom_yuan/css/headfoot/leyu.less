@@ -1,0 +1,93 @@
+/* LESS Document */
+
+/* 乐语部分 */
+
+
+
+/* 乐语部分 */
+.siderbar{
+  position: fixed;
+  right: 0px;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background: #15657A;
+   ul{}
+   li{
+       float: left;
+       width:50%;
+       padding: 5px 0;
+       box-sizing: border-box;
+     //  border-bottom:1px solid @cw;  
+       color:@cw;
+       text-align: center; 
+       
+       a{color: @cw;.f12();}
+       img{
+           display: block; 
+           margin: 0 auto; 
+         //  padding-bottom: 5px;
+         }
+       
+      &:first-child{
+          display: none;
+          background-size: 100% 100%;
+          width: 100%;
+          height: 100px;
+          position: relative;
+          img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+          }
+        
+          span{
+              position: absolute;
+              display: block;
+              width: 100%;
+              .f14();
+              padding: 6px 0;
+              background: #76c000;
+              bottom: 0;
+          }
+      } 
+   } 
+   .iconsearch{background: #0380c4; display: none;}
+   .iconwrite{background: #008edc; display: none;}
+   .iconcomment{ border-right: 1px solid @cd;img{padding-top: 10px;}}
+   .iconlcok{background: #31a6ed; display: none;}
+   .iconphone{border-bottom: 0;}
+}
+
+@media(min-width:768px){
+  .siderbar{
+      width: 60px;
+      right: 0;
+      bottom: 10px;
+      background: #4ab1ef;
+      ul{}
+      li{
+          width: 100%; 
+          float: none;
+          &:first-child{display: block; height: 80px;}
+      }
+      .iconsearch{background: #0380c4; display: block;}
+      .iconwrite{background: #008edc; display: block;}
+      .iconcomment{background: #129beb;border-right: 0;img{padding-top: 10px;}}
+      .iconlcok{background:#31a6ed; display: block;}
+  }  
+}
+
+@media(min-width:1380px){
+    .siderbar{
+        width: 90px;
+        right: 30px;
+        bottom: 100px;
+        li{
+          width: 100%; 
+          float: none;
+          &:first-child{height: 100px;}
+        }
+    }
+}

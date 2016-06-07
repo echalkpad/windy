@@ -1,0 +1,197 @@
+/**
+*  description: 微信页
+*  author: Dolores
+*  date: 2015-8-11 14：40
+**************************************************/
+
+@import '../common/variable.less';   //全局变量
+
+.appcontent{
+   .appbanner{
+       background: url(../../images2015/weapp/app/banner.jpg) no-repeat ;
+       background-size: cover;
+       color: @cw;
+       h1{.f28(); padding: 50px 20px;}
+       ul{ padding: 20px; }
+       li{
+           width: 125px;
+           height: 40px;
+           display: inline-block;
+           margin: 0 10px 30px 0;
+           border: 1px solid @cw;
+           text-align: center;
+           line-height: 40px;
+           box-sizing: border-box;
+           a{color: @cw; .f24(); }
+           
+           &:hover{
+               background: @cw;
+               a{color: #0f51b2;}
+           }
+       }
+   } 
+}
+
+@media(min-width:480px){
+ .appcontent{
+   .appbanner{
+     h1{ font-size: 46px; }
+     ul{padding: 40px 20px; width: 460px; box-sizing: border-box;}
+   }
+ }   
+}
+
+@media(min-width:640px){
+ .appcontent{
+   .appbanner{
+     h1{ .f48(); padding: 40px 20px; }
+     ul{ width: 490px; }
+     li{
+        margin: 0 20px 30px 0;
+     }
+   }
+ }   
+}
+
+@media(min-width:1200px){
+ .appcontent{
+   .appbanner{
+      background: url(../../images2015/weapp/app/banner.jpg) no-repeat center #0f51b2;
+     section{
+         width: 1200px;
+         margin: 0 auto;
+     }
+   }
+ }  
+}
+
+/* CFA */
+.appcontent{
+  article{
+      .cf();
+      padding: 30px 20px 60px;
+      text-align: center;
+      overflow: hidden;
+      section{
+          text-align: left;
+          h2{
+             text-align: right;
+             font-size: 36px;
+             font-weight: bold;
+             padding: 20px 0 10px;
+             a{ 
+               color: #0b4a99; 
+               &:hover{text-decoration: none;}
+             }
+          }
+          p{text-indent: 2em; line-height: 24px; margin-bottom: 20px;  letter-spacing: 2px;}
+          
+          ul{
+              .cf();
+           li{
+             float: left;
+             width: 46%;
+             margin: 2%;
+             text-align: center;
+             span{display: block;}
+             
+             &:first-child{ width: 100%; }
+             a{
+                 display: inline-block;
+                 width: 46%; margin: 2%;
+                 img{
+                     width: 125px;
+                 }
+             }
+           }
+          }
+      }
+  }
+}
+    
+@media(min-width:480px){
+ .appcontent{
+  article{
+    section{
+        ul{
+          li{
+            width: 28%;
+            margin: 1.6%;
+            &:first-child{width: 30%; margin-right: 5%;}
+            a{
+                width: 100%;
+                img{width: 135px;}
+            }
+          }
+        }
+    }
+  }
+ }   
+}
+
+@media(min-width:768px){
+ .appcontent{
+  article{
+    img{ float: left; margin-top: 50px; width: 40%; }
+    section{
+        width: 60%;
+        float: left;
+        ul{
+          li{
+            width: 28%;
+            margin: 1.6%;
+            img{margin-top: 0; width: 92%; margin-bottom: 20px;}
+            &:first-child{width: 30%; margin-right: 5%;}
+            a{
+                width: 100%;
+                img{width: 135px; margin-top: 0; margin-bottom: 0;}
+            }
+          }
+        }
+    }
+  }
+  .nth0{
+      img{float: right;}
+      section{
+          float: left;
+          h2{text-align: left;}
+      }
+  }
+ }   
+}
+
+@media(min-width:992px){
+ .appcontent{
+  article{
+    img{ width: 334px; }
+    section{
+        width: 460px;
+        float: right;
+    }
+  }
+ }   
+}
+
+@media(min-width:1200px){
+ .appcontent{
+  article{
+    div{
+    width: 1200px;
+    padding: 30px 80px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+  }
+ }   
+}
+
+
+.appcontent{
+  .nth0{
+      background: #fafafa;    
+  }
+}
+
+.nowx{ padding-top: 40px; }
+
+

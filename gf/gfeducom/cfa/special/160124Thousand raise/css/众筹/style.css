@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?uhyyul');
+    src:    url('fonts/icomoon.eot?uhyyul#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?uhyyul') format('truetype'),
+        url('fonts/icomoon.woff?uhyyul') format('woff'),
+        url('fonts/icomoon.svg?uhyyul#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-brigh:before {
+    content: "\e0c1";
+}
+.icon-bleft:before {
+    content: "\e0c2";
+}
+.icon-bbottom:before {
+    content: "\e0c3";
+}
+.icon-btop:before {
+    content: "\e0c4";
+}
+.icon-left:before {
+    content: "\e0c6";
+}
+.icon-top:before {
+    content: "\e0c8";
+}
+.icon-bottom:before {
+    content: "\e0cf";
+}
+.icon-j-bottom:before {
+    content: "\e0e3";
+}
+.icon-j-top:before {
+    content: "\e1c0";
+}
+.icon-j-left:before {
+    content: "\e1c1";
+}
+.icon-j-right:before {
+    content: "\e1c2";
+}
+.icon-dbright:before {
+    content: "\e1c3";
+}
+.icon-gftel:before {
+    content: "\e603";
+}
+.icon-gfwb:before {
+    content: "\e604";
+}
+.icon-gfqq:before {
+    content: "\e605";
+}
+.icon-gfchat:before {
+    content: "\e607";
+}
+.icon-gfright:before {
+    content: "\e609";
+}
+.icon-gfsearch:before {
+    content: "\e60b";
+}
+.icon-warning:before {
+    content: "\e636";
+}
+.icon-cancel-circle:before {
+    content: "\e637";
+}
+.icon-checkmark:before {
+    content: "\e639";
+}
+.icon-circle-up:before {
+    content: "\e63a";
+}
+.icon-circle-right:before {
+    content: "\e63b";
+}
+.icon-circle-down:before {
+    content: "\e63c";
+}
+.icon-circle-left:before {
+    content: "\e63d";
+}
+.icon-12:before {
+    content: "\e904";
+}
+.icon-grid:before {
+    content: "\e905";
+}
+.icon-cr-mn3-r:before {
+    content: "\e94e";
+}
+.icon-cross:before {
+    content: "\ea0f";
+}
+.icon-bars:before {
+    content: "\f0c9";
+}
+.icon-3:before {
+    content: "\e900";
+}
+.icon-4:before {
+    content: "\e901";
+}
+.icon-1:before {
+    content: "\e902";
+}
+.icon-2:before {
+    content: "\e903";
+}
+

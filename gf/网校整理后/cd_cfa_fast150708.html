@@ -1,0 +1,782 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>课程详情</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+<link rel="shortcut icon" href="images2015/gfico.ico">
+<!--link href="css2015/main.css" rel="stylesheet" type="text/css" /-->
+<!--头尾的样式-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/main.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdsistar15.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdsummerblue15.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdcongye15.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdautumn15.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdsummer15.css" rel="stylesheet" type="text/css" />
+<link href="css2015/course/cdwinter15.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css2015/course/cdFast15.css" />
+<link rel="stylesheet" href="css2015/course/cd_frm_fast150708.css" />
+
+<link href="css2015/font/iconfont.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css2015/gfschool/font/iconfont.css" />
+<link rel="stylesheet" href="css2015/login_after.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script2015/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+
+<script src="script2015/jquery.min.js"></script>
+<script src="script2015/clickD.js"></script>
+<script src="script2015/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#menu').mmenu(
+        );
+    });
+</script>
+<!--切换-->
+<script type="text/javascript">
+/* secTabs */
+$(function(){
+	$(".J_secTabs").each(function(){
+		var timeout = 300;
+		var delay = 0;
+		var a = $(this).find("li"), b = $(this).next().children(), c = $(this).find("em"); 
+		
+		//a.hover(function(){ var	obj = $(this); item_show(obj); },function(){ item_hide(); });
+		a.click(function(){ var	obj = $(this); item_show(obj); },function(){ item_hide(); });
+		a.click(function(){ var obj = $(this); item_action(obj); });
+		
+		function item_action(obj){
+			a.removeClass("selected");
+			c.css("cursor","")
+			obj.addClass("selected");
+			obj.children("em").css("cursor","default");
+			var i = a.index(obj); 
+			b.hide();  
+			$(b.get(i)).show();  
+		}
+		function item_show(obj){
+			clearTimeout(delay);
+			delay = setTimeout(function(){
+				item_action(obj);
+				clearTimeout(delay);
+			},timeout);
+		}
+		function item_hide(){
+			clearTimeout(delay);
+		}
+	}); 
+});
+</script>
+
+</head>
+
+<body>
+<!--phonenav start-->
+<div class="mbbody">
+<div class="mbttl"><i><a href="javascript:;"></a></i><h2>课程列表</h2></div>
+</div>
+<!--phonenav end-->
+
+<!--手机title start-->
+<div class="mbtitle">
+    <div class="mbnav">
+        <a href="#menu" class="glyphicon glyphicon-th-large"><img src="images2015/phoneNav.png"  alt=""/></a>
+        <input type="hidden" id="divdiscon" name="divdiscon" value="0">
+    </div>
+</div>
+<nav id="menu" class="mbnavadd">
+    <h2 style="display:none;" ><a href=""><i><img src="images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+    <h2 class=""><a href=""><i><img src="images2015/mbnavreg.png"  alt=""/></i>肖洋</a><a class="aLogin" href="#">&gt;</a></h2>
+    <ul>
+        <li class="Selected"><a href="">课程</a></li>
+        <li><a href="">题库</a></li>
+        <li><a href="">直播</a></li>
+        <li><a href="">资讯</a></li>
+        <li><a href="">商城</a></li>
+        <li><a href="">应用</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+<!--webnav start-->
+<div class="webbody">
+    <div class="gtopttl">
+        <nav>
+        <h2><img src="images2015/logo.png"  alt=""/></h2>
+        <span style="display:none;"><a href="javascript:void(0);" onClick="login();">登录</a><a href="javascript:void(0);" onClick="reg();">注册</a></span>
+        <ul>
+            <li><a href="">课程</a></li>
+            <li><a href="">题库</a></li>
+            <li><a href="">直播</a></li>
+            <li><a href="">资讯</a></li>
+            <li><a href="">商城</a></li>
+            <li><a href="">应用</a></li>
+        <!--#<!-- #include file = "menu.html" -->
+        <!--menu end-->
+        </ul>
+        </nav> 	
+    </div>
+    
+    <!-- login_after start -->
+            <ul class="login_after" >
+            		<li><h3>学习空间：</h3></li>
+            		<!-- time  -->
+                    <li>
+                    	<div class="time_first">
+	                    	<p><i class="iconfont">&#xe6d0;</i></p>
+	                        <dl>
+	                        	<dt class="tranger"><span class="tran"></span></dt>
+	                        	<dd class="nowStu">最近学习</dd>
+	                            <dd><i class="iconfont">&#xe60e;</i><a href="">我的课程我的课程我的课程我的课程我的课程我的课程</a></dd>
+	                            <dd><i class="iconfont">&#xe60e;</i><a href="">我的课程我的课程</a></dd>
+	                            <dd><i class="iconfont">&#xe60e;</i><a href="">我的课程我的课程</a></dd>
+	                        </dl>
+                        </div>
+                    </li>
+
+                    <!-- emial -->
+                    <li>
+                    	<div class = "emial_sec">
+                    		<span class="msg_span" id="remindCls">16</span>
+	                    	<p><i class="iconfont icon_email">&#xe67a;</i></p>
+	                    	<dl class="emialli">
+	                        	<dt class="tranger"><span class="tran"></span></dt>
+	                            <dd>
+	                            	<ul id="emailul">
+	                                	<li id="stuKnow1" onClick="show('stuKnow');" class="active_Login"><a href="javascript:;">学习通知</a></li>
+	                                	<li id="coursegxin1" onClick="show('coursegxin');"><a href="javascript:;">课程更新</a></li>
+	                                    <li id="xtKonw1" onClick="show('xtKonw');"><a href="javascript:;">系统通知</a></li>
+	                                </ul>
+	                            </dd>
+	                            <dd id="stuKnow" class="active_else">
+	                            	<ol>
+	                            		<li><a href="#"><h3>CPA课程更新通知</h3><h4><span>2015/4/9</span><span>下午6:17</span></h4></a></li>
+	                            		<li><a href="#"><h3>高顿题库初级职称、中级职称板</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            	</ol>
+	                            	<p>标记已读<span><a href="">查看更多>></a></span></p>
+	                            </dd>
+	                            <dd id="coursegxin" class="active_else hide">
+	                            	<ol>
+	                            		<li><a href="#"><h3>CMA全国面授师招聘</h3><h4><span>2015/4/27</span><span>下午1:13</span></h4></a></li>
+	                            		<li><a href="#"><h3>CPA课程更新通知</h3><h4><span>2015/4/9</span><span>下午6:17</span></h4></a></li>
+	                            		<li><a href="#"><h3>【CPA直播】一起聊聊注册会计师科目选择那</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            	</ol>
+	                            	<p>标记已读<span><a href="">查看更多>></a></span></p>
+	                            </dd>
+	                            <dd id="xtKonw" class="active_else hide">
+	                            	<div class="active_else_in">
+	                            	<ol>
+	                            		<li><a href="#"><h3>CMA全国面授师招聘</h3><h4><span>2015/4/27</span><span>下午1:13</span></h4></a></li>
+	                            		<li><a href="#"><h3>CPA课程更新通知</h3><h4><span>2015/4/9</span><span>下午6:17</span></h4></a></li>
+	                            		<li><a href="#"><h3>高顿题库初级职称、中级职称板块调整</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            		<li><a href="#"><h3>【CPA直播】一起聊聊注册会计师科目选择那些事</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            		<li><a href="#"><h3>CMA全国面授师招聘</h3><h4><span>2015/4/27</span><span>下午1:13</span></h4></a></li>
+	                            		<li><a href="#"><h3>CPA课程更新通知</h3><h4><span>2015/4/9</span><span>下午6:17</span></h4></a></li>
+	                            		<li><a href="#"><h3>高顿题库初级职称、中级职称板块调整</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            		<li><a href="#"><h3>【CPA直播】一起聊聊注册会计师科目选择那些事</h3><h4><span>2015/4/7</span><span>下午7:28</span></h4></a></li>
+	                            	</ol>
+	                            	<p>标记已读<span><a href="">查看更多>></a></span></p>
+	                            	</div>
+	                            </dd>
+	                        </dl>
+                        </div>
+                    </li>
+
+                    <!-- pic & name  -->
+                    <li class="login_pic">
+                    	<div class="pic_thir">
+	                    	<p><img src="images2015/afterlogin.png"/><span>肖洋</span></p>
+	                    	<dl class="click_after">
+	                            <dt class="tranger"><span class="tran"></span></dt>
+	                            <dd><a href="">我的课程</a></dd>
+	                            <dd><a href="">我的课程</a></dd>
+	                            <dd><a href="">我的课程</a></dd>
+	                            <dd><a href="">我的课程</a></dd>
+	                         </dl>
+                         </div>
+                    </li>
+            </ul>
+    	<!-- login_after end -->
+        
+</div>
+<!--webnav end-->
+
+<!--#<!-- #include file = "WebnavTop.html" -->
+<!--webnav end-->
+
+<div class="bodygreyish">
+    <div class="wrap">
+        <div class="crumb"><p><a href="">金程网校</a>&gt;<a href="">CFA一级</a>&gt;<span>2015年6月CFA一级长线无忧套餐班</span></p></div>
+        <!--课程相关信息 start-->
+        <div class="cinfodetail">
+            <aside class="asidelist">
+              <h3></h3>
+                <ul>
+                <li><a href="#" title="FRM一+二级无忧取证班"><img src="images2015/class1.jpg"  alt=""/><h3>FRM一+二级无忧取证班二级无忧取证班二级无忧取证班</h3></a></li>
+                <li><a href="#" title="FRM一+二级无忧取证班"><img src="images2015/class2.jpg"  alt=""/><h3>FRM一+二级无忧取证班</h3></a></li>
+                <li><a href="#" title="FRM一+二级无忧取证班"><img src="images2015/class3.jpg"  alt=""/><h3>FRM一+二级无忧取证班</h3></a></li>
+                </ul>
+            </aside>
+            
+            <section class="civideo">
+            <div class="viboxvideo"><img src="images2015/videopic.png"  alt=""/><p><a href="#"><i><strong></strong></i><span>试听课程</span></a></p></div>
+            <article><span ><a class="xinZ" href="javascript:;"><!--img src="images2015/cicdetail_collect.png"  alt=""/--><i class="iconfont">&#xe6ab;</i>收藏 (234)</a></span>告诉小伙伴：
+            	<!--a href="#"><img src="images2015/cicdetail_icon1.png"  alt=""/></a><a href="#"><img src="images2015/cicdetail_icon2.png"  alt=""/></a><a href="#"><img src="images2015/cicdetail_icon3.png"  alt=""/></a><a href="#"><img src="images2015/cicdetail_icon4.png"  alt=""/></a-->
+            	<!-- 分享start -->
+				<div class="bshare-custom" style="display: inline-block; vertical-align: top;"><a title="分享到微信" class="bshare-weixin"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><!--a title="分享到腾讯微博" class="bshare-qqmb"></a--><a title="分享到人人网" class="bshare-renren"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><!--span class="BSHARE_COUNT bshare-share-count">0</span--></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+				<!-- 分享end -->
+            </article>
+            </section>
+            
+            <article class="ciinfo">
+            <h1><strong>2015年6月CFA一级长线无忧套餐班一级长线无忧套餐班一级长线无忧套餐班</strong><p>30课时  ｜  2015.6.5 至 2016.5.25</p></h1>
+            <h3><span class="xinZ"><!--img src="images2015/cicdetail_collect.png"  alt=""/--><i class="iconfont">&#xe6ab;</i>收藏</span><span>原价:</span><s>¥11800</s><span>原价:</span><strong><small>¥</small>7880</strong></h3>
+            <ul>
+            <li>学习人数<span>1156</span></li>
+            <li>评价<img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></li>
+            </ul>
+
+            <dl>
+            <dt>课程类型</dt>
+            <dd id="cselClick"><a href="javascript:;" class="cselClick">线上课程<strong></strong></a><a href="javascript:;">面试课程<strong></strong></a><a href="javascript:;">面试课程<strong></strong></a></dd>
+            </dl>
+            <div id="ciinfotarget">
+                <div class="ciinfotarget">
+                    <span>上课地址：</span><a class="cselClick" href="javascript:;">全球<strong></strong></a>
+                </div>
+                <div class="ciinfotarget">
+                    <span></span><a class="cselClick" href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a>
+                </div>
+                <div class="ciinfotarget">
+                    <span></span><a class="cselClick" href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a><a href="javascript:;">上海复旦<strong></strong></a>
+                </div>
+            </div>
+
+            <h4><a href="" class="buynow">立即购买</a><a href="" class="addcart">立即咨询</a></h4>
+            </article>
+            
+        </div>
+        <!--课程相关信息 end-->
+        
+        <!--课程相关信息 start-->
+        <div class="courseintro">
+            <aside>
+            	<div class="cicteacher">
+                <h2>授课老师</h2>
+                
+                <div class="focus">
+                <div class="g-carousel cf" id="J-banner-carousel2">
+                <div class="g-carousel-viewport">
+                <ul class="g-carousel-inner">
+                <li>
+                	<dl>
+                    <dt><img src="images2015/tangf.jpg"  alt=""/>
+                    <p><img src="images2015/cicteacher-v.png"  alt=""/>汤老师</p></dt>
+                    <dd>中国“CFA第一人”、金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场学会金融服务工作委员会理事长、PRMIA上海督导委员会委员对职场的英语教学风格，是最受网校学员欢迎的超级名师之一。</dd></dl></li>
+                    <li><dl>
+                	<dt><img src="images2015/tangf.jpg"  alt=""/>
+                    <p><img src="images2015/cicteacher-v.png"  alt=""/>汤老师</p></dt>
+                    <dd>中国“CFA第一人”、金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场学会金融服务工作委员会理事长、PRMIA上海督导委员会委员对职场的英语教学风格，是最受网校学员欢迎的超级名师之一。</dd></dl></li>
+                    <li><dl>
+                	<dt><img src="images2015/tangf.jpg"  alt=""/>
+                    <p><img src="images2015/cicteacher-v.png"  alt=""/>汤老师</p></dt>
+                    <dd>中国“CFA第一人”、金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场学会金融服务工作委员会理事长、PRMIA上海督导委员会委员对职场的英语教学风格，是最受网校学员欢迎的超级名师之一。</dd></dl></li>
+				</ul>
+                </div>
+                <ul class="g-carousel-indicators"></ul>
+            	</div>
+                </div>
+            
+                </div>
+                <div class="cicstudent">
+                <h2>1110人正在学习该课程</h2>
+                <ul>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                <li><a href=""><img src="images2015/stu6.jpg"  alt=""/><span>这里是用户名或者是昵称</span></a></li>
+                </ul>
+                </div>
+                <div class="cicads">
+                <a href=""><img src="images2015/class4.jpg"  alt=""/><span>这里是课程的名称</span></a>
+                </div>
+                <div class="applink">
+                <img src="images2015/gfeduWX.jpg"  alt=""/>
+                <div><h4>网校手机版</h4><a href="">免费下载</a></div>
+                </div>
+            </aside>
+            <section>
+            <div class="cicintrobox">
+           <div class="cicttl J_secTabs"><ul><li class="selected"><a href="javascript:void(0);">课程介绍</a></li><li><a href="javascript:void(0);">课程大纲</a></li><li><a href="javascript:void(0);">直播课程</a></li><li class="cicttlaq"><a href="javascript:void(0);">课程问答</a></li><li><a href="javascript:void(0);">学员评论<span>(223)</span></a></li></ul></div>
+            <div class="ctn">
+            	<!--课程介绍 start-->
+                 <div class="cicintro">
+                    <div class="cicgivemb">
+                    <h2>报班赠送</h2>
+                    <ul>
+                    <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>CFA一级基础课程一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                    <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                    <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                    <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                    </ul>
+                    </div>
+                    
+                    <div class="cicgive">
+                    <h2>报班赠送</h2>
+                    <div class="g-carousel cf" id="J-show-carousel">
+                        <!-- <div class="g-carousel-viewport" > -->
+                        <ul class="g-carousel-inner">
+                        <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>1CFA一级基础课程一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                        <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>2CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                        <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>3CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                        <li><a href=""><img src="/2015/images2015/stu28.jpg"  alt=""/><h4>4CFA一级基础课程</h4><p>价格<strong><small>¥</small>7880</strong></p></a></li>
+                        </ul>
+                        <!-- </div> -->
+                    </div>
+
+                    </div>
+                    
+                    <!-- 课程介绍之快速获取CFA start -->
+                     <div class="introduction_bg_title">
+                         <!--<img src="images2015/lessonSpecial/introduction_title.jpg" alt="快速拿CFA"/>-->
+                         <div class="text0">快速拿<div class="color_ffea00">CFA</div></div>
+                         <div class="text1">首选金程CFA全科特惠取证班</div>
+                         <div class="text2">全明星授课全程倾情讲授，2.5年快速取证省时、省心、省钱</div>
+                     </div>
+                     <div id="introduction">
+
+                         <!--通过率 start-->
+                         <div class="pass_rate cf">
+                             <div class="title">一次通过，比你想象中更容易</div>
+                             <div class="pass_rate_cont">
+                                 <div class="text">
+                                     很多时候，我们可能会低估自己，比如，太难，学不会，比如学会了记不住，如比，记信了考不过......
+                                 </div>
+                                 <div class="text">
+                                     但是，事实是这样吗？答案是否定的，不，通过我们的数据发现，其实您和大部分学员一样，问题和困难没有想象中的多。
+                                 </div>
+                                 <div class="list cf">
+                                     <div class="list0">顶配师资</div>
+                                     <div class="list1">科学体系</div>
+                                     <div class="list2">人性教学</div>
+                                     <div class="list3 margin_right_none">考前信息</div>
+                                 </div>
+                             </div>
+                             <div class="line_table">
+                                 <img src="images2015/coursedetailnew/cdFast150708/line-table.png" alt="通过率"/>
+                                 <div class="line_table_text">
+                                     <span class="green"></span><span class="green_text">金程通过率</span>
+                                     <span class="blue"></span><span class="blue_text">世界通过率</span>
+                                 </div>
+                             </div>
+                         </div>
+                         <!--通过率 end-->
+                         <!--适合人群 start-->
+                         <div class="crowd cf">
+                             <h3>适合人群</h3>
+                             <div class="list cf">
+                                 <div class="crowd_list_pic">
+                                     <img src="images2015/coursedetailnew/cdFast150708/crowd_list0.jpg" alt="适合人群"/>
+                                     <div class="crowdling">零基础</div>
+                                 </div>
+                                 <div class="crowd_list_text">非金融专业的零基础学</div>
+                             </div>
+                             <div class="list margin_right_none cf">
+                                 <div class="crowd_list_pic">
+                                     <img src="images2015/coursedetailnew/cdFast150708/crowd_list1.jpg" alt="适合人群"/>
+                                     <div class="crowdling">零基础</div>
+                                 </div>
+                                 <div class="crowd_list_text">初入职场的金融从业者，希望系统学习金融投资知识的考生</div>
+                             </div>
+                             <div class="list cf">
+                                 <div class="crowd_list_pic">
+                                     <img src="images2015/coursedetailnew/cdFast150708/crowd_list2.jpg" alt="适合人群"/>
+                                     <div class="crowdling">零基础</div>
+                                 </div>
+                                 <div class="crowd_list_text">期待通过CFA考试跨行业到金融投资行业的考生</div>
+                             </div>
+                             <div class="list margin_right_none margin_right_none_640 cf">
+                                 <div class="crowd_list_pic">
+                                     <img src="images2015/coursedetailnew/cdFast150708/crowd_list3.jpg" alt="适合人群"/>
+                                     <div class="crowdling">零基础</div>
+                                 </div>
+                                 <div class="crowd_list_text">金融领域的在职者，期望升职加薪的投行精英</div>
+                             </div>
+                         </div>
+                         <!--适合人群 end-->
+                         <!--课程设置 start-->
+                         <div class="course_setting">
+                             <h3>课程设置</h3>
+                             <div class="course_list">
+                                 三大课程级别
+                                 <p class="cont">CFA一级、CFA二级、CFA三级</p>
+                             </div>
+                             <div class="plus"><img src="images2015/coursedetailnew/cdFast150708/plus.png"/></div>
+                             <div class="course_list">
+                                 五大课程模块
+                             </div>
+                             <div class="modul cf">
+                                 <div class="modul_list modul_list_0">
+                                     <p>预科讲解</p>
+                                     <span>CFA知识脉络图</span>
+                                 </div>
+                                 <div class="modul_list modul_list_1 margin_right_none">
+                                     <p>基础夯实</p>
+                                     <span>基础知识框架形成</span>
+                                 </div>
+                                 <div class="modul_list margin_right_none_640 modul_list_2">
+                                     <p>强化提升</p>
+                                     <span>重难点知识掌握</span>
+                                 </div>
+                                 <div class="modul_list modul_list_3 margin_right_none">
+                                     <p>冲刺模考</p>
+                                     <span>全真模拟技巧提高</span>
+                                 </div>
+                                 <div class="modul_list modul_list_4">
+                                     <p>百题把关</p>
+                                     <span>考点难点全覆盖</span>
+                                 </div>
+                             </div>
+                             <div class="plus"><img src="images2015/coursedetailnew/cdFast150708//plus.png"/></div>
+                             <div class="course_list">
+                                 数千课时课程设置
+                             </div>
+                         </div>
+                         <!--课程设置 end-->
+                         <!--课程特色 start-->
+                         <div class="fasttext sistartitxtts"><h3>特色课程</h3></div>
+
+                         <div class="sistarbox">
+                             <div class="sstbtitle">个性化学习规划</div>
+                             <div class="sstbtext">单门课程200-300课时，<br/>确保考点全覆盖</div>
+                         </div>
+                         <div class="sistarbox">
+                             <div class="sstbtitle">殿堂级专业师资</div>
+                             <div class="sstbtext">专业、经验、人脉全方位<br/>传授与分享</div>
+                         </div>
+                         <div class="sistarbox">
+                             <div class="sstbtitle">多维化教学产品</div>
+                             <div class="sstbtext">面授、网课、APP、教材、<br/>教辅、题库</div>
+                         </div>
+                         <div class="sistarbox">
+                             <div class="sstbtitle">管家式教学服务</div>
+                             <div class="sstbtext">你负责学习，<br/>我负责管理你的学习</div>
+                         </div>
+                         <div class="summertest cf">
+                             <div class="ststbox"><div class="icon icon-platform01">&#xe613;</div><div class="ststext"><p>学习规划系统</p>由浅入深阶梯式学习设置</div></div>
+                             <div class="ststbox"><div class="icon icon-platform02">&#xe612;</div><div class="ststext"><p>FRM网校</p>随时随地学网校</div></div>
+                             <div class="ststbox"><div class="icon icon-platform03">&#xe611;</div><div class="ststext"><p>FRM直播</p>全名师互动讲堂</div></div>
+                             <div class="ststbox"><div class="icon icon-platform04">&#xe610;</div><div class="ststext"><p>FRM题库</p>专项复习&nbsp;高分突破</div></div>
+                             <div class="ststbox"><div class="icon icon-platform05">&#xe60f;</div><div class="ststext"><p>手机APP</p>指尖上的FRM课堂</div></div>
+                             <div class="ststbox"><div class="icon icon-platform06">&#xe60e;</div><div class="ststext"><p>答疑平台</p>在线互动答疑</div></div>
+                             <div class="ststbox"><div class="icon icon-platform07">&#xe61b;</div><div class="ststext"><p>备考资料</p>资料在手&nbsp;考试无忧</div></div>
+                             <div class="ststbox"><div class="icon icon-platform08">&#xe60d;</div><div class="ststext"><p>每日一题</p></div></div>
+                         </div>
+                         <!--课程特色 end-->
+                     </div>
+                    <!-- 课程介绍之快速获取CFA end -->
+
+
+                </div>
+                <!--课程介绍 end-->
+                
+                <!--课程大纲 start-->
+                <div class="cicoutline">
+                	<div class="cicolttl J_secTabs"><ul><li class="selected"><a href="javascript:void(0);">前导课程</a></li><li><a href="javascript:void(0);">基本课程</a></li><li><a href="javascript:void(0);">强化课程</a></li><li><a href="javascript:void(0);">冲刺课程</a></li><li><a href="javascript:void(0);">百题课程</a></li><li><a href="javascript:void(0);">押题课程</a></li></ul></div>
+          			<div class="ctn">
+                    	<div class="cicolcontent">
+                        <h3><strong>第一节</strong>11111模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                        
+                        <div class="cicolcontent">
+                        <h3><strong>第一节</strong>2222模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                        
+                        <div class="cicolcontent">
+                        <h3><strong>第一节</strong>3333模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                        
+                        <div class="cicolcontent">
+                        <h3><strong>第一节</strong>4444模拟考试讲解之单晨玮</h3>
+                       <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                        
+                        <div class="cicolcontent">
+                        <h3><strong>第一节</strong>5555模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                        
+                        <div class="cicolcontent">
+                        <h3><strong>第一节</strong>6666模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <h3><strong>第一节</strong>模拟考试讲解之单晨玮</h3>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        <dl>
+                        <dt>任务1</dt><dd><a href="" class="mbplay"><i></i><span></span></a><a href="" class="webtime"><i><span></span></i><q>02:10</q></a><a href="" class="webplay">开始学习</a>模拟考试之讲解一</dd>
+                        </dl>
+                        </div>
+                    </div>
+                
+                </div>
+                <!--课程大纲 end-->
+                
+                <!--直播课程 start-->
+                <div class="cicclive">
+                <dl>
+                    <dt><strong>12月24日</strong>13:55-16:00<span><img src="images2015/ciccliveicon.png"  alt=""/></span></dt>
+                    <dd>                    
+                    <h3>CFA一级核心课程之“微观金融大串讲”</h3>
+                    <p>2014年12月CFRM考试将在12月第三周周六举行，特邀资深CFRM讲师在12月14日下午为学员在线答疑解惑，特邀资深CFRM讲师在12月14日下午为学员在线答疑解惑。</p>
+                    <h4><i><img src="images2015/tang.png"></i>汤震宇讲师</h4>
+                    </dd>
+                     <dt><strong>12月24日</strong>13:55-16:00<span><img src="images2015/ciccliveicon.png"  alt=""/></span></dt>
+                    <dd>                    
+                    <h3>CFA一级核心课程之“微观金融大串讲”</h3>
+                    <p>2014年12月CFRM考试将在12月第三周周六举行，特邀资深CFRM讲师在12月14日下午为学员在线答疑解惑，特邀资深CFRM讲师在12月14日下午为学员在线答疑解惑。</p>
+                    <h4><i><img src="images2015/tang.png"></i>汤震宇讲师</h4>
+                    </dd>
+                </dl>
+                
+                
+                </div>
+                <!--直播课程 end-->
+                
+                <!--课程问答 start-->
+              <div class="cicqa">
+              <dl>
+              <dt><i>Q</i>课程开班时间</dt>
+              <dd><i>A</i>价格体现服务质量。在面对价格时，请考虑我们所提供的超值服务内容，例如：帮你解答工作中的CFA问题、知识点讲解更深入、更实用，提问及时回复、讲解内容不藏私^_^、对学员有更多的耐心指导……正如你所看到的这些，我们提供的服务是否超值？大家可考虑清楚再报名，请勿议价。</dd>
+              </dl>
+              <dl>
+              <dt><i>Q</i>课程开班时间</dt>
+              <dd><i>A</i>价格体现服务质量。在面对价格时，请考虑我们所提供的超值服务内容，例如：帮你解答工作中的CFA问题、知识点讲解更深入、更实用，提问及时回复、讲解内容不藏私^_^、对学员有更多的耐心指导……正如你所看到的这些，我们提供的服务是否超值？大家可考虑清楚再报名，请勿议价。</dd>
+              </dl>
+              <dl>
+              <dt><i>Q</i>课程开班时间</dt>
+              <dd><i>A</i>价格体现服务质量。在面对价格时，请考虑我们所提供的超值服务内容，例如：帮你解答工作中的CFA问题、知识点讲解更深入、更实用，提问及时回复、讲解内容不藏私^_^、对学员有更多的耐心指导……正如你所看到的这些，我们提供的服务是否超值？大家可考虑清楚再报名，请勿议价。</dd>
+              </dl>
+              </div>
+                <!--课程问答 end-->
+                
+                <!--学员评论 start-->
+                <div class="ciccommentary">
+                <h3>综合评分：<strong>5</strong><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></h3>
+                <article>
+                <dl>
+                <dt><strong>5</strong>综合评分</dt>
+                <dd><p>课程与描述相符 :<img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p>
+                <p>老师的讲解表达 :<img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p>
+                <p>其他服务 :<img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p></dd>    
+                </dl>
+                </article>
+                <dl>
+                <dt><i><img src="images2015/tangf.jpg"  alt=""/></i>青山谷</dt>
+                <dd>
+                <p><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p>
+                <p>课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意</p>
+                <p><span>已学完 [ 第16节 ]</span><span>2014年12月06日 </span></p>
+                </dd>
+                </dl>
+                 <dl>
+                <dt><i><img src="images2015/tangf.jpg"  alt=""/></i>青山谷</dt>
+                <dd>
+                <p><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p>
+                <p>课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意</p>
+                <p><span>已学完 [ 第16节 ]</span><span>2014年12月06日 </span></p>
+                </dd>
+                </dl>
+                 <dl>
+                <dt><i><img src="images2015/tangf.jpg"  alt=""/></i>青山谷</dt>
+                <dd>
+                <p><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></p>
+                <p>课程与描述相符很满意、老师的讲解表达很满意、机构的课前服务很满意</p>
+                <p><span>已学完 [ 第16节 ]</span><span>2014年12月06日 </span></p>
+                </dd>
+                </dl>
+              </div>
+                <!--学员评论 end-->
+            </div>
+            </div>
+            
+            <div class="cicintrobox cicintrobox_noc">
+            	<div class="cicinfo">
+                <h2>学习过该课程的人还学了：</h2>
+                <ul class="cf">
+                	<li><div class="courses02">
+                    <h3><a href=""><img src="images2015/class1.jpg"><span>CFA一级</span></a></h3>
+                    <dl>
+                    <dt><a href="">1111111年12月CFA一级长线无忧套餐班</a></dt>
+                    <dd><i class="s1"><img src="images2015/tang.png"></i><span>汤震宇讲师</span></dd>
+                    <dd><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></dd>
+                    </dl></div>
+                    </li>
+                    <li><div class="courses02">
+                    <h3><a href=""><img src="images2015/class2.jpg"><span>CFA一级</span></a></h3>
+                    <dl>
+                    <dt><a href="">2014年12月CFA一级长线无忧套餐班</a></dt>
+                    <dd><i class="s1"><img src="images2015/tang.png"></i><span>汤震宇讲师</span></dd>
+                    <dd><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></dd>
+                    </dl></div>
+                    </li>
+                    <li><div class="courses02">
+                    <h3><a href=""><img src="images2015/class3.jpg"><span>CFA一级</span></a></h3>
+                    <dl>
+                    <dt><a href="">2014年12月CFA一级长线无忧套餐班</a></dt>
+                    <dd><i class="s1"><img src="images2015/tang.png"></i><span>汤震宇讲师</span></dd>
+                    <dd><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/><img src="images2015/star01.png" alt=""/></dd>
+                    </dl></div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+         　 </section>
+            
+    
+        </div>
+        <!--课程相关信息 end-->
+    </div>
+</div>
+
+
+<div class="mbbody">
+<!--#<!-- #include file = "MobileFoot.html" -->
+<!--手机底部 end-->
+</div>
+
+
+<div class="webbody">
+<!--#<!-- #include file = "PCFoot.html" -->
+<!--底部 End--> 
+</div>
+<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+
+<script type="text/javascript" src="script2015/carousel.js"></script>
+<!--script type="text/javascript" src="script2015/gfschool/school.js"></script-->
+<script type="text/javascript" src="script2015/clickD.js"></script>
+<script>
+
+/*$(function(){
+  $('#J-show-carousel').carousel({
+    display: 3
+    , indicators: false
+  })
+});
+*/
+// 主轮播
+$(function () {
+   $('#J-banner-carousel').carousel()
+});
+
+$(function(){
+  $('#J-banner-carousel2').carousel()
+});
+
+$(function(){
+    $("#J-show-carousel").imgscroll({ 
+        speed: 30,
+        amount: 0,
+        width: 1,
+        dir: "left"
+    });
+})
+
+
+
+</script>
+<!--#<!-- #include file = "RegLogin.html" -->
+
+</body>
+</html>

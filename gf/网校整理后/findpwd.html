@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.gfedu.cn/2015/login.shtml -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>找回密码</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gfedu.cn/2015/images2015/gfiphone.png">
+<link rel="shortcut icon" href="http://www.gfedu.cn/images2015/gfico.ico">
+<!--头尾的样式-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css2015/form/login.css" rel="stylesheet" type="text/css">
+
+<link href="css2015/gfschool/font/iconfont.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="script2015/jquery.min.js"></script>
+<script src="script2015/SetCommJs.js" type="text/javascript"></script>
+<script src="register_files/SetCommJs.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="script2015/loginReg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/findpwd/findpwd.js"></script>
+<!--[if lt IE 9]><script type="text/javascript" src="script2015/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="script2015/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="css2015/main.lte8.css" rel="stylesheet" type="text/css"><![endif]-->   
+</head>
+
+<body>
+
+<!--手机登录 start-->
+<div class="mbbox">
+<div class="mbttl"><span><a href="http://www.gfedu.cn/2015/Reg.shtml">登录</a></span><i><a href="http://www.gfedu.cn/2015/Login.shtml">&lt;</a></i><h2>找回密码</h2></div>
+<form action="" method="post" name="LoginFormMobile" id="LoginFormMobile">
+	 <ul id="mbstep1">    
+     <li>
+     <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="请输入你的手机号" onBlur="__changeUserName('Field_UserName');">
+     <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+     </li>
+     <li class="half"><input autocomplete="off" placeholder="输入收到的验证码" value="" type="text" name="verifyCode" id="verifyCodeM" onfocus="document.getElementById('mbnoticeLR_verifyCodeM').innerHTML = '';"><input type="button" id="mbbtnM" value="获取短信验证码"><p class="noticeLR" id="mbnoticeLR_verifyCodeM"></p></li>
+     <li class="Fwdmargin" id="mbnext"><input type="button" value="下一步"></li>
+     </ul>
+
+    <ul id="mbstep2" style="display:none;">
+    <li><input type="text" name="Field_UserName" id="Field_UserNameMobile" maxlength="20" placeholder="请输入新密码">
+    	 <p class="noticeLR" id="noticeLR_Field_UserNameMobile"></p>
+    </li>
+    <li><input type="password" id="Field_PassWordMobile" name="Field_PassWord" placeholder="请重新输入新密码" >
+    	<p class="noticeLR" id="noticeLR_Field_PassWordMobile"></p>
+    </li>
+    <li class="Fwdmargin" id="mbconfirm"><input type="button" value="确认"></li>
+    </ul>
+</form>
+</div>
+<!--手机登录 end-->
+
+<!--登录 start-->
+<div class="screenbox">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="images2015/logo.png" alt=""></h2>
+    <span><a href="">登录</a><a href="">注册</a></span>
+    <ul>
+    <!--#﻿<!--menu--> 
+<li><a href="http://www.gfedu.cn/classify.aspx" class="newTopHover">课程</a></li>
+<li><a href="http://www.gfedu.cn/intro.shtml">题库</a></li>
+<li><a href="http://www.gfedu.cn/Live/List_1.shtml">直播</a></li>
+<li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+<li><a href="http://www.gfedu.cn/BookStore/">商城</a></li>
+<li><a href="http://www.gfedu.cn/app.shtml">应用</a></li>
+    <!--menu end-->
+    </ul>
+    </nav>
+    </div>
+    
+    <div class="screencontent">
+    <section class="contentbox">
+        <article class="lcontent">
+        <h2>找回密码</h2>
+        <form action="" method="post" name="LoginFormPC" id="LoginFormPC">
+        <ul id="step1">    
+            <li>
+            <input type="text" name="Field_UserNamePC" id="Field_UserNamePC" maxlength="20" placeholder="请输入你的手机号" onblur="__changeRealPhone('Field_UserNamePC');">
+            <p class="noticeLR" id="noticeLR_Field_UserNamePC"></p>
+            </li>
+            <li class="half">
+                <input autocomplete="off" placeholder="输入收到的验证码" value="" type="text" name="verifyCode" id="mbverifyCodeM" onfocus="document.getElementById('noticeLR_verifyCodeM').innerHTML = '';"><input type="button" id="btnM" value="获取短信验证码">
+                <p class="noticeLR" id="noticeLR_verifyCodeM"></p>
+            </li>
+           
+            <li class="Fwdmargin" id="next"><input type="button" value="下一步"></li>
+          
+        </ul>
+        
+        <ul id="step2" style="display:none;">    
+            <li>
+                <input type="text" name="Field_UserNamePC" id="Field_UserNamePCPass" maxlength="20" placeholder="请输入新密码">
+                <p class="noticeLR" id="noticeLR_Field_UserNamePCPass"></p>
+            </li>       
+            <li>
+                <input type="text" name="Field_UserNamePC" id="Field_UserNamePCPass2" maxlength="20" placeholder="请重新输入新密码">
+                <p class="noticeLR" id="noticeLR_Field_UserNamePCPass2"></p>
+            </li>
+            <li class="Fwdmargin" id="confirm"><input type="button" value="确  认"></li> 
+        </ul>
+        
+        </form>
+        </article>
+        <aside class="rcontent"><img src="pic2015/fromads01.jpg" alt=""></aside>
+    </section>
+    </div>
+    
+    <!--#﻿<!--foot-->
+<div class="sfooter"><p>© 2014 金程网校保留所有权利.  咨询热线：4007009596</p></div>
+    <!--foot end-->
+
+</div>
+<!--登录 end-->
+
+<script type="text/javascript">
+
+</script> 
+
+</body></html>

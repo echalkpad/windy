@@ -1,0 +1,674 @@
+/*
+* == reset
+*******************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.5 arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  overflow-x: hidden;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+/*
+* == 内容部分
+******************************/
+@media (min-width: 1200px) {
+  .cicmodecongye {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+.header {
+  width: 100%;
+  background: #075586;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+.header img {
+  margin-top: 10px;
+  display: inline-block;
+  padding-right: 20px;
+  border-right: 1px solid #eee;
+}
+.header h1 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 30px;
+  color: #fff;
+  vertical-align: top;
+}
+.header span {
+  color: #fff;
+  font-size: 18px;
+  float: right;
+}
+.header .aboutus {
+  font-size: 16px;
+  font-weight: bold;
+  float: right;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+@media (min-width: 1200px) {
+  .headercont {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+.congyebg {
+  background: #0d6eb6 url(../images/congyebannerbg.png) no-repeat;
+  height: 135px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+@media (min-width: 480px) {
+  .congyebg {
+    height: 140px;
+  }
+}
+@media (min-width: 640px) {
+  .congyebg {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .congyebg {
+    height: 250px;
+  }
+}
+.congyejm {
+  padding: 20px 0;
+  text-align: center;
+}
+.congyejm .cytitle {
+  background: url(../images/congyecaid.png) no-repeat;
+  height: 50px;
+  font-size: 30px;
+  color: #ffff00;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  width: 250px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.congyejm .cyfp {
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+}
+.congyejm .cycirclecom {
+  overflow: hidden;
+  background: #edf7ff;
+  border-bottom: 1px solid #acc6db;
+  border-top: 1px solid #acc6db;
+}
+.congyejm .cyman {
+  display: none;
+}
+.congyejm .cycircle {
+  width: 300px;
+  height: 150px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+.congyejm .cycircle .cycirc {
+  background: url(../images/congyecircle.png) no-repeat;
+  background-size: 100% 100%;
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  font-size: 10px;
+  float: left;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.congyejm .cycircle .cycirc .cycirp {
+  color: #ffff00;
+  display: block;
+  padding: 8px 14px 0;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+.congyejm .cycircle .cycirc .cycirp span {
+  display: inline-block;
+  background: #000;
+  opacity: 0.7;
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.congyejm .cycircle .cycirc p {
+  width: 80px;
+  padding-left: 10px;
+  line-height: 15px;
+}
+.congyejm .cycircle .cycirc2 {
+  left: 100px;
+}
+.congyejm .cycircle .cycirc3 {
+  left: 200px;
+}
+@media (min-width: 480px) {
+  .congyejm .cycircle {
+    width: 460px;
+    height: 170px;
+  }
+  .congyejm .cycircle .cycirc {
+    width: 170px;
+    height: 170px;
+  }
+  .congyejm .cycircle .cycirc .cycirp {
+    font-size: 16px;
+    padding: 15px 20px 0;
+  }
+  .congyejm .cycircle .cycirc .cycirp span {
+    margin: 0 0 0 5px;
+  }
+  .congyejm .cycircle .cycirc p {
+    padding-left: 18px;
+  }
+  .congyejm .cycircle .cycirc2 {
+    left: 170px;
+  }
+  .congyejm .cycircle .cycirc3 {
+    left: 340px;
+  }
+}
+@media (min-width: 640px) {
+  .congyejm .cyman {
+    display: inline-block;
+    float: left;
+    height: 200px;
+    margin-left: -140px;
+    padding: 30px 0 30px;
+  }
+  .congyejm .cycircle {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .congyejm .cyman {
+    display: inline-block;
+    float: left;
+    height: 200px;
+    margin-left: 0px;
+    padding: 30px 0 30px;
+  }
+  .congyejm .cycircle {
+    margin-left: 180px;
+    left: 5%;
+  }
+  .congyejm .cycircle .cycirc {
+    width: 190px;
+    height: 190px;
+  }
+  .congyejm .cycircle .cycirc .cycirp {
+    padding: 15px 30px 0;
+  }
+  .congyejm .cycircle .cycirc p {
+    width: 100px;
+    padding-top: 10px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .congyejm .cyman {
+    margin-left: 50px;
+  }
+  .congyejm .cycircle {
+    left: 15%;
+  }
+}
+/* 课程特色-收益-人群 */
+/* 各个班级 */
+.congyeclass {
+  background: #2782b9;
+  padding: 20px 0;
+}
+.congyeclass .cyclass {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 140px;
+}
+.congyeclass .cyclass p {
+  color: #fff;
+  width: 95px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background: #ff4a10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 35px;
+  z-index: 2;
+}
+.congyeclass .cyclass p .cysan {
+  border-width: 17px;
+  border-color: transparent transparent transparent #ff4a10;
+  border-style: dashed dashed dashed solid;
+  position: absolute;
+  right: -34px;
+}
+.congyeclass .cyclass .cyclasstxt {
+  text-indent: 2em;
+  background: #fff;
+  position: absolute;
+  left: 75px;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 30px;
+  margin-right: 10px;
+  height: 140px;
+}
+.congyeclass .cyclass .cyclasstxt span {
+  color: #ff4a10;
+}
+.congyeclass .cywoman {
+  display: none;
+}
+@media (min-width: 480px) {
+  .congyeclass .cyclass {
+    height: 85px;
+    padding-bottom: 0;
+  }
+  .congyeclass .cyclass .cyclasstxt {
+    height: 85px;
+  }
+}
+@media (min-width: 640px) {
+  .congyeclass .cyclass {
+    margin-bottom: 20px;
+  }
+  .congyeclass .cyclass1 {
+    width: 75%;
+    left: 20%;
+  }
+  .congyeclass .cyclass2 {
+    width: 80%;
+    left: 15%;
+  }
+  .congyeclass .cyclass3 {
+    width: 85%;
+    left: 10%;
+  }
+  .congyeclass .cyclass4 {
+    width: 90%;
+    left: 5%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .congyeclass .cyclass {
+    height: 95px;
+  }
+  .congyeclass .cyclass .cyclasstxt {
+    height: 95px;
+  }
+}
+@media (min-width: 992px) {
+  .congyeclass {
+    position: relative;
+  }
+  .congyeclass .cyclass {
+    height: 80px;
+    padding-bottom: 0;
+    z-index: 3;
+  }
+  .congyeclass .cyclass .cyclasstxt {
+    height: 80px;
+  }
+  .congyeclass .cyclass .cyclasstxt .cyzsan {
+    width: 0;
+    height: 0;
+    border-bottom: 80px solid #fff;
+    border-left: 100px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -70px;
+  }
+  .congyeclass .cyclass1 {
+    width: 60%;
+    left: 40%;
+  }
+  .congyeclass .cyclass2 {
+    width: 65%;
+    left: 35%;
+  }
+  .congyeclass .cyclass3 {
+    width: 70%;
+    left: 30%;
+  }
+  .congyeclass .cyclass4 {
+    width: 75%;
+    left: 25%;
+  }
+  .congyeclass .cywoman {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+/* 高通过率 start */
+.congyerate {
+  margin: 30px 0;
+}
+.congyerate .cytitle {
+  background: url(../images/congyecaid.png) no-repeat;
+  height: 50px;
+  font-size: 30px;
+  color: #ffff00;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  width: 240px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.congyerate .cyftitle {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px 20px;
+}
+.congyerate .cyratezx {
+  background: #eeeff2;
+  text-align: center;
+}
+.congyerate .cyratezx img {
+  width: 80%;
+  margin-bottom: 40px;
+}
+.congyerate .cyratezx img:first-child {
+  padding-top: 40px;
+}
+@media (min-width: 640px) {
+  .congyerate .cyratezx img {
+    width: 32%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+/* 机考题库  */
+.congyetiku {
+  margin: 30px 0;
+}
+.congyetiku .cytitle {
+  background: url(../images/congyecaid.png) no-repeat;
+  height: 50px;
+  font-size: 30px;
+  color: #ffff00;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  width: 240px;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.congyetiku .cyftitle {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 10px 20px;
+}
+.congyetiku .cylast {
+  padding: 30px 10px;
+  background: url(../images/congyelastbtn.png) no-repeat 50%;
+  padding-bottom: 80px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+.congyetiku .cylast .cylastleft {
+  padding-bottom: 30px;
+}
+.congyetiku .cylast .cylastleft .cylasttibg {
+  background: url(../images/congyetitlebg.png) no-repeat;
+  height: 50px;
+  background-size: 100% 100%;
+  color: #428bca;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 40px;
+  line-height: 50px;
+  width: 280px;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+}
+.congyetiku .cylast .cylastleft .cylasttxt {
+  width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 50px;
+  font-size: 14px;
+  line-height: 28px;
+}
+.congyetiku .cylast .cylastleft .cylasttxt span {
+  color: red;
+}
+.congyetiku .cylast .cylastright {
+  width: 100%;
+}
+.congyetiku .cylast .cylastright img {
+  width: 100%;
+}
+.congyetiku .cylast .congyebtn .cyelsepic {
+  width: 100%;
+}
+.congyetiku .cylast .congyebtn a img {
+  width: 100%;
+  margin: 20px auto;
+}
+@media (min-width: 640px) {
+  .congyetiku .cylast {
+    height: 350px;
+  }
+  .congyetiku .cylast .cylastleft {
+    width: 45%;
+    display: inline-block;
+    float: left;
+  }
+  .congyetiku .cylast .cylastleft .cylasttxt {
+    padding-left: 30px;
+    line-height: 23px;
+  }
+  .congyetiku .cylast .cylastright {
+    width: 50%;
+    display: inline-block;
+  }
+  .congyetiku .cylast .cylastright img {
+    margin-top: 20px;
+  }
+  .congyetiku .cylast .congyebtn {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+  .congyetiku .cylast .congyebtn a img {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .congyetiku .cylast {
+    height: 350px;
+  }
+  .congyetiku .cylast .cylastleft .cylasttxt {
+    padding-left: 40px;
+    line-height: 23px;
+    margin-top: -20px;
+  }
+  .congyetiku .cylast .cylastright img {
+    width: 330px;
+  }
+  .congyetiku .cylast .congyebtn {
+    width: 50%;
+  }
+  .congyetiku .cylast .congyebtn a img {
+    width: 80%;
+    margin: 35px auto;
+  }
+}
+/* 课程特色 + 课程收益 + 适合人群 start */
+.cicmode {
+  width: 100%;
+}
+.cicmode:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .bordereee {
+  border: solid 1px #eee;
+  padding: 15px;
+  position: relative;
+}
+.cicmode .bordereee:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicharacteristic,
+.cicmode .cicprofit,
+.cicmode .ciccrowd {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.cicmode .cicharacteristic:after,
+.cicmode .cicprofit:after,
+.cicmode .ciccrowd:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicharacteristic h2,
+.cicmode .cicprofit h2,
+.cicmode .ciccrowd h2 {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  background-color: #fff;
+}
+.cicmode .cicharacteristic h2 i,
+.cicmode .cicprofit h2 i,
+.cicmode .ciccrowd h2 i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 1px #eee;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.cicmode .cicharacteristic h2 strong,
+.cicmode .cicprofit h2 strong,
+.cicmode .ciccrowd h2 strong {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  color: #30aec5;
+  line-height: 30px;
+  font-size: 18px;
+}
+.cicmode .cicharacteristic,
+.cicmode .cicprofit,
+.cicmode .ciccrowd {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cicmode .cicharacteristic img,
+.cicmode .cicprofit img,
+.cicmode .ciccrowd img {
+  width: 64px;
+  height: 64px;
+  margin: 10px 0;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+.cicmode .cicharacteristic p,
+.cicmode .cicprofit p,
+.cicmode .ciccrowd p {
+  text-align: left;
+  color: #666;
+  line-height: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.cicmode .cicharacteristic img {
+  background-color: #51dcca;
+}
+.cicmode .cicprofit img {
+  background-color: #7db9f4;
+}
+.cicmode .ciccrowd img {
+  background-color: #51c1dc;
+}
+@media (min-width: 768px) {
+  .cicmode .threebox:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .cicmode .bordereee {
+    height: 240px;
+  }
+  .cicmode .cicharacteristic,
+  .cicmode .cicprofit,
+  .cicmode .ciccrowd {
+    width: 33.33%;
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+.footer {
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 24px;
+  color: #666;
+}
+/*# sourceMappingURL=cdcongye.css.map */

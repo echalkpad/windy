@@ -1,0 +1,1 @@
+for /r %%i in (.) do csslte8 -1150 %%i\main.css

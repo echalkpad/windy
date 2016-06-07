@@ -1,0 +1,48 @@
+*{margin: 0; padding: 0;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{margin:0;padding:0;border:0;}
+ul,ol{list-style-type:none;}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+button,input[type="button"],input[type="reset"],input[type="submit"]{
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+a{
+	color: #000;
+	text-decoration:none;
+}
+
+h1, h2, h3, h4, h5{
+	font-size:100%;
+	font-weight:normal;
+}
+
+html,body{
+	width:100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	overflow-x: hidden;
+}
+body{
+	background:#fff;
+	color:#333;
+	font:normal 12px/100% "Hiragino Sans GB","Microsoft YaHei",Arial;
+}
+.clear {
+  zoom: 1;
+}
+.clear:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}

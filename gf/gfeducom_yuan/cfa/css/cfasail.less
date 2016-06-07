@@ -1,0 +1,885 @@
+/* LESS Document */
+
+/* 模块集 */
+
+/* 基本 */
+@import "../../css/reset.less";
+@import "../../css/variable.less";
+@import "../../css/core.less";
+@import "../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../css/headfoot.less";
+@import "../../css/jMmenu.less";
+
+/* 职业发展-就业招聘、	机构合作友情链接、全国分校 */
+@import "../../css/common.less";
+@import "../../css/pagecontent.less";
+
+/*banner*/
+#banner{
+	width: 100%;
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+#banner_text{
+    position: absolute;
+	width: 90%;
+	height: 50%;
+    top: 8%;
+    left: 50%;
+    margin-left: -45%;
+	background-image: url(../images/cfasail/banner_text.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/****************list_title*************/
+.list_title_wrap{
+    width: 100%;
+    height: 38px;
+    background-color: #0068b7;
+    margin-bottom: 20px;
+}
+.list_title{
+    width: 94%;
+    margin: 0 auto;
+}
+.list_title_cont{
+    width: 66%;
+    height: 40px;
+    background-color: #ffff00;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+}
+.yellow_line{
+    float: left;
+    width: 3px;
+    height: 40px;
+    margin-left: 3px;
+    background-color: #ffff00;
+}
+/**************development direction*********************/
+#direction{
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.direction_list{
+    width: 46%;
+    margin: 2%;
+    float: left;
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+.pic_text_bg{
+    width: 100%;
+    height: 38px;
+    background-color: #015593;
+    opacity: 0.8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.pic_text{
+    position: absolute;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+/******************* Rush sky *************************/
+.rush_sky_wrap{
+    display: none;
+    width: 100%;
+    height: 800px;
+    background-image: url(../images/cfasail/rush_sky_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 60px;
+}
+/****************** Weekend class *********************/
+
+#weekend_class{
+    width: 94%;
+    margin: 0 auto;
+
+    table{
+        width: 100%;
+        font-weight: bolder;
+        th{
+            height: 48px;
+            line-height: 48px;
+            background-color: #3f3a39;
+            width: 50%;
+            text-align: center;
+            font-size: 24px;
+            color: #28a7e1;
+            font-weight: bolder;
+        }
+        td{
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            background-color: #b5b6b6;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+        }
+        .bg_595656{
+            td{
+                background-color: #595656;
+            }
+        }
+    }
+}
+.know_details{
+    display: block;
+    width: 50%;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    margin: 20px auto;
+    background-color: #0068b7;
+    text-align: center;
+}
+/**************** Teachers start **********************/
+.teachers_wrap{
+    width: 100%;
+    background-color: #f5f5f5;
+}
+#techers{
+    width: 96%;
+    background-color: #dadada;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .TZY{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .TZY_pic{
+        width: 100%;
+    }
+    .TZY_info{
+        position: absolute;
+        color: #000;
+        width: 92%;
+        padding: 4%;
+        background-color: #ffff00;
+        left: 0;
+        bottom: 0;
+        font-size: 12px;
+        line-height: 18px;
+        -webkit-text-justify : auto;
+        text-align:justify;
+        overflow: hidden;
+        h4{
+            font-weight: bolder;
+        }
+    }
+    .teachers_des{
+        display: none;
+        color: #000;
+        padding: 4%;
+        width: 42%;
+        float: left;
+        font-size: 18px;
+        line-height: 30px;
+        -webkit-text-justify : auto;
+        text-align:justify;
+        background-color: #fff;
+        height: 300px;
+        overflow: hidden;
+        h4{
+            font-weight: bolder;
+        }
+    }
+    .bg_0068b7{
+        background-color: #0068b7;
+        color: #fff;
+    }
+    .bg_014172{
+        background-color: #014172;
+        color: #fff;
+    }
+    .teachers_des_last{
+        background-image: url(../images/cfasail/teachers_des_last_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+}
+@media (min-width: 400px) {
+    #techers{
+        .TZY_info{
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+    }
+}
+@media (min-width: 480px) {
+    #techers{
+        .TZY_info{
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+    }
+}
+@media (min-width: 640px) {
+    #techers{
+        .TZY_info{
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+    }
+}
+
+/**************** Good Service *********************/
+#good_service{
+    width: 96%;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    .service_list_wrap{
+        width: 300px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    .service_list{
+        position: relative;
+        float: left;
+        p{
+            position: absolute;
+            width: 140px;
+            height: 108px;
+            text-align: center;
+            line-height: 108px;
+            top: 4px;
+            right: 0;
+            font-size: 12px;
+            color: #000000;
+            background-image: url(../images/cfasail/text_0.png);
+            background-repeat: no-repeat;
+            background-position: center 0;
+            background-size: 36px 31px;
+        }
+        .text_middle{
+            top: -16px;
+            right: -20px;
+        }
+        .text_1{
+            background-image: url(../images/cfasail/text_1.png);
+            background-position: center 6px;
+        }
+        .text_2{
+            background-image: url(../images/cfasail/text_2.png);
+            background-position: center 4px;
+        }
+        .text_3{
+            background-image: url(../images/cfasail/text_3.png);
+        }
+        .text_4{
+            background-image: url(../images/cfasail/text_4.png);
+            background-position: center 4px;
+        }
+        .text_5{
+            background-image: url(../images/cfasail/text_5.png);
+        }
+        .text_6{
+            background-image: url(../images/cfasail/text_6.png);
+            background-position: center 4px;
+        }
+        .text_7{
+            background-image: url(../images/cfasail/text_7.png);
+            background-position: center 4px;
+        }
+        .text_8{
+            background-image: url(../images/cfasail/text_8.png);
+            background-position: center 6px;
+        }
+        .text_9{
+            background-image: url(../images/cfasail/text_9.png);
+            background-position: center 4px;
+        }
+        .text_10{
+            background-image: url(../images/cfasail/text_10.png);
+        }
+        .text_11{
+            background-image: url(../images/cfasail/text_11.png);
+        }
+
+
+    }
+    .service_list_rotate{
+        width: 90px;
+        height: 90px;
+        margin: -10px 20px 20px 26px;
+        border: 4px solid #1b1b1b;
+        text-align: center;
+        line-height: 130px;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); 	/* IE 9 */
+        -moz-transform:rotate(45deg); 	/* Firefox */
+        -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+        -o-transform:rotate(45deg);
+    }
+    .rotate_middle{
+        margin: 0;
+        margin-left: 98px;
+        margin-top: -30px;
+    }
+    .service_list_last{
+        .service_list_rotate{
+            background-color: #0068b7;
+            border-color: #0068b7;
+        }
+        .service_list_text{
+            color: #ffff00;
+            top: -34px;
+        }
+    }
+}
+
+/******************** Teaching platform **************************/
+.platform_wrap{
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-bottom: 10px;
+
+    #platform{
+        width: 96%;
+        margin: 0 auto;
+
+        .audition{
+            width: 100%;
+
+            h3{
+                width: 100%;
+                height: 52px;
+                line-height: 52px;
+                font-size: 26px;
+                background-color: #8399ba;
+                margin-bottom: 2px;
+                text-align: center;
+                color: #fff;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+    .platform_list{
+        display: none;
+        width: 96%;
+        margin: 0 auto;
+        margin-top: 10px;
+        img{
+            float: left;
+            width: 30%;
+            height: 122px;
+            margin-right: 5%;
+        }
+        .last{
+            margin-right: 0;
+        }
+    }
+    .platform_erweima{
+        display: none;
+    }
+}
+
+/****************** Boarding Now ****************************/
+.boarding_wrap{
+    width: 100%;
+    padding-bottom: 10px;
+    background-image: url(../images/cfasail/boarding_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#boarding{
+    width: 96%;
+    margin: 0 auto;
+
+    table{
+        width: 100%;
+        th{
+            width: 33.33%;
+            text-align: center;
+            height: 34px;
+            line-height: 34px;
+            color: #28a7e1;
+            background-color: #3f3a39;
+        }
+        td{
+            text-align: center;
+            color: #fff;
+            background-color: #b5b6b6;
+            height: 30px;
+        }
+        .bg_595656{
+            td{
+                 background-color: #595656;
+             }
+        }
+    }
+    .discount{
+        color: #fff;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .boarding_btn{
+        display: block;
+        width: 150px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #ffff00;
+        color: #272727;
+        font-size: 16px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 640px) {
+    .list_title_wrap{
+        height: 76px;
+    }
+    .list_title_cont{
+        height: 84px;
+        line-height: 84px;
+        font-size: 48px;
+    }
+    .yellow_line{
+        width: 6px;
+        height: 84px;
+        margin-left: 6px;
+    }
+    #direction{
+        padding-bottom: 90px;
+    }
+    .pic_text_bg{
+        height: 78px;
+    }
+    .pic_text{
+        height: 78px;
+        line-height: 78px;
+        font-size: 36px;
+    }
+    .rush_sky_wrap{
+        display: block;
+    }
+    #weekend_class{
+        margin-top: 50px;
+        margin-bottom: 100px;
+        table{
+            th{
+                height: 86px;
+                line-height: 86px;
+                font-size: 44px;
+            }
+            td{
+                height: 76px;
+                line-height: 76px;
+                font-size: 24px;
+            }
+        }
+        .know_details{
+            width: 284px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+        }
+    }
+
+    #techers{
+        .teachers_des{
+            display: block;
+            color: #000;
+            padding: 4%;
+            width: 42%;
+            float: left;
+            font-size: 18px;
+            line-height: 30px;
+            -webkit-text-justify : auto;
+            text-align:justify;
+            background-color: #fff;
+            height: 300px;
+            overflow: hidden;
+            h4{
+                font-weight: bolder;
+            }
+        }
+        .bg_0068b7{
+            background-color: #0068b7;
+            color: #fff;
+        }
+        .bg_014172{
+            background-color: #014172;
+            color: #fff;
+        }
+        .teachers_des_last{
+            background-image: url(../images/cfasail/teachers_des_last_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    .platform_wrap{
+        .platform_cont{
+            padding: 50px 0;
+            #platform {
+                .audition h3{
+                    height: 98px;
+                    line-height: 98px;
+                    font-size: 48px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .platform_list{
+            display: block;
+        }
+    }
+
+    #good_service{
+
+        .service_list_wrap{
+            width: 600px;
+            padding-top: 50px;
+        }
+        .service_list{
+            p{
+                position: absolute;
+                width: 280px;
+                height: 200px;
+                line-height: 230px;
+                top: 4px;
+                right: 0;
+                font-size: 22px;
+                background-size: auto;
+            }
+            .text_middle{
+                top: -20px;
+                right: -38px;
+            }
+        }
+        .service_list_rotate{
+            width: 196px;
+            height: 196px;
+            margin: -20px 40px 40px 50px;
+            line-height: 200px;
+            transform:rotate(45deg);
+            -ms-transform:rotate(45deg); 	/* IE 9 */
+            -moz-transform:rotate(45deg); 	/* Firefox */
+            -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(45deg);
+        }
+        .rotate_middle{
+            margin: 0;
+            margin-left: 198px;
+            margin-top: -60px;
+        }
+        .service_list_last{
+            .service_list_text{
+                top: -34px;
+                line-height: 160px;
+            }
+        }
+    }
+    #boarding{
+        margin-top: 50px;
+
+        table{
+            th{
+                height: 42px;
+                line-height: 42px;
+                font-size: 20px;
+            }
+            td{
+                height: 36px;
+                line-height: 36px;
+                font-size: 18px;
+            }
+        }
+        .discount{
+            text-indent: 10px;
+            font-size: 18px;
+            height: 24px;
+            line-height: 24px;
+        }
+        .boarding_btn{
+            width: 284px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            margin-top: 30px;
+        }
+    }
+}
+@media (min-width: 1200px) {
+    #banner_text{
+        width: 832px;
+        height: 218px;
+        top: 100px;
+        left: 50%;
+        margin-left: -416px;
+    }
+    .list_title_wrap{
+        height: 76px;
+    }
+    .list_title{
+        width: 1200px;
+    }
+    .list_title_cont{
+        width: 412px;
+        height: 84px;
+        line-height: 84px;
+        font-size: 48px;
+    }
+    .yellow_line{
+        width: 6px;
+        height: 84px;
+        margin-left: 6px;
+    }
+    #direction{
+        width: 1200px;
+        padding-top: 70px;
+        padding-bottom: 90px;
+
+        .direction_list{
+            width: 288px;
+            height: 274px;
+            margin: 0;
+            margin-right: 16px;
+        }
+        .last{
+            margin-right: 0;
+        }
+    }
+
+    .pic_text_bg{
+        height: 78px;
+    }
+    .pic_text{
+        height: 78px;
+        line-height: 78px;
+        font-size: 36px;
+    }
+    .rush_sky_wrap{
+        width: 100%;
+        height: 1200px;
+        background-image: url(../images/cfasail/rush_sky_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 60px;
+    }
+    #weekend_class{
+        width: 1200px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        table{
+            th{
+                height: 86px;
+                line-height: 86px;
+                font-size: 44px;
+            }
+            td{
+                height: 76px;
+                line-height: 76px;
+                font-size: 24px;
+            }
+        }
+        .know_details{
+            width: 284px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+        }
+    }
+    #techers{
+        width: 1200px;
+        .TZY{
+            width: 898px;
+            height: 900px;
+            float: left;
+            .TZY_pic{
+                width: 500px;
+                height: 854px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            .TZY_info{
+                width: 600px;
+                height: 300px;
+            }
+        }
+        .teachers_des{
+            display: block;
+            width: 260px;
+            height: 260px;
+            float: right;
+            padding: 20px;
+        }
+        .teachers_des_last{
+            width: 600px;
+            height: 300px;
+            padding: 0;
+            background-size: 100% 100%;
+        }
+    }
+    #good_service{
+        width: 1200px;
+        .service_list_wrap{
+            width: 1200px;
+            padding-top: 50px;
+        }
+        .service_list{
+            p{
+                position: absolute;
+                width: 280px;
+                height: 200px;
+                line-height: 230px;
+                top: 4px;
+                right: 0;
+                font-size: 22px;
+                background-size: auto;
+            }
+            .text_middle{
+                top: 0px;
+                right: 0px;
+
+            }
+            .text_1200{
+                top: -30px;
+            }
+        }
+        .service_list_1200{
+            margin-left: 150px;
+        }
+        .service_list_rotate{
+            width: 196px;
+            height: 196px;
+            margin: -20px 40px 40px 50px;
+            line-height: 200px;
+            transform:rotate(45deg);
+            -ms-transform:rotate(45deg); 	/* IE 9 */
+            -moz-transform:rotate(45deg); 	/* Firefox */
+            -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+            -o-transform:rotate(45deg);
+        }
+
+        .rotate_middle{
+            margin: -20px 40px 40px 50px;
+        }
+        .service_list_rotate_1200{
+            margin-top: -66px;
+        }
+        .service_list_last{
+            margin-left: 440px;
+            margin-top: -50px;
+            .service_list_text{
+                top: 0px;
+                line-height: 160px;
+            }
+        }
+    }
+    .platform_wrap{
+        width: 100%;
+        background-color: #f5f5f5;
+        .platform_cont{
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 150px;
+        }
+
+        #platform{
+            width: 570px;
+            height: 418px;
+            float: left;
+            .audition{
+                h3{
+                    height: 98px;
+                    line-height: 98px;
+                    font-size: 48px;
+                    font-weight: bold;
+                }
+            }
+
+        }
+        .platform_list{
+            width: 262px;
+            float: left;
+            margin-top: 0;
+            margin-left: 5px;
+            img{
+                width: 262px;
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+            .last{
+                margin-bottom: 0;
+            }
+        }
+        .platform_erweima{
+            display: block;
+            float: left;
+            width: 354px;
+            height: 417px;
+            margin-left: 5px;
+        }
+    }
+    #boarding{
+        width: 960px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        table{
+            th{
+                height: 68px;
+                line-height: 68px;
+                font-size: 20px;
+            }
+            td{
+                height: 60px;
+                line-height: 60px;
+                font-size: 18px;
+            }
+        }
+        .discount{
+            text-indent: 10px;
+            font-size: 18px;
+            height: 24px;
+            line-height: 24px;
+        }
+        .boarding_btn{
+            width: 284px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            margin-top: 30px;
+        }
+    }
+}

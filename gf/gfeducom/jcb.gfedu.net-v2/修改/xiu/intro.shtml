@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯竞赛赛事介绍-金程杯</title>
+<meta name="keywords" content="金程杯竞赛,金程杯比赛,金程杯赛事介绍">
+<meta name="description" content="金程杯赛事介绍：针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，面向全国大学生群体的公益活动，设立于2012年，已成功举办三届！-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe614;</i>
+    <h2>关于大赛</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p2_intro">
+            <h4>我们正青春，我们聚金程</h4>
+            <p>“2015年金程大学生圆梦计划”，Please Join Us！</p>
+            <p>“金程杯”全国大学生竞赛是由金程教育（上海金程教育培训有限公司，原上海金程国际金融专修学院）组织的全国性校园公益活动，目的是给在校大学生提供加强专业能力、展现自我个性、解读商业环境、提升职业竞争力的平台。该赛事自2012年设立以来，已经举办三届，分别以“Excel金融建模”、“理财案例分析”以及“职业规划”为比赛内容，吸引了100多所高校的50万名学生关注，数千名学生报名参赛。</p>
+            <p>中国经济飞速发展的成就备受世界瞩目，中国的金融市场逐步走向繁荣。国与国的竞争已经从技术和能源为主体的竞争，演变为以金融为主体的竞争，金融核心竞争力的根本就是金融人才。我们，尤其年青人，身处这样一个蓬勃发展的伟大时代，肩负着为中国的未来作出贡献的神圣使命，我们应该勇敢地肩负起时代赋予的伟大职责，做有专业技能、有责任感的中国未来社会发展的中坚力量。</p>
+            <p>大学是青年的思想摇篮，是中国未来的希望所在；中国的未来，在于青年，大学时代是青年提升专业、铸就品质的黄金时期。唯有青年强，才有中国强。</p>
+            <p>成为具有全球视野的专业化人才，谁能把握住这个机会，谁就能成就自己，更能肩负起中国未来的希望。一个美好大学的生涯，将会为人的一生幸福和职业发展奠定坚实的基础。</p>
+            <p>2015年“金程大学生圆梦计划”是基于以往“金程杯”竞赛，面向全国大学生群体的公益活动。针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，本次活动采用全面化、系统化和公益化的模式，助力学校培养人才，帮助大学生实现梦想。</p>
+            <div class="action">
+                <h4>本届活动共包括3个部分</h4>
+                <ul>
+                    <li>
+                        <a href="/grant.shtml">
+                            <img src="/pic/p2-pic01.png">
+                            <span>“金程圆梦”助学金计划</span>
+                        </a>
+                        <p>提升在校生专业能力，成就金色前程梦想。</p>
+                    </li>
+                    <li>
+                        <a href="/schedule.shtml">
+                            <img src="/pic/p2-pic02.png">
+                            <span class="two">2015年“金程杯”<br>
+                                全国大学生会计案例大赛</span>
+                        </a>
+                        <p>针对性考察大学生学术能力、全方位提升专业职场竞技能力。</p>
+                    </li>
+                    <li>
+                        <a href="/recruit.shtml">
+                            <img src="/pic/p2-pic03.png">
+                            <span>“金程教育”校园招聘</span>
+                        </a>
+                        <p>全面就业指导，“会”人一步，为优秀大学生提供实习、就业岗位。</p>
+                    </li>
+                </ul>
+            </div>
+            <p>海阔凭鱼跃，天高任鸟飞。既然选择了远方，便只顾风雨兼程。无限美好的未来就在前方，路就在脚下，现在就是开始的最佳起点。</p>
+            <p>青年是热情、活力、创造力的象征。未来美好的一切，全在我们自己的手中。希望我们的青年人，尤其是大学生：</p>
+            <p>“不做蔓延四溢、野蛮攀爬的藤枝，只做坚挺笔直直上云霄的青松！”</p>
+            <p>不做漫无边际、随波逐流的浮萍，只做追逐温暖一路向阳的候鸟！”</p>
+            <p>心有猛虎，细嗅蔷薇。立志须如山，行道当如水。心中既有远大的目标，那就一步步脚踏实地去实现。中国的青年应当如此！</p>
+            <p>欢迎加入“2015年金程大学生圆梦计划”。祝你有一个美好的大学，美好的职业，美好的未来！</p>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(1)").addClass("selecded");
+</script>
+
+</body>
+</html>

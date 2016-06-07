@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe904;</i>
+    <h2>大赛评委</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p9_judge">
+            <li><a href="/judge/24764.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151130110631688.png"><div class="cont"><h2>管捷</h2><em>上海沪中会计师事务所有限公司·总会计师</em><span>具有10年以上企业财务工作经验及10年以上审计工作经验。熟悉国家审计和中介审计的准则、相关程序、方法。熟悉财政资金绩效评价的工作程序、评价原则和评价方法。熟练编制财务报表。</span></div></a></li><li><a href="/judge/24765.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151130110645400.png"><div class="cont"><h2>贾建军</h2><em>上海金融学院会计学院副院长·副教授</em><span>上海市高校优秀青年教师<br>
+上海金融学院教学优质奖（2008-2009）<br>
+中国金融教育基金会“金融教育先进工作者”</span></div></a></li><li><a href="/judge/24766.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151130110715321.png"><div class="cont"><h2>郭著名</h2><em>大型证券公司投资银行部业务·副总裁</em><span>上海大学工商管理硕士、注册会计师、非执业律师、证券从业资格、注册税务师、注册资产评估师。</span></div></a></li><style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index_3.shtml">上一页</a>
+	<span>4/5</span>
+	<a href="index_5.shtml">下一页</a>
+	<a href="index_5.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',5)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

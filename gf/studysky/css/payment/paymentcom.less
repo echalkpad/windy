@@ -1,0 +1,156 @@
+/*
+ * ==> 支付流程公用
+*  author: windy
+*  date: 2015-11-2 17:35
+*********************************************/
+
+@import "../common/variable.less";
+
+@cpaygreen:#74b95a; //支付页面绿色
+
+body{
+    background: #f7f8f8;
+}
+
+.webbody{
+    display: block !important;
+    
+    .login_after{display: none;}
+}
+
+@media(min-width:768px){
+   .webbody{ 
+    .login_after{display: none;}
+   }
+}
+
+/* 头部  */
+.gtopttl{
+    h6{
+        left: 60px;
+        span{
+            display: none;
+        }
+    }
+    nav{
+        display: inline-block;
+        .f16();
+        vertical-align: top;
+        a{
+            font-family: '微软雅黑';
+            color: @cw; display: inline-block;
+            display: none;
+            height: 50px;
+            .f14();
+            &:last-child{display: inline-block;}
+
+            i{
+                display: none;
+                .triangle(top,@w:6px,@c:#ea3a3c);
+                position: absolute;
+                bottom: 0;
+                margin-left: -30px;
+            }
+            em{
+                .triangle(bottom,@w:6px,@c:#ccc);
+                position: absolute;
+                top: 47%;
+                margin-left: 6px;
+            }
+        }
+    }
+    section{
+        display: none;
+        background: @cw;
+        position: absolute;
+        z-index: 99;
+        padding:30px 20px;
+        border-top: 1px solid #ea3a3c;
+        border-bottom: 1px solid #ea3a3c;
+        dl{display: block !important; margin-bottom: 30px;}
+        dt{
+            border-bottom: 3px solid @cc;
+            height: 40px;
+            box-sizing: border-box;
+            line-height: 40px;
+            h5{display: inline-block;height: 100%; border-bottom: 3px solid #ea3a3c; color: @c3;}
+        }
+        dd{ line-height: 20px;
+            a{ display: inline-block; padding: 10px 22px 0 0; color: @c3; .f12();
+                &:hover{
+                    color: #ea3a3c;
+                }
+            }
+        }
+    }
+    #school{position: relative; margin-left: 30px;}
+}
+
+@media(min-width:640px){
+  .gtopttl{
+    nav{
+        margin-left: 40px;
+        a{
+            display: inline-block;
+            padding-right: 50px;
+        }
+    }
+    #school{margin-left: 0;}
+    section{
+        padding:30px 0 10px; 
+        dl{
+            
+            width: 28%;
+            margin: 0 2.6%; 
+            height: 200px; 
+            float: left;
+        }
+    }
+}
+}
+@media(min-width:768px){
+  .gtopttl{
+      h6{
+          span{
+              display: inline-block;float: right;
+              a{
+                  color: #fff;
+                  padding: 0 20px;
+                  display: block;
+                  float: left;
+                  
+                  &:hover{
+                    color: #33b0c4;
+                    border-bottom: solid 2px #33b0c4;
+                  }
+              }
+          }
+      }
+      nav{margin-left: 0;}
+      
+      section{
+        width: 650px;
+        border: 1px solid #ea3a3c;
+        top: 50px;
+        left: 50%;
+        margin-left: -325px;
+        padding-left: 30px 0 0;
+
+        dl{padding-left: 0; height: 200px;}
+        dt{display: block;border-left: 0; float: none;  .f14();}
+        dd{a{height: auto; padding: 10px 16px 0 0;}}
+    }
+  } 
+}
+
+@media(min-width:1200px){
+  .gtopttl{
+      nav{width: auto;}
+      h6{width: 1200px;margin: 0 auto;}
+      section{
+        left: 380px;
+        margin-left: 0;
+    }
+  } 
+}
+

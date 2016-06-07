@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130110645400.png"><div class="cont"><h2>贾建军</h2><em>上海金融学院会计学院副院长·副教授</em><span>上海市高校优秀青年教师<br>
+上海金融学院教学优质奖（2008-2009）<br>
+中国金融教育基金会“金融教育先进工作者”</span></div></li></ul><div class="jcb_content">
+<h5>工作经历：</h5>
+<p>1997/08至今，上海金融学院会计学院</p>
+<p>2009-2013，上海市浦东新区审计局特邀审计员（兼职）</p>
+<h5>教育经历：</h5>
+<p>1990/09&mdash;1994/07，河南师范大学教育系教育管理学士</p>
+<p>1994/09&mdash;1997/07，华东师范大学经济学硕士</p>
+<p>2000/9 &mdash; 2000/11，丹麦NielsBrock哥本哈根商学院进修</p>
+<p>2002/9 &mdash; 2002/12，澳大利亚查理斯窦大学商学院会计系进修</p>
+<p>2004/09-2008/07，复旦大学会计学博士</p>
+<p>2012/8-2013/9，美国罗德岛大学工商管理学院纲吉访问学者</p>
+<h5>学术成果：</h5>
+<p><b>一、论文<br />
+</b></p>
+<p>1.商业银行贷款损失准备会计与监管协调,新金融，2012年第5期，pp36-41；</p>
+<p>2.次贷危机后公允价值会计国际发展趋势，财会通讯，2011年第36期,pp17-20；</p>
+<p>3.目标导向的宏观审慎监管体系构建&mdash;&mdash;巴塞尔协议Ⅲ内容及其影响，上海金融学院学报，2011年第四期,pp80-89；</p>
+<p>4.会计的形式协调和实质协调，《立信会计学院学报》，2009年第二期；</p>
+<p>5.金融工具会计计量模式改革对银行资本充足监管影响分析，《财会通讯》（综合版）2007年第十期，p23-25。被人大报刊复印资料《财务与会计导刊》2007年第十二期全文转载（p4-7，ISSN1009-7546）。</p>
+<p>6.会计形式协调与实质协调文献综述，《会计研究》，2007年第五期，p88-94。ISSN1003-2886</p>
+<p>7.企业合并会计方法趋同及其启示，《当代财经》，2007年第1期,p100-103。</p>
+<p>8.新会计准则对境内上市商业银行的影响，《财会月刊》，2007年第1期,p34-36。ISSN1004-0994</p>
+<p>9.企业合并会计准则国际趋同及对我国的启示，《财会月刊》，2006年第11期，第一作者。ISSN1004-0994</p>
+<p>10.我国上市银行资本充足信息披露存在的问题及其改进建议，《新金融》，2006年第3期,p48-50。ISSN1008-1770</p>
+<p>11.会计报表保险-一种备选审计关系模式探索，香港《国际会计与财务》，2005年第一期，p5-8。</p>
+<p><b>二、课题</b></p>
+<p>1.承担上海市教委创新课题&ldquo;中国会计准则国际趋同经济后果研究&rdquo;09YS413。</p>
+<p>2.承担上海市哲学社会科学规划课题青年项目&ldquo;中国会计与国际会计的形式协调与实质协调研究&rdquo;（2006EJB002）。</p>
+<p><b>三、专注</b></p>
+<p>中国会计与国际会计的形式协调和实质协调研究，立信会计出版社，2011年。</p>
+<p><b>四、研究方向</b></p>
+<p>会计准则与会计信息质量、投资者特征与股票交易行为</p>
+<h5>所获奖励：</h5>
+<p>2008 上海市高校优秀青年教师</p>
+<p>2009 上海金融学院教学优质奖（2008-2009）</p>
+<p>2015 中国金融教育基金会&ldquo;金融教育先进工作者&rdquo;。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

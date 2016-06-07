@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>学习天空</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/video.css">
+	<script src="script/jquery-2.1.4.min.js"></script>
+	<script src="script/common.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <script type="text/javascript" src="script/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- 中间部分 -->
+<!--导航 start-->
+<div class="ss-nav">
+<h1><img src="images/sslogo.png" alt=""/></h1>
+<ul class="ss-navul">
+    <li class="navuser"><a href="#"><em>您好</em><q><img src="images/avatar.png" alt=""/>1598613497</q><span></span></a>
+    	<ul class="dropdown-info">
+        <li><a href="#">用户中心</a></li>
+        <li><a href="#">登出</a></li>
+        </ul>
+    </li>
+    <li class="navbadge"><a href="#"><i class="icon-uniE677">&#xe677;</i><span class="badge">10</span><b>消息</b></a>
+        <div class="dropdown-menu"><ul>
+        <li><a href="#"><time>1天前</time><em>系统消息</em> 三级Derivatives开通啦！</a></li>
+        <li><a href="#"><time>10天前</time><em>系统消息</em>CFA Level II -- Financial Reporting and Analysis 开通啦！</a></li>
+        <li><a href="#"><time>16天前</time><em>系统消息</em>三级Derivatives开通啦！</a></li>
+        </ul><a class="all-msg" href="">查看全部消息</a></div>
+    </li>
+    <li><a href="#"><i class="icon-uniE675">&#xe675;</i><b>课程</b></a></li>
+</ul>
+</div>
+<div class="ss_video">
+	<div class="video_content">
+		<div class="video_main">
+			<div class="head_title">
+				<a href="reading.html"><i>&#xe687;</i> Golden Sayings of Investment 2 </a>
+				<button class="btn">答&nbsp;题</button>
+			</div>
+			<div class="video_body">
+				<div class="play"></div>
+				<div class="buy">
+					<div class="middle">
+						<section>
+							<h3>本知识点视频已经播放完毕</h3>
+							<div><p>要想观看完整视频，请点击购买按钮。</p><a href="" class="btn">购买</a></div>
+						</section>
+					</div>
+					<article>
+						<button class="btn again">重新观看</button>
+						<button class="btn next">下一知识点</button>
+					</article>
+				</div>
+				<!-- 模态框 -->
+				<div class="pup"></div>
+			</div>
+			<div class="video_btn">
+				<span class="vid_section"><i>&#xe636;</i>章节</span>
+				<span class="vid_note"><i>&#xe62c;</i>笔记</span>
+			</div>
+		</div>
+		<!-- 右侧菜单 -->
+		<div class="ss_menu">
+			<div class="section_menu current">
+				<h5>Key Concepts</h5>
+				<div class="section_body">
+					<div class="section_tree">
+						<ul class="video_tree">
+							<li class="see selector"><a href="javascript:;">
+								<div>
+									<q></q>
+									<i></i>
+								</div>
+								<p>Golden Sayings of Investment 1 <span>(26分钟20秒)</span></p>
+							</a></li>
+							<li class="see"><a href="javascript:;">
+								<div>
+									<q></q>
+									<i></i>
+								</div>
+								<p>Golden Sayings of Investment 2 <span>(19分钟10秒)</span></p>
+							</a></li>
+							<li><a href="javascript:;">
+								<div>
+									<q></q>
+									<i></i>
+								</div>
+								<p>Buy Side vs. Sell Side<span>(25分钟50秒)</span></p>
+							</a></li>
+						</ul>
+					</div>
+					<div class="section_menu_foot">
+						<q>Next Subject: <span>no next subject</span><br><a href="">Framework of CFA program</a></q>
+					</div>
+				</div>
+			</div>
+			<div class="note_menu">
+				<h3>我的笔记</h3>
+				<div class="text_body">
+					<textarea></textarea>
+				</div>
+				<div class="note_foot">
+					<button>Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 答题弹出窗口 -->
+	<div class="video_pop hide">
+		<div class="video_screen"></div>
+		<div class="pop_content">
+			<div class="loading hide"><section></section></div>
+			<div class="pop_head">
+				<section class="">
+					<span class="r_green current">1</span>
+					<span class="r_green">2</span>
+					<span class="w_red">3</span>
+					<span>4</span>
+				</section>
+				<article><a href="javascript:;"><i>&#xe680;</i>返回视频</a></article>
+			</div>
+			<!-- 购买课程 -->
+			<div class="pop_body buy hide">
+				<article>
+					<br><br><h3>您需要购买该课程才能回答课后题!</h3><br><br>
+					<a href="" class="btn">购买</a>
+				</article>
+			</div>
+			<!-- 测试完成 -->
+			<div class="pop_body finish hide">
+				<article class="pop_body"><i>&#xe66c;</i><br><br><span>您已经完成本知识点测试!</span></article>
+				<section class="pop_foot general">
+					<button class="btn again">再测一次</button>
+					<button class="btn next">学习新知识点</button>
+				</section>
+			</div>
+			<!-- 答题 -->
+			<div class="pop_body demo">
+				<article class="topic_area">
+					<div class="demo_top">
+						<section class="general"><p>PZ2016010802000085</p></section>
+						<a href="javascript:;"><i>&#xe90c;</i></a>
+					</div>
+					<div class="demo_left question general">
+						<div class="question_main">
+							<div>
+								<p>Which of the following statements about IRR and NPV methods is least accurate?A.IRR is the discount rate.</p>
+								<table>
+									<tr>
+										<td>Portfolio</td>
+										<td>Mean Return(%)</td>
+										<td>Standard Devision of Return(%)</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>9.8</td>
+										<td>19.9</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>10.5</td>
+										<td>20.3</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>13.3</td>
+										<td>33.9</td>
+									</tr>
+								</table>
+								<p>Which of the following statements about IRR</p>
+							</div>
+						</div>
+					</div>
+					<div class="demo_right option general">
+						<div class="result">
+							<h4>请选择一个答案 </h4>
+							<h4 class="hide _right">您选择&nbsp;"A", 对了!</h4>
+							<h4 class="hide _wrong">您选择&nbsp;"B", 错了!</h4>
+						</div>
+						<!-- 选项 -->
+						<div class="option_list ">
+							<ul class="hd hide">
+								<li><q><small>Portfolio1.</small></q><q><small>Portfolio2.</small></q></li>
+							</ul>
+							<ul class="choice">
+								<li><span>A.</span><p>Portfolio1.</p></li>
+								<li><span>B.</span><p>Portfolio2.</p></li>
+								<li><span>C.</span><p>Portfolio3.</p></li>
+							</ul>
+						</div>
+						<!-- 解析 -->
+						<div class="parsing hide">
+							<h4>解析:</h4>
+							<div><p>Which of the following statements </p></div>
+						</div>
+					</div>
+				</article>
+				<section class="pop_foot general">
+					<button class="btn submit">提交</button>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+<ul class="create"></ul>
+</body>
+</html>

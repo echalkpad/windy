@@ -1,0 +1,346 @@
+@font-face {font-family: 'iconfont';
+    src: url('iconfont/iconfont.eot'); /* IE9*/
+    src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+#myhead{
+	width: 1172px;
+	height: 46px;
+	line-height: 46px;
+	margin: 0 auto;
+	font-size: 16px;
+	display: none;
+}
+/*********************************content***************************/
+#content{
+	width: 100%;
+	background-color: #f8f8f8;
+	font-size: 12px;
+}
+.top_title{
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px solid #d4d4d4;
+	text-indent: 10px;
+	color: #b4b4b7;
+}
+.top_title .all{
+    float: left;
+}
+.top_title p{
+    float: left;
+    padding: 0 50px;
+    display: none;
+}
+.top_title p.top_nav_1{
+    padding-left: 250px;
+    padding-right: 236px;
+}
+.top_title p.top_nav_2{
+    padding-right: 88px;
+}
+.list_title{
+    height: 43px;
+    border-top: 1px solid #e8e8e8;
+    line-height: 44px;
+    text-indent: 10px;
+    color: #939498;
+    background-color: #f8f8f8;
+}
+.list_pic{
+    float: left;
+    padding-left: 24px;
+}
+.list_pic input{
+    margin-top: 20px;
+}
+.list_pic img{
+    display: none;
+    padding: 20px;
+    border: 1px solid #efefef;
+}
+.list_cont{
+    padding-bottom: 20px;
+}
+.list_cont_inner{
+    padding-left: 14px;
+    float: left;
+    /*padding-top: 16px;
+    padding-bottom: 20px;*/
+}
+.list_cont_inner h3{
+    width: 220px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow: hidden;
+}
+.list_cont_inner .col_1{
+    height: 22px;
+    line-height: 22px;
+    color: #939498;
+}
+.list_cont_inner .col_1_text{
+    color: #313232;
+}
+.real_pay_text{
+    color: #e55928;
+}
+.list_cont_inner .unitPrice .old_price{
+    display: none;
+}
+.remove{
+    float: left;
+}
+.remove_text{
+    color: #747373;
+    display: none;
+}
+.lajitong{
+    display: inline-block;
+    color: #b5b5b5;
+    width: 30px;
+    text-align: center;
+}
+.goods_num{
+    width: 20px;
+    height: 20px;
+    padding-left: 5px !important;
+}
+/*********************************赠送课程************************************************/
+.send{
+
+}
+.send_text{
+    float: left;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #51b6c7;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 5px;
+}
+.send_list{
+    float: left;
+    width: 290px;
+}
+.send_list p{
+    float: left;
+    width: 120px;
+    height: 22px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    line-height: 24px;
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+}
+/****************************底部计算总价提交订单************************************/
+#subOrder{
+    width: 100%;
+    height: 76px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    padding-top: 20px;
+    border-bottom: 1px solid #d8dfe7;
+}
+#subOrder .all{
+    display: none;
+}
+.check_amount{
+    display: none;
+}
+.sum_price_noFreight{
+    display: none;
+}
+.remove_all{
+    padding: 0 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.sum_price{
+    width: 100px;
+    text-align: center;
+    float: left;
+}
+.sum_price span{
+    display: block;
+    line-height: 24px;
+}
+.sum_price .subtotal{
+    display: none;
+}
+#sub{
+    float: right;
+}
+.sub_btn{
+    display: inline-block;
+    width: 110px;
+    height: 46px;
+    background-color: #f4981f;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    line-height: 46px;
+    font-size: 18px;
+}
+.sub_btn:hover{
+    color: #fff;
+}
+.go_on{
+    font-size: 16px;
+}
+
+@media(min-width: 480px){
+    .list_cont_inner h3{
+        width: 320px;
+    }
+
+    .remove{
+        width: 100px;
+
+    }
+    .remove_text{
+        display: inline-block;
+    }
+}
+
+@media(min-width: 640px){
+    .list_cont_inner .list_cont_info{
+        float: left;
+    }
+    .list_cont_inner .unitPrice{
+        float: left;
+        width: 100px;
+        height: 90px;
+        text-align: center;
+    }
+    .list_cont_inner .unitPrice .col_1_tit{
+        display: none;
+    }
+    .list_cont_inner .unitPrice .col_1_text{
+        display: block;
+    }
+    .list_cont_inner .unitPrice .old_price{
+        display: block;
+        color: #989898;
+        text-decoration: line-through;
+    }
+    .list_cont_inner .real_pay{
+        float: left;
+        width: 100px;
+        height: 90px;
+        text-align: center;
+    }
+    .list_cont_inner .real_pay .col_1_tit{
+        display: none;
+    }
+}
+
+@media(min-width: 768px){
+    .list_cont_inner .unitPrice{
+        width: 170px;
+    }
+    .list_cont_inner .real_pay{
+        width: 170px;
+    }
+}
+
+@media(min-width: 1100px){
+	#myhead{
+		display: block;
+	}
+    #content{
+        width: 1170px;
+        border: 1px solid #dedddd;
+        margin: 0 auto;
+    }
+    .list_title{
+        padding-left: 20px;
+    }
+    .list_cont_inner .unitPrice{
+        width: 190px;
+        padding-top: 30px;
+    }
+    .list_cont_inner .real_pay{
+        width: 200px;
+        padding-top: 40px;
+        font-size: 18px;
+    }
+    .list_pic{
+         padding-left: 50px;
+    }
+    .list_pic img{
+        display: block;
+        float: left;
+    }
+    .list_pic input{
+        float: left;
+    }
+    .remove{
+        margin-top: 40px;
+        text-align: center;
+    }
+    #subOrder{
+        width: 1172px;
+        margin: 0 auto;
+        border: 1px solid #d8dfe7;
+        border-top: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #subOrder .all{
+        display: block;
+        width: 150px;
+        float: left;
+        word-spacing: 20px;
+        padding-top: 15px;
+    }
+    .top_title p{
+        display: block;
+    }
+    .check_amount{
+        display: block;
+        float: left;
+        padding: 0 20px;
+        padding-top: 15px;
+    }
+    .sum_price_noFreight{
+        display: block;
+        float: left;
+        padding: 0 20px;
+        padding-top: 15px;
+    }
+    .sum_price{
+        width: 200px;
+        padding: 0 20px;
+        padding-top: 13px;
+    }
+    .sum_price span{
+        float: left;
+        padding-left: 5px;
+    }
+    .sum_price_num{
+        font-size: 18px;
+    }
+}

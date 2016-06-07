@@ -1,0 +1,42 @@
+<!--Sidebar Start-->
+<div class="jcbrside">
+    <!--视频-->
+    <div class="jrs-vido">
+    <script src="http://p.bokecc.com/player?vid=9BAD8C358BDE50329C33DC5901307461&siteid=206A8A63A6A2557D&autoStart=false&width=100%&height=100%&playerid=B1643C314F1B7BBC&playertype=1" type="text/javascript"></script>
+    </div>
+    <!--比赛日程-->
+    <div class="jrs-day">
+    <h2><a href="">比赛日程<i class="icon-gfright">&#xe0c5;</i></a></h2>
+    <dl>
+    </dl>
+    <ul>
+        <li class="selected"><span>9-30<br>11-5</span><small>报名</small>错过，只待下一个春秋，以遇你我！</li>
+        <li><span>11-6</span><small>初赛</small>谁从万千中杀出？谁主沉浮？</li>
+        <li><span>11-21<br>11-28</span><small>复赛</small>踏万千而出，奔巅峰而去!</li>
+        <li><span>12-19</span><small>决赛</small>今次之战，谁将加冕称王，敬请期待!</li>
+    </ul>
+    </div>
+    <!--前线报道-->
+    <div class="jrs-report">
+        <h2><a href="/report">前线报道<i class="icon-gfright">&#xe0c5;</i></a></h2>
+<ul>
+	<li><a href="/report/25175.shtml" title="决赛终极对决——2015金程杯全国大学生会计案例大赛"><i class="icon-angle-right">&#xe0c1;</i>决赛终极对决——2015金程杯全国大学生会计案例大赛</a></li>
+	<li><a href="/report/24954.shtml" title="决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛"><i class="icon-angle-right">&#xe0c1;</i>决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛</a></li>
+	<li><a href="/report/24949.shtml" title="复赛阅卷——2015“金程杯”会计案例分析大赛赛事战报"><i class="icon-angle-right">&#xe0c1;</i>复赛阅卷——2015“金程杯”会计案例分析大赛赛事战报</a></li>
+	<li><a href="/report/24855.shtml" title="2015年“金程杯”全国大学生会计案例大赛复赛截止通知"><i class="icon-angle-right">&#xe0c1;</i>2015年“金程杯”全国大学生会计案例大赛复赛截止通知</a></li>
+	<li><a href="/report/24687.shtml" title="我在决赛等着你 —— 2015年“金程杯”全国大学生会计案例大赛决赛资格争夺战"><i class="icon-angle-right">&#xe0c1;</i>我在决赛等着你 —— 2015年“金程杯”全国大学生会计案例大赛决赛资格争夺战</a></li>
+</ul>
+
+    </div>
+ </div>
+<!--Sidebar End-->
+
+<!-- 临时CSS -->
+<style type="text/css">
+    .jrs-report li a {
+        display:block;
+    }
+    .jrs-vido {
+        height:190px;
+    }
+</style>

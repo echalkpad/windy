@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130154817297.jpg"><div class="cont"><h2>斯文</h2><em>某大型金融机构担任风控总监</em><span>某大型金融机构担任风控总监；<br>
+中外资商业银行、投资银行拥有十余年的从业经历。</span></div></li></ul><div class="jcb_content">
+<h5>从业经历：</h5>
+<p>在某大型金融机构担任风控总监，在中外资商业银行、投资银行拥有十余年的从业经历。</p>
+<h5>专业技能：</h5>
+<p>上海交通大学客座教授，金程教育集团特聘&ldquo;首席经济学家&rdquo;，经济学博士，中国注册会计师，特许金融分析师（CFA），金融风险管理师（FRM）； 在国内外学术期刊发表学术论文50余篇，多次荣获国家级、上海市的学术奖励； 曾在台湾政治大学、印度国家财政与政策研究院（NIPFP）进行交流访学。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

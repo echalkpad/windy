@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2013年第二届“金程杯”全国大学生EXCEL金融建模大赛回顾</h3>
+            <span>时间：2015/9/28 13:42:04</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            &nbsp; &nbsp; &nbsp; &nbsp; 2013年第二届&ldquo;金程杯&rdquo;全国大学生EXCEL金融建模大赛总决赛在上海交通大学高级金融学院落下举行。上海交通大学高级金融学院的袁宏、沈明、范少文三位同学组成的M.H.W代表队凭借优异的表现，勇夺桂冠，为学校赢得了殊荣。<br />
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/gaojin1.jpg" width="514" height="386" alt="" /><br />
+<br />
+<br />
+<img src="http://manager.gfedu.net/GfeduFile/Folder23/gaojin2.jpg" width="514" height="386" alt="" /></div>
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; 自拉开帷幕以来，此次比赛共计吸引了来自全国近百家院校的200余支团队参赛。经过在线测试、案例分析报告、现场Presentation展示等三轮激烈角逐，最终有八支团队晋级决赛。<br />
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/gaojin3.jpg" width="514" height="386" alt="" /><br />
+<br />
+<img src="http://manager.gfedu.net/GfeduFile/Folder23/gaojin4.jpg" width="514" height="386" alt="" /></div>
+<div style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 决赛中，M.H.W代表队凭借缜密的思维逻辑，稳定的现场发挥和默契的团队配合，最终技压群雄，战胜了来自上海财经大学、同济大学、深圳大学、武汉理工大学、南开大学、复旦大学等兄弟院校，获得冠军。全面展示了综合应用金融理财知识的能力和卓越的团队合作意识。赛后，队员们表示，希望在今后的学习中继续提升专业技能，提高解决问题的能力。</div>
+<br type="_moz" />
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+
+</body>
+</html>

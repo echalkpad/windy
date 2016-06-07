@@ -1,0 +1,26 @@
+.body_main{
+	z-index:999;
+}
+#login{
+	font-size: 14px !important;
+	width:auto !important;
+	height:auto !important;
+	background:#fff !important;
+	float:inherit !important;
+}
+#login a{
+	font-size:22px;
+	color:#1ca3b6 !important;
+}
+.newclosereg{color:#1ca3b6 !important;} 
+#login a:hover{
+	color:#06c !important;
+}
+.login{margin:0;}
+#nowReg{font-size:14px !important; color:#1ca3b6 !important;}
+
+.mianDL a{color:#4d4d4d !important; font-size:14px !important;}
+
+.noticeLR {
+/*  background-position: 0px 5px !important;  */
+}

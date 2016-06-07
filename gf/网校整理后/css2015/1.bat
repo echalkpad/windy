@@ -1,0 +1,1 @@
+for /r %%i in (.) do lessc -x %%i\main.less %%i\main.css

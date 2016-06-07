@@ -1,0 +1,116 @@
+<div class="school">
+    <h4>走进高校</h4>
+    <ul>
+	<li date="2015-10-08">
+		<ins></ins>
+		<p>第一场<span>10月08日</span></p>
+		<p>西北政法大学</p>
+	</li>
+	<li date="2015-10-20">
+		<ins></ins>
+		<p>第二场<span>10月20日</span></p>
+		<p>西安交通大学</p>
+	</li>
+	<li date="2015-10-21">
+		<ins></ins>
+		<p>第三场<span>10月21日</span></p>
+		<p>西安财经学院</p>
+	</li>
+	<li date="2015-10-22">
+		<ins></ins>
+		<p>第四场<span>10月22日</span></p>
+		<p>西北工业大学</p>
+	</li>
+	<li date="2015-10-23">
+		<ins></ins>
+		<p>第五场<span>10月23日</span></p>
+		<p>西安欧亚学院</p>
+	</li>
+	<li date="2015-10-20">
+		<ins></ins>
+		<p>第六场<span>10月20日</span></p>
+		<p>武汉大学</p>
+	</li>
+	<li date="2015-10-27">
+		<ins></ins>
+		<p>第七场<span>10月27日</span></p>
+		<p>北京联合大学</p>
+	</li>
+	<li date="2015-10-22">
+		<ins></ins>
+		<p>第八场<span>10月22日</span></p>
+		<p>南京农业大学</p>
+	</li>
+	<li date="2015-10-28">
+		<ins></ins>
+		<p>第九场<span>10月28日</span></p>
+		<p>南京审计学院</p>
+	</li>
+	<li date="2015-10-29">
+		<ins></ins>
+		<p>第十场<span>10月29日</span></p>
+		<p>上海财经大学</p>
+	</li>
+	<li date="2015-10-30">
+		<ins></ins>
+		<p>第十一场<span>10月30日</span></p>
+		<p>对外经济贸易大学</p>
+	</li>
+	<li date="2015-10-31">
+		<ins></ins>
+		<p>第十二场<span>10月31日</span></p>
+		<p>上海金融学院</p>
+	</li>
+</ul>
+<section>
+	<ol>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</section>
+
+</div>
+<!-- 当前高亮 -->
+<script type="text/javascript">
+    $(function () {
+        SetSchoolCurrent();
+        $(".school ul li").unbind("mouseover");
+    });
+    function SetSchoolCurrent() {
+
+        $(".school ul li").each(function (index) {
+            if (CompareDate($(this).attr('date'))) {
+                $(this).addClass("selected");
+                $(".school section ol li:eq(" + $(this).index() + ")").addClass("current");
+            }
+        })
+    }
+
+    //date1<date2 返回true
+    function CompareDate(strdate) {
+        var arr = strdate.split("-");
+        var date1 = new Date(arr[0], arr[1], arr[2]);
+        var datetime1 = date1.getTime();
+        var today = new Date();
+        var date2 = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        var datetime2 = date2.getTime();
+
+        if (datetime1 < datetime2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+

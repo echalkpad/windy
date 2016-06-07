@@ -1,0 +1,317 @@
+/**
+*  description: 微信页
+*  author: Dolores
+*  date: 2015-8-11 14：40
+**************************************************/
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+.appcontent .appbanner {
+  background: url(../../images2015/weapp/app/banner.jpg) no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.appcontent .appbanner h1 {
+  font-size: 28px;
+  padding: 50px 20px;
+}
+.appcontent .appbanner ul {
+  padding: 20px;
+}
+.appcontent .appbanner li {
+  width: 125px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 10px 30px 0;
+  border: 1px solid #ffffff;
+  text-align: center;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+.appcontent .appbanner li a {
+  color: #ffffff;
+  font-size: 24px;
+}
+.appcontent .appbanner li:hover {
+  background: #ffffff;
+}
+.appcontent .appbanner li:hover a {
+  color: #0f51b2;
+}
+@media (min-width: 480px) {
+  .appcontent .appbanner h1 {
+    font-size: 46px;
+  }
+  .appcontent .appbanner ul {
+    padding: 40px 20px;
+    width: 460px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 640px) {
+  .appcontent .appbanner h1 {
+    font-size: 48px;
+    padding: 40px 20px;
+  }
+  .appcontent .appbanner ul {
+    width: 490px;
+  }
+  .appcontent .appbanner li {
+    margin: 0 20px 30px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .appcontent .appbanner {
+    background: url(../../images2015/weapp/app/banner.jpg) no-repeat center #0f51b2;
+  }
+  .appcontent .appbanner section {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+/* CFA */
+.appcontent article {
+  *zoom: 1;
+  zoom: 1;
+  padding: 30px 20px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+.appcontent article:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.appcontent article section {
+  text-align: left;
+}
+.appcontent article section h2 {
+  text-align: right;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 20px 0 10px;
+}
+.appcontent article section h2 a {
+  color: #0b4a99;
+}
+.appcontent article section h2 a:hover {
+  text-decoration: none;
+}
+.appcontent article section p {
+  text-indent: 2em;
+  line-height: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.appcontent article section ul {
+  *zoom: 1;
+  zoom: 1;
+}
+.appcontent article section ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.appcontent article section ul li {
+  float: left;
+  width: 46%;
+  margin: 2%;
+  text-align: center;
+}
+.appcontent article section ul li span {
+  display: block;
+}
+.appcontent article section ul li:first-child {
+  width: 100%;
+}
+.appcontent article section ul li a {
+  display: inline-block;
+  width: 46%;
+  margin: 2%;
+}
+.appcontent article section ul li a img {
+  width: 125px;
+}
+@media (min-width: 480px) {
+  .appcontent article section ul li {
+    width: 28%;
+    margin: 1.6%;
+  }
+  .appcontent article section ul li:first-child {
+    width: 30%;
+    margin-right: 5%;
+  }
+  .appcontent article section ul li a {
+    width: 100%;
+  }
+  .appcontent article section ul li a img {
+    width: 135px;
+  }
+}
+@media (min-width: 768px) {
+  .appcontent article img {
+    float: left;
+    margin-top: 50px;
+    width: 40%;
+  }
+  .appcontent article section {
+    width: 60%;
+    float: left;
+  }
+  .appcontent article section ul li {
+    width: 28%;
+    margin: 1.6%;
+  }
+  .appcontent article section ul li img {
+    margin-top: 0;
+    width: 92%;
+    margin-bottom: 20px;
+  }
+  .appcontent article section ul li:first-child {
+    width: 30%;
+    margin-right: 5%;
+  }
+  .appcontent article section ul li a {
+    width: 100%;
+  }
+  .appcontent article section ul li a img {
+    width: 135px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .appcontent .nth0 img {
+    float: right;
+  }
+  .appcontent .nth0 section {
+    float: left;
+  }
+  .appcontent .nth0 section h2 {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .appcontent article img {
+    width: 334px;
+  }
+  .appcontent article section {
+    width: 460px;
+    float: right;
+  }
+}
+@media (min-width: 1200px) {
+  .appcontent article div {
+    width: 1200px;
+    padding: 30px 80px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+.appcontent .nth0 {
+  background: #fafafa;
+}
+.nowx {
+  padding-top: 40px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro"></i>
+    <h2>广告管理</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p6_review">
+            <a href="/List_1280/23887.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20150930151952776.jpg" alt="合作院校4-常州工学院">
+<h4>合作院校4-常州工学院</h4>
+<p></p>
+</a><a href="/List_1280/23886.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20150930150305202.jpg" alt="合作院校3-常州大学">
+<h4>合作院校3-常州大学</h4>
+<p></p>
+</a><a href="/List_1280/23885.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20150930150144284.jpg" alt="合作院校2-安徽审计职业学院">
+<h4>合作院校2-安徽审计职业学院</h4>
+<p></p>
+</a>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index_9.shtml">上一页</a>
+	<span>10/14</span>
+	<a href="index_11.shtml">下一页</a>
+	<a href="index_14.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',14)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

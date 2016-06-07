@@ -1,0 +1,608 @@
+/* LESS Document */
+
+
+/* 引用公用变量 */
+@import "../variable.less";
+/* 登录 */
+.toplogin{
+	.pos(r);
+	z-index: 9999;
+	display:none;
+	.btl();
+	.regbox{
+		.pos(a);
+		top:50px;
+		left:50%;
+		margin-left:-140px;
+		z-index:999;
+		border: 5px solid rgba(0, 0, 0, 0.5);
+  		.bdr5();
+  		background: @cw;
+	}
+	section{
+		width:270px;
+		padding:10px;
+		box-sizing:border-box;
+		background-color:@cw;
+		.pos(r);
+		.closebox{
+			.pos(a);
+			top:0;
+			right:0;
+			width:35px;
+			height:35px;
+			background-color:@c9;
+			text-align:center;
+			i{
+				.f16();
+				line-height:35px;
+			}
+		}
+		h2{
+			text-align:center;
+			.f24();
+			color:@c3;
+			padding-bottom:20px;
+		}
+		ul{
+		}
+		li{
+			padding-bottom:20px;
+			input[type="text"],
+			input[type="button"],
+			input[type="password"]{
+				width:100%;
+			}
+			input[type="button"]{
+				background-color:@golden;
+				.f18();
+			}
+			span{
+				float:right;
+				a{
+					color:@golden;
+					padding-right:2px;
+				}
+			}
+			p{
+				color:@cred;
+				.f12();
+				i{
+					.f14();
+				}
+			}
+		}
+		p{
+			.f12();
+			line-height:30px;
+			span{
+				float:right;
+				a{
+					color:@golden;
+					padding-right:2px;
+				}
+			}
+			i{
+				width:30px;
+				height:30px;
+				line-height:30px;
+				margin:0 5px;
+				text-align:center;
+				.bdrhalf();
+				display:inline-block;
+				a{
+					color:@cw;
+				}
+			}
+			i.icon-gfqq{
+				background-color:@qqblue;
+			}
+			i.icon-gfwb{
+				background-color:@wbblue;
+			}
+		}
+	}
+}
+@media(min-width:640px){
+	.toplogin{
+	.regbox{
+		top:100px;
+		margin-left:-170px;
+	}
+	section{
+		width:320px;
+		padding:20px;
+		.closebox{
+			right:-55px;
+			width:50px;
+			height:50px;
+			i{
+				.f20();
+				line-height:50px;
+			}
+		}
+	}
+}
+}
+/* 注册 */
+.topregister{
+	display:none;
+	.pos(r);
+	z-index: 9999;
+	.btl();
+	.regbox{
+		.pos(a);
+		top:50px;
+		left:50%;
+		margin-left:-154px;
+		z-index:999;
+		border: 5px solid rgba(0, 0, 0, 0.5);
+  		.bdr5();
+  		background: @cw;
+	}
+	section{
+		width:272px;
+		padding:0;
+		box-sizing:border-box;
+		background-color:@cw;
+		.pos(r);
+		.closebox2{
+			.pos(a);
+			top:0;
+			right:10px;
+			width:30px;
+			height:30px;
+			background-color:@c9;
+			text-align:center;
+			
+			i{
+				.f16();
+				line-height:30px;
+			}
+		}
+		h2{
+			text-align:center;
+			.f24();
+			color:@c3;
+			padding-bottom:20px;
+		}
+		li{
+			padding-bottom:20px;
+			input[type="text"],
+			input[type="button"],
+			input[type="password"]{
+				width:100%;
+			}
+			input[type="button"]{
+				background-color:@golden;
+				.f18();
+				padding:0 10px;
+			}
+			p{
+				color:@cred;
+				.f12();
+				i{
+					.f14();
+					padding-right:5px;
+				}
+			}
+			&.reghalf{
+				input{
+					width:50%;
+					box-sizing:border-box;
+				}
+			}
+		}
+		p{
+			.f12();
+			line-height:30px;
+			span{
+				float:right;
+				a{
+					color:@golden;
+					padding-right:2px;
+				}
+			}
+			i{
+				width:30px;
+				height:30px;
+				line-height:30px;
+				margin:0 5px;
+				text-align:center;
+				.bdrhalf();
+				display:inline-block;
+				a{
+					color:@cw;
+				}
+			}
+			i.icon-gfqq{
+				background-color:@qqblue;
+			}
+			i.icon-gfwb{
+				background-color:@wbblue;
+			}
+		}
+	}
+}
+@media(min-width:640px){
+	.topregister{
+	.regbox{
+		top:100px;
+		margin-left:-170px;
+	}
+	section{
+		width:360px;
+		padding:20px;
+		.closebox2{
+			right:-55px;
+			width:50px;
+			height:50px;
+			i{
+				.f20();
+				line-height:50px;
+			}
+		}
+		li{
+			input[type="button"]{
+				padding:0 20px;
+			}
+		}
+	}
+}
+}
+//注册登录提示信息
+.noticeLR{
+  display: block; 	
+  color: #d73240 !important;
+  font-size: 12px;
+  background-image: url(../images2015/inputnotice.png);
+  background-position: 0px 1px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+  text-indent: 10px;
+  color: #f26e6b;
+  padding-bottom: 0;
+  padding-left: 5px;
+  position: absolute;
+  line-height: 20px !important;
+}
+
+
+
+
+
+/*JS调用时登录框、注册框样式*/
+/*index start*/
+.body_main {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.box_title {
+  width: 410px;
+  height: 80px;
+  padding: 0;
+  position: relative;
+}
+.box_title .text_content {
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+.box_title .text_content h1 {
+  font-weight: normal;
+}
+.box_main {
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: #ffffff;
+  width: 410px;
+  margin: 6% auto 50%;
+}
+.box_bottom {
+  width: 477px;
+  height: 7px;
+  padding: 0;
+}
+/*Tooltips*/
+.tooltips_main {
+  position: absolute;
+  left: 0;
+  margin: -5px 0 0 2px;
+  z-index: 999;
+  bottom: -55px;
+}
+.tooltips_box,
+.tooltips,
+.msg {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  top: 2px;
+}
+.tooltips_box {
+  line-height: 1.5;
+}
+.tooltips {
+  margin: 0 -2px;
+}
+.msg {
+  color: #f26e6b;
+  font-size: 12px;
+}
+.ov {
+  position: absolute;
+  left: 30%;
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  margin: 16px 0 0 0;
+  display: inline;
+}
+.field-all {
+  width: 340px;
+  margin: 0 auto;
+}
+.field-all input {
+  color: #bbbbba;
+  width: 320px;
+  padding: 7px 9px;
+  border-radius: 3px;
+  outline-color: #4ac7e7;
+  border: 1px solid #d9d9d9;
+  font-size: 15px;
+}
+/*regist*/
+.field-group {
+  height: 65px;
+  position: relative;
+}
+.register .form_submit .fieldset .field-group .title {
+  float: left;
+  width: 120px;
+  text-align: right;
+  margin: 4px 0 0 0;
+  font-size: 14px;
+}
+.register .form_submit .fieldset .field-group .tips {
+  float: left;
+  width: 250px;
+  color: #8E8E8E;
+}
+/*end regist*/
+
+.newLoginB {
+  display: block;
+  text-align: right;
+  padding: 10px 12px 0 0;
+  color: #1ca3b6;
+}
+.newclosereg {
+  display: block;
+  position: absolute;
+  right: -46px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px 13px 4px 18px;
+  color: #fff;
+  font-size: 22px;
+  top: -36px;
+  border-radius: 0 3px 3px 0;
+}
+.newclosereg:hover {
+  text-decoration: none;
+}
+/*手机注册*/
+.phoneReg {
+  margin: 36px 12px 25px;
+  color: #323232;
+  font-size: 22px;
+  text-align: center;
+}
+.xieyi input {
+  width: 16px;
+  height: 16px;
+}
+#submit,
+#loginB {
+  width: 100%;
+  background: #33b0c4;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+#code_input input {
+  vertical-align: middle;
+  border: 1px solid #d9d9d9;
+}
+#code_input input[type="button"] {
+	.f16();
+}
+#code_input button {
+  border-radius: 3px;
+  border: none;
+  background: #33b0c4;
+  color: #fff;
+  font-size: 16px;
+}
+.div_submit {
+  margin: 15px 0;
+}
+.msdl {
+  text-align: right;
+  color: #989898;
+  padding-bottom: 15px;
+}
+.msdl a {
+  color: #1ca3b6;
+}
+.handphone .msg {
+/*  top: 66px;  */
+}
+.register,
+#login {
+  position: relative;
+}
+/*登录*/
+.mianDL {
+  overflow: hidden;
+}
+.mianDL p {
+  float: left;
+}
+.mianDL a {
+  display: inline-block;
+  float: right;
+}
+.mianDL a:hover {
+  color: #4ebed1;
+}
+.mianDL input {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.hzzh {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.hzzh p {
+  float: right;
+}
+.hzzh a {
+  color: #1ca3b6;
+}
+.zjdl {
+  float: left;
+}
+.zjdl span {
+  color: #656666;
+  position: relative;
+  top: -15px;
+}
+.qq {
+  background: url(../images2015/qq.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.weibo {
+  background: url(../images2015/weibo.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 7px;
+}
+.qq:hover {
+  background: url(../images2015/qqH.png) no-repeat;
+}
+.weibo:hover {
+  background: url(../images2015/weiboH.png) no-repeat;
+}
+/* 登录注册 */
+/* LESS Document */
+.notice {
+  background-image: url(../images2015/inputnotice.png);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+  text-indent: 10px;
+  line-height: 30px;
+  color: #f26e6b;
+  padding-bottom: 0;
+}
+.mbbox ul {
+  padding: 20px 10px;
+}
+.mbbox ul li {
+  padding: 5px 0;
+  width: 100%;
+  color: #666;
+}
+.mbbox ul li input[type="text"],
+.mbbox ul li input[type="password"],
+.mbbox ul li input[type="button"] {
+  width: 100%;
+}
+.mbbox ul li.half input {
+  width: 50%;
+}
+.mbbox ul li.half input[type="button"] {
+  background-color: #c1c1c2;
+}
+.mbbox ul li a {
+  color: #666;
+  line-height: 30px;
+}
+.mbbox ul li span {
+  float: right;
+}
+.mbbox ul li span a {
+  color: #333;
+}
+.mbbox dl {
+  padding: 10px;
+  text-align: center;
+}
+.mbbox dl dt {
+  border-bottom: solid 1px #ddd;
+  height: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.mbbox dl dt h3 {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #999;
+}
+.mbbox dl dd {
+  width: 50%;
+  float: left;
+}
+.mbbox dl dd a {
+  color: #666;
+}
+.mbbox dl dd a:hover {
+  color: #33b0c4;
+}
+.mbbox dl dd i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.mbbox dl dd i:hover.s1 {
+  background-image: url(../images2015/qqbH.png);
+}
+.mbbox dl dd i:hover.s2 {
+  background-image: url(../images2015/weibobH.png);
+}
+.mbbox dl dd i:hover img {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.screenbox {
+  display: none;
+}
+
+/* 内页头部二级导航 */
+
+/* 手机侧边栏 */
+
+ .mm-menu{background-image:url(../images/sidebarbg.png) !important;}
+

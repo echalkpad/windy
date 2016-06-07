@@ -1,0 +1,542 @@
+/* LESS Document */
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+/* LESS Document */
+.noticeLR {
+  background-image: url(../images2015/inputnotice.png);
+  background-position: 0px 1px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  font-size: 12px;
+  text-indent: 10px;
+  color: #f26e6b;
+  padding-bottom: 0;
+  padding-left: 5px;
+  position: absolute;
+}
+.noticeLR a {
+  line-height: 10px !important;
+}
+.noticeLR_verifyCodeP {
+  right: 0;
+  top: 38px;
+}
+.noticeLR_verifyCodeP a {
+  line-height: 10px;
+}
+.mbbox ul {
+  padding: 20px 10px;
+}
+.mbbox ul .login_msg_wrap {
+  width: 100%;
+}
+.mbbox ul li {
+  padding: 5px 0 20px;
+  width: 100%;
+  color: #666;
+}
+.mbbox ul li input[type="text"],
+.mbbox ul li input[type="password"],
+.mbbox ul li input[type="button"] {
+  width: 100%;
+}
+.mbbox ul li.half input {
+  width: 50%;
+}
+.mbbox ul li a {
+  color: #666;
+  line-height: 30px;
+}
+.mbbox ul li span {
+  float: right;
+}
+.mbbox ul li span a {
+  color: #333;
+}
+.mbbox dl {
+  padding: 10px;
+  text-align: center;
+}
+.mbbox dl dt {
+  border-bottom: solid 1px #ddd;
+  height: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.mbbox dl dt h3 {
+  position: absolute;
+  width: 150px;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #999;
+}
+.mbbox dl dd {
+  width: 50%;
+  float: left;
+}
+.mbbox dl dd a {
+  color: #666;
+}
+.mbbox dl dd a:hover {
+  color: #33b0c4;
+}
+.mbbox dl dd i {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+.mbbox dl dd i:hover.s1 {
+  background: url(../../pic/qqbH.png);
+}
+.mbbox dl dd i:hover.s2 {
+  background: url(../../pic/weibobH.png);
+}
+.mbbox dl dd i:hover img {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.screenbox {
+  display: none;
+}
+@media (min-width: 480px) {
+  .mbbox ul {
+    padding: 30px 40px;
+  }
+  .mbbox dl {
+    padding: 10px 40px;
+  }
+}
+@media (min-width: 768px) {
+  .mbbox {
+    display: none;
+  }
+  .screenbox {
+    display: block;
+  }
+  .screenbox .screencontent {
+    padding: 20px 10px;
+  }
+  .screenbox .screencontent .contentbox {
+    border: solid 1px #d9d9d9;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    position: relative;
+    height: 455px;
+  }
+  .screenbox .screencontent .contentbox .lcontent {
+    padding-top: 40px;
+    padding-right: 350px;
+    box-sizing:border-box;
+  }
+  .screenbox .screencontent .contentbox .lcontent h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul {
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li {
+    padding: 5px 0 20px;
+    width: 100%;
+    color: #666;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li input[type="text"],
+  .screenbox .screencontent .contentbox .lcontent ul li input[type="password"],
+  .screenbox .screencontent .contentbox .lcontent ul li input[type="button"] {
+    width: 100%;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li.half input {
+    width: 50%;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li a {
+    color: #666;
+    line-height: 30px;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li img {
+    padding-left: 0;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li span {
+    float: right;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li span a {
+    color: #333;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li span a strong {
+    color: #1ca3b6;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dt {
+    width: 125px;
+    float: left;
+    line-height: 30px;
+    padding-top: -10px;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dd {
+    overflow: hidden;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dd i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dd i:hover.s1 {
+    background-image: url(../../pic/qqH.png);
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dd i:hover.s2 {
+    background-image: url(../../pic/weiboH.png);
+  }
+  .screenbox .screencontent .contentbox .lcontent ul li dd i:hover img {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .screenbox .screencontent .contentbox .rcontent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 2px 2px 0;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+  }
+  .screenbox .screencontent .contentbox .rcontent img {
+    width: 350px;
+    height: 455px;
+  }
+  .screenbox .sfooter {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .login_msg_wrap {
+    width: 340px;
+  }
+  .screenbox {
+    display: block;
+  }
+  .screenbox .screencontent {
+    padding: 40px 10px;
+  }
+  .screenbox .screencontent .contentbox {
+    height: 540px;
+  }
+  .screenbox .screencontent .contentbox .lcontent {
+    padding-right: 415px;
+  }
+  .screenbox .screencontent .contentbox .rcontent img {
+    width: 415px;
+    height: 540px;
+  }
+}
+@media (min-width: 1200px) {
+  .screenbox {
+    display: block;
+  }
+  .screenbox .screencontent {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+#MsgReaDiv {
+  float: right;
+  font-size: 12px;
+  color: #f26e6b;
+}
+.Fwdmargin {
+  margin-top: 30px;
+}
+
+
+
+/*登录成功*/
+.loading_suceess,.loading_list{
+  width:300px;
+  margin:0 auto;
+  padding: 20px 0;
+  font-style:italic;
+  text-align:center;
+}
+.loading_suceess h1{
+  font-size:18px;
+  text-align:center;
+  font-style:normal;
+}
+.loading_suceess p{color:#999;}
+.loading_suceess div{
+  height:100px;
+  margin:20px auto;
+  box-sizing:border-box;
+  padding:25px 30px;
+  font-size:16px;
+  color:#999;
+  line-height:24px;
+  border:1px solid #d9d9d9;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+}
+.loading_suceess div strong{color:#019eef;}
+.loading_suceess a{
+  display:block;
+  color:#fff;
+  background: #019eef;
+  line-height:40px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -ms-border-radius:3px;
+  -o-border-radius:3px;
+  border-radius:3px;
+}
+.loading_suceess small{
+  color:#999;
+  font-size:12px;
+  margin-top:10px;
+  float:left;
+}
+
+
+.loading_list ul{
+  *zoom:1;
+  padding:0;
+}
+.loading_list ul:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.loading_list ul li{
+  float: left;
+  width:50%;
+  padding:0 3px;
+  margin:10px -3px;
+  box-sizing:border-box;
+  text-align:center;
+}
+.loading_list ul li:nth-child(even){float:right;}
+.loading_list ul li a{
+  color:#fff;
+  display:block;
+  height:60px;
+  background: #fb7838;
+  line-height:20px;
+  padding:10px 0;
+  box-sizing:border-box;
+}
+.loading_list ul li:nth-child(2) a{
+  background: #fdc337;
+}
+.loading_list ul li:nth-child(3) a{
+  background: #add753;
+}
+.loading_list ul li:nth-child(4) a{
+  background: #16b0cc;
+}
+.loading_list ul li h2{font-size:16px;font-style:normal;}
+
+
+@media(min-width:480px){
+  .loading_suceess,.loading_liste{width:430px;}
+  .loading_suceess{padding:40px 0;}
+  .loading_suceess h1{font-size:20px;}
+  .loading_suceess a{font-size: 16px;}
+  .loading_list li h2{font-size:18px;}
+}
+
+@media(min-width:640px){
+  .loading_suceess,.loading_list{width:500px;}
+  .loading_suceess h1{font-size:24px;}
+  .loading_suceess div{
+    font-size:18px;
+    height:120px;
+    line-height:28px;
+    padding:30px;
+    margin:40px 0;
+  }
+  .loading_suceess ul li a{
+    font-size: 18px;
+    line-height:45px;
+  }
+  .loading_list ul li a{
+    height:80px;
+    line-height:26px;
+    padding:14px 0;
+  }
+  .loading_list ul li h2{font-size:20px;}
+}
+@media(min-width:768px){
+  .loading_suceess{width:300px;}
+  .loading_suceess a{font-size: 18px;}
+  .screenbox .screencontent .loadbox{
+    height:480px!important;
+  }
+  .rcontent section{
+    width:350px;
+    height:480px;
+    border-left:1px solid #ddd;
+    box-sizing:border-box;
+    padding:40px 25px 0;
+    font-size:12px;
+    color:#999;
+  }
+  .rcontent section h2{
+    font-size:18px;
+    color:#666;
+    margin-bottom:10px;
+  }
+  .rcontent section p{
+    line-height:20px;
+    margin-bottom:10px;
+  }
+  .rcontent section p i{margin-right:5px;}
+  .loadbox .rcontent q{
+    font-style:italic;
+    padding-top:20px;
+    float:right;
+  }
+  .screenbox .screencontent .loadbox .rcontent q img{
+    width:auto;
+    height:auto;
+  }
+  .loading_list{
+    width:100%;
+    padding:20px 10px;
+    box-sizing:border-box;
+  }
+  .loading_list ul{margin:0 -8px;}
+  .loading_list ul li{
+    width:25%;
+    margin:10px 0;
+    padding:0 8px;
+  }
+  .loading_list ul li:nth-child(even){float:left;}
+}
+
+@media(min-width:768px){
+  .loading_list{
+    width:1200px;
+    padding:20px 0;
+    box-sizing:border-box;
+  }
+}

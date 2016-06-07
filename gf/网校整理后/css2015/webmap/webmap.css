@@ -1,0 +1,184 @@
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:15
+**************************************************/
+.mbbody,
+.mbtitle,
+.mbnavadd,
+.mbfooter {
+  display: none;
+}
+.clear {
+  clear: both;
+}
+.main_body {
+  width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.main_body h3 {
+  width: 96%;
+  height: 45px;
+  font-size: 1.4em;
+  color: #2AC9EC;
+  line-height: 30px;
+  margin-left: 2%;
+  font-weight: 700;
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.main_body h3 i {
+  font-size: 1.8em;
+}
+.main_body .content .first {
+  width: 96%;
+  margin: 10px 2%;
+}
+.main_body .content .first p {
+  display: inline-block;
+  color: #aea7d4;
+  margin: 10px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.main_body .content .first ul {
+  display: inline-block;
+  margin-left: 3%;
+  width: 100%;
+}
+.main_body .content .first ul a li {
+  float: left;
+  color: #666;
+  margin-right: 25px;
+  line-height: 30px;
+}
+.main_body .content .first ul a li:hover {
+  color: #6FD0FA !important;
+}
+.main_body .content .second {
+  width: 96%;
+  margin: 10px 2%;
+}
+.main_body .content .second p {
+  display: inline-block;
+  color: #aea7d4;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.main_body .content .second .cont {
+  margin-left: 3%;
+  padding-bottom: 25px;
+}
+.main_body .content .second .cont p {
+  display: inline-block;
+  color: #000;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.main_body .content .second .cont p:hover {
+  color: #6FD0FA;
+}
+.main_body .content .second .cont ul {
+  display: inline-block;
+  width: 100%;
+}
+.main_body .content .second .cont ul a li {
+  float: left;
+  color: #666;
+  margin-right: 25px;
+  line-height: 30px;
+}
+.main_body .content .second .cont ul a li:hover {
+  color: #96D5E4 !important;
+}
+.main_body .content .third {
+  width: 96%;
+  margin: 10px 2%;
+}
+.main_body .content .third p {
+  display: inline-block;
+  color: #aea7d4;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.main_body .content .third ul {
+  display: inline-block;
+  width: 100%;
+  margin-left: 3%;
+}
+.main_body .content .third ul a li {
+  float: left;
+  color: #666;
+  margin-right: 25px;
+  line-height: 30px;
+}
+.main_body .content .third ul a li:hover {
+  color: #6FD0FA !important;
+}
+a,
+li {
+  transition: 0s !important;
+  -moz-transition: 0s !important;
+  -webkit-transition: 0s !important;
+  -o-transition: 0s !important;
+  -ms-transition: 0s !important;
+}
+.gotop {
+  display: none;
+}
+@media screen and (max-width: 1199px) {
+  .main_body {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 774px) {
+  .gtopttl nav h2 {
+    width: 110px;
+  }
+  .webbody,
+  .gtopttl,
+  nav {
+    display: block;
+  }
+  .gtopttl nav ul {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .glyphicon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .mmenu-page {
+    background: #fff;
+  }
+  .main_body {
+    width: 90%;
+  }
+  .mbnavadd {
+    background: #5dc4e2;
+  }
+  .gotop {
+    display: block;
+  }
+  .webbody,
+  footer {
+    display: none;
+  }
+  .mbbody,
+  .mbtitle,
+  .mbfooter {
+    display: block;
+  }
+}

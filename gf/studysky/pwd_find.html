@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.gfedu.cn/2015/login.shtml -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>找回密码</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+<link href="css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/form/login.css" rel="stylesheet" type="text/css">
+
+
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/common.js"></script>
+<script type="text/javascript" src="script/loginReg/loginReg.js"></script>
+<script type="text/javascript" src="script/findpwd/findpwd.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <script type="text/javascript" src="script/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+
+<!--登录 start-->
+<div class="screenbox">
+    <!--导航 start-->
+    <div class="ss-nav">
+        <h1><img src="images/sslogo.png" alt=""/></h1>
+    </div>
+    <!--导航 end-->
+
+    <div class="screencontent">
+    <section class="contentbox">
+        <article class="lcontent">
+        <h2>找回密码</h2>
+        <form action="" method="post" name="LoginFormPC" id="LoginFormPC">
+        <ul id="step1">
+            <li>
+            <input type="text" name="Field_UserNamePC" id="Field_UserNamePC" maxlength="20" placeholder="请输入你的手机号" onblur="__changeRealPhone('Field_UserNamePC');">
+            <p class="noticeLR" id="noticeLR_Field_UserNamePC"></p>
+            </li>
+            <li class="half">
+                <input autocomplete="off" placeholder="输入收到的验证码" value="" type="text" name="verifyCode" id="mbverifyCodeM" onfocus="document.getElementById('noticeLR_verifyCodeM').innerHTML = '';"><input type="button" id="btnM" value="获取短信验证码">
+                <p class="noticeLR" id="noticeLR_verifyCodeM"></p>
+            </li>
+            <li class="Fwdmargin" id="next"><input type="button" value="下一步"></li>
+        </ul>
+        <ul id="step2" style="display:none;">
+            <li>
+                <input type="text" name="Field_UserNamePC" id="Field_UserNamePCPass" maxlength="20" placeholder="请输入新密码">
+                <p class="noticeLR" id="noticeLR_Field_UserNamePCPass"></p>
+            </li>
+            <li>
+                <input type="text" name="Field_UserNamePC" id="Field_UserNamePCPass2" maxlength="20" placeholder="请重新输入新密码">
+                <p class="noticeLR" id="noticeLR_Field_UserNamePCPass2"></p>
+            </li>
+            <li class="Fwdmargin" id="confirm"><input type="button" value="确  认"></li>
+        </ul>
+        </form>
+        </article>
+        <aside class="rcontent"><img src="images/fromads01.jpg" alt=""></aside>
+    </section>
+    </div>
+
+
+<div class="footer">©2016 PZ Academy. All Rights Reserved. 沪ICP备 15048842号-1</div>
+
+</div>
+
+</body>
+</html>

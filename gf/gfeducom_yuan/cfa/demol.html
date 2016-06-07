@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        section{
+            height:10px;
+            width:400px;
+            background:pink;
+            transition:all 1s;
+        }
+        section:hover{
+            height:500px;
+        }
+        header{
+            width:100px;
+            height:100px;
+            @position: absolute;
+            background-color: red;
+        }
+        header:hover{
+            -webkit-animation:tt 1s linear forwards;
+        }
+        @-webkit-keyframes tt{
+            from{left: 0px;}
+            to{left: 100px;}
+        }
+    </style>
+</head>
+<body>
+<section></section>
+
+<hr/>
+<header></header>
+<time></time>
+<de></de>
+<foot></foot>
+<script>
+    var tt='abc'[1];
+    alert(tt);
+    function Parent(firstname)
+    {
+        this.fname=firstname;
+        this.age=40;
+        this.sayAge=function()
+        {
+            console.log(this.age);
+        }
+    }
+    function Child(firstname)
+    {
+        this.parent=Parent;
+        this.parent(firstname);
+        delete this.parent;
+        this.saySomeThing=function()
+        {
+            console.log(this.fname);
+            this.sayAge();
+        }
+    }
+    var mychild=new  Child("李");
+    mychild.saySomeThing();
+
+    function getDaysInMonth(year,month){
+        month = parseInt(month)+1;
+        var temp = new Date(year+"/"+month+"/0");
+        return temp.getDate();
+    }
+    console.log(getDaysInMonth(2016,10));
+</script>
+</body>
+</html>

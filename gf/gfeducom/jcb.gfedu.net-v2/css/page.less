@@ -1,0 +1,657 @@
+/*
+ * == 金程杯内页
+**********************************************/
+/* 基本 */
+@import "common.less";
+
+/* 内页共用 */
+a,a:hover{text-decoration: none;color:#333;}
+.jcbpages{
+	overflow:hidden;
+	border:solid 3px @cd;
+	min-height:850px;
+	margin-bottom:50px;
+	padding-top:30px;
+	background-image:url(../images/pagesbg.png);
+	background-repeat:no-repeat;
+	
+	.jcbpttl{
+		background-image:url(../images/pgttlbg.png);
+		background-repeat:no-repeat;
+		width:680px;
+		height:100px;
+		margin:0 auto;
+		.pos(r);
+		h2{
+			float:right;
+			.f30();
+			padding-left:10px;
+			color:#b41a34;
+			line-height:100px;
+			background-color:@cw;
+		}
+		i{
+			font-size:45px;
+			color:#df4867;
+			.pos(a);
+			top:28px;
+			left:28px;
+		}
+	}
+	.bk30{
+		.cf();
+		width:100%;
+		padding-top:30px;
+	}
+	.jcbpbox{
+		width: 600px;
+		margin:0 auto;
+		padding-bottom:60px;
+		h4{
+			font-size: 20px;
+			font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+		}
+		p{
+			font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+			padding-bottom:10px;
+		}
+	
+	}
+}
+
+/* 赛事介绍 */
+.p2_intro{
+	h4{
+		text-align: center;
+		line-height: 80px;
+		font-size: 22px;
+		color: @c0;
+	}
+	p{
+		line-height: 26px;
+		text-indent: 2em;
+		color:@c6;
+		margin:0;
+		padding-bottom:20px!important;
+	}
+	.action{
+		width: 550px;
+		margin: 20px auto;
+		li{
+			line-height:50px;
+			height:50px;
+			margin-bottom:30px;
+			.bdr(5px);
+			background: #F77B7C;
+			.pos(r);
+			a{
+				color:@cw;
+				padding:0 20px;
+				display:block;
+			}
+			span{
+				.f24();
+				color:@cw;
+				.left();
+			}
+			small{
+				.right();
+				.f14();
+			}
+			i{
+				.triangle(bottom,@w:10px,@c:#F77B7C);
+				.pos(a);
+				left:50%;
+				margin-left:-10px;
+				bottom:-20px;
+			}
+			&:nth-child(2){
+				background: #FFD160;
+				i{.triangle(bottom,@w:10px,@c:#FFD160);}
+			}
+			&:nth-child(3){
+				background: #ACD279;
+				i{.triangle(bottom,@w:10px,@c:#ACD279);}
+			}
+			&:nth-child(4){
+				background: #63C2C2;
+				i{.triangle(bottom,@w:10px,@c:#63C2C2);}
+			}
+			&:last-child{
+				background: #42A2DF;
+				i{
+					.triangle(bottom,@w:10px,@c:#42A2DF);
+					display:none;
+				}
+			}
+		}
+	}
+}
+/* 赛制作赛程 */
+.p3_schedule{
+	h3{font-size: 24px;}
+	ul{
+		width: 630px;
+			.cf();
+			li{
+				float: left;
+				color: #df4867;
+				font-style: italic;
+				h3{
+					text-align: left;
+				}
+			}
+			li:nth-child(2){
+				width: 250px;
+				float:left;
+				margin-left: 90px;
+				font-size: 0;
+				.cf();
+				a{
+					float: left;
+					display:block;
+					text-align: center;
+					background: #a5112a;
+					width: 90px;
+					height: 30px;
+					line-height: 30px;
+					font-style: normal;
+					color: #ffffff;
+					margin:10px 10px 0 0;
+					font-size: 14px;
+					.bdr5();
+				}
+			}
+			p{
+				color: #df4867;
+			}
+			margin:20px 0 30px;
+		}
+		dl{
+			.cf();
+			dt,dd{
+				width: 285px;
+				height: 70px;
+				line-height: 70px;
+				margin: 60px 0 20px 0;
+			}
+			dt{
+				background: #acd279;
+				float: left;
+				h3{
+				text-align: left;
+				text-align: center;
+				font-style: normal;
+				color: @cw;
+				}
+			}
+			dd{
+				padding-left: 42px;
+				border:3px solid #acd279;
+				float: right;
+				font-size: 16px;
+				color: @c6;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+			}
+		}
+		.jcbn1{
+			dt{
+				background: #ffd160;
+			}
+			dd{
+				border:3px solid #ffd160;
+			}
+		}
+		.jcbn3{
+			dt{
+				background: #f77b7c;
+			}
+			dd{
+				border:3px solid #f77b7c;
+			}
+		}
+		p{color:@c6;}
+}
+
+/* 大赛收益 */
+.p4_payoffs{
+	li{
+		margin-top: 20px;
+		.cf();
+		img,div{
+			float: left;
+		}
+		div{
+			width: 350px;
+			margin-left: 25px;
+		}
+		strong{
+			font-size: 16px;
+			color:#a5112a;
+		}
+	}
+	li:nth-child(2),li:nth-child(6){
+		div{
+			margin:0 25px 0 0;
+		}
+		img{
+			margin-top: 25px;
+		}
+	}
+	li:nth-child(6){
+		div{
+			width: 205px;
+			padding: 0;
+		}
+	}
+	h4{
+		width: 180px;
+		font-style:italic;
+		line-height: 40px;
+		margin-bottom:5px;
+		border-bottom:2px dotted #8e8c8c;
+		}
+	p{
+		color: @c6;
+		line-height:30px;
+		}
+}
+/* 圆梦助学金 */
+.p5_grant{
+	h4{
+			font-size: 22px;
+			line-height: 30px;
+			text-align: center;
+			font-style: normal;
+			color: @c0;
+			margin:15px 0;
+		}
+		dl{
+			.cf();
+			margin:25px 0;
+		}
+		dt,dd{
+			float: left;
+		}
+		dt{
+			font-size: 28px;
+			font-weight: bolder;
+			color: @cw;
+			text-align: center;
+			line-height: 45px;
+			position: relative;
+			i{
+			width: 45px;
+			height: 45px;
+			display: block;
+			background: #ff481a;
+			transform:rotate(45deg);
+			-webkit-transform:rotate(45deg);
+			-moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			-o-transform:rotate(45deg);
+			.bdr5();
+			}
+			span{
+				position: absolute;
+				top:0;
+				left:5px;
+			}
+		}
+		dd{
+			margin-left: 15px;
+			h5{
+				font-weight: bold;
+				font-size: 16px;
+				line-height:50px;
+				color:@c0;
+			}
+			p{
+
+				text-decoration: underline;
+				color:@c6;
+			}
+		}
+}
+/* 往届回顾 */
+
+.p6_review{
+	img{
+		margin-top:40px;
+		}
+		img:first-child{
+			margin:0;
+		}
+		h4{
+			line-height: 78px;
+			.ellipsis();
+		}
+		p{
+			color:@c9;
+			.spill4();
+		}
+}
+/* 前线报道 */
+.p7_report{
+}
+/* 招聘计划 */
+
+.p8_recruit{
+	.plan{
+			font-style:italic;
+			p,h4{color:#df4867;}
+		}
+		h4{
+			margin:40px 0 10px;
+		}
+		p{
+			line-height:30px;
+			font-size:16px;
+			color:@c6;
+		}
+		.school{
+			position: relative;
+			ul{
+				li{
+					position: relative;
+					overflow: hidden;
+					zoom:1;
+					padding:0 10px 0 100px;
+					height: 60px;
+					background: #f5f5f5;
+					&.selected{
+						ins{display:block;}
+						p,span{color:#b41a34;}
+					}
+					span{color:@c9;font-size: 14px;}
+					p{
+						line-height: 60px;
+						font-size: 18px;
+					}
+					p:nth-child(even){
+						float: left;
+					}
+					p:nth-child(odd){
+						float: right;
+					}
+				}
+				li:nth-child(2n){background:#ccc;}
+			}
+			ins{
+			position: absolute;
+			top:25px;
+			float:left;
+			left:0;
+			.triangle(right,@w:8px,@c:#b41a34);
+			display:none;
+			}
+			ol{
+			width: 14px;
+			height:1040px;
+			background: #e4e0e0;
+			border-radius: 7px;
+			border:1px solid #c7c4c4;
+			position:absolute;
+			top:60px;
+			left:46px;
+				li{
+				width: 17px;
+				height: 17px;
+				border:3px solid #FFF;
+				border-radius: 50%;
+				background: #af9fa1;
+				padding:0;
+				margin:0 0 37px -4px;
+				box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+					&.current{
+						background: #b41a34;
+					}
+				}
+			}
+		}
+			
+}
+/* 详情页 */
+.pgs_detail{
+	.jcbpttl{
+		background: none;
+		padding-top:90px;
+		span{
+		display: block;
+		line-height: 70px;
+		text-align: right;
+		color: @c9;
+		font-size: 12px;
+		}
+	}
+	h3{
+		font-style: italic;
+		text-align: right;
+		font-size: 24px;
+		padding-right: 5px;
+		}
+	.hr{
+		background: url(../images/xian.png) 0 0 no-repeat;
+	}
+}
+
+/* 初赛须知 */
+.pgs_preliminary{
+	.jcbpages{
+		 width: 1200px;
+		 min-height: 650px !important;
+	}
+	.jcbpbox{
+		 h3{
+			text-align: center;
+		    font-size: 30px;
+		    padding-left: 10px;
+		    color: #b41a34;
+		    line-height: 100px;
+		    margin-top:100px;
+		} 
+		p{
+			margin:40px auto;
+			line-height: 48px;
+			color:@c3;
+			.f18();
+		}
+		button{
+			display: block;
+			margin:20px auto;
+			width: 160px;
+			height: 44px;
+			border-radius: 22px;
+			background: #a5112a;
+			text-align: center;
+			line-height: 44px;
+			border: 0;
+			color: @cw;
+			.f18();
+		}
+	}
+	.screen{
+	width: 100%;
+	display: none;
+	position: absolute;
+	top:0;
+	left: 0;
+	background:rgba(0, 0, 0, 0.6);
+	z-index: 999!important;
+	form{
+		z-index: 3;
+		border: 5px solid rgba(0, 0, 0, 0.5);
+	    border-radius: 5px;
+	    background: #fff;
+	    background-size: cover;
+	    width: 410px;
+	    position: relative;
+	    h4{
+	    	margin: 36px 12px 25px;
+		    color: #323232;
+		    font-size: 22px;
+		    text-align: center;
+	    }
+	    div{
+	    	width: 75%;
+	    	height: 65px;
+	    	margin:0 auto;
+	    }
+	    input{
+	    	color: #bbbbba;
+	    	line-height: 30px;
+		    width:85%;
+		    padding: 7px 9px;
+		    border-radius: 3px;
+		    outline-color: #4ac7e7;
+		    border: 1px solid #d9d9d9;
+		    font-size: 15px;
+	    }
+	    a{
+	    	width:160px;
+	    	margin:0 auto 30px;
+	    	height:40px;
+	    	text-align: center;
+	    	line-height: 40px;
+	    	display: block;
+		    background: #a5112a;
+		    color: #fff;
+		    border-radius:20px;
+		    font-size: 16px;
+	    }
+	    span{
+	    	i{
+		    	width: 40px;
+		    	height: 40px;
+		    	text-align: center;
+		    	line-height: 40px;
+		    	background:rgba(0, 0, 0, 0.3);
+		    	.f20();
+		    	position: absolute;
+		    	right: -45px;
+		    	top:0;
+		    	color:@cw;
+		    	cursor: pointer;
+		    }
+	    }
+	    &.suceess{
+	    	h4{
+	    		font-size: 40px;
+	    		color:#E50011;
+	    		i{color:#E50011;}
+	    	}
+	    	p{
+	    		.f18();
+	    		text-align: center;
+	    		margin-bottom:30px;
+	    	}
+	    }
+	}
+}
+}
+
+
+//大赛评委
+.jcbpbox{
+	.cf();
+	padding:20px;
+
+.p9_judge{
+	width:100%;
+	margin:0 auto;
+	li{
+	height: 256px;
+	padding-bottom: 0;
+	margin:25px auto;
+	&:hover{
+		border:1px solid @cc;
+	}
+	img{float: left;}
+	.cont{
+		padding:10px;
+		width: 350px;
+		float: right;
+		.spill6();
+
+		em{
+			display: block;
+			.f16();
+			font-weight: bold;
+			line-height: 35px;
+		}
+		h2{
+			.f24();
+			font-weight: bold;
+		}
+		span{line-height: 25px;}
+	}
+	}
+}
+}
+
+//大赛评委详情页
+.jcb_content{
+	.cf();
+	line-height: 30px;
+	
+	h5{
+		width: 100%;
+		.f24();
+		height: 30px;
+			line-height: 30px;
+			margin-bottom: 30px;
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 5px;
+			height: 30px;
+			background-color: #df4867;
+			margin-right: 10px;
+		}
+	}
+	p{
+		font-size: 15px;
+		background-color: #f4f4f4;
+		padding:10px;
+		margin: 25px;
+	}
+	div{
+		text-indent: 2em;
+		.f16();
+      margin:25px;
+
+	}
+}
+
+//分页
+.jcb_auto{
+	.cf();
+	margin:0 auto;
+	ul{
+		width: 500px;
+		.cf();
+		margin:0 100px;
+	}
+	li{
+		width: 60px;
+		height: 40px;
+		float: left;
+		line-height: 40px;
+		text-align: center;
+        border:1px solid #f4f4f4;
+        margin:0 10px;
+		&:first-child,&:last-child{
+			width: 90px;
+			background-color: #f4f4f4;
+		}
+	}
+	li:hover{
+		background-color: #df4867;
+
+		a{color:@cw;}
+	}
+}

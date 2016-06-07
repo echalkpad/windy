@@ -1,0 +1,550 @@
+/* iconfont */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?z6i63c');
+  src: url('fonts/icomoon.eot?#iefixz6i63c') format('embedded-opentype'), url('fonts/icomoon.woff?z6i63c') format('woff'), url('fonts/icomoon.ttf?z6i63c') format('truetype'), url('fonts/icomoon.svg?z6i63c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#introduction{
+	width: 300px;
+	margin: 0 auto;
+}
+.introduction_bg_title{
+	width: 100%;
+	height: 200px;
+    background-image: url("../../images2015/coursedetailnew/cdFast150708/introduction_title_800.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.introduction_bg_title .text0{
+    font-size: 32px;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    color: #fff;
+    padding-top: 34px;
+    font-style: italic;
+}
+.introduction_bg_title .text0 .color_ffea00{
+	display: inline-block;
+    color: #ffea00;
+    padding: 0 6px;
+}
+.introduction_bg_title .text1{
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    color: #fff;
+    text-align: center;
+}
+.introduction_bg_title .text2{
+    font-size: 14px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    color: #666666;
+    line-height: 24px;
+    background-image: url("../../images2015/coursedetailnew/cdFast150708/introduction_title_yellow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.pass_rate{
+    width: 300px;
+    margin: 0 10px;
+}
+.pass_rate .title{
+    padding: 0 10px;
+    line-height: 34px;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 26px;
+    padding-bottom: 20px;
+}
+.pass_rate .text{
+	padding: 0 10px;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+.pass_rate .list{
+	padding: 0 5px;
+}
+.pass_rate .list div{
+    width: 62px;
+    height: 20px;
+    text-align: center;
+    padding-top: 42px;
+    border: 1px solid #bbbbbb;
+    float: left;
+    line-height: 14px;
+    margin-right: 10px;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/pass_rate_list0.png);
+    background-repeat: no-repeat;
+    background-position: center 10px;
+}
+.pass_rate .list .list1{
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/pass_rate_list1.png);
+}
+.pass_rate .list .list2{
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/pass_rate_list2.png);
+}
+.pass_rate .list .list3{
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/pass_rate_list3.png);
+}
+.pass_rate .list .margin_right_none{
+    margin-right: 0;
+}
+.pass_rate .line_table{
+    width: 290px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+.pass_rate .line_table img{
+    width: 290px;
+    height: 142px;
+}
+.pass_rate .line_table_text{
+    width: 270px;
+    padding-left: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+.pass_rate .line_table_text span{
+	display: inline-block;
+    vertical-align: middle;
+}
+.pass_rate .line_table_text .green,.pass_rate .line_table_text .blue{
+    width: 24px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #22ac38;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pass_rate .line_table_text .blue{
+	background-color: #30aec5;
+}
+.pass_rate .line_table_text .green_text{
+    margin-right: 10px;
+}
+.crowd{
+    width: 296px;
+    margin: 0 auto;
+}
+.crowd h3{
+    font-size: 18px;
+    line-height: 48px;
+    padding-top: 15px;
+}
+.crowd .list{
+    float: left;
+    width: 138px;
+    height: 210px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+.crowd .margin_right_none{
+    margin-right: 0;
+}
+.crowd .list .crowd_list_pic{
+    width: 138px;
+    height: 138px;
+    position: relative;
+}
+.crowd .list .crowd_list_pic img{
+    width: 138px;
+    height: 138px;
+}
+.crowd .list .crowd_list_pic .crowdling{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: #30aec5;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    left: 0;
+    bottom: 0;
+}
+.crowd .list .crowd_list_text{
+    padding-top: 10px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.course_setting{
+    width: 302px;
+    margin: 0 auto;
+}
+.course_setting h3{
+    font-size: 18px;
+    line-height: 48px;
+    padding-top: 15px;
+    color: #000;
+}
+.course_setting .course_list{
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: bold;
+    text-align: center;
+}
+.course_setting .course_list .cont{
+    width: 284px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #eeeeee;
+    color: #666666;
+}
+.course_setting .plus{
+    width: 100%;
+    height: 30px;
+    padding-top: 14px;
+    text-align: center;
+}
+.course_setting .modul{
+    width: 302px;
+    margin: 0 auto;
+}
+.course_setting .modul_list{
+    float: left;
+    width: 150px;
+    height: 100px;
+    background-color: #f44236;
+    text-align: center;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/modul_list_0.png);
+    background-repeat: no-repeat;
+    background-position: -42px -50px;
+    color: #fff;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.course_setting .margin_right_none{
+    margin-right: 0;
+}
+.course_setting .modul_list p{
+    padding-top: 26px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+.course_setting .modul_list span{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+}
+.course_setting .modul_list_1{
+    background-color: #f4a136;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/modul_list_1.png);
+}
+.course_setting .modul_list_2{
+    background-color: #f4d236;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/modul_list_2.png);
+}
+.course_setting .modul_list_3{
+    background-color: #01bbd4;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/modul_list_3.png);
+}
+.course_setting .modul_list_4{
+    background-color: #49ab4d;
+    background-image: url(../../images2015/coursedetailnew/cdFast150708/modul_list_4.png);
+}
+/*.sistartitxt {
+    clear: both;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+}*/
+/*.sistartitxt p {
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    font-size: 26px;
+}*/
+.sistartitxt h3{
+    font-size: 18px;
+    line-height: 48px;
+    padding-top: 15px;
+    color: #000;
+    font-weight: bold;
+
+}
+.fasttext h3{
+    font-size: 18px;
+    line-height: 48px;
+    padding-top: 15px;
+    color: #000;
+    font-weight: bold;
+	
+}
+.sistartitxtts {
+    margin: 0 auto 50px;
+}
+@media (min-width: 320px) {
+    .sistartitxt {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 640px) {
+    .sistartitxt {
+        margin: 30px auto 50px;
+    }
+    .sistartitxt{
+        width: 580px;
+    }
+}
+
+@media (min-width: 640px) {
+    .sistarmodule {
+        width: 20%;
+        margin-bottom: 30px;
+    }
+}
+.sistarquality {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    color: #000;
+}
+.sistarbox {
+    width: 90%;
+    margin: 10% 5%;
+    text-align: center;
+    font-size: 14px;
+    border: 3px solid #999;
+    box-sizing: border-box;
+    position: relative;
+}
+.sistarbox .sstbtitle {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -70px;
+}
+.sistarbox .sstbtext {
+    margin: 30px 0 20px;
+}
+.sistarbox:first-child {
+    margin-top: 50px;
+}
+/*@media (min-width: 480px) {
+    .sistarbox {
+        width: 48%;
+        margin: 5% 1%;
+        float: left;
+    }
+}*/
+@media (min-width: 1200px) {
+    .sistarbox {
+        width: 23%;
+        margin: 5% 1%;
+        float: left;
+    }
+    .sistartitxt{
+        width: 780px;
+    }
+}
+.summertest .ststbox {
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    float: left;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 30px 0;
+    height: 174px;
+}
+.summertest .ststbox .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    color: #fff;
+    background: #30aec5;
+    font-size: 40px;
+    line-height: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.summertest .stestitle{
+    padding: 20px 0;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+.summertest .stestitle p{
+    display: inline-block;
+    color: #df7070;
+    
+}
+.summertest .ststbox .ststext p {
+    font-size: 16px;
+    color: #333;
+}
+.summertest .ststbox:hover .icon {
+    background: #00348b;
+}
+.summertest .ststbox:hover .ststext p {
+    color: #00348b;
+}
+@media (min-width: 640px) {
+    .summertest .ststbox {
+        width: 25%;
+    }
+}
+@media (min-width: 640px) {
+    #introduction{
+        width: 640px;
+    }
+    #introduction .bg_title{
+        width: 640px;
+        height: 200px;
+        background-image: url("../../images2015/coursedetailnew/cdFast150708/introduction_title_800.jpg");
+    }
+    #introduction .bg_title .text2{
+        width: 450px;
+    }
+    .pass_rate{
+        width: 540px;
+        margin: 0 auto;
+    }
+    .pass_rate .list p{
+        margin-right: 88px;
+    }
+    .crowd{
+        width: 584px;
+        margin: 0 28px;
+    }
+    .crowd .list{
+        margin-right: 10px;
+    }
+    .crowd .margin_right_none_640{
+        margin-right: 0;
+    }
+    .course_setting{
+        width: 580px;
+    }
+    .course_setting h3{
+        font-weight: bold;
+    }
+    .course_setting .course_list .cont{
+        margin: 0 auto;
+    }
+    .course_setting .modul{
+        width: 472px;
+    }
+    .course_setting .modul_list{
+        margin-right: 2px;
+    }
+}
+@media (min-width: 1200px) {
+    #introduction{
+        width: 800px;
+    }
+    #introduction .bg_title{
+        width: 800px;
+    }
+    .pass_rate{
+        width: 800px;
+    }
+    .pass_rate .list p{
+        margin-right: 26px;
+    }
+    .pass_rate_cont{
+        width: 364px;
+        float: left;
+    }
+    .pass_rate .line_table{
+        float: left;
+        padding-left: 50px;
+    }
+    .course_setting{
+        width: 800px;
+    }
+    .crowd{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .crowd .list{
+        margin-right: 24px;
+        width: 180px;
+        height: 250px;
+    }
+    .crowd .list .crowd_list_pic{
+        width: 180px;
+        height: 180px;
+    }
+    .crowd .list .crowd_list_pic img{
+        width: 180px;
+        height: 180px;
+    }
+    .crowd .list .crowd_list_pic .{
+        width: 180px;
+    }
+    .crowd .margin_right_none_640{
+        margin-right: 0;
+    }
+    .course_setting .modul{
+        width: 800px;
+    }
+    .course_setting .modul_list{
+        margin-right: 6px;
+    }
+}
+.learn_360{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.learn_360 p{
+    width: 100%;
+    text-align: center;
+}
+.learn_360 .text2{
+    display: block;
+    font-size: 18px;
+    color: #999;
+}
+.color_e50110{
+    color: #e50110;
+}

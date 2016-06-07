@@ -1,0 +1,325 @@
+
+/* 清除浮动 */
+.cf(){
+	// IE7-
+	*zoom: 1;
+	// others
+	&:after {
+		content: " ";
+		clear: both;
+		display: table;
+  }
+}
+
+/* 圆角 */
+ .borderRadius(@radius){
+     border-radius: @radius;
+     -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+     -ms-border-radius: @radius;
+     -o-border-radius: @radius;
+ }
+
+/* link in text */
+a.t { text-decoration:underline;}
+a.t:hover { color:#f30; text-decoration:underline;}
+
+/* clear float */
+.cf { zoom:1;} /* for IE */
+.cf:after { content:"."; display: block; clear:both; font-size:0; height:0; visibility:hidden; overflow:hidden;} /* for other */
+/* end of clear float */
+
+
+/* float */
+.left { float:left;}
+.right { float:right;}
+.fnone { float:none;}
+.middle{ float:left;}
+
+/* text-align */
+.tleft { text-align:left;}
+.tright { text-align:right;}
+.tcenter { text-align:center;}
+
+/* display */
+.dis { display:block;}
+.undis { display:none;}
+
+
+
+
+/*常用字号*/
+.f8(){font-size:8px;}
+.f10(){font-size:10px;}
+.f12(){font-size:12px;}
+.f14(){font-size:14px;}
+.f16(){font-size:16px;}
+.f18(){font-size:18px;}
+.f20(){font-size:20px;}
+.f24(){font-size:24px;}
+.f26(){font-size:26px;}
+.f28(){font-size:28px;}
+.f30(){font-size:30px;}
+.f36(){font-size:36px;}
+.f40(){font-size:40px;}
+.f48(){font-size:48px;}
+.f50(){font-size:50px;}
+.f56(){font-size:56px;}
+.f60(){font-size:60px;}
+.f70(){font-size:70px;}
+.f80(){font-size:80px;}
+.f100(){font-size:100px;}
+/*常用颜色*/
+@c9:#999;
+@c6:#666;
+@c5:#555;
+@c3:#333;
+@c2:#222;
+@cc:#ccc;
+@cd:#ddd;
+@c0:#000;
+@cw:#fff;
+@golden:#a18f69;　  //金色
+@cf0:#f0f0f0;
+@cf4:#f4f4f4;
+@cf8:#f8f8f8;
+@cred:#d73240;
+
+@cblue:#53afbe;   //网校蓝色
+
+@qqblue:#59a1d2;
+@wbblue:#dc6c6f;
+
+@cbgb:#33b0c4;
+
+
+/* 题库主颜色 */
+@ibc:#25b8d6;          //主色，常用于色块
+@ibl:#1cabd5;          //主色，常用于链接
+
+/* 题库常用颜色 */
+@ibred:#fd5a5a;		          //常用于对错收藏
+@ibgreen1:#2ac89f;          //常用于对错及点缀
+@ibgreen2:#64c06f;         //常用于文字点缀
+@ibyellow:#fdc337;          //常用于文字及图标点缀
+@iborange:#f35000;          //常用于文字及图标点缀
+
+@ibyellowish:#e7934c;        //常用于文字及图标点缀，土黄色
+@ibpink:#fa709e;          //用于能力评估，常见色也可用于点缀
+@ibblue:#39bbda;          //于能力评估，常见色也可用于点缀
+@ibblue2:#0ea2ad;
+
+/* 题库中心颜色 */
+@ibc_b1:#44cfef;
+@ibc_b2:#799bc5;
+@ibc_y1:#fcca35;
+@ibc_y2:#e3a05c;
+@ibc_g1:#a8d82b;
+@ibc_g2:#8daf6e;
+@ibc_p1:#fd58bb;
+@ibc_p2:#c0484a;
+
+/* 题库分析选题背景 */
+@ibex_red:#ffeae9;
+@ibex_blue:#eff3f6;
+@ibex_green:#d0e6cf;
+
+/* 题库其它颜色 */
+@ib_cfa:#2aa9c6;           //题库cfa标签颜色
+@ib_frm:#3cc9c8;           //题库frm标签颜色(淡蓝2)
+@ib_cpa:#a56fa5;           //题库cpa标签颜色(紫)
+@ib_cma:#e35255;           //题库cma标签颜色(红)
+@ib_acca:#fd6e57;          //题库acca标签颜色(橙)
+@ib_zj:#fbb239;            //题库中级经济师标签颜色(黄)
+@ib_rfp:#5fb95f;           //题库rfp标签颜色(青)
+@ib_kj:#cb6496;            //题库会计从业标签颜色(洋红)
+@ib_zq:#7eb7c5;            //题库证券从业标签颜色(淡蓝3)
+@ib_bank:#cfa5fd;          //题库银行从业标签颜色(淡紫)
+@ib_cfrm:#bbd9f5;          //题库cfrm标签颜色(淡蓝4)
+@ib_ky:#f890c2;            //题库考研标签颜色(粉)
+
+
+
+
+@csblue:#006c99;   //深蓝色
+
+/* 圆角  */
+.bdr2(){
+    border-radius:2px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    -ms-border-radius:2px;
+    -o-border-radius:2px;
+}
+.bdr5(){
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+
+.bdrhalf(){
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+.bdr(@borderadius){
+    border-radius:@borderadius;
+    -moz-border-radius:@borderadius;
+    -webkit-border-radius:@borderadius;
+    -ms-border-radius:@borderadius;
+    -o-border-radius:@borderadius;
+}
+.bdrl(@borderadius){
+	border-top-left-radius:@borderadius;
+	border-bottom-left-radius:@borderadius;
+    -moz-border-top-left-radius:@borderadius;
+	-moz-border-bottom-left-radius:@borderadius;
+    -webkit-border-top-left-radius:@borderadius;
+	-webkit-border-bottom-left-radius:@borderadius;
+    -ms-border-top-left-radius:@borderadius;
+	-ms-border-bottom-left-radius:@borderadius;
+    -o-border-top-left-radius:@borderadius;
+	-o-border-bottom-left-radius:@borderadius;
+}
+.bdrr(@borderadius){
+	border-top-right-radius:@borderadius;
+	border-bottom-right-radius:@borderadius;
+    -moz-border-top-right-radius:@borderadius;
+	-moz-border-bottom-right-radius:@borderadius;
+    -webkit-border-top-right-radius:@borderadius;
+	-webkit-border-bottom-right-radius:@borderadius;
+    -ms-border-top-right-radius:@borderadius;
+	-ms-border-bottom-right-radius:@borderadius;
+    -o-border-top-right-radius:@borderadius;
+	-o-border-bottom-right-radius:@borderadius;
+}
+
+//三角匹配模式
+.triangle(top,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent @c transparent;
+    border-style:dashed dashed solid dashed;
+}
+.triangle(bottom,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:@c transparent transparent transparent;
+    border-style:solid dashed dashed dashed;
+}
+.triangle(left,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent @c transparent transparent;
+    border-style:dashed solid dashed dashed;
+}
+.triangle(right,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent transparent @c;
+    border-style: dashed dashed dashed solid;
+}
+.triangle(@_,@w:5px,@c:#ccc){
+    width:0;
+    height:0;
+    overflow:hidden;
+}
+
+
+.sanjiao{
+    .triangle(top,20px);
+}
+
+.sjtop(){
+    border-width:20px;
+    border-style:dashed dashed solid dashed;
+}
+
+.sjtop2(){
+    border-style:dashed;
+    border-color:transparent;
+    border-width:0 30px 20px 0;
+}
+
+
+/* clicked color */
+.clcikActive{
+	color: @cw;
+	background: @cbgb;
+	.borderRadius(15px);
+}
+/*单行载断*/
+.clip(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+/*单行载断溢出省略号*/
+.ellipsis(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*3行载断溢出省略号*/
+.spill2(){
+    overflow:hidden;
+    display:-webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+.spill3(){
+    overflow:hidden;
+    display:-webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+.spill4(){
+    overflow:hidden;
+    display:-webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp:4;
+    -webkit-box-orient: vertical;
+}
+.spill6(){
+    overflow:hidden;
+    display:-webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp:6;
+    -webkit-box-orient: vertical;
+}
+
+/* 面包屑 */
+.crumb{display:none;}
+@media (min-width:768px){
+	.crumb{
+		display:block;
+		.cf();	
+		line-height:50px;
+		p{
+			color:#999;
+			a{
+				padding:0 10px;
+			}
+			span{
+				padding-left:10px;
+			}
+		}
+	}
+}
+/* 背景自适应 */
+.bg(@background-size){
+    background-size: @background-size;
+    -webkit-background-size:@background-size;
+    -moz-background-size: @background-size;
+    -o-background-size: @background-size;
+    -ms-background-size:@background-size;
+}
+/* 定位 */
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}

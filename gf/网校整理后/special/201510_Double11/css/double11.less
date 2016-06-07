@@ -1,0 +1,829 @@
+/* 
+
+Name：双十一专题
+Author：lotus li ming
+Time:2015-1029
+
+ */
+
+@import "../../../css2015/common/variable.less";
+
+
+
+//iconfont
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.double11{
+	background-image:url(../images/frmDE_01.jpg);
+	background-repeat:no-repeat;
+	background-position:top center;
+	background-size:contain;
+	width:100%;
+	background-color:#c91d45;
+}
+
+/* 共用ttl h2 */
+.uicb-ttl{
+  background-image:url(../images/frmDE_03.png);
+  background-repeat:no-repeat;
+  background-position:top center;
+  color:@cw;
+  background-size:370px 37px;
+  h2{
+    .f16(); 
+
+      font-weight: bold;
+      text-align: center;
+      padding: 20px  0;
+      img{
+        width:38px;
+        height: auto;
+      }
+    }
+  
+}
+@media(min-width: 480px){
+  .uicb-ttl{
+  background-size:520px 47px;
+  h2{.f18();} 
+}
+}
+@media(min-width: 640px){
+  .uicb-ttl{
+  background-size:708px 57px;
+  h2{.f28();
+    img{
+      width:48px;
+      height: auto;
+    }
+  } 
+}
+}
+@media(min-width: 1200px){
+  .uicb-ttl{
+    background-size:1200px 57px;
+    h2{.f40();
+      img{
+        width:65px;
+        height: auto;
+      }
+     }
+  }
+}
+
+
+/*大图*/
+.db11_banner{
+	padding:20px 0;
+	text-align:center;
+	img{
+		width:100%;
+		max-width:957px;
+	}
+}
+
+
+/* 倒计时 */
+.ztcountdown{
+  padding: 40px 10px;
+
+  li{
+      background: url(../images/timebg.png) no-repeat;
+      background-size: 100% 100%;
+      width: 10%;
+      display: inline-block;
+      img{
+          width: 90%;
+          margin: 10px 5%;
+      }
+      
+      &:nth-child(2),&:nth-child(4),&:nth-child(6){margin-right:3.5% ;}
+  }
+  
+  p{
+      margin-top: 10px;
+      color: @cw;
+      span{
+          width: 20%;
+          display: inline-block;
+          text-align: center;
+          .f16();
+          font-weight: bold;
+      }
+      .hour{
+          margin: 0 6%;
+      }
+      .minu{margin-right: 6%;}
+  }
+}
+
+@media(min-width: 640px){
+ .ztcountdown{
+   li{
+       width: 10.5%;
+   }
+   p{
+       span{
+           .f24();
+       }
+   }
+ }   
+}
+
+@media(min-width: 768px){
+ .ztcountdown{
+   width: 768px;
+   margin: 50px auto;
+
+ }   
+}
+
+/* 壕礼七重天  start */
+.db11_gifts{
+	ul{
+		width:292px;
+		margin:0 auto 40px;
+		.cf();
+	}
+	li{
+		width: 100%;
+		height: 233px;
+		margin-bottom: 14px;
+		text-align: center;
+		background: url(../images/gifts_bg.png) center center no-repeat;
+		float:left;
+		box-sizing: border-box;
+		position: relative;
+		padding:15px 10px;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-ms-background-size: cover;
+		h4{
+			.f20();
+			strong{.f24();}
+		}
+		q{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			color:@cw;
+			background: #e60012;
+			border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;
+			font-weight: bold;
+			.f28();
+		}
+		h3{
+			position: absolute;
+			bottom: -18px;
+			left:50px;
+			.f30();
+			font-weight: bold;
+			img{
+				margin:-10px 0 0 -10px;
+				vertical-align:middle;
+				transform:scale(0.6,0.6);
+				display: inline-block;
+			}
+		}
+	}
+}
+@media(min-width:640px){
+.db11_gifts{
+	ul{
+		width:606px;
+	}
+	li{
+		width: 292px;
+		height: 233px;
+		margin:0 20px 20px 0;
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+		&:nth-child(7){
+			margin-left: 150px;
+		}
+	}
+}
+}
+
+@media(min-width:1200px){
+.db11_gifts{
+	ul{
+		width:1200px;
+	}
+	li{
+
+		&:nth-child(2n){
+		margin:0 20px 30px 0;
+		}
+		&:nth-child(1),&:nth-child(2),&:nth-child(3){
+		width: 383px;
+		height: 263px;
+		margin:0 26px 30px 0;
+		h3{
+			bottom: -10px;
+			font-size: 40px;
+			left:76px;
+			img{
+				transform:scale(0.8,0.8);
+				margin:-12px 0 0 -5px;
+			}
+		}
+		}
+		&:nth-child(2){
+			margin-right:25px;
+		}
+		width: 285px;
+		height: 225px;
+		margin:0 20px 30px 0;
+		&:nth-child(3),&:nth-child(7){
+			margin:0 0 30px 0!important;
+		}
+	}
+}
+}
+
+
+
+
+//壕礼七重天 
+.db11_goods1{
+    margin-bottom: 60px;
+    ul{
+      width: 99%;
+      margin:0 auto;
+       li{ 
+        background: #c6112e;
+        margin-bottom: 20px;
+        height: 78px;
+        box-shadow:0 3px 5px rgba(0,0, 0, 0.6);
+        .cf();
+        p{
+          color: @cw;
+          padding-top: 10px;
+          line-height: 22px;
+          .f12();
+
+          strong{.f14();}
+        }
+        h3{
+          .f18();
+          background: url(../images/double_01.png) right 0 no-repeat;
+          background-size:cover !important;
+          -webkit-background-size:cover !important;
+          -moz-background-size:cover!important;
+          -ms-background-size:cover!important;
+          -o-background-size:cover!important;
+          font-weight: bold;
+          width:160px;
+          line-height:78px;
+          box-sizing: border-box;
+          position: relative;
+          color:#c91d45;
+          float:left;
+          padding-left: 5px;
+          img{
+          transform: scale(0.3,0.3);
+           -o-transform:scale(0.3,0.3);
+      -webkit-transform:scale(0.3,0.3);
+          -moz-transform:scale(0.3,0.3);
+          -ms-transform:scale(0.3,0.3);
+          vertical-align: middle;
+          margin:-7px 0 0 -28px;
+          }
+        }
+          em{
+          display: none;
+        }
+        &:nth-child(2){
+            h3{background: url(../images/double_02.png) right 0 no-repeat;}
+          }
+          &:nth-child(3){
+            h3{background: url(../images/double_03.png) right 0 no-repeat;}
+          }
+          &:nth-child(5){
+            h3{background: url(../images/double_04.png) right 0 no-repeat;}
+          }
+          &:last-child{
+            h3{background: url(../images/double5.png) right 0 no-repeat;}
+          }
+       }
+    }
+}
+
+@media (min-width:640px) {
+
+.db11_goods1{
+    ul{
+      width:90%;
+       li{ 
+        height: 160px;
+        h3{
+          .f36();
+          width:335px;
+          line-height:160px;
+          padding-left:15px;
+          img{
+          transform: scale(0.7,0.7);
+           -o-transform:scale(0.7,0.7);
+      -webkit-transform:scale(0.7,0.7);
+          -moz-transform:scale(0.7,0.7);
+          -ms-transform:scale(0.7,0.7);
+          margin:-14px 0 0 -10px;
+          }
+        }
+        .long{
+          padding-top: 18px;
+          line-height: 30px;
+        }
+         p{
+          padding-top:25px;
+          line-height:36px;
+          .f18();
+          strong{font-size: 22px;}
+        }
+        em{
+        display: none;
+      }
+       }
+    }
+}
+}
+
+@media (min-width:1200px) {
+.db11_goods1{
+    ul{
+      width:1034px;
+       li{ 
+        height: 174px;
+        position: relative;
+        h3{
+          .f40();
+          width:430px;
+          line-height:174px;
+          padding-left:25px;
+          img{
+          transform: scale(1,1);
+           -o-transform:scale(1,1);
+      -webkit-transform:scale(1,1);
+          -moz-transform:scale(1,1);
+          -ms-transform:scale(1,1);
+          margin:-22px 0 0 10px;
+          }
+        }
+        .long{
+          line-height:45px;
+          width:360px;
+        }
+         p{
+          padding-top:35px;
+          line-height:45px;
+          .f24();
+          float: left;
+        }
+        em{
+          display: block;
+          position: absolute;
+          right:30px;
+          top:10px;
+        }
+       }
+    }
+}
+}
+
+
+
+//明明可以靠脸却要拼实力
+.db11_goods2{
+    .cf();
+   
+ul{
+  width:296px;
+  .cf();
+  margin:0 auto;
+
+li{
+  width: 230px;
+  height: 156px;
+  margin-bottom: 10px;
+  background-color: #fff100;
+
+
+  .f14();
+  font-weight: bold;
+  position: relative;
+  p{
+    width:138px;
+    height: 119px;
+    float: left;
+    padding: 13px;
+  }
+  em{
+    color: #c91d45;
+    font-weight: bold;
+  }
+  span{
+    width:299px;
+    height: 220px;
+    background: url(../images/frmDE_13.png) no-repeat;
+    background-size: cover;
+    transform:scale(0.5,0.5);
+     -o-transform:scale(0.5,0.5);
+      -webkit-transform:scale(0.5,0.5);
+          -moz-transform:scale(0.5,0.5);
+          -ms-transform:scale(0.5,0.5);
+    position: absolute;
+    top: -40px;
+    left:80px;
+  
+  }
+  .IMG01{
+    background: url(../images/frmDE_14.png) no-repeat;
+    background-size: 100%;
+  }
+  .IMG02{
+    background: url(../images/frmDE_15.png) no-repeat;
+    background-size: 100%;
+  }
+  .IMG03{
+    background: url(../images/frmDE_16.png) no-repeat;
+    background-size: 100%;
+  }
+}
+}
+
+}
+
+@media(min-width:640px){
+ .db11_goods2{
+  margin-top: 30px;
+  ul{
+    width:706px;
+    li{
+      width:268px;
+      height: 188px;
+      float: left;
+      .f16();
+       p{
+        width:150px;
+       }
+      &:nth-child(2n+1){
+        margin-right: 14%;
+      }
+     span{
+      transform:scale(0.6,0.6);
+       -o-transform:scale(0.6,0.6);
+      -webkit-transform:scale(0.6,0.6);
+          -moz-transform:scale(0.6,0.6);
+          -ms-transform:scale(0.6,0.6);
+         top: -20px;
+         left:108px;
+         
+     }
+    }
+  }
+ }   
+}
+
+
+
+
+@media(min-width:1200px){
+  .db11_goods2{
+    .cf();
+       ul{ 
+         width: 1200px;
+
+      li{
+      width: 455px;
+      height: 265px;
+	  box-sizing:border-box;
+	  padding-left:20px;
+	  padding-top:20px;
+	  padding-right:160px;
+      .f20();
+      p{
+        width:255px;
+        padding:18px;
+       }
+	&:last-child{
+		padding-right:170px;
+	}
+    span{
+      transform:scale(1,1);
+      -o-transform:scale(1,1);
+      -webkit-transform:scale(1,1);
+          -moz-transform:scale(1,1);
+          -ms-transform:scale(1,1);
+         
+    top:18px;
+    left:290px;
+    }
+   }
+  }
+}
+}
+//我们聊聊价格吧
+.db11_goods3{
+  padding:80px 6px;
+  .cf();
+  ul{
+    width: 314px;
+    height: 410px;
+    margin:0 auto;
+
+li{
+  width:152px;
+  height:427px;
+  float: left;
+  margin-bottom: 5px;
+  background:url(../images/frm4.png) no-repeat;
+  background-size:cover;
+  text-align: center;
+  margin-right: 5px;
+  img{
+    display:block;
+    width:66px;
+    margin:0 auto;
+  }
+  p{
+    margin-top:41%;
+  }
+   em{
+      
+      height: 35px;
+      display: block;
+    color:#c91d45;
+    font-weight: bold;
+    margin:20px auto;
+    .f16();
+    }
+    i{
+      
+      font-weight: bold;
+      height: 40px;
+
+    }
+ &:nth-child(2n+1){
+  
+  color: @cw;
+ }
+ 
+  &:nth-child(2n){
+    background:url(../images/frm3.png) no-repeat;
+    background-size: cover;
+    em{
+      color:@cw;
+    }
+   
+
+  }
+}
+}
+}
+
+
+@media(min-width:640px){
+  .db11_goods3{
+   
+       ul{ 
+        width:560px;
+        .cf();
+        margin:0 auto;
+      li{
+        width:180px; 
+        height:473px;
+        line-height: 25px;
+      }
+    }
+
+}       
+}
+
+@media(min-width:1200px){
+  .db11_goods3{
+   
+       ul{ 
+        width:1000px;
+        .cf();
+        margin:0 auto;
+      li{
+        width:190px; 
+        height:540px;
+        p{
+          margin-top:49%;
+          .f16();
+          i{
+            .f18();
+          }
+        }
+        em{
+            .f18();
+          }
+      }
+    }
+
+}       
+}
+.db11_gd4{
+  .cf();
+  ul{
+    width:300px;
+    margin:0 auto;
+    li{
+width:145px;
+height: 376px;
+    }
+  }
+}
+
+@media(min-width:640px){
+  .db11_gd4{
+  .cf();
+  ul{
+    width:600px;
+    margin:0 auto;
+    li{
+width:180px;
+height: 480px;
+    }
+  }
+}
+}
+
+
+@media(min-width:1200px){
+  .db11_gd5{
+  .cf();
+  ul{
+    width:600px;
+    margin:0 auto;
+    li{
+width:180px;
+height: 480px;
+&:nth-child(n){
+  margin-right:20px; 
+}
+    }
+  }
+}
+}
+
+
+
+/* 友情链接 start */
+.db11_friends{
+	margin-top: 20px;
+	ul{
+		.cf();
+		width: 314px;
+		margin:0 auto;
+	}
+	li{
+		margin:5px;
+		float:left;
+		div{display: none;}
+		a{
+			display: block;
+			width: 147px;
+			height: 100px;
+			background: url(../images/friends_01.png) center center no-repeat;
+			background-size: cover!important;
+			-webkit-background-size: cover!important;
+			-moz-background-size: cover!important;
+			-ms-background-size: cover!important;
+			-o-background-size: cover!important;
+		}
+		&:nth-child(2){
+			a{background: url(../images/friends_02.png) center center no-repeat;}
+		}
+		&:nth-child(3){
+			a{background: url(../images/friends_03.png) center center no-repeat;}
+		}
+		&:nth-child(4){
+			a{background: url(../images/friends_04.png) center center no-repeat;}
+		}
+	}
+}
+@media (min-width:480px){
+	.db11_friends{
+	ul{
+		width: 480px;
+	}
+	li{
+		a{
+			width:230px;
+			height: 150px;
+		}
+	}
+}
+}
+
+@media (min-width:640px){
+	.db11_friends{
+	ul{
+		width: 98%;
+	}
+	li{
+		width: 24%;
+		margin:0.5% 0.5% 0 0.5%;
+		a{
+			width: 100%;
+			height:85px;
+			padding:10% 0;
+		}
+	}
+}
+}
+ @media (min-width:1200px){
+	.db11_friends{
+		margin-top: 120px;
+	ul{
+		width:1200px;
+	}
+	li{
+		width: 290px;
+		margin:5px 5px 0 5px;
+		a{
+			height:194px;
+			padding: 0;
+		}
+		position: relative;
+		div{
+			position: absolute;
+			bottom:0;
+			left:0;
+			width: 100%;
+			height:220px;
+			background:#2d0000;
+			text-align: center;
+			padding:50px 0 30px;
+			i{
+				width: 40px;
+				height: 40px;
+				background: #ffa800;
+				position: absolute;
+				top:-20px;
+				left:50%;
+				margin-left:-20px;
+				color: #e80d11;
+				.f24();
+				line-height: 40px;
+				transform:rotate(90deg);
+				-webkit-transform:rotate(90deg);
+				-moz-transform:rotate(90deg);
+				-ms-transform:rotate(90deg);
+				-o-transform:rotate(90deg);
+			}
+			a{
+				background-image:none!important;
+				color:@cw;
+				width:140px;
+				height: 45px;
+				background: #c91d45!important;
+				margin:30px auto 0;
+				.f24();
+				font-weight: bold;
+				line-height: 45px;
+				border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;
+			}
+			h3{
+				.f30();
+				color:@cw;
+				font-weight: bold;
+			}
+			h4{
+				margin-top: 15px;
+				font-weight: bold;
+				.f24();
+				color:#c91d45;
+			}
+		}
+		&:hover{
+			div{display: block;}
+		}
+	}
+}
+}

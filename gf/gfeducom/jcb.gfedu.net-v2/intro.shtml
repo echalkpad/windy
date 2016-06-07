@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯竞赛赛事介绍-金程杯</title>
+<meta name="keywords" content="金程杯竞赛,金程杯比赛,金程杯赛事介绍">
+<meta name="description" content="金程杯赛事介绍：针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，面向全国大学生群体的公益活动，设立于2012年，已成功举办三届！-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe614;</i>
+    <h2>赛事介绍</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p2_intro">
+            <h4>我们正青春，我们聚金程</h4>
+            <p>金程杯大赛自2012年设立以来，已经举办四届，分别以“Excel金融建模”、“理财案例分析” “职业规划”以及“圆梦计划”为比赛内容，吸引了400多所高校的60万名学生关注，数万名学生报名参赛。</p>
+            <p>2016金程杯·全国大学生精优挑战赛是中国市场协会、上海市团委、中国金融信息中心、上海金程教育培训有限公司联手推出的全国性校园公益赛事。本次大赛在前四届的基础上得到全新升级，旨在为高校大学生与用人企业构建零距离交流平台。</p>
+            <p>——解决大学生实习就业之难。激发每位同学身上的精英天赋，发现非凡的精英DNA，将其培养成为未来的职场精英。</p>
+            <p>——解决用人单位求贤之难。为企业与机构发现、选拔、输送专业精优人才。</p>
+            <p>大赛活动设立南、北两大赛区。25个城市，100所名校同步开赛。在初赛开始之前，将会在北京、上海、广州、南京、杭州、西安、天津等15个城市举办线下名师讲坛，邀请在大学生群体中有影响力的行业知名人士进入高校演讲，分享他们的个人成长经历，引导有志于精优成长的青年人找寻职业成长方向。</p>
+            <div class="action">
+                <ul>
+                    <li><a href=""><span>报名</span><small>赢职场网报名</small><i></i></a></li>
+                    <li><a href=""><span>初赛</span><small>电子简历制作及视频简历制作</small><i></i></a></li>
+                    <li><a href=""><span>复赛</span><small>营销案例策划</small><i></i></a></li>
+                    <li><a href=""><span>决赛</span><small>北方赛区、南方赛区商业案例展示</small><i></i></a></li>
+                    <li><a href=""><span>入营</span><small>取得上海精优密训营资格</small><i></i></a></li>
+                </ul>
+            </div>
+            <p>谁能把握住这个机会，谁就能成就自己，谁能技压群雄？</p>
+            <p>真正的精优高手都是在实践中摸爬滚打、曲折前行。你付出的不是真金白银，却一样能体会真正的职场沉浮、惊心动魄。与高手过招、与大佬切磋，无论输赢，收获的一定还有胸怀、气魄和定力。再说，你不会是孤胆英雄，我们还有一堆名企导师、行业大佬指导你。</p>
+            <p>海阔凭鱼跃，天高任鸟飞。既然选择了远方，便只顾风雨兼程。无限美好的未来就在前方，路就在脚下，现在就是开始的最佳起点。</p>
+            <p>青年是热情、活力、创造力的象征。未来美好的一切，全在我们自己的手中。希望我们的青年人，尤其是大学生：</p>
+            <p>“不做蔓延四溢、野蛮攀爬的藤枝，只做坚挺笔直直上云霄的青松！”</p>
+            <p>不做漫无边际、随波逐流的浮萍，只做追逐温暖一路向阳的候鸟！</p>
+            <p>心有猛虎，细嗅蔷薇。立志须如山，行道当如水。心中既有远大的目标，那就一步步脚踏实地去实现。中国的青年应当如此！</p>
+            <p>欢迎加入2016金程杯·全国大学生精优挑战赛，从此你将不再孤独！！！</p>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(1)").addClass("selecded");
+</script>
+
+</body>
+</html>

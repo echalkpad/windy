@@ -1,0 +1,345 @@
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+.login_after {
+  position: absolute;
+  right: 0;
+  top: -6px;
+  z-index: 9;
+  color: #ffffff;
+}
+.login_after li {
+  line-height: 65px;
+  width: 40px;
+  float: left;
+}
+.login_after li .msg_span {
+  position: absolute;
+  top: 8px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: #ca3131;
+  min-width: 18px;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+}
+.login_after li p {
+  width: 100%;
+}
+.login_after li p i {
+  font-size: 20px;
+}
+.login_after li p .icon_email {
+  font-size: 22px;
+}
+.login_after li p img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.login_after li p span {
+  font-size: 12px;
+}
+.login_after li dl {
+  display: none;
+  width: 120px;
+  margin-left: -35px;
+  border: 1px solid #6d7297;
+  box-shadow: 0 0 6px #183661;
+  background: #ffffff;
+  color: #666666;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.login_after li dl dt {
+  width: 100%;
+  float: right;
+  margin-top: -38px;
+}
+.login_after li dl dt .tran {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #666767;
+}
+.login_after li dl dd {
+  line-height: 0;
+  font-size: 12px;
+}
+.login_after li dl dd a {
+  font-size: 12px;
+}
+.login_after li dl dd a:hover {
+  text-decoration: none !important;
+}
+.login_after li .emialli {
+  width: 380px;
+  margin-left: -255px;
+}
+.login_after li .emialli dt {
+  height: 10px;
+}
+.login_after li .emialli dt span {
+  margin-left: 65.5%;
+}
+.login_after li .emialli dd {
+  padding: 0;
+  width: 100%;
+  margin-top: 0px;
+}
+.login_after li .emialli dd ul {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.login_after li .emialli dd ul li {
+  width: 33.33%;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+}
+.login_after li .emialli dd ul li a {
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.login_after li .emialli dd ul li:hover {
+  border-bottom: 1px solid #00e4ff;
+}
+.login_after li .emialli dd ol {
+  width: 100%;
+  display: inline-block;
+}
+.login_after li .emialli dd ol li {
+  width: 94%;
+  margin-left: 3%;
+  line-height: 40px;
+  font-size: 12px;
+  border-bottom: 1px dashed #cccccc;
+}
+.login_after li .emialli dd ol li a {
+  text-decoration: none;
+  line-height: 30px;
+  padding: 0;
+  font-size: 12px;
+}
+.login_after li .emialli dd ol li a h3 {
+  float: left;
+}
+.login_after li .emialli dd ol li a h4 {
+  float: right;
+}
+.login_after li .emialli dd ol li a:hover {
+  text-decoration: none;
+}
+.login_after li .emialli dd p {
+  width: 94%;
+  margin-left: 3%;
+  padding: 20px 0;
+  text-align: left;
+}
+.login_after li .emialli dd p span {
+  float: right;
+}
+.login_after li .emialli dd p span a {
+  display: inline;
+}
+.login_after li .emialli .hide {
+  display: none;
+}
+.login_after li .emialli #xtKonw {
+  position: relative;
+  width: 380px;
+  height: 200px;
+  overflow: hidden;
+}
+.login_after li .emialli #xtKonw .active_else_in {
+  position: absolute;
+  width: 100%;
+}
+.login_after li a:hover {
+  color: #00e4ff;
+  border-bottom: 0;
+}
+.login_after li:first-child {
+  width: 80px;
+}
+.login_after li:nth-child(2) dl {
+  width: 250px;
+  margin-left: -105px;
+}
+.login_after li:nth-child(2) dl dt {
+  height: 20px;
+}
+.login_after li:nth-child(2) dl dt span {
+  margin-left: 40%;
+}
+.login_after li:nth-child(2) dl dd {
+  width: 90%;
+  margin-left: 5%;
+  padding: 15px 0px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.login_after li:nth-child(2) dl dd i {
+  font-size: 20px;
+}
+.login_after li:nth-child(2) dl dd a {
+  padding: 0 10px 0 5px;
+}
+.login_after li:nth-child(2) dl .nowStu {
+  margin-left: 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 21px 10px;
+}
+.login_after li:last-child {
+  width: 110px;
+}
+.login_after li:last-child dl dt {
+  margin-bottom: -20px;
+}
+.login_after li:last-child dl dt span {
+  margin-left: 40%;
+}
+.login_after li:last-child dl dd {
+  line-height: 30px;
+  text-align: center;
+}
+.login_after li:hover dl {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .login_after {
+    right: 50% !important;
+    margin-right: -620px;
+  }
+}
+.active_Login {
+  color: #00e4ff;
+  border-bottom: 1px solid #00e4ff !important;
+}

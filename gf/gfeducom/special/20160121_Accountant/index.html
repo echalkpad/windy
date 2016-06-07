@@ -1,0 +1,619 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>老汤煲会计</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/gfiphone.png">
+<link rel="shortcut icon" href="images/gfico.ico">
+
+<link href="../../css/headfooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/nav.css" rel="stylesheet" type="text/css" />
+<link href="css/accountant.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="../../script/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+<!-- 调用的jQuery　v1.7.2JS -->
+<script type="text/javascript" src="../../script/jquery-2.1.4.min.js"></script>
+
+<!-- 表单验证JS -->
+<script type="text/javascript" src="../../script/bdscript.js" ></script>
+<script type="text/javascript" src="../../script/bdloginReg.js" ></script>
+<script type="text/javascript" src="../../script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="../../script/headfoot.js"></script>
+<!-- 公用移动侧边栏推出插件 -->
+<script src="../../script/jquery.mmenu.min.all.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('#menu').mmenu(
+        );
+    });
+</script>
+
+<!-- 专题JS -->
+<script type="text/javascript" src="script/accountant.js"></script>
+</head>
+
+<body>
+
+<nav id="menu"  class="mbnavadd">
+    <h2><a href=""><img src="../../images/sidebarreg.png"  alt=""/>月里飘舞<i class="icon-gfright">&#xe609;</i></a></h2>
+    <dl>
+        <dt class="selecded"><a href="#" title="金程网校">金程网校</a></dt>
+        <dd><a href="" title="金程内训">金程内训</a></dd>
+        <dd><a href="" title="金程考研">金程考研</a></dd>
+        <dd><a href="" title="金程分校">金程分校</a></dd>
+        <dd><a href="" title="金程动态">金程动态</a></dd>
+    </dl>
+</nav>
+
+<div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+    <article>
+    <h3><a href="javascript:;" id="alogin">登录</a><a href="javascript:;" id="aregister">注册</a></h3>
+    <h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+    <h6>
+     <nav>
+        <a href="javascript:;">金程网校</a>
+        <a href="javascript:;">金程内训</a>
+        <a href="javascript:;">金程考研</a>
+        <a id="school" href="javascript:">金程分校<i></i><em></em></a>
+        <a href="javascript:;">金程动态</a>
+    </nav>
+    </h6>
+    <section>
+    <dl>
+    <dt><h5>虹口分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a><a href="javascript:;">经济学考研</a><a href="javascript:;">企业内训</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>徐汇分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>浦东分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>北京分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a><a href="javascript:;">经济学考研</a><a href="javascript:;">企业内训</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>南京分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>深圳分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a></dd>
+    </dl>
+    </section>
+
+    </article>
+    </div>
+    <!-- proheader-->
+</div>
+<!-- header end-->
+
+
+
+<!-- 中间内容 start-->
+<div class="accountant">
+    <!-- 首屏 -->
+    <div class="first_screen">
+        <div class="accountant_main">
+            <div class="banner">
+                <img src="images/banner_02.png">
+                <img src="images/banner_06.png" class="banner_1">
+                <img src="images/banner_01.png" class="banner_2">
+                <img src="images/banner_07.png" class="banner_3">
+            </div>
+            <div class="hard">
+                <h2><img src="images/banner_04.png"></h2>
+                <table>
+                    <tr>
+                        <td>CPA会计难，每年通过率10%，长期股权投资涉及内容比较多，体系庞杂，章与章关联性比较强</td>
+                        <td>要弄懂这个章，需要花费的时间很长，且为历年必考重点，不能战略性放弃。</td>
+                        <td>要弄懂长投，必须要弄懂权益法，不理解权益法，就没有办法理解长投。</td>
+                    </tr>
+                </table>
+            </div>
+            <p class="phone"><i class="icon-phone">&#xe900;</i>400-070-9596</p>
+        </div>
+        <!-- 边框线 -->
+        <div class="accountant_hr"></div>
+    </div>
+    <!-- 为什么学习会计第四章 -->
+    <div class="accountant_four">
+        <div class="accountant_main">
+            <section>
+                <h3>老汤为什么要讲会计的第四章？</h3>
+                <p>老汤将长投归纳成了12个单元，把非常难以理解的权益法简单归结为<span>“1+4步”</span>法！</p>
+                <strong>一举突破长投，起到事半功倍的效果。</strong>
+            </section>
+            <article>
+                <h2>怎么学习会计第四章？</h2>
+                <p><i class="icon-right">&#xe609;</i>传统的网课课程学习使得学生学习方式枯燥、学习时间没有规划性。进而导致学生自主学习能力下降、知识点记忆不扎实。</p>
+                <p><i class="icon-right">&#xe609;</i>为了激发学习热情并充分利用有限的碎片时间高效的提高考试成绩、吸收知识点！以确保一次通过CPA会计考试。金程财经研发的通关计划——粉末化学习法为此应运而生。</p>
+                <p><i class="icon-right">&#xe609;</i>形象的讲就是将CPA会计中最难的第四章内容比喻为12种最新鲜的食材煲出的“老汤”。任何“老汤”都是日积月累所得，而且都是从第一锅汤来的。</p>
+                <p><i class="icon-right">&#xe609;</i>而真正慢火熬制出来所谓世间最味美、最纯的汤——“老汤”，必须斟酌每一道工艺！</p>
+            </article>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <!-- 粉末学习法 -->
+    <div class="method">
+        <div class="accountant_main">
+            <div class="accountant_hd">
+                <h2>粉末化学习法</h2>
+                <q></q>
+                <p>将每一种食材严格控制在4道工序内</p>
+            </div>
+            <ul class="mob_method">
+                <li>
+                    <section>
+                    <div><h3>视频精讲</h3></div>
+                    <p>第一道工序/食材精选</p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                    <div><h3>内容拆分</h3></div>
+                    <p>第二道工序/食材粉碎</p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                    <div><h3>课后练习</h3></div>
+                    <p>第三道工序/文火慢炖</p>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                    <div><h3>知识检测</h3></div>
+                    <p>第四道工序/滋品入味</p>
+                    </section>
+                </li>
+            </ul>
+            <div class="video">
+                <section>
+                    <h3>四重工序循环煲制</h3>
+                    <h4>一汤纯正、品12道汤味！</h4>
+                    <p>学习犹获一宝，重复通关，愈老汤资味愈浓，老汤能承诺的不只是“煲会计”更是传授一种学习方法。</p>
+                    <h5>精简的是时间，不减的是品“味”!</h5>
+                </section>
+                <article><img src="images/method_05.png"></article>
+            </div>
+            <div class="accountant_hd">
+                <h2>《长期股权投资及合营安排》课程安排</h2>
+                <q></q>
+            </div>
+            <ul class="Schedule">
+                <li class="selector">
+                    <a href="">
+                    <i>4.0</i>
+                    <p><span data-text="第四章导读">第四章导读</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.1</i>
+                    <p><span data-text="非同一控制下控股合并的长期股权投资">非同一控制下控股合并的长期股权投资</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.2</i>
+                    <p><span data-text="同一控制下控股合并的长期股权投资">同一控制下控股合并的长期股权投资</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.3</i>
+                    <p><span data-text="除企业合并外形成以外，以其他方式取得的初始投资成本">除企业合并外形成以外，以其他方式取得的初始投资成本</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.4</i>
+                    <p><span data-text="长期股权投资的成本法">长期股权投资的成本法</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.5</i>
+                    <p><span data-text="长期股权投资“1+4步”">长期股权投资“1+4步”</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.6</i>
+                    <p><span data-text="对于被投资企业利润的调整">对于被投资企业利润的调整</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.7</i>
+                    <p><span data-text="增持投资形成“跨越”">增持投资形成“跨越”</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.8</i>
+                    <p><span data-text="减持股份造成“跨越”">减持股份造成“跨越”</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.9</i>
+                    <p><span data-text="组间转换">组间转换</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.10</i>
+                    <p><span data-text="合营安排的定义和特征">合营安排的定义和特征</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                    <i>4.11</i>
+                    <p><span data-text="共同经营参与方的会计处理">共同经营参与方的会计处理</span></p>
+                    <em>免费学习</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+
+    <!-- 第四章导读 -->
+    <div class="introduction current">
+        <div class="accountant_main">
+            <em>4.0</em>
+            <h3>第四章导读</h3>
+            <p>第四章是我们学习会计的一大难点，本章全面的列举了我们在学习过程中较难消化的一些知识点，在这里我们应当关注：</p>
+            <ul>
+                <li>（1）同一控制与非同一控制下控股合并的长期股权投资；</li>
+                <li>（2）除企业合并以外，以其他方式取得的初始投资成本；</li>
+                <li>（3）长期股权投资的成本法、“1+4”步；</li>
+                <li>（4）对于被投资企业利润的调整.</li>
+                <li>（5）增、减持投资股份所造成的“跨越”；</li>
+                <li>（6）组件转换；</li>
+                <li>（7）合营安排的定义与特征；</li>
+                <li>（8）共同经营参与方的会计处理。</li>
+            </ul>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.1</em>
+            <h3>非同一控制下控股合并的长期股权投资</h3>
+            <section>
+                <p>非同一控制下的控股合并中，购买方应当以购买方付出的资产、发生或承担的负债、发行的权益性证券的公允价值之和作为长期股权投资的初始投资成本。</p>
+                <p>购买方为企业合并发生的审计、法律服务、评估咨询等中介费用，作为“管理费用”，计入当期损益。与发行债券、权益性证券相关的佣金、手续费等应计入债务性或权益性证券的初始计量金额。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.2</em>
+            <h3>同一控制下控股合并的长期股权投资</h3>
+            <section>
+                <p>对于同一控制下的企业合并，从能够对参与合并方在合并前及合并后均实施最终控制的一方来看，最终控制方在企业合并前及合并后能够控制的资产并没有发生变化。同一控制下要掌握的会计处理原则是以账面价值计量，且合并不会产生新的资产和负债，交易不会产生投资收益。初始投资成本是合并日按照持股比例与被合并方所有者权益在最终控制方合并财务报表的账面价值中享有的份额计算的结果。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.3</em>
+            <h3>除企业合并外形成以外，以其他方式取得的初始投资成本</h3>
+            <section>
+                <p>不控股合并形成的长期股权投资，取得时初始投资成本的确定，应当按照实际支付的购买价款作为长期股权投资的初始投资成本，包括与取得长期股权投资直接相关的费用、税金及其他必要支出。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.4</em>
+            <h3>长期股权投资的成本法</h3>
+            <section>
+                <p>成本法的适用于企业持有的、能够对被投资单位实施控制的长期股权投资。</p>
+                <p>成本法是指投资按照成本计价的方法。投资企业应当按照享有被投资单位宣告发放的现金股利或利润确认投资收益。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.5</em>
+            <h3>长期股权投资权益法“1+4步”</h3>
+            <section>
+                <p>权益法的适用范围是对被投资单位具有共同控制或者重大影响的长期股权投资，即对合营企业投资及联营企业投资。</p>
+                <p>权益法的处理原则是长期股权投资要随着被投资方所有者权益的变动而变动。在本讲中，我们会具体给大家介绍长期股权投资权益法的“1+4步”法，其中“1”指长期股权投资初始投资成本的调整，“4”分别指长期股权投资损益的确认，取得现金股利或利润的处理，其他综合收益的处理和被投资单位所有者权益其他变动的处理。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.6</em>
+            <h3>对于被投资企业利润的调整</h3>
+            <section>
+                <p>权益法下，我们要对被投资企业的利润进行调整，有以下两步调整。</p>
+                <p>1、投资时点的被投资方可辨认净资产账面价值和公允价值不等对净利润影响的调整；</p>
+                <p>2、对内部交易的调整。投资企业与其联营企业及合营企业之间发生的无论是顺流交易还是逆流交易产生的未实现内部交易收益，未实现部分都应予以抵销。若投资企业需要编制合并报表，在合并报表编制时，需对个别报表中已记录的会计科目进行调整。</p>
+                <p>有关未实现内部交易损失属于所转让资产发生减值损失以及投出业务实现当期损益，不应予以抵销。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.7</em>
+            <h3>增持投资形成“跨越”</h3>
+            <section>
+                <p>由增持而形成核算方法的转换有三种情况：一是由金融资产转换为权益法；二是由金融资产转换为成本法；三是由权益法转换为成本法。三种情况个别报表和合并报表的会计处理最关键的问题是是否“跨越会计界线”。若跨越会计界线，就应视同处置处理。其中权益法转成本法下，个别报表和合并报表两表视角不同形成的投资收益归属期间的调整是本节重难点。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.8</em>
+            <h3>减持股份造成“跨越”</h3>
+            <section>
+                <p>由减持而形成核算方法的转换也有三种情况：一是由权益法转换为金融工具；二是由成本法转换为金融工具；三是由成本法转换为权益法。</p>
+                <p>减持形成的投资收益在个别报表和合并报表下怎么处理？原持有的商誉在减持后怎么处理等问题都是本节重难点。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.9</em>
+            <h3>组间转换</h3>
+            <section>
+                <p>同一类别之间相互增减但是没有“跨越”，可以分为三大类，六种情况：</p>
+                <p>因增减投资导致原对联营企业和合营企业投资，仍为联营和合营企业投资；</p>
+                <p>因增减投资导致由对子公司的投资，仍为子公司的投资；</p>
+                <p>因增减投资导致由金融工具投资，仍为金融工具的投资。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.10</em>
+            <h3>合营安排的定义和特征</h3>
+            <section>
+                <p>合营安排是一项共同控制。学习共同控制的时候要注意共同控制的特征，以及其和控制或重大影响的区别。</p>
+                <p>合营安排分为共同经营和合营企业。共同经营是参与方对合营安排的相关资产享有权利并对相关负债承担义务。合营企业是对合营安排有关的净资产享有权利。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <div class="introduction">
+        <div class="accountant_main">
+            <em>4.11</em>
+            <h3>共同经营参与方的会计处理</h3>
+            <section>
+                <p>共同经营参与方按约定的比例享有合营安排相关资产的全部利益，分担合营安排的成本、费用、债务及义务。</p>
+                <p>合营企业参与方按照约定比例享有合营安排产生的净损益。</p>
+            </section>
+        </div>
+        <div class="accountant_hr"></div>
+    </div>
+    <!-- 金程实力 -->
+    <div class="power">
+        <div class="accountant_main">
+            <section>
+                <p>历年考生不用气馁，今年的考生不用害怕<br>金程财经，想考生所想，给考生所需<br>不论你是第几年备考会计，不用再买当年所有课程<br>哪章不会，买哪章，着重学习自己不明白的章节</p>
+                <ul>
+                    <li>
+                        <div>
+                        <h3>汤老师的课上得怎么样</h3>
+                        <big>让我们一起听一听！</big>
+                        <button><a href="">免费试听</a></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <h3>汤老师的课上得好!</h3>
+                        <big>9元学习整个第四章</big>
+                        <button><a href="">我要购买</a></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                        <h3>汤老师的课这么好，</h3>
+                        <big>我要推荐小伙伴一起来听！</big>
+                        <div class="bshare-custom"><a title="分享到微信" class="bshare-weixin"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                        <q>转发到朋友圈并添加走心评论，第四章免费学！</q>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <article>
+                <img src="images/power_01.png">
+                <div>
+                    <small>汤老师简介</small>
+                    <div class="power_hd">
+                        <strong>汤震宇<em>Ph.D</em></strong>
+                        <span>金程教育首席培训师</span>
+                    </div>
+                    <h3>CFA、FRM、CMA、CTP、CAIA、RFP、经济师、CISI会员</h3>
+                    <p>复旦大学会计学博士、上海交通大学继续教育学院客座教授、对外经贸大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场学会金融服务工作委员会理事长、PRMIA上海督导委员会委员。国内授课时间最长、人气最高、口碑最好的金融及财务金牌培训师。十五年讲台一线培训经验，充分了解学生在学习过程中存在的难点与疑问。</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- 资料索取 -->
+    <div class="Data_for">
+        <div class="accountant_main">
+            <h2>
+                <img src="images/Data_for_01.png">
+                <p>成功的第一步来自优秀的学习资料，对已会计考试来说，肆大会计的内部学习资料是最宝贵的财富</p>
+            </h2>
+            <article>
+                <form>
+                    <input type="text" placeholder="请输入你的用户名">
+                    <input type="text" placeholder="请输入你的手机号">
+                    <input type="text" placeholder="请输入你的邮箱">
+                </form>
+                <ul>
+                    <li><i>&#xe94e;</i>考试大纲解读</li>
+                    <li><i>&#xe94e;</i>考前注意事项</li>
+                    <li><i>&#xe94e;</i>教材变化的解读</li>
+                    <li><i>&#xe94e;</i>CPA机考答题技巧</li>
+                    <li><i>&#xe94e;</i>教材电子版</li>
+                    <li><i>&#xe94e;</i>如何报考CPA及相关科目搭配</li>
+                    <li><i>&#xe94e;</i>历年真题及解读</li>
+                    <li><i>&#xe94e;</i>金融、财会、互联网等行业热点资讯</li>
+                    <li><i>&#xe94e;</i>CPA6门课程易卡</li>
+                    <li><i>&#xe94e;</i>500强企业实习大礼包</li>
+                    <li><i>&#xe94e;</i>CPA的学习方法</li>
+                    <li><i>&#xe94e;</i>100家知名企业面试、笔试真题</li>
+                </ul>
+            </article>
+            <a href="">一键领取</a>
+        </div>
+    </div>
+    <div class="pop">
+        <div class="buy">
+            <article>
+                <h2>购买课程<i>&#xea0f;</i></h2>
+                <dl>
+                    <dt>你需要购买此课程才能学习</dt>
+                    <dd> ￥9.00</dd>
+                </dl>
+                <a href="">立即购买</a>
+            </article>
+        </div>
+    </div>
+    <div class="ewm">
+        <img src="../../images/wx_CFA.jpg">
+    </div>
+</div>
+<!-- 中间内容 end-->
+
+
+<div class="schoolarea">
+    <section>
+        <i>全国分校</i>
+        <ul>
+        <li><h3><span>上海上海</span><a href="">在线咨询</a></h3><p>虹口区松花江路2539号复旦科技园1号楼11楼 </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>徐汇上海</span><a href="">在线咨询</a></h3><p>徐汇区广元西路45号交大慧谷科技街415A室</p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>浦东上海</span><a href="">在线咨询</a></h3><p>东新区张杨路601号华诚大厦7012室  </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>北京上海</span><a href="">在线咨询</a></h3><p>北京西城区南菜园街2号国泰大厦2楼 </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>南京上海</span><a href="">在线咨询</a></h3><p>白下区中山东路90号华泰证券大厦10楼S2室（210002） </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>深圳上海</span><a href="">在线咨询</a></h3><p>罗湖区银湖路金湖一街CDI大厦3楼(518029) </p><p>咨询电话：400-700-9596</p></li>
+        </ul>
+    </section>
+</div>
+<!-- 全国分校 end-->
+
+<!-- footer start-->
+<footer>
+<div class="profooter">
+<dl>
+<dt><h3>客服热线</h3><p><strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p></dt>
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育官方微博</p></dd>
+</dl>
+<article>
+<img src="../../images/wx_cfa.jpg"  alt=""/>
+<h3>官方微博</h3>
+<p>微信扫一扫,掌握最新动态<br/>微信号：cfa-4009596</p>
+</article>
+</div>
+<div class="copyright"><p>© 2000 - 2015  上海金程国际金融专修学院.  沪ICP备08016784号  本学院通过ISO9001:2008国际质量管理体系认证</p></div>
+</footer>
+<!-- footer end-->
+<!-- Go Top -->
+<div class="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+
+
+
+<!-- 登录 start-->
+<div class="toplogin" id="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li>
+    <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+        <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+    </li>
+    <li id="password_input">
+        <input type="password" id="password1" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwd1('password1');">
+        <p class="noticeLR" id="noticeLR_password1"></p>
+  </li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span><a onClick="LtR();" href="javascript:;">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister" id="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input">
+        <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+        <p class="noticeLR" id="noticeLR_realnameM"></p>
+    </li>
+    <li id="tel_input">
+        <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+        <p class="noticeLR" id="noticeLR_tel"></p>
+    </li>
+    <li class="reghalf" id="code_input">
+        <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+        <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+    </li>
+    <li id="password1_input">
+        <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+        <p class="noticeLR" id="noticeLR_passwd"></p>
+    </li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上<a  onclick="RtL();" href="javascript:;">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+
+<!-- 注册 end-->
+</body>
+</html>

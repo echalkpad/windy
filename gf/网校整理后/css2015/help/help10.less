@@ -1,0 +1,68 @@
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:05
+**************************************************/
+
+@import '../help/helpcom.less';   //公用样式
+
+.helpcontent{
+  article{
+      .contact{
+          line-height: 33px;
+         h1{
+           .f20();
+           padding: 30px 0;
+         } 
+         p{
+             span{
+                display: block;
+             }
+         }
+      }
+      
+      
+      dl{
+        dt{
+            position: relative;
+            margin: 60px 0 20px;
+            height: auto;
+            border-left: 0;
+            padding: 0;
+            img{width: 100%;}
+            span{
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 10px 10px;
+                color: @cw;
+                background: #33b0c4;
+                .f14();
+            }
+        }
+        dd{
+           padding-left: 0;
+        }
+      }
+      
+      ul{
+          padding: 40px 0;
+          line-height: 30px;
+      }
+  }
+}
+
+@media(min-width:992px){
+ .helpcontent{
+  article{
+    dl{
+        dd{padding-left: 20px;}
+    }
+    ul{
+        padding: 0 0 40px;
+        padding-left: 20px;
+    }
+  }
+ }
+}
+

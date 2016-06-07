@@ -1,0 +1,169 @@
+
+@import "../../css2015/common/variable.less";
+
+
+.examPlan{
+    .cf();
+    width:90%;
+   margin:0px auto;
+}
+.exambg{
+    background: url(../../images2015/cicintro/detial_01.png) no-repeat;
+    height: 130px;
+    background-size: 100% 100%;
+}
+@media(min-width:480px){
+ .exambg{
+     height: 200px;
+ }   
+}
+@media(min-width:992px){
+   .exambg{
+     height: 350px;
+    }   
+  
+ 
+}
+
+//通过率
+.exam_prevent{
+    margin:5% auto;
+   width: 100%;
+    .cf();
+    h2{
+    .f14();
+    color:#d55e5e;
+    text-align:center;
+    font-weight:bold;
+}
+em{
+    font-style:italic;
+    display:block;
+    font-weight:bold;
+    text-align:center;
+    color:@c6;
+    .f16();
+}
+    .ep_list{
+        .cf();
+        margin-top: 7%;
+        text-align:center;
+
+        p{
+            width:167px;
+            .f14();
+            color:@cw;
+            margin:-10px auto;
+            padding:5px 0;
+            background-color:#4dbdc5;
+            &:hover{
+                background-color:#51dcca;
+                cursor:pointer;
+            }
+
+        }
+    }
+    @media(min-width:480px){
+    .ep_list{
+        width:50%;
+        float: left;
+        &:last-child{
+            width: 100%;
+        }
+    }
+}
+@media(min-width:640px){
+    h2{.f18();}
+    em{.f20();}
+   .ep_list{
+        width: 33%;
+        &:last-child{
+            width:33%;
+        }
+    }
+}
+@media(min-width:992px){
+    h2{.f18();}
+    em{.f28();}
+}
+}
+
+
+//12大服务系统
+.severSterm{
+   .cf();
+margin:0 auto;
+
+    p{
+        font-style:italic;
+        .f26();
+        text-align:center;
+        color:@c6;
+        padding-bottom:25px;
+    }
+    .sStm{
+         width: 100%;
+         margin:15px auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        em{
+            color:@cw;
+            display: block;
+            padding:10px 0;
+            text-align: center;
+            background-color:rgba(0,0,0,0.6);
+            margin-top: -9px;
+        }
+    }
+    span{
+            .f20();
+             text-align: center;
+             display:block;
+            clear: left;
+        }
+    h3{
+       color:@c6;
+        .f16();
+        }
+    @media(min-width:480px){
+        .sStm{
+            width: 45%;
+            margin:2.5%;
+            float:left;
+
+        }
+    }
+     @media(min-width:640px){
+        .sStm{
+            width: 31%;
+            margin:1%;
+           em{
+            font-size: 15px;
+           }
+        }
+    }
+    @media(min-width:992px){
+        .sStm{
+            width: 20%;
+           margin:2.5%;
+           em{
+            padding:10px 0;
+            .f16();
+        }
+        }
+        span{
+        .f30();
+        padding-top:30px;
+        h3{
+            .f26();
+        }
+    }
+    p{
+        .f30();
+    }
+    }
+
+
+}

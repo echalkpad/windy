@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151208142648834.png"><div class="cont"><h2>张强</h2><em>中银国际证券有限责任公司·副总裁</em><span>准保荐代表人、注册会计师、律师<br>
+重庆大学会计专业本科</span></div></li></ul><div class="jcb_content">
+<h5>学历与证书：</h5>
+<p>准保荐代表人、注册会计师、律师， 重庆大学会计专业本科。</p>
+<h5>专业技能：</h5>
+<p>目前就职于中银国际证券有限责任公司投融资部担任副总裁，曾就职于上海富兰德林会计师事务所有限公司担任高级审计经理；晶琴乐器（上海）有限公司担任财务经理，具有深厚的财务知识和经验，曾为怡球资源IPO-有色金属行业；齐顺科技新三板-移动支付行业，优德精密IPO-磨具加工业，金利科技重大资产重组等项目。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

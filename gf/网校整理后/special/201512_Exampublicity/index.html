@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+	<title>cfa必考知识点</title>
+
+<link href="css/examPublicity.css" rel="stylesheet" type="text/css" />
+<link href="../../css2015/common/common.css" rel="stylesheet" type="text/css" />
+<script src="script/examPublicity.js"></script>
+<script type="text/javascript" src="../../script2015/jquery.min.js"></script>
+<script>
+    $(function(){
+    //secTabs切换
+      $(".J_secTabs").each(function(){
+    var timeout = 300;
+    var delay = 0;
+    var a = $(this).find("li"), b = $(this).next().children(), c = $(this).find("em"); 
+    
+    a.click(function(){ var obj = $(this); item_show(obj); },function(){ item_hide(); });
+    a.click(function(){ var obj = $(this); item_action(obj); });
+    
+    function item_action(obj){
+      a.removeClass("selected");
+      c.css("cursor","")
+      obj.addClass("selected");
+      obj.children("em").css("cursor","default");
+      var i = a.index(obj); 
+      b.hide();  
+      $(b.get(i)).show();
+    }
+    function item_show(obj){
+      clearTimeout(delay);
+      delay = setTimeout(function(){
+        item_action(obj);
+        clearTimeout(delay);
+      },timeout);
+    }
+    function item_hide(){
+      clearTimeout(delay);
+    }
+  });
+}); 
+</script>
+</head>
+
+<body>
+
+
+<!-- 侧边漂浮栏 start-->
+<div class="fnav">
+<div class="floatNav" id="floatNav">
+<ul>
+<li><a href="javascript:;"><i class="iconfont">&#xe600;</i>课程咨询</a></li>
+<li><a href="javascript:;"><i class="iconfont">&#xe602;</i>学员服务</a></li>
+<li id="hotline"><a href="javascript:;"><i class="iconfont">&#xe601;</i>24H热线</a>
+    <p><i class="iconfont">&#xe601;</i><em><span>24H热线</span>400-700-9596</em></p>
+</li>
+<li><a id="topNav" href="javascript:;"><i class="iconfont">&#xe603;</i></a></li>
+</ul>
+</div>
+</div>
+    
+<!--phonenav start-->
+<div class="mbbody">
+<div class="mbttl"><i><a href="javascript:;"></a></i><h2>CFA必考知识</h2></div>
+</div>
+<!--phonenav end-->
+
+<div class="mbtitle">
+    <div class="mbnav">
+        <a href="#menu" class="glyphicon glyphicon-th-large"><img src="../../images2015/phoneNav.png"  alt=""/></a>
+        <input type="hidden" id="divdiscon" name="divdiscon" value="0">
+    </div>
+</div>
+<nav id="menu" class="mbnavadd">
+    <h2 id="mobileLoginSpan"><a href="/2015/Login.shtml"><i><img src="/images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+    <ul>
+        <!--#﻿<!--menu--> 
+<li><a href="/classify.aspx" class="newTopHover">课程</a></li>
+<li><a href="/intro.shtml">题库</a></li>
+<li><a href="/Live/List_1.shtml">直播</a></li>
+<li><a href="/cfa/">资讯</a></li>
+<li><a href="/BookStore/">商城</a></li>
+<li><a href="/app.shtml">应用</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+
+<!--webnav start-->
+<div class="webbody">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="../../images2015/logo.png"  alt=""/></h2>
+    
+    <ul>
+    <li><a href="">课程</a></li>
+    <li><a href="">题库</a></li>
+    <li><a href="">直播</a></li>
+    <li><a href="">资讯</a></li>
+    <li><a href="">商城</a></li>
+    <li><a href="">应用</a></li>
+    </ul>
+    <span><a href="">登录</a><a href="">注册</a></span>
+   
+    </nav>
+    </div>
+</div>
+<!--webnav end-->
+
+
+<div class="examheader J_secTabs">
+<ul>
+	<li class="selected"><a href="javascript:void(0);">上午必考题</a></li>
+	<li><a href="javascript:void(0);">下午必考题</a></li>
+	<li><a href="javascript:void(0);">完全版知识点</a></li>
+</ul>
+</div>
+<!--中间内容 开始-->
+<div class="ctn">
+<!--上午必考 开始-->
+<div class="exmaPublicity">
+<div class="ep_list">
+<p>
+<a href="#10ti">上午必考10题<i><img src="images/p4_03.png"></i></a>
+</p>
+<p>
+<a href="#menuList">上午10题知识点<i><img src="images/p4_03.png"></i></a>
+</p>
+</div>
+<!--上午10题开始-->
+<div class="ep_content" id="10ti">
+    <h2>上午必考10题</h2>
+    
+    <h4>1-Independence Objectivity</h4>
+    <strong>考题:</strong>
+    <p>An analyst has been writing research reports on a firm for many years. As part of the analyst’s continuing research efforts, the analyst allowed the firm to fly him to the firm’s headquarters 500 miles away and put him up in the guest quarters the firm had for all corporate visitors. In the current year, the firm is planning a secondary share offering that coincides with the tenth anniversary of the firm going public. When the analyst arrived at the headquarters, he found a new set of high-quality golf clubs as a gift to him. On the golf clubs was the firm’s logo, and the firm was giving the clubs to all visitors this year in honor of the anniversary and the IPO. Based upon this information, Standard I &lang;B&rang;, Independence and Objectivity, has</p>
+
+    <div class="anwser">
+    <p><i>A</i>been broken because of the value of the golf clubs and the value of the trip to the headquarters</p>
+    <p class="green"><i>B</i>been broken because of the value of the golf clubs</p>
+    <p><i>C</i>not been broken because the trip is allowed and the firm is giving the clubs to all visitors</p>
+    </div>
+
+    <div class="solution">
+    <strong>解析:</strong>
+    <em><img src="images/p2_03.png"></em><h3>Solution: B</h3>
+    <article>
+    Modest gifts and entertainment are acceptable. Should commercial transportation be unavailable, modestly arranged travel may be accepted to participate in appropriate information gathering events.
+    </article>
+    </div>
+
+
+
+<h4>2-Material nonpublic information</h4>
+<strong>考题:</strong>
+<p>Claire Jones, CFA, is an analyst following natural gas companies in the United States. At an industry energy conference, the chief financial officer of Alpine Energy states that the company is interested in making strategic acquisitions. At a separate event, Alpine's head of exploration commented that he is bullish on natural gas production prospects within northeastern Pennsylvania. Jones is aware that Alpine currently has very little exposure to this region. She also knows another company in her universe, Pure Energy, Inc. is based in northeastern Pennsylvania and controls significant assets in the area. Pure Energy is highly leveraged, and Jones believes it will need to raise additional capital or partner with another firm to move to the production phase with their assets. Jones attempts to contact Alpine's chief executive officer with an unrelated question and is told he is unavailable because he is on a business trip to northeastern Pennsylvania. Jones updates her research on Pure Energy and then recommends the stock to Lisa Wong, CFA, a portfolio manager, who purchases significant positions in client accounts. The following week, Pure Energy announces it has entered into an agreement to be purchased by Alpine for a significant premium. Has either Jones or Wong most likely violated standards with regard to the integrity of capital markets?</p>
+
+<div class="anwser">
+<p><i>A</i>Yes, Jones' recommendation is based on insider information</p>
+<p ><i>B</i>Yes, both Jones and Wong have acted on insider information</p>
+<p class="green"><i>C</i>No</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution: C</h3>
+<article>
+Jones has used the mosaic theory to combine nonmaterial, nonpublic information with material public information.</article></div>
+
+
+<h4>3-Skewness</h4>
+<strong>考题:</strong>
+<p>Two distributions have the same mean. One is negatively skewed, the other is positively skewed. Which of the following statements is the most accurate?</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>the median of negatively skewed distribution is greater than the median of positively skewed distribution</p>
+<p ><i>B</i>the probability of extremely small values in negatively skewed distribution is greater than that in positively skewed distribution</p>
+<p><i>C</i>negatively skewed distribution has the same kurtosis as normal distribution</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>As shown in the following figure, the median is smaller than the mean for the positive skew. In contrast, the median is larger than the mean for the negative skew.</article></div><em><img src="images/p1.png"></em></p>
+
+
+
+<h4>4-Current account, capital account and financial account</h4>
+<strong>考题:</strong>
+<p>During the last month, a food company located in the United States had the following transactions:
+<table border="1px">
+    <tr>
+    <td>Transaction</td>
+    <td>Amount<br/>(US$ millions)</td>
+   
+   
+    </tr>
+    <tr>
+    <td>Bought raw material from Indonesia </td>
+    <td>50.0</td>
+    </tr>
+
+    <tr>
+        <td>Sold food products to France </td>
+        <td>65.0</td>
+    </tr>
+
+    <tr>
+        <td>Received royalty fees from its branch in the United Kingdom </td>
+        <td>0.5</td>
+    </tr>
+
+    <tr>
+        <td>Donated to a charitable institution in Africa</td>
+         <td>0.1</td>
+    </tr>
+
+     <tr>
+        <td>Borrowed from a bank in Singapore</td>
+         <td>2.0</td>
+    </tr>
+
+    <tr>
+        <td>Paid legal fees to its German legal consultant company</td>
+         <td>1.2</td>
+    </tr>
+
+    <tr>
+        <td>Received interest coupon from its investment in Eurobonds issued in Luxembourg</td>
+         <td>0.8</td>
+    </tr>
+
+</table>
+These transactions will most likely increase the U.S. current account by:)
+</p>
+
+<div class="anwser">
+<p><i>A</i>$14.5 million.</p>
+<p ><i>B</i>$17.0 million.</p>
+<p class="green"><i>C</i>$15.0 million.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:C </h3>
+<article>
+Note that the borrowing from a bank in Singapore is not a current account transaction.
+<table border="1px">
+    <tr>
+    <td>Transaction</td>
+    <td>Current Account <br/>(US$ millions)</td>
+    </tr>
+
+    <tr>
+    <td>Bought raw material from Indonesia </td>
+    <td>-50.0</td>
+    </tr>
+
+    <tr>
+        <td>Sold food products to France </td>
+        <td>65.0</td>
+    </tr>
+
+    <tr>
+        <td>Received royalty fees from its branch in the United Kingdom </td>
+        <td>0.5</td>
+    </tr>
+
+    <tr>
+        <td>Donated to a charitable institution in Africa</td>
+         <td>-0.1</td>
+    </tr>
+
+     <tr>
+        <td>Borrowed from a bank in Singapore</td>
+         <td>Omit</td>
+    </tr>
+
+    <tr>
+        <td>Paid legal fees to its German legal consultant company</td>
+         <td>-1.2</td>
+    </tr>
+
+    <tr>
+        <td>Received interest coupon from its investment in Eurobonds issued in Luxembourg</td>
+         <td>0.8</td>
+    </tr>
+
+    <tr>
+        <td>Total </td>
+         <td>15</td>
+    </tr>
+	
+</table>
+</article>
+current account + capital account + financial account = 0
+The current account measures the exchange of merchandise goods, services, investment income, and unilateral transfers (gifts to and from other nations). The current account balance equals the sum of exports minus imports, net interest income, and net transfer. 在BOP（国际收支平衡表）中，interest income 属于current account
+The capital account consists capital transfer（债务豁免，移民） and net sales of non-produced\non-financial assets（版权，自然资源的买卖）.
+The financial account measure net capital flows based on sales and purchases of domestic and foreign financial assets.(financial assets aboard 在国外金融资产and foreign-owned financial assets国外拥有的在国内的金融资产)
+</article>
+</div>
+
+
+<h4>5-Revenue Recognition criteria</h4>
+<strong>考题:</strong>
+<p>Under IFRS, company revenue should be recognized when:</p>
+
+<div class="anwser">
+<p><i>A</i>There is an evidence of arrangement between the buyer and seller.</p>
+<p class="green"><i>B</i>Cost can be readily measured.</p>
+<p><i>C</i>The company receives cash flow from customers.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:B</h3>
+<article>
+Under IFRS: risk and reward is transferred, no continuing control or management over the goods sold, revenue can be readily measured, probable inflow of economic benefits, cost can be reliably measured (for service, the stage of completion can be measured)
+Under GAAP: evidence of arrangement between the buyer and seller, product being delivered or service has been rendered, price is determined or determinable, reasonably sure of collecting money.</article></div>
+
+
+<h4>6-Impairment</h4>
+<strong>考题:</strong>
+<p>Under IFRS, the carrying value of company’s inventory is $20,000, and the selling price in the market is $24,000. If the selling cost of the inventory is $3,000, the company should:</p>
+
+<div class="anwser">
+<p><i>A</i>Write up its inventory by $1000 and add a $1,000 gain in the income statement.</p>
+<p class="green"><i>B</i>Not do any change in its balance sheet and income statement.</p>
+<p><i>C</i>Write down its inventory by $1000 and add a $1,000 loss in the income statement.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:B</h3>
+<article>
+Net Realizable Value = 24,000 – 3,000 = 21,000
+Historical cost < NRV
+Do not need to change its balance sheet and income statement.</article></div>
+
+
+<h4>7-NPV & IRR</h4>
+<strong>考题:</strong>
+<p>Two mutually exclusive projects have conventional cash flows, but one project has a larger NPV while the other has a higher IRR. Which of the following is least likely responsible for this conflict?</p>
+
+<div class="anwser">
+<p><i>A</i>Reinvestment rate assumption.</p>
+<p><i>B</i>Size of the projects' initial investments.</p>
+<p class="green"><i>C</i>Risk of the projects as reflected in the required rate of return.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:C</h3>
+<article>
+Conflicting decision rules based on the NPV and IRR methods are related to the reinvestment rate assumption, the timing of the cash flows, or the scale of the projects. Differing required rates of return are not related to conflicting NPV and IRR decisions.</article></div>
+
+
+<h4>8-EMH</h4>
+<strong>考题:</strong>
+<p>Which of the following inferences concerning market efficiency most accurate?</p>
+
+<div class="anwser">
+<p><i>A</i>Fully exploitable over and under-reactions often occur in efficient markets.</p>
+<p><i>B</i>Market pricing anomalies and behavioral biases are contrary to the existence of market efficiency.</p>
+<p class="green"><i>C</i>If a market is semi-strong form efficient, neither technicians nor fundamental analysts can expect to consistently earn abnormal returns.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:C</h3>
+<article>
+If securities markets are semi-strong form efficient, active trading to exploit price patterns or public information is not likely to generate abnormal returns. Thus, both technical and fundamental analyses become futile exercises.</article></div>
+
+
+<h4>9-Convexity</h4>
+<strong>考题:</strong>
+<p>A bond manager tells one of his clients that larger convexity of a bond always benefits investors no matter how the price changes. Is this statement correct?</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>Yes</p>
+<p><i>B</i>No, larger convexity is good when bond’s price rises.</p>
+<p><i>C</i>No, larger convexity is good when bond’s price falls.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>
+With larger convexity, an investor gains more when bond’s price rises and losses less when price falls.</article></div>
+
+
+<h4>10-Hedge fund fee</h4>
+<strong>考题:</strong>
+<p>United Capital is a hedge fund with $250 million of initial capital. United charges a 2% management fee based on assets under management at year end, and a 20% incentive fee based on returns in excess of an 8% hurdle rate. In its first year, United appreciates 16%. Assume management fees are calculated using end-of-period valuation. The hedge fund fee assuming the performance fee is calculated net of the management fee is closest to:</p>
+
+<div class="anwser">
+<p><i>A</i>8 million</p>
+<p class="green"><i>B</i>8.64 million</p>
+<p><i>C</i>9.8 million</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:B</h3>
+<article>
+End of year capital = $250 million x 1.16 = $290 million
+Management fee = $290 million x 2% = $5.8 million
+Hurdle amount 8% of $250 million = $20 million;
+Incentive fee = ($290 — $250 — $20 — $5.8) million x 20% = $2.84 million
+Total fees to United Capital = ($5.8 + $2.84) million = $8.64 million
+</article>
+</div>
+</div>
+
+
+
+
+<!--上午10题知识点 开始-->
+<div class="ep_knowledge" id="menuList">
+<h2>上午10题知识点</h2>
+<div>
+<p>Independence Objectivity<i class="jia"><img src="images/p3_03.png"></i><em class="jian"><img src="images/p3_06.jpg"></em></p>
+<article>
+	Members and candidates should adhere to the following practices and should encourage their firms to establish procedures to avoid violations of Standard I(B): <br/>
+☞ <strong>1) Protect the integrity of opinions: </strong> Members, candidates, and their firms should establish policies stating that every research report concerning the securities of a corporate client should reflect the unbiased opinion of the analyst. Firms should also design compensation systems that protect the integrity of the investment decision process by maintaining the independence and objectivity of analysts. <br/>
+☞ <strong>2) Create a restricted list: </strong> If the firm is unwilling to permit dissemination of adverse opinions about a corporate client, members and candidates should encourage the firm to remove the controversial company from the research universe and put it on a restricted list so that the firm disseminates only factual information about the company.<br/>
+☞ <strong>3) Restrict special cost arrangements: </strong> When attending meetings at an issuer's headquarters, members and candidates should pay for commercial transpor¬tation and hotel charges. No corporate issuer should reimburse members or candidates for air transportation. Members and candidates should encourage issuers to limit the use of corporate aircraft to situations in which commercial transportation is not available or in which efficient movement could not oth¬erwise be arranged. Members and candidates should take particular care that when frequent meetings are held between an individual issuer and an individ¬ual member or candidate, the issuer should not always host the member or candidate.<br/>
+☞ <strong>4) Limit gifts: </strong> Members and candidates must limit the acceptance of gratuities and/or gifts to token items. Standard I(B) does not preclude customary, ordi¬nary business-related entertainment as long as its purpose is not to influence or reward members or candidates. Firms should consider a strict value limit for acceptable gifts that is based on the local or regional customs and should address whether the limit is per gift or an aggregate annual value.<br/>
+☞ <strong>5) Restrict investments: </strong> Members and candidates should encourage their invest¬ment firms to develop formal polices related to employee purchases of equity or equity-related IPOs. Firms should require prior approval for employee partic¬ipation in IPOs, with prompt disclosure of investment actions taken following the offering. Strict limits should be imposed on investment personnel acquiring securities in private placements.<br/>
+☞ <strong>6) Review procedures: </strong> Members and candidates should encourage their firms to implement effective supervisory and review procedures to ensure that analysts and portfolio managers comply with policies relating to their personal invest¬ment activities.<br/>
+☞ <strong>7) Independence policy: </strong> Members, candidates, and their firms should establish a formal written policy on the independence and objectivity of research and implement reporting structures and review procedures to ensure that research analysts do not report to and are not supervised or controlled by any depart¬ment of the firm that could compromise the independence of the analyst.<br/>
+☞ <strong>8) Appointed officer: </strong> Firms should appoint a senior officer with oversight responsi¬bilities for compliance with the firm's code of ethics and all regulations concern¬ing its business. Firms should provide every employee with the procedures and policies for reporting potentially unethical behavior, violations of regulations, or other activities that may harm the firm's reputation.
+</article>
+</div>
+
+<div>
+<p>Material nonpublic information<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<strong>一、 如果持有MNI，不能利用或促使他人利用MNI进行投资点</strong><br/>
+<strong>二、 ★判断material的条件: 来源可靠，对股价影响明确点</strong>，比如<br/>
+Substance and materiality<br/>
+Earnings<br/>
+M&A, acquisitions, tender offers, or joint ventures<br/>
+Changes in assets, Changes in management<br/>
+Innovative products, processes, or discoveries<br/>
+New licenses, patents, registered trademarks, or regulatory approval/rejection of a product<br/>
+Developments regarding customers or suppliers (e.g., the acquisition or loss of a contract)<br/>
+Changes in auditor notification or the fact that the issuer may no longer rely on an auditor’s report or qualified opinion<br/>
+defaults on senior securities, calls of securities for redemption, repurchase plans, stock splits, changes in dividends, changes to the rights of security holders, public or private sales of additional securities, and changes in credit ratings<br/>
+Bankruptcies<br/>
+Significant legal disputes<br/>
+Government reports of economic trends (employment, housing starts, currency information, etc.<br/>
+Orders for large trades before they are executed.<br/>
+竞争对手的预测不能认为是MNI<br/>
+其他情形：<br/>
+有名的公司或者分析师对股价的研究对市场有影响，算是material<br/>
+suppliers：从供应商处了解到一个公司的信息，如果来源是可靠的，则算是MNI，不能使用；如果是自己观察到的，属于Mosaic理论，可以使用。竞争者的分析，不算material。<br/>
+不管通过什么途径，公开发行的报告就是public（失误引起的提前发行，算不算做公开发布？算, can use for trading）<br/>
+如果公司在分析师会议上内幕信息，怎么办？Can’t use.<br/>
+Selective disclosure may violate MNI. If MNI was disclosed selectively, the listed company should issue a press release or reach public dissemination.<br/>
+<strong>三、 可以使用内幕消息的情况（new）：</strong>如果A member or candidate在根据商业协议为目标公司的活动（这些活动包括兼并、贷款认购、信用评级以及其他提供服务）做尽职调查时，用到公司合法提供的没有公开的内部消息，不算违背Standard II(A)。如果为了其他目的使用内幕信息，尤其是为了诱惑他人对该公司的证券进行交易，则违背了Standard II(A)。<br/>
+<strong>四、 Social media(new):</strong> 一些社会媒体平台只能把信息提供给注册会员。Members and candidates 需要确认这些信息能否从其他公开渠道获得。Members and candidates 在通过这些社会媒体平台和客户进行交流时，只要其他投资大众也有权查阅这类信息，那么这就不违背standard II(A)。另外根据Standard I(A)，会员需要完成同社会媒体有关的相关监管文件的填写。<br/>
+<strong>五、 Industry expert(new)：</strong>Members and candidates 需要对外部聘用的行业专家所提供的信息负责，不能用一些material nonpublic information。如果行业专家提供了一些企业的material nonpublic information，在这些信息被公开之前，members and candidates 不能使用这些信息进行投资。<br/>
+<strong>六、 Mosaic Theory：</strong>可以使用material public information and non-material non-public information，但必须save and document all the research<br/>
+<strong>七、 ★Simply because the public in general find the conclusions material does not require that the analyst make his/her work public. Investors who are not clients of the analyst can either do the work themselves or become clients of the analyst for access to the analyst’s expertise.</strong><br/>
+<strong>八、 ★公司如果拥有MNI，不必禁止所有自营交易（Proprietary trading）</strong>，<br/>
+如果是做市商market maker，remain passive to the market, take only the contra side of unsolicited customer trades；<div>
+In risk arbitrage trading, best to stop; If not stop, prove the adequacy of their internal procedures and must document firm trades.<br/>
+<strong>九、 ★Achieve public dissemination</strong><br/>
+If material, should try to achieve public dissemination.<br/>
+Encourage the firm to make it public, if not possible, report only to designated supervisory and compliance personnel within her firm.<br/>
+not invest on MNI, or induce insider to disclose MNI<br/>
+<strong>十、 Adopt compliance procedures.</strong><br/>
+Encourage firms to adopt compliance procedures to prevent the misuse of MNI. <br/>
+Particularly important is improving compliance in such areas as the review of employee and proprietary trading, documentation of firm procedures, and the supervision of interdepartmental communications in multi-service firms.<br/>
+Compliance procedures should suit the particular characteristics of a firm, including its size and the nature of its business.<br/>
+<strong>十一、The minimum elements of such firewall include, but are not limited to, the following:</strong><br/>
+★substantial control of interdepartmental communications, preferably through a clearance area in either the compliance or legal department<br/>
+review of employee trading through the maintenance of “watch,” “restricted,” and “rumor” lists;<br/>
+documentation of the procedures designed to limit the flow of information between departments and of the actions taken to enforce those procedures;<br/>
+★heightened review or restriction of proprietary trading while a firm is in possession of material nonpublic information.<br/>
+Physical separation of departments<br/>
+Prevention of personnel overlap<br/>
+★A reporting system<br/>
+Authorized people review and approve communications between departments.<br/>
+Consult a designated compliance officer to determine whether sharing the information is necessary and how much information should be shared.<br/>
+If the sharing is necessary, the compliance officer should coordinate the process of “looking over the wall”<br/>
+A single supervisor or compliance officer should have the specific authority and responsibility of deciding whether or not information is material and whether it is sufficiently public to be used as the basis for investment decisions. <br/>
+Ideally, the officer is independent.<br/>
+<strong>十二、★Personal trading limitations.</strong> <br/>
+Consider restrictions or prohibitions on personal trading and carefully monitor proprietary trading.<br/>
+Require employees to make periodic reports of their own transactions and transactions made for the benefit of family members<br/>
+Securities should be placed on a restricted list when a firm has or may have MNI. <br/>
+a watch list shown to only the few people responsible for compliance should be used to monitor transactions in specified securities.<br/>
+watch list in combination with a restricted list is a common means of ensuring effective control of personal trading.<br/>
+<strong>十三、★Record maintenance. </strong><br/>
+Multi-service firms should maintain written records of the communications between various departments.<br/>
+Firms should place a high priority on training and should consider instituting comprehensive training programs, particularly for employees in sensitive areas.<br/>
+<strong>十四、★Communication to all employees.</strong> <br/>
+Written compliance policies and guidelines should be circulated to all employees of a firm.<br/>
+Policies and guidelines should be used in conjunction with training programs aimed at enabling employees to recognize MNI.<br/>
+Sufficient training to either make an informed decision or to realize they need to consult a supervisor or compliance officer before engaging in questionable transactions.
+</article>
+</div>
+
+<div>
+<p>Skewness<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+	<strong>概念：</strong>refer to the extent to which a distribution is not symmetrical.<br/>
+<strong>种类：</strong>Positively skewed – skewed right and long right tail 【mean > median > mode】<br/>
+      Negatively skewed – skewed left and long lower tail 【mean < median < mode】<br/>
+<strong>理解：</strong>Positive skewness is good choice for investors.【Because the surprise values are mostly on the positive side】
+</article>
+</div>
+
+<div>
+<p>Current account, capital account and financial account <i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+	<strong>The current account that measures the flow of goods and services：</strong><br/>
+1） Merchandise trade<br/>
+2） Services<br/>
+3） Income receipts<br/>
+4） Unilateral transfers<br/>
+5） The capital account that measures transfers of capital<br/>
+6） Capital transfers<br/>
+7） Sales and purchases of non-produced, non-financial<br/>
+8） The financial account that records investment flows.<br/>
+9） Financial assets abroad<br/>
+10）Foreign-owned financial assets
+</article>
+</div>
+
+<div>
+<p>Revenue Recognition criteria<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+	Completion of the earnings process & assurance of payment. For example, receiving cash before revenue recognition--unearned revenue<br/>
+Expenses are recognized when incurred.
+</article>
+</div>
+
+<div>
+<p>Impairment<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+   Inventory impairment<br/>
+<i><img src="images/p1_00.png"></i><br/>
+Long lived assets impairment<br/>
+US GAAP<br/>
+Step1 Recoverability test / Impairment test<br/>
+<i><img src="images/p1_01.png"></i><br/>
+Step2 Loss measurement<br/>
+<i><img src="images/p1_02.png"></i><br/>
+IFRS<br/>
+<i><img src="images/p1_03.png"></i><br/>
+Recoverable amount：<br/>
+<i><img src="images/p1_04.png"></i>
+</article>
+</div>
+
+
+<div>
+<p>NPV & IRR<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+ 理解：十分熟悉NPV, IRR的优缺点<br/>
+NPV Advantage:<br/>
+Shows the amount of gains as currency amount<br/>
+The NPV of project increases the value of shareholders instead of creditors.<br/>
+Realistic discount rate – opportunity cost of funds<br/>
+NPV disadvantage:<br/>
+Size effect ignored<br/>
+IRR Advantage: Reflect the profitability of the project<br/>
+IRR Disadvantage <br/>
+Assume the reinvestment rate is IRR<br/>
+No IRR & multiple IRR (unconventional CFs)<br/>
+Conflicting ranking results of mutually exclusive projects with NPV<br/>
+★矛盾：出发点是IRR自身存在缺点<br/>
+原因：1)different project’s size;<br/>
+ 2)different timing of CF; <br/>
+3)reinvestment rate assumption different;<br/>
+决策：当IRR与NPV发生矛盾时，选用NPV<br/>
+Criteria preference: European countries prefer PB over NPV and IRR; larger public companies prefer NPV&IRR; managers with higher education level prefer NPV&IRR.
+</article>
+</div>
+
+<div>
+<p>EMH<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+区分strong-form EMH & semi-strong form EMH & weak-form EMH 定义<br/>
+Strong-form EMH states that stock prices fully reflect all information from public and private sources.<br/>
+Semi-strong form EMH states that stock prices fully reflect all publicly available information.<br/>
+If markets are semi-strong-form efficient, then passive portfolio management strategies are most likely to outperform active trading strategies.<br/>
+Weak-form EMH states that stock prices fully reflect all currently available security market information
+</article>
+</div>
+
+
+<div>
+<p>Convexity<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/p1_07.png"></i><br/>
+With larger convexity, an investor gains more when bond’s price rises and losses less when price falls.<br/>
+The convexity adjustment is always positive when convexity is positive<br/>
+<i><img src="images/p1_06.png"></i><br/>
+<i><img src="images/p1_05.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Hedge fund fee<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+It is important to consider a hedge fund's fee structure prior to making an investment. The hedge fund fee structure accounts for the disproportionately high revenues earned relative to mutual funds and affects the returns to investors. A common fee structure in the hedge fund market is "2 and 20," which reflects a 2 percent management fee and a 20 percent incentive fee. Additionally, funds of hedge funds typically charge a 1 percent management fee and a 10 percent incentive fee. The incentive fee may be calculated on profits net of management fees or on profits before management fees (in other words, the incentive fee is calculated independent of management fees).<br/>
+Sometimes, the fee structure specifies that the incentive fee is only earned after the fund achieves a specified return known as a hurdle rate. The hurdle rate is frequently set based on a risk-free rate proxy (e.g., Libor or a specified Treasury bill rate) plus a premium but may be set as an absolute, nominal, or real return target. The incentive fee can be based on returns in excess of the hurdle rate (hard hurdle rate) or on the entire return (soft hurdle rate).<br/>
+The fee structure may specify that before an incentive fee is paid, following a year in which the fund's value has declined, the fund's value must return to a previous high water mark. Note that the high water mark is typically the highest value reported by the fund; the amount reported is net of fees. High water marks reflect the highest cumulative return used to calculate an incentive fee. In other words, the hedge fund must recover its past losses and return to its high water mark before any additional incentive fee is earned. Clients are not charged an incentive fee if the latest cumula¬tive return does not exceed the prior high water mark. This use of a high water mark protects clients from paying twice for the same performance. Although poorly per¬forming hedge funds may not receive an incentive fee, the management fee is earned irrespective of returns
+</article>
+</div>
+
+
+</div>
+
+<div class="ep_list">
+<p>
+<a href="#10ti">上午必考10题<i><img src="images/p4_03.png"></i></a>
+</p>
+<p>
+<a href="#menuList">上午10题知识点<i><img src="images/p4_03.png"></i></a>
+</p>
+</div>
+</div>
+<!--上午必考 结束-->
+
+<!--下午必考 开始-->
+<div class="exmaPublicity" style="display:none">
+
+<div class="ep_list">
+<p>
+<a href="#xia10">下午必考10题<i><img src="images/p4_03.png"></i></a>
+</p>
+<p>
+<a href="#menuList2">下午10题知识点<i><img src="images/p4_03.png"></i></a>
+</p>
+</div>
+<!--上午10题开始-->
+<div class="ep_content" id="xia10">
+<h2>下午必考10题</h2>
+
+<span>1-Record retention</span>
+<strong>考题:</strong>
+<p>Masse, CFA, a domestic stock analyst, is working for a new hedge fund. Several weeks ago when he left the former company, he deleted the copy of records stored in his computer for his working convenience. Does Masse violate the standards?</p>
+
+<div class="anwser">
+<p><i>A</i> Standard V(C) Record Retention</p>
+<p ><i>B</i>Standard IV(A) Loyalty</p>
+<p class="green"><i>C</i>None of them.</p>
+</div>
+
+<div class="solution">
+<strong>解析:</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution: C</h3>
+<article>
+Firm records or work performed on behalf of the firm that is stored in paper copy or electronically for the member's or candidate's convenience while employed, however, should be erased or returned to the employer unless the firm gives permission to keep those records after employment ends.
+</article>
+</div>
+
+
+
+<span>2-TWRR & MWRR</span>
+<strong>考题:</strong>
+<p>Time weighted rate of return
+An analyst gathers the following information about the performance of a portfolio ($ millions): 
+
+<table border="1px">
+    <tr>
+    <td>Quarter</td>
+    <td>Value at Beginning of Quarter<br/>(Prior to Inflow or Outflow)</td>
+    <td>Cash Inflow (Outflow)<br/>at Beginning of<br/>Quarter</td>
+    <td>Value at End<br/>of Quarter</td>
+   
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>2.0</td>
+    <td>0.2</td>
+    <td>2.4</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>2.4</td>
+        <td>0.4</td>
+        <td>2.6</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>2.6</td>
+        <td>(0.2)</td>
+        <td>3.2</td> 
+    </tr>
+
+    <tr>
+        <td>4</td>
+         <td>3.2</td>
+          <td>1.0</td>
+           <td>4.1</td>
+    </tr>
+</table>
+The portfolio’s annual time-weighted rate of return is closest to:
+</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>32%.</p>
+<p ><i>B</i>27%.</p>
+<p ><i>C</i>8%.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution: A</h3>
+<article>
+The time-weighted rate of return is calculated by computing the quarterly holding period returns and linking those returns into an annual return as follows:
+<table border="1px">
+    <tr>
+    <td>Quarter</td>
+    <td>Value at Beginning of Quarter<br/>(Considering Inflows and Outflows)</td>
+    <td>Value<br/>($ millions)<br/>at End of Quarter</td>
+    <td>Holding Period Return</td>
+   
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>2.0+0.2=2.2</td>
+    <td>2.4</td>
+    <td>(2.4-2.2)/2.2=9.09%</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>2.4+0.4=2.8</td>
+        <td>2.6</td>
+        <td>(2.6 – 2.8) / 2.8 = –7.14%</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>2.6 – 0.2 = 2.4</td>
+        <td>3.2</td>
+        <td>(3.2 – 2.4) / 2.4 = 33.33%</td> 
+    </tr>
+
+    <tr>
+        <td>4</td>
+         <td>3.2 + 1.0 = 4.2</td>
+          <td>4.1</td>
+           <td>(4.1 – 4.2) / 4.2 = –2.38%</td>
+    </tr>
+</table>
+The time-weighted return (TWR) is found as follows:<br/>
+<i><img src="images/p6_10.png"></i><br/>
+</article></div>
+
+
+<span>3- Market and Firm Structure</span>
+<strong>考题:</strong>
+<p>Which market has a large number of firms and differentiated products?</p>
+
+<div class="anwser">
+<p >
+<i>A</i> Perfect competition</p>
+<p class="green"><i>B</i> Monopolistic competition</p>
+<p><i>C</i>Monopoly</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:B</h3>
+<article>
+<i><img src="images/p6_03.png"></i><br/>
+</article></div>
+
+
+
+<span>4-LIFO reserve</span>
+<strong>考题:</strong>
+<p>A company selected LIFO method for its financial reports, and some information about its CXA financial report is given below (in million):
+<table border="1px">
+    <tr><td>Net revenue</td><td>120</td></tr>
+    <tr><td>COGS</td><td>70</td></tr>
+    <tr><td>Fixed cost</td><td>25</td></tr>
+    <tr><td>Change in LIFO reserve</td><td>15</td></tr>
+    <tr><td>Tax rate</td><td>30%</td></tr>
+</table>
+The company’s net profit margin under FIFO method is closest to:
+</p>
+
+<div class="anwser">
+<p ><i>A</i>14.58%</p>
+<p class="green"><i>B</i>23.33%</p>
+<p><i>C</i>33.33%</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:B</h3>
+<article>
+<i><img src="images/p6_11.png"></i><br/>
+</article>
+</div>
+
+
+<span>5-CFO Calculation</span>
+<strong>考题:</strong>
+<p>The following information is available from a company’s accounting records:<br/>
+<i><img src="images/p6_05.png"></i><br/>
+The operating cash flow is closest to:
+</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>40,100,000</p>
+<p ><i>B</i>46,300,000</p>
+<p><i>C</i>49,900,000</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>
+<i><img src="images/p6_12.png"></i><br/>
+</article>
+</div>
+
+
+<span>6-WACC</span>
+<strong>考题:</strong>
+<p>An analyst gathered the following data about a company:<br/>
+<i><img src="images/p6_06.png"></i><br/>
+Assuming a 40% tax rate, what after-tax rate of return must the company earn on its investments?
+</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>13%.</p>
+<p ><i>B</i>14.2%.</p>
+<p><i>C</i>18%.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>
+<i><img src="images/p6_13.png"></i><br/>
+</article>
+</div>
+
+
+<span>7-Golden Growth Model</span>
+<strong>考题:</strong>
+<p>An analyst observes that the current market price of a manufacturing company is 52 and recent dividend paid is 3.2. He estimates the required rate of return by Fama-French model and the result is 9%. What is sustainable growth rate of this company?
+</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>2.68%</p>
+<p ><i>B</i>3.23%.</p>
+<p><i>C</i>3.74%.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>
+<i><img src="images/p6_07.png"></i><br/>
+g=2.68%
+</article>
+</div>
+
+
+<span>8-Durations</span>
+<strong>考题:</strong>
+<p>Which of the following statements is least accurate regarding the factors that affect the interest rate risk characteristics of an option-free bond?
+</p>
+
+<div class="anwser">
+<p class="green"><i>A</i>The higher the yield, the greater the bond's price sensitivity to changes in interest rates.</p>
+<p ><i>B</i>The longer the bond's maturity, the greater the bond's price sensitivity to changes in interest rates.</p>
+<p><i>C</i>The lower the coupon rate, the greater the bond's price sensitivity to changes in interest rates.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:A</h3>
+<article>
+Option-free bonds have positive convexity. The higher the yield to maturity, the lower the duration (and thus the lower the interest rate risk). 
+</article>
+</div>
+
+
+<span>9-Put-call Parity</span>
+<strong>考题:</strong>
+<p>As with all arbitrage trades, you want to<i><img src="images/p6_08.png"></i> if put-call parity doesn’t hold (if the cost of a fiduciary call does not equal the cost of a protective put), then you buy (go long in) the underpriced position and sell (go short) in the overpriced position.<br/> 
+<br/>
+A stock is selling at $40, a 3-month put at $50 is selling for $11, a 3-month call at $50 is selling for $1, and the risk-free rate is 6%. How much, if anything, can be made on an arbitrage?
+</p>
+
+<div class="anwser">
+<p><i>A</i>$0 (no arbitrage).</p>
+<p ><i>B</i>$0.28</p>
+<p class="green"><i>C</i>$0.72</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:C</h3>
+<article>
+<i><img src="images/p6_14.png"></i><br/>
+</article>
+</div>
+
+
+
+<span>10-CAPM</span>
+<strong>考题:</strong>
+<p>The risk-free rate is 6% and the expected market return is 15%. An investor sees a stock with a beta of 1.2 selling for $25 that will pay a $1 dividend next year. If he thinks the stock will be selling for $30 at year end, he thinks it is:</p>
+
+<div class="anwser">
+<p><i>A</i>Overpriced, so buy it.</p>
+<p ><i>B</i>Overpriced, so short it.</p>
+<p class="green"><i>C</i>Underpriced, so buy it.</p>
+</div>
+
+<div class="solution">
+<strong>解析</strong>
+<em><img src="images/p2_03.png"></em><h3>Solution:C</h3>
+<article>
+Required rate=6+1.2(15-6) =16.8%<br/>
+Return on stock= (30-25+1)/25=24%<br/>
+Based on risk, the stock plots above the SML and is underpriced, so buy it.
+</article>
+</div>
+
+
+</div>
+
+<!--上午10题知识点 开始-->
+<div class="ep_knowledge" id="menuList2">
+<h2>下午10题知识点</h2>
+<div>
+<p>Record retention<i class="jia"><img src="images/p3_03.png"></i><em class="jian"><img src="images/p3_06.jpg"></em></p>
+<article>
+embers and Candidates must develop and maintain appropriate records to support their investment analyses, recommendations, actions, and other investment-related communications  with clients and prospective clients    <br/>
+Once an employee has left the firm, the skills and experience that an employee obtained while employed are not "confidential" or "privileged" information. Similarly, simple  knowledge of the names and existence of former clients is generally not confidential information unless deemed such by an agreement or by law. Standard IV(A) does not prohibit experience or knowledge gained at one employer from being used at another employer. Firm records or work performed on behalf of the firm that is stored in paper copy or electronically for the member's or candidate's convenience while employed, however, should be erased or returned to the employer unless the firm gives permission to keep those records after employment ends. 
+</article>
+</div>
+
+<div>
+<p>TWRR & MWRR<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+TWRR<br/>
+TWRR: Not be influenced by the timing and direction of CF, so it’s an objective indicator of investment managers’ performance; <br/>
+<i><img src="images/p5_17.png"></i><br/>
+MWRR:  <br/>
+MWRR: However, if can control the timing and direction, MWRR is the best indicator to measure the return.  <br/>
+概念：The money weighted return applies the concept of IRR to investment portfolio. The IRR based on the cash flows related to the investment.  <br/>
+步骤及公式：Firstly, determine the timing of each cash flow; then, using the calculator to compute IRR, or using geometric mean.  <br/>
+★Only appropriate for the investment when manager can control the timing and direction of CF.
+</article>
+</div>
+
+<div>
+<p>Market and Firm Structure<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/p5_00.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>LIFO reserve<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/p5_18.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>CFO Calculation<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/p5_19.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>WACC<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+WACC
+<i><img src="images/p5_20.png"></i><br/>
+要素一：税盾——Cost of Debt需要乘以(1 -t)  <br/>
+要素二：Weighted  <br/>
+首选是用公司的target capital structure；  <br/>
+如果没有target structure，则选用market value（如上题）；  <br/>
+如果没有market value，就用公司管理层所提供的公司optimal capital structure trend  <br/>
+这些条件都不满足的时候，用同行业的平均capital structure作为参考  <br/>
+★计算Cost of Equity：  <br/>
+计算Cost of Equity的方法有3种，分别是DDM (GGM）；CAPM和Bond yield plus risk premium  <br/>
+DDM  <br/>
+注意一：dividend在题目中的表述，看清楚是current (D0)还是expected (D1)  <br/>
+公式是kre = D1/ P0 + g，所以题目表述的是D0，就需要用D0(1+g)先算出D1  <br/>
+注意二：这个公式有一个假设，即公司有stable dividend policy，并且without issuing additional common stock，这样g=(1-D/EPS)ROE  <br/>
+注意三：D1/ P0叫做forward annual dividend yield  <br/>
+Bond yield plus risk premium：这个premium指的是cost of equity与this company’s cost of debt之间的区别  <br/>
+<i><img src="images/p5_02.png"></i>，在计算NPV时以CFA协会的观点认为应该作为initial CF，不需要在分母上进行调整。
+</article>
+</div>
+
+
+<div>
+<p>Golden Growth Model<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/p5_03.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Durations<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+ 定义、计算及解释Macaulay duration, modified duration 和 effective duration  <br/>
+Interest rate risk: 债券价格对利率变化的敏感程度，价格对利率变化越敏感，价格波动的可能性就越高  <br/>
+Duration: a measure of a bond’s interest rate risk or sensitivity of a bond’s full price to a change in its yield.  <br/>
+Macaulay duration: the weighted average number of coupon periods until a bond’s scheduled cash flows.  <br/>
+As time passes during the coupon period, the Macaulay duration declines smoothly and then jumps upward after the coupon is paid because when the coupon is paid, both numerator and denominator decline by a same amount and the total impact is an increase for the number greater than one.  <br/>
+<i><img src="images/p5_04.png"></i><br/>
+Modified duration: a linear estimate of the percentage change in a bond’s price that would result from a 1% change in its YTM.  <br/>
+<i><img src="images/p5_05.png"></i><br/>
+
+The Macaulay and modified duration statistics for a fixed-rate bond depend primarily on the coupon rate, yield-to-maturity, and time-to-maturity.  <br/>
+A higher coupon rate or a higher yield-to-maturity reduces the duration measures.   <br/>
+A longer time-to-maturity usually leads to a higher duration. It is also called maturity effect.  <br/>
+It always does so for a bond priced at a premium or at par value.   <br/>
+But if the bond is priced at a discount, a longer time-to-maturity might lead to a lower duration. This situation only occurs if the coupon rate is low (but not zero) relative to the yield and the time-to-maturity is long  <br/>
+Bond with embedded options (callable bond & putable bond) has lower duration.  <br/>
+<i><img src="images/p5_06.png"></i><br/>
+</article>
+</div>
+
+
+<div>
+<p>Put-call Parity<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+A relationship between the call price and the price of its corresponding put, which we refer to as put-call parity.  <br/>
+long call = long put, long asset, short bond  <br/>
+A <i><img src="images/p5_07.png"></i> is a portfolio consisting of:  <br/>
+A long position in a European call option with an exercise price of X that matures in T years on a stock.  <br/>
+A long position in a pure-discount riskless bond that pays X in T years.  <br/>
+The cost a fiduciary call is the cost of the call (C0) plus the cost of the bond (the present value of X). The payoff to a <i><img src="images/p5_08.png"></i> will be X if the call is out-of-the-money and ST if the call is in-the-money, as shown in the following:  <br/>
+<i><img src="images/p5_09.png"></i> <br/>
+<i><img src="images/p5_10.png"></i>is a portfolio consisting of :  <br/>
+A long position in a European put option with an exercise price of X that matures in T years on a stock.  <br/>
+A long position in the underlying stock.  <br/>
+The cost of a protective put is the cost of the put (P0) plus the cost of the stock (S0). The payoff to a <i><img src="images/p5_11.png"></i> is X if the put is in-the-money and ST if the put is out-of-the-money. as shown in the following:  <br/>
+<i><img src="images/p5_12.png"></i><br/>
+熟练掌握put-call parity公式的各种变形：  <br/>
+<i><img src="images/p5_13.png"></i><br/>
+<br/>	 
+<br/>	 
+Note that the options much be European-style and the puts and calls mush have the same exercise price for these relations to hold.  <br/>
+Fiduciary call: buy riskless bond that pays X at maturity and a call with exercise price X.  <br/>
+Protective put: buy security and long put.
+Put-call parity 的作用：  <br/>  <br/>
+为option定价  <br/>
+合成option。  <br/>
+无风险套利。在无风险套利中，遵循long小边，short大边原则  <br/>
+如：<i><img src="images/p5_14.png"></i> ，套利方法是：long security, long put, short call, short bonds，即Long价格低的组合，Short价格高的组合。 
+</article>
+</div>
+
+<div>
+<p>CAPM<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+ In the capital asset pricing model (CAPM) approach, we use the basic relationship from the capital asset pricing model theory that the expected return on a stock, E(Ri), is the sum of the risk-free rate of interest, RF, and a premium for bearing the stock’s market risk, βi(RM ? RF)  <br/>
+How to judge if a stock is properly valued   <br/>
+Undervalued  <br/>
+Estimated return > Required return from the SML
+Investors should buy.  <br/>  <br/>
+Overestimated  <br/>
+Estimated return < Required return from the SML  <br/>
+Investors should sell.  <br/>
+Properly valued  <br/>
+Estimated return = Required return from the SML  <br/>
+Investors are indifferent between buying or selling  <br/>
+<i><img src="images/p5_15.png"></i>
+</article>
+</div>
+
+
+</div>
+
+<div class="ep_list">
+<p>
+<a href="#xia10">下午必考10题<i><img src="images/p4_03.png"></i></a>
+</p>
+<p>
+<a href="#menuList2">下午10题知识点<i><img src="images/p4_03.png"></i></a>
+</p>
+</div>
+</div>
+<!--下午必考 结束-->
+
+<!--完整版 开始-->
+<div class="exmaPublicity" style="display:none">
+<!--完整版必考知识点 开始-->
+<div class="ep_knowledge" id="menuList3">
+<h2>完整版必考知识点</h2>
+<div>
+<p>Ethics<i class="jia"><img src="images/p3_03.png"></i><em class="jian"><img src="images/p3_06.jpg"></em></p>
+<article>
+<strong>Key Point:Ethics</strong>
+发现有人违反，经过CFA调查后，一般会有三种处理方法：1）不处罚；2）发警告信；3）进行处罚（由轻到重依次为：private censure, public censure, timed revocation, suspension, revocation）。<br/>
+如果你知道(know)有人在违法，还可以采取分步骤的方法：向公司里的适当人员（supervisor or compliance department）汇报，也可以选择直面当事人（confronting wrongdoers），如果仍没有改进，则你必须违法行为划清界限（disassociate）并且保存相关记录，甚至辞职；同时要进一步咨询以便采取进一步的行动。<br/>
+投资产品的开发与销售：投资产品的开发者、销售及维护人员要注意产品销售地和来源地的法律；对于分销商，同样要注意其是否遵守了法律。<br/>
+Analysts’ compensation for preparing issuer paid research should be limited, and the preference is for a flat fee that is not linked to their conclusions or recommendations.
+知名分析师的意见可能被视作为内幕消息，在报告发布之前，分析师的客户可以使用，其他人不可使用。<br/>
+IPO可以参加，但是Private placement 不可以参加。Firms should develop formal polices related to employee purchases of equity or equity-related IPOs. Firms should require prior approval for employee partic¬ipation in IPOs, with prompt disclosure of investment actions taken following the offering。<br/>
+Gift from client可以接受, 但必须披露并获得同意，否则违反I(B)。尽量接受前披露，如果实在没法披露，也要事后披露。<br/>
+Social media: members and candidates 还必须遵守一些专门针对一些社会媒体交流所制定的Code and Standards. 在社会媒体上故意散播错误的投资建议或者虚假陈述专业投资活动的信息，都会被视为违反了Standard I(C)。
+在收到additional compensation之前，需要得到written consent from all parties involved。<br/>
+模拟的业绩可作为业绩的一部分，但是要披露；投资管理费可以减Net也可以不减Gross，交易费一定要减。<br/>
+关于保密：为prior client保密，为现有的客户保密，但是客户有违法行为，一般不保密，即法律机关要求披露则不能保密。但是，如果当地法律首先要求为客户保密，即使是违法行为，也需要保密。<br/>
+IPS至少一年或者在重大事件发生时进行修改；客户要求的投资违反了IPS时，要严格按照IPS来投资。<br/>
+如果客户要求的投资不适当，如果不是客户的投资顾问，拒绝或者客户提供书面说明；如果是顾问，则拒绝。<br/>
+如果当地法律要求保留记录为5年，则保留5年且披露这个事实；如无规定，则协会要求保留至少7年。<br/>
+GIPS规定最初至少披露5年的业绩，然后往上累加，一直到披露10年的业绩。如果公司成立不足5年，则披露成立至今的业绩。Terminated composite在composite list中最少保留5年。<br/>
+养老金发起人，如果管理Pension,可以遵守GIPS；但是，如不直接管理，则不能说遵守。firm-wide, voluntarily, should verify the whole firm, cannot be verified on a specific composite.<br/>
+Members and candidates 依赖模型来找寻新的投资机会，建立投资工具，提供投资建议，但是往往通过模型得出的结论不会是事实。在选择composite的组成时，要建立严格的政策来防止“cherry picking”。<br/>
+Changes in style, ceilings, committee, universe of investment should disclose to the clients and prospect clients. 如果投资过程发生了改变，如改变了投资方法，用DDM改为指数化投资、由个人决策到委员会决策等，都必须向Clients and prospects进行披露。Illiquidity and capacity should be disclosed.
+</article>
+</div>
+
+<div>
+<p>Quantitative analysis and Portfolio Management<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+
+    <div class="gongshi">
+    <strong>Key Point: Quantitative</strong><br/>
+<i><img src="images/P7-00.png"></i><br/>
+    </div>
+
+    <div class="jiashe">
+    <strong>假设检验</strong>
+    <ul>
+        <li>对单个mean检验用z检验（方差已知）或者t检验（方差未知）。</li>
+        <li> 对两个mean检验，如果两个分布是独立的，用t检验；如果两个分布不是独立的，用成对数检验(paired comparisons test)。</li>
+        <li> chi-square test 检验单个variance。</li>
+        <li>chi-square test 检验单个variance。</li>
+        <li>F-test 检验两个variances 是否相等。</li>
+    </ul>
+    </div>
+
+      <div class="Types">
+    <strong>Type I and Type II Errors</strong>
+    <ul>
+        <li>Type I error: rejection of null hypothesis when it is actually true. P(I)=α</li>
+        <li>Type II error: failure to reject null hypothesis when it is actually false. P(II)=1 - power of test</li>
+    </ul>
+    </div>
+	  <i><img src="images/P7-01.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Financial Statement Analysis<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+Key Point: Financial Statement  Analysis<br/>
+Audit report有三种类型分别是qualified opinion, unqualified opinion, adverse opinion。<br/>
+The auditors must also express an opinion on the company’s internal control systems according to Sarbanes-Oxley Act.<br/>
+Changes in accounting principles需要追溯调整; changes in accounting estimates一般是由于有了新的信息所导致的估计调整，不需要追溯调整。<br/>
+Footnotes包括methods and assumptions; related-party transactions; commitments，是被审计过。<br/>
+OCI includes: Foreign currency translation gains and losses, Adjustments for minimum pension liability, Unrealized gains and losses from cash flow hedging derivatives, Unrealized gains and losses from available-for-sale securities.<br/>
+Overdraft: IFRS: cash equivalent; GAAP: CFF（更严格）。<br/>
+Trading金融工具作为CFO。<br/>
+Revenue Recognition理解:Under U.S. GAAP, 对于long-term contract，可以选用POC(Percentage of completion)和CC(Completed-contract)。Under IFRS, 对于long term contract，结果不确定，按成本确认销售收入。
+POC和CC的区别： 重要指标，A是POC比较大；L是POC比较小；NI的波动是CC比较大；但是total CF一样大。<br/>
+Non-recurring items分为三种:Unusual or infrequent items, Extraordinary items, Discontinued operations. Extraordinary items指性质高度异常的重大损益项目，该项目因企业日常业务活动以外的交易或事项产生，并预期不会再度发生，包含了灾难带来的损失，对于国外没收，及提前赎回债券的损失（美国准则有这项，但是国际准则没有这一项）<br/>
+IFRS Impairment: Carrying value> max [Fair Value- selling cost, PV(value in use)], can reverse the loss.<br/>
+Investment property (only IFRS) is measured at Amortized cost or Fair value.<br/>
+Extraordinary items (U,S,GAAP only):Both unusual and infrequent (e.g. losses from expropriation of assets), IFRS does not allow extraordinary items.<br/>
+Held for sale (same under US GAAP and IFRS): Stop depreciation, impairment test (If carrying value> Fair Value –selling cost), can reverse the loss.<br/>
+Premium bonds: coupon rate> Market rate； CFO低估，CFF高估；amortized cost趋向面值。<br/>
+Disclose in footnotes as bond: The nature of liabilities；Maturity dates;Stated and effective interest rates; Call provisions and conversion privileges; Restrictions imposed by creditors; Assets pledged as security; The amount of debt maturing in each of the next five years.<br/>
+相对于Operating lease, finance lease确认了资产和负债，其EBIT比较大，EBIT/interest比例低。<br/>
+DTA和DTL：IFRS: Always non-current (Net); GAAP：non-current /current.<br/>
+在分析时，当分析师认为DTL不会回转时或者何时回转不确定，DTL全额视为equity；会反转时，现值作为负债，剩余部分计入到Equity，再计算D/E。<br/>
+Revaluation model下，PPE value从100→110，变化记录revaluation surplus；100→90，记到I/S中。<br/>
+Percentage of Completion下，第二年产生loss，第二年要确认全部Loss。<br/>
+所有金融工具（包括AFS，HTM，Trading），realized return在I/S中确认。<br/>
+<i><img src="images/P7_1.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Economics <i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+Key Point: Economics<br/>
+Stable and unstable equilibrium<br/>
+Stable equilibrium:供给曲线从上向下穿过（从上压住）需求曲线<br/>
+Unstable equilibrium:供给曲线从下向上穿过需求曲线<br/>
+Two important distinctions between Giffen goods and Veblen goods.<br/> 
+First, Giffen goods are inferior goods (negative income effect), while Veblen goods certainly are not.<br/> 
+Second, the existence of Giffen goods is theoretically supported by the rules of consumer choice, while the existence of Veblen goods is not.<br/>
+If demand is less elastic than supply, consumers will bear a higher burden.<br/>
+If supply is less elastic than demand, suppliers will bear a higher burden (弹性弱的一方承担更多税收).<br/>
+关税和进口配额对福利的影响是不一样的：<br/>
+对于小国来说，福利会减少。而对于大国来说，福利可能会增加，因为大国能影响世界价格，迫使出口国（小国）降价。世界价格下降带来的影响是收入从出口国到进口国的再分配。但是这基于两个假设条件：贸易对手不报复；产生的DWL小于改善terms of trade带来的好处<br/>
+Ricardian model: comparative advantage and pattern of trade are determined by differences in technology between countries.（技术差异）<br/>
+Heckscher-Ohlin model: comparative advantage and pattern of trade are determined by differences in factor (factor & labor) endowments between countries. （生产要素禀赋区别）要素越多的国家，获得收益越大。<br/>
+Bank reserve增加，总需求增加；Required reserve ratio增加，总需求下降。<br/>
+GDP的计算<br/>
+Expenditure approach：GDP = C + I + G + (X - M)<br/>
+Income approach：GDP = national income + capital consumption allowance + statistical discrepancy<br/>
+The AD curve will be flatter if:<br/>
+Investment expenditure is highly sensitive to the interest rate;<br/>
+Saving is insensitive to income;<br/>
+Money demand is insensitive to interest rates; and<br/>
+Money demand is insensitive to income<br/>
+从记忆的角度来说，AD曲线更加平坦，I对利率变化敏感，其他都不敏感<br/>
+The higher sensitivity of the investment to interest rate, the flatter the AD curve(其他不敏感，AD平坦).<br/>
+Policy multipliers（MPC是相对于可支配收入（Y-Tax））<br/>
+<i><img src="images/P7_2.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Corporate Finance<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+ Key Point: Corporate Finance<br/>
+ <i><img src="images/P7_3.png"></i><br/>
+ <i><img src="images/P7_4.png"></i><br/>
+ <i><img src="images/P7_5.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Equity<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+In call markets, the stock is only traded at specific times. All trades, bids, and asks are declared, and then one negotiated price is set that clear the market for the stock(call market信息处理能力较强).<br/>
+In continuous markets, trades occur at any time the market is open. The price is set by either auction process or by dealer bid-ask quotes(continuous market流动性较强).<br/>
+<i><img src="images/P7_6.png"></i><br/>
+<i><img src="images/P7_7.png"></i><br/>
+</article>
+</div>
+
+
+<div>
+<p>Fixed Income<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/P7_8.png"></i><br/>
+<i><img src="images/P7_9.png"></i><br/>
+<i><img src="images/P7_10.png"></i><br/>
+</article>
+</div>
+
+<div>
+<p>Alternatives and Derivatives<i><img src="images/p3_03.png"></i><em><img src="images/p3_06.jpg"></em></p>
+<article>
+<i><img src="images/P7_11.png"></i><br/>
+<i><img src="images/P7_12.png"></i><br/>
+<i><img src="images/P7_13.png"></i><br/>
+</article>
+</div>
+
+
+</div>
+</div>
+<!--完全版 结束-->
+</div>
+
+
+
+
+
+
+<div class="mbbody">
+<!--手机底部 start-->
+<div class="mbfooter">
+<ul>
+<li><a href="">登录</a></li>
+<li><a href="">注册</a></li>
+<li><a href="">下载APP</a></li>
+<li><a href="">用户反馈</a></li>
+</ul>
+<dl>
+<dt>400-700-9596 </dt>
+<dd>（每日9:00-21:00免长途费 ）</dd>
+</dl>
+<p>©2014金程网校保留所有权利 </p>
+</div>
+<div class="gotop"><a href="#mbbody"><strong>&and;</strong>TOP</a></div>
+<!--手机底部 end-->
+</div>
+
+
+<div class="webbody">
+<!--底部-->
+<footer>
+  <div class="newlinks">
+    <dl>
+    <dt>新手指南</dt>
+    <dd><a href="#">如何注册会员</a></dd>
+    <dd><a href="#">如何购买课程</a></dd>
+    <dd><a href="#">如何观看课程</a></dd>
+    </dl>
+    <dl>
+    <dt>学习须知</dt>
+    <dd><a href="#">网校学习方式</a></dd>
+    <dd><a href="#">学习效果如何保障</a></dd>
+    <dd><a href="#">学习条件</a></dd>
+    </dl>
+    <dl>
+    <dt>支付方式</dt>
+    <dd><a href="#">网上支付</a></dd>
+    <dd><a href="#">开通支付宝</a></dd>
+    </dl>
+    <dl>
+    <dt>关于金程</dt>
+    <dd><a href="#">关于我们</a></dd>
+    <dd><a href="#">联系我们</a></dd>
+    <dd><a href="#">加入我们</a></dd>
+    </dl>
+    <dl>
+    <dt>400 - 700 - 9596</dt>
+    <dd>（每日9:00-21:00    免长途费）</dd>
+    <dd><img src="../../images2015/bottomWX.png"></dd>
+    </dl>
+</div>
+<div class="copyright">
+<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+    </div>
+</footer>
+<!--底部--> 
+</div>
+
+
+
+<!--登陆框-->
+<div id="mode"></div>
+<div id="EP_login" >
+<p><input type="text" placeholder="手机号"/></p>
+<p><input type="text" placeholder="验证码" id="EP_code" /><input type="button" value="获取验证码" id="EP_get" ></p>
+<p><input type="button" value="确认看题及知识点"  onclick="pop0()"></p>
+</div>
+
+
+
+<script>
+function winWidth(){
+    return window.innerWidth||document.documentElement.clientWidth;
+    }
+function winHeight(){
+    return window.innerHeight||document.documentElement.clientHeight;
+    }
+
+
+function popup(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+
+        mask.style.display="block";
+        logIn.style.display="block";
+        var bw=winWidth();
+        var bh=winHeight();
+        logIn.style.left=bw/2-(300/2)+"px";
+        logIn.style.top=bh/2-(250/2)+"px";
+
+    }
+
+    // window.onresize=function(){
+    //  var bw=winWidth();
+    //     var bh=winHeight();
+
+    //     logIn.style.left=bw/2-(300/2)+"px";
+    //     logIn.style.top=bh/2-(250/2)+"px";
+
+
+    //     }
+function pop0(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+        mask.style.display="none";
+        logIn.style.display="none";
+
+    }
+$("#EP_get").click(function(){
+  $(this).addClass("on").siblings("#EP_get").removeClass("on");
+});
+</script>
+
+
+
+</body>
+</html>

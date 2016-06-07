@@ -1,0 +1,200 @@
+
+404.html-----------------------------------主站下404页面
+teacherlist.html----------------------------师资列表页
+teachercom.html---------------------------师资详情
+newthings.html-----------------------------新鲜事跳转页
+ord_pay.html / ord_personal.html / ord_subOrders.html / ord_toPay.html--------------支付页
+
+
+gfedunet/CSS---------------------------------总的样式
+
+	reset.less------------------------------重置
+	variable.less--------------------------全局变量
+	core.less------------------------------常用元素设置
+	global.less----------------------------全局架构设置
+	headfoot.less-------------------------头尾共用样
+	jMmenu.less--------------------------移动端左侧推出样式
+	common.less--------------------------共用样式
+	proaside.less--------------------------右列内容
+	classdetail.less------------------------课程详情
+	pagecontent.less----------------------右测内容
+	headfooter.less----------------------com站首尾样式
+	payment------------------------------支付页
+		pay.less / pay.css----------------------支付页
+		paymentcom.less---------------------支付公用
+	teacher--------------------------------师资详情
+		introteacher.less----------------------师资介绍
+		newthing.less---------------------------新鲜事
+		stucment.less---------------------------学员评论
+		teachereset.less-------------------------初始化		
+	teacherlist-----------------------------师资列表
+		cfatearchlist.less / cfatearchlist.css
+	404------------------------------------404
+		cfa404.less / cfa404.css
+	fonts----------------------------------iconfont字体
+
+gfedunet/script------------------------------总的JS
+
+	html5shiv.js-------------------------支持HTML5新标签IE9以下兼容
+	respond.min.js-----------------------支持CSS3新样式IE9以下兼容
+	jquery.min.js------------------------JQuery样式
+
+	常用JS库
+	jquery.SuperSlide.2.1.1.js------------以单个元素轮翻
+	jquery.mCustomScrollbar.concat.min.js-手机滑屏
+	fadeSlide.js--------------------------元素作背景轮翻
+	carousel.js---------------------------元素轮翻
+	jquery.mmenu.min.all.js------------移动端左侧推出插件
+
+	表单验证
+	bdscript.js
+	bdloginReg.js
+	bdpasswordCheck.js
+
+gfedunet/special-------------------------------------------------------专题
+	commoncss---------------------------------------公用样式
+	1508_channel-------------------------------------渠道部推广页
+	
+
+
+
+
+gfedunet/frm---------------------------------FRM
+	index.html---------------------------FRM首页
+	list.html----------------------------FRM列表页
+	page.html----------------------------FRM内容页
+	courselist-----------------------------FRM课程列表页
+	classdetail----------------------------课程详情
+	404.html------------------------------FRM 404页面
+	ref_15y_certificate.html----------------专题之成绩查询
+	ref_15y_content.html-------------------专题之考试内容
+	ref_15y_fee.html------------------------专题之报名时间与费用
+ 	ref_15y_introduce.html-----------------专题之考试介绍
+	ref_15y_plan.html-----------------------专题之备考规划
+	ref_15y_query.html----------------------专题之成绩查询
+	ref_15y_time.html-----------------------专题之考试时间与考点
+	
+	gfedunet/frm/css
+		frm.less----------------------FRM首页-index调用其CSS样式
+		frmindex.less----------------FRM首页非公用样式
+		frmlist.less-------------------FRM其它页面
+		frmclassdetail.less-----------FRM课程详情
+		content.less-----------------FRM其它页非共用样式
+		frmvariable.less-------------FRM变量
+		frmks ------------------------ 7个FRM专题样式
+		newsite-----------------------新站点
+			newsite.less / newsite.css
+	gfedunet/frm/script
+		frm.js ----------------------- -FRMJS
+		frmclassdetail.js--------------FRM课程详情
+		frmks ------------------------ 7个FRM专题 JS
+			frmks.js
+	gfedunet/frm/special ---------------------------------- 专题
+		commoncss--------------------------公用样式
+		1508_NationalDay-------------------考前冲刺7天7夜
+	
+	gfedunet/frm/images
+	gfedunet/frm/pic
+
+
+
+
+gfedunet/cfa---------------------------------CFA
+	index.html--------------------------CFA首页
+	list.html--------------------------CFA列表页
+	page.html--------------------------CFA内容页
+	courselist---------------------------CFA课程列表页
+	classdetail.html--------------------CFA课程详情
+	classdetailnew.html----------------CFA课程详情之为后台更改
+
+	cfaexam.html-----------------------专题之首页
+	cfarate.html-------------------------专题之成绩与通过率
+	cfafee.html--------------------------专题之报名与时间
+	cfapplication.html-------------------专题之考试报名
+	cfatime.html--------------------------专题之考试考试时间及低点
+	cfacontent.html ---------------------专题之考试内容
+	review.html---------------------------专题之复习备考
+	cfasail.html----------------------------专题之起航
+	getInfo.html----------------------------专题之资料索取
+	404.html-----------------------------FRM 404页面
+
+	gfedunet/cfa/css
+		cfa.less---------------------------CFA首页-index调用其CSS样式
+		cfaindex.less---------------------CFA首页非公用样式
+		cfalist.less------------------------CFA其它页面
+		content.less----------------------CFA其它页非共用样式
+		cfa404.less-----------------------CFA404
+		cfacourselist.less-----------------CFA课程列表
+		cfaclassdetail.css-----------------CFA课程详情
+		cfaclassdetailnew.css-------------CFA课程详情之为后台更改
+		cfavariable.less------------------CFA变量
+		getInfo --------------------------专题之资料索取样式
+		cfaexam--------------------------------CFA考试专题
+			cfacommon.less--------------专题公用
+			cfaexam.less/cfaexam.css----专题之首页
+			cfarate.less/cfarate.css---------专题之成绩与通过率
+			cfafee.less/cfafee.css-----------专题之报名与时间
+			cfasail.less/cfasail.less----------专题之起航
+			cfapplication.less/cfapplication.css-------专题之考试报名
+			cfacontent.less/cfacontent.less------------专题之考试内容
+		cfasummer-------------------------------CFA暑期培训班
+			cfasummer.less/cfasummer.css
+		getInfo------------------------------------专题之资料索取
+			getinfor.less / getinfor.css / style.css
+
+	gfedunet/CFA/script
+		CFA.js-----------------------CFAJS
+		getInfo ------------------------- 专题之资料索取
+	gfedunet/cfa/images
+	gfedunet/cfa/pic
+
+	gfedunet/cfa/special-------------------------------专题
+		commoncss---------------------------公用样式
+			commoncss.less / commoncss.css
+		150915_pufa---------------------------浦发免息专题页
+		150929_uibe---------------------------对外经贸大学专题页
+	
+
+gfedunet/jcb---------------------------------JCB
+	index.html---------------------------JCB首屏(20151015增添手机版)
+	index2.html---------------------------JCB首页
+	pgs_detail.html----------------------------JCB列表页
+	p2_intro.html----------------------------JCB赛事介绍
+	p3_schedule.html----------------------------JCB赛事赛程
+	p4_payoffs.html----------------------------JCB大赛收益
+	p5_grant.html----------------------------JCB圆梦助学金
+	p6_review.html----------------------------JCB往届回顾
+	p7_report.html----------------------------JCB前线报道
+	p8_recruit.html----------------------------JCB招聘计划
+	404.html-----------------------------------JCB404页面
+	pgs_preliminary .html----------------------JCB初赛登录页
+        index3.html------------------------------JCB首页
+        P9_judge.html------------------------------JCB大赛评委页
+        judge_detial.html-------------------------JCB大赛评委详情页
+	
+	gfedunet/jcb/css
+		common.less----------------------JCB共用样式
+		jcbindex.less----------------JCB首页非公用样式
+		page.less-------------------JCB分页公用以及非公用样式
+		headfoot.less---------------JCB首尾共用样式
+		jcb404.less-------------------JCB404页面样式
+		
+	gfedunet/frm/script
+		jcb.js ----------------------- JCBJS
+		
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+

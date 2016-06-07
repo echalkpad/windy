@@ -1,0 +1,45 @@
+学习天空=========》
+
+	index.html----------------首页
+	mylearning.html-----------购买后首页
+	book.html-----------------知识点
+	reading.html--------------知识点小节
+	video.html----------------视频页
+	proctice.html-------------题库练习
+	login.html----------------登录
+	register.html-------------注册
+	bindingPhone.html---------绑定手机
+	bindingtab.html-----------绑定账号
+	ord_pay.html--------------提交订单
+	ord_personal.html---------全部订单
+	ord_subOrders.html--------购物车
+	ord_toPay.html------------订单支付
+	pwd_find.html-------------找回密码
+	pwd_altersuccess.html-----密码修改成功
+	mess_center.html----------消息中心
+	mess_page.html------------消息详情
+
+
+
+CSS=================》
+	reset.css-----------------初始化
+	index.css-----------------首页
+	common.css----------------共用样式以及题库练习（包括头尾）
+	book.css------------------知识点
+	reading.css---------------知识点小节
+	video.css-----------------视频页
+	proctice.html-------------题库练习
+	payment-------------------订单
+	form----------------------找回密码，登录，注册
+	common--------------------共用样式
+
+
+Script==============》
+	bindingPhone--------------绑定页面
+	findpwd-------------------找回密码
+	loginreg------------------登录，注册
+	payment-------------------订单
+	common.js-----------------共用js
+
+	
+	ladydate------------------日历表

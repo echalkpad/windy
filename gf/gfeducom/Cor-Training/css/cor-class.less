@@ -1,0 +1,260 @@
+@import '../../css/variable.less';
+@import 'common.less';
+
+//课程体系
+.courseStyme{
+	.cf();
+	padding:0 10px;
+	.ddl20();
+	box-sizing: border-box;
+	ul{.cf();}
+	li{
+		background: #ffc30b;
+	    position: relative;
+	    overflow: hidden;
+	    z-index: 1;
+	    border-radius: 3px;
+	    text-align: center;
+	    float: left;
+	    margin:15px 0;
+	    width: 48%;
+	    height: 114px;
+	    padding: 40px 20px 60px;
+	    border:2px solid #ffc30b;
+	    // padding: 36px 40px;
+	    box-sizing: border-box;
+	    &:nth-child(odd){margin-right: 10px;}
+	    &:hover {
+		    color: #fff;
+		    background-color: #ffc30b;
+		}
+	}
+	li:after {
+	    position: absolute;
+	    content: "";
+	    width: 85%;
+	    height: 236%;
+	    top: 50%;
+	    left: 50%;
+	    background: #fff;
+	    opacity: 1;
+	    z-index: -1;
+	    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+	    -moz-transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+	    -ms-transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+	    transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+	    -webkit-transition: all 0.5s ease-in-out;
+	    -moz-transition: all 0.5s ease-in-out;
+	    -ms-transition: all 0.5s ease-in-out;
+	    -o-transition: all 0.5s ease-in-out;
+	    transition: all 0.5s ease-in-out;
+	}
+	li:hover:after {
+	    height: 0;
+	    opacity: 0;
+	}
+}
+@media(min-width:448px){
+	.courseStyme{
+		.ddl50();
+		ul{
+			width: 448px;
+			margin:0 auto;
+			.ddl20();
+		}
+		li{
+			font-size: 15px;
+			width: 47%;
+			 &:nth-child(odd){margin-right: 16px;}
+		}
+	}
+}
+@media(min-width:640px){
+	.courseStyme{
+		ul{width: 640px;}
+		li{
+			.f16();
+			width: 30%;
+			 margin-right: 15px;
+		}
+	}
+}
+@media(min-width:768px){
+	.courseStyme{
+		ul{width: 768px;}
+	}
+}
+@media(min-width:992px){
+	.courseStyme{
+		ul{width: 100%;}
+		li{
+			width: 23%; 
+			height: 140px;
+			padding-top:54px;
+			&:after{
+				width: 75%;
+			}
+		}
+	}
+}
+@media(min-width:1200px){
+	.courseStyme{
+		.lgscreen();
+		.ddl75();
+		padding:0;
+		ul{}
+		li{
+			width: 14.8%;
+			height: 114px;
+			padding: 36px 5px 50px;
+			&:nth-child(n){margin-right: 26px}
+			&.on{margin-right: 0;}
+			&:after{width: 90%;}
+		}
+	}
+}
+//全年课表
+.yearlist{
+	.cf();
+	overflow-x: scroll!important;
+	.lgscreen();
+	padding:0 10px;
+	margin-top: 40px;
+	table{
+		font-size:14px;
+		.lgscreen();
+		.ddl20();
+		th,td{
+				text-align:center;
+				padding:6px 0;
+				border:1px solid @cc;
+			}
+			tr:nth-child(even){background: #f8f8f8;}
+			th{background: @cw;}
+			.on th{
+				background: #f8f8f8!important;
+				 padding:20px 0;
+				 color:#feb402;
+				 .f18();
+				}
+	}
+}
+@media(min-width:1200px){
+	.yearlist{
+		padding:0;
+		.ddl60();
+	}
+}
+//最新活动
+.lastNews{
+	.cf();
+	box-sizing: border-box;
+	padding:0 10px;
+	.ddl50();
+	article{
+		padding:25px 15px;
+		line-height: 25px;
+		.cf();
+		.ddl20();
+		color:@c6;
+		background: #f8f8f8;
+		box-sizing: border-box;
+	}
+	ul{
+		.cf();
+		li{
+			float: left;
+			width: 100%;
+			margin:10px auto;
+			text-align: center;
+			box-sizing: border-box;
+
+
+		}
+	}
+	.LN_tips{
+		.cf();
+		.ddl20();
+		em{
+			float: left;
+			padding:10px 0;
+		}
+		p{
+			display: table;
+			color:@c9;
+			span{
+			 	display:inline-flex;
+				display:-webkit-inline-flex;
+				padding:10px 0;
+				width: 100%;
+			}
+		}
+	}
+}
+@media(min-width:448px){
+	.lastNews{
+		ul{
+			.ddl20();
+			li{
+				width: 50%;
+				img{width: 100%;}
+				&:nth-child(odd){padding-right: 10px;}
+				&:nth-child(even){padding-left: 10px;} 
+			}
+		}
+	}
+}
+@media(min-width:640px){
+	.lastNews{
+		article{
+			margin-top: 30px;
+			font-size: 15px;
+			padding:30px 20px;
+		}
+		ul{
+			li{img{width:285px; }}
+		}
+		.LN_tips{
+			margin-top: 35px;
+			em{font-size: 15px;}
+			p{font-size: 15px;}
+		}
+	}
+}
+@media(min-width:768px){
+	.lastNews{
+		ul{
+			.ddl50();
+			li{
+				width: 25%;
+				&:nth-child(n){padding-right: 10px;}
+				&:nth-child(even){padding-left: 0px;}
+				img{width:100%; }
+			}
+		}
+	}
+}
+@media(min-width:1200px){
+	.lastNews{
+		.lgscreen();
+		.ddl60();
+		padding:0;
+		article{
+			.f16();
+			padding:40px 35px;
+			line-height: 30px;
+		}
+		ul{
+			li{
+				width: auto;
+				margin-right: 20px;
+				&:nth-child(n){padding-right:0px;}
+				&:last-child{margin-right: 0;}
+				img{width: 285px;}
+			}
+		}
+		.LN_tips{
+			em,p{.f16();}
+		}
+	}
+}

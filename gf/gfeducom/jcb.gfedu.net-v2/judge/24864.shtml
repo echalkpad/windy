@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130154833958.jpg"><div class="cont"><h2>刘博</h2><em>华泰联合证券公司·投行风控部·审核员</em><span>复旦大学理论经济学·经济学硕士<br>
+专业资质:CFA、FRM 持证人、CPA考试会计通过、通过证券从业资格考试4门，具有证券从业资格。</span></div></li></ul><div class="jcb_content">
+<h5>专业技能：</h5>
+<p>审阅超过30份审计报告，参与内核会超过50次，熟悉利润操纵和粉饰的基本手段，对财务造假有较强识别能力；<br />
+熟悉上市规则和税收等法规，了解在不同资本运作模式的不同阶段，上市公司操纵市值的动机和关键时间点。</p>
+<h5>工作职责：</h5>
+<b>1、债券、并购重组和股权激励业务的审核工作</b>
+<p>审核债券、并购、股权激励项目的立项、内核申请材料和以及其他合作协议；<br />
+就项目组的申请材料出具预审意见，要求项目组补充核查或充分解释相关问题；在确认项目组充分落实并书面回复预审意见后，向内核委员会提出内核申请，并在内核会中陈述预审情况。</p>
+<b>2、债权业务内核流程管理工作</b>
+<p>根据项目特点以及审核员、主审人的具体情况合理分配公司债权业务的审核工作； 协调公司债权内核委员，组织召开公司债权业务内核会，并及时发布内核结果； 与债权业务相关监管机构沟通，将人民银行、发改委、交易所的最新要求及时传达给业务部门； 根据监管机构的最新要求撰写、更新、修改关于债权业务的相关管理制度，随时解答业务部门关于开展债券业务的问题。</p>
+<h5>工作成果：</h5>
+<b>1、作为债券、并购重组和股权激励业务的审核员：</b>
+<p>审核并出具预审意见的项目包括8个企业债项目、2个公司债项目、7个中小企业私募债项目、3个银行间市场债项目；担任3个企业债项目的独立自查人员； 在审并购项目2个，完成审核股权激励项目2个。</p>
+<b>2、作为债权业务内核流程管理员：</b>
+<p>协调公司内核委员组织召开内核会共计35次； 负责修改《华泰联合证券债权业务融资管理办法》、《华泰联合证券债权业务立项、内核暂行管理办法》、参与编写《华泰证券银行间市场债务融资工具管理办法》； 每周统计债权业务进程表报送公司总裁、统计深交所中小企业私募债发行数据发送给业务组； 及时解答项目组关于债权业务的最新监管要求；及时解决项目组申报流程中遇到的特殊问题。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

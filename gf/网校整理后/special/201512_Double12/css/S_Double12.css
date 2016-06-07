@@ -1,0 +1,346 @@
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+/*配模式定位*/
+/*1200屏*/
+/* 背景自适应 */
+.db2_banner {
+  background-image: url(../images/b1.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  padding: 93px 0 91px 0;
+}
+.db2_banner img {
+  width: 310px;
+}
+.db2_banner span {
+  display: block;
+  height: 40px;
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 16px;
+}
+.db2_content {
+  background-color: #ffd822;
+}
+.db2_content h3 {
+  padding: 20px 10px;
+}
+.db2_content h3 img {
+  width: 100%;
+}
+.db2_content h4 {
+  width: 100%;
+  padding: 20px 0 60px 0;
+}
+.db2_content h4 img {
+  width: 100%;
+}
+.db2_content ul {
+  *zoom: 1;
+  zoom: 1;
+  margin: 0 auto;
+}
+.db2_content ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_content li {
+  width: 96%;
+  margin: 2%;
+}
+.db2_content li img {
+  display: block;
+  margin: 0 auto;
+}
+.db2_content .tips {
+  padding: 20px;
+}
+.db2_content .tips i {
+  display: flex;
+}
+.db2_content .tips ul {
+  *zoom: 1;
+  zoom: 1;
+}
+.db2_content .tips ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_content .tips ul li {
+  width: 99%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+}
+.db2_content .tips ul li em {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  margin-right: 10px;
+}
+.db2_content .tips ul li span {
+  display: flex;
+  float: left;
+  margin-left: 30px;
+}
+@media (min-width: 640px) {
+  .db2_content li {
+    width: 46%;
+    margin: 2%;
+    float: left;
+  }
+}
+.db2_learning2 {
+  display: none;
+}
+.db2_learning {
+  *zoom: 1;
+  zoom: 1;
+}
+.db2_learning:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_learning p {
+  width: 300px;
+  margin: 0 auto;
+}
+.db2_learning p a {
+  display: block;
+  background: url(../images/a1.png) no-repeat;
+  background-size: 100%;
+  float: left;
+  width: 96px;
+  height: 20px;
+  text-align: center;
+  padding: 50px 0;
+  padding-top: 40px;
+  color: #000;
+}
+.db2_learning p a:hover {
+  background: url(../images/a2.png) no-repeat;
+  background-size: 100%;
+  color: #ffd822;
+}
+.db2_learning .last {
+  *zoom: 1;
+  zoom: 1;
+}
+.db2_learning .last:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_learning .last a {
+  margin: -10px 0;
+  margin-left: 33%;
+  background: url(../images/a2.png) no-repeat;
+  background-size: 100%;
+  color: #ffd822;
+}
+.db2_learning .tow {
+  *zoom: 1;
+  zoom: 1;
+  padding-left: 16%;
+}
+.db2_learning .tow:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_learning .tow a {
+  margin: -10px 1%;
+}
+.db2_learning .three {
+  *zoom: 1;
+  zoom: 1;
+}
+.db2_learning .three:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.db2_learning .three a {
+  margin: -10px 0%;
+}
+.db2_footer img {
+  width: 100%;
+}
+.db2_footer2 {
+  display: none;
+}
+@media (min-width: 640px) {
+  .db2_footer {
+    display: none;
+  }
+  .db2_footer img {
+    width: 100%;
+  }
+  .db2_footer2 {
+    display: block;
+  }
+  .db2_footer2 img {
+    width: 100%;
+  }
+}
+@media (min-width: 640px) {
+  .db2_learning {
+    display: none;
+  }
+  .db2_learning2 {
+    display: block;
+  }
+  .db2_learning2 p {
+    width: 620px;
+    margin: 0 auto;
+  }
+  .db2_learning2 p a {
+    width: 114px;
+    height: 22px;
+    padding: 55px 0;
+    padding-top: 55px;
+  }
+  .db2_learning2 .four {
+    *zoom: 1;
+    zoom: 1;
+    padding-left: 10%;
+  }
+  .db2_learning2 .four:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .db2_learning2 .four a {
+    margin: -10px 0.5%;
+  }
+  .db2_learning2 .five {
+    *zoom: 1;
+    zoom: 1;
+  }
+  .db2_learning2 .five:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .db2_learning2 .five a {
+    margin: -10px 0.5%;
+  }
+  .db2_learning2 .five .red {
+    background: url(../images/a2.png) no-repeat;
+    background-size: 100%;
+    color: #ffd822;
+  }
+}

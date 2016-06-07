@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>复赛阅卷——2015“金程杯”会计案例分析大赛赛事战报</h3>
+            <span>时间：2015/12/4 16:01:29</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/121212(3).jpg" width="550" height="412" alt="" /></div>
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="text-indent: 21pt;">自</span><span lang="EN-US" style="text-indent: 21pt;">11</span><span style="text-indent: 21pt;">月</span><span lang="EN-US" style="text-indent: 21pt;">28</span><span style="text-indent: 21pt;">日金程杯复赛报告提交时间截至，大赛组委会共累计收到有效案例报告答卷</span><span lang="EN-US" style="text-indent: 21pt;">107</span><span style="text-indent: 21pt;">份。组委会复赛阅卷组便迅速投入紧张阅卷工作中，大赛组委会决赛筹备工作也同步启动。为了保证大赛公平、公正、公开的原则，大赛组委会特聘请专家评委团进行第三方评价，参赛团队提交的复赛分析案例</span><span lang="EN-US" style="text-indent: 21pt;">PPT</span><span style="text-indent: 21pt;">答卷进行无实名编号制直接转入阅卷工作组，并为其提供专用批阅试卷工作室，另派专人复核。</span>  </span></span></span>
+<p class="MsoNormal" align="left" style="text-indent: 21pt; line-height: 150%;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">组委会设有大赛<span lang="EN-US">QQ</span>交流群及咨询热线，支持参赛选手实时了解赛事进度及成绩查询功能。</span></span></span><span style="line-height: 150%; font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt; line-height: 150%;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">鉴于对复赛参赛团队成果的保护，复赛参赛团队提交的答卷，组委会持有保密责任。</span></span></span><span style="line-height: 150%; font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt; line-height: 150%;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span lang="EN-US">2015 &ldquo;</span>金程大学生圆梦计划<span lang="EN-US">&rdquo;</span>是基于以往<span lang="EN-US">&ldquo;</span>金程杯<span lang="EN-US">&rdquo;</span>竞赛，面向全国大学生群体的公益活动。针对学校和大学生最关心的两个方面<span lang="EN-US"> &ldquo;</span>学术培养<span lang="EN-US">&rdquo;</span>和<span lang="EN-US">&ldquo;</span>实习就业<span lang="EN-US">&rdquo;</span>，本次活动采用全面化、系统化和公益化的模式，助力学校培养人才，帮助大学生实现梦想，建立交流合作平台，希望参赛选手赛出风格，赛出水平，赛出成绩。</span></span></span><span style="line-height: 150%; font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt; line-height: 150%;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">晋级决赛团队名单将于明天<span lang="EN-US">12</span>月<span lang="EN-US">5</span>日同步公布在金程杯官方微信及官方网站，敬请期待更多精彩赛事！ </span></span></span><span style="line-height: 150%; font-family: 宋体; background-position: initial initial; background-repeat: initial initial;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt; line-height: 150%;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span lang="EN-US">&nbsp;</span></span></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><b>金程圆梦计划组委会</b></span></span></span><b><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></b></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">上海金程教育培训有限公司</span></span></span><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">地址：松花江路<span lang="EN-US">2539</span>号复旦科技大厦<span lang="EN-US">1</span>号楼<span lang="EN-US">11</span>楼（<span lang="EN-US">200437</span>）</span></span></span><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">电话：<span lang="EN-US">021-61323513</span></span></span></span><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">邮箱：<span lang="EN-US">jcb@gfedu.net</span></span></span></span><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);"><b>金程教育官网网址<span lang="EN-US">:&nbsp;</span></b></span></span></span></span><span style="font-family: 宋体;"><span lang="EN-US"><a href="http://www.gfedu.net"><u><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);"><b>www.gfedu.net</b></span></span></span></span></u></a><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);"><b>金程圆梦计划网址<span lang="EN-US">:</span></b></span></span></span></span><u><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);"><b><span lang="EN-US"> </span></b></span></span></span></span></u><span style="font-family: 宋体;"><span lang="EN-US"><a href="http://jcb.gfedu.net"><u><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);"><b>jcb.gfedu.net</b></span></span></span></span></u></a><o:p></o:p></span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><b><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-color: rgb(255, 255, 0);">大赛咨询热线：刘老师 &nbsp;<span lang="EN-US">15200510088</span></span></span></span></span></b><span style="font-family: 宋体;"><span lang="EN-US"><br />
+</span></span></p>
+<p class="MsoNormal" style="text-indent: 21.3pt; line-height: 150%; text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/jcbwx(3).jpg" alt="金程杯微信" width="250" height="248" /></p>
+<p class="MsoNormal" align="left" style="text-indent: 21.3pt; line-height: 150%; background-position: initial initial; background-repeat: initial initial;"><span style="font-family: 宋体;"><span lang="EN-US"><o:p></o:p></span></span></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

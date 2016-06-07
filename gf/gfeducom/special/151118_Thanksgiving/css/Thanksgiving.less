@@ -1,0 +1,941 @@
+/*
+
+Name：感恩节专题
+Author：windy随风缘
+Time:2015-11/18
+
+ */
+
+@import "../../../css/variable.less";
+
+
+
+//iconfont
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 共用样式 start */
+.thanks_main{
+  margin-top:-78px;
+}
+@media(min-width:1200px){
+  .thanks_main{
+    width:1200px;
+    margin:0 auto;
+  }
+}
+
+/* banner start */
+.thanks{
+  width: 100%;
+  background: url(../images/bg.jpg) center bottom no-repeat;
+  .bg(cover);
+  padding-bottom: 90px;
+}
+.thanks_banner{
+  width: 100%;
+  background: url(../images/banner_01.png) center center no-repeat;
+  .bg(cover);
+  h1{
+    padding-top:10px;
+    .tcenter();
+  }
+}
+/* banner end */
+
+/* 满就送 start */
+.thanks_sent{
+  width:100%;
+  img{
+    width:100%;
+    height: auto;
+  }
+}
+@media(min-width:1200px){
+  .thanks_sent{
+    width:1200px;
+    margin:0 auto;
+  }
+}
+/* 满就送 end */
+
+.thanks_list{
+  width:90%;
+  margin:10px auto;
+  dt{
+    width:100%;
+    height:50px;
+    background: #dd3d3f;
+    color:@cw;
+    .f20();
+    line-height:50px;
+    .tcenter();
+    h2{font-weight: bold;}
+  }
+  dd{
+    margin-top: 10px;
+    width:100%;
+    background:url(../images/text_bg.png) 0 bottom no-repeat;
+    .bg(cover);
+    padding:10px 10px 20px;
+    box-sizing: border-box;
+    h3{.f24();}
+    p,h3{color:#5e3435;}
+    p{
+      line-height:28px;
+      .f16();
+    }
+    section{
+      height:90px;
+      border-bottom:1px dashed #e0e0e4;
+      margin-bottom:8px;
+    }
+    div{
+      .cf();
+      span{
+        .left();
+        del{
+          color:@c9;
+          .f14();
+          display: block;
+          height:18px;
+        }
+        color:#dd3d3f;
+        .f20();
+        font-weight: bold;
+      }
+      strong{
+        .pos(r);
+        i{
+          .pos(a);
+          top:-5px;
+          .f18();
+          color:@c9;
+        }
+        color:#ffd308;
+        .f36();
+        .right();
+        em{
+          .f24();
+          font-weight: bold;
+        }
+      }
+    }
+    p{.cf();}
+    a{
+      width:48%;
+      display: block;
+      height:30px;
+      background: #fec52e;
+      line-height: 30px;
+      .f16();
+      color: @cw;
+      .tcenter();
+      letter-spacing:5px;
+      margin-right:4%;
+      .left();
+      &:last-child{
+        margin-right:0;
+        background: #da3f43;
+      }
+    }
+  }
+}
+
+@media(min-width:480px){
+  .thanks_list{
+  dd{
+    a{
+      height:40px;
+      line-height:40px;
+    }
+  }
+}
+}
+@media (min-width:640px) {
+  .thanks_list{
+    .cf();
+    dt{.f24();}
+    dd{
+      width:49%;
+      .left();
+      margin-right:2%;
+      &:last-child{
+        margin-right: 0;
+      }
+      h3{.f24();}
+    }
+  }
+}
+@media (min-width:992px) {
+.thanks_list{
+  dt{
+    width:12%;
+    margin:10px 2% 0 0;
+    height:320px;
+    line-height:320px;
+    .left();
+    .f30();
+  }
+  dd{
+    width:42%;
+    h3{.f40();}
+    p{font-size: 22px;}
+    section{height: 160px;}
+    div{
+      span{
+        del{.f16();}
+        .f28();
+      }
+      strong{
+        font-size: 48px;
+        i{
+          .f28();
+          top:-18px;
+          left:-10px;
+        }
+        em{.f24();}
+      }
+    }
+    a{
+      height:50px;
+      line-height:50px;
+      .f20();
+    }
+  }
+}
+}
+/* 共用样式 end */
+
+
+
+/* 首页  start*/
+/* FRM start */
+.thanks_frm{
+  .thanks_list{
+    dt{background: #2289e9;}
+  }
+}
+@media(min-width:640px){
+.thanks_frm{
+  .thanks_list{
+      dd:last-child{
+        section{
+          height:144px;
+        }
+      }
+  }
+}
+}
+@media(min-width:992px){
+.thanks_frm{
+  .thanks_list{
+      dd:last-child{
+        section{
+          height:232px;
+        }
+      }
+  }
+}
+}
+
+/* FRM end */
+
+/* CPA start */
+.thanks_cpa{
+  .thanks_list{
+    dt{background: #ff7331;}
+    dt{color:#5e3435;}
+  }
+}
+@media(min-width:640px){
+.thanks_cpa{
+  .thanks_list{
+    dd{
+      .pos(r);
+      width:100%;
+      div{
+        .cf();
+        strong{
+          .left();
+          margin-left:30%;
+        }
+      }
+      article{
+        width:40%;
+        .pos(a);
+        bottom:30px;
+        right:12px;
+      }
+    }
+  }
+}
+}
+@media(min-width:992px){
+.thanks_cpa{
+  .thanks_list{
+    dt{
+      height:272px;
+      line-height:272px;
+    }
+    dd{width:86%;}
+  }
+}
+}
+/* CPA end */
+
+/* 理财项目 start */
+.thanks_financial{
+  .thanks_list{
+    dt{color:#dd3d3f;}
+    dt{background: #ffd308;}
+    dd{
+        section{height:auto;}
+        div{
+          p{
+            color:#5e3435;
+            .f16();
+          }
+          border:1px solid #ddd;
+          height: 90px;
+          box-sizing:border-box;
+          padding:10px;
+          margin-bottom:10px;
+        }
+    }
+  }
+}
+@media(min-width:640px){
+.thanks_financial{
+  .thanks_list{
+    dd{
+      width: 100%;
+      article{
+        .cf();
+        width:100%;
+      }
+      div{
+        width:49%;
+        margin-right:2%;
+        .left();
+        &:last-child{margin-right: 0;}
+      }
+    }
+  }
+}
+}
+@media(min-width:992px){
+.thanks_financial{
+  .thanks_list{
+    dt{
+      height:338px;
+      h2{
+        width:55%;
+        margin:146px auto;
+        line-height:28px;
+      }
+    }
+    dd{
+      width:86%;
+      section{height:135px;}
+      div{height: 105px;}
+    }
+  }
+}
+}
+/* 理财项目 end */
+
+/* 金程考研 start */
+.thanks_graduate{
+  .thanks_list{
+    dt{color:#dd3d3f;}
+    dt{background: #96de38;}
+    dd{
+        section{height:auto;}
+    }
+  }
+}
+@media(min-width:640px){
+.thanks_graduate{
+  .thanks_list{
+    dd:nth-child(3),dd:nth-child(5){margin-right: 0;}
+  }
+}
+}
+@media(min-width:992px){
+.thanks_graduate{
+  .thanks_list{
+    dt{
+      height:292px;
+      h2{
+        width:55%;
+        margin:114px auto;
+        line-height:28px;
+      }
+    }
+    dd{
+      section{height:132px;}
+      &:nth-child(3)~dd{
+        width:32%;
+        section{height:184px;}
+      }
+      &:nth-child(3){margin-right:0;}
+      &:nth-child(5){margin-right:2%;}
+    }
+  }
+}}
+/* 金程考研 end */
+/* 首页 end */
+
+/* 项目页 start*/
+/* 导航菜单 */
+.thanks_project{
+  .cf();
+  width:90%;
+  background: #fff;
+  margin:5px auto 0;
+  li{
+    .f16();
+    .left();
+    width:25%;
+    .tcenter();
+    a{line-height:45px;color:#5e3435;}
+    &.selected{
+      background: #df4867;
+      a{color:@cw;}
+    }
+  }
+}
+@media(min-width:1200px){
+.thanks_project{
+  li{
+    .f24();
+    a{line-height:55px;}
+  }
+}
+}
+/* 倒计时 */
+.countdown{
+    margin: 15px auto;
+    width: 90%;
+    height: 108px;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    color:@cw;
+}
+#ky-countdown{display: none;}
+.triangle-topright{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 36px solid #df4867;
+    border-left: 16px solid transparent;
+}
+.text{
+    width: 180px;
+    margin: 0 auto;
+    margin-top: -1px;
+}
+.cent{
+    width: 146px;
+    height: 36px;
+    line-height: 36px;
+    float: left;
+    background-color: #df4867;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+.triangle-topleft{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 36px solid #df4867;
+    border-right: 16px solid transparent;
+}
+.times{
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.day-wrap{margin-right: 20px;}
+.times-list,.nums,.nums-text{
+    .left();
+}
+
+.nums-text{
+    font-size: 16px;
+    padding-top: 26px;
+}
+.nums{
+    i{
+      float: left;
+      width: 38px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      font-size: 44px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 5px;
+      margin-right: 3px;
+      background: -webkit-linear-gradient(top,#ef8143, #e94b22);
+      background: -ms-linear-gradient(top,#ef8143, #e94b22);
+      background: -o-linear-gradient(top,#ef8143, #e94b22);
+      background: -moz-linear-gradient(top,#ef8143, #e94b22);
+      background: #e94b22;
+  }
+}
+.minutes-wrap,.seconds-wrap{
+    display: none;
+}
+@media (min-width: 640px) {
+   .countdown{
+        height: 110px;
+        border: 2px dashed #000;
+        border-radius: 10px;
+    }
+    .times{
+        width: 480px;
+        text-align: center;
+    }
+    .minutes-wrap,.seconds-wrap{display: block;}
+}
+@media (min-width: 1200px) {
+    .countdown{
+        height: 180px;
+        border-radius: 30px;
+    }
+    .text{width: 290px;}
+    .triangle-topright{border-top: 60px solid #df4867;}
+    .cent{
+        width: 240px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 32px;
+    }
+    .triangle-topleft{border-top: 60px solid #df4867;}
+    .times{width: 820px;}
+    .nums{
+      i{
+        width: 60px;
+        height: 78px;
+        line-height: 78px;
+        border-radius: 10px;
+        font-size: 58px;
+      }
+    }
+    .nums-text{
+        padding-top: 40px;
+        font-size: 28px;
+    }
+    .times-list{margin-right: 40px;}
+    .seconds-wrap{margin-right:0;}
+}
+/* 项目内容 */
+.thanks_pro_con{
+  width:90%;
+  margin: 0 auto;
+  ul{display:none;}
+  li{
+    padding:0 20px 20px;
+    box-sizing: border-box;
+    width:100%;
+    background:@cw;
+    margin-bottom:20px;
+    h2{
+      width:90%;
+      margin:0 auto;
+      img{width:100%;height: auto;}
+    }
+    article{
+      margin:15px auto;
+      .cf();
+      p{
+        color:@c9;
+        .tcenter();
+      }
+      section{
+        .cf();
+        width:32%;
+        border:1px solid #ddd;
+        background: #f4f4f4;
+        margin-right:2%;
+        padding:10px 0;
+        box-sizing: border-box;
+        .left();
+        &:last-child{margin-right:0;}
+        h3{
+          color:#5e3435;
+          .f20();
+          .tcenter();
+          font-weight: bold;
+        }
+        p{
+            color:#72494a;
+            line-height:24px;
+            .f12();
+            .spill2();
+            height:50px;
+        }
+      }
+    }
+    h4{
+      color:#5e3435;
+      height:0;
+      .f24();
+      .tcenter();
+      margin:35px auto 100px;
+      q{
+        margin:-15px auto 0;
+        display:block;
+        line-height:30px;
+        background: #fff;
+        padding:0 10px;
+      }
+    }
+   p{.cf();}
+    a{
+      width:48%;
+      display: block;
+      height:30px;
+      background: #fec52e;
+      line-height: 30px;
+      .f16();
+      color: @cw;
+      .tcenter();
+      letter-spacing:5px;
+      margin-right:4%;
+      .left();
+      &:last-child{
+        margin-right:0;
+        background: #da3f43;
+      }
+    }
+    div{
+      margin-top:10px;
+      box-sizing: border-box;
+      padding:5px;
+      background:#f4f4f4;
+      h3{.f20();font-weight: bold;color:#5e3435;}
+      span{
+        color:#5e3435;
+        line-height:24px;
+        overflow:hidden;
+        display:-webkit-box;
+        word-break: break-all;
+        -webkit-line-clamp:1;
+        -webkit-box-orient: vertical;
+      }
+      p{
+        margin-top:5px;
+        .tleft();
+        .f12();
+        line-height:18px;
+        .spill3();
+        color:#72494a;
+      }
+    }
+    ul{.cf();display: block;}
+    li{
+      width: 48%;
+      margin-right:4%;
+      border:1px solid #ddd;
+      .tcenter();
+      .f12();
+      .left();
+      &:nth-child(2n){margin-right:0;}
+      padding:15px 2px 5px;
+      img{
+        width:40px;
+        height:auto;
+      }
+      h5{.f14();}
+      p,h5{color:#653f40;.ellipsis();}
+      a{
+        width:100px;
+        float: none;
+        height:25px;
+        line-height:26px;
+        margin: 5px auto!important;
+        background:none!important;
+        border:1px solid #dd3d3f;
+        color: #dd3d3f;
+        .f12();
+        .bdr5();
+      }
+    }
+  }
+  .current{display:block;}
+  .duan{margin:35px auto 70px;}
+}
+@media(min-width:360px){
+.thanks_pro_con{
+  li{
+    h4{margin:35px auto 65px;}
+  }
+}
+}
+@media(min-width:400px){
+.thanks_pro_con{
+  li{.duan{margin:30px auto 40px;}}
+}
+}
+@media(min-width:460px){
+.thanks_pro_con{
+  li{
+    h4{
+      border:1px solid #5e3435;
+      margin:35px auto 48px;
+      q{width:70%;}
+    }
+  }
+}
+}
+@media(min-width:580px){
+.thanks_pro_con{
+  li{.duan{margin:30px auto;}}
+}
+}
+@media(min-width:768px){
+ .thanks_pro_con{
+  li{
+    h2{width:80%;}
+    a{
+      height:45px;
+      line-height: 45px;
+      .f18();
+    }
+    div{
+      height:196px;
+      width:48%;
+      .left();
+      margin-right:4%;
+      &:nth-child(2){
+        margin-right:0;
+        p{
+          margin-top:11px;
+          line-height:24px;
+        }
+      }
+    }
+     li{
+      width:19%;
+      margin-right:1%;
+      .f14();
+      &:nth-child(2n){margin-right:1%;}
+      &:last-child{margin-right:0;}
+      padding:15px 2px 5px;
+      i{
+        width:40px;
+        height:40px;
+      }
+      h5{.f16();}
+      a{.f14();}
+    }
+  }
+}
+}
+@media(min-width:850px){
+ .thanks_pro_con{
+  li{h4{margin:45px auto 30px;}}
+}
+}
+@media(min-width:992px){
+.thanks_pro_con{
+  li{
+    article{
+      p{.f16();}
+      section{
+        padding:15px;
+        h3{.f24();}
+        p{.f16();}
+      }
+    }
+    h4{.f28();}
+    div{
+      padding:10px;
+      h3{.f24();}
+      span{.f16();}
+      p{.f14();}
+    }
+  }
+}
+}
+@media(min-width:1200px){
+  .thanks_pro_con{
+  li{
+    article{width:100%;}
+    h4{
+      font-size:32px;
+      margin:50px auto 35px;
+      q{width:65%;}
+    }
+  }
+}
+}
+/* frm  start*/
+
+.thanks_pro_con{
+  .thanks_frm_cont{
+    li{padding-bottom: 5px;}
+    color:#5e3435;
+      section{
+        width:85%;margin:0 auto;
+        p{.tcenter;}
+      }
+      article{
+        background: #f4f4f4;
+        padding:20px;
+        box-sizing: border-box;
+        p{
+          .tleft();
+          color:#5e3435;
+          .f14();
+        }
+    }
+    h2{
+      width:100%;
+      .f20();
+      .tleft();
+    }
+    h3{
+      .f18();
+      .tcenter();
+    }
+    p,span{
+      .f16();
+      color:@c6;
+    }
+    p{margin:10px auto;}
+  }
+}
+@media(min-width:992px){
+  .thanks_pro_con{
+  .thanks_frm_cont{
+      article{
+        padding:20px;
+        p{.f16();}
+    }
+    h2{.f24();}
+    h3{.f20();}
+    p,span{.f18();}
+  }
+}
+}
+/* frm  end*/
+
+/* 理财 start */
+.thanks_pro_con{
+  .thanks_financial_cont{
+    li{
+      &:nth-child(2){
+        div{p{color:#5e3435;}}
+      }
+       section{
+        width:85%;margin:0 auto;
+        p{.tcenter;}
+      }
+      p{.f16();color:@c6;line-height:24px;}
+      span{
+        .f14();
+        display: block;
+        margin-top:5px;
+      }
+    }
+  }
+}
+@media(min-width:768px){
+  .thanks_pro_con{
+  .thanks_financial_cont{
+    li{
+      div{height:230px;}
+      &:nth-child(2){
+        div{height:310px;}
+      }
+       section{
+        width:85%;margin:0 auto;
+        p{.tcenter;}
+      }
+      p{.f16();color:@c6;line-height:24px;}
+      span{
+        .f14();
+        display: block;
+        margin-top:5px;
+      }
+    }
+  }
+}
+}
+@media(min-width:992px){
+  .thanks_pro_con{
+  .thanks_financial_cont{
+    li{
+      div{height:200px;}
+      &:nth-child(2){
+        div{height:256px;}
+      }
+       section{
+        width:85%;margin:0 auto;
+        p{.tcenter;}
+      }
+      p{.f16();color:@c6;line-height:24px;}
+      span{
+        .f14();
+        display: block;
+        margin-top:5px;
+      }
+    }
+  }
+}
+}
+/* 金程考研 start*/
+.thanks_pro_con{
+  .thanks_graduate_cont{
+    li{
+      article{
+        section{
+          width:23.5%;
+        }
+        div{
+          background: none;
+          border:1px solid #ddd;
+          &:nth-child(2n){margin-right:0;}
+        }
+      }
+      a{.f14();}
+      a:first-child{letter-spacing: 0;}
+    }
+  }
+}
+@media(min-width:768px){
+  .thanks_pro_con{
+  .thanks_graduate_cont{
+    li{
+      article{
+        div{height:180px;}
+      }
+      a{.f18();}
+      a:first-child{letter-spacing:5px;}
+    }
+  }
+}
+}
+/* 金程考研 end*/
+/* 理财 end */
+/* 项目页 end */

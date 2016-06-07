@@ -1,0 +1,363 @@
+/**
+*  description:题库－做题
+*  author: lotus
+*  date: 2015-12-22 14:00
+**************************************************/
+
+
+@import "common.less";
+
+
+
+/* 做题 */
+.hide{display: none;}
+.ib_exercise{
+	background:#fff;
+	overflow-x:hidden;
+	.ibcon_ttl{
+		i{cursor:pointer;}
+	}
+	.type{
+		padding:0 10px;
+		height:60px;
+		line-height:80px;
+		overflow: hidden;
+		p{
+			font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+			.f18();
+		}
+	}
+	.AnswerTime{
+		font-style:normal;
+		margin-right:10px;
+	}
+	.Question{
+		padding: 10px;
+	    width: 100%;
+	    box-sizing: border-box;
+	    color: #666666;
+	    line-height: 24px;
+	    .f12();
+	    margin-bottom: 20px;
+	}
+	.options{
+		padding:10px;
+		li{
+			background-color:@ibex_blue;
+		    position: relative;
+		    padding: 10px 40px 10px 50px;
+		    background-color: #eff3f6;
+		    margin-bottom: 1px;
+			&.current{
+				background: #b3e5ee;
+			}
+			i{
+				position: absolute;
+				top: 10px;
+			    right: 10px;
+			    font-size: 24px;
+			    &.cha{color:@ibred;}
+			    &.duigou{color:@ibgreen1;}
+			}
+			button{
+				position: absolute;
+			    top: 6px;
+			    left: 10px;
+			    width: 26px;
+			    height: 26px;
+			    line-height:26px;
+			    background:@cw;
+				margin-right: 15px;
+				border: 1px solid #e0e1e2;
+				.bdr(50%);
+			}
+			padding-left:50px;
+		}
+	}
+	.qiehuan{
+		padding:20px 15px;
+		.cf();
+		text-align: center;
+		q{
+			display:block;
+			margin:10px auto;
+			line-height:30px;
+			cursor:pointer;
+			color:#666;
+			.f12();
+			i{margin-right: 5px!important;.f14();}
+			span{margin-right:10px;float: none;}
+		}
+	}
+	.prev,.next,.achieve{
+		width:120px;
+		height:30px;
+		line-height:30px;
+		.bdr(20px);
+		border:#24b8d6 1px solid;
+		.tcenter();
+		background: #fff;
+		color:#24b8d6;
+		&:hover{
+			background: #24b8d6;
+			color:@cw;
+		}
+		margin:0 5px;
+	}
+	div{.cf();}
+}
+@media(min-width:400px){
+	.ib_exercise{
+	}
+}
+@media(min-width:600px){
+	.ib_exercise{
+		padding-bottom: 0;
+		.qiehuan{
+			q{
+				width:200px;
+				text-align: right;
+				margin:0;
+				.right();
+			}
+			span{.left();}
+		}
+	}
+}
+@media(min-width:768px){
+	.ib_exercise{
+		.Question{
+			line-height:30px;
+			.f14();
+		}
+		.options{li{.f16();}}
+		.type,.Question,.options{padding:0 40px;}
+		.qiehuan{padding:30px 35px;}
+	}
+}
+
+/* 分析题 */
+.analyze{
+ 	.options{p{padding: 10px 0;}}
+	.Question{
+	    height: 120px;
+	    overflow: scroll;
+	    overflow-x: hidden;
+	}
+
+	.dx,.sx,.sf,.jd,.tk{display:none;}
+	.current{display:block;}
+	.sf{
+		article{
+			i{
+				.f36();
+				.bdr(50%);
+				overflow:hidden;
+				cursor: pointer;
+			}
+		}
+		.yes{
+			margin-right:50px;
+			color:#8bc14a;
+		}
+		.no{color:#e76172;}
+	}
+	.jd{
+		textarea{
+			width:100%;
+			height:120px;
+			border:1px solid #ddd;
+			resize:none;
+		}
+	}
+	.tk{
+		p{
+			input{
+				width:100px;
+				border:0;
+				border-bottom:1px solid #666;
+				height:20px;
+				padding:0 5px;
+				height:30px;
+				line-height:30px;
+			}
+			margin-bottom:20px;
+		}
+	}
+}
+
+/* 是非题 */
+.true-false{
+	.options{
+		i{
+			.f36();
+			.bdr(50%);
+			overflow:hidden;
+			cursor: pointer;
+		}
+		.yes{
+			margin-right:50px;
+			color:#8bc14a;
+		}
+		.no{color:#e76172;}
+	}
+}
+/* 填空题 */
+.gap_filling{
+	.options{
+		padding:0;
+		article{
+			margin-bottom:20px;
+			color:@c6;
+			.f12();
+			line-height:24px;
+			padding:10px;
+			input{
+				width:100px;
+				border:0;
+				border-bottom:1px solid #666;
+				height:24px;
+				line-height:24px;
+				padding:0 5px;
+			}
+		}
+		section{padding:0 10px;}
+		textarea {
+			width:100%;
+		    height: 120px;
+		    border: 1px solid #ddd;
+		    resize: none;
+		}
+	}
+}
+@media(min-width:768px){
+	.gap_filling{
+		.options{
+			article{
+				.f14();
+				line-height:30px;
+				padding:0 40px;
+				input{
+					height:30px;
+					line-height:30px;
+				}
+			}
+			section{padding:0 40px;}
+			textarea {
+				display:block;
+			    height: 120px;
+			    border: 1px solid #ddd;
+			    resize: none;
+			}
+		}
+	}
+}
+
+
+.screen{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	background:rgba(0, 0, 0, 0.5);
+	height:100%;
+}
+.w540{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:100%;
+	background:@cw;
+}
+.tc_title{
+    line-height: 80px;
+    text-align: center;
+    background: url(../../images2015/video/title_bg.jpg) center center no-repeat;
+    .bg(cover);
+    color:@cw;
+    .f18();
+    i{
+    	display: block;
+	    position: absolute;
+	    right: -40px;
+	    top: 0;
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    background: rgba(0, 0, 0, 0.5);
+	    font-size: 24px;
+	    text-align: center;
+	    color: #fff;
+	    -webkit-border-radius: 0 5px 5px 0;
+	    -moz-border-radius: 0 5px 5px 0;
+	    -o-border-radius: 0 5px 5px 0;
+	    -ms-border-radius: 0 5px 5px 0;
+	    border-radius: 0 5px 5px 0;
+	    cursor: pointer;
+    }
+}
+.next_card{
+	padding: 35px 0;
+	text-align: center;
+	p{margin-bottom:15px;color:@c9;}
+	a{color:@c6;}
+	.look{
+		display: inline-block;
+	    width: 120px;
+	    height: 40px;
+	    margin-right: 20px;
+	    line-height: 40px;
+	    text-align: center;
+	    color: #12CCD9;
+	    font-size: 16px;
+	    font-weight: 400;
+	    border: 2px solid #12CCD9;
+	    border-radius: 25px;
+	    -moz-border-radius: 25px;
+	    -webkit-border-radius: 25px;
+	    -ms-border-radius: 25px;
+	    -o-border-radius: 25px;
+	}
+}
+.finish{.next_card{padding:30px;}}
+@media(min-width:768px){
+	.w540{
+		width:540px!important;
+		.next_card{
+			text-align: center;
+			padding:30px;
+			p,a{.f16();}
+		}
+	}
+}
+.feedback{
+	.next_card{
+		text-align: left;
+		p{
+			margin:15px 0;
+			padding-left:15px;
+			span{display: block;}
+		}
+		section{
+			padding-left:15px;
+			label{
+				width: 32%;
+			    margin-bottom: 10px;
+			    display: inline-block;
+			}
+		}
+		textarea{
+			margin: 15px auto;
+		    width: 90%;
+		    height: 100px;
+		    display: block;
+		    resize: none;
+		}
+		q{.f12();strong{color:red;}}
+		.look{
+			margin:0 auto;
+			display: block;
+		}
+	}
+}

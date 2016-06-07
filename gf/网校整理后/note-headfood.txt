@@ -1,0 +1,45 @@
+
+金程网校头部icon：
+class="iconfont" &#xe6d0;最近学习。
+class="iconfont" &#xe60e;我的课程。
+class="iconfont" &#xe67a;我的通知。
+                      
+
+金程网校gfschool移动端底部iconfont：
+class="iconfont"  &#xe600;课程咨询。
+class="iconfont"  &#xe602;学员服务。
+class="iconfont"  &#xe601;24H热线。
+
+回到顶部<a id="topNav" href="javascript:;"><i class="iconfont">&#xe603;</i></a>
+
+
+变量文件里的icon字体：
+class="icon-uF0002" &#xf0002;禁止。
+class="icon-uniE6F0" &#xe6f0;菜单。
+class="icon-uniE67A"&#xe67a;邮件。
+class="icon-uniE6AB"&#xe6ab;心。
+class="icon-uniE60E"&#xe60e;视频。
+class="icon-uniE6D0"&#xe6d0;闹钟。
+class="icon-uniE663"&#xe663;警告。
+class="icon-uniE632"&#xe632;联系人。
+class="icon-uniE600"&#xe600;在线客服。
+class="icon-uniE601"&#xe601;电话。
+class="icon-uniE602"&#xe602;在线咨询。
+class="icon-uniE603"&#xe603;返回顶部。
+
+
+
+html5shiv.js-------------------------支持HTML5新标签IE9以下兼容
+	respond.min.js-----------------------支持CSS3新样式IE9以下兼容
+	jquery.min.js------------------------JQuery样式
+
+	常用JS库
+	jquery.mmenu.min.all.js------------移动端左侧推出插件
+
+	表单验证
+	script.js
+	passwordCheck.js
+	loginReg.js	headfoot.js
+
+
+

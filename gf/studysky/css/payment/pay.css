@@ -1,0 +1,612 @@
+/*
+ * ==> 支付页面
+ *  author: windy
+ *  date: 2015-11-2 17:35
+*********************************************/
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+
+.crumb {
+  display: block;
+  *zoom: 1;
+  zoom: 1;
+  line-height: 50px;
+}
+.crumb:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.crumb p {
+  color: #999;
+}
+.crumb p a {
+  padding: 0 10px;
+}
+.crumb p span {
+  padding-left: 10px;
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url('font/iconfont.eot');
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+   url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+   url('font/iconfont.svg#iconfont') format('svg');/* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.paycontent h5 {
+  display: none;
+  font-size: 14px;
+  color: #333333;
+  padding: 15px 0;
+}
+.paycontent .process {
+  *zoom: 1;
+  zoom: 1;
+}
+.paycontent .process:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.paycontent .process ul {
+  padding: 20px;
+}
+.paycontent .process li {
+  width: 38%;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+}
+.paycontent .process li a {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: #dddddd;
+  color: #999999;
+  font-weight: bold;
+  line-height: 40px;
+}
+.paycontent .process li a i {
+  position: absolute;
+  right: -14px;
+  top: 30%;
+  border-width: 8px;
+  border-color: transparent transparent transparent #dddddd;
+  border-style: dashed dashed dashed solid;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.paycontent .process li span {
+  display: none;
+}
+.paycontent .process li em {
+  padding-left: 25%;
+  color: #cccccc;
+  line-height: 40px;
+}
+.paycontent .process li:hover,
+.paycontent .process .selected {
+  border-bottom-color: #74b95a;
+}
+.paycontent .process li:hover a,
+.paycontent .process .selected a {
+  color: #ffffff;
+  background: #74b95a;
+}
+.paycontent .process li:hover a i,
+.paycontent .process .selected a i {
+  border-width: 8px;
+  border-color: transparent transparent transparent #74b95a;
+  border-style: dashed dashed dashed solid;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.paycontent .process li:hover em,
+.paycontent .process .selected em {
+  color: #74b95a;
+}
+.paycontent .process .nth3 {
+  width: 24%;
+}
+.paycontent h3 {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  margin: 20px 0;
+}
+.paycontent h3 strong {
+  font-size: 18px;
+  padding-right: 10px;
+  color: #666666;
+}
+.paycontent h3 span {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #999999;
+  border-left: 2px solid #999999;
+}
+.paycontent h2 {
+  clear: both;
+  padding: 0 10px;
+  border-left: 3px solid #53afbe;
+  font-size: 14px;
+  color: #333333;
+  margin: 10px 10px 20px;
+}
+.paycontent h2 span {
+  font-size: 12px;
+  color: #d6a128;
+  padding-left: 10px;
+}
+
+.paycontent h5 {
+  display: block;
+}
+.paycontent .process li {
+  position: relative;
+  width: 42%;
+  height: 20px;
+  border-bottom: 1px dashed #cccccc;
+  text-align: left;
+  margin-right: 3%;
+}
+.paycontent .process li a {
+  text-align: center;
+}
+.paycontent .process li span {
+  display: block;
+  font-size: 14px;
+  color: #666666;
+}
+.paycontent .process li em {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.paycontent .process .nth3 {
+  margin-right: 0;
+  width: 18%;
+  text-align: right;
+  width: 50px;
+  border-bottom: 0;
+}
+.paycontent h3 {
+  margin: 70px 10px 20px;
+}
+.paycontent h3 span {
+  font-size: 14px;
+}
+
+
+.paycontent .process li {width: 44%;}
+.paybox {
+  background: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.paycontent h5 {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  box-sizing: border-box;
+}
+.paycontent .paybox {
+  width: 1200px;
+  margin: 20px auto;
+  padding: 30px 90px;
+  box-sizing: border-box;
+}
+
+/* 资料接收地址  */
+.paymessage {
+  background: #f7f8f8;
+  margin-bottom: 10px;
+}
+.paymessage ul {
+  background: #ffffff url(../../images/payline.png) repeat no-repeat;
+  background-position: 0 -3px;
+  color: #999999;
+  padding: 20px 10px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  border-top: 0;
+  height: 160px;
+  position: relative;
+}
+.paymessage ul li {
+  padding-bottom: 5px;
+  line-height: 28px;
+  cursor: pointer;
+  clear: both;
+}
+.paymessage ul li span {
+  display: inline-block;
+}
+.paymessage ul li span:first-child {
+  float: left;
+  width: 60px;
+}
+.paymessage ul li span:nth-child(2) {
+  width: 79%;
+}
+.paymessage ul li em {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid #74b95a;
+  border-left: 60px solid transparent;
+}
+.paymessage ul li em i {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 30px;
+  font-size: 28px;
+}
+.paymessage ul li input[type="text"] {
+  height: 30px;
+  width: 84%;
+}
+.paymessage ul li input[type="button"] {
+  display: block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  margin: 20px auto;
+}
+.paymessage ul li .write_rep {
+  display: none;
+  float: right;
+  margin-top: -30px;
+}
+.paymessage ul li .write_rep i {
+  padding: 0 5px;
+}
+.paymessage ul li .mess {
+  width: 82%;
+}
+.paymessage ul li select {
+  height: 30px;
+  width: 41%;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  color: #999999;
+}
+.paymessage ul:hover li .write_rep {
+  display: inline;
+}
+.paymessage form ul {
+  background: #ffffff;
+  height: 350px;
+  border-top: 1px solid #cccccc;
+}
+.paymessage p {
+  background: #ffffff;
+  padding: 30px 0;
+  border: 1px solid #dddddd;
+  border-top: 2px solid #dddddd;
+  text-align: center;
+  font-size: 16px;
+  color: #999999;
+}
+.paymessage p .icon_add {
+  font-size: 26px;
+  padding-right: 20px;
+}
+
+.paybox {
+  background: #ffffff;
+}
+.paymessage {
+  background: #ffffff;
+}
+.paymessage ul {
+  background-color: #f7f8f8;
+  width: 48%;
+  height: 200px;
+  float: left;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 1%;
+}
+.paymessage form ul {
+  height: 400px;
+  background-color: #f7f8f8;
+}
+.paymessage form ul li {
+  padding-bottom: 15px;
+}
+.paymessage p {
+  display: inline-block;
+  height: 200px;
+  box-sizing: border-box;
+  line-height: 200px;
+  width: 48%;
+  margin: 1%;
+  padding: 0;
+  background: #f7f8f8;
+  float: left;
+}
+
+
+.paymessage ul {
+  width: 31.33%;
+}
+.paymessage p {
+  width: 31.33%;
+}
+
+/* 商品信息 */
+.goodsmsg {
+  *zoom: 1;
+  zoom: 1;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.goodsmsg:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.goodsmsg dl {
+  *zoom: 1;
+  zoom: 1;
+}
+.goodsmsg dl:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.goodsmsg dl:first-child {
+  display: none;
+}
+.goodsmsg dl dt {
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.goodsmsg dl dt:before {
+  content: "产品编号：";
+  color: #cccccc;
+}
+.goodsmsg dl dd {
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.goodsmsg dl dd span {
+  color: #f4981f;
+}
+.goodsmsg dl dd:nth-child(2) {
+  display: block;
+  width: 100%;
+}
+.goodsmsg dl dd:nth-child(3) {
+  width: 20%;
+}
+.goodsmsg dl dd:nth-child(3),
+.goodsmsg dl dd:nth-child(4) {
+  padding-bottom: 20px;
+}
+.goodsmsg section {
+  padding: 30px 20px;
+  background: #e4e8ed;
+  text-align: right;
+  line-height: 40px;
+}
+.goodsmsg section em {
+  padding-right: 20px;
+}
+.goodsmsg section span {
+  color: #f4981f;
+  font-size: 40px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.goodsmsg section a {
+  display: block;
+  width: 250px;
+  height: 45px;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 45px;
+  text-align: center;
+  font-weight: bold;
+  background: #f4981f;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 30px auto 0;
+}
+
+.goodsmsg {
+  margin-bottom: 100px;
+}
+.goodsmsg dl {
+  border-bottom: 1px solid #dddddd;
+}
+.goodsmsg dl dt {
+  float: right;
+  border-bottom: 0;
+  width: 200px;
+  text-align: center;
+}
+.goodsmsg dl dt:before {
+  content: " ";
+}
+.goodsmsg dl dd:nth-child(2) {
+  display: inline-block;
+  width: 45%;
+}
+.goodsmsg dl dd:nth-child(3) {
+  width: 10%;
+}
+.goodsmsg dl:first-child {
+  display: block;
+  text-align: center;
+}
+.goodsmsg section {
+  background: #ffffff;
+  position: relative;
+  padding: 20px 50px;
+}
+.goodsmsg section a {
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+}
+
+/********************************************************添加修改*************************************************/
+.paymessage form {
+  display: none;
+}
+.duigou em {
+  display: none;
+}
+.paymessage li p {
+  height: 20px;
+  width: 84%;
+  line-height: 18px;
+  font-size: 14px;
+  margin: 0;
+  background: none;
+  float: none;
+  cursor: auto;
+  border: none;
+  color: red;
+  box-sizing: inherit;
+  padding-left: 46px;
+  text-align: left;
+}
+.paymessage form ul li {
+  padding-bottom: 0;
+  height: 50px;
+}
+.paymessage form ul li.messWrap {
+  height: 80px;
+}
+.paymessage ul li .write_rep {
+  position: relative;
+}
+
+.paycontent .process li {
+  margin-right: 2%;
+}
+.paycontent .process .nth3 {
+  width: 70px;
+  text-align: center;
+}
+

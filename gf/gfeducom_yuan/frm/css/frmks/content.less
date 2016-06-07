@@ -1,0 +1,232 @@
+/*
+ * == 专题之考试内容
+ *************************************************/
+
+@import "kscom.less";
+
+.content{
+    article{
+      padding: 30px 5px;
+      h3{
+          padding: 0 20px;
+      }  
+      h4,h6{display: none;}
+      .contsec{display: none;}
+      section{
+         margin: 20px 0;
+         img{width: 100%;}
+      }
+    }
+}
+@media(min-width:768px){
+  .content{
+   article{
+     .cf();
+     h3{text-align: center;}
+     h4,h6{display: block;}
+     h4{
+         border-bottom: 3px solid #235588; 
+         .f24();
+         padding-bottom: 10px;
+         width: 180px;
+         margin: 20px auto;
+         text-align: center;
+     }
+     h6{  margin: 30px 0 60px; }
+     .contsec{
+         display: block; width: 55%; .f12(); float: left; color: @cksblue; 
+         p{
+            span{color: #235588; display: block;}
+            &:first-child{ padding-bottom: 30px; }
+         }
+     }
+     section{
+       img{
+         width: 45%;
+         margin-top: 30px;
+        }
+     }
+     
+     h5{
+         clear: both;
+         color: #235588;
+         padding: 20px;
+         text-align: center;
+     }
+   }
+  }  
+}
+@media(min-width:992px){
+ .content{
+   article{
+     .contsec{
+       .f14();
+       line-height: 26px;;
+     }  
+   }
+ }  
+}
+@media(min-width:1200px){
+ .content{
+   article{
+     .contsec{ width: 50%; }
+     .contentcon{
+         width: 1200px;
+         margin:  0 auto;
+         padding: 20px;
+         box-sizing: border-box;
+     }
+   }
+ }  
+}
+
+
+/* 考试相关 */
+.contentxg{
+    display: none;
+}
+@media(min-width:768px){
+   .contentxg{
+      display: block;
+      .cf();
+      margin: 20px;
+      h3{
+         border-bottom: 3px solid #235588; 
+         .f24();
+         padding-bottom: 10px;
+         width: 180px;
+         margin: 20px auto 60px;
+         text-align: center;
+       } 
+       
+       dl{
+           width: 30%;
+           color: @c6;
+           background: #d5eeed;
+           float: left;
+           padding: 0 3%;
+           height: 260px;
+           box-sizing: border-box;
+           margin: 1.6%;
+           dt{
+             text-align: center;
+             padding-bottom: 20px;
+             img{ width: 100px; height: 100px; .bdrhalf(); margin-top: -35px; }
+             h4{.f16();padding: 20px 0 0;}
+           }
+           dd{
+               padding-bottom: 10px;
+               .f12();
+           }
+           
+           &:nth-child(3){background: #f0edd9;}
+           &:last-child{background: #ece6f4;}
+           
+           &:hover{
+               background: #6dbdbe;
+               color: @cw;
+           }
+       }
+   }
+}
+
+@media(min-width:992px){
+  .contentxg{
+      h3{margin: 20px auto 130px;}
+      dl{
+          height: 360px;
+          dt{
+             img{width: 200px; height: 200px; margin-top: -90px;}
+             h4{.f18(); padding: 40px 0 0; } 
+          }
+          dd{
+              .f14();
+          }
+      }
+  }  
+}
+
+@media(min-width:1200px){
+  .contentxg{
+    width: 1200px;
+    margin: 30px auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+    dl{padding: 0 2%;
+    
+        &:nth-child(2){padding: 0 4.5%;}
+        &:last-child{padding: 0 5.4%;}
+    }
+  }
+}
+
+/* FRM考试指定计算器   */
+.contentjsq{
+   text-align: center;
+   padding: 50px 20px 90px;
+   h3{
+     border-bottom: 3px solid #235588; 
+     .f24();
+     padding-bottom: 10px;
+     width: 240px;
+     margin: 20px auto;
+   } 
+   ul{
+      color: #235588; 
+      text-align: left; 
+      margin: 0 auto 20px;
+      width: 265px;
+      .f14();
+      li{list-style-type: decimal; padding-bottom: 10px;}
+   }
+   img{}
+   a{
+       color: @c6;
+       padding: 20px;
+       display: block;
+       
+       &:hover{color: @cksblue;}
+   }
+}
+
+@media(min-width:640px){
+  .contentjsq{
+    ul{.f16();width: 300px;}
+    a{.f16();}
+  }  
+}
+
+@media(min-width:768px){
+  .contentjsq{
+    .cf();
+    h3{margin: 20px auto 60px;}
+    ul{.f16();width: 300px; float: left; margin: 40px;}
+    a{.f16();}
+    p{width: 40%; float: right;}
+  }  
+}
+@media(min-width:992px){
+  .contentjsq{
+    width: 870px;
+    margin: 0 auto;
+  }  
+}
+
+
+.wrap{.cf(); clear: both;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

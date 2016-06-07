@@ -1,0 +1,290 @@
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+.examPlan {
+  *zoom: 1;
+  zoom: 1;
+  width: 90%;
+  margin: 0px auto;
+}
+.examPlan:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.exambg {
+  background: url(../../images2015/cicintro/detial_01.png) no-repeat;
+  height: 130px;
+  background-size: 100% 100%;
+}
+@media (min-width: 480px) {
+  .exambg {
+    height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .exambg {
+    height: 350px;
+  }
+}
+.exam_prevent {
+  margin: 5% auto;
+  width: 100%;
+  *zoom: 1;
+  zoom: 1;
+}
+.exam_prevent:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.exam_prevent h2 {
+  font-size: 14px;
+  color: #d55e5e;
+  text-align: center;
+  font-weight: bold;
+}
+.exam_prevent em {
+  font-style: italic;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  color: #666666;
+  font-size: 16px;
+}
+.exam_prevent .ep_list {
+  *zoom: 1;
+  zoom: 1;
+  margin-top: 7%;
+  text-align: center;
+}
+.exam_prevent .ep_list:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.exam_prevent .ep_list p {
+  width: 167px;
+  font-size: 14px;
+  color: #ffffff;
+  margin: -10px auto;
+  padding: 5px 0;
+  background-color: #4dbdc5;
+}
+.exam_prevent .ep_list p:hover {
+  background-color: #51dcca;
+  cursor: pointer;
+}
+@media (min-width: 480px) {
+  .exam_prevent .ep_list {
+    width: 50%;
+    float: left;
+  }
+  .exam_prevent .ep_list:last-child {
+    width: 100%;
+  }
+}
+@media (min-width: 640px) {
+  .exam_prevent h2 {
+    font-size: 18px;
+  }
+  .exam_prevent em {
+    font-size: 20px;
+  }
+  .exam_prevent .ep_list {
+    width: 33%;
+  }
+  .exam_prevent .ep_list:last-child {
+    width: 33%;
+  }
+}
+@media (min-width: 992px) {
+  .exam_prevent h2 {
+    font-size: 18px;
+  }
+  .exam_prevent em {
+    font-size: 28px;
+  }
+}
+.severSterm {
+  *zoom: 1;
+  zoom: 1;
+  margin: 0 auto;
+}
+.severSterm:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.severSterm p {
+  font-style: italic;
+  font-size: 26px;
+  text-align: center;
+  color: #666666;
+  padding-bottom: 25px;
+}
+.severSterm .sStm {
+  width: 100%;
+  margin: 15px auto;
+}
+.severSterm .sStm img {
+  width: 100%;
+  height: auto;
+}
+.severSterm .sStm em {
+  color: #ffffff;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: -9px;
+}
+.severSterm span {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  clear: left;
+}
+.severSterm h3 {
+  color: #666666;
+  font-size: 16px;
+}
+@media (min-width: 480px) {
+  .severSterm .sStm {
+    width: 45%;
+    margin: 2.5%;
+    float: left;
+  }
+}
+@media (min-width: 640px) {
+  .severSterm .sStm {
+    width: 31%;
+    margin: 1%;
+  }
+  .severSterm .sStm em {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .severSterm .sStm {
+    width: 20%;
+    margin: 2.5%;
+  }
+  .severSterm .sStm em {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .severSterm span {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  .severSterm span h3 {
+    font-size: 26px;
+  }
+  .severSterm p {
+    font-size: 30px;
+  }
+}

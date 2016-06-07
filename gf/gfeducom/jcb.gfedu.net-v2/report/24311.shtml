@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2015年“金程圆梦计划”华北站：北京联合大学圆满落幕</h3>
+            <span>时间：2015/10/29 11:23:16</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div style="text-align: left;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp; &nbsp;&nbsp;<span style="text-indent: 21pt;">自</span><span lang="EN-US" style="text-indent: 21pt;">10</span><span style="text-indent: 21pt;">月</span><span lang="EN-US" style="text-indent: 21pt;">8</span><span style="text-indent: 21pt;">日起，&ldquo;金程圆梦计划&rdquo;校园宣讲会正式启动以来，已经在西安、武汉、南京的多所高校成功举办。</span><span lang="EN-US" style="text-indent: 21pt;">10</span><span style="text-indent: 21pt;">月</span><span lang="EN-US" style="text-indent: 21pt;">28</span><span style="text-indent: 21pt;">日，</span><span lang="EN-US" style="text-indent: 21pt;">2015</span><span style="text-indent: 21pt;">年&ldquo;金程圆梦计划&rdquo;校园宣讲会来到了中国最庄严神圣的城市&mdash;&mdash;北京，走进了北京联合大学，受到广大师生的热烈欢迎。</span><span lang="EN-US" style="text-indent: 21pt;">&nbsp;<br />
+<br type="_moz" />
+</span></span></span></span></div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/北京联合大学.jpg" width="550" height="375" alt="" style="line-height: 26px; font-family: 宋体; font-size: small; text-align: center; text-indent: 21pt;" /></div>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><br />
+&nbsp; &nbsp; 寿翀老师以其对&ldquo;金程杯&rdquo;深入的了解，生动的向在场学生讲述了&ldquo;金程圆梦计划&rdquo;举办的初衷</span>。接着，他<span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">对此次&ldquo;金程圆梦计划&rdquo;进行了系统而详细的介绍，结合自身多年的</span><span style="border: 1pt none windowtext; padding: 0cm; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">职场</span><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">经验，详细讲解此次大赛对大学生未来的职业发展所产生的重要价值。同学们积极提问，与寿翀老师进行了热情的互动，并对&ldquo;金程杯&rdquo;会计案例大赛进行了深入的了解。</span></span></span></span><span style="font-size: 10.5pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">金程圆梦计划以&ldquo;金程杯&rdquo;会计案例大赛为主线，通过圆梦助学金计划和金程校园招聘计划的配合，为在校大学生搭建一个立体、高效的综合实践平台，有利于强化学生的竞争意识，提高大学生的社会适应能力，让学生在比赛的同时也得到了丰富的职场经验。</span></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt;mso-char-indent-count:2.0;
+line-height:150%"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">为进一步提高全国财经专业学生对专业知识的理解，培养广大财经大学生群体对财经的兴趣及实战能力，为将来的就业打下良好的知识基础，<span lang="EN-US">2015</span>年&ldquo;金程杯&rdquo;全国大学生会计案例大赛，面向全国高校学生开放，助力学校培养人才，帮助大学生实现梦想。</span></span></span><span lang="EN-US"><o:p></o:p></span></p>
+<p style="text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">金程杯是金程教育和其他优秀企业共同推动的一项赛事，大赛获胜者将会收获丰厚的奖金和知名金融机构的实习机会。欢迎更多的高校学生加入我们，加入&ldquo;<span lang="EN-US">2015</span>年金程大学生圆梦计划&rdquo;，拥有一个美好的未来。</span></span></span></span><span style="font-size: 10.5pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><strong>在这里将获得【丰厚活动奖品】<span lang="EN-US">+</span>【优质职业前景】<span lang="EN-US">+</span>【专业能力提升】<span lang="EN-US">+</span>【自我个性展现】<span lang="EN-US">+</span>【<span lang="EN-US">.......</span>】</strong><b><span lang="EN-US"><br />
+</span></b><strong>组委会电话：<span lang="EN-US">021-61323513</span></strong><span class="apple-converted-space"><span lang="EN-US">&nbsp;</span></span><strong>刘老师、韩老师<br />
+<br />
+</strong></span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; text-align: center; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><strong><img src="http://manager.gfedu.net/GfeduFile/Folder23/qrcode_for_gh_00bdd6c56c95_1280(10).jpg" width="280" height="280" alt="" /></strong></span></span></span><span lang="EN-US" style="font-size: 10.5pt; line-height: 150%;"><o:p></o:p></span></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

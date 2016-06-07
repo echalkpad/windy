@@ -1,0 +1,101 @@
+/* LESS Document */
+
+/* 模块集 */
+
+/* 基本 */
+@import "../../css/reset.less";
+@import "../../css/variable.less";
+@import "../../css/core.less";
+@import "../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../css/headfoot.less";
+@import "../../css/jMmenu.less";
+
+/* 职业发展-就业招聘、	机构合作友情链接、全国分校 */
+@import "../../css/common.less";
+
+
+/* 课程详情共用 */
+@import "../../css/classdetail.less";
+
+
+/* 颜色设置 */
+@import "cfavariable.less";
+
+
+/*课程详情快捷导航*/
+@media (min-width:768px){
+	.cdsidenav{
+		a{
+			background-color:@proc1;
+			
+		}
+		i{color:@proc1;}
+		li:hover{
+			a{background-color:@proc2;}
+			i{color:@proc2;}
+		}
+	}
+}
+
+/*课程详情信息*/
+.cdinfo{
+	h1{i{color:@proc1;}q{color:@proc1;}}
+	h3{p{color:@proc1;}}
+	h4{a:first-child{background-color:@proc1;}}
+}
+
+/*班级信息介绍*/
+.cdintro{
+	.cdttl p{
+		color:@proc1;
+	}
+	.cdicontent{
+		background-image:url(../images/special/cdintrobg.jpg);
+		background-repeat: repeat;
+		background-position:center center;
+		background-size:cover;
+		dt{background-color:@proc4;}
+		dl.cdic01{p{a{background-color:@proc1;}}}
+		dl.cdic02{h4{background-color:@proc5;}
+			li{div{i{ border:solid 2px @proc5; border-bottom:none; }em{background-color:@proc5;}}}
+		}
+	}
+}
+/*个性服务*/
+.cdservice{
+	background-image:url(../images/special/cdservicebg.jpg);
+	background-repeat: no-repeat;
+	background-position:top center;
+	background-size: 270% 100%;
+	h4{a{background-color:@proc2;}}
+	li{
+		background-image:url(../images/special/cdservicelibg.png);
+		background-repeat: no-repeat;
+		background-position:center center;
+	}
+}
+@media (min-width:480px) {
+	.cdservice{
+		background-size: cover;
+	}
+}
+/*课程按排*/
+.cdarrange{.cdTabs{li.selected,li:hover{ border-bottom:solid 2px @proc1;a{color:@proc1;}}}
+}
+
+/*人脉资源*/
+.cdresources{
+	article{background-color:@proc4;h4{a{background-color:@proc2;}}}
+}
+@media(min-width:768px){
+	.cdresources{
+		background-image:url(../images/special/cdresourcesbg.png);
+		background-repeat: no-repeat;
+		background-position:center center;
+		article{background-color: inherit;}
+	}
+}
+/* 成功案例 */
+.cdcase{aside{h4{a{background-color:@proc2;}}}}

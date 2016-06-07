@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2015年“金程圆梦计划”第一站：西北政法大学圆满落幕</h3>
+            <span>时间：2015/10/14 11:06:35</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <p><font face="宋体, SimSun" size="4">&nbsp; 2015年10月8日，2015年金程圆梦计划全国高校巡讲第一站在西北政法大学顺利启动，金程教育总裁刘总亲赴现场，为西北政法大学的学生奉上了一份&ldquo;别开生面&rdquo;、融合&ldquo;专业能力提升&rdquo;、&ldquo;职业素质养成&rdquo;的大礼。在场的近百名学子，在本次活动中聆听了来自行业一线金融机构的心声，近距离感受了从学生人到职业人所需付出的努力。<br />
+</font><font face="宋体, SimSun" size="4">&nbsp; 活动伊始，刘总对此次&ldquo;金程圆梦计划&rdquo;进行了系统而详细的介绍，从大赛的举办背景、特色、如何参与以及比赛内容都做了全面的介绍。作为金程圆梦计划的核心活动，本次金程杯大赛以&ldquo;会计案例&rdquo;为主要内容，从中国当下会计人才实际需求出发，以&ldquo;会计是金融之本，金融是会计之魂&rdquo;为赛事核心，不论是在赛制的安排还是考核内容的制定上都进行了全面的考量。大赛将用知名机构商业案例，此外大赛还得到了众多企业的大力支持，大赛获胜者除收获丰厚的奖金外，还将获得知名金融机构的实习机会。<br />
+</font><font face="宋体, SimSun" size="4">&nbsp; 在介绍本次活动的同时，刘总也结合自身多年的职场经验，在分享个人的职场发展经历，并基于此次活动，剖析大赛将为大学生未来的职业发展和快速融合实际工作中所具有的价值。鼓励大学生抓住一切可能的机会，勇往直前，努力拼搏，她生动幽默的演讲得到了现场观众阵阵热烈的掌声。<br />
+</font><font face="宋体, SimSun" size="4">&nbsp; &ldquo;金程杯&rdquo;全国大学生竞赛是由金程教育组织的全国性校园公益活动。该赛事自2012年设立以来，已经成功举办三届，分别以&ldquo;理财案例分析&rdquo;、&ldquo;Excel金融建模&rdquo;以及&ldquo;职业规划&rdquo;为大赛主题。2015年，金程教育将&ldquo;金程杯&rdquo;全国大学生竞赛全新升级为&ldquo;金程大学生圆梦计划&rdquo;，突破性地将活动形式由原本纯粹的&ldquo;专业知识竞赛&rdquo;扩展为涵盖：助学计划、职业规划、以及知识竞赛三个模块的综合性高校学生活动，为更多学生搭建了一个促进学习交流、展现自我风采、加强团队协作、提升职业竞争力的平台。<br />
+</font><font face="宋体, SimSun" size="4">&nbsp; 在这里将获得【丰厚活动奖品】+【优质职业前景】+【专业能力提升】+【自我个性展现】+【.......】<br />
+</font><font face="宋体, SimSun" size="4">&nbsp; 组委会电话：15200510088<span class="Apple-tab-span" style="white-space:pre">		</span>刘老师、韩老师</font></p>
+<p style="text-align: center;">《我相信，你一定会到来》</p>
+<p style="text-align: center;">&mdash;&mdash;Written by金程教育董事长汤震宇博士</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">虽然冬天会冰封大地，</p>
+<p style="text-align: center;">但是，春天里，</p>
+<p style="text-align: center;">你一定会和小草一起到来，</p>
+<p style="text-align: center;">世界定会绿色一片，生机昂然。</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">虽然夜色会漆黑世界，</p>
+<p style="text-align: center;">但是，黎明里，</p>
+<p style="text-align: center;">你一定会和太阳一起到来，</p>
+<p style="text-align: center;">世界定会充满光明和温暖。</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">虽然大海也会沉睡，</p>
+<p style="text-align: center;">但是，醒来时，</p>
+<p style="text-align: center;">你一定会和潮汐一起到来，</p>
+<p style="text-align: center;">浪潮如你不停的心跳，铿锵、澎湃、有力。</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">虽然岁月如风霜刀割，</p>
+<p style="text-align: center;">但是，平凡的日子里，</p>
+<p style="text-align: center;">你和成长一定会到来，</p>
+<p style="text-align: center;">年轮会刻我们的在每一步里，印在我们的每一次呐喊里。</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">你一定会到来，</p>
+<p style="text-align: center;">无论，</p>
+<p style="text-align: center;">春去春来，日出日落，</p>
+<p style="text-align: center;">潮起潮落，风霜雪雨，</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">你一定会到来。</p>
+<p style="text-align: center;">因为，</p>
+<p style="text-align: center;">春天里，小草定会发芽，</p>
+<p style="text-align: center;">黎明时，太阳定会灿烂，</p>
+<p style="text-align: center;">潮汐里，浪涛定会澎湃，</p>
+<p style="text-align: center;">岁月里，年轮定会增长。</p>
+<p style="text-align: center;">我相信，</p>
+<p style="text-align: center;">你一定会到来。</p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!--Floating start-->
+<!--共用导航及日程表 start-->
+<!--导航-->
+<div class="topttl">
+    <!--#include file="/Navbar.html"-->
+    <h2>
+        <a href="/"><img src="/images/jcblogo.png" alt="金程杯" /></a><span><strong>赢职场</strong>2016金程杯全国大学生精优挑战赛</span></h2>
+</div>
+<!--日程表-->
+<div class="jcb-day">
+    <article><span></span></article>
+    <ul>
+        <li date="2016-03-15"><i id="time1"></i><p>3月15日—4月15日</p><h3>大赛报名</h3></li>
+        <li date="2016-04-18" ><i id="time2"></i><p style="color:#b41a34;">4月18日—4月24日</p><h3 style="color:#b41a34;">初赛</h3></li>
+        <li date="2016-04-26"><i id="time3"></i><p>4月26日</p><h3>复赛晋级通知</h3></li>
+        <li date="2016-04-26"><i id="time4"></i><p style="color:#b41a34;">4月26日—5月13日</p><h3 style="color:#b41a34;">复赛</h3></li>
+        <li date="2016-05-17"><i id="time5"></i><p>5月17日</p><h3>决赛晋级通知</h3></li>
+        <li date="2016-06-01"><i id="time6"></i><p style="color:#b41a34;">6月1日—6月3日</p><h3 style="color:#b41a34;">职业训练营</h3></li>
+        <li date="2016-06-03"><i id="time7"></i><p>6月3日</p><h3>终极对决/颁奖礼</h3></li>
+        <!-- <li date="2015-12-26"><i id="time8"></i><p>12月26日(周六)</p><h3>决赛现场</h3></li> -->
+    </ul>
+</div>
+<!--左侧边浮动栏-->
+<div class="jcbsidebar">
+    <ul class="sign_up">
+        <li style="padding:10px;text-align:center">
+            <!--<h5>我要报名</h5>-->
+            <img src="/images/111.png" style="width:100%;"><br>
+            <!--<a href="/preliminary.shtml" target="_blank">初赛答题</a></li>-->
+        <li onclick="window.open('http://weibo.com/jinchengjiaoyu')" style="cursor:pointer;"><i class="icon-gfwb">&#xe604;</i><h5>官方微博</h5>
+            <p>金程教育-金程杯</p>
+        </li>
+        <li>
+            <img src="/images/wx_jcb.jpg"><h5>官方微信</h5>
+            <p>微信扫一扫<br>
+                掌握大赛动态<br>
+                gfedu2015</p>
+        </li>
+        <li>
+            <img src="/images/qq.jpg" style="width:100px;">
+            <p>  </p>
+        </li>
+    </ul>
+</div>
+<!--共用导航及日程表 end-->
+<!--Floating end-->
+
+
+<!-- 当前高亮 -->
+<script type="text/javascript">
+    $(function () {
+        SetPlanCurrent();
+        $(".jcb-day ul li").unbind("click");
+    });
+    function SetPlanCurrent() {
+        $(".jcb-day ul li").each(function (index) {
+            var index = $(this).index();
+            if (ComparePlanDate($(this).attr('date'))) {
+                $(".jcb-day ul li:eq(" + index + ")").click();
+            }
+        })
+    }
+
+    //date1<date2 返回true
+    function ComparePlanDate(strdate) {
+        var arr = strdate.split("-");
+        var date1 = new Date(arr[0], arr[1], arr[2]);
+        var datetime1 = date1.getTime();
+        var today = new Date();
+        var date2 = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        var datetime2 = date2.getTime();
+        if (datetime1 <= datetime2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>

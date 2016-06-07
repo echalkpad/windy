@@ -1,0 +1,1449 @@
+/*
+ * == 金程杯首页
+**********************************************/
+/* 基本 */
+@import "common.less";
+
+/* 手机版首页模块目录 
+1、手机首屏			.jcb-mbfirst
+2、赛事介绍			.jmb-p2intro
+3、赛制赛程			.jmb-p3schedule
+4、大赛收益			.jmb-p4payoffs
+
+5、圆梦助学金		.jmb-p5grant
+6、招聘计划			.jmb-p6recruit
+7、手机端底部
+8、大赛评委          .jcbh-judge
+*/
+
+/* 手机共用title start */
+.jmb-ttl_bg{
+	overflow:hidden;
+	width: 100%;
+	height: auto;
+	padding-top:10px;
+	background-image:url(../images/pagesbg_320.png);
+	background-repeat:no-repeat;
+	position: relative;
+	margin-top: -1px;
+}
+.jmb-ttl{
+	background-image:url(../images/pgttlbg_320.png);
+	background-repeat:no-repeat;
+	width:90%;
+	height:40px;
+	margin:0 auto;
+	.pos(r);
+	h2{
+		float:right;
+		.f20();
+		font-weight: bold;
+		padding-left:10px;
+		color:#28a8f1;
+		line-height:40px;
+		background-color:@cw;
+	}
+	i{
+		font-size:20px;
+		color:#28a8f1;
+		.pos(a);
+		top:11px;
+		left:12px;
+	}
+}
+@media (min-width:468px){
+	.jmb-ttl_bg{
+	padding-top:20px;
+	background-image:url(../images/pagesbg_640.png);
+	margin-top: -2px;
+	.jmb-ttl{
+		background-image:url(../images/pgttlbg_640.png);
+		width:86%;
+		height:76px;
+		h2{
+			.f30();
+			line-height:76px;
+		}
+		i{
+			font-size:40px;
+			top:20px;
+			left:18px;
+		}
+	}
+	}
+}
+/* 手机共用title end */
+
+	/* 手机首屏 */
+.jcb-mbfirst{
+	background-image:url(../images/homebg.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index: 10;
+	h2{
+		text-align:center;
+		img{
+			.pos(r);
+			z-index:3;
+		}
+	}
+}
+.jcb-mbfbody{
+	text-align:center;
+	h1{text-indent:-9999em;}
+	h3{.f16();color:@c0;}
+	h4{color:@c0;}
+	p{
+		padding:15px 0 0 0;
+		a{
+			display:block;
+			width:148px;
+			margin:0 auto;
+			line-height:34px;
+			background-color:#fd724b;
+			color:@cw;
+			.f16();
+			.bdr(17px);
+		}
+	}
+	.jcb-run{
+		width:90%;
+		margin:0 auto;
+		img{
+			width:100%;
+			height:auto;
+			max-width:100%;
+		}
+	}
+	article{
+		margin:-40px auto 0;
+		.pos(r);
+		z-index:2;
+		img{
+			width:75%;
+			height:auto;
+		}
+	}
+	.jcbslogan{
+		margin-top:10px;
+		q{
+			display:block;
+			width:140px;
+			height:3px;
+			background: #fff;
+			margin:14px auto 16px;
+			.pos(r);
+			i{
+				display:block;
+				background: #fff;
+				width:12px;
+				height:12px;
+				.bdr(50%);
+				.pos(a);
+				top:-6px;
+				left:50%;
+				margin-left:-6px;
+			}
+		}
+	}
+}
+@media(min-width:600px){
+	.jcb-mbfbody{
+		h3{.f20();}
+		h4{.f16();}
+		p{
+			a{
+				line-height:40px;
+				.f18();
+			}
+		}
+		article{margin:-40px auto 0;}
+		.jcbslogan{q{width:200px;}}
+	}
+}
+@media(min-width:769px){
+	.jcb-mbfbody{
+		margin-top:-40px;
+		h3{.f24();}
+		h4{.f20();}
+		.jcb-run{width:75%;}
+		article{
+			margin:-135px auto 0;
+			img{width:55%;}
+		}
+		.jcbslogan{margin-top:-10px;}
+	}
+}
+/* 赛事介绍 */
+.jmb-p2intro{
+	color: @c0;
+	margin: 0 auto;
+	h3{
+		text-align: center;
+		line-height:40px;
+		.f18();
+	}
+	p{
+		line-height: 24px;
+		text-indent: 2em;
+		.pos(r);
+		width: 90%;
+		margin:0 auto;
+		img{
+		width: 294px;
+		height: 166px;
+		margin: 20px auto;
+		display: block;
+		}
+		video{display: block;}
+		i{
+			.pos(a);
+			font-size: 50px;
+			top:50%;
+			left:50%;
+			margin:-25px 0 0 -50px;
+			color:@cw;
+			z-index: 2;
+			cursor: pointer;
+		}
+	}
+	li{
+		width: 60%;
+		margin: 20px auto;
+		p{
+		text-indent:0;
+		margin-top:15px;
+		}
+		a{
+			display:block;
+			width:180px;
+			height:180px;
+			overflow:hidden;
+			margin: 0 auto;
+			.bdrhalf();
+			position:relative;
+			z-index:2;
+			}
+	}
+	span{
+		background:rgba(0,0, 0, 0.5);
+		color: @cw;
+		position:absolute;
+		top:65px;
+		left:0;
+		display: block;
+		width: 180px;
+		height: 50px;
+		font-weight: bold;
+		line-height: 50px;
+		position: absolute;
+		text-align: center;
+	}
+}
+@media (min-width:480px) {
+	.jmb-p2intro{
+	h3{font-size: 20px;}
+	p{
+		font-size: 16px;
+		img{
+		width: 424px;
+		height: 238px;
+		}
+	}
+	li{
+		width: 50%;
+	}
+}
+}
+@media (min-width:640px){
+	.jmb-p2intro{
+		p{
+			img{width: 546px;height: 307px;}
+		}
+		ul{
+			width: 600px;
+			.cf();
+			margin:10px auto;
+		}
+		li{
+			float: left;
+			width: 190px;
+			margin-right: 10px;
+		}
+	}
+}
+/* 赛制赛程 */
+.jmb-p3schedule{
+	padding-bottom: 30px;
+	h3{font-size: 12px;text-align: center;margin-top: 20px;}
+	h2{font-size: 18px;text-align: center;color:#28a8f1;font-weight: bold;}
+	ul{
+		margin:30px auto 0;
+		width: 90%;
+		.cf();
+		li{
+			float: left;
+			width:48%;
+			padding-bottom:20px;
+			text-align:center;
+			&:nth-child(1){
+				span{background-color:#f77b7c;}
+			}
+			&:nth-child(2){
+				span{background: #ffd160;line-height: 80px;}
+			}
+			&:nth-child(3){
+				span{background:#acd279;}
+			}
+			&:nth-child(4){
+				span{background: #49b6bd;line-height: 80px;}
+			}
+			a{color:@c0;}
+			span{
+				margin:5px auto;
+				width:84px;
+				font-size: 22px;
+				height:84px;
+				display: block;
+				padding-top:5px;
+				box-sizing:border-box;
+				line-height:36px;
+				color:@cw;
+			}
+		}
+	}
+	dl{
+		&:nth-child(2){
+			dd{line-height: 22px;}
+		}
+		width: 80%;
+		margin:0 auto;
+		.cf();
+		dt,dd{
+			height:50px;
+			margin:20px 0;
+			.f14();
+			text-align: center;
+			padding: 0 10px;
+			// .ellipsis();
+		}
+		dt{
+			width: 40px;
+			background: #acd279;
+			float: left;
+			color:@cw;
+			line-height: 50px;
+		}
+		dd{
+			width:180px;
+			border:3px solid #acd279;
+			float: right;
+			color: @c6;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+		}
+	}
+	.jcbn1{
+		dt{
+			background: #ffd160;
+		}
+		dd{
+			border:3px solid #ffd160;
+			line-height: 45px;
+		}
+	}
+	.jcbn3{
+		dt{
+			background: #f77b7c;
+		}
+		dd{
+			border:3px solid #f77b7c;
+			line-height: 45px;
+		}
+	}
+	p{color:@c6;width: 80%;margin:0 auto;}
+}
+@media(min-width:480px){
+	.jmb-p3schedule{
+		dl{
+			width: 65%;
+			dt{
+				width:60px;
+			}
+			dd{width: 200px}
+		}
+		p{width: 65%;}
+	}
+}
+@media(min-width:640px){
+	.jmb-p3schedule{
+	h3{font-size: 18px;}
+	h2{font-size: 30px;}
+	ul{
+		margin:30px auto 0;
+		.cf();
+		li{
+			width:25%;
+		}
+	}
+	dl{
+		dt{width:100px;}
+	}
+}
+}
+
+/* 大赛收益 */
+.jmb-p4payoffs{
+	padding-bottom: 20px;
+	ul{width: 90%;margin:0 auto;}
+	li{
+		margin-top: 20px;
+		color:@c0;
+		strong{
+			font-size: 14px;
+			color:#28a8f1;
+		}
+	}
+	h4{
+		font-style:italic;
+		line-height: 40px;
+		.f18();
+		font-weight: bold;
+		margin-bottom:5px;
+		}
+	p{
+		.f12();
+		line-height:30px;
+		}
+}
+/* 圆梦助学金 */
+.jmb-p5grant{
+	padding-bottom: 40px;
+	h2{text-align: center;color:#28a8f1;}
+	p{width: 90%;margin:10px auto;line-height: 22px;text-indent: 2em}
+	ul{width:90%;margin:0 auto;}
+	li{
+		border:1px solid #000;
+		margin-top:45px;
+		padding:35px 15px 10px;
+		.pos(r);
+		p{text-indent: 0;width: 100%;color:@c6;margin: 0;}
+		q{background: #fff100;}
+		span{
+			color:#28a8f1;
+			.f16();
+		}
+		strong{
+			display: block;
+			transform:rotate(45deg);
+			width: 50px;height: 50px;
+			background: #28a8f1;
+			.bdr5();
+			.pos(a);
+			top:-25px;
+			left:50%;
+			margin-left: -25px;
+		}
+		em{
+			transform:rotate(-45deg);
+			color: @cw;
+			display: block;
+		    font-size: 28px;
+		    font-weight: bold;
+		    color: #ffffff;
+		    text-align: center;
+		    line-height: 50px;
+		}
+	}
+}
+@media (min-width:640px){
+	.jmb-p5grant{
+		p,ul{width: 80%;}
+	}
+}
+/* 招聘计划 */
+.jmb-p6recruit{
+	padding-bottom: 15px;
+	p{
+	line-height:22px;
+	text-indent: 2em;
+	}
+	p,ul{width: 90%;margin:20px auto 0;}
+	li{
+		.cf();
+		padding:10px 10px 5px 0; 
+		span{
+			.dis();
+			.left();
+			width: 97px;
+			height: 97px;
+			padding-top: 20px;
+			box-sizing: border-box;
+			line-height:28px;
+			text-align: center;
+			.bdr5();
+			color: @cw;
+			background: #1a51a3;
+		}
+		p{
+			.left();
+			width:59%;
+			text-indent: 0;
+			margin:8px 0 0 10px;
+			.f12();
+			color:@c6;
+			.spill4();
+		}
+		&:nth-child(2),&:nth-child(5){
+			span{line-height:60px;}
+		}
+		&:nth-child(1){
+			span{background:#f77b7c;}
+		}
+		&:nth-child(2){
+			span{background:#ffd160;}
+		}
+		&:nth-child(3){
+			span{background:#acd279;}
+		}
+		&:nth-child(4){
+			span{background:#49b6bd;}
+		}
+	}
+}
+/* 手机版尾部 */
+.jcb-mbsite{
+	footer{
+		padding: 0;
+		.profooter{
+			ul.jcbfooter{
+				h3{.f14();}
+				.cf();
+				li{
+				  	width:20%;
+				  	border:0;
+				  	i{font-size: 28px;}
+				  	p{.f14();}
+				  	padding-left: 60px;
+			  	}
+			 }
+			article{
+				padding-top: 10px;
+				margin: 0 auto;
+				width: 240px;
+				h3{.f14();}
+				img{width: 70px;height: 70px;}
+			}
+		}
+		.jcb_join{
+			width:100%;
+			margin:10px auto 0;
+			position:fixed;
+			bottom: 0;
+			z-index:5;
+			.cf();
+			a{
+				width: 50%;
+				display: block;
+				float: left;
+				height: 66px;
+				.f18();
+				color: @cw;
+				text-align: center;
+				line-height: 66px;
+				background: #28a8f1;
+				&:first-child{
+					border-right: 1px solid #006eac;
+					box-sizing: border-box;
+				}
+				 &:hover{
+					background:#1581bf;
+					border:0;
+				}
+			}
+		}
+	}
+}
+@media (min-width:480px){
+	.jcb-mbsite{
+	footer{
+		.profooter{
+			ul.jcbfooter{
+				li{
+				  	width:30%;
+			  	}
+			 }
+		}
+	}
+}
+}
+
+@media (min-width:600px){
+	.jcb-mbsite{
+	footer{
+		.profooter{
+			padding-bottom: 30px;
+			ul.jcbfooter{
+				.left();
+				width: 58%;
+				li{
+				  	width:48%;
+			  	}
+			 }
+			 article{
+			 	.left();
+			 }
+		}
+	}
+}
+}
+
+/* 首页首屏 */
+.jcb-home{display: none;}
+@media (min-width:769px) {
+.jcb-mbsite{display: none;}
+.jcb-home{
+	display: block;
+	background-image:url(../images/homebg.jpg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	.bg(cover);
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	h2{
+		text-align:center;
+		img{
+			.pos(r);
+			z-index:3;
+		}
+	}
+	nav{
+		position:absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		height:100px;
+		filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#44ffffff',endColorstr='#44ffffff');/* IE */
+  		background-color:rgba(255,255,255,.6);/* Firefox */
+		ul{
+			width:800px;
+			margin:0 auto;
+			padding-top:20px;
+			.cf();
+		}
+		li{
+			width:12.5%;
+			float:left;
+			text-align:center;
+			box-sizing:border-box;
+			.pos(r);
+			a{color:#071c31;}
+			span{
+				width:40px;
+				height:40px;
+				display:block;
+				margin:0 auto;
+				margin-bottom:6px;
+				.bdr2();
+				border: solid 1px #071c31;
+			}
+			i{
+				.f30();
+				line-height:40px;
+			}
+			q{
+				.pos(a);
+				top:-10px;
+				left:42px;
+				.f16();
+				color:#168ecb;
+			}
+			&:hover,&.selecded{
+				span{border: solid 1px #168ecb;}
+				i{color:#168ecb;}
+				a{color:#168ecb;}
+			}
+		}
+	}
+}
+.jcb-fbody{display:none;}
+}
+@media (min-width:993px) {
+	.jcb-mbfbody{display:none;}
+	.jcb-fbody{
+		display:block;
+		text-align:center;
+		margin:-35px auto 0;
+		width:570px;
+		h1{
+			img{
+				.pos(a);
+				top:-45px;
+				left:48.5%;
+				-webkit-transform:translateX(-50%) scale(.5);
+				-moz-transform:translateX(-50%) scale(.5);
+				-ms-transform:translateX(-50%) scale(.5);
+				-o-transform:translateX(-50%) scale(.5);
+				transform:translateX(-50%) scale(.5);
+				&:hover{
+					-webkit-transform:translateX(-50%) scale(.55);
+					-moz-transform:translateX(-50%) scale(.55);
+					-ms-transform:translateX(-50%) scale(.55);
+					-o-transform:translateX(-50%) scale(.55);
+					transform:translateX(-50%) scale(.55);
+				}
+			}
+		}
+		h3{.f20();color:@c0;}
+		h4{.f16();color:@c0;}
+		p{
+			padding:15px 0 0 0;
+			a{
+				display:block;
+				width:148px;
+				margin:0 auto;
+				line-height:40px;
+				background-color:#fd724b;
+				color:@cw;
+				.f18();
+				.bdr(20px);
+			}
+		}
+		.jcb-run{
+			margin:0 auto;
+			.cf();
+			div{
+				.left();
+				.pos(r);
+				img{
+					width:100%;
+					height:auto;
+				}
+				p{
+					.pos(a);
+					left:10px;
+					padding:0;
+					top:50px;
+					.cf();
+					em{
+					display:inline-block;
+					border-top:15px dashed transparent;
+					border-bottom:15px dashed transparent;
+					border-left:25px solid #a1d26e;
+					.left();
+					opacity:.6;
+					}
+					span{
+						padding:0 10px;
+						.left();
+						.pos(r);
+						i{
+							.pos(a);
+							top:50%;
+							left:-4px;
+							margin-top:-5px;
+							width:9px;
+							height:9px;
+							background: #a1d26e;
+							.bdr(50%);
+						}
+						line-height:16px;
+						color:#46bdce;
+					}
+					&:hover,&.selector{
+						em{
+							opacity:1;
+							border-top:16px dashed transparent;
+							border-bottom:16px dashed transparent;
+							border-left:27px solid #a1d26e;
+						}
+					}
+				}
+				&.jcbtitle1{width:32.05%;}
+				&.jcbtitle2{
+					width:37.28%;
+					p{
+						left:12px;
+						em{
+						border-left:0;
+						border-right:25px solid #6bcffd;
+						}
+						span{i{background: #6bcffd;}}
+						&:nth-child(3){
+							left:auto;
+							right:6px;
+							em{border-right:25px solid #fd724b;}
+							span{
+								i{
+									background: #fd724b;
+									left:auto;
+									right:-4px;
+								}
+							}
+							&:hover,&.selector{em{border-right:27px solid #fd724b;}}
+						}
+						&:hover,&.selector{em{border-right:27px solid #6bcffd;}}
+					}
+				}
+				&.jcbtitle3{
+					width:30.57%;
+					p{
+						left:42px;
+						top:12px;
+						em{border-left:25px solid #1ebba7;}
+						span{i{background: #1db6a9;}}
+						&:hover,&.selector{em{border-left:27px solid #1ebba7;}}
+					}
+				}
+			}
+
+		}
+		article{
+			width:450px;
+			height:228px;
+			background: url(../images/jcbh1_bg.png) 0 0 no-repeat;
+			.bg(cover);
+			margin:-90px auto 0;
+			.pos(r);
+			z-index:2;
+		}
+		.jcbslogan{
+			margin-top:-40px;
+			q{
+				display:block;
+				width:200px;
+				height:3px;
+				background: #fff;
+				margin:14px auto 16px;
+				.pos(r);
+				i{
+					display:block;
+					background: #fff;
+					width:12px;
+					height:12px;
+					.bdr(50%);
+					.pos(a);
+					top:-6px;
+					left:50%;
+					margin-left:-6px;
+				}
+			}
+		}
+	}
+}
+@media (min-width:1440px) {
+	.jcb-fbody{
+		width:668px;
+		margin:-50px auto 0;
+		h1{
+			img{
+				.pos(a);
+				top:-45px;
+				left:50%;
+				-webkit-transform:translateX(-50%) scale(.65);
+				-moz-transform:translateX(-50%) scale(.65);
+				-ms-transform:translateX(-50%) scale(.65);
+				-o-transform:translateX(-50%) scale(.65);
+				transform:translateX(-50%) scale(.65);
+				&:hover{
+					-webkit-transform:translateX(-50%) scale(.7);
+					-moz-transform:translateX(-50%) scale(.7);
+					-ms-transform:translateX(-50%) scale(.7);
+					-o-transform:translateX(-50%) scale(.7);
+					transform:translateX(-50%) scale(.7);
+				}
+			}
+		}
+		h3{.f24();}
+		h4{.f20();}
+		.jcb-run{
+			div{
+				p{
+					left:10px;
+					top:58px;
+					em{
+					border-top:20px dashed transparent;
+					border-bottom:20px dashed transparent;
+					border-left:33px solid #a1d26e;
+					}
+					span{
+						padding:0 10px;
+						i{
+							left:-4px;
+							margin-top:-5px;
+							width:9px;
+							height:9px;
+						}
+						line-height:20px;
+						.f16();
+					}
+					&:hover{
+						em{
+							border-top:21px dashed transparent;
+							border-bottom:21px dashed transparent;
+							border-left:35px solid #a1d26e;
+						}
+					}
+				}
+				&.jcbtitle2{
+					p{
+						left:10px;
+						em{border-right:33px solid #6bcffd;}
+						&:nth-child(3){
+							right:6px;
+							em{border-right:33px solid #fd724b;}
+							&:hover{em{border-right:35px solid #fd724b;}}
+						}
+						&:hover{
+							em{
+								border-right:35px solid #6bcffd;
+								border-left:0;
+							}
+						}
+					}
+				}
+				&.jcbtitle3{
+					p{
+						left:46px;
+						em{border-left:33px solid #1ebba7;}
+						&:hover{em{border-left:35px solid #1ebba7;}}
+					}
+				}
+			}
+
+		}
+		article{
+			width:544px;
+			height:275px;
+		}
+	}
+}
+
+
+
+/* 首页内容*/
+
+/* 赛事介绍 */
+.jcbh-intro{
+	width:1200px;
+	margin:0 auto;
+	.cf();
+	padding-bottom:40px;
+	section{
+		width:535px;
+		padding-bottom:40px;
+		height:300px;
+		.pos(r);
+		float:left;
+		i{
+			.pos(a);
+			top:50%;
+			left:50%;
+			font-size:50px;
+			margin-left:-25px;
+			margin-top:-40px;
+			color:@cw;
+		}
+	}
+	dl{
+		overflow:hidden;
+		padding-left:40px;
+		font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+		h2{.f30(); line-height:80px;}
+		dd{
+			.f16();
+			color:@c6;
+			line-height:30px;
+			p{
+				height:140px;
+				overflow:hidden;
+			}
+			a{
+				display:block;
+				width:160px;
+				height:50px;
+				text-align:center;
+				line-height:50px;
+				color:@cw;
+				background-color:#28a8f1;
+			}
+		}
+	}
+}
+
+/* 赛事速递 */
+.jcbh-express{
+	.cf();
+	width:50%;
+	float:left;
+	height:500px;
+	box-sizing:border-box;
+	padding-right:20px;
+	padding-top:40px;
+	background-image:url(../images/jcbhexpress.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	article{
+		float:right;
+		padding-right:20px;
+		width:500px;
+		h2{
+			color:@cw;
+			.f30();
+			line-height:50px;
+			padding-bottom:10px;
+			span{
+				float:right;
+				a{color:@cw; .f14();}
+			}
+		}
+		ul{
+			.cf();
+		}
+		li{
+			width:100%;
+			height:100px;
+			filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#44ffffff',endColorstr='#44ffffff');/* IE */
+  			background-color:rgba(255,255,255,.8);/* Firefox */
+			.pos(r);
+			padding-left:170px;
+			padding-right:20px;
+			box-sizing:border-box;
+			margin-bottom:20px;
+			img{
+				.pos(a);
+				top:0;
+				left:0;
+				width:150px;
+				height:100px;
+			}
+			h3{
+				.f18();
+				line-height:40px;
+				color:@c3;
+				overflow:hidden;
+		        white-space:nowrap;
+		        text-overflow:ellipsis;
+			}
+			p{
+				.f14();
+				color:@c6;
+				overflow:hidden;
+		        display:-webkit-box;
+		        word-break:break-all;
+		        -webkit-line-clamp:2;
+		        -webkit-box-orient:vertical;
+		        height:45px;
+			}
+		}
+	}
+}
+/* 比赛日程 */
+.jcbh-schedule{
+	.cf();
+	overflow:hidden;
+	height:500px;
+	background-image:url(../images/jcbhschedule.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	article{
+		float:left;
+		padding:40px 0 0 40px;
+		width:400px;
+		h2{
+			color:@cw;
+			.f30();
+			line-height:50px;
+			padding-bottom:30px;
+		}
+		section{
+			height:240px;
+			border-left:dashed 2px @c0;
+			.pos(r);
+		}
+		ul{
+			.cf();
+			.pos(a);
+			left:1px;
+			top:-10px;
+			li{	
+				height:80px;
+				p{
+					color:@c0;
+					.f14();
+					span{
+						display:inline-block;
+						padding:0 10px;
+						color:#ef6b80;
+						background-color:@c0;
+						margin:0 5px 0 10px;
+					}
+				}
+				h3{
+					padding-left:28px;
+					color:@cw;
+					.f16();
+					line-height:40px;
+					width:100%;
+					box-sizing:border-box;
+					.ellipsis();
+				}
+			}
+		}
+	}
+}
+/* 往届获奖选手风采 */
+.jcbh-player{
+	padding:50px 0;
+	width:1200px;
+	margin:0 auto;
+	.cf();
+	.jcbhp-ttl{
+		.cf();
+		width:100%;
+		border-bottom:solid 2px #28a8f1;
+		h2{
+			.f24();
+			float:left;
+			padding-right:30px;
+		}
+		ul{
+			overflow:hidden;
+		}
+		li{
+			float:left;
+			width:120px;
+			height:45px;
+			line-height:45px;
+			.f20();
+			text-align:center;
+			margin-right:10px;
+			a{
+				color:@c6;
+			}
+			&:hover,
+			&.selected{
+				background-color:#28a8f1;
+				a{color:@cw;}
+			}
+		}
+	}
+	.ctn{
+		.cf();
+		section{
+			.cf();
+			display:none;
+			&:first-child{
+				display:block;
+			}
+		}
+		ul{
+			.cf();
+			padding:30px 0;
+		}
+		li{
+			width:33.33%;
+			float:left;
+			.pos(r);
+			padding-left:80px;
+			box-sizing:border-box;
+			background-color:#f5f5f5;
+			border:solid 3px #f5f5f5;
+			img{ float:right;}
+			i{
+				.pos(a);
+				right:186px;
+				top:35px;
+				.f20();
+				color:#f5f5f5;
+			}
+			span{
+				.pos(a);
+				left:15px;
+				top:20px;
+				width:55px;
+				height:55px;
+				display:block;
+				border-right:solid 1px @cd;
+				strong{
+					.f18();
+					display:block;
+					color:#28a8f1;
+				}
+			}
+			h3{
+				padding-top:15px;
+				color:@c9;
+				.f14();
+				strong{
+					.f20();
+					display:block;
+					color:@c3;
+				}
+			}
+			&:hover{
+				border:solid 3px #f77b7c;
+			}
+		}
+		li:first-child{
+			&:hover{
+				border:solid 3px #ffd160;
+			}
+		}
+		li:last-child{
+			&:hover{
+				border:solid 3px #65dfce;
+			}
+		}
+		dl{
+			.cf();
+			background-color:#acd279;
+			color:@cw;
+			h2{
+				font-size:45px;
+				padding-bottom:20px;
+			}
+			p{
+				.f16();
+				line-height:30px;
+			}
+		}
+		dt{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+			padding:20px;
+		}
+		dd{
+			overflow:hidden;
+			img{
+				width:100%;
+			}
+		}
+	}
+	
+}
+// 走进高校的开始
+.jcbh-school{
+	width: 1200px;
+	height:260px;
+	padding:50px 0;
+	overflow: hidden;
+	position: relative;
+	margin:0 auto;
+	h3{
+		line-height: 100px;
+		
+		padding-left: 5px;
+		font-size: 24px;
+	}
+	ul{
+		width: 9999px;
+		position: absolute;
+		left:0;
+		top:60px;
+		.cf();
+		text-align: center;
+		li{
+			width: 133px;
+			height: 247px;
+			background: #f5f5f5;
+			position: relative;
+			&.selected{
+				color:#28a8f1;
+				span{
+					color:#28a8f1;
+				}
+				ins{
+					display: block;
+				}
+			}
+			span{
+				color: @c9;
+			}
+		}
+		li:nth-child(even){
+			background: #ccc;
+		}
+	}
+	li{
+		float: left;
+		font-size: 0;
+	}
+	ins{
+		position: absolute;
+		top:0;
+		left:50%;
+		margin-left: -8px;
+		.triangle(bottom,@w:8px,@c:#28a8f1);
+		display: none;
+	}
+	p{
+		padding-top: 44px;
+		font-size: 18px;
+		span{
+			font-size: 14px;
+		}
+	}
+	section{
+		position: relative;
+		top:28px;
+		left:50%;
+		margin-left: -540px;
+		ol{
+			width: 2267px;
+			height: 14px;
+			background: #e4e0e0;
+			border-radius: 7px;
+			position: relative;
+			li{
+			width: 17px;
+			height: 17px;
+			margin-right:109px; 
+			margin-top: -5px;
+			border-radius: 50%;
+			border:3px solid #fff;
+			background: #af9fa1;
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+				&.current{
+					background: #28a8f1;
+				}
+			}
+			li:last-child{
+				margin-right: 0;
+			}
+		}
+		
+	}
+}
+/* 往届回顾 */
+.jcbh-review{
+	.cf();
+	margin-bottom:40px;
+	background-color:#f5f5f5;
+	dl{
+		width:1200px;
+		margin:0 auto;
+		padding:20px 0;
+	}
+	dt{
+		width:230px;
+		float:left;
+		h2{
+			.f24();
+			line-height:50px;
+			padding-right:20px;
+		}
+		p{
+			.f14();
+		}
+	}
+	dd{
+		overflow:hidden;
+		img{
+			width: 225px;
+			height: 150px;
+		}
+		a{
+			width:25%;
+			display:inline-block;
+			text-align:right;
+		}
+	}
+	
+	
+}
+
+/*大赛评委*/
+.jcbh-judge{
+	width: 1200px;
+	.cf();
+	margin:0 auto;
+	padding:50px 0;
+	h3{
+		height: 45px;
+		line-height: 45px;
+		.f24();
+		border-bottom:2px solid #28a8f1;
+	}
+	a{
+		float: right;
+		.f14();
+	}
+	ul{
+		width: 100%;
+		.cf();
+		margin:0 auto;
+	}
+    li{
+			width: 186px;
+			height: 260px;
+			float: left;
+			text-align: center;
+            border:1px solid @cc;
+            margin:30px 14px 30px 0%;
+            position: relative;
+            &:last-child{margin-right: 0px!important;}
+            a{
+				display: block;
+				height: 260px;
+                width: 186px;
+                overflow: hidden;
+
+				img{
+					width: 100%;
+				}
+			}
+		
+			article{
+				width: 92%;
+				position: absolute;
+				display: block;
+				bottom:-33px;
+				left:0;
+				text-align: left;
+				padding:40px 4% 0px;
+				background: url(../images/jcbbg.png) no-repeat;
+				height: 108px;
+				em{
+					.f20();
+					height: 40px; 
+					font-weight: bold;
+					width: 100%;
+				}
+				span{
+					display: block;
+					.f12();
+				}
+			}
+		}
+
+}
+
+@media(max-width:768px){
+			.jcbh-judge{
+				width: 100%;
+				display: block;
+			ul{
+				li{
+				clear: both;
+				width: 100%;
+				em{.f20();}
+				span{font-size: 15px;}
+			}
+			}
+		}
+	}

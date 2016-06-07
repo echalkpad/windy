@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130110715321.png"><div class="cont"><h2>郭著名</h2><em>大型证券公司投资银行部业务·副总裁</em><span>上海大学工商管理硕士、注册会计师、非执业律师、证券从业资格、注册税务师、注册资产评估师。</span></div></li></ul><div class="jcb_content">
+<h5>工作单位及职务：</h5>
+<p>某大型券商直投公司&middot;副总裁</p>
+<h5>专业特长概述：</h5>
+<p>就职于投资机构主要负责跟踪私募股权投资、产业投资基金等业内政策；挖掘优质投资项目，负责企业股权直接投资业务项目选择、评估、分析及项目管理工作，编制和调整；出具投资价值分析报告，负责与直接投资业务相关的文件起草，材料制作等。曾就职于大型的证券公司投资银行部主要负责新项目开发、尽职调查并辅导推荐上市，协调会计师、律师等中介机构的工作，反馈监管层的问题等工作，曾在安永华明会计师事务所从事五年的审计工作，具有丰富的审计实践经验，主要负责制定审计计划和流程，完成各项审计工作并完成出具审计报告。</p>
+<h5>职称及职业资格：</h5>
+<p>准保荐代表人、注册会计师、律师、注册税务师、注册资产评估师。</p>
+<h5>学位与证书：</h5>
+<p>上海大学旅游管理专业硕士研究生</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

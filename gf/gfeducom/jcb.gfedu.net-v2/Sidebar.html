@@ -1,0 +1,212 @@
+<!--Sidebar Start-->
+<style>
+    .jcbrside .jcbenroll{
+        width: 300px;
+        .cf();
+        margin-bottom: 35px;
+        border:1px solid #ddd;
+         -webkit-box-shadow:0 0 5px #ddd;  
+  -moz-box-shadow:0 0 5px #ddd;  
+  box-shadow:0 0 5px #ddd;
+  padding:30px 20px 10px;
+  box-sizing:border-box;
+    }
+    .jcbrside .jcbenroll h2{font-size: 18px;color: #b41a34; font-weight: bold;}
+    .jcbrside .jcbenroll p{margin-bottom: 20px;position: relative; }
+    .jcbrside .jcbenroll p input{width: 100%; background: #f8f8f8;}
+    .jcbrside  .jcbbttn{background: #b41a34!important; border-radius: 5px;}
+    .jcbrside .jcbenroll a{text-align: center;}
+    .zuce{padding-left: 25%;}
+    .jcbrside .jcbenroll p i{position: absolute; right:10px; top:11px;}
+
+
+#mode{
+     width:100%; 
+     height:100%; 
+     background-color:rgba(0,0,0,0.4);
+      position:fixed;
+      left:0;
+      top:0;
+     z-index: 200;
+     box-sizing: border-box;
+     display: none;
+
+    }
+.EP_login,#intro,#reset{
+     box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+     background-color:#fff;
+     position:fixed; 
+    left:50%; top:50%;
+    display:block;
+    width: 400px;
+    height: 230px;
+    padding:30px;
+    z-index: 100000;
+    box-sizing:border-box;
+    margin-left: -250px;
+    margin-top: -50px;
+    }
+.EP_login,#intro,#reset{display: none;}
+    .EP_login p{
+        width: 100%;
+        height: 60px;
+        border-color:@cc;
+        clear: both;
+        input{width: 100%;outline: none}
+    } 
+    #EP_code{
+        width: 50%; 
+     box-sizing:border-box;
+    }
+    #EP_get{
+        background: #b41a34;
+          box-sizing:border-box; 
+    }
+     .EP_login .next{padding-left: 55px;}
+     .EP_login .next input{background: #b41a34;}
+     .intro span{display: block;margin-bottom: 10px;}
+     .nextwo{text-align: center;}
+     .nextwo input{background:#b41a34;}
+#reset p span{width: 115px;display: inline-block;float: left; line-height: 40px;}
+
+</style>
+<script>
+function winWidth(){
+    return window.innerWidth||document.documentElement.clientWidth;
+    }
+function winHeight(){
+    return window.innerHeight||document.documentElement.clientHeight;
+    }
+
+
+function passW(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+        var Nextone= document.getElementById("intro");
+        var rsubmit= document.getElementById("reset");
+        Nextone.style.display="none"
+        rsubmit.style.display="none"
+        mask.style.display="block";
+        logIn.style.display="block";
+
+        var bw=winWidth();
+        var bh=winHeight();
+        logIn.style.left=bw/2-(400/2)+"px";
+        logIn.style.top=bh/2-(230/2)+"px";
+
+    }
+    link_log.onclick=function(){
+            popup(logIn);
+            }
+
+function pop0(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+        var Nextone= document.getElementById("intro");
+        mask.style.display="block";
+        logIn.style.display="none";
+        Nextone.style.display="block"
+
+    }
+    function pop2(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+        var Nextone= document.getElementById("intro");
+        var rsubmit= document.getElementById("reset");
+        mask.style.display="block";
+        logIn.style.display="none";
+        Nextone.style.display="none"
+        rsubmit.style.display="block"
+
+    }
+    function pop3(){
+    var mask= document.getElementById("mode");
+        var logIn= document.getElementById("EP_login");
+        var Nextone= document.getElementById("intro");
+        var rsubmit= document.getElementById("reset");
+        mask.style.display="none";
+        logIn.style.display="none";
+        Nextone.style.display="none"
+        rsubmit.style.display="none"
+
+    }
+
+</script>
+
+<!--登陆框-->
+<div id="mode"></div>
+<div id="EP_login" class="EP_login">
+<p>账户名：<input type="text" placeholder="请填写注册手机号"/></p>
+<p>验证码：<input type="text" placeholder="验证码" id="EP_code" /><input type="button" value="获取验证码" id="EP_get"></p>
+<p class="next"><input type="button" value="下一步"  onclick="pop0()"></p>
+</div>
+
+
+<!-- <div id="mode2"></div> -->
+<div class="intro" id="intro">
+    <span>验证方式：手机验证</span>
+    <span>你的手机号码：<i></i></span>
+    <span>验证码：</span>
+    <p>每天只能获取5次验证码。当前号码已不用/丢失，或无法收到验证码？<a href="" style="color:#49b6bd;text-decoration:underline">联系技术支持</a></p><br/>
+    <p class="nextwo"><input type="button" value="下一步"  onclick="pop2()"></p>
+</div>
+
+<!-- <div id="mode3"></div> -->
+<div class="EP_login" id="reset">
+    <p><span>新登录密码：</span><input type="text" placeholder=""/></p>
+    <p><span>再次确认新密码：</span><input type="text" placeholder=""/></p>
+    <p class="nextwo"><input type="button" value="提交"  onclick="pop3()"></p>
+</div>
+
+
+
+<div class="jcbrside">
+<!--登录入口-->
+    <div class="jcbenroll" id="jcbenroll">
+        <h2>报名入口</h2><br/>
+        <p><input type="text" placeholder="用户名"/><i class="icon-user">&#xe900;</i></p>
+        <p><input type="text" placeholder="密码"/><i class="icon-lock">&#xe901;</i></p>
+        <p><input type="button" value="登录" class="jcbbttn"/></p>
+        <p class="zuce"><a href="">立即注册</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="" onclick="passW()">忘记密码</a></p>
+    </div>
+    <!--视频-->
+    <div class="jrs-vido">
+    <script src="http://p.bokecc.com/player?vid=9BAD8C358BDE50329C33DC5901307461&siteid=206A8A63A6A2557D&autoStart=false&width=100%&height=100%&playerid=B1643C314F1B7BBC&playertype=1" type="text/javascript"></script>
+    </div>
+    <!--比赛日程-->
+    <div class="jrs-day">
+    <h2><a href="">比赛日程<i class="icon-gfright">&#xe0c5;</i></a></h2>
+    <dl>
+    </dl>
+    <ul>
+        <li class="selected"><span>3-15<br>4-15</span><small>报名</small>错过，只待下一个春秋，以遇你我！</li>
+        <li><span style="line-height:16px">4-18<br>4-24</span><small>初赛</small>谁从万千中杀出？谁主沉浮？</li>
+        <li><span>4-29<br>5-13</span><small>复赛</small>踏万千而出，奔巅峰而去！</li>
+        <li><span style="background:#d098f8">6-3</span><small>决赛</small>今次之战，谁将加冕称王，敬请期待!</li>
+        <li><span style="line-height:30px;background:#00B0F0">7-15</span><small>精密密训营</small>才华横溢，领袖精英豪迈，你值得被赞赏！</li>
+    </ul>
+    </div>
+    <!--前线报道-->
+    <div class="jrs-report">
+        <h2><a href="/report">前线报道<i class="icon-gfright">&#xe0c5;</i></a></h2>
+<ul>
+	<li><a href="/report/25308.shtml" title="思维碰撞?头脑激荡 2015金程杯全国大学生会计案例大赛终极PK 深圳大学金程观光队夺魁"><i class="icon-angle-right">&#xe0c1;</i>思维碰撞?头脑激荡 2015金程杯全国大学生会计案例大赛终极PK 深圳大学金程观光队夺魁</a></li>
+	<li><a href="/report/25175.shtml" title="决赛终极对决——2015金程杯全国大学生会计案例大赛"><i class="icon-angle-right">&#xe0c1;</i>决赛终极对决——2015金程杯全国大学生会计案例大赛</a></li>
+	<li><a href="/report/24954.shtml" title="决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛"><i class="icon-angle-right">&#xe0c1;</i>决赛晋级“英雄榜”------2015年“金程杯”全国大学生会计案例大赛</a></li>
+	<li><a href="/report/24949.shtml" title="复赛阅卷——2015“金程杯”会计案例分析大赛赛事战报"><i class="icon-angle-right">&#xe0c1;</i>复赛阅卷——2015“金程杯”会计案例分析大赛赛事战报</a></li>
+	<li><a href="/report/24855.shtml" title="2015年“金程杯”全国大学生会计案例大赛复赛截止通知"><i class="icon-angle-right">&#xe0c1;</i>2015年“金程杯”全国大学生会计案例大赛复赛截止通知</a></li>
+</ul>
+
+    </div>
+ </div>
+<!--Sidebar End-->
+
+<!-- 临时CSS -->
+<style type="text/css">
+    .jrs-report li a {
+        display:block;
+    }
+    .jrs-vido {
+        height:190px;
+    }
+</style>

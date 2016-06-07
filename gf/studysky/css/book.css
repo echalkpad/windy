@@ -1,0 +1,163 @@
+/* 知识点 start*/
+.book_content{
+	padding-top:30px;
+	overflow:hidden;
+}
+.book_list{
+	width:690px;
+	float:left;
+	font-size:14px;
+}
+.book_list li{
+	margin-bottom:20px;
+}
+.book_list li a:hover{
+	background:#28ada0;
+}
+.book_list li a:hover section div{
+	background: #fff;
+	color:#28ada0;
+}
+.book_list li a:hover section span{
+	background: #fff;
+	border: 2px solid #28ada0;
+	color:#28ada0;
+}
+.book_list li a:hover article h4{color:#fff;}
+.book_list li a:hover p q{
+	border-left:1px solid #fff;
+	color:#fff;
+}
+.book_list li  a {
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 14px 20px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.03),0 1px 0 rgba(0,0,0,.03);
+    overflow: hidden;
+}
+.book_list section,.book_list article,.book_list p{
+	position: relative;
+    min-height: 1px;
+    padding:0 15px;
+    float: left;
+    box-sizing:border-box;
+}
+.book_list section{width: 16.66666667%;}
+.book_list section div{
+	background-color: #eee;
+    color: #ccc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    position: relative;
+}
+.book_list section span{
+	background-color: #eee;
+	font-size: 10px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.book_list .progress div{
+    background-color: #28ada0;
+    color: #fff;
+}
+.book_list .progress span{
+    background-color: #28ada0;
+    color: hsla(0,0%,100%,.5);
+}
+.book_list article{width: 58.33333333%;}
+.book_list article h4{
+	color: #28ada0;
+	font-family: inherit;
+	font-size: 17px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.book_list p{width: 25%;}
+.book_list p q{
+	display:block;
+	border-left: 1px solid #e2e2e2;
+    color: #9599a4;
+    padding-left:40px;
+	color: #9599a4;
+}
+.book_list p span{
+	display:block;
+	line-height:25px;
+}
+/*右侧栏*/
+.proaside{
+	width:210px;
+	float:right;
+	height:331px;
+}
+.proaside section a{
+	display: block;
+    font-size: 24px;
+    padding: 26px;
+    margin-bottom: 23px;
+    color: #fff;
+    background-color: #28ada0;
+    border-color: #28ada0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: arial;
+}
+.proaside section a:hover{
+	background: #208A80;
+}
+.proaside article{
+	padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.03),0 1px 0 rgba(0,0,0,.03);
+    text-align: center;
+}
+.proaside article i{
+	margin-bottom: 10px;
+	display:block;
+    color: #28ada0;
+    font-size:4em;
+}
+.proaside article p{
+    margin-bottom: 20px;
+    color: #777a83;
+    font-family: arial;
+    font-size: 14px;
+    line-height:normal;
+}
+.proaside article a{
+	display: block;
+    margin-bottom: 5px;
+    color: #28ada0;
+    border:1px solid #28ada0;
+    padding: 6px 20px;
+    border-radius: 3px;
+    font-size:14px;
+}
+.proaside article a:hover{
+	background: #28ADA0;
+	color:#fff;
+}
+.proaside small{
+	font-size: 9pt;
+    display: block;
+    color: #e97692;
+    text-align: center;
+}
+/* 知识点 end*/

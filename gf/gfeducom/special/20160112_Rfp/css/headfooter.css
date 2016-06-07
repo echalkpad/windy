@@ -1,0 +1,50 @@
+@charset utf-8;
+/*公共样式*/*{font-family:宋体;font-size:12px;color:#666;margin:0;padding:0;border-top-width:0;border-right-width:0;border-bottom-width:0;border-left-width:0;}
+ul,li,ol,dl,h1,h2,h3,h4,h5,h6{list-style-type:none;}
+.clear{clear:both;}
+/**//*头部样式*/.top{background-image:url(../images/headerbg.jpg);background-repeat:repeat-x;width:100%;height:25px;}
+.headNav,.conter{width:980px;margin-right:auto;margin-left:auto;margin-bottom:10px;}
+.login{clear:both;width:980px;margin-right:auto;margin-left:auto;}
+.use{height:25px;line-height:25px;}
+.from{background-color:#FFF;line-height:15px;border:1px solid #CCC;height:15px;margin-top:5px;margin-bottom:5px;width:100px;}
+.use li{color:#000;float:left;margin-right:5px;margin-left:5px;}
+.use img{margin-top:3px;margin-bottom:3px;}
+.use span{font-size:18px;color:red;font-family:Arial, Helvetica, sans-serif;}
+.use p{float:right;}
+.title{padding-top:20px;}
+.logo{float:left;height:79px;width:198px;margin-right:30px;}
+.siteNav{float:left;width:540px;}
+.siteNav ol{margin-top:10px;height:18px;}
+.siteNav li{float:left;margin-right:5px;margin-left:5px;color:#000;}
+.siteNav span{font-weight:700;color:#000;}
+.search{float:right;width:200px;}
+.value{margin-top:10px;float:right;}
+.schFom{background-color:#FFF;line-height:24px;height:24px;border:2px solid #DD9546;float:left;padding-left:2px;width:134px;}
+.schBtn{background-color:#DD9546;line-height:28px;height:28px;color:#FFF;width:60px;}
+.nav{height:36px;margin-top:10px;}
+.nav li{float:left;line-height:36px;background-color:#257eb7;}
+/**//*底部样式*/.bottom{background-color:#257EB7;padding-top:30px;padding-bottom:30px;width:100%;margin-right:auto;margin-left:auto;}
+.botton_left{ margin-left:185px; height:100%}
+.bottom ul{float:left; margin-left:120px;}
+.bottom li{line-height:24px;color:#FFF; text-align:center;height:24px;}
+.bottom li a{color:#FFF; text-align:center;text-decoration:none;}
+.bottom li a:hover{color:#DD9546;}
+/**//*链接样式*/.nav a{font-size:14px;color:#FFF;text-decoration:none;padding-right:21.5px;padding-left:21.5px;display:block;}
+.capLsLe a {
+	text-decoration: none;
+}
+.capLsLe a:hover {
+	color: #257EB7;
+}
+
+
+.navCont a{padding-right:30px;}
+.nav a:hover{background-color:#0f5887;}
+.siteNav a{color:#000;text-decoration:none;}
+.siteNav a:hover{color:#257EB7;text-decoration:underline;}
+/**/
+
+#dibu{ width:980px; margin:0 auto; margin-top:10px}	
+#dibu p{ width:980px; font-size:12px; height:30px; line-height:30px; margin:0;}
+#dibu p a{ font-size:12px; text-decoration:none; margin-left:10px; margin-right:10px}
+#dibu p a:hover{color: #257EB7; }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>第三届“金程杯”全国大学生职业规划大赛复赛正式拉开序幕</h3>
+            <span>时间：2014/4/18 14:50:48</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div style="text-align: center; "><span style="font-size: small; "><span style="line-height: 26px; "><b>金程教育预祝各位选手比赛成功</b></span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; 2014年4月20日，由金程教育主办的第三届&ldquo;金程杯&rdquo;全国大学生职业规划大赛正式进入复赛环节。本次大赛吸引了来自全国50余所高校的近千名学生参加，经过初赛的严格角逐，我们恭喜来自全国各地高校的80名优秀选手晋级本次大赛的复赛环节。</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; 本次复赛从4月20日开始，至4月25日结束，共为期5天，大赛的复赛试题将通过邮箱发送到各个晋级选手的邮箱中，请注意查收，详情请继续关注大赛官网、微信及QQ群。复赛结果将于4月30日于大赛官网公布，组委会工作人员将及时联系晋级选手准备决赛各项事宜，届时请特别留意大赛官网公告和手机和邮箱讯息。</span></span><span style="font-size: small; "><span style="line-height: 26px; "><br />
+</span></span>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; 每个人都可以有工作，但却不一定拥有事业。无论是即将走出校门踏入职场，还是工作多年后处在职业的转折点，命运总是一次又一次把人推到职业选择的十字路口，如果不能主动地规划自己、做出合适的选择，就只能等待别人来裁决你的命运。 很多时候，不是你不优秀，而是站在了错误的位置。面对职业选择，如何从容应对，占据主动权？&nbsp;</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; 本次&ldquo;金程杯&rdquo;全国大学生职业规划大赛复赛着眼于帮助参赛选手更好地剖析个人职业规划，通过对于目标行业、职位的宏观背景结合个人素质、成长计划等角度的发展，搭建出个人职业规划模型，并通过对于所选职位的全方位的宏观分析、行业分析等测试参赛选手逻辑能力、写作水平、资料挖掘等方面的能力。</span></span></div>
+<div><b><span style="font-size: small; "><span style="line-height: 26px; ">复赛试题公布：<br />
+</span></span></b><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; 假设目前你正处于毕业前夕，站在职业选择的十字路口。四面都是路，尽管似乎拥有很多机会，但选择只是一个节点，如果总是站在路口不走出去，势必会被来自四面八方的车撞到。此时，你会如何进行职业选择呢？请以自身为例，写出你所期望从事的工作（具体职位，例如：公司财务会计、证券公司行业分析师、外汇交易员等），并分析选择该工作的原因。可从以下几方面着手分析（黑色加粗部分为分析报告中必须的模块）：</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">1、自身发展目标</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">2、当前宏观经济形势</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">3、自身专业对口度</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">4、期望从事行业现状及前景</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">5、期望从事工作现状及前景</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">6、工作所需技能</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">7、工作附加值</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">8、招聘途径的选择</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">9、公司背景及市场地位</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">10、公司发展前景</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">11、公司待遇</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">12、招聘条件及个人竞争力</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">13、何种技能需要提升</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">14、&hellip;&hellip;</span></span></div>
+<div><b><span style="font-size: small; "><span style="line-height: 26px; ">参考案例：<br />
+</span></span></b><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp; &nbsp; A同学是一名金融学毕业生，未来期望职业方向是分析与投资管理，例如：基金经理。通过对自身发展目标、专业特长、国内外宏观环境、我国金融行业发展现状、各类型金融机构特点及发展前景、期望工作现状及发展前景、招聘职位及条件等进行分析后确定所要从事的工作范围和公司类型，随后通过网络等方式选择适合自己的公司及职位。</span></span></div>
+<div><b><span style="font-size: small; "><span style="line-height: 26px; ">【复赛要求】</span></span></b></div>
+<div><b><span style="font-size: small; "><span style="line-height: 26px; ">案例分析报告提交时间： 2014年4月25日中午12点前提交案例分析至指定邮箱&nbsp;</span></span><span style="line-height: 26px; font-size: small; ">gfc@gfedu.net ；</span></b></div>
+<div><b><span style="font-size: small; "><span style="line-height: 26px; ">复赛报告书写要求：</span></span></b></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">1.每位参赛选手需要提交1份word；</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">2.复赛分析报告语言可以任选中文或者英文(采用英文报告的参赛选手伍可获5%的额外加分)；</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">3.报告格式采用正文五号字体，标题四号字体，1.5倍行距；</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">4.发送邮件的主题为：高校名_专业名_选手名字_复赛报告</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">请各晋级复赛的选手及时关注本次大赛官网，进行妥善准备，大赛组委会预祝各位选手取得优异成绩！</span></span></div>
+<div></div>
+<b><span style="font-size: small; "><span style="line-height: 26px; ">如有疑问可询问大赛组委会 &nbsp;</span></span></b><span style="font-size: small; "><span style="line-height: 26px; ">&nbsp;</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">技术支持人员QQ：331983852</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">大赛答疑客服QQ：2754866990</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">大赛咨询热线：021-33926711-8377、8177</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">关注金程杯实时信息（微信号：gfedu800）或微博（微博名：金程教育微博），也可及时了解各项赛程信息。</span></span></div>
+<div><span style="font-size: small; "><span style="line-height: 26px; ">祝您在本次大赛中取得好成绩。</span></span></div>
+<div style="text-align: right; "><span style="font-size: small; "><span style="line-height: 26px; "><img src="http://manager.gfedu.net/GfeduFile/Folder23/2.jpg" width="360" height="361" alt="" /><br />
+&nbsp;&ldquo;金程杯&rdquo;职场好榜样暨全国大学生职业规划大赛</span></span></div>
+<div style="text-align: right; "><span style="font-size: small; "><span style="line-height: 26px; ">大赛组委会</span></span></div>
+<div></div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

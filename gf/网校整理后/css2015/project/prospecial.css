@@ -1,0 +1,272 @@
+/* LESS Document */
+/* 清除浮动 */
+.prospetopttl {
+  background-image: url(../../pic2015/procmatitle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+}
+@media (min-width: 480px) {
+  .prospetopttl {
+    height: 240px;
+  }
+}
+@media (min-width: 640px) {
+  .prospetopttl {
+    height: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .prospetopttl {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .prospetopttl {
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .prospetopttl {
+    height: 600px;
+  }
+}
+.cmapackageinfo {
+  display: none;
+}
+@media (min-width: 768px) {
+  .cmapackageinfo {
+    display: block;
+    background-image: url(../../images2015/proinfobg.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20px;
+    *zoom: 1;
+  }
+  .cmapackageinfo:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .cmapackageinfo h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #262626;
+    line-height: 40px;
+    padding-top: 20px;
+  }
+  .cmapackageinfo h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #a18f69;
+    line-height: 30px;
+  }
+  .cmapackageinfo p {
+    padding: 20px;
+    line-height: 36px;
+    color: #999;
+  }
+}
+@media (min-width: 1200px) {
+  .cmapackageinfo p {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+.cmapackage {
+  background-color: #7abac3;
+  *zoom: 1;
+}
+.cmapackage:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cmapackage .cmacoupon {
+  color: #fff;
+  padding: 20px;
+}
+.cmapackage .cmacoupon h2 {
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.cmapackage .cmacoupon h3 {
+  font-size: 16px;
+  line-height: 60px;
+}
+.cmapackage .cmacoupon p {
+  font-size: 14px;
+}
+.cmapackage .cmacoupon ul {
+  *zoom: 1;
+}
+.cmapackage .cmacoupon ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cmapackage .cmacoupon li {
+  width: 50%;
+  float: left;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.cmapackage .cmacoupon li input {
+  margin-right: 5px;
+}
+.cmapackage .cmacoupon li input[type="button"] {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  background-color: inherit;
+  border: none;
+}
+.cmapackage .cmauserinfo article {
+  width: 100%;
+  height: 460px;
+  box-sizing: border-box;
+  padding-top: 40px;
+  background-image: url(../../pic2015/procmamac.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cmapackage .cmauserinfo h2 {
+  text-align: center;
+  font-size: 18px;
+  color: #33b0c4;
+  line-height: 60px;
+}
+.cmapackage .cmauserinfo ul {
+  width: 280px;
+  margin: 0 auto;
+}
+.cmapackage .cmauserinfo li {
+  padding-bottom: 10px;
+  color: #666;
+}
+.cmapackage .cmauserinfo li span {
+  color: #666;
+}
+.cmapackage .cmauserinfo li input {
+  padding: 5px;
+  width: 200px;
+  display: inline-block;
+}
+.cmapackage .cmauserinfo li.btn {
+  text-align: center;
+  padding-top: 10px;
+}
+.cmapackage .cmauserinfo li.btn input {
+  background-color: #33b0c4;
+  color: #fff;
+  border: none;
+  padding: 0 10px;
+  width: 120px;
+  font-size: 20px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+}
+@media (min-width: 600px) {
+  .cmapackage {
+    padding: 60px 0;
+  }
+  .cmapackage .cmacoupon {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .cmapackage .cmacoupon li {
+    font-size: 16px;
+  }
+  .cmapackage .cmauserinfo {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .cmapackage .cmauserinfo article {
+    width: 100%;
+    height: 480px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    background-image: url(../../pic2015/procmamac.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media (min-width: 1200px) {
+  .cmapackage section {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .cmapackage .cmacoupon,
+  .cmapackage .cmauserinfo {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+  }
+}
+.popbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  padding-top: 100px;
+  top: 0;
+  background-color: rgba(50, 50, 50, 0.7);
+}
+.popbox input[type="button"] {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+}
+.popbox dl {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #fff;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.popbox dt {
+  color: #12b0cb;
+  font-size: 24px;
+  text-align: center;
+  line-height: 35px;
+  padding-bottom: 20px;
+}
+.popbox dt span {
+  font-size: 18px;
+  color: #666;
+  display: block;
+}
+.popbox dd {
+  text-align: center;
+}
+.popbox dd input[type="button"] {
+  width: 180px;
+  background-image: url(../../images2015/proclose.png);
+  background-repeat: no-repeat;
+  background-position: 42px 23px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  background-color: #12b0cb;
+}
+@media (min-width: 768px) {
+  .popbox dl {
+    width: 700px;
+    margin: auto auto;
+  }
+}

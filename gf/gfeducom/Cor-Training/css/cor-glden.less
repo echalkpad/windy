@@ -1,0 +1,47 @@
+@import '../../css/variable.less';
+@import 'common.less';
+.four-gold{
+	margin:0 auto;
+	padding: 30px 10px;
+    margin-top: 30px;
+	.secTabs{
+		ul{.cf();}
+		li{
+			float: left;
+			text-align: center;
+			box-sizing: border-box;
+			width: 25%;
+			img{display: block;}
+			a{
+				display: block;
+
+				span{display: none;}
+			}
+		}
+	}
+}
+@media(min-width:640px){
+
+}
+@media(min-width:768px){
+	.four-gold{}
+}
+@media(min-width:1200px){
+	.four-gold{
+		.lgscreen();
+		.ddl75();
+		padding:0;
+		.secTabs{
+			padding-top: 35px;
+			li{
+				width: 21.87%;
+				margin-right: 50px;
+				border:1px solid;
+				&:last-child{margin-right: 0;}
+				a{
+					span{display: block;}
+				}
+			}
+		}
+	}
+}

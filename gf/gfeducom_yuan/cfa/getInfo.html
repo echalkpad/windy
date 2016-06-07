@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+<link rel="shortcut icon" href="images2015/gfico.ico">
+<title>资料索取</title>
+
+<link rel="stylesheet" type="text/css" href="css/getInfo/getinfor.css">
+<link rel="stylesheet" type="text/css" href="css/getInfo/style.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="../script/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="script/getInfo/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="script/getInfo/page.js"></script>
+<!-- 公用移动侧边栏推出插件 -->
+<script src="../script/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="../script/headfoot.js"></script>
+</head>
+<body>
+<!--手机title start-->
+<nav id="menu"  class="mbnavadd">
+    <h2 class="mb_loginA"><a href=""><img src="../images/sidebarreg.png"  alt=""/>月里飘舞<i class="icon-gfright">&#xe609;</i></a></h2>
+    <ul>
+    <li class="selecded"><a href="#" title="CFA首页">CFA首页</a></li>
+    <li><a href="#" title="考试指南">考试指南</a></li>
+    <li><a href="#" title="课程中心">课程中心</a></li>
+    <li><a href="#" title="学员中心">学员中心</a></li>
+    <li><a href="#" title="学习中心">学习中心</a></li>
+    <li><a href="#" title="学术团队">学术团队</a></li>
+    <li><a href="#" title="经验分享">经验分享</a></li>
+    <li><a href="#" title="职业发展">职业发展</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+<div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+    <article>
+    <h3><a href="javascript:;" id="alogin">登录</a><a href="javascript:;" id="aregister">注册</a></h3>
+    <h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+    <h2><img src="../images/topnavlogo.png" alt="金程教育GOLDEN FUTURE"/><P><strong>400-700-9596</strong>[欢迎电话咨询]</P></h2>
+    </article>
+    </div>
+    <!-- proheader-->
+    <div class="proheader">
+        <div class="protitle">
+        <h1><strong>CFA</strong>PROGRAM<span>在金程，没有考不过的CFA！</span></h1>
+        <p>距离2015年5月16日CFA考试<span>还有：<strong>58</strong>天</span></p>
+        </div>
+        <div class="pro15th"><img src="images/15th.png"  alt="15年CFA领军品牌"/></div>
+    	<div class="prosearch">
+        <input type="text" placeholder="搜索课程"><input type="button" value="&#xe60b;" class="icon-gfsearch">
+        <p><a href="">无忧长线套餐班</a>|<a href="">金牌全景套餐班</a>|<a href="">高效基础套餐班</a>|<a href="">暑假班</a></p>
+        </div>
+    </div>
+    <!-- navbar-->
+    <nav class="navbar">
+    <ul>
+    <li class="selecded"><a href="#" title="CFA首页">CFA首页</a></li>
+    <li><a href="#" title="考试指南">考试指南</a></li>
+    <li><a href="#" title="课程中心">课程中心</a></li>
+    <li><a href="#" title="学员中心">学员中心</a></li>
+    <li><a href="#" title="学习中心">学习中心</a></li>
+    <li><a href="#" title="学术团队">学术团队</a></li>
+    <li><a href="#" title="经验分享">经验分享</a></li>
+    <li><a href="#" title="职业发展">职业发展</a></li>
+    </ul>
+    </nav>
+</div>
+<!-- header end-->
+
+<div class="banner">
+	<div class="banner_inner">
+		<img src="images/getInfo/cfa_text.png">
+			<div class="reg">
+				<h4>CFA备考资料免费领取</h4>
+				<form name="InfoForm" id="InfoForm">
+					<ul>
+						<li class="name">
+							<span>姓名</span><input  name="userName" id="userName"  type="text">
+						</li>
+						<li class="name_tip"><p>请输入姓名</p></li>
+						<li class="phone">
+							<span>手机</span><input type="text" name="userMobile" id="userMobile" type="text" maxlength="11">
+						</li>
+						<li class="phone_tip"><p>手机号码错误</p></li>
+						<li  class="email">
+							<span>邮箱</span><input  name="userMail" id="userMail" type="text" >
+						</li>
+						<li class="email_tip"><p>邮箱格式错误</p></li>
+					</ul>
+					<p id="sub"><input type="button" onclick="AddUser()"  value="立即索取"></p>
+				</form>
+			</div>
+	</div>
+</div>
+
+<input type="hidden" id="refurl"  value=""/>
+<input type="hidden" id="hosturl"  value=""/>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#refurl").val(document.referrer);
+        $("#hosturl").val(window.location.href);
+    });
+    //资料获取
+    function AddUser() {
+        var strzlname = $("#userName").val();
+        var strzltel = $("#userMobile").val();
+        var strzlemail = $("#userMail").val();
+        var strhosturl = $("#hosturl").val();
+        var strrefurl = $("#refurl").val();
+        var strpro = 40;
+        var strwantinfo = "CFA免费资料领取";
+
+
+        if (strzlname == "" || strzlname == null || strzlname == "请输入你的用户名") {
+            $(".reg .name_tip p").css("display", "block");
+            return false;
+        }
+        if (!isMobilePhone(strzltel)) {
+            $(".reg .phone_tip p").css("display", "block");
+            return false;
+        }
+        if (!isEmail(strzlemail)) {
+            $(".reg .email_tip p").css("display", "block");
+            return false;
+        }
+
+        var data = {
+            zlname: strzlname,
+            zltel: strzltel,
+            zlemail: strzlemail,
+            hosturl: strhosturl,
+            refurl: strrefurl,
+            userip: returnCitySN["cip"],
+            wantinfo: strwantinfo,
+            pro: strpro
+        }
+        $.post("/SubmitUserInfo.aspx", data, function (result) {
+            if (result != "-1") {
+                if (result == "1") {
+                    $(".popbox").css("display", "block");
+                }
+                else {
+                    alert("很遗憾，获取资料失败，请重新再试");
+                }
+            } else {
+                alert("非法参数");
+            }
+        });
+    }
+</script>
+
+<div class="book">
+	<div class="book_list">
+		<h4>CFA考试必备资料</h4>
+		<ul class="cf">
+			<li>
+				<div>
+					<img src="images/getInfo/ybcl.jpg">
+				</div>
+				<span>
+					CFA 原版材料
+				</span>
+			</li>
+			<li>
+				<div>
+					<img src="images/getInfo/notes.jpg">
+				</div>
+				<span>
+					CFA notes
+				</span>
+			</li>
+			<li>
+				<div>
+					<img src="images/getInfo/examination.jpg">
+				</div>
+				<span>
+					CFA 模拟试题
+				</span>
+			</li>
+			<li class="mn">
+				<div>
+					<img src="images/getInfo/classnotes.jpg">
+				</div>
+				<span>
+					CFA 课堂学习笔记
+				</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="info">
+	<div class="info_list">
+		<h4>CFA金程独家内部资料&在线试听教程</h4>
+		<div class="vedio_list_wrap cf">
+			<ul class="vedio_list">
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA一级考试必考题
+					<i><img src="images/getInfo/iconone.png"></i>
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					2014年&2015年CFA一二三级考纲对比
+                    <i><img src="images/getInfo/iconone.png"></i>
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA考点解析
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA考过经验分享
+					<i><img src="images/getInfo/iconone.png"></i>
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					2015年CFA一二三级考纲
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA一级中文手册
+				</li>
+			</ul>
+			<ul class="vedio_list">
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					HANDBOOK第11版本
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA一级知识框架及公示表
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA三级IPS写作框架（重要）
+					<i><img src="images/getInfo/iconone.png"></i>
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA一级前导课程（视频）
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA二级前导课程（视频）
+					<i><img src="images/getInfo/iconone.png"></i>
+				</li>
+				<li>
+					<span><img src="images/getInfo/iconfile.png"></span>
+					CFA三级前导课程（视频）
+				</li>
+                <li>............</li>
+			</ul>
+			<div class="vedio">
+				<img src="images/getInfo/infopic.png">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sys">
+	<div class="sys_info">
+		<h4>金程CFA题库系统</h4>
+		<div class="list cf">
+			<a href="http://cfa.gfedu.net/cfadiacrisis/" target ="_blank" class="zd">
+				<span>CFA</span>
+				<span>基础诊断系统</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="xt">
+				<span>智能选题</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="zj">
+				<span>考点直击</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="mk">
+				<span>组卷模考</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="pg">
+				<span>能力评估</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="zt">
+				<span>真题模块</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="lx">
+				<span>快速联系</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="yc">
+				<span>精准预测</span>
+			</a>
+			<a href="http://www.gfedu.cn/intro.shtml" target ="_blank" class="xx">
+				<span>移动学习</span>
+			</a>
+		</div>
+		<a href="#head" class="get">点击立即获取</a>
+	</div>
+</div>
+<!-- footer start-->
+<footer>
+<div class="profooter">
+<dl>
+<dt><h3>客服热线</h3><p><strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p></dt>
+<!-- <dd><i class="icon-gfqq">&#xe605;</i><h3>企业QQ</h3><p>QQ群：119758791</p></dd> -->
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育-CFA</p></dd>
+</dl>
+<article>
+<img src="images/wx_CFA.jpg"  alt=""/>
+<h3>官方微信</h3>
+<p>微信扫一扫,掌握最新动态<br/>微信号：CFA-4009596</p>
+</article>
+</div>
+<div class="copyright"><p>© 2000 - 2015  上海金程国际金融专修学院.  沪ICP备08016784号  本学院通过ISO9001:2008国际质量管理体系认证</p>
+<!-- 百度统计 start-->
+<script type="text/javascript">
+      var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F26aef8c9c4ca0c8dd512b9d440b8de5c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<!-- 百度统计 end-->
+
+<!-- CNZZ统计 start-->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1255722444'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1255722444%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<!-- CNZZ统计 end-->
+
+</div>
+</footer>
+<!-- footer end-->
+<!-- Go Top -->
+<div class="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+<!-- 登录 start-->
+<div class="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li id="mobile_input">
+			<input type="text" id="usernameL" placeholder="手机号\用户名" onBlur="__changeUserName1('usernameL');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>账号与密码不匹配></p-->
+		</li>
+    <li id="password_input">
+			<input id="password1" name="password1" maxLength="20" type="text" placeholder="密码" onBlur="checkPwd($(this).val());if(!value){value=defaultValue;}">
+		</li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span><a href="">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input"><input class="register_input" id="realname" type="text" placeholder="真实姓名" onBlur="__changeRealName('realname');if(!value){value=defaultValue;}"></li>
+    <li id="tel_input"><input type="text" placeholder="手机号" id="tel" onBlur="__changeUserName('tel');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>手机号码格式错误</p--></li>
+    <li class="reghalf" id="code_input"><input type="text" id="code" name="code" max_length="6" placeholder="短信验证码" onFocus="this.value=''" onBlur="checkAuthCode(this.value);if(!value){value=defaultValue;}"><input type="button" value="获得短信验证码"></li>
+    <li id="password1_input"><input type="text" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" tabindex="2" onBlur="checkPwd1(this.value);"></li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上登录<a href="">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 注册 end-->
+<div class="popbox">
+	<div class="popboxcon">
+		<div class="msgmain">
+			<img src="images/getInfo/iconright.png">
+			<h2>您的信息已提交</h2>
+			<p>我们会尽快给您发送资料</p>
+			<a href="" id="closebox">我知道了</a>
+		</div>
+		<div class="msgsub">
+			<span>您还可以点击以下<br>链接继续浏览网站</span>
+			<ul>
+				<li><a href="http://cfa.gfedu.net"><img src="images/getInfo/iconcourse.png"></a>CFA网站</li>
+				<li><a href="http://cfa.gfedu.net/hj/default.html"><img src="images/getInfo/iconvideo.png"></a>集训营</li>
+				<li><a href="http://cfa.gfedu.net/list5_1.html"><img src="images/getInfo/iconsale.png"></a>考试资讯</li>
+			</ul>
+		</div>
+    </div>
+</div>
+</body>
+</html>

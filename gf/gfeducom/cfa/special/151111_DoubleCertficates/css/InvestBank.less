@@ -1,0 +1,683 @@
+@import "../../../../css/variable.less";
+
+
+//iconfont
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot'); /* IE9*/
+  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-uniF077{font-size: 22px;}
+
+// banner
+.Invest_banner{
+	background:url(../images/banner.png) top center no-repeat;
+	background-size: cover;
+	-webkit-background-size:cover;
+    -moz-background-size:cover;
+    -ms-background-size: cover;
+    -o-background-size:cover;
+    position: relative;
+    padding-bottom:80px;
+		.font{
+			width:100%;
+            display:none;
+		}
+        .font2{display:block; width:100%;}
+		.consult{
+			position: absolute;
+			width: 75px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			color: #fef6c8;
+			background-color: #790536;
+			right:42%;
+			bottom:5%;
+			
+		}
+}
+
+
+@media(min-width:640px){
+	.Invest_banner{
+        
+        .font{display:none;}
+        .font2{display:block; width:100%;}
+		.consult{
+			width: 80px;
+			height: 30px;
+			line-height: 30px;
+			right:45%;
+			bottom:5%;
+		}
+	}
+}
+
+@media(min-width:768px){
+	.Invest_banner{
+
+		.consult{
+			width: 100px;
+			height: 32px;
+			line-height: 32px;
+			right:45%;
+			
+			.f18();
+		}
+	}
+}
+
+@media(min-width:1000px){
+	.Invest_banner{
+        .font{display:block;}
+        .font2{display:none;}
+
+		.consult{
+			width: 130px;
+			height: 35px;
+			line-height: 35px;
+			.f24();
+			right:30%;
+			bottom:30%;
+		}
+	}
+}
+//common样式
+ .cile{
+        margin:60px auto;
+        .cf();
+         width: 630px;
+         padding:40px 0;
+         display:none;
+        i{
+            display:block;
+            margin:20px auto;
+            width:20px;
+            height:20px;
+            border-radius:100%;
+            background-color:#1d445b;
+            &:first-child{
+                width: 15px;
+                height: 15px;
+            }
+            
+        }
+        i.cl{
+                width: 26px;
+                height: 26px;
+                color:@cw;
+            }
+
+         strong{
+           display:block;
+          color:#1d445b;
+          font-weight: bold;
+          padding:0 16px;
+          float: left;
+          text-align: center;
+        }
+        em{
+            display: block;
+            float: left;
+            width:180px;
+            height:3px;
+            margin:12px auto;
+            background-color:#1d445b;
+        }
+    }
+//金融财务类大学生方向
+.Int_section{
+	.cf();
+    background:url(../images/invest_01.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -ms-background-size: cover;
+    -o-background-size:cover;
+    
+.nav{
+    position:relative;
+    .cf();
+    margin-top: -65px;
+    background-color:#1d445b;
+   display:none;
+   height:65px;
+
+	span{
+        display:block;
+        float:left;
+        width:100px;
+        height:100px; 
+        border-radius:100%;
+        background-color:#1567bb;
+        position:absolute;
+        left:24%;
+        bottom:-15px;
+        i{
+            display:block;
+            width:80px;
+            height:80px;
+            line-height:80px;
+            border-radius:100%;
+            background-color:#2278d0;
+            margin:10px auto;
+            text-align:center;
+            color:@cw;
+            .f20();
+        }
+    }
+
+	ul{
+		width: 49%;
+		float:left;
+        margin-left:33%;
+
+    li{
+        float:left;
+        width:16.6%;
+        text-align:center;
+        color:#dedab6;
+        line-height:65px;
+        &:hover{
+            background-color: #dedab6;
+            a{color:#1d445b;}
+        }
+        a{color:#dedab6;}
+    }
+    }
+}
+
+
+    .ul{
+        display:none;
+        .cf();
+        width: 900px;
+        margin:0 auto;
+        padding-bottom:30px;
+        span{
+            display: block;
+            width: 180px;
+            float: left;
+            text-align: center;
+            position: relative;
+           a{
+            position:absolute;
+            display:none;
+            width:136px;
+            height:40px;
+            line-height:40px;
+            background-color:rgba(147,130,93,0.5);
+            top:60px;
+            left:22px;
+            .f20();
+            font-weight:bold;
+            color:#1567bb;
+            text-align:center;
+
+           }
+ &:hover{
+              a{ display:block;}
+            }
+
+
+            em{
+                display: block;
+                color:#1d445b;
+                padding-top: 10px;
+
+            }
+        }
+    }
+    //phone
+    .phone_nav{
+       .cf();
+       ul{
+        width:90%;
+        margin:30px auto;
+        .cf();
+       li{
+        width:28%;
+        margin:1%;
+        float:left;
+        text-align: center;
+      a{
+        display:block;
+        width:55px;
+        height:55px;
+        margin:0 auto;
+
+    }
+        
+    span{
+        display:block;
+        padding:50px 0;
+        .f12();
+        color:#1d445b;
+
+    }
+
+       }
+       li.select{
+        width:20%;
+        margin:0 0 0 18% ;
+        float:left;
+       }
+       }
+    }
+}
+
+//phone content
+@media(min-width:320px) {
+    .Int_section{
+        margin-top: -30px;
+    padding:7% 0;
+}
+}
+@media(min-width:640px){
+    .Int_section{
+        .cf();
+    .phone_nav{
+        .cf();
+        ul{.cf();
+       li{
+        width: 18%;
+        span{
+            .f18();
+        }
+        a{
+            width: 72px;
+            height: 72px;
+        }
+       }
+       li.select{
+        margin:0;
+        padding-top:1%;
+    }
+
+    }
+    }
+}
+}
+
+@media(min-width:1000px){
+    .Int_section{
+         padding-top:0px;
+        .nav,.ul{
+            display:block;
+        }
+        .phone_nav{
+            display:none;
+        }
+    }
+}
+    
+
+//市场需求支持
+.markting{
+    width:90%;
+    margin:0 auto;
+    display:none;
+    .cile{
+        em,i{background-color: #1567bb;}
+        strong{
+            color:#1567bb;
+
+        }
+    }
+       ul{
+        .cf();
+        width: 900px;
+        margin:0 auto;
+    }
+        li{
+            text-align: center;
+            &:nth-child(2){
+                margin-left: 110px;
+
+            }
+            &:last-child{
+                margin-left: 220px;
+            }
+            
+            span{
+                background:url(../images/invest_08.png) no-repeat;
+                background-size: contain;
+                display: block;
+                float: left;
+                width: 221px;
+                height: 70px;
+                margin-top: -57px;
+                padding:90px 0;
+                position:relative;
+                    .f20();
+                    color: @cw;
+                 &:hover{
+                        background:url(../images/invest_06.gif) no-repeat;
+                        a{display:block;}
+                    }
+                a{
+                   position:absolute;
+                   display:none;
+                   width:216px;
+                   height:70px;
+                   line-height:70px;
+                   background-color:rgba(0,0,0,0.5);
+                   color:#93825d;
+                }
+            
+                }
+            
+            }
+            p{
+                .f18();
+                line-height: 30px;
+                color: #3b5d71;
+                text-align: center;
+                border:1px solid #3b5d71;
+                padding:15px;
+                width: 900px;
+                margin:20px auto;
+            }
+        }
+   //课程设置
+   .course{
+    background:url(../images/bg_02.gif) no-repeat;
+    background-size:cover;
+    padding-bottom:30px;
+    display:none;
+    .Content{
+        margin:10px auto;
+       .cf();
+       ul{
+          width: 900px;
+         .cf();
+          margin:0 auto;
+
+    }
+        li{
+            width: 40%;
+            margin:0 0 0 10%; 
+            .cf();
+            float: left;
+            text-align: center;
+            color:@cw;
+            &:nth-child(-n+4):after{
+                content: "";
+                display: block;
+                width: 2px;
+                height: 30px;
+                background-color: #93825d;
+                margin-left: 29px;
+            }
+            h3{
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                line-height: 60px;
+                float: left;
+                background-color: #93825d;
+            }
+            span{
+                line-height: 30px;
+                height: 30px;
+                width: 190px;
+                display: block;
+                float: left;
+                margin:15px -10px;
+                border-radius: 10px;
+                background-color: #93825d;
+            }
+        }
+        .select{
+            span,h3{
+                border:2px solid #93825d;
+                background-color: @cw;
+                color:#93825d;
+            }
+            span{
+                border-left:none;
+            }
+        }
+    }
+   }
+//在金程，一次通过CFA考试
+   .passexam{
+    .cf();
+    width: 90%;
+        margin:0 auto;
+        display:none;
+    .cile{
+        margin-bottom: 10px;
+    }
+    h3{
+        text-align: center;
+        .f18();
+        color:#3b5d71;
+    }
+    ul{
+        .cf();
+        padding:30px 0;
+    }
+    li{
+        width: 20%;
+        margin:1%;
+        float: left;
+        height: 26px;
+        border:2px solid #1d445b;
+        position: relative;
+        text-align: center;
+        color:#1567bb;
+        font-weight: bold;
+        padding:30px 4px;
+        &:hover{
+            color: #93825d;
+            border-color: #93825d;
+            .f18();
+        }
+        span{
+            display: block;
+            position: absolute;
+            top:-15%;
+            left:10%;
+            height: 30px;
+            line-height: 30px;
+            width: 80%;
+            background-color: @cw;
+            .f16();
+        }
+    }
+    
+   }
+//360触手可及
+.In_learning{
+    background:url(../images/bg_05.gif) no-repeat;
+    background-size:cover;
+    padding:20px 0;
+    display:none;
+    .cf();
+    p{
+       .f20();
+       color: #1d445b;
+       text-align: center; 
+    }
+    .list{
+        width: 900px;
+        margin:30px auto;
+        .cf();
+        li{
+            width: 22%;
+            margin:9px;
+            height: 170px;
+            float: left;
+            border:3px solid #1d445b;
+            text-align: center;
+            color: #1d445b;
+            position:relative;
+            a{
+                position:absolute;
+                height:170px;
+                width:200px;
+                display:none;
+                background-color:rgba(147,130,93,0.5);
+                left:0;
+                top:0;
+                line-height:170px;
+                color:#1567bb;
+                .f24();
+            }
+            &:hover{
+                a{display:block;}
+            }
+            h3{
+                padding:20px;
+
+            }
+            span{
+                .f14();
+                i{
+                    display: block;
+                    .f18();
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+    }
+   }
+
+//特报班豪礼精送
+.goods{
+    .cf();
+    width: 900px;
+    margin:30px auto;
+    display:none;
+    .cile{
+        strong{color:#1567bb;}
+        i,em{
+            background-color: #1567bb;
+        }
+    }
+   
+        img{
+            float: left;
+        }
+        p{
+            .f20();
+            padding-top: 30px;
+            color:#1567bb;
+            float: left;
+            em{.f28();}
+        }
+        h4{
+            float: right;
+            position:relative;
+            a{
+                display:none;
+                position:absolute;
+                width:300px;
+                height:300px;
+                border-radius:100%;
+                background-color:rgba(147,130,93,0.5);
+                text-align:center;
+                line-height:300px;
+                top:40px;
+                left:40px;
+                .f24();
+                color:#1d445b;
+            }
+            &:hover{
+                    a{display:block;}
+                }
+        }
+
+}
+
+//合作实习单位
+
+
+@media(min-width:320px){
+    .brands{
+        .cf();
+        margin:0 auto;
+        padding:80px 0;
+        h2{
+            .f16();
+            color:#1d445b;
+            text-align:center;
+            display:block;
+            line-height:50px;
+            font-weight:bold;
+        }
+    li{
+        float: left;
+        width: 46%;
+        margin:2%;
+        height:50px;
+       text-align:center;
+        img{
+            width:60%;
+        }
+    }
+    
+
+    }
+}
+
+@media(min-width:640px){
+    .brands{
+      h2{
+        .f20();
+      }
+    li{
+        width: 20%;    
+    }  
+}
+}
+@media(min-width:1000px){
+    .brands{
+           margin:0 auto;
+           background: url(../images/bg_07.gif) no-repeat;
+        background-size: cover;
+        padding:0;
+        h2{
+            display:none;
+        }
+      .cf();
+     
+ul{
+    .cf();
+}
+    
+    li{
+        width: 18%;    
+    }  
+}
+}
+ @media(min-width:1000px){
+        .cile{
+           width:670px;
+           display:block;
+            strong{
+                .f18();
+                width:270px;
+            }
+        }
+        
+        .markting,.course,.passexam,.In_learning,.goods{
+            display:block;
+        }
+    }

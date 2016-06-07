@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯竞赛赛事介绍-金程杯</title>
+<meta name="keywords" content="金程杯竞赛,金程杯比赛,金程杯赛事介绍">
+<meta name="description" content="金程杯赛事介绍：针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，面向全国大学生群体的公益活动，设立于2012年，已成功举办三届！-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript">
+    // JavaScript Document
+    $(function() {
+
+
+
+        //首屏满屏
+        var jcbf = $(".jcb-whome").height();
+        jcbf == document.body.clientHeight; //网页 可见区域的高度
+        $(".jcb-second").css("padding-top", jcbf + "px");
+
+        // 手机端首屏居中
+        var jcbmb = $(".jcb-mbfirst").height();
+        jcbmb == document.body.clientHeight; //网页 可见区域的高度
+        $(".jmb-p2intro").css("padding-top", jcbmb + "px");
+
+        //首屏金程杯居中
+        jQuery.fn.center = function() {
+            this.css("position", "absolute");
+            this.css("top", ($(window).height() - this.height()) / 2 - 35 + "px");
+            this.css("left", ($(window).width() - this.width()) / 2 + $(window).scrollLeft() + "px");
+            return this;
+        }
+        $('.jcb-mbsite section').center();
+        
+		
+		//进度条效果
+        $('.jcb-day li').click(function() {
+			$(this).children('i').addClass('thisday').siblings('li').children('i').removeClass('thisday');
+			var index = $(this).index();
+			//alert('ok');
+			$('.jcb-day li:lt(' + index + ')').children('i').css({ 'background': '#c00f34' });
+			$('.jcb-day li:gt(' + index + ')').children('i').css({ 'background': '#af9fa1' });
+			$('.jcb-day li:eq(' + index + ')').children('i').css({ 'background': '#49b6bd' });
+			$('.jcb-day article span').animate({ width: 150 * index + 'px' }, 500);
+		})
+
+
+
+        //secTabs切换
+        $(".J_secTabs").each(function() {
+            var timeout = 300;
+            var delay = 0;
+            var a = $(this).find("li"), b = $(this).next().children(), c = $(this).find("em");
+
+            //a.hover(function(){ var	obj = $(this); item_show(obj); },function(){ item_hide(); });
+            a.click(function() { var obj = $(this); item_show(obj); }, function() { item_hide(); });
+            a.click(function() { var obj = $(this); item_action(obj); });
+
+            function item_action(obj) {
+                a.removeClass("selected");
+                c.css("cursor", "")
+                obj.addClass("selected");
+                obj.children("em").css("cursor", "default");
+                var i = a.index(obj);
+                b.hide();
+                $(b.get(i)).show();
+            }
+            function item_show(obj) {
+                clearTimeout(delay);
+                delay = setTimeout(function() {
+                    item_action(obj);
+                    clearTimeout(delay);
+                }, timeout);
+            }
+            function item_hide() {
+                clearTimeout(delay);
+            }
+        });
+
+        // 左侧悬浮广告之我要报名
+        var h2 = $(window).height();
+        $(window).scroll(function() {
+            var h1 = $(document).scrollTop();
+            $('.jcbsidebar').stop().animate({ top: h1 + h2 / 2 }, 500);
+        })
+
+
+        // 进度条效果2
+        $('.jcbh-school ul li').mouseover(function() {
+            $(this).addClass('selected').siblings().removeClass('selected');
+            var index = $(this).index();
+            $('.jcbh-school ol li').eq(index).addClass('current').siblings().removeClass('current');
+        })
+        //走进高校轮播图
+        var w1 = $('.jcbh-school ul li').width();
+        var totalWidth = w1 * $('.jcbh-school ul li').length; //（宽度+margin-right）*4
+        var w = $('.jcbh-school ol li').outerWidth(true) * ('.jcbh-school ul li').length; ;
+        $('.jcbh-school ol').width(totalWidth);
+        var timer = null;
+        var num = 0;
+        //将指令单独放到一个自定义函数中
+        function autoPlay() {
+            //num--;
+            num = num - 2;
+            if (num < -(totalWidth / 2 + w1)) {  //4个盒子 加  4个margin-right    	
+                num = 0;
+            }
+            $('.jcbh-school ul,.jcbh-school ol').css({ left: num });
+        }
+        timer = setInterval(autoPlay, 30);
+        $('.jcbh-school ul').hover(function() {
+            clearInterval(timer);
+        }, function() {
+            timer = setInterval(autoPlay, 30);
+        })
+
+
+    })
+</script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+<!--Floating start-->
+<!--共用导航及日程表 start-->
+<!--导航-->
+<div class="topttl">
+    <!--#include file="/Navbar.html"-->
+    <h2>
+        <a href="/"><img src="/images/jcblogo.png" alt="金程杯" /></a><span><strong>问鼎未来CFO之路</strong>金程教育·2015年金程圆梦计划</span></h2>
+</div>
+<!--日程表-->
+<div class="jcb-day">
+    <article><span></span></article>
+    <ul>
+        <li date="2015-09-30"><i id="time1"></i><p>9月30日—11月5日</p><h3>大赛报名</h3></li>
+        <li date="2015-10-26"><i id="time2"></i><p>10月26日(周四)</p><h3>初赛辅导</h3></li>
+        <li date="2015-11-06"><i id="time3"></i><p>11月6日(周五)</p><h3>初赛进行</h3></li>
+        <li date="2015-11-08"><i id="time4"></i><p>11月8日周日</p><h3>复赛通知</h3></li>
+        <li date="2015-11-20"><i id="time5"></i><p>11月20日(周五)</p><h3>复赛辅导</h3></li>
+        <li date="2015-11-21"><i id="time6"></i><p>11月21日—11月28日</p><h3>复赛开始</h3></li>
+        <li date="2015-12-05"><i id="time7"></i><p>12月5日(周六)</p><h3>决赛通知</h3></li>
+        <li date="2015-12-19"><i id="time8"></i><p>12月19日(周六)</p><h3>决赛现场</h3></li>
+    </ul>
+</div>
+<!--左侧边浮动栏-->
+<div class="jcbsidebar">
+    <ul class="sign_up">
+        <li>
+            <h5>我要报名</h5>
+            <a href="http://www.sojump.com/jq/5822747.aspx" target="_blank" rel="nofollow">团队报名</a><br>
+            <a href="http://www.sojump.com/jq/5786954.aspx" target="_blank" rel="nofollow">个人报名</a></li>
+        <li onclick="window.open('http://weibo.com/jinchengjiaoyu')" style="cursor:pointer;"><i class="icon-gfwb">&#xe604;</i><h5>官方微博</h5>
+            <p>金程教育-金程杯</p>
+        </li>
+        <li>
+            <img src="/images/wx_jcb.jpg"><h5>官方微信</h5>
+            <p>微信扫一扫<br>
+                掌握大赛动态<br>
+                gfedu2015</p>
+        </li>
+    </ul>
+</div>
+<!--共用导航及日程表 end-->
+<!--Floating end-->
+
+
+<!-- 当前高亮 -->
+<script type="text/javascript">
+    $(function() {
+        SetPlanCurrent();
+        //$(".jcb-day ul li").unbind("click");
+    });
+    function SetPlanCurrent() {
+        $(".jcb-day ul li").each(function(index) {
+            var index = $(this).index();
+            if (ComparePlanDate($(this).attr('date'))) {
+                $(".jcb-day ul li:eq(" + index + ") h3").html($(this).attr('date'));
+                //$(".jcb-day ul li:eq(" + index + ")").click();
+            }
+        })
+    }
+
+    //date1<date2 返回true
+    function ComparePlanDate(strdate) {
+        var arr = strdate.split("-");
+        var date1 = new Date(arr[0], arr[1], arr[2]);
+        var datetime1 = date1.getTime();
+        var today = new Date();
+        var date2 = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        var datetime2 = date2.getTime();
+        if (datetime1 <= datetime2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+</script>
+
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe614;</i>
+    <h2>赛事介绍</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p2_intro">
+            <h4>我们正青春，我们聚金程</h4>
+            <p>“2015年金程大学生圆梦计划”，Please Join Us！</p>
+            <p>“金程杯”全国大学生竞赛是由金程教育（上海金程教育培训有限公司，原上海金程国际金融专修学院）组织的全国性校园公益活动，目的是给在校大学生提供加强专业能力、展现自我个性、解读商业环境、提升职业竞争力的平台。该赛事自2012年设立以来，已经举办三届，分别以“Excel金融建模”、“理财案例分析”以及“职业规划”为比赛内容，吸引了100多所高校的50万名学生关注，数千名学生报名参赛。</p>
+            <p>中国经济飞速发展的成就备受世界瞩目，中国的金融市场逐步走向繁荣。国与国的竞争已经从技术和能源为主体的竞争，演变为以金融为主体的竞争，金融核心竞争力的根本就是金融人才。我们，尤其年青人，身处这样一个蓬勃发展的伟大时代，肩负着为中国的未来作出贡献的神圣使命，我们应该勇敢地肩负起时代赋予的伟大职责，做有专业技能、有责任感的中国未来社会发展的中坚力量。</p>
+            <p>大学是青年的思想摇篮，是中国未来的希望所在；中国的未来，在于青年，大学时代是青年提升专业、铸就品质的黄金时期。唯有青年强，才有中国强。</p>
+            <p>成为具有全球视野的专业化人才，谁能把握住这个机会，谁就能成就自己，更能肩负起中国未来的希望。一个美好大学的生涯，将会为人的一生幸福和职业发展奠定坚实的基础。</p>
+            <p>2015年“金程大学生圆梦计划”是基于以往“金程杯”竞赛，面向全国大学生群体的公益活动。针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，本次活动采用全面化、系统化和公益化的模式，助力学校培养人才，帮助大学生实现梦想。</p>
+            <div class="action">
+                <h4>本届活动共包括3个部分</h4>
+                <ul>
+                    <li>
+                        <a href="/grant.shtml">
+                            <img src="/pic/p2-pic01.png">
+                            <span>“金程圆梦”助学金计划</span>
+                        </a>
+                        <p>提升在校生专业能力，成就金色前程梦想。</p>
+                    </li>
+                    <li>
+                        <a href="/schedule.shtml">
+                            <img src="/pic/p2-pic02.png">
+                            <span class="two">2015年“金程杯”<br>
+                                全国大学生会计案例大赛</span>
+                        </a>
+                        <p>针对性考察大学生学术能力、全方位提升专业职场竞技能力。</p>
+                    </li>
+                    <li>
+                        <a href="/recruit.shtml">
+                            <img src="/pic/p2-pic03.png">
+                            <span>“金程教育”校园招聘</span>
+                        </a>
+                        <p>全面就业指导，“会”人一步，为优秀大学生提供实习、就业岗位。</p>
+                    </li>
+                </ul>
+            </div>
+            <p>海阔凭鱼跃，天高任鸟飞。既然选择了远方，便只顾风雨兼程。无限美好的未来就在前方，路就在脚下，现在就是开始的最佳起点。</p>
+            <p>青年是热情、活力、创造力的象征。未来美好的一切，全在我们自己的手中。希望我们的青年人，尤其是大学生：</p>
+            <p>“不做蔓延四溢、野蛮攀爬的藤枝，只做坚挺笔直直上云霄的青松！”</p>
+            <p>不做漫无边际、随波逐流的浮萍，只做追逐温暖一路向阳的候鸟！”</p>
+            <p>心有猛虎，细嗅蔷薇。立志须如山，行道当如水。心中既有远大的目标，那就一步步脚踏实地去实现。中国的青年应当如此！</p>
+            <p>欢迎加入“2015年金程大学生圆梦计划”。祝你有一个美好的大学，美好的职业，美好的未来！</p>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(1)").addClass("selecded");
+</script>
+
+</body>
+</html>

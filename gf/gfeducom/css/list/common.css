@@ -1,0 +1,479 @@
+/* LESS Document */
+/* 清除浮动 */
+/*常用颜色*/
+/*常用字号*/
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*边框圆角*/
+/* 圆角  */
+/*配模式定位*/
+/*下阴影*/
+/*弹出窗口半透明灰*/
+/*1200屏*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* 背景自适应 */
+/* LESS Document */
+/*导入字体*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?kabozi');
+  src: url('../fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'), url('../fonts/icomoon.woff?kabozi') format('woff'), url('../fonts/icomoon.ttf?kabozi') format('truestype'), url('../fonts/icomoon.svg?kabozi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.sideguide,
+.sidefree,
+.sidelisten,
+.sideproblem,
+.sideplat {
+  *zoom: 1;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border: solid 1px #dddddd;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+}
+.sideguide:after,
+.sidefree:after,
+.sidelisten:after,
+.sideproblem:after,
+.sideplat:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.sideguide h2,
+.sidefree h2,
+.sidelisten h2,
+.sideproblem h2,
+.sideplat h2 {
+  border-bottom: solid 1px #dddddd;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  padding-left: 15px;
+  line-height: 45px;
+}
+.sideguide h2 a,
+.sidefree h2 a,
+.sidelisten h2 a,
+.sideproblem h2 a,
+.sideplat h2 a {
+  color: #333333;
+}
+.sideguide h2 i,
+.sidefree h2 i,
+.sidelisten h2 i,
+.sideproblem h2 i,
+.sideplat h2 i {
+  color: #999999;
+  line-height: 30px;
+}
+/*侧栏考试指南*/
+.sideguide li {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: solid 1px #dddddd;
+}
+.sideguide li:nth-child(odd) {
+  border-right: solid 1px #dddddd;
+}
+.sideguide li a {
+  color: #a18f69;
+  display: block;
+}
+.sideguide li i {
+  font-size: 16px;
+  padding-right: 5px;
+}
+/*侧栏免费资料索取*/
+.sidefree .sideselected {
+  padding: 20px 20px 0;
+}
+.sidefree .sideselected .selectxt {
+  color: #666666;
+  padding: 0 0 10px;
+}
+.sidefree .sideselected select {
+  width: 48%;
+  height: 40px;
+  border: 1px solid #cccccc;
+  color: #666666;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.sidefree .sideselected select:first-child {
+  margin-right: 2%;
+}
+.sidefree .sidetest {
+  *zoom: 1;
+}
+.sidefree .sidetest:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.sidefree .sidetest li {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 24px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: solid 1px #dddddd;
+}
+.sidefree .sidetest li:nth-child(odd) {
+  border-right: solid 1px #dddddd;
+}
+.sidefree #testd {
+  display: none;
+  padding: 5px 0 0 10px;
+  border-right: solid 1px #dddddd;
+  color: #d73240;
+  font-size: 12px;
+}
+.sidefree #testd i {
+  font-size: 14px;
+  padding-right: 5px;
+}
+.sidefree .sideobtain {
+  *zoom: 1;
+  padding: 20px;
+}
+.sidefree .sideobtain:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.sidefree .sideobtain li {
+  padding: 5px 0;
+  padding-bottom: 15px;
+}
+.sidefree .sideobtain input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.sidefree .sideobtain input[type="button"] {
+  background-color: #a18f69;
+  font-size: 18px;
+}
+/*侧栏免费试听*/
+.sidelisten .listenpic {
+  *zoom: 1;
+  position: relative;
+  height: 184px;
+  overflow: hidden;
+}
+.sidelisten .listenpic:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.sidelisten .listenpic #sideleft,
+.sidelisten .listenpic #sideright {
+  position: absolute;
+  z-index: 99;
+  background-color: #a18f69;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  top: 50%;
+  margin-top: -25px;
+}
+.sidelisten .listenpic #sideleft i,
+.sidelisten .listenpic #sideright i {
+  display: block;
+  font-size: 40px;
+  color: #ffffff;
+  line-height: 50px;
+  width: 35px;
+  height: 50px;
+  text-align: center;
+}
+.sidelisten .listenpic #sideleft {
+  left: 0;
+}
+.sidelisten .listenpic #sideright {
+  right: 0;
+}
+.sidelisten .listenpic li {
+  position: relative;
+}
+.sidelisten .listenpic li i {
+  position: absolute;
+  top: 50%;
+  margin-top: -28px;
+  left: 50%;
+  margin-left: -28px;
+  font-size: 56px;
+  color: #ffffff;
+}
+.sidelisten .listenpic img {
+  width: 100%;
+}
+.sidelisten .listentxt {
+  padding: 10px 0;
+  *zoom: 1;
+}
+.sidelisten .listentxt:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.sidelisten .listentxt li a {
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #666666;
+  font-size: 14px;
+  line-height: 45px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sidelisten .listentxt li i {
+  font-size: 12px;
+  padding-right: 5px;
+  color: #999999;
+}
+/*侧栏常见问题*/
+.sideproblem ul {
+  padding: 10px 0;
+}
+.sideproblem li a {
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #666666;
+  font-size: 14px;
+  line-height: 45px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sideproblem li i {
+  font-size: 12px;
+  padding-right: 5px;
+  color: #999999;
+}
+/* 侧栏六大平台 */
+.sideplat li {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 30px;
+  padding: 20px 0 10px;
+  font-size: 14px;
+}
+.sideplat li a {
+  color: #999999;
+  display: block;
+}
+.sideplat li i {
+  font-size: 36px;
+  display: inherit;
+}
+.sideplat li:hover {
+  background: #006c99;
+}
+.sideplat li:hover a {
+  color: #ffffff;
+}
+/* 共用样式start */
+.fc_header {
+  *zoom: 1;
+  margin: 20px auto 0;
+}
+.fc_header:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.fc_header p {
+  float: left;
+  line-height: 20px;
+}
+.fc_header p img {
+  width: 120px;
+  vertical-align: middle;
+  float: left;
+}
+.fc_header p span {
+  border-left: 1px solid #cccccc;
+  margin-left: 8px;
+  padding-left: 8px;
+  display: none;
+}
+.fc_header p span em {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+.fc_header .serch {
+  display: table;
+  margin-left: auto;
+}
+.fc_header .serch input {
+  width: 105px;
+  height: 40px;
+  float: left;
+  outline: none;
+}
+.fc_header .serch img {
+  height: 40px;
+}
+.fc_header ul {
+  *zoom: 1;
+  margin-top: 20px;
+}
+.fc_header ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.fc_header ul li {
+  float: left;
+  width: 20%;
+  line-height: 48px;
+  border: 1px solid #cccccc;
+  border-right: none;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-sizing: border-box;
+}
+.fc_header ul li a {
+  line-height: 48px;
+  font-size: 12px;
+}
+.fc_header ul .selected {
+  background-color: #ffffff;
+}
+.fc_header ul .selected a {
+  color: #d73240;
+}
+@media (min-width: 640px) {
+  .fc_header p {
+    padding-left: 40px;
+  }
+  .fc_header p span {
+    display: inline-block;
+  }
+  .fc_header .serch {
+    padding-right: 40px;
+  }
+  .fc_header .serch input {
+    width: 200px;
+  }
+  .fc_header ul a {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .fc_header {
+    width: 1200px;
+    margin: 0 auto;
+    margin: 40px auto;
+  }
+  .fc_header p {
+    padding-left: 0;
+  }
+  .fc_header p img {
+    width: 155px;
+  }
+  .fc_header p span {
+    margin-left: 15px;
+    padding-left: 12px;
+  }
+  .fc_header .serch {
+    display: inherit;
+    float: right;
+    padding-right: 0;
+  }
+  .fc_header .serch input {
+    height: 50px;
+  }
+  .fc_header .serch img {
+    height: 50px;
+  }
+  .fc_header ul {
+    float: right;
+    margin-top: 0;
+    width: 500px;
+  }
+  .fc_header ul li a {
+    font-size: 16px;
+  }
+}
+/* 共用样式end */
+.list_main {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+.list_content {
+  width: 900px;
+  height: 1200px;
+  float: left;
+  border: 1px solid #000;
+}
+.proaside {
+  width: 280px;
+  float: right;
+}

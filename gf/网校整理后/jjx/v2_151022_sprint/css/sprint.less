@@ -1,0 +1,948 @@
+@import url(../../css/variable.less);
+/* 共用样式 start */
+@font-face {
+    font-family: 'icomoon';
+    src:url('../../fonts/icomoon.eot?-bpt1ef');
+    src:url('../../fonts/icomoon.eot?#iefix-bpt1ef') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?-bpt1ef') format('truetype'),
+        url('../../fonts/icomoon.woff?-bpt1ef') format('woff'),
+        url('../../fonts/icomoon.svg?-bpt1ef#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.sprintplan{
+	h3{
+		.f24();
+		text-align: center;
+		font-weight: bold;
+		color:@c6;
+		p{font-weight: normal;}
+		q{
+			font-weight: normal;
+			display: inline-block;
+			width: 120px;
+			border-top: 2px solid #ff0000;
+		}
+	}
+}
+@media(min-width:640px){
+	.sprintplan{
+	h3{
+		.f36();
+		q{
+			width: 150px;
+			line-height:36px;
+			.f18();
+		}
+	}
+}
+}
+@media(min-width:1200px){
+	.sprintplan{
+	h3{
+		q{
+			border-top: 3px solid #ff0000;
+			.f24();
+		}
+	}
+}
+}
+.blk62{height:62px;background: #21292b;margin-top: -2px;position: relative;display: none;}
+@media(min-width:640px){
+	.blk62{display: block;}
+}
+/* 共用样式 end */
+
+/* banner start */
+.sprintplan{
+	.sp_banner{
+		width: 100%;
+		height: 280px;
+		padding-top:15px;
+		background: url(../images/banner_bg.jpg) 0 0 no-repeat;
+		background-size: cover;
+		position: relative;
+		h2{
+			padding: 0 20px;
+			.cf();
+			img{width: 76px;height: 18px;.left();}
+			span{
+				.right();
+				.f12();
+				font-weight: bold;
+				color: @c3;
+			}
+		}
+		h1{
+			width: 232px;
+			height: 110px;
+			background: url(../images/banner_01.png) 0 0 no-repeat;
+			background-size:cover;
+			position: absolute;
+			top:50%;
+			margin-top: -55px;
+			left:65%;
+			margin-left: -110px;
+		}
+		p{
+			font-weight: bold;
+			background: #3f424c;
+			width: 140px;
+			text-align: center;
+			margin:0 auto;
+			.f14();
+			padding:0 10px;
+			position: absolute;
+			bottom: -20px;
+			color: #b9bac3;
+			transform:skew(-25deg);
+			 -webkit-transform:skew(-25deg);
+			-moz-transform:skew(-25deg);
+			-ms-transform:skew(-25deg);
+			-o-transform:skew(-25deg); 
+		}
+	}
+}
+@media (min-width:640px){
+	.sprintplan{
+	.sp_banner{
+		height: 450px;
+		h2{
+			padding: 0 30px;
+			img{width:96px;height: 23px;}
+			span{
+				.f18();
+			}
+		}
+		h1{
+			width: 371px;
+			height: 175px;
+			left:60%;
+			top:40%;
+			margin-left: -150px;
+		}
+		p{
+			width: 270px;
+			height: 26px;
+			font-size:22px;
+			line-height: 26px;
+			padding:0;
+			font-style: normal;
+			bottom: -28px;
+			transform:skew(-35deg);
+			 -webkit-transform:skew(-35deg);
+			-moz-transform:skew(-35deg);
+			-ms-transform:skew(-35deg);
+			-o-transform:skew(-35deg); 
+			span{display:block;}
+		}
+	}
+}
+
+}
+@media (min-width:1200px){
+	.sprintplan{
+	.sp_banner{
+		height: 600px;
+		article{width: 1200px;margin: 0 auto;padding-top: 50px;}
+		h2{
+			img{width:200px;height: 48px;}
+			span{
+				.f36();
+			}
+		}
+		h1{
+			width: 538px;
+			height: 255px;
+			margin-left: -320px;
+		}
+		p{
+			width:430px;
+			height:43px;
+			.f36();
+			line-height: 43px;
+			bottom: -45px;
+		}
+	}
+}
+
+}
+/* banner end */
+
+/* video start */
+.sprintplan{
+.sp_video{
+	width:100%;
+	overflow: hidden;
+	height: 258px;
+	background: url(../images/video_bg.jpg) 30% 50% no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	position: relative;
+	article{display: none;}
+	h2{
+		text-align: center;
+		img{
+			transform:scale(0.4,0.4);
+			position: absolute;
+			top:46%;
+			margin-top: -188px;
+			left:50%;
+			margin-left:-316px;
+		}
+		a{
+			display: block;
+			background:  url(../images/video_play.png) 0 0 no-repeat;
+			background-size: cover;
+			width: 34px;
+			height: 34px;
+			position: absolute;
+			top:50%;
+			margin-top: -17px;
+			left:47%;
+			margin-left:-17px;
+		}
+	}
+	div{
+		width:37px;
+		height: 160px;
+		position: absolute;
+		bottom:-20%;
+		left:15%;
+		background: url(../images/video_03.png) 0 0 no-repeat;
+		background-size: cover;
+	}
+}
+}
+@media (min-width:640px) {
+	.sprintplan{
+.sp_video{
+	height: 436px;
+	article{
+		display:block;
+		width: 271px;
+		height: 135px;
+		position: absolute;
+		z-index: 3;
+		top:20px;
+		right:45px;
+		background: rgba(0, 0, 0, 0.3);
+		.bdr(10px);
+		color: @cw;
+		section{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		ul{
+			position: absolute;
+			.cf();
+		}
+		li{
+			.left();
+			width: 271px;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+		h4{
+			.f20();
+			font-weight: bold;
+			margin: 10px 0 5px;
+		}
+		p{
+			.f14();
+			line-height: 28px;
+		}
+		span{
+			cursor: pointer;
+			width: 15px;
+			height: 47px;
+			position: absolute;
+			top:50%;
+			margin-top: -24px;
+			background-size: cover!important;
+		}
+		.prev{
+			left:-48px;
+			background: url(../images/video_left.png) 0 0 no-repeat;
+		}
+		.next{
+			right:-48px;
+			background: url(../images/video_right.png) 0 0 no-repeat;
+		}
+	}
+	h2{
+		img{
+			transform:scale(0.6,0.6);
+		}
+		a{
+			width: 78px;
+			height: 78px;
+		}
+	}
+	div{
+		width:113px;
+		height: 492px;
+		bottom:-60%;
+		left:20%;
+	}
+}
+}
+}
+
+@media (min-width:1200px) {
+	.sprintplan{
+.sp_video{
+	height: 640px;
+	article{
+		width: 340px;
+		height: 170px;
+		position: absolute;
+		right:50%;
+		margin-right: -500px;
+		li{width: 340px;}
+		h4{.f24();margin:15px 0 10px}
+		p{.f18();}
+		i{
+			font-size: 60px;
+			margin-top: -30px;
+		}
+		.prev{
+			left:-60px;
+		}
+		.next{
+			right:-60px;
+		}
+	}
+	h2{
+		img{
+			transform:scale(0.8,0.8);
+			top:47%;
+			left: 46%;
+		}
+		a{width: 115px;height: 115px;}
+	}
+	div{
+		width:150px;
+		height: 700px;
+		bottom:-64%;
+		left:23%;
+	}
+}
+}
+}
+/* video end */
+
+/* 考前准备 start */
+.sprintplan{
+	.sp_prepare{
+		padding: 30px 0;
+		article{
+			width: 100%;
+			height: 158px;
+			background: #fff0f1;
+			margin-top: 20px;
+			box-sizing: border-box;
+			section{
+				width:320px;
+				.cf();
+				margin:0 auto;
+			}
+			div{
+				.left();
+				width: 155px;
+				height: 155px;
+				background: url(../images/prepare_01.png) 0 0 no-repeat;
+				background-size: cover;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-ms-background-size: cover;
+				-o-background-size: cover;
+				position: relative;
+				text-align: center;
+				color:#2ddffa;
+				h4{
+					line-height: 125px;
+					font-size: 84px;
+					font-weight: bold;
+				}
+				p{font-size: 10px;}
+			}
+			h5{
+				margin-top: 50px;
+				.right();
+				.f20();
+				line-height: 36px;
+				font-weight: bold;
+				margin-right:10px;
+				color:@c3;
+			}
+		}
+	}
+}
+
+@media(min-width:640px){
+	.sprintplan{
+	.sp_prepare{
+		article{
+			margin:30px auto 0;
+			width: 96%;
+			height: 280px;
+			padding-top: 20px;
+			section{
+				width:585px;
+			}
+			div{
+				width:240px;
+				height: 240px;
+				h4{
+					line-height: 195px;
+					font-size: 150px;
+				}
+				p{.f18();}
+			}
+			h5{
+				margin-top: 50px;
+				.f36();
+				line-height: 64px;
+				margin-right: 20px;
+			}
+		}
+	}
+}
+}
+
+/* 表单 */
+.sprintplan{
+	.sp_prepare{
+		form{
+			width: 320px;
+			margin:0 auto;
+			background: #f7f8f8;
+			padding: 20px;
+			position:relative;
+			.cf();
+			h4{
+				.f18();
+				font-weight: bold;
+				text-align: center;
+				p{
+					.f12();
+					font-weight: normal;
+					color:@c3;
+					line-height: 40px;
+				}
+			}
+			label{
+				position: absolute;
+				width:34px;
+				height: 31px;
+				left:37px;
+				img{transform:scale(0.8,0.8);}
+			}
+			.name{top:103px;}
+			.phone{top:162px;left: 50px;}
+			input{
+					width: 293px;
+					height: 38px;
+					line-height: 38px;
+					background: #fff;
+					margin:20px auto 0;
+					display: block;
+					border:0 ;
+					.bdr(2px);
+					padding-left:50px;
+					box-sizing: border-box;
+					.f16();
+				}
+				a{
+					background: #ee491f;
+					width: 135px;
+					height: 30px;
+					line-height: 30px;
+					display:block;
+					text-align: center;
+					float: right;
+					.f16();
+					color: @cw;
+					margin:15px 13px 0 0;
+					.bdr(2px);
+				}
+		}
+	}
+}
+@media (min-width:640px) {
+	.sprintplan{
+	.sp_prepare{
+		padding:40px 0 0 0;
+		form{
+			width: 555px;
+			z-index: 2;
+			margin-top: -15px;
+			h4{
+				.f24();
+				p{
+					.f18();
+					color:@c3;
+					line-height: 40px;
+				}
+			}
+			label{
+				width:50px;
+				height: 50px;
+				font-size: 50px;
+				left:112px;
+			}
+			.name{top:114px;}
+			.phone{top:192px;left:124px;}
+			input{
+					width: 380px;
+					height: 50px;
+					line-height: 50px;
+					margin:30px auto 0;
+					padding-left:65px;
+					.f16();
+				}
+				a{
+					background: #ee491f;
+					width: 135px;
+					height: 30px;
+					line-height: 30px;
+					display:block;
+					text-align: center;
+					float: right;
+					.f16();
+					color: @cw;
+					margin:15px 13px 0 0;
+					.bdr(2px);
+				}
+		}
+	}
+}
+}
+
+@media (min-width:1200px) {
+	.sprintplan{
+	.sp_prepare{
+		width: 1200px;
+		margin:0 auto;
+		padding:40px 0 130px 0;
+		.cf();
+		position: relative;
+		article{
+			width: 1170px;
+			.cf();
+			section{.left();}
+		}
+		form{
+			position: absolute;
+			top:190px;
+			right:25px;
+		}
+	}
+}
+}
+
+
+/* 考前准备 end */
+
+/* 技巧解析 start */
+.sprintplan{
+.sp_parsing{
+	width: 100%;
+	background: url(../images/paring_bg.png) 0 0 no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	padding-top: 30px;
+	h3{.f18();}
+	.sp_1200{display: none;}
+	ul{
+		padding:20px 0;
+		.cf();
+		margin: 0 auto;
+	}
+	.ps_advantage{
+		width: 300px;
+		li{
+		width: 144px;
+		height: 165px;
+		padding-top: 20px;
+		box-sizing: border-box;
+		background: url(../images/paring_01.png) 0 0 no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		-o-background-size: cover;
+		text-align: center;
+		line-height:58px;
+		float: left;
+		color:@cw;
+		margin:3px;
+		position: relative;
+		i{
+			width:54px;height: 54px;
+			background-size: cover!important;
+			position: absolute;
+			top:32px;
+			left:45px;
+		}
+		&:nth-child(1){
+			i{background: url(../images/paring_05.png) 0 0 no-repeat;}
+		}
+		&:nth-child(2){
+			i{background: url(../images/paring_06.png) 0 0 no-repeat;}
+		}
+		&:nth-child(3){
+			i{background: url(../images/paring_07.png) 0 0 no-repeat;}
+		}
+		&:nth-child(4){
+			i{background: url(../images/paring_08.png) 0 0 no-repeat;}
+		}
+		span{.f18();font-weight: bold;}
+		img{display: none;}
+		&.current{
+			background: url(../images/paring_02.png) 0 0 no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-ms-background-size: cover;
+			-o-background-size: cover;
+		}
+		}
+	}
+	.ps_parsing{display: none;}
+}
+
+}
+@media(min-width:640px){
+.sprintplan{
+.sp_parsing{
+	margin-top: -15px;
+	h3{.f24();}
+	.ps_advantage{
+		width: 630px;
+		li{
+		margin:6px;
+		}
+	}
+	.ps_parsing{
+		display:block;
+		width: 640px;
+		li{
+			display: none;
+			position: relative;
+			width:100%;
+			height: 154px;
+			background: url(../images/parsing_03.jpg) 0 0 no-repeat;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-ms-background-size: cover;
+			-o-background-size: cover;
+			.f16();
+			line-height: 28px;
+			p{
+				position: absolute;
+				top:22px;
+				left:222px;
+				width: 420px;
+				a{
+					float: right;
+					display: block;
+					padding-left: 20px;
+					box-sizing: border-box;
+					width: 135px;
+					height: 26px;
+					background: url(../images/parsing_09.jpg) 0 0 no-repeat;
+					background-size: cover;
+					color:@c9;
+					margin-right: 20px;
+					.f14();
+					line-height: 26px;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			&.selected{display:block;}
+		}
+	}
+}
+
+}
+}
+
+@media(min-width:1200px){
+.sprintplan{
+.sp_parsing{
+	h3{display: none;}
+	.sp_1200{display: block;}
+	.ps_advantage{
+		padding-top: 80px;
+		width: 968px;
+		li{
+		width: 190px;
+		height: 220px;;
+		padding-top: 38px;
+		margin:15px;
+		line-height: 68px;
+		i{
+			width:72px;
+			height: 72px;
+			top:40px;
+			left: 58px;
+		}
+		span{.f24();}
+		&.current{
+			position: relative;
+			width: 277px;
+			height:320px;
+			margin-top: -40px;
+			padding-top: 68px;
+			line-height: 90px;
+			i{
+				width: 90px;
+				height: 90px;
+				top:80px;
+				left:90px;
+			}
+			span{.f36();}
+			img{
+				display: block;
+				position: absolute;
+				bottom: -110px;
+				left:110px;
+				z-index: 2;
+			}
+		}
+		}
+	}
+	.ps_parsing{
+		padding-bottom: 50px;
+		width: 1174px;
+		li{
+			height: 250px;
+			.f18();
+			p{
+				position: absolute;
+				top:80px;
+				left:375px;
+				width: 700px;
+				a{
+					width: 221px;
+					height: 43px;
+					margin:20px 0;
+					padding-left: 30px;
+					.f24();
+					line-height: 43px;
+				}
+			}
+
+		}
+	}
+}
+
+}
+}
+/* 技巧解析 end */
+
+
+/* 保分查询 start */
+.sprintplan{
+.sp_score{
+	padding-top: 15px;
+	width: 100%;
+	h3{
+		p{
+			.f14();
+			line-height:30px;
+			margin-bottom: 20px;
+		}
+		a{color:@cw;}
+	}
+}
+
+}
+
+@media(min-width:640px){
+.sprintplan{
+.sp_score{
+	h3{
+		p{
+			.f24();
+			line-height:38px;
+			margin-bottom: 20px;
+		}
+		a{
+			color:@c9;
+			&:hover{
+				text-decoration: none;
+				background:#eee;
+				display: block;
+			}
+		}
+	}
+}
+}
+}
+
+@media(min-width:1200px){
+.sprintplan{
+.sp_score{
+	padding-top:30px;
+	width:1200px;
+	margin:0 auto;
+	text-align: center;
+}
+}
+}
+/* 保分查询 end */
+
+/* 课程组合 start */
+.sprintplan{
+	.sp_course{
+		width: 100%;
+		height: 475px;
+		background: url(../images/course_bg.jpg) center center no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+		-o-background-size: cover;
+		overflow: hidden;
+		h3{
+			color:@cw;
+			margin:30px 0;
+		}
+		ul{padding-top:35px;}
+		li{
+			width: 330px;
+			height: 50px;
+			margin:0 auto;
+			.cf();
+			span{
+				position: relative;
+				display:block;
+				.left();
+				.selected{
+				position: absolute;
+				top:0;left:0;
+				display: none;
+				background: url(../images/course_02.png) 0 0 no-repeat;
+				background-size: cover;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-ms-background-size: cover;
+				-o-background-size: cover;
+				}
+				&.current{
+					.selected{display: block;}
+				}
+			}
+			a{
+				display:block;
+				width: 76px;
+				height: 88px;
+				background: url(../images/course_01.png) 0 0 no-repeat;
+				background-size: cover;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-ms-background-size: cover;
+				-o-background-size: cover;
+				text-align: center;
+				line-height:22px;
+				color:@cw;
+				padding-top:24px;
+				box-sizing: border-box;
+				margin:-20px 1px 0;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			.lh{line-height:42px;}
+			&:nth-child(2){
+				width: 250px;
+			}
+		}
+	}
+}
+
+@media(min-width:640px){
+.sprintplan{
+	.sp_course{
+		padding-top: 15px;
+		height: 802px;
+		ul{padding-top:105px;}
+		li{
+			width: 596px;
+			height: 85px;
+			a{
+				width: 143px;
+				height: 165px;
+				line-height:36px;
+				padding-top:48px;
+				margin:-36px 3px 0;
+				.f18();
+			}
+			.lh{line-height:60px;}
+			&:nth-child(2){
+				width: 447px;
+			}
+		}
+	}
+}
+
+}
+
+@media(min-width:1200px){
+.sprintplan{
+	.sp_course{
+		height:1220px;
+		padding-top: 30px;
+		ul{padding-top:105px;}
+		li{
+			width:1104px;
+			height: 154px;
+			a{
+				width: 266px;
+				height: 306px;
+				line-height:44px;
+				padding-top:114px;
+				margin:-66px 5px 0;
+				.f24();
+			}
+			.lh{line-height:60px;}
+			&:nth-child(2){
+				width:828px;
+			}
+		}
+	}
+}
+
+}
+/* 课程组合 end */

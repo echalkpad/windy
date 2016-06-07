@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯赛事速递-金程杯</title>
+<meta name="keywords" content="金程杯动态">
+<meta name="description" content="金程杯赛事速递，及时公布大赛进度，及时公布赛事结果，期待您的关注-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe616;</i>
+    <h2>赛事速递</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p6_review">
+            <a href="/report/24524.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151112103100508.jpg" alt="2015年“金程杯”会计案例大赛复赛通知">
+<h4>2015年“金程杯”会计案例大赛复赛通知</h4>
+<p></p>
+</a><a href="/report/24471.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151109113109810.jpg" alt="金程杯初赛试题及答案公布">
+<h4>金程杯初赛试题及答案公布</h4>
+<p></p>
+</a><a href="/report/24444.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151109090122213.jpg" alt="2015年“金程杯”会计案例大赛初赛圆满结束">
+<h4>2015年“金程杯”会计案例大赛初赛圆满结束</h4>
+<p></p>
+</a>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index_2.shtml">上一页</a>
+	<span>3/6</span>
+	<a href="index_4.shtml">下一页</a>
+	<a href="index_6.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',6)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

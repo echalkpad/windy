@@ -1,0 +1,459 @@
+/* iconfont */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?z6i63c');
+  src: url('fonts/icomoon.eot?#iefixz6i63c') format('embedded-opentype'), url('fonts/icomoon.woff?z6i63c') format('woff'), url('fonts/icomoon.ttf?z6i63c') format('truetype'), url('fonts/icomoon.svg?z6i63c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (min-width: 1200px) {
+  .cicmodesistar {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+.sistartbg {
+  background: url(../../images2015/coursedetailnew/sdswbg.png) no-repeat;
+  background-size: 100%;
+  height: 100px;
+}
+@media (min-width: 480px) {
+  .sistartbg {
+    height: 180px;
+  }
+}
+@media (min-width: 768px) {
+  .sistartbg {
+    height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .sistartbg {
+    height: 260px;
+  }
+}
+.sistarh2t {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin: 50px auto 10px;
+}
+@media (min-width: 480px) {
+  .sistarh2t {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .sistarh2t {
+    font-size: 36px;
+    margin: 50px 0 30px;
+  }
+}
+.sistartitxt {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #000;
+  position: relative;
+  text-align: center;
+  margin: 20px auto;
+}
+.sistartitxt p {
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  font-size: 26px;
+}
+.sistartitxtts {
+  margin: 0 auto 50px;
+}
+@media (min-width: 480px) {
+  .sistartitxt {
+    width: 80%;
+  }
+}
+@media (min-width: 640px) {
+  .sistartitxt {
+    margin: 30px auto 50px;
+  }
+}
+@media (min-width: 992px) {
+  .sistartitxt {
+    width: 70%;
+  }
+}
+.sistarrate .sistarratel {
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.sistarrate .sistarratel .ssrltxt {
+  font-size: 15px;
+  color: #000;
+  line-height: 28px;
+}
+.sistarrate .sistarratel .ssrlpic {
+  margin: 20px 0;
+}
+.sistarrate .sistarratel .ssrlpic p {
+  float: left;
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sistarrate .sistarratel .ssrlpic p img {
+  display: block;
+  margin: 0 auto;
+}
+.sistarrate .sistarratel .ssrlpic .ssrlpic2 {
+  margin: 0 5%;
+}
+.sistarrate .sistarrater {
+  clear: both;
+  padding: 20px 0;
+}
+.sistarrate .sistarrater img {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .sistarrate .sistarratel {
+    width: 50%;
+    float: left;
+  }
+  .sistarrate .sistarrater {
+    width: 50%;
+    display: inline-block;
+  }
+  .sistarrate .sistarrater img {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .sistarrate .sistarratel {
+    width: 40%;
+    float: left;
+  }
+  .sistarrate .sistarrater {
+    width: 40%;
+    display: inline-block;
+    margin-left: 20%;
+  }
+  .sistarrate .sistarrater img {
+    width: 100%;
+  }
+}
+.sistartdevelop {
+  padding-top: 20px;
+}
+.sistartdevelop .ssdl {
+  width: 47%;
+  display: inline-block;
+  margin: 1%;
+  position: relative;
+}
+.sistartdevelop .ssdl img {
+  width: 100%;
+  height: 100%;
+}
+.sistartdevelop .ssdl p {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 5px;
+  background: #048ab4;
+  opacity: 0.7;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+}
+@media (min-width: 480px) {
+  .sistartdevelop .ssdl {
+    width: 23%;
+    margin: 0.5%;
+  }
+  .sistartdevelop .ssdl p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .sistartdevelop .ssdl p {
+    font-size: 20px;
+  }
+}
+.sistartitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  padding: 0 0 30px;
+  text-align: center;
+}
+.sistartitlesw {
+  margin-top: 50px;
+}
+.sistartcircle {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.sistartcircle .sstc {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  float: left;
+  margin: 5px;
+  background: #dbdbdb;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.sistartcircle .sstc .sstcn {
+  width: 120px;
+  height: 120px;
+  background: #9c9c9c;
+  margin: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+}
+.sistartcircle .sstc .sstcn .sistarspan {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+@media (min-width: 640px) {
+  .sistartcircle {
+    width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .sistartitle {
+    font-size: 36px;
+  }
+  .sistartcircle {
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .sistartcircle {
+    width: 770px;
+  }
+  .sistartcircle .sstc {
+    width: 170px;
+    height: 170px;
+  }
+  .sistartcircle .sstc .sstcn {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
+  .sistartcircle .sstc .sstcn .sistarspan {
+    padding-top: 45px;
+  }
+  .sistartcircle .sstc2 {
+    margin-left: 20px;
+  }
+  .sistartcircle .sstc3 {
+    margin: 0 20px;
+  }
+}
+.sistaradd {
+  clear: both;
+}
+.sistaradd img {
+  width: 50px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+}
+.sistarmodule {
+  width: 50%;
+  float: left;
+  padding: 50px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #01bbd4;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.sistarmodule:first-child {
+  background: #f44236;
+}
+.sistarmodule .sstmcir {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.56);
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.sistarmodule .sstmcir p {
+  font-size: 30px;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  left: 55px;
+  color: #fff;
+}
+.sistarmodule p {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.sistarmodule1 {
+  background: #f44236;
+}
+.sistarmodule2 {
+  background: #f4a136;
+}
+.sistarmodule3 {
+  background: #f4d236;
+}
+.sistarmodule4 {
+  background: #49ab4d;
+}
+@media (min-width: 640px) {
+  .sistarmodule {
+    width: 20%;
+    margin-bottom: 30px;
+  }
+}
+.sistarquality {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  color: #000;
+}
+.sistarbox {
+  width: 90%;
+  margin: 10% 5%;
+  text-align: center;
+  font-size: 14px;
+  border: 3px solid #999;
+  box-sizing: border-box;
+  position: relative;
+}
+.sistarbox .sstbtitle {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px;
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -70px;
+}
+.sistarbox .sstbtext {
+  margin: 30px 0 20px;
+}
+.sistarbox:first-child {
+  margin-top: 50px;
+}
+@media (min-width: 480px) {
+  .sistarbox {
+    width: 48%;
+    margin: 5% 1%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .sistarbox {
+    width: 23%;
+    margin: 5% 1%;
+    float: left;
+  }
+}
+.sistaricontitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #23b2e7;
+  text-align: center;
+  padding: 20px 0 30px;
+}
+@media (min-width: 640px) {
+  font-size: 36px;
+  padding: 20px 0;
+}
+.summertest .stestitle {
+  text-align: center;
+  font-size: 22px;
+  color: #666;
+  padding-bottom: 30px;
+}
+.summertest .stestitle p {
+  color: #ca1010;
+  display: inline;
+}
+.summertest .ststbox {
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  float: left;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  padding: 30px 0;
+  height: 174px;
+}
+.summertest .ststbox .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  color: #fff;
+  background: #30aec5;
+  font-size: 40px;
+  line-height: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.summertest .ststbox .ststext p {
+  font-size: 16px;
+  color: #333;
+}
+.summertest .ststbox:hover .icon {
+  background: #00348b;
+}
+.summertest .ststbox:hover .ststext p {
+  color: #00348b;
+}
+@media (min-width: 640px) {
+  .summertest .ststbox {
+    width: 25%;
+  }
+}

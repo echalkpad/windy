@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-CN"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>注册</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+
+<link href="css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/form/login.css" rel="stylesheet" type="text/css">
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/common.js"></script>
+<script type="text/javascript" src="register_files/passwordCheck.js"></script>
+<script type="text/javascript" src="script/loginReg/loginReg.js"></script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <script type="text/javascript" src="script/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!--注册 start-->
+<div class="screenbox">
+    <!--导航 start-->
+    <div class="ss-nav">
+        <h1><img src="images/sslogo.png" alt=""/></h1>
+    </div>
+    <!--导航 end-->
+
+    <div class="screencontent">
+        <section class="contentbox">
+            <article class="lcontent">
+            <h2>注册学习天空</h2>
+            <form id="form_regP" name="form_reg" action="http://user.gfedu.net/UserReg.aspx" method="post">
+            <ul>
+                <li>
+                    <input id="realnameP" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onblur="__changeRealName('realnameP');" type="text">
+                    <p class="noticeLR" id="noticeLR_realnameP"></p>
+                </li>
+                <li>
+                    <input name="tel" id="telP" maxlength="11" placeholder="请填写手机号码" onblur="__changeUserName('telP');" type="text">
+                    <p class="noticeLR" id="noticeLR_telP"></p>
+                </li>
+                <li class="half">
+                    <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onfocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+                    <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+                </li>
+                <li class="half">
+                    <input autocomplete="off" placeholder="输入验证码" name="verifyCode2" id="verifyCodeP2" onfocus="document.getElementById('noticeLR_verifyCodeP2').innerHTML = '';" type="text"><img src="images/yzm.jpg" alt=""/>
+                    <p class="noticeLR2" id="noticeLR_verifyCodeP2"></p>
+                </li>
+                <li>
+                    <input name="passwd" id="passwdP" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onblur="checkPwd1('passwdP');" type="password">
+                    <p class="noticeLR" id="noticeLR_passwdP"></p>
+                </li>
+                <li>
+                    <input name="verify" id="verifyP" checked="checked" type="checkbox"><a href="#">同意金程的《用户协议》</a>
+                    <p class="noticeLR" id="noticeLR_verifyP"></p>
+                </li>
+                <li>
+                    <input value="注册" onclick="checkReg('P');" type="button">
+                </li>
+            </ul>
+            </form>
+            </article>
+            <aside class="rcontent"><img src="images/fromads02.png" alt=""></aside>
+        </section>
+    </div>
+
+    <!--foot-->
+    <div class="footer">©2016 PZ Academy. All Rights Reserved. 沪ICP备 15048842号-1</div>
+    <!--foot end-->
+    <script type="text/javascript" src="register_files/Regyz.js"></script>
+    <div id="MsgReaDiv" style="display:none;"></div><input name="furl" id="furl" value="" type="hidden">
+</div>
+<script type="text/javascript">
+    function __changeUserName(of) {
+        var username = $('#' + of).val();
+        if (of == 'email') {
+            if (username.search(/^[\w\.+-]+@[\w\.+-]+$/) == -1) {
+                showTooltips('email_input', '请输入正确的Email地址');
+                return;
+            }
+        } else {
+            if (username == '' || !isMobilePhone(username)) {
+                document.getElementById('noticeLR_' + of).innerHTML = '请正确填写手机号码';
+                return;
+            }
+            else {
+                document.getElementById('noticeLR_' + of).innerHTML = '';
+            }
+        }
+    }
+
+    function __changeRealName(of) {
+        var realname = $('#' + of).val();
+        if (realname == '') {
+            document.getElementById('noticeLR_' + of).innerHTML = '请正确填写真实姓名';
+        } else {
+            document.getElementById('noticeLR_' + of).innerHTML = '';
+        }
+    }
+
+
+    function checkPwd1(pwd1) {
+        var pwdval = $('#' + pwd1).val();
+        var passwordRegex = new RegExp(/^[a-zA-Z0-9]{6,15}$/);
+        if (passwordRegex.test(pwdval) == false) {
+            document.getElementById('noticeLR_' + pwd1).innerHTML = '请正确填写密码';
+        } else {
+            var msg = checkPassword(pwdval);
+            if (msg == "red") {
+                document.getElementById('noticeLR_' + pwd1).innerHTML = "您的密码风险极大，请重新设置。";
+            }
+            else if (msg == "orange") {
+                document.getElementById('noticeLR_' + pwd1).innerHTML = "您的密码过短。请使用8-15位数字加字母的组合方式。";
+            }
+            else if (msg == "yellow") {
+                document.getElementById('noticeLR_' + pwd1).innerHTML = "您的密码过于简单，请使用数字加字母的组合方式。";
+            } else {
+                document.getElementById('noticeLR_' + pwd1).innerHTML = '';
+            }
+        }
+    }
+
+    function checkEmail(email) {
+        if (email.search(/^.+@.+$/) == -1) {
+            showTooltips('email_input', '邮箱格式不正确');
+        } else {
+            hideTooltips('email_input');
+        }
+    }
+
+    function checkAuthCode(authcode) {
+        if (authcode == '' || authcode.length != 6) {
+            showTooltips('code_input', '验证码不正确');
+        } else {
+            hideTooltips('code_input');
+        }
+    }
+
+    function checkReg(formType) {
+        document.getElementById('noticeLR_realname' + formType).innerHTML = '';
+        document.getElementById('noticeLR_tel' + formType).innerHTML = '';
+        document.getElementById('noticeLR_verifyCode' + formType).innerHTML = '';
+        document.getElementById('noticeLR_passwd' + formType).innerHTML = '';
+        document.getElementById('noticeLR_verify' + formType).innerHTML = '';
+        if ($('#realname' + formType).val() == '') {
+            document.getElementById('noticeLR_realname' + formType).innerHTML = '请正确填写真实姓名';
+            return false;
+        }
+        if ($('#tel' + formType).val() == '' || !isMobilePhone($('#tel' + formType).val())) {
+            document.getElementById('noticeLR_tel' + formType).innerHTML = '请正确填写手机号码';
+            return false;
+        }
+        if ($('#verifyCode' + formType).val().length != 6 || $('#verifyCode' + formType).val().search(/^[0-9]{6,6}$/) == -1 || $('#verifyCode' + formType).val() != $('#furl').val()) {
+            document.getElementById('noticeLR_verifyCode' + formType).innerHTML = "请输入正确的手机验证码";
+            return false;
+        }
+        var passwordRegex = /^[a-zA-Z0-9]{6,15}$/;
+        if ($('#passwd' + formType).val() == '' || passwordRegex.test($('#passwd' + formType).val()) == false) {
+            document.getElementById('noticeLR_passwd' + formType).innerHTML = '请正确填写密码';
+            return false;
+        } else {
+            var msg = checkPassword($('#passwd' + formType).val());
+            if (msg == "red") {
+                document.getElementById('noticeLR_passwd' + formType).innerHTML = "您的密码风险极大，请重新设置。";
+                return false;
+            }
+            else if (msg == "orange") {
+                document.getElementById('noticeLR_passwd' + formType).innerHTML = "您的密码过短。请使用8-15位数字加字母的组合方式。";
+                return false;
+            }
+            else if (msg == "yellow") {
+                document.getElementById('noticeLR_passwd' + formType).innerHTML = "您的密码过于简单，请使用数字加字母的组合方式。";
+                return false;
+            } else {
+                document.getElementById('noticeLR_passwd' + formType).innerHTML = '';
+            }
+        }
+        if ($('#verify' + formType).attr('checked') == false) {
+            document.getElementById('noticeLR_verify' + formType).innerHTML = '对不起，您不同意Webluker的《使用协议》无法注册';
+            return false;
+        } else {
+            document.getElementById('form_reg' + formType).submit();
+        }
+    }
+
+    function checkMobilePhone(telphone) {
+        if (telphone == '' || !isMobilePhone(telphone)) {
+            showTooltips('mobile_input', '请输入正确的手机号码');
+        } else {
+            hideTooltips('mobile_input');
+        }
+    }
+
+    function isMobilePhone(value) {
+        if (value.search(/^1[3|4|5|8|7][0-9]\d{8}$/) == -1)
+            return false;
+        else
+            return true;
+    }
+</script> 
+
+<!--注册 end-->
+
+
+</body></html>

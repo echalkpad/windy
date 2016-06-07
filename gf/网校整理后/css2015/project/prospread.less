@@ -1,0 +1,604 @@
+/* LESS Document */
+
+/* 清除浮动 */
+.cf(){
+	// IE7-
+	*zoom: 1;
+	// others
+	&:after {
+		content: " ";
+		clear: both;
+		display: table;
+  }
+}
+
+/* 七个固定导航 */
+
+/* 顶部导航 */
+.prospreadnav{
+	position:relative;
+	width:100%;
+	padding:15px 30px 0;
+	box-sizing:border-box;
+	overflow:hidden;
+	ul{
+		height:70px;
+	}
+	
+	.psnavleft,
+	.psnavright{
+		position:absolute;
+		top:30px;
+		a{
+			width:10px;
+			height:16px;
+			display:block;
+		}
+	}
+	.psnavleft{
+		left:15px;
+	}
+	.psnavright{
+		right:15px;
+	}
+	li{
+		float:left;
+		width:155px;
+		text-align:center;
+		a{
+			display:block;
+			background-color:#fff;
+			border:solid 1px #eee;
+			border-radius:2px;
+			margin:5px;
+			color:#666;
+			font-size:14px;
+			padding:10px 0;
+			&:hover{
+				background-color:#82c2cb;
+				color:#fff;
+			}
+		}
+		&.selected{
+			a{
+				background-color:#82c2cb;
+				color:#fff;
+			}
+		}
+	}
+}
+@media (min-width:768px){
+	.prospreadnav{
+		padding:30px 5px;
+		.cf();
+		ul{
+			padding:0;
+		}
+		.psnavleft,
+		.psnavright{
+			display:none;
+		}
+	}
+
+}
+@media (min-width:992px){
+	.prospreadnav{
+		padding:30px 40px;
+	}
+}
+/* 内容框架 */
+.prospreadcon{
+	padding:10px;
+	background-color:#fff;
+	margin-bottom:30px;
+	h1{
+		font-size:18px;
+		color:#333;
+		padding:20px 10px;
+		text-align:center;
+		span{
+			display:block;
+			font-size:14px;
+		}
+	}
+	h2{
+		font-size:16px;
+		color:#333;
+		padding:20px 10px;
+		
+	}
+	p{
+		text-indent:30px;
+		 padding-bottom:10px;
+		 line-height:30px;
+		 font-size:14px;
+		 color:#999;
+		 &.prospeconimg{
+			 text-align:center;
+			 text-indent:0;
+			 padding-bottom:0;
+			 img{
+				 width:100%;
+				 box-sizing:border-box;
+			 }
+		}
+		&.prospecial{
+			text-align:center;
+			 text-indent:0;
+			 padding:10px 0;
+			 font-size:18px;
+		}
+		&.empty{
+			display:block;
+			height:10px;
+		}
+		a{
+			display:block;
+			width:120px;
+			text-indent:0;
+			text-align:center;
+			padding:5px 0;
+			margin:0 auto;
+			font-size:16px;
+			background-color:#33b0c4;
+			color:#fff;
+			&:hover{
+				color:#fff;
+			}
+		}
+		span{color:#33b0c4;}
+		strong{
+			font-size:24px;
+			color:#bc1e1e;
+		}
+	}
+	 h3{
+		 font-size:16px;
+		 color:#333;
+		 line-height:40px;
+		 margin:10px 0;
+	}
+	table,th,td{
+		border:solid 1px #eee;
+	}
+	table{
+		width:100%;
+	}
+	th{
+		background-color:#f8f8f8;
+		text-align:center;
+		padding:10px 5px;
+	}
+	td{
+		padding:10px 5px;
+	}
+	h5{
+		img{width:100%;}
+		
+	}
+	
+}
+@media (min-width:768px){
+	.prospreadcon{
+		overflow:hidden;
+		padding:40px;
+		border-radius:2px;
+		border:solid 1px #eee;
+		h1{
+			font-size:24px;
+			span{
+				font-size:18px;
+				padding-bottom:40px;
+			}
+		}
+		h2{
+			font-size:20px;
+		}
+		p.empty{
+			height:20px;
+		}
+	}
+}
+@media (min-width:992px){
+	.prospreadcon{
+		p.prospeconimg{
+			 img{
+				 width:510px;
+			 }
+		}
+	}
+}
+/* 内容具体页面 */
+
+/* 有阴影的盒子 */
+.specialcon{
+	dt{
+		background-color:#82c2cb;
+		font-size:18px;
+		padding:15px;
+		color:#fff;
+		text-align:center;
+	}
+	dd{
+		padding:15px;
+	}
+	section{
+		padding:10px;
+		dl{
+			box-shadow:5px 5px 15px #999;
+			-moz-box-shadow:5px 5px 15px #999;
+			-webkit-box-shadow:5px 5px 15px #999;
+		}
+		dl.sp3dress{
+			background-color:#a18f69;
+			padding:0 40px;
+			color:#fff;
+			dt{ font-size:20px; background-color:inherit; text-align:left; padding-bottom:10px;}
+			dd{ font-size:14px; line-height:26px; padding:5px 15px;}
+		}
+	}
+	
+	p{
+		text-indent:0;
+		img{ width:100%;}
+	}
+}
+
+@media (min-width:992px){
+	.specialcon{
+		.cf();
+		section{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+		}
+		.spew01{ height:595px;}
+		.spew02{ height:300px; overflow:hidden;}
+	}
+	
+}
+/* 标题下的分格线 */
+.btline{
+	height:38px;
+	width:100%;
+	display:block;
+	background-image:url(../../images2015/progttlbg.png);
+	background-repeat:no-repeat;
+	background-position: bottom center;
+}
+	
+/* 区分P标签的补充内容 */
+.pnote{
+	background-color:#eee;
+	border-left:solid 4px #82c2cb;
+	padding:30px;
+	width:100%;
+	box-sizing:border-box;
+	line-height:30px;
+	font-size:14px;
+	color:#999;
+}
+/* 报考指南 */
+.eguide{
+	.cf();
+	li{
+		position:relative;
+		padding-left:80px;
+		padding-right:20px;
+	}
+	i{
+		position:absolute;
+		top:0;
+		left:10px;
+	}
+	h4{
+		color:#33b0c4;
+		font-size:18px;
+	}
+	p{
+		text-indent:0;
+		height:100px;
+		overflow: hidden;
+		display: -webkit-box;
+		word-break: break-all;
+		-webkit-line-clamp:3;
+		-webkit-box-orient: vertical;
+	}
+}
+@media (min-width:640px){
+	.eguide{
+		li{
+			width:50%;
+			float:left;
+			padding-right:20px;
+			box-sizing:border-box;
+		}
+	}
+}
+@media (min-width:768px){
+	.eguide{
+		li{
+			width:100%;
+		}
+	}
+}
+@media (min-width:992px){
+	.eguide{
+		li{
+			width:50%;
+		}
+	}
+}
+
+/* 证书申请 */
+.credentials{
+	.cf();
+	border-top:solid 1px #cdcdcd;
+	border-bottom:solid 1px #cdcdcd;
+	img,
+	h4{
+		font-size:16px;
+		line-height:30px;
+		color:#a18f69;
+	}
+	img{
+		width:100%;
+	}
+}
+@media (min-width:640px){
+	.credentials{
+		img,
+		h4{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+		}
+		h4{
+			padding:60px 40px;
+			font-size:18px;
+		}
+	}
+}
+@media (min-width:768px){
+	.credentials{
+		img,
+		h4{
+			width:100%;
+			float: none;
+			box-sizing:border-box;
+		}
+		h4{
+			padding:60px 40px;
+			font-size:18px;
+		}
+	}
+}
+@media (min-width:992px){
+	.credentials{
+		img,
+		h4{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+		}
+		h4{
+			padding:60px 40px;
+			font-size:18px;
+		}
+	}
+}
+/* 认可价值 */
+.valuettl{
+	li{
+		border-radius:2px;
+		text-align:center;
+		padding:10px 0;
+		margin-bottom:10px;
+		font-size:18px;
+		color:#fff;
+		&:first-child{ background-color:#82c2cb;}
+		&:last-child{ background-color:#a18f69;}
+	}
+}
+.value{
+	li{
+
+	}
+	i{
+		width:100%;
+		display:block;
+		text-align:center;
+	}
+	h4{
+		color:#33b0c4;
+		font-size:18px;
+		text-align:center;
+		padding-top:10px;
+	}
+	p{
+		text-indent:0;
+		padding:10px 20px;
+	}
+}
+@media (min-width:992px){
+	.valuettl{
+		padding:60px 0;
+		ul{
+			overflow:hidden;
+		}
+		li{
+			font-size:20px;
+			width:50%;
+			float:left;
+		}
+	}
+	.value{
+		li{
+			position:relative;
+			padding-left:170px;
+			padding-right:20px;
+		}
+		i{
+			position:absolute;
+			top:0;
+			left:10px;
+			width:135px;
+		}
+		h4{
+			color:#33b0c4;
+			font-size:18px;
+			text-align:left;
+		}
+		p{
+			text-indent:0;
+			padding:0 0 60px;
+		}
+	}
+}
+
+/* 报考内容 */
+.prospsummary{
+	dt{
+		background-color:#f8f8f8;
+		font-size:16px;
+		padding:15px;
+		border-bottom:solid 1px #eee;
+	}
+	dd{
+		padding:15px;
+		font-size:14px;
+		border-bottom:solid 1px #eee;
+	}
+	section{
+		padding:10px;
+		dl{
+			border:solid 1px #eee;
+			color:#666;
+		}
+		h4{
+			color:#33b0c4;
+			font-size:18px;
+			padding:10px 0;
+			text-align:center;
+		}
+	}
+	
+	p{
+		text-indent:0;
+		img{ width:100%;}
+	}
+}
+@media (min-width:992px){
+	.prospsummary{
+		.cf();
+		section{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+		}
+	}
+}
+
+/* 考试报名 */
+.prospgolden{
+	p{
+		padding-left:20px;
+		padding-bottom:10px;
+		background:url(../../images2015/imgspread/spread6_icon.png) 24px 6px no-repeat;
+		line-height:30px;
+		font-size:16px;
+		color:#a18f69;
+	}
+}
+@media (min-width:992px){
+	.prospgolden{
+		p{
+		  font-size:16px;
+		}
+	}
+}
+/*报考流程*/
+.proprocess{
+	.cf();
+	ul{
+	}
+	li{
+		width:50%;
+		padding:10px;
+		box-sizing:border-box;
+		float:left;
+		i,
+		a{
+			width:110px;
+			height:110px;
+			margin:0 auto;
+			line-height:110px;
+			display:block;
+			overflow:hidden;
+			border-radius:50%;
+			background-color:#33b0c4;
+			color:#fff;
+			font-size:18px;
+			text-align:center;
+			font-family:"Microsoft Yahei","Hiragino Sans GB",sans-serif;
+		}
+		i:hover,
+		a:hover{
+			background-color:#a18f69;
+		}
+		
+	}
+}
+@media (min-width:480px){
+	.proprocess{
+		li{
+			width:33.33%;
+		}
+	}
+}
+@media (min-width:768px){
+	.proprocess{
+		li{
+			width:50%;
+		}
+	}
+}
+@media (min-width:992px){
+	.proprocess{
+		li{
+			width:20%;
+		}
+	}
+}
+/* 底部浮动导航 */
+.navfooter{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:40px;
+	
+	font-size:18px;
+	p{
+		width:300px;
+		margin:0 auto;
+		line-height:40px;
+		text-align:center;
+		a{
+			display:block;
+			float:left;
+			width:100px;
+			background-color:#82c2cb;
+			color:#fff;
+			font-size:16px;
+			&.navblack{
+				background-color:#a18f69;
+			}
+		}
+	}
+}
+
+
+
+
+
+

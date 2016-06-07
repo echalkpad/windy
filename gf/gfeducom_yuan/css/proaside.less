@@ -1,0 +1,272 @@
+/* LESS Document */
+
+
+@import "variable.less";
+
+/*导入字体*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?kabozi');　
+	src:url('../fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?kabozi') format('woff'),
+		url('../fonts/icomoon.ttf?kabozi') format('truestype'),
+		url('../fonts/icomoon.svg?kabozi#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.sideguide,
+.sidefree,
+.sidelisten,
+.sideproblem,
+.sideplat{
+	.cf();
+	.bdr2();
+	border:solid 1px @cd;
+	margin-bottom:30px;
+	background-color:@cw;
+	h2{
+		border-bottom:solid 1px @cd;
+		background-color:@cf0;
+		.f16();
+		padding-left:15px;
+		line-height:45px;
+		a{
+			color:@c3;
+		}
+		i{
+			color:@c9;
+			line-height:30px;
+		}
+	}
+}
+
+/*侧栏考试指南*/
+.sideguide{
+	ul{
+	}
+	li{
+		width:50%;
+		float:left;
+		box-sizing:border-box;
+		text-align:center;
+		line-height:50px;
+		.f14();
+		border-bottom:solid 1px @cd;
+		&:nth-child(odd){
+			border-right:solid 1px @cd;
+		}
+		a{
+			color:@golden;
+			display:block;
+		}
+		i{
+			.f16();
+			padding-right:5px;
+		}
+	}
+}
+
+/*侧栏免费资料索取*/
+.sidefree{
+    
+    //考试类别选择start
+    .sideselected{
+        padding: 20px 20px 0;
+        .selectxt{
+            color: @c6;
+            padding: 0 0 10px;
+        }
+        select{
+            width: 48%;
+            height: 40px;
+            border: 1px solid @cc;
+            color: @c6;
+            box-sizing:border-box;
+            padding-left:10px;
+            &:first-child{margin-right: 2%;}
+            option{
+            //    height: 40px;
+            }
+        }
+    }
+    //考试类别选择end
+	.sidetest{
+		.cf();
+		li{
+			width:50%;
+			float:left;
+			box-sizing:border-box;
+			padding-left:24px;
+			line-height:50px;
+			.f14();
+			border-bottom:solid 1px @cd;
+			&:nth-child(odd){
+				border-right:solid 1px @cd;
+			}
+		}
+	}
+	#testd{
+		display:none;
+		padding:5px 0 0 10px;
+		border-right:solid 1px @cd;
+		color:@cred;
+		.f12();
+		i{
+			.f14();
+			padding-right:5px;
+		}
+	}
+	.sideobtain{
+		.cf();
+		padding:20px;
+		li{
+			padding:5px 0;
+			padding-bottom:15px;
+		}
+		input{
+			width:100%;
+			box-sizing:border-box;
+		}
+		input[type="button"]{
+			background-color:@golden;
+			.f18();
+		}
+	}
+}
+
+/*侧栏免费试听*/
+.sidelisten{
+	.listenpic{
+		.cf();
+		.pos(r);
+		height:184px;
+			overflow:hidden;
+		#sideleft,
+		#sideright{
+			.pos(a);
+			z-index:99;
+			background-color:@golden;
+			opacity:0.5;
+			filter:alpha(opacity=50);
+			top:50%;
+			margin-top:-25px;
+			i{
+				display:block;
+				.f40();
+				color:@cw;
+				line-height:50px;
+				width:35px;
+				height:50px;
+				text-align:center;
+			}
+		}
+		#sideleft{
+			left:0;
+		}
+		#sideright{
+			right:0;
+		}
+		li{
+			.pos(r);
+			
+			i{
+				.pos(a);
+				top:50%;
+				margin-top:-28px;
+				left:50%;
+				margin-left:-28px;
+				.f56();
+				color:@cw;
+			}
+		}
+		img{
+			width:100%;
+		}
+	}
+	.listentxt{
+		padding:10px 0;
+		.cf();
+		li{
+			a{
+				width:100%;
+				padding-left:20px;
+				box-sizing:border-box;
+				color:@c6;
+				.f14();
+				line-height:45px;
+				.ellipsis();
+			}
+			i{
+				.f12();
+				padding-right:5px;
+				color:@c9;
+			}
+		}
+	}
+	
+}
+/*侧栏常见问题*/
+.sideproblem{
+	ul{
+		padding:10px 0;
+	}
+	li{
+		a{
+			width:100%;
+			padding-left:20px;
+			box-sizing:border-box;
+			color:@c6;
+			.f14();
+			line-height:45px;
+			.ellipsis();
+		}
+		i{
+			.f12();
+			padding-right:5px;
+			color:@c9;
+		}
+	}
+}
+
+/* 侧栏六大平台 */
+.sideplat{
+    ul{
+    }
+    li{
+        width:33.33%;
+        float:left;
+        box-sizing:border-box;
+        text-align:center;
+        line-height:30px;
+        padding: 20px 0 10px;
+        .f14();
+        a{
+            color:@c9;
+            display:block;
+        }
+        i{
+            .f36();
+            display: inherit;
+        }
+        
+        &:hover{
+            background: @csblue;
+            a{color: @cw;}
+        }
+    }
+}

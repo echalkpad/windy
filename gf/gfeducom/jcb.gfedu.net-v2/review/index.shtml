@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>历届金程杯赛事回顾-金程杯</title>
+<meta name="keywords" content="历届金程杯,历届金程杯大赛">
+<meta name="description" content="往届金程杯赛事回顾：2012年第一届“金程杯”全国大学生理财案例大赛；2013年第二届“金程杯”全国大学生EXCEL金融建模大赛；2014年第三届“金程杯”全国大学生职业规划大赛-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe618;</i>
+    <h2>往届回顾</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p6_review">
+            <a href="/review/23796.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20151008135213547.jpg" alt="2014年第三届“金程杯”全国大学生职业规划大赛回顾">
+<h4>2014年第三届“金程杯”全国大学生职业规划大赛回顾</h4>
+<p>2014年5月16日第三届“金程杯”全国大学生职业规划大赛总决赛在上海财大豪生酒店完美收官。本届大赛由中国市场协会金融服务工作委员会指导，上海金程国际金融专修学院（金程教育）主办，旨在进一步培养和加强高校金融相关专业毕业生的就业竞争力，提升毕业生专业水平与职业素养，深化校企合作和帮助用人单位选拔优质人才。</p>
+</a><a href="/review/23794.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20150929221138147.jpg" alt="2013年第二届“金程杯”全国大学生EXCEL金融建模大赛回顾">
+<h4>2013年第二届“金程杯”全国大学生EXCEL金融建模大赛回顾</h4>
+<p>2013年第二届“金程杯”全国大学生EXCEL金融建模大赛总决赛在上海交通大学高级金融学院落下举行。上海交通大学高级金融学院的袁宏、沈明、范少文三位同学组成的M.H.W代表队凭借优异的表现，勇夺桂冠，为学校赢得了殊荣。</p>
+</a><a href="/review/23793.shtml">
+<img src="http://manager.gfedu.net/InfoSys/upload/20150930114919656.jpg" alt="2012年第一届“金程杯”全国大学生理财案例大赛回顾">
+<h4>2012年第一届“金程杯”全国大学生理财案例大赛回顾</h4>
+<p>2012“金程杯”全国大学生理财案例大赛决赛现场，来自全国6所高等院校的八支团队脱颖而出，进入总决赛八强，经过激烈的争夺，最终来自浙江大学的GALAXY以严密、完整的案例分析设计，结合流畅的英文表述荣获冠军，来自中国科技大学的红专并进则以清晰的表述配合良好的团队协作位居第二。</p>
+</a>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index.shtml">上一页</a>
+	<span>1/1</span>
+	<a href="index.shtml">下一页</a>
+	<a href="index.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',1)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

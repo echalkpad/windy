@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2012年第一届“金程杯”全国大学生理财案例大赛回顾</h3>
+            <span>时间：2015/9/28 13:36:09</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; 2012&ldquo;金程杯&rdquo;全国大学生理财案例大赛决赛现场，来自全国6所高等院校的八支团队脱颖而出，进入总决赛八强，经过激烈的争夺，最终来自浙江大学的GALAXY以严密、完整的案例分析设计，结合流畅的英文表述荣获冠军，来自中国科技大学的红专并进则以清晰的表述配合良好的团队协作位居第二。</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; 赛后，作为本次大赛评委老师的金程金融专修学院院长兼首席培训师汤震宇博士对赛场上各支团队的表现进行了总结，从中也提炼了当今经管类毕业生在金融机构求职道路中应该注意的各个方面。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <b>对于专业知识理解尚片面、不够深入</b></div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 本次案例大赛通过对上市企业财务报表的分析对其股价进行估值，比赛现场很多选手采用了各种估值模型，但当评委提问选手为何选用该类模型时，很多选手说不出个所以然。汤博士介绍，很多估值模型都是有前提假设的，很多学生在未充分了解假设前提的情况下就使用，得出的结果一定是不准确的。</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; 汤博士介绍，很多经管类学生在面试时会被问专业方面的问题，这就需要有一个全面的专业思维模式，这是需要在专业课学习中不断磨练的。</div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/1(2).jpg" width="460" height="244" alt="" /></div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <b>表述技巧需要提高</b></div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 本次活动中，严格规定了每队选手的回答的时间，不少团队因为没有规划好，导致放在陈述最后部分的结果没有来得及展示，比赛时间就已经结束。汤博士介绍，在真是的商业环境中，向客户做展示往往是有技巧的，一般来说，会先明确结果，随后在提出支撑依据。这样就有效避免长篇大论之后出现错误结果，或者来不及陈述结果的尴尬境界。</div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/2(2).jpg" width="460" height="280" alt="" /></div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; <b>需要有积极、钻研的精神</b></div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 本次大赛的第二名在整场比赛中给评委留下了深刻的印象。在比赛前后，中科大代表队的学生一有机会就找到评委老师询问报告、陈述中的哪些部分需要改进，这一点让汤博士以及现场所有的评委印象深刻。</div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/3(1).jpg" width="460" height="286" alt="" /></div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; 汤博士指出，无论在学校还是职场，积极的心态和主动的意识是通向成功必备素质，主动询问，主动接受，主动分析，主动更正，是很多学生从学生人转向职业人必经的道路，在职场上，没有人是&ldquo;被&rdquo;灌输知识的，所有的一切都是自己的主动争取。</div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/4(1).jpg" width="460" height="202" alt="" /></div>
+</div>
+<div style="text-align: center;"></div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(5)").addClass("selecded");
+</script>
+
+</body>
+</html>

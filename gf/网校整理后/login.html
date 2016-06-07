@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.gfedu.cn/2015/login.shtml -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>登录</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.gfedu.cn/2015/images2015/gfiphone.png">
+<link rel="shortcut icon" href="http://www.gfedu.cn/images2015/gfico.ico">
+<!--头尾的样式-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css2015/form/login.css" rel="stylesheet" type="text/css">
+
+<link href="css2015/gfschool/font/iconfont.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="script2015/jquery.min.js"></script>
+<script src="script2015/SetCommJs.js" type="text/javascript"></script>
+<script src="register_files/SetCommJs.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="script2015/loginReg/loginReg.js"></script>
+
+<!--[if lt IE 9]><script type="text/javascript" src="script2015/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="script2015/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="css2015/main.lte8.css" rel="stylesheet" type="text/css"><![endif]-->   
+
+</head>
+
+<body>
+
+<!--手机登录 start-->
+<div class="mbbox">
+<div class="mbttl"><span><a href="http://www.gfedu.cn/2015/Reg.shtml">注册</a></span><i><a href="http://www.gfedu.cn/2015/Login.shtml">&lt;</a></i><h2>登 录</h2></div>
+<form action="http://www.gfedu.cn/web/Check/CheckCurent.asp" method="post" name="LoginFormMobile" id="LoginFormMobile">
+<ul>
+<div class="login_msg_wrap">
+            	<p class="login_msg">
+            		<i class="iconfont">&#xf0002;</i>账户名与密码不匹配，请重新输入
+            	</p>
+            </div>   
+<li><input type="text" name="Field_UserName" id="Field_UserNameMobile" maxlength="20" placeholder="手机号\用户名" onblur="__changeRealName('Field_UserNameMobile');"><input type="hidden" name="S_Login" value="5">
+	<p class="noticeLR" id="noticeLR_Field_UserNameMobile"></p>
+</li>
+<li><input type="password" id="Field_PassWordMobile" name="Field_PassWord" placeholder="密码" onBlur="checkPwd1('Field_PassWordMobile');">
+	<p class="noticeLR" id="noticeLR_Field_PassWordMobile"></p>
+</li>
+<li><span><a href="">找回密码</a></span><a href="">两周内免登录</a></li>
+<li><input type="button" value="登录" onclick="CheckUserLogin('Field_UserNameMobile')"></li>
+</ul>
+</form>
+<dl>
+<dt><h3>直接使用合作账号登录</h3></dt>
+<dd><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=QQ"><i class="s1"><img src="./login_files/qqb.png" alt=""></i>QQ账号直接登录</a></dd>
+<dd><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=SINA"><i class="s2"><img src="./login_files/weibob.png" alt=""></i>新浪微博账号登录</a></dd>
+</dl>
+</div>
+<!--手机登录 end-->
+
+<!--登录 start-->
+<div class="screenbox">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="images2015/logo.png" alt=""></h2>
+    <span><a href="">登录</a><a href="">注册</a></span>
+    <ul>
+    <!--#﻿<!--menu--> 
+<li><a href="http://www.gfedu.cn/classify.aspx" class="newTopHover">课程</a></li>
+<li><a href="http://www.gfedu.cn/intro.shtml">题库</a></li>
+<li><a href="http://www.gfedu.cn/Live/List_1.shtml">直播</a></li>
+<li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+<li><a href="http://www.gfedu.cn/BookStore/">商城</a></li>
+<li><a href="http://www.gfedu.cn/app.shtml">应用</a></li>
+    <!--menu end-->
+    </ul>
+    </nav>
+    </div>
+    
+    <div class="screencontent">
+    <section class="contentbox">
+        <article class="lcontent">
+        <h2>登录金程网校</h2>
+         <form action="http://www.gfedu.cn/web/Check/CheckCurent.asp" method="post" name="LoginFormPC" id="LoginFormPC">
+        <ul>
+        	<div class="login_msg_wrap">
+            	<p class="login_msg">
+            		<i class="iconfont">&#xf0002;</i>账户名与密码不匹配，请重新输入
+            	</p>
+            </div>     
+            <li><input type="text" name="Field_UserNamePC" id="Field_UserNamePC" maxlength="20" placeholder="手机号\用户名" onblur="__changeRealName('Field_UserNamePC');"><p class="noticeLR" id="noticeLR_Field_UserNamePC"></p></li>
+            <li><input type="password" id="Field_PassWordPC" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwd1('Field_PassWordPC');">
+            	<p class="noticeLR" id="noticeLR_Field_PassWordPC"></p>
+            </li>
+            <li><span><a href="">找回密码</a></span><a href=""><input type="checkbox" checked="checked">两周内免登录</a></li>
+            <li><input type="button" value="登录" onclick="CheckUserLogin('Field_UserNamePC')"></li>
+            <li>
+            <span><a href=""><strong>注册</strong>金程帐号</a></span>
+            <dl><dt><h3>合作账直接号登录:</h3></dt><dd><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=QQ"><i class="s1"><img src="images2015/qq.png" alt=""></i></a><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=SINA"><i class="s2"><img src="images2015/weibo.png" alt=""></i></a></dd></dl></li>
+          
+        </ul>
+        </form>
+        </article>
+        <aside class="rcontent"><img src="/pic2015/fromads01.png" alt=""></aside>
+    </section>
+    </div>
+    
+    <!--#﻿<!--foot-->
+<div class="sfooter"><p>© 2014 金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有，翻版必究</p></div>
+    <!--foot end-->
+
+</div>
+<!--登录 end-->
+
+<script type="text/javascript">
+
+</script> 
+
+</body></html>

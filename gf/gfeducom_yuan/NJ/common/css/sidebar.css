@@ -1,0 +1,123 @@
+/* 乐语 */
+/* 侧边咨询 */
+.siderbar {
+  position: fixed;
+  right: 0px;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  background: #15657A;
+}
+.siderbar li {
+  float: left;
+  width: 50%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+}
+.siderbar li:first-child {
+  display: none;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.siderbar li:first-child img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.siderbar li:first-child span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 6px 0;
+  background: #76c000;
+  bottom: 0;
+}
+.siderbar li a {
+  color: #ffffff;
+  font-size: 12px;
+  float: none;
+  text-decoration: none;
+}
+.siderbar li img {
+  display: block;
+  margin: 0 auto;
+}
+.siderbar .iconsearch {
+  background: #0380c4;
+  display: none;
+}
+.siderbar .iconwrite {
+  background: #008edc;
+  display: none;
+}
+.siderbar .iconcomment {
+  border-right: 1px solid #dddddd;
+}
+.siderbar .iconcomment img {
+  padding-top: 10px;
+}
+.siderbar .iconlcok {
+  background: #31a6ed;
+  display: none;
+}
+.siderbar .iconphone {
+  border-bottom: 0;
+  display: block;
+}
+@media (min-width: 768px) {
+  .siderbar {
+    width: 60px;
+    right: 0;
+    bottom: 50%;
+    margin-bottom: -204px;
+    background: #4ab1ef;
+  }
+  .siderbar li {
+    width: 100%;
+    float: none;
+  }
+  .siderbar li:first-child {
+    display: block;
+    height: 75px;
+  }
+  .siderbar .iconsearch {
+    background: #0380c4;
+    display: block;
+  }
+  .siderbar .iconwrite {
+    background: #008edc;
+    display: block;
+  }
+  .siderbar .iconcomment {
+    background: #129beb;
+    border-right: 0;
+    display: block;
+  }
+  .siderbar .iconcomment img {
+    padding-top: 10px;
+  }
+  .siderbar .iconlcok {
+    background: #31a6ed;
+    display: block;
+  }
+}
+@media (min-width: 1380px) {
+  .siderbar {
+    width: 90px;
+    right: 30px;
+    margin-bottom: -204px;
+  }
+  .siderbar li {
+    width: 100%;
+    float: none;
+  }
+  .siderbar li:first-child {
+    height: 100px;
+  }
+}

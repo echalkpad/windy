@@ -1,0 +1,605 @@
+button{
+	outline: none;
+}
+/** banner **/
+#banner{
+	width: 100%;
+	/*max-width: 1920px;*/
+	position: relative;
+	height: 200px;
+	background-image: url(../../pic2015/live/banner640.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: 0 auto;
+}
+.banner_text{
+	color: #fff;
+	box-sizing: border-box;
+	padding: 0 10%;
+	text-align: center;
+}
+.banner_text p{
+	text-align: left;
+}
+.banner_text h3{
+	font-size: 18px;
+	padding: 20px 0;
+}
+.banner_text a{
+	margin: 0 auto;
+	margin-top: 20px;
+	display: block;
+	width: 86px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #fff;
+	border-radius: 19px;
+	color: #fff;
+	font-size: 12px;
+}
+.arrow_wrap{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-top: 6px;
+	margin-left: 4px;
+	border: 1px solid #fff;
+	border-radius: 24px;
+	position: relative;
+	vertical-align: middle;
+	top: -4px;
+}
+.arrow_right {
+	display: inline-block;
+    width:0; 
+    height:0; 
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    border-top:5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+}
+
+/*最新直播*/
+#newPlay,#hisPlay{
+	padding: 0 20px;
+}
+#newPlay .title,#hisPlay .title{
+	width: 100%;
+	height: 50px;
+	background-image: url(../../images2015/live/dashed_point.jpg);
+	background-repeat: repeat-x;
+	background-position: left center;
+	text-align: center;
+	font-size: 18px;
+}
+#newPlay .title span,#hisPlay .title span{
+	display: inline-block;
+	width: 112px;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fff;
+}
+.newPlay_list li{
+	width: 100%;
+	text-align: center;
+	padding: 30px 10px;
+	box-sizing: border-box;
+	display: none;
+}
+.newPlay_list li.mbshow{
+	display: block;
+}
+.newPlay_list li span{
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+}
+.newPlay_list li span img{
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+}
+.newPlay_list li span i{
+	display: none;
+    border: 2px solid #FFF;
+	width: 28px;
+	height: 28px;
+	border-radius: 15px;
+	background-color: #4aacd1;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: -6px;
+}
+.newPlay_list li span.active i{
+	display: block;
+}
+.newPlay_list li span i em{
+	position: absolute;
+	width: 87px;
+	height: 28px;
+	top: 0;
+	left: 0;
+	background-image: url(../../images2015/live/track.png);
+	background-repeat: no-repeat;
+	-webkit-animation: scrollL 4s linear infinite;
+}
+
+@-webkit-keyframes scrollL{
+	from{
+		left: 0px;
+	}
+	to{
+		left: -59px;
+	}
+}
+.newPlay_list .people_num{
+	height: 50px;
+	line-height: 50px;
+	color: #4aacd1;
+	font-size: 16px;
+}
+.newPlay_list .people_num i{
+	font-size: 20px;
+}
+.newPlay_list .lesson{
+	font-size: 16px;
+	font-weight: bolder;
+	width: 240px;
+	height: 24px;
+	margin: 0 auto;
+	line-height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newPlay_list .nowin{
+	display: block;
+	width: 148px;
+	height: 40px;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 31px;
+	color: #4aacd1;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+.newPlay_list .nowin:hover,.hisPlay_list .nowlook:hover{
+	color: #FFF;
+	background-color: #4aacd1;
+	text-decoration: none;
+}
+/*历史回顾*/
+.hisPlay_list li{
+	width: 100%;
+	text-align: center;
+	padding: 30px 25px;
+	display: none;
+	box-sizing: border-box;
+}
+.hisPlay_list li.mbshow{
+	display: block;
+}
+.hisPlay_list .lesson{
+	font-weight: bolder;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	height: 34px;
+	line-height: 34px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hisPlay_list .lessonInfo{
+	font-size: 14px;
+	text-align: left;
+	margin-bottom: 20px;
+	height: 80px;
+	color: #999999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+.hisPlay_list .nowlook{
+	display: block;
+	width: 148px;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 31px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #4aacd1;
+	margin: 0 auto;
+}
+
+/*金融类*/
+.other{
+	padding: 20px;
+	background-color: #f8f8f8;
+}
+.other .title{
+	width: 300px;
+	height: 16px;
+	line-height: 16px;
+	padding: 10px 0
+}
+.other .title dt,.other .title dd{
+	float: left;
+	width: 60px;
+}
+.other .title dt{
+	font-weight: bolder;
+}
+.other .title dd{
+	text-align: center;
+	border-right: 1px solid #dbcfd1;
+	box-sizing: border-box;
+	position: relative;
+	cursor: pointer;
+	font-size: 12px;
+}
+.other .uline{
+	display: none;
+	position: absolute;
+	height: 10px;
+	width: 50px;
+	border-bottom: 2px solid #4aacd1;
+	left: 5px;
+	bottom: -10px;
+}
+.other .title dd.active .uline{
+	display: block;
+}
+.other .title dd.bn{
+	border-right: none;
+}
+.other .finance_list_wrap{
+	display: none;
+}
+.other div.active{
+	display: block;
+}
+.finance_list li{
+	width: 278px;
+	border: 1px solid #e1e1e1;
+	margin: 0 auto;
+	margin-top: 20px;
+	color: #999999;
+	display: none;
+	border-radius: 2px;
+}
+.finance_list li:hover{
+	background: #FFFFFF;
+	border: 1px solid #61C9E0;
+	box-shadow: 0px 3px 2px 0px #E3E8EA;
+}
+.finance_list li:hover .imgs img{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+.finance_list li.mbshow{
+	display: block;
+}
+.finance_list li .img_wrap{
+	width: 278px;
+	height: 186px;
+	position: relative;
+}
+.finance_list li .imgs{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #999;
+}
+.finance_list li .imgs img{
+	width: 100%;
+	height: 100%;
+}
+.finance_list li .mask{
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	background-color: #000;
+	opacity: 0.5;
+	left: 0;
+	bottom: 0;
+	line-height: 30px;
+	text-align: right;
+}
+.finance_list li .mask_text{
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	line-height: 30px;
+	right: 4px;
+	color: #fff;
+}
+.finance_list li h4{
+	padding: 4px;
+	font-weight: bolder;
+	font-size: 16px;
+	width: 270px;
+	height: 28px;
+	overflow: hidden;
+	line-height: 28px;
+	color: #000;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.finance_list li h4 a:hover{
+	color: #4aacd1;
+}
+.finance_list li .info{
+	font-size: 12px;
+	padding: 8px;
+	height: 80px;
+	overflow: hidden;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+.finance_list li .teacher{
+	float: left;
+	height: 16px;
+	padding: 8px;
+}
+.finance_list li .subscribe{
+	float: right;
+	height: 16px;
+	text-align: right;
+	padding: 8px;
+}
+.more{
+	display: block;
+	width: 280px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #999;
+	text-align: center;
+	color: #fff;
+	margin: 10px auto;
+}
+.color4aacd1{
+	color: #4aacd1;
+}
+@media (min-width: 640px){
+	#banner{
+		background-image: url(../../pic2015/live/banner.jpg);
+	}
+	#banner{
+		height: 300px;
+	}
+	.banner_text h3{
+		font-size: 38px;
+	}
+	.banner_text p{
+		text-align: center;
+	}
+	.newPlay_list li{
+		display: block;
+		float: left;
+		width: 50%;		
+	}	
+	.hisPlay_list li{
+		display: block;
+		float: left;
+		width: 50%;	
+		overflow: hidden;	
+	}
+	/* .other .title{
+		width: 500px
+	}
+	#ractitioners dd{
+		width: 100px;
+	} */
+	.other .title{
+		width: 500px;
+		height: 16px;
+		line-height: 16px;
+		font-size: 16px;
+		margin: 10px 0
+	}
+	.other .title dt{
+		width: 90px;
+	}
+	.other .title dd{
+		width: 90px;
+	}
+	.other .uline{
+		width: 80px;
+	}
+	.other ul{
+		width: 600px;
+		margin: 0 auto;
+	}
+	.more_wrapper{
+		width: 600px;
+		margin: 0 auto;
+	}
+	.other ul li:nth-child(1),.other ul li:nth-child(2){
+		display: block;
+		float: left;
+		margin: 10px;
+	}
+	.more{
+		width: 64px;
+		height: 32px;
+		line-height: 32px;
+		color: #FFF;
+		background-color: #4aacd1;
+		margin-right: 2%;
+	}
+	.more_inner{
+		display: none;
+	}
+}
+
+@media (min-width: 1000px){
+	#banner{
+		height: 400px;
+	}
+	.banner_text{
+		padding: 60px 0;
+	}
+	.banner_text h3{
+		font-size: 58px;
+	}
+	.banner_text p{
+		font-size: 24px;
+	}
+	.banner_text a{
+		margin-top: 20px;
+		width: 198px;
+		height: 68px;
+		line-height: 68px;
+		border: 1px solid #fff;
+		border-radius: 35px;
+		color: #fff;
+		font-size: 20px;
+	}
+	.newPlay_list li{
+		display: block;
+		float: left;
+		width: 25%;		
+	}	
+	.hisPlay_list li{
+		display: block;
+		float: left;
+		width: 25%;		
+	}
+	/* .other li h4{
+		width: 218px;
+	} */
+	.other ul{
+		width: auto;
+	}
+	.more_wrapper{
+		width: auto;
+	}
+	.other ul li{
+		float: left;
+		display: block;
+		width: 218px;
+		margin: 10px;
+	}
+	.finance_list li h4{
+		width: 210px;
+
+	}
+	.finance_list li .img_wrap{
+		width: 218px;
+		height: 136px;
+	}
+	.more{
+		width: 64px;
+		height: 32px;
+		line-height: 32px;
+		color: #FFF;
+		background-color: #4aacd1;
+		margin-right: 2%;
+	}
+	.more_inner{
+		display: none;
+	}
+
+	/*最新直播*/
+	#newPlay,#hisPlay,.other{
+		padding: 0 10px;
+		width: 980px;
+		margin: 0 auto;
+	}
+/* 	.newPlay_list li,.hisPlay_list li{
+	width: 240px;
+	padding: 10px;
+} */
+	
+
+	/*金融类*/
+	.otherWrapper{
+		background-color: #f8f8f8;
+		width: 100%;
+	}
+	.other .title{
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 1280px){
+	#banner{
+		height: 500px;
+	}
+	.banner_text{
+		padding: 60px 0;
+	}
+	.banner_text h3{
+		font-size: 68px;
+	}
+	.banner_text p{
+		font-size: 24px;
+	}
+	.banner_text a{
+		margin-top: 20px;
+		width: 198px;
+		height: 68px;
+		line-height: 68px;
+		border: 1px solid #fff;
+		border-radius: 35px;
+		color: #fff;
+		font-size: 20px;
+	}
+	.other ul li:nth-child(1), .other ul li:nth-child(2){
+		margin: 10px 16px;
+	}
+	.other ul li{
+		width: 278px;
+		margin: 10px 16px;
+	}
+	.finance_list li .img_wrap{
+		width: 278px;
+		height: 186px;
+	}
+	.finance_list li h4{
+		width: 270px;
+	}
+	.more{
+		width: 64px;
+		height: 32px;
+		line-height: 32px;
+		color: #FFF;
+		background-color: #4aacd1;
+		margin-right: 2%;
+	}
+	.more_inner{
+		display: none;
+	}
+
+	/*最新直播*/
+	#newPlay,#hisPlay,.other{
+		padding: 0 10px;
+		width: 1260px;
+		margin: 0 auto;
+	}
+	
+
+	/*金融类*/
+	.otherWrapper{
+		background-color: #f8f8f8;
+		width: 100%;
+	}
+	.other .title{
+		margin-top: 0;
+	}
+}

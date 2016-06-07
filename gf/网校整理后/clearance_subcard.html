@@ -1,0 +1,301 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>科目关卡</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+                               <link rel="shortcut icon" href="images2015/gfico.ico"-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css2015/tongguan/subcard.css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script2015/html5shiv.js"></script>
+    <script type="text/javascript" src="http://www.gfedu.cn/script2015/respond.min.js"></script>
+    <script type="text/javascript">
+        alert('IE版本太低，请升级后使用');
+    </script>
+<![endif]-->
+</head>
+	<body>
+		<!--phonenav start-->
+		<div class="mbbody">
+		<div class="mbttl"><i><a href=""></a></i><h2>通关</h2></div>
+		</div>
+		<!--phonenav end-->
+		<!--手机title start-->
+		<div class="mbtitle">
+		    <div class="mbnav">
+						<a href="#menu" class="glyphicon glyphicon-th-large"><img src="images2015/phoneNav.png"  alt=""/></a><input type="hidden" id="divdiscon" name="divdiscon" value="0">
+				</div>
+		</div>
+		<nav id="menu" class="mbnavadd">
+			<h2><a href=""><i><img src="images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+			<ul>
+				<li class="Selected"><a href="">课程</a></li>
+			    <li><a href="">题库</a></li>
+			    <li><a href="">直播</a></li>
+			    <li><a href="">资讯</a></li>
+			    <li><a href="">商城</a></li>
+			    <li><a href="">应用</a></li>
+			</ul>
+		</nav>
+		<!--手机title end-->
+		
+		<!--webnav start-->
+		<div class="webbody">
+		    <div class="gtopttl">
+		    <nav>
+		    <h2><img src="images2015/logo.png"  alt=""/></h2>
+		    <ul>
+			    <li><a href="">课程</a></li>
+			    <li><a href="">题库</a></li>
+			    <li><a href="">直播</a></li>
+			    <li><a href="">资讯</a></li>
+			    <li><a href="">商城</a></li>
+			    <li><a href="">应用</a></li>
+		    </ul>
+			<span><img class="xy_pic" src="images2015/tongguan/pic-4.png"/><span id="msg" class="xy_name">肖洋<strong>v</strong></span></span>
+		    </nav>
+		    </div>
+           
+		</div>
+		<!--webnav end-->
+		
+        <!-- 导航栏信息下拉框 -->
+        <div class="ziliao" id="ziliao_msg">
+            <div class="msg_xy">
+                <span class="arrow"></span>
+                <ul>
+                    <a href=""><li>我的课程</li></a>
+                    <a href=""><li>我的课程</li></a>
+                    <a href=""><li>我的课程</li></a>
+                </ul>
+            </div>
+        </div>
+        
+		<!--webmain start-->
+        <div class="point">跳过关卡，直接测试</div>
+		<div class="webmain">
+			<div class="kem_msg clear">
+            	<div class="box subject">科目框架</div>
+                <div class="box study">
+                	<ul>
+                    	<li class="video"><span class="video_pic"><img src="images2015/tongguan/video_gray.png"/></span><span>视屏学习</span></li>
+                        <li class="edit"><span class="edit_pic"><img src="images2015/tongguan/editW.png"/></span><span>课后练习</span></li>
+                        <li class="search"><span class="search_pic"><img src="images2015/tongguan/search.png"/></span><span>知识检测</span></li>
+                    </ul>
+                </div>
+                <div class="box important">
+                	<ul>
+                    	<li><span>重要：</span><span class="xin_z"><span class="xin_color">★★</span>★</span></li>
+                        <li><span>难度：</span><span class="xin_z"><span class="xin_color">★★</span>★</span></li>
+                        <li><span>时间：</span><span>25分</span></li>
+                    </ul>
+                </div>
+                <a href=""><div class="box enter">进入关卡</div></a>
+            </div>
+	
+    		<!--课程学习-->
+            <div class="subject_Stu clear">
+            	<ul>
+                	<li id="one_li">
+                    	<p class="color" onClick="display1();" ><img src="images2015/tongguan/unlock.png"/><p>
+                        <p class="txt">Code of Ethics</p>
+                        <p class="xin"><span class="xin_pass">★★</span>★</p>
+                    </li>
+                    
+                    <li id="two_li">
+                    	<p class="color" onClick="display1()"><img src="images2015/tongguan/lock.png"/><p>
+                        <p class="txt">Guidance for Standards I-VII</p>
+                    </li>
+                    
+                    <li id="three_li">
+                    	<p class="color" onClick="display1()"><img src="images2015/tongguan/lock.png"/><p>
+                        <p class="txt">GIPS</p>
+                    </li>
+                    
+                    <li id="four_li">
+                    	<p class="color color_purple" onClick="display1()"><img src="images2015/tongguan/lock.png"/><p>
+                        <p class="txt">科目测试、讲解</p>
+                    </li>
+					<!--li id="">
+                    	<p class="color color_purple" onClick="display1()"><img src="images2015/tongguan/lock.png"/><p>
+                        <p class="txt">科目测试、讲解</p>
+                    </li-->
+                </ul>
+            </div>
+            
+            <!--弹窗Start-->
+            <div class="open_window">
+            	<!--first open window-->	
+                <div class="open_window1" id="one_li_window">
+       				<p class="close_window" onClick="disappear1('one_li')"><span>&times;</span></p>
+                	<div class="window_content">
+                    	<p class="window_title"  >本章主要涉及的是Ethics的第一个重要问题，包含5个知识点</p>
+                        <p class="first">&or;&nbsp;&nbsp;Code of Ethics</p>
+                        <p class="one"><span class="circle"><span class="ok">&radic;</span></span><span class="title">Proceeding</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="grade">98</span>分</span></p>
+                        <p class="two"><span class="circle"><img class="no" src="images2015/tongguan/no.png"/></span><span class="title">The Hearing Panel</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><a href="#"><span class="enter"><span class="enter_text">进入关卡</span></span></a></span></p>
+                        <p class="three"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">6 Code of Ethics</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                        <p class="four"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">Proceeding</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic1"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                    </div>
+                </div>
+
+                <!--second open window-->	
+                <div class="open_window2" id="open_window2">
+                	<p class="close_window" onClick="disappear1('open_window2','two_li')"><span>&times;</span></p>
+                	<div class="window_content">
+                    	<p class="window_title">本章主要涉及的是Ethics的第一个重要问题，包含5个知识点</p>
+                        <p class="first">&or;&nbsp;&nbsp;Guidance for Standards I-VII</p>
+                        <p class="one"><span class="circle"><span class="ok">&radic;</span></span><span class="title">Proceeding</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="grade">98</span>分</span></p>
+                        <p class="two"><span class="circle"><img class="no" src="images2015/tongguan/no.png"/></span><span class="title">The Hearing Panel</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><a href="#"><span class="enter"><span class="enter_text">进入关卡</span></span></a></span></p>
+                        <p class="three"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">6 Code of Ethics</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                        <p class="four"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">Proceeding</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic1"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                    </div>
+                    
+                </div>
+                
+                <!--third open window-->	
+                <div class="open_window3" id="open_window3">
+                	<p class="close_window" onClick="disappear1('open_window3','three_li')"><span>&times;</span></p>
+                	<div class="window_content">
+                    	<p class="window_title">本章主要涉及的是Ethics的第一个重要问题，包含5个知识点</p>
+                        <p class="first">&or;&nbsp;&nbsp;GIPS</p>
+                        <p class="one">
+                            <span class="circle"><span class="ok">&radic;</span></span>
+                            <span class="title">Proceeding</span>
+                            <span class="difficult">（难度：<span class="xin_color">★</span>★★）</span>
+                            <span class="right"><span class="grade">98</span>分</span>
+                        </p>
+                        <p class="two">
+                            <span class="circle"><img class="no" src="images2015/tongguan/no.png"/></span>
+                            <span class="title">The Hearing Panel</span>
+                            <span class="difficult">（难度：<span class="xin_color">★</span>★★）</span>
+                            <span class="right"><a href="#"><span class="enter"><span class="enter_text">进入关卡</span></span></a></span>
+                        </p>
+                        <p class="three">
+                            <span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span>
+                            <span class="title">6 Code of Ethics</span>
+                            <span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span>
+                            <span class="right"><span class="pic"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span>
+                        </p>
+                        <p class="four">
+                            <span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span>
+                            <span class="title">Proceeding</span>
+                            <span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span>
+                            <span class="right"><a href="#"><span class="to_recruit"><span class="enter_text">重新挑战</span></span></a></span>
+                        </p>
+                    </div>
+                </div>
+                <!--four open window-->
+                <!-- <div class="open_window4 last" id="open_window4" >
+                    <p class="close_window" onClick="disappear1('open_window4','four_li')"><span>&times;</span></p>
+                    <div class="window_content">
+                        <p class="window_title">Code of Ethics</p>
+                        <article>这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字</article>
+                        <span class="enter_text">进入关卡</span>
+                    </div>
+                </div> -->
+                <div class="open_window4 again last" id="open_window4">
+                   <p class="close_window" onClick="disappear1('open_window4','four_li')"><span>&times;</span></p>
+                    <div class="window_content">
+                        <div>本课成绩：<i class="grade_yellow">★★</i><i>★</i></div>
+                        <ul>
+                            <li>答对数：<br><span><strong>22</strong>/共67题</span></li>
+                            <li>总用时：<br><span><strong>55</strong>分钟</span></li>
+                            <li>击败考生：<br><span><strong>30</strong>%</span></li>
+                        </ul>
+                        <span class="enter_text">重新挑战</span>
+                    </div>
+                </div>
+
+                <!--last open window-->
+                <div class="open_window5" id="open_window5">
+                	<p class="close_window" onClick="disappear1('open_window5','five_li')"><span>&times;</span></p>
+                	<div class="window_content">
+                    	<p class="window_title">本章主要涉及的是Ethics的第一个重要问题，包含5个知识点</p>
+                        <p class="first">&or;&nbsp;&nbsp;科目测试、讲解</p>
+                        <p class="one"><span class="circle"><span class="ok">&radic;</span></span><span class="title">Proceeding</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="grade">98</span>分</span></p>
+                        <p class="two"><span class="circle"><img class="no" src="images2015/tongguan/no.png"/></span><span class="title">The Hearing Panel</span><span class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><a href="#"><span class="enter"><span class="enter_text">进入关卡</span></span></a></span></p>
+                        <p class="three"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">6 Code of Ethics</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                        <p class="four"><span class="circle"><img src="images2015/tongguan/lock_ico.png"/></span><span class="title">Proceeding</span><span  class="difficult">（难度：<span class="xin_color">★</span>★★）</span><span class="right"><span class="pic1"><img src="images2015/tongguan/video_gray.png"/></span><span class="time">25:00</span></span></p>
+                    </div>
+                </div>
+
+            </div>
+            <!--弹窗End-->
+
+		</div>
+		<!--webmain end-->
+
+		<!--手机底部 start-->
+		<div class="mbfooter">
+		<ul>
+		<li><a href="">登录</a></li>
+		<li><a href="">注册</a></li>
+		<li><a href="">下载APP</a></li>
+		<li><a href="">用户反馈</a></li>
+		</ul>
+		<dl>
+		<dt>400-700-9596 </dt>
+		<dd>（每日9:00-21:00免长途费 ）</dd>
+		</dl>
+		<p>©2014金程网校保留所有权利 </p>
+		</div>
+		<div class="gotop"><a href="#"><strong>&and;</strong>TOP</a></div>
+		<!--手机底部 end-->
+		
+		<!--webfoot start-->
+		<footer>
+		  <div class="newlinks">
+		    <dl>
+		    <dt>新手指南</dt>
+		    <dd><a href="#">如何注册会员</a></dd>
+		    <dd><a href="#">如何购买课程</a></dd>
+		    <dd><a href="#">如何观看课程</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>学习须知</dt>
+		    <dd><a href="#">网校学习方式</a></dd>
+		    <dd><a href="#">学习效果如何保障</a></dd>
+		    <dd><a href="#">学习条件</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>支付方式</dt>
+		    <dd><a href="#">网上支付</a></dd>
+		    <dd><a href="#">开通支付宝</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>关于金程</dt>
+		    <dd><a href="#">关于我们</a></dd>
+		    <dd><a href="#">联系我们</a></dd>
+		    <dd><a href="#">加入我们</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>400 - 700 - 9596</dt>
+		    <dd>（每日9:00-21:00    免长途费）</dd>
+		    <dd><img src="images2015/tongguan/bottomwx.png"></dd>
+		    </dl>
+		</div>
+		<div class="copyright">
+		<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+		    </div>
+		</footer>
+		<!--webfoot end-->
+    <script type="text/javascript" src="script2015/jquery.min.js"></script>
+    <script type="text/javascript" src="script2015/tonguan/subcard.js"></script>
+	<script type="text/javascript" src="script2015/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('nav#menu').mmenu();
+		});
+	</script>
+       
+        
+	</body>
+</html>

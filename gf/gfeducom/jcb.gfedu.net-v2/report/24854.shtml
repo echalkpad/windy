@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2015年“金程杯”全国大学生会计案例大赛复赛截止通知</h3>
+            <span>时间：2015/11/28 17:45:01</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div style="text-align: left;">
+<div>各位复赛选手你们好！</div>
+<div><br />
+截止至今天11月28日18：00点整，2015年&ldquo;金程杯&rdquo;会计案例大赛复赛分析案例提交阶段正式结束， 132个团队入围第四届&ldquo;金程杯&rdquo;大赛复赛，目前为止共收到来自复赛团队107份答卷，大赛组委会工作人员及复赛评卷专家、老师正在紧张统计阅卷评分当中，决赛筹备工作同步启动，组委会向大家承诺会继续给各位参赛选手一个公平、公正、透明的的比赛环境，这也是我们组委会的赛事宗旨。</div>
+<div><br />
+进入决赛名单的通知会在12月5日同步公布在金程杯官网及金程杯微信公众平台，请继续关注更多赛事资讯。</div>
+<div><br />
+<b>金程杯大赛QQ交流群：86885101</b></div>
+<div><b><br />
+金程杯大赛官方微信：gfedu2015<br />
+<br />
+</b></div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/金程杯二维码(5).jpg" width="280" height="280" alt="" /></div>
+<div><br />
+2015年&ldquo;金程杯&rdquo;会计案例大赛组委会</div>
+<div><br />
+<b>组委会热线：021-61323513 &nbsp; 15200510088</b></div>
+<div><br />
+金程杯大赛邮箱：jcb@gfedu.net</div>
+<div><br />
+金程教育官网网址: www.gfedu.net</div>
+<div><br />
+金程圆梦计划网址: jcb.gfedu.net</div>
+<div><br />
+上海金程教育培训有限公司</div>
+<div><br />
+地址：松花江路2539号复旦科技大厦1号楼11楼（200437）</div>
+</div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

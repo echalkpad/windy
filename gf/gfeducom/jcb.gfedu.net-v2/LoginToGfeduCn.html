@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript">
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+</head>
+<body>
+    <form action="http://www.gfedu.cn/web/Check/CheckCurent.asp" method="post" name="LoginForm" id="LoginForm">
+        <input type="hidden" id="Field_UserName" name="Field_UserName"/>
+        <input type="hidden" id="Field_PassWord" name="Field_PassWord"/>
+        <input type="hidden" id="S_Login" name="S_Login" value="2" />
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Field_UserName").val(GetQueryString("user"));
+            $("#Field_PassWord").val(GetQueryString("pwd"));
+            document.LoginForm.submit();
+        });
+    </script>
+</body>
+</html>

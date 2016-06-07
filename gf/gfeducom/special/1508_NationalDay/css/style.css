@@ -1,0 +1,619 @@
+.proheader .protitle h1{
+    color: #09a9ac;
+}
+/************* banner ******************/
+.banner-wrap{
+    width: 100%;
+    height: 308px;
+    background-color: #264967;
+    background-image: url(../images/halo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#banner{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/banner-bg-text.png);
+    background-repeat: no-repeat;
+    background-size: 120% 80%;
+    background-position: center center;
+    position: relative;
+}
+#banner .star{
+    display: none;
+    position: absolute;
+    top: 254px;
+    left: 456px;
+    opacity: 0;
+    -webkit-animation : starLight 1s infinite alternate;
+}
+@-webkit-keyframes 'starLight'{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/************** Countdown start *********************/
+.countdown-wrap{
+    padding-bottom: 20px;
+}
+#countdown {
+    margin-top: 26px;
+    width: 100%;
+    height: 108px;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+}
+.triangle-topright{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 36px solid #e60012;
+    border-left: 16px solid transparent;
+}
+#countdown .text{
+    width: 180px;
+    margin: 0 auto;
+    margin-top: -1px;
+}
+#countdown .text .cent{
+    width: 146px;
+    height: 36px;
+    line-height: 36px;
+    float: left;
+    background-color: #e60012;
+    font-size: 16px;
+    color: #fff100;
+    text-align: center;
+    font-weight: bold;
+}
+.triangle-topleft{
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 36px solid #e60012;
+    border-right: 16px solid transparent;
+}
+#countdown .times{
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+#countdown .times .day-wrap{
+    margin-right: 20px;
+}
+#countdown .times-list{
+    float: left;
+}
+#countdown .times-list .nums{
+    float: left;
+}
+#countdown .times-list .nums-text{
+    float: left;
+    font-size: 16px;
+    padding-top: 26px;
+}
+#countdown .times-list .nums i{
+    float: left;
+    width: 38px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 44px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 3px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ef8143), to(#e94b22));
+}
+#countdown .minutes-wrap{
+    display: none;
+}
+#countdown .seconds-wrap{
+    display: none;
+}
+.countdown-wrap .cont{
+    margin-top: 36px;
+}
+.countdown-wrap .cont-list{
+    width: 310px;
+    padding-top: 10px;
+    height: 178px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.countdown-wrap .cont-list li{
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 50px;
+    background-image: url(../images/cha.png);
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+}
+.countdown-wrap .cont-list li b{
+    font-size: 22px;
+    color: #000;
+}
+.countdown-wrap .dui li{
+    background-image: url(../images/dui.png);
+    background-position: 12px 10px;
+}
+.pics{
+    position: relative;
+    width: 310px;
+    height: 212px;
+    margin: 10px auto;
+}
+.pics img{
+    position: absolute;
+}
+.pics .learn-slag{
+    width: 94px;
+    height: 66px;
+    top: 0;
+    right: 0;
+}
+.pics .vs{
+    width: 130px;
+    height: 176px;
+    top: 50%;
+    left: 50%;
+    margin-left: -65px;
+    margin-top: -88px;
+}
+.pics .super-scholar{
+    width: 88px;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+}
+/********************** order ****************************/
+.give-wrap{
+    display: none;
+}
+#order{
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background-image: url(../images/order-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.order-bg-text{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 12%;
+}
+.order-btn{
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+    width: 60px;
+    height: 18px;
+    background-color: #fff;
+    color: #102b46;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+.order-bottom-line{
+    width: 100%;
+    height: 10px;
+    background-color: #102b46;
+}
+.GARP{
+    display: none;
+}
+.three-point{
+    display: none;
+}
+
+/********************* sprint **************************/
+.sprint-wrap{
+    width: 100%;
+    /*background-color: #dcdcdc;*/
+    padding-top: 36px;
+}
+#sprint{
+    width: 100%;
+}
+#sprint .title-wrap{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #000;
+}
+#sprint .title-inner{
+    width: 90%;
+    height: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: -8px;
+}
+#sprint .title-text{
+    width: 90%;
+    padding-top: 4px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    /*background-color: #dcdcdc;*/
+    margin: 0 auto;
+}
+#sprint .title-text p{
+    text-align: center;
+}
+
+.five-point{
+    width: 310px;
+    margin: 0 auto;
+}
+.five-point li{
+    width: 144px;
+    height: 130px;
+    border: 1px solid #000;
+    float: left;
+    margin: 20px 4px;
+}
+.five-point .img-wrap{
+    width: 116px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: -20px;
+    background-color: #fff;
+    text-align: center;
+}
+.five-point li img{
+    width: 70px;
+}
+.five-point li h4{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.five-point li p{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+.five-point li a{
+    display: none;
+}
+
+footer {
+    background-image: url(../images/footerbg.png);
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?kabozi');
+    src: url('fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'), url('fonts/icomoon.woff?kabozi') format('woff'), url('fonts/icomoon.ttf?kabozi') format('truestype'), url('fonts/icomoon.svg?kabozi#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (min-width: 400px) {
+    #order{
+        height: 280px;
+    }
+}
+@media (min-width: 500px) {
+    #order{
+        height: 360px;
+    }
+}
+@media (min-width: 640px) {
+    .countdown-wrap{
+        padding-top: 50px;
+
+    }
+    #countdown{
+        width: 90%;
+        height: 110px;
+        border: 2px dashed #000;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    #countdown .times{
+        width: 480px;
+        text-align: center;
+    }
+    #countdown .minutes-wrap{
+        display: block;
+    }
+    #countdown .seconds-wrap{
+        display: block;
+    }
+    .countdown-wrap .cont{
+        width: 90%;
+        margin: 40px auto;
+    }
+    .countdown-wrap .cont-list{
+        float: left;
+    }
+    .pics{
+        clear: both;
+    }
+    .pics .learn-slag{
+        width: auto;
+        height: auto;
+        top: -140px;
+        right: -50%;
+    }
+    .pics .super-scholar{
+        width: auto;
+        height: auto;
+        bottom: -180px;
+        left: -50%;
+    }
+    .countdown-wrap .dui{
+        float: right;
+    }
+    .banner-wrap{
+        height: 582px;
+    }
+    #order{
+        height: 410px;
+    }
+    .GARP{
+        display: block;
+        width: 540px;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 22px;
+        margin-bottom: 30px;
+        color: #000;
+    }
+    .GARP p{
+        line-height: 16px;
+        font-weight: bold;
+    }
+    .three-point{
+        width: 640px;
+        margin: 0 auto;
+    }
+    .three-point li{
+        width: 156px;
+        height: 72px;
+        background-image: url(../images/three-point-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+        margin: 0 8px;
+        color: #fff;
+        padding-left: 40px;
+        font-size: 13px;
+        position: relative;
+    }
+    .three-point li h3{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .three-point li p{
+        line-height: 20px;
+    }
+    .three-point .star{
+        position: absolute;
+        top: 2px;
+        left: -2px;
+        opacity: 0;
+        -webkit-animation : starLight 1s infinite alternate;
+    }
+    .order-bottom-line{
+        height: 28px;
+    }
+    .order-btn{
+        width: 84px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    #sprint .title-inner{
+        height: 34px;
+        margin-top: -17px;
+    }
+    #sprint .title-text{
+        height: 24px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .five-point{
+        width: 560px;
+    }
+    .five-point li{
+        width: 174px;
+        height: 190px;
+    }
+    .five-point li.list-3{
+        margin-left: 80px;
+        margin-right: 20px;
+    }
+    .five-point li.list-4{
+        margin-left: 20px;
+        margin-right: 80px;
+    }
+
+}
+@media (min-width: 900px) {
+    .pics .vs{
+        width: auto;
+        height: auto;
+        margin-left: -126px;
+        margin-top: -170px;
+    }
+}
+@media (min-width: 1200px) {
+    .banner-wrap{
+        height: 700px;
+    }
+    #banner{
+        width: 1200px;
+        margin: 0 auto;
+        background-size: 865px 517px;
+    }
+    #banner .star{
+        display: block;
+    }
+    #countdown{
+        width: 1010px;
+        height: 180px;
+        border-radius: 30px;
+    }
+    #countdown .text{
+        width: 290px;
+    }
+    .triangle-topright{
+        border-top: 60px solid #e60012;
+    }
+    #countdown .text .cent{
+        width: 240px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 32px;
+    }
+    .triangle-topleft{
+        border-top: 60px solid #e60012;
+    }
+    #countdown .times{
+        width: 820px;
+    }
+    #countdown .times-list .nums i{
+        width: 60px;
+        height: 78px;
+        line-height: 78px;
+        border-radius: 10px;
+        font-size: 58px;
+    }
+    #countdown .times-list .nums-text{
+        padding-top: 40px;
+        font-size: 28px;
+    }
+    #countdown .times-list{
+        margin-right: 40px;
+    }
+    .countdown-wrap .cont{
+        width: 1080px;
+    }
+    .order-bg-text{
+        width: auto;
+        margin-top: 40px;
+    }
+    .three-point{
+        display: block;
+        width: 900px;
+    }
+    .three-point li{
+        width: 220px;
+        padding-left: 50px;
+        height: 100px;
+    }
+    .three-point li h3{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .three-point li p{
+        line-height: 24px;
+        font-size: 16px;
+    }
+    #order{
+        height: 510px;
+    }
+    .GARP{
+        width: 620px;
+        font-size: 14px;
+        margin-top: 26px;
+        margin-bottom: 60px;
+    }
+    .order-btn-wrap{
+        width: 1200px;
+        height: 40px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 74px;
+    }
+    .order-btn{
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 26px;
+    }
+    .sprint-wrap{
+        padding-top: 70px;
+    }
+    #sprint .title-inner{
+        height: 50px;
+        margin-top: -25px;
+    }
+    #sprint .title-text{
+        height: 50px;
+        font-size: 40px;
+    }
+    #sprint .title-wrap{
+        height: 50px;
+        padding-top: 10px;
+        border: none;
+        background-image: url(../images/title-wrap-bg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    #sprint .title-inner{
+        width: 800px;
+        border: none;
+        margin-top: 0px;
+    }
+    #sprint .title-text{
+        width: 100%;
+    }
+    .five-point{
+        width: 1200px;
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+    .five-point li{
+        width: 230px;
+        height: 318px;
+        margin: 0 4px !important;
+    }
+    .five-point .img-wrap{
+        width: 180px;
+        height: 140px;
+    }
+    .five-point li img{
+        width: auto;
+    }
+    .five-point li h4{
+        font-size: 18px;
+    }
+    .five-point li p{
+        font-size: 18px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .five-point li a{
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: #006d94;
+        margin-top: 50px;
+        color: #fff;
+    }
+}

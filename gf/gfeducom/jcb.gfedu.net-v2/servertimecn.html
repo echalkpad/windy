@@ -1,0 +1,133 @@
+﻿<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Server Time</title>
+<script lang="javascript" type="text/javascript">
+    var xmlHttp = false;
+    //获取服务器时间
+    try {
+        xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+        try {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (e2) {
+            xmlHttp = false;
+        }
+    }
+
+    if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+        xmlHttp = new XMLHttpRequest();
+    }
+
+    xmlHttp.open("GET", "http://time.nist.gov/", false);
+    xmlHttp.setRequestHeader("Range", "bytes=-1");
+    xmlHttp.send(null);
+
+    severtime = new Date(xmlHttp.getResponseHeader("Date"));
+
+    //获取服务器日期
+    var year = severtime.getFullYear();
+    var month = severtime.getMonth() + 1;
+    var date = severtime.getDate();
+    //获取服务器时间
+    var hour = severtime.getHours();
+    var minu = severtime.getMinutes();
+    var seco = severtime.getSeconds();
+    var week = ' 星期' + '日一二三四五六'.charAt(severtime.getDay())
+    //格式化输出服务器时间
+    function getSeverTime() {
+        seco++;
+        if (seco == 60) {
+            minu += 1;
+            seco = 0;
+        }
+        if (minu == 60) {
+            hour += 1;
+            minu = 0;
+        }
+        if (hour == 24) {
+            date += 1;
+            hour = 0;
+        }
+        //日期处理
+        if (month == 1 || month == 3 || month == 5 || month == 7
+        || month == 8 || month == 10 || month == 12) {
+            if (date == 32) {
+                date = 1;
+                month += 1;
+            }
+        } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            if (date == 31) {
+                date = 1;
+                month += 1;
+            }
+        } else if (month == 2) {
+            if (year % 4 == 0 && year % 100 != 0) {//闰年处理
+                if (date == 29) {
+                    date = 1;
+                    month += 1;
+                }
+            } else {
+                if (date == 28) {
+                    date = 1;
+                    month += 1;
+                }
+            }
+        }
+        if (month == 13) {
+            year += 1;
+            month = 1;
+        }
+        sseco = addZero(seco);
+        sminu = addZero(minu);
+        shour = addZero(hour);
+        sdate = addZero(date);
+        smonth = addZero(month);
+        syear = year;
+        
+        var strServerTime = syear + "-" + smonth + "-" + sdate + " " + shour + ":" + sminu + ":" + sseco;
+        var strStartTime = "2015-10-28 11:18";
+        var strEndTime = "2015-10-28 11:19";
+
+        var serverTimeNow=new Date(strServerTime.replace("-", "/").replace("-", "/"));
+        var startTime=new Date(strStartTime.replace("-", "/").replace("-", "/"));
+        var endTime=new Date(strEndTime.replace("-", "/").replace("-", "/"));
+        
+        if (startTime <= serverTimeNow) {
+            if (serverTimeNow <= endTime) {
+                document.getElementById("servertime").style.color = "red";
+                document.getElementById("servertime").innerHTML = strServerTime;
+            } else {
+                document.getElementById("servertime").style.color = "gray";
+                document.getElementById("servertime").innerHTML = strServerTime+"(活动已结束)";
+            }
+        }
+        else{
+            document.getElementById("servertime").style.color = "gray";
+            document.getElementById("servertime").innerHTML = strServerTime;
+        }
+
+        
+        setTimeout("getSeverTime()", 1000);
+        //setTimeout("getClientTime()", 100);
+    }
+
+    function addZero(num) {
+        num = Math.floor(num);
+        return ((num <= 9) ? ("0" + num) : num);
+    }
+
+</script>
+</head>
+<body onload="getSeverTime();">
+    
+
+
+    <p id="servertime"></p>
+
+</body>
+</html>
+
+

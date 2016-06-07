@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+.search{margin-left:75px;}
+.head{padding-bottom:10px;}
+
+/*课程左侧导航*/
+.leftNav{width:255px;float:left;}
+.leftNav h3{line-height:46px;color:#2fa9e1;font-size:18px;border-left:3px solid #2fa9e1;padding-left:22px;}
+.kechengNav{border-left:1px solid #efefef;border-top:1px solid #efefef;padding:0 18px;overflow:hidden;}
+.kechengNav h2{font-size:18px;color:#323232;margin-bottom:18px;padding-left:13px;}
+.kechengNav li{float:left;border-top:1px dashed #dbdbdb;margin-bottom:10px;padding-top:20px;}
+.kechengNav li.first{border:none;}
+.kechengNav li a{font-size:16px;color:#656666;padding:5px 10px;display:inline-block;margin-bottom:15px;}
+.kechengNav li a:hover{color:#fff;background:#2fa9e1;border-radius:25px;text-decoration:none;}
+
+/*课程*/
+#outer,.books{width:900px;float:right;}
+#tabs {overflow:hidden;zoom:1;border-bottom:1px solid #efefef;}
+#tabs li {float:left;color:#656666;height:46px;cursor:pointer;line-height:46px;padding:0 20px;font-size:14px;}
+#tabs li.current {color:#30aae1;border-bottom:1px solid #30aae1;}
+#content {}
+#content ul {display:none;overflow:hidden;margin-top:18px;}
+#outer h3{width:706px;float:left;height:47px;border-bottom:1px solid #efefef;}
+
+.column{width:280px;border:1px solid #efefef;overflow:hidden;float:left;margin:0 27px 27px 0;}
+.classPic{display:block;position:relative;width:280px;height:180px;}
+.classPic img{width:100%;height:100%;}
+.classPic:hover{opacity:.7;}
+.classPic span{position:absolute;top:20px;left:20px;color:rgba(255, 255, 255, 0.9);font-size:16px;}
+.column .title{font-size:16px;padding:15px 0 11px;border-bottom:1px dashed #efefef;color:#333;display:block;width:266px;margin:0 auto;}
+.column .title:hover{color:#30aae1;text-decoration:none;}
+.column p{width:266px;margin:8px auto;height:30px;position:relative;}
+.column p span{position:absolute;top:6px;color:#666;font-size:14px;}
+.column .names{left:45px;}
+.column .peoples{right:0;display:block;background:url(../images/peoples.png) no-repeat left center;padding-left:20px;}
+.column.noMargin{margin-right:0;}
+
+
+
+
+
+
+
+/*图书*/
+.book-item{border-bottom:1px dashed #dbdbdb;padding-bottom:30px;overflow:hidden;margin-bottom:45px;}
+.book-item a.bookPic,.book-item .intro{float:left;}
+.book-item a.bookPic{width:98px;height:134p;display:block;margin-right:20px;}
+.book-item .intro{width:505px;overflow:hidden;height:132px;}
+.book-item .intro h3{margin:5px 0;}
+.book-item .intro h3 a{font-size:16px;color:#333;font-weight:bold;}
+.book-item .intro h4 a{font-size:14px;color:#17b3f1;}
+.book-item .intro h5{color:#333;font-size:14px;margin-top:10px;}
+.book-item .intro span{display:block;font-size:14px;color:#999;}
+.book-item .intro h5,.book-item .intro span{line-height:24px;}
+.book-item .buy{height:128px;overflow:hidden;float:right;margin-right:25px;position:relative;}
+.book-item .buy .price{width:185px;}
+.book-item .buy .yuanP{color:#ff5400;width:85px;float:left;margin-left:15px;}
+.book-item .buy .yuanP em{font-size:14px;font-weight:bold;}
+.book-item .buy .yuanP span{font-size:24px;font-weight:bold;}
+.book-item .buy .youP{font-size:14px;color:#666;font-weight:bold;text-decoration:line-through;float:left;line-height:28px;}
+.anniu{overflow:hidden;width:185px;position:absolute;bottom:0;display:none;}
+.anniu .buying{float:left;}
+.anniu .gwc{float:right;}
+.book-item:hover .anniu{display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

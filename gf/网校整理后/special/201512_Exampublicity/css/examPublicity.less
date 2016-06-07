@@ -1,0 +1,297 @@
+@charset "utf-8";
+/**
+ * css
+ * @authors li tingting
+ * @date    2015-11-30 13:12:22
+ */
+@import "../../../css2015/common/variable.less";
+body{
+	font-family: "微软雅黑"!important;
+}
+
+//iconfont
+
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+//网校头部开始
+.mbbody,.mbtitle,.mbnavadd,.webbody{
+	position: fixed;
+		z-index: 10;
+		width: 100%;
+}
+
+//考场宣传头部开始
+.examheader{
+	.cf();
+	width: 100%;
+	position: fixed;
+	color:#fff!important;
+	z-index: 10;
+	margin:0 auto;
+	overflow: hidden;
+	margin-top: 45px;
+background-color: #018ed6;
+
+	ul{width: 100%;	}
+	li{
+		width: 33.1%;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		float: left;
+		border-right:1px solid #00348b;
+		.f16();
+		&.selected{
+			background-color:#00348b;
+		}
+		a{color: @cw;}
+
+	}
+	li:last-child{border-right: none;}
+
+}
+
+
+.exmaPublicity{
+	width: 80%;
+	padding: 100px 0;
+	margin:0 auto;
+	a{
+		text-decoration: none;
+		color: #224f9a;
+	}
+
+}
+
+.ep_list{
+	.cf();
+	margin:20px auto 0 auto;
+
+	p{
+		height:38px;
+		line-height: 38px;
+		border:1px solid @cc;
+		margin:30px auto;
+		color: #00348b;
+		padding-left: 20px;
+		.f16();
+		font-weight: bold;
+		background-color: #eff3f6;
+		i{
+			display: block;
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+			img{max-width: 20px;}
+		}
+
+	}
+}
+
+.ep_content{
+	.cf();
+	padding-top: 100px;
+	strong{
+		.f16();
+		display: block;
+		margin:10px auto 20px auto;
+	}
+	h2,h4{
+		color: #000;
+		.f20();
+		font-weight: bold;
+	}
+	h4{
+		color: #00348b;
+		display: block;
+		margin:30px auto 10px auto;
+	}
+	p{
+		.f14();
+		line-height: 25px;
+	}
+	.anwser{
+		margin:40px 0 40px 0;
+		.f14();
+		p{
+			margin:20px auto;
+			font-weight: bold;
+			position: relative;
+			padding-left: 30px;
+
+			i{
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				border:1px solid #00348b;
+				border-radius: 100%;
+				left:0px;
+				top:0;
+				text-align: center;
+				line-height: 22px;
+				color: #00348b;
+				position: absolute;
+
+			}
+			&.green{
+				color: #17902b;
+                i{color: #17902b;border-color:#17902b; }
+			}
+		}
+
+	}
+	.solution{
+		.f14();
+		color: @c3;
+		font-weight: bold;
+		margin-bottom: 70px;
+		em{
+			display: inline-block;
+			float: left;
+			margin-right: 10px;
+
+		}
+		h3{
+			.f20();
+			color: #17902b;
+			margin:20px auto;
+		}
+		article{
+			padding-left: 40px;
+		}
+
+	}
+     table{
+        min-width:320px;
+        height:auto;
+        width: 100%;
+            td,tr{text-align:center!important;}
+            
+        }
+}
+
+
+.ep_knowledge{
+	.cf();
+	color: #000;
+	h2{
+		margin: 40px auto;
+		.f20();
+		font-weight: bold;
+	}
+	p{
+		height: 38px;
+		line-height: 38px;
+		padding:0 0 0 10px;
+		.f16();
+		border:1px solid @cc;
+		background-color: #f4f4f4;
+		margin:15px auto;
+        position:relative;
+        overflow: hidden;
+        text-overflow: clip;
+        cursor: pointer;
+        width: 100%;
+        i,em{
+        	right:10px;
+        	top:6px;
+            position:absolute;
+
+        }
+        em{
+        	display: none;
+        }
+
+	}
+	article{
+		display: none;
+		ul,li{
+			list-style: disc;
+			margin:20px auto;
+			padding-left: 6px;
+		}
+		strong{
+			font-weight: bold;
+			.f16();
+		}
+
+
+	}
+}
+
+
+@media(min-width:768px){
+	.exmaPublicity{
+		width: 60%;
+
+		img{
+			max-width: 640px;
+			height: auto;
+		}
+	}
+}
+
+
+//登录框
+#mode{
+	 width:100%; 
+	 height:100%; 
+	 background-color:rgba(0,0,0,0.4);
+	  position:fixed;
+	  left:0;
+	  top:0;
+	  display: block; 
+	 z-index: 2000;
+	 box-sizing: border-box;
+
+	}
+#EP_login{
+	 box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+	 background-color:#fff;
+     position:fixed; 
+	left:50%; top:50%;
+ 	display:block;
+ 	width: 300px;
+ 	height: 190px;
+	padding:30px 0;
+	z-index: 100000;
+	margin-left: -150px;
+	margin-top: -50px;
+
+	p{
+		width: 90%;
+		height: 60px;
+		border-color:@cc;
+		clear: both;
+		margin:0 auto;
+		input{width: 100%;outline: none}
+	} 
+	#EP_code{
+		width: 50%;
+		float: left;
+	}
+	#EP_get{
+		width: 50%;
+
+	}
+
+.on{background-color:#a0a0a0;}
+
+}

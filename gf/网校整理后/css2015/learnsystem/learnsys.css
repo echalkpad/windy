@@ -1,0 +1,581 @@
+/* LESS Document */
+/* 清除浮动 */
+/* 标题下的间隔符 */
+.hline {
+  width: 180px;
+  height: 10px;
+  border-bottom: solid 1px #333;
+  position: relative;
+  margin: 10px auto;
+}
+.hline i {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #333;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background-color: #fff;
+  display: block;
+}
+input[type="text"] {
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  height: 45px;
+  line-height: 45px;
+  color: #666;
+}
+input[type="text"]:hover,
+input[type="text"]:visited,
+input[type="text"]:active {
+  border: solid 1px #fecc17;
+}
+input[placeholder] {
+  color: #999;
+  font-size: 14px;
+}
+@media (min-width: 480px) {
+  input[placeholder] {
+    font-size: 16px;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #ddd;
+}
+input[type="radio"] {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin-left: 10px;
+}
+input[type="button"] {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+}
+@media (min-width: 480px) {
+  input[type="button"] {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+  }
+}
+/* 学习规划系统头部 */
+.leansttl {
+  background-image: url(../../images2015/imglearnsys/lplanttl.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  box-sizing: border-box;
+  padding-top: 70px;
+  overflow: hidden;
+  text-align: center;
+}
+.leansttl h1 {
+  font-size: 18px;
+}
+.leansttl p {
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  
+}
+@media (min-width: 768px) {
+  .leansttl {
+    height: 450px;
+    padding-top: 120px;
+  }
+  .leansttl h1 {
+    font-size: 36px;
+  }
+  .leansttl p {
+    font-size: 18px;
+    line-height: 35px;
+    width: 720px;
+  }
+}
+/* learningsystem01内容 */
+.learnsys01 {
+  padding: 20px;
+}
+.learnsys01 li {
+  padding: 8px 0;
+  color: #666;
+}
+.learnsys01 li:first-child input[type="text"] {
+  width: 100%;
+}
+.learnsys01 li:nth-child(2) input[type="text"] {
+  width: 60%;
+}
+.learnsys01 li:nth-child(2) input[type="button"] {
+  width: 40%;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #a18f69;
+  color: #fff;
+}
+.learnsys01 li:last-child {
+  text-align: center;
+}
+.learnsys01 li:last-child input[type="button"] {
+  width: 90%;
+  background-image: url(../../images2015/imglearnsys/lps_icon01.png);
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+}
+.learnsys01 dl {
+  overflow: hidden;
+  padding: 20px 0;
+}
+.learnsys01 dt {
+  font-size: 18px;
+  line-height: 40px;
+}
+.learnsys01 dd {
+  width: 50%;
+  line-height: 45px;
+  font-size: 16px;
+  float: left;
+}
+@media (min-width: 640px) {
+  .learnsys01 {
+    padding: 40px 0;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .learnsys01 li:last-child input[type="button"] {
+    width: 80%;
+    background-position: 20px 0;
+  }
+  .learnsys01 dd {
+    width: 33.33%;
+  }
+}
+@media (min-width: 768px) {
+  .learnsys01 {
+    padding: 80px 0;
+  }
+}
+/* learningsystem03内容 */
+.review {
+  padding: 40px 0;
+  *zoom: 1;
+  text-align: center;
+}
+.review:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.review h1 {
+  font-size: 18px;
+}
+.review p {
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  width: 80%;
+  margin: 0 auto;
+}
+.review #chartdiv_zhu_1 {
+  padding-top: 40px;
+}
+@media (max-width: 480px) {
+  .review #chartdiv_zhu_1 {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media (min-width: 480px) {
+  .review h1 {
+    font-size: 30px;
+  }
+  .review p {
+    font-size: 18px;
+    line-height: 35px;
+    width: 720px;
+  }
+}
+@media (min-width: 768px) {
+  
+}
+.revsugges {
+  background-image: url(../../images2015/imglearnsys/lplanttl3.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+  box-sizing: border-box;
+  padding-top: 40px;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+}
+.revsugges strong {
+  display: block;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .revsugges {
+    padding-top: 60px;
+    font-size: 20px;
+  }
+  .revsugges strong {
+    display: inline;
+    font-size: 48px;
+    padding: 0 20px;
+  }
+}
+.learnsys03 {
+  padding: 40px 0;
+}
+.learnsys03 p {
+  text-align: center;
+  padding: 0 20px 10px;
+  font-size: 16px;
+  color: #666;
+}
+.learnsys03 p input[type="button"] {
+  width: 50%;
+  background-image: url(../../images2015/imglearnsys/lps_icon02.png);
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+  box-sizing: border-box;
+  padding-left: 50px;
+  background-color: #26c596;
+}
+.learnsys03 p input[type="button"]:last-child {
+  background-image: url(../../images2015/imglearnsys/lps_icon03.png);
+  background-color: #12b0cb;
+}
+.learnsys03 table {
+  width: 100%;
+  margin: 40px 0;
+}
+.learnsys03 th {
+  border: solid 1px #ddd;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 16px;
+  color: #666;
+}
+.learnsys03 td {
+  background-color: #fff;
+  border: solid 1px #ddd;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 14px;
+  color: #999;
+}
+.learnsys03 ul {
+  background-image: url(../../images2015/imglearnsys/lplanttl2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  box-sizing: border-box;
+}
+.learnsys03 li {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 18px;
+  color: #fff;
+  border-bottom: solid 1px #7fc1cb;
+  position: relative;
+}
+.learnsys03 li span {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.learnsys03 li strong {
+  font-size: 48px;
+}
+@media (min-width: 480px) {
+  .learnsys03 p:last-child {
+    padding-top: 40px;
+  }
+  .learnsys03 p:last-child input[type="button"] {
+    width: 160px;
+    margin: 0 5px;
+    padding-left: 55px;
+    background-position: 15px 0;
+  }
+}
+@media (min-width: 640px) {
+  .learnsys03 {
+    padding-bottom: 80px;
+  }
+  .learnsys03 p {
+    font-size: 18px;
+  }
+  .learnsys03 table {
+    margin: 40px 0;
+  }
+  .learnsys03 th {
+    padding: 20px 10px;
+    font-size: 20px;
+  }
+  .learnsys03 td {
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .learnsys03 p input[type="button"] {
+    width: 180px;
+    margin: 0 15px;
+    padding-left: 60px;
+    background-position: 20px 0px;
+  }
+  .learnsys03 ul {
+    height: 200px;
+    overflow: hidden;
+  }
+  .learnsys03 li {
+    width: 33.33%;
+    height: 200px;
+    float: left;
+    padding-top: 60px;
+    border-bottom: none;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    border-right: solid 1px #7fc1cb;
+  }
+  .learnsys03 li span {
+    top: 110px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .learnsys03 {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+/* learningsystem04内容 */
+.learnsys04 {
+  padding: 20px;
+  *zoom: 1;
+}
+.learnsys04:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.learnsys04 li {
+  padding: 8px 0;
+  color: #666;
+}
+.learnsys04 li input[type="text"] {
+  width: 100%;
+}
+.learnsys04 li:nth-child(2) {
+  height: 45px;
+  line-height: 45px;
+}
+.learnsys04 li:nth-child(2) input[type="radio"]:nth-child(2) {
+  margin-left: 40px;
+}
+.learnsys04 li:last-child {
+  text-align: center;
+}
+.learnsys04 li:last-child input[type="button"] {
+  width: 50%;
+  background-image: url(../../images2015/imglearnsys/lps_icon04.png);
+  background-repeat: no-repeat;
+  background-position: 20px 0;
+  box-sizing: border-box;
+  padding-left: 50px;
+  background-color: #26c596;
+}
+.learnsys04 li:last-child input[type="button"]:last-child {
+  background-image: url(../../images2015/imglearnsys/lps_icon05.png);
+  background-color: #12b0cb;
+}
+@media (min-width: 480px) {
+  .learnsys04 {
+    padding: 40px 0;
+    width: 360px;
+    margin: 0 auto;
+  }
+  .learnsys04 li:last-child {
+    padding-top: 40px;
+  }
+  .learnsys04 li:last-child input[type="button"] {
+    width: 160px;
+    margin: 0 5px;
+    padding-left: 55px;
+    background-position: 15px 0;
+  }
+}
+@media (min-width: 768px) {
+  .learnsys04 {
+    width: 760px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+  .learnsys04 li {
+    width: 50%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  .learnsys04 li:nth-child(2) {
+    height: 61px;
+  }
+  .learnsys04 li:last-child {
+    width: 100%;
+  }
+  .learnsys04 li:last-child input[type="button"] {
+    width: 180px;
+    margin: 0 15px;
+    padding-left: 60px;
+    background-position: 20px 0;
+  }
+}
+.popbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  background-color: rgba(50, 50, 50, 0.7);
+}
+.popbox .popboxcon {
+  width: 100%;
+  height: 310px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.popbox .popboxcon .msgmain img {
+  float: left;
+  padding-right: 20px;
+}
+.popbox .popboxcon .msgmain h2 {
+  font-size: 29.39px;
+  font-weight: bold;
+  color: #333;
+}
+.popbox .popboxcon .msgmain p {
+  font-size: 19.6px;
+  color: #999;
+}
+.popbox .popboxcon .msgmain a {
+  display: block;
+  width: 135px;
+  height: 45px;
+  font-size: 16px;
+  line-height: 45px;
+  color: #fff;
+  text-align: center;
+  background: #666;
+  margin: 30px auto;
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
+}
+.popbox .popboxcon .msgsub {
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+.popbox .popboxcon .msgsub span {
+  padding-right: 20px;
+}
+.popbox .popboxcon .msgsub ul li {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.popbox .popboxcon .msgsub ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: #A18F69;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.popbox .popboxcon .msgsub ul li a img {
+  padding: 12px 7px;
+  vertical-align: middle;
+}
+.popbox .popboxcon .msgsub ul li:first-child a img {
+  padding: 8px 10px;
+}
+@media (min-width: 480px) {
+  .popbox .popboxcon .msgmain {
+    width: 470px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .popbox .popboxcon .msgsub {
+    height: 60px;
+  }
+  .popbox .popboxcon .msgsub span {
+    float: left;
+  }
+  .popbox .popboxcon .msgsub ul li {
+    float: left;
+  }
+}
+@media (min-width: 640px) {
+  .popbox .popboxcon {
+    width: 590px;
+    margin: 6% auto;
+  }
+  .popbox .popboxcon .msgsub {
+    padding: 20px 40px 0;
+  }
+}
+@media (min-width: 768px) {
+  .popbox dl {
+    width: 700px;
+    margin: auto auto;
+  }
+}

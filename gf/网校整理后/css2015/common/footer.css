@@ -1,0 +1,214 @@
+/* LESS Document */
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+/*底部*/
+footer {
+  clear: both;
+  width: 100%;
+  height: 293px;
+  background: #21292a;
+  padding: 20px 0;
+  box-sizing: border-box;
+  *zoom: 1;
+  zoom: 1;
+}
+footer:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+footer .newlinks {
+  padding: 0 10px;
+  *zoom: 1;
+  zoom: 1;
+}
+footer .newlinks:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+footer .newlinks dl {
+  width: 18%;
+  height: 180px;
+  float: left;
+  border-right: 1px solid #3c4242;
+  padding: 20px 0 20px 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+footer .newlinks dl:last-child {
+  width: 26%;
+  border-right: none;
+}
+footer .newlinks dl:last-child dl {
+  text-align: center;
+}
+footer .newlinks dl:last-child dl dt {
+  font-size: 30px;
+}
+footer .newlinks dl:last-child dl dd {
+  font-weight: normal;
+}
+footer .newlinks dl:last-child dl dd img {
+  display: block;
+  margin: 8px auto 0;
+}
+footer .newlinks dl dt {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+footer .newlinks dl dd a {
+  display: block;
+  font-size: 12px;
+  color: #dbdbdb;
+  line-height: 24px;
+}
+footer .newlinks dl dd a:hover {
+  text-decoration: none;
+  color: #58c8e3;
+}
+footer .copyright {
+  *zoom: 1;
+  zoom: 1;
+  text-align: center;
+  padding-bottom: 20px;
+  padding: 20px 0;
+  font: 12px/30px "微软雅黑";
+  color: #fff;
+}
+footer .copyright:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+footer .copyright span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 1200px) {
+  .newlinks {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .newlinks dl {
+    padding-left: 40px;
+  }
+  .newlinks dl dd a {
+    display: block;
+    font-size: 14px;
+    color: #dbdbdb;
+    line-height: 24px;
+  }
+  .newlinks dl dd a:hover {
+    text-decoration: none;
+    color: #58c8e3;
+  }
+  .copyright {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

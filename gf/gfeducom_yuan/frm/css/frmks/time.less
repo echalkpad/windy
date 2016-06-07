@@ -1,0 +1,254 @@
+/*
+ * == 专题之考试时间与地点
+ *************************************************/
+
+@import 'kscom.less';
+
+.content{
+   article{
+      text-align: center;
+      h2{.f24(); text-align: center; color: @cksblue; border-bottom: 3px solid @cksblue; width: 200px; margin: 0 auto;  padding: 30px 30px 10px;}
+      p,h6{display: none;}
+      
+       .btn{
+           margin: 20px auto;
+         display: inline-block;margin-bottom: 20px;
+         .f18(); padding: 3px 10px; color: @cksblue; border: 1px solid @c9; 
+         border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; 
+         &:hover{background: @cksblue; color: @cw; border: 1px solid @cksblue;}
+       }
+    .pcques{ display: none; }      
+    .mbques{
+        display: block;
+        ul{
+            .cf();
+            padding: 10px;
+            text-align: center;
+            li{
+                width: 35px;
+                margin-bottom: 10px;
+                display: inline-block;
+                i{.f40(); color: #ed8843;display: block;}
+                span{}
+
+            }
+        }
+    }
+  }
+}
+
+@media(min-width:480px){
+ .content{
+   article{
+     .mbques{
+        ul{
+            li{width: 50px;}
+        }
+     }
+   }
+ }  
+}
+
+@media(min-width:768px){
+  .content{
+   article{
+       
+       position: relative;
+       text-align: center;
+       h6{display: block;}
+       p{ display: block; text-align: center; padding: 40px 0; .f16();} 
+      .btn{
+         position: absolute;
+         left: 50%;
+         margin-left: -83px;
+         top: 27%;
+         z-index: 9;
+         display: inline-block;margin-bottom: 20px;
+         .f18(); padding: 3px 10px; color: @cksblue; border: 1px solid @c9; 
+         border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; 
+         &:hover{background: @cksblue; color: @cw; border: 1px solid @cksblue;}
+       }
+       .mbques{ display: none; }
+       .pcques{
+       display: block;
+       ul{
+           background: url(../../images/ks/timemap.png) no-repeat;
+           width: 560px;
+           height: 540px;
+           margin: -10px auto;
+           position: relative;
+           li{
+               position: absolute;
+               span{
+                   display: inline-block;
+                   width: 46px;
+                   height: 46px;
+                   line-height: 46px;
+                   color: @cw;
+                   .bdrhalf();
+                   background: #f29659;
+               }
+               i{
+                position: absolute;
+                top: 44px;
+                left: 16px;
+                width: 0; 
+                height: 0; 
+                border-left: 7px solid transparent; 
+                border-right: 7px solid transparent; 
+                border-top: 16px solid #f29659; 
+                font-size: 0; 
+                line-height: 0; 
+               }
+               img{ 
+                position: absolute;
+                display: none; 
+                width: 120px; 
+                height: 80px;
+                z-index: 2;
+                top: -20px;
+                left: -36px;
+              }
+               
+              &:hover{
+                  img{display: inline-block;}
+              }
+           }
+       }
+       }
+       p:last-child{margin-top: -90px;}
+   }
+  }
+}
+
+@media(min-width: 1200px){
+  .content{
+   article{
+       .contart{
+           width: 1200px;
+           margin: 0 auto;
+       }
+       h6{width: 80%; margin-left: 10%;}
+   }
+  }
+}
+
+
+//常见问题
+.content{
+    margin-bottom: 50px;
+   .cf();
+  section{
+      height: 300px;
+      padding: 10px;
+     .cf();
+     h2{
+      .f24(); text-align: center; 
+      color: @cksblue; border-bottom: 3px solid @cksblue; 
+      width: 150px; margin: 30px auto; 
+    }  
+    
+    dl{
+        .cf();
+        position: relative;
+        width: 30%;
+        margin: 1.6%;
+        float: left;
+        dt{
+         
+            .cf();
+          img{ width: 100%; bottom: 0;}
+          
+          span{
+              position: absolute;
+              color: @cw;
+              text-align: center;
+              z-index: 3;
+              bottom: 3px;
+              left: 0;
+              background: @c0;
+              opacity: 0.7;
+              text-align: center;
+              width: 100%;
+          }
+        }
+        dd{ display: none; }
+        
+      &:last-child{
+        dt{
+          i{height: 40px;}
+          span{left: 0;}
+        }
+      }
+    }
+    
+  }  
+}
+
+@media(min-width:768px){
+  .content{
+  section{
+    dl{
+        margin-bottom: 50px;
+        height: 500px;
+        position: relative;
+      dt{
+          padding: 5px;
+          box-sizing: border-box;
+          background: #56ceb9;
+          
+          span{
+              display: block;
+              color: @c0;
+              background: none;
+              position: static;
+              padding: 10px 10px 0;
+              em{color: @cw;}
+          }
+      }  
+      dd{
+          display: block;
+          margin-top: 10px;
+          a{
+              position: absolute;
+              left: 25%;
+              bottom: 0;
+              display: block;
+              width: 120px;
+              height: 35px;
+              margin: 0 auto;
+              line-height: 35px;
+              text-align: center;
+              border: 1px solid @c9;
+              
+              &:hover{
+                  text-decoration: none;
+                  background: #56ceb9;
+                  color: @cw;
+                  border: 1px solid #56ceb9;
+              }
+          }
+      }
+      &:nth-child(3){
+          dd{margin-top: 80px;}
+      }
+    }
+  } 
+ }
+}
+
+@media(min-width:992px){
+ .content{
+  section{
+    width: 950px;
+    margin: 0 auto;
+    dl{
+        width: 26%;
+        margin: 3.6%;
+        dt{padding: 10px;}
+    }
+  }
+ }   
+}
+
+.wrap{clear: both;}

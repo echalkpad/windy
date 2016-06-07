@@ -1,0 +1,439 @@
+/*
+ * ==> 支付页面
+ *********************************************/
+
+@import 'paymentcom.less';
+
+body{background: #f7f8f8;}
+
+.paycontent{
+    h5{
+        display: none;
+        .f14();
+        color: @c3;
+        padding: 15px 0;
+    }
+    
+    .process{
+       .cf();
+       ul{padding: 20px;}
+       li{
+           width: 38%;
+           float: left;
+           .f20();
+           text-align: center;
+           a{
+             position: relative;
+             display: inline-block;
+             width: 40px;
+             height: 40px;
+             .bdrhalf();
+             background: @cd;
+             color: @c9;
+             font-weight: bold;
+             line-height: 40px;
+             
+             i{
+                  position: absolute;
+                  right: -14px;
+                  top: 30%;
+                 .triangle(right,@w:8px,@c:@cd);
+             }
+           }
+           span{display: none;}
+           em{padding-left: 25%; color: @cc; line-height: 40px;}
+        
+            
+       }
+       li:hover,.selected{
+            border-bottom-color: @cpaygreen;
+            a{
+                color: @cw;
+                background: @cpaygreen;
+                i{.triangle(right,@w:8px,@c:@cpaygreen);}
+            }
+            em{color: @cpaygreen;}
+        }
+       .nth3{width: 24%;}
+       
+    }
+    
+    h3{
+        border: 1px solid @cd;
+        padding: 10px;
+        margin: 20px 0;
+        strong{
+            .f18();
+            padding-right: 10px;
+            color: @c6;
+        }
+        span{
+            padding-left: 10px;
+            .f12();
+            color: @c9;
+            border-left: 2px solid @c9;
+        }
+    }
+    
+    h2{
+        clear: both;
+        padding: 0 10px;
+        border-left: 3px solid @cblue;
+        .f14();
+        color: @c3;
+        margin: 10px 10px 20px;
+        span{
+           .f12();
+            color: #d6a128; 
+            padding-left: 10px;
+        }
+        
+    }
+}
+
+@media(min-width:640px){
+  .paycontent{
+    h5{ display: block; }
+    .process{
+        li{
+            position: relative;
+            width: 42%;
+            height: 20px;
+            border-bottom: 1px dashed @cc;
+            text-align: left;
+            margin-right: 3%;
+            a{text-align: center;}
+            span{display: block; .f14(); color: @c6;}
+            em{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        .nth3{
+            margin-right: 0; width: 18%; text-align: right;
+            width: 50px;
+            border-bottom: 0;
+        }
+    }  
+    
+    h3{
+        margin: 70px 10px 20px;
+        span{
+            .f14();
+        }
+    }
+  }
+}
+@media(min-width:992px){
+  .paycontent{
+    .process{
+        li{
+            width: 44%;
+        }
+    }
+  }   
+}
+@media(min-width:1200px){
+    
+  .paybox{
+      background: @cw;
+      .bdr5();
+  }
+     
+ .paycontent{  
+   h5{
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0 0;
+        box-sizing: border-box;
+    }
+    .paybox{
+        width: 1200px;
+        margin: 20px auto;
+        padding: 30px 90px;
+        box-sizing: border-box;
+    }
+ } 
+}
+
+/* 资料接收地址  */
+.paymessage{
+    background: #f7f8f8;
+    margin-bottom: 10px;
+   ul{
+       background:@cw url(../../images/payment/ord_pay/payline.png)  repeat no-repeat;
+       background-position: 0 -3px;
+       color: @c9;
+       padding: 20px 10px;
+       border: 1px solid @cd;
+       margin-bottom: 15px;
+       border-top: 0;
+       height: 160px;
+       position: relative;
+       li{
+           padding-bottom: 5px;
+           line-height: 28px;
+           cursor: pointer;
+           clear: both;
+           span{
+               display: inline-block; 
+               &:first-child{float: left; width: 60px;} 
+               &:nth-child(2){ width: 79%;}
+           }
+           
+           //选为发送地址
+           em{
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               color: @cw;
+               
+                width: 0;
+                height: 0;
+                border-bottom: 60px solid @cpaygreen;
+                border-left: 60px solid transparent;
+                
+                i{
+                  position: absolute;
+                  margin-left: -30px;
+                  margin-top: 30px;
+                  font-size: 28px;
+                }
+           }
+           
+           input[type="text"]{
+             height: 30px;
+             width: 84%;
+           }
+           
+           input[type="button"]{
+               display: block;
+               width: 100px;
+               height: 30px;
+               line-height: 30px;
+               margin: 20px auto;
+           }
+           
+           .write_rep{
+               display: none;
+               float: right;  
+               margin-top: -30px;
+               i{
+                   padding: 0 5px;
+               }
+           }
+           
+           .mess{width: 82%;}
+           select{height: 30px; width: 41%; margin-bottom: 10px; border: 1px solid @cc; color: @c9; }
+       }
+       
+       &:hover{
+           li{
+              .write_rep{
+                   display: inline;
+               } 
+           }
+       }
+   } 
+   
+   form{ul{
+       background: @cw;
+       height: 350px;
+       border-top: 1px solid @cc;
+   }}
+   p{
+       background: @cw;
+       padding: 30px 0;
+       border: 1px solid @cd;
+       border-top: 2px solid @cd;
+       text-align: center;
+       .f16();
+       color: @c9;
+       
+       .icon_add{
+           .f26();
+           padding-right: 20px;
+       }
+   }
+}
+
+@media(min-width:768px){
+   .paybox{
+       background: @cw;
+   }
+  .paymessage{
+   background: @cw;
+   ul{
+       background-color: #f7f8f8;
+       width: 48%;
+       height: 200px;
+       float: left;
+       box-sizing:border-box;
+       display: inline-block;
+       margin: 1%;
+   }
+   form{ul{
+       height: 400px;
+       background-color: #f7f8f8;
+       li{padding-bottom: 15px;}
+   }}
+   p{  
+      display: inline-block;
+      height: 200px;
+      box-sizing: border-box;
+      line-height: 200px;
+      width: 48%;
+      margin: 1%;
+      padding: 0;
+      background: #f7f8f8;
+      float: left;
+    }
+   }  
+}
+
+@media(min-width:992px){
+  .paymessage{
+   ul{
+       width: 31.33%;
+   }
+   p{
+       width: 31.33%;
+   }
+   }
+}
+
+/* 商品信息 */
+.goodsmsg{
+    .cf();
+    background: @cw;
+    border: 1px solid @cd;
+    .bdr2();
+    dl{
+        .cf();
+        &:first-child{display: none;}
+        
+        dt{
+            text-align: right;
+            padding: 10px;
+            border-bottom: 1px solid @cd;
+            &:before { content:"产品编号："; color: @cc;}
+        }
+        dd{
+            float: left;
+            padding: 10px;
+            box-sizing: border-box; 
+            span{color: #f4981f;}
+            
+            &:nth-child(2){display: block; width: 100%;}
+            &:nth-child(3){width: 20%;}
+            &:nth-child(3),&:nth-child(4){padding-bottom: 20px;}
+        }
+    }
+    
+    section{
+        padding: 30px 20px;
+        background: #e4e8ed;
+        text-align: right;
+        line-height: 40px;
+        em{padding-right: 20px;}
+        span{
+            color: #f4981f;
+            .f40();
+            font-weight: bold;
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+      a{
+            display: block;
+            width: 250px;
+            height: 45px;
+            .f20();
+            color: @cw;line-height: 45px;
+            text-align: center;
+            font-weight: bold;
+            background: #f4981f;
+            .bdr5();
+            margin: 30px auto 0;
+        }
+    }
+}
+
+@media(min-width:768px){
+  .goodsmsg{
+    margin-bottom: 100px;
+    dl{
+        border-bottom: 1px solid @cd;
+        dt{
+            float: right;
+            border-bottom: 0;
+            width: 200px;
+            text-align: center;   
+            &:before{content: " ";}
+        }
+        dd{
+            &:nth-child(2){
+                display: inline-block;
+                width: 45%; 
+            }
+            &:nth-child(3){width: 10%;}
+        }
+        
+        &:first-child{display: block; text-align: center;}
+    }  
+    
+    section{
+        background: @cw;
+        position: relative;
+        padding: 20px 50px;
+        a{
+            position: absolute;
+            bottom: -80px;
+            right: 0;
+        }
+    }
+  }
+}
+
+/********************************************************添加修改*************************************************/
+.paymessage form{
+    display: none;
+}
+.duigou em{
+    display: none;
+}
+.paymessage li p{
+    height: 20px;
+    width: 84%;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 0;
+    background: none;
+    float: none;
+    cursor: auto;
+    border: none;
+    color: red;
+    box-sizing: inherit;
+    padding-left: 46px;
+    text-align: left;
+}
+.paymessage form ul li{
+    padding-bottom: 0;
+    height: 50px;
+}
+.paymessage form ul li.messWrap{
+    height: 80px;
+}
+.paymessage ul li .write_rep{
+    position: relative;
+}
+@media (min-width: 640px){
+    .paycontent .process li {
+        margin-right: 2%;
+    }
+    .paycontent .process .nth3{
+        width: 70px;
+        text-align: center;
+    }
+}
+

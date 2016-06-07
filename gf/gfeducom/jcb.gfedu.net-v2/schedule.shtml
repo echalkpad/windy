@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯赛制赛程-金程杯</title>
+<meta name="keywords" content="金程杯赛制,金程杯赛程">
+<meta name="description" content="金程杯赛制赛程：报名分为个人报名和团队报名（3至5人一队，自由组队，每队需要有一个名字，并选出一名Leader；），比赛分为初赛、复赛和决赛-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+        <div class="jcbq"></div>
+        <div class="jcbpttl">
+        <i class="icon-jcb-intro">&#xe615;</i>
+        <h2>赛制赛程</h2>
+
+        <div class="jcbpbox">
+            <div class="p3_schedule">
+                <ul>
+                    <li>
+                        <h3>组队</h3>
+                        <p>3至5人一队，自由组队，每队需要有一个名字，并选出一名Leader；</p>
+                    </li>
+                    <!-- <li>
+                        <h3>报名</h3>
+                        <p><a href="http://www.sojump.com/jq/5822747.aspx" target="_blank" rel="nofollow">团队报名</a><br><a href="http://www.sojump.com/jq/5786954.aspx" target="_blank" rel="nofollow">个人报名</a></li> --></p>
+                    </li>
+                </ul>
+                <img src="images/xian.png">
+                <dl class="jcbn1">
+                    <dt onclick="location.href='/preliminary.shtml';" style="cursor:pointer;"><h3>初赛</h3></dt>
+                    <dd onclick="location.href='/preliminary.shtml';" style="cursor:pointer;">简历制作</dd>
+                </dl>
+                <p>简历制作（包含电子版简历及视频简历制作），满分100分——“电子简历”制作占50分、“视频简历”制作占50分。按照所有高于本赛区平均团队分的队伍均能出线。</p>
+                <dl>
+                    <dt><h3>复赛</h3></dt>
+                    <dd>商业案例分析</dd>
+                </dl>
+                <p>商业案例分析（初赛后开放详细课题），以某企业经营现状为基础通过“战略布局策略、产品战略、市场营销战略、经营管理策略（资金预测与策略、费用管理策略等）”进行商业营销案分析。</p>
+                <dl class="jcbn3">
+                    <dt><h3>南方/北方决赛</h3></dt>
+                    <dd>商业案例分析展示</dd>
+                </dl>
+                <dl class="jcbn1">
+                    <dt style="width:600px;"><h3>精优训练营入营资格</h3></dt>
+                </dl>
+                <p>
+                    大咖职业规划培训（职业训练营）<br/>
+                    大佬商务礼仪培训（职业训练营）<br/>
+                    国际名企交流参观（职业训练营）<br/>
+                    企业经营沙盘模拟培训（职业训练营）<br/>
+                    企业实战拓展（职业训练营）
+                </p>
+                <p><!-- 现场陈述案例报告，即兴回答评委及观众的问题。 --></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(2)").addClass("selecded");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+﻿@charset "utf-8";
+* {
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+.headNav, .conter {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.studyBox {
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #069cdb;
+	margin-top: 15px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+}
+.stTitle {
+	height: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-image: url(../new-images/lineBg_03.png);
+	background-repeat: repeat-x;
+	background-position: 0px center;
+}
+.stTitle h1 {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	background-color: #FFF;
+	width: 220px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 50px;
+	text-align: center;
+	color: #8C0E11;
+}
+
+
+/*tab 标签样式*/.tabMenu{
+	overflow: hidden;
+	height: 760px;
+	clear: both;
+	margin-bottom: 10px;
+}
+.tabMenu ul{margin:0;padding:0;}
+.tabMenu li{
+	display: inline;
+	text-align: center;
+}
+.tabMenuList a{
+	text-decoration: none;
+	line-height: 40px;
+	display: block;
+	float: left;
+	background-color: #fcd0d0;
+	border: 1px solid #CCC;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #000;
+	width: 227px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+
+.tabMenuList a.tabactive{position:relative;background-color:#d99594;}
+#tabcontent1,#tabcontent2,#tabcontent3,#tabcontent4{
+	padding-bottom: 10px;
+	padding-top: 5px;
+	clear: both;
+}
+.tabMenu table {
+	background-color: #999;
+}
+
+.tabClassLeft {
+	width: 268px;
+	float: left;
+}
+.tabClassRight {
+	float: right;
+	width: 668px;
+}
+
+
+.tabMenu table th {
+	/*font-family: "微软雅黑";*/
+	font-size: 13px;
+	background-color: #d99594;
+	color: #333;
+	height:75px;
+}
+.tabClassLeft th {
+	text-align: right;
+	padding-right: 10px;
+	line-height: 50px;
+}
+.tabClassLeft td {
+	text-align: right;
+}
+
+.tabClassRight th {
+	text-align: center;
+	line-height: 25px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.tabClassRight td {
+	text-align: center;
+}
+
+
+
+.tabMenu table td {
+	line-height: 30px;
+	height: 30px;
+	/*font-family: "微软雅黑";*/
+	padding-right: 10px;
+	font-size: 14px;
+	background-color: #FFF;
+	color: #000;
+}
+.tabMenu .tabTxtRed {
+	color: #8a0c0f;
+}
+.tabMenu .tabTxtBg {
+	line-height: 30px;
+	height: 30px;
+}
+.tabBand {
+	line-height: 41px;
+	height: 41px;
+}
+.tabBand h6 {
+	background-color: #FCD0D0;
+	color: #98050d;
+	font-size: 14px;
+	float: left;
+	padding-right: 60px;
+	padding-left: 20px;
+}
+.tabBand img {
+	float: right;
+}
+.tabMargin {
+	margin-top: 10px;
+}
+.studyBox h2 {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #98050D;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #98050D;
+	margin-bottom: 10px;
+	line-height: 30px;
+	margin-top: 15px;
+}
+.studyBox h2 span {
+	font-weight: normal;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #98050D;
+}
+.tabTest th {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-align: right;
+	font-weight: normal;
+	color: #98050D;
+	background-color:#FFF;
+	line-height: 30px;
+}
+.tabTest .tabList1 th {
+	width: 100px;
+}
+.tabTest .tabList2 th {
+	width: 140px;
+}
+
+
+.tabTest td {
+	line-height: 30px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	padding-left: 10px;
+	color: #000;
+}
+.tabTest dt {
+	font-size: 14px;
+	line-height: 30px;
+	font-family: "微软雅黑";
+	color: #98050D;
+}
+.tabTest dt span {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #000;
+}
+.tabTest dd {
+	line-height: 24px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #000;
+}
+.tabTest dd strong {
+	color: #98050D;
+}
+.tabTest ul {
+	clear: both;
+}
+
+.tabTest ul li {
+	float: left;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #8C0E11;
+	padding-right: 18px;
+	padding-left: 18px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	line-height: 18px;
+	height: 18px;
+}
+.tabTest strong a {
+	color: #98050D;
+	text-decoration: none;
+}
+.tabTest dd a {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	text-decoration: none;
+}
+.tabTest dd a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+
+.tabTest strong a:hover {
+	color: #000;
+}
+
+
+.tabTest ul li a {
+	text-decoration: none;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #8C0E11;
+}
+.tabTest ul li a:hover {
+	color: #000;
+}
+.stuSelc {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	margin-top: 2px;
+	padding: 2px;
+	border: 1px solid #CCC;
+	color: #000;
+	width: 80px;
+}

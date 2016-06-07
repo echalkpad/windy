@@ -1,0 +1,717 @@
+﻿<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>webmap</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!--link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+                               <link rel="shortcut icon" href="images2015/gfico.ico"-->
+<!--link href="css2015/project/main.css" rel="stylesheet" type="text/css" /-->
+<!--头尾的样式-->
+<link href="css2015/common/common.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css2015/webmap/webmap.css" />
+<link rel="stylesheet" href="css2015/webmap/font/iconfont.css" />
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="script2015/html5shiv.js"></script>
+	<script type="text/javascript" src="http://www.gfedu.cn/script2015/respond.min.js"></script>
+	<script type="text/javascript">
+        alert('IE版本太低，请升级后使用');
+    </script>
+<![endif]-->
+
+<script type="text/javascript" src="script2015/jquery.min.js" ></script>
+<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+<script src="script2015/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#menu').mmenu(
+        );
+    });
+</script>
+</head>
+	<body>
+		
+	<!--phonenav start-->
+	<div class="mbbody">
+	<div class="mbttl"><i><a href=""></a></i><h2>webmap</h2></div>
+	</div>
+	<!--phonenav end-->
+	<!--手机title start-->
+	<div class="mbtitle">
+	    <div class="mbnav">
+					<a href="#menu" class="glyphicon glyphicon-th-large"><img src="images2015/phoneNav.png"  alt=""/></a><input type="hidden" id="divdiscon" name="divdiscon" value="0">
+			</div>
+	</div>
+	<nav id="menu" class="mbnavadd">
+		<h2><a href=""><i><img src="images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+		<ul>
+			<li class="Selected"><a href="">课程</a></li>
+		    <li><a href="">题库</a></li>
+		    <li><a href="">直播</a></li>
+		    <li><a href="">资讯</a></li>
+		    <li><a href="">商城</a></li>
+		    <li><a href="">应用</a></li>
+		</ul>
+	</nav>
+	<!--手机title end-->
+	
+	<!--webnav start-->
+	<div class="webbody">
+	    <div class="gtopttl">
+	    <nav>
+		    <h2><img src="images2015/logo.png"  alt=""/></h2>
+		    <span><a href="javascript:void(0);" onClick="login();">登录</a><a href="javascript:void(0);" onClick="reg();">注册</a></span>
+		    <ul>
+		    <li><a href="">课程</a></li>
+		    <li><a href="">题库</a></li>
+		    <li><a href="">直播</a></li>
+		    <li><a href="">资讯</a></li>
+		    <li><a href="">商城</a></li>
+		    <li><a href="">应用</a></li>
+		    </ul>
+	    </nav>
+	    </div>
+	</div>
+	<!--webnav end-->
+		
+<!--webmain start-->
+<div class="main_body">
+	<h3 class="map"><i class="iconfont">&#xe6d4;</i>金程站点地图</h3>
+	<div class="content">
+		<!-- first 金程网校 start -->
+		<div class="first">
+			<a href="http://www.gfedu.cn/"><p class="name"><i class="iconfont">&#xe647;</i>金程网校</p></a>
+			<ul>
+				<a href="http://www.gfedu.cn/classify.aspx"><li>课程</li></a>
+				<a href="http://www.gfedu.cn/intro.shtml"><li>题库</li></a>
+				<a href="http://www.gfedu.cn/Live/List_1.shtml"><li>直播</li></a>
+				<a href="http://www.gfedu.cn/bookstore/"><li>商城</li></a>
+			</ul>
+		</div>
+		<!-- first 金程网校 end -->
+		
+		<!-- second 项目 start -->
+		<div class="second">
+			<p><i class="iconfont">&#xe647;</i>项目</p>
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cma/"><p>CMA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cma/kaoshi.shtml"><li>CMA考试</li></a>
+					<a href="http://www.gfedu.cn/cma/bkzn.shtml"><li>CMA报考指南</li></a>
+					<a href="http://www.gfedu.cn/cma/zyqj.shtml"><li>CMA职业前景</li></a>
+					<a href="http://www.gfedu.cn/cma/zkz.shtml"><li>CMA准考证</li></a>
+					<a href="http://www.gfedu.cn/cma/chengji.shtml"><li>CMA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cma/bkbb.shtml"><li>CMA备考必备</li></a>
+					<a href="http://www.gfedu.cn/cma/dongtai.shtml"><li>CMA动态</li></a>
+					<a href="http://www.gfedu.cn/cma/kecheng.shtml"><li>CMA课程</li></a>
+					<a href="http://www.gfedu.cn/cma/shiti.shtml"><li>CMA试题精选</li></a>
+					<a href="http://www.gfedu.cn/cma/cmaspecial.shtml"><li>CMA备考资料</li></a>
+					<a href="http://www.gfedu.cn/cma/p1.shtml"><li>CMA P1</li></a>
+					<a href="http://www.gfedu.cn/cma/p2.shtml"><li>CMA P2</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/frm/"><p>FRM</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/frm/kaoshi.shtml"><li>FRM考试</li></a>
+					<a href="http://www.gfedu.cn/frm/bkzn.shtml"><li>FRM报考指南</li></a>
+					<a href="http://www.gfedu.cn/frm/zyqj.shtml"><li>FRM职业前景</li></a>
+					<a href="http://www.gfedu.cn/frm/bkbb.shtml"><li>FRM报考必备</li></a>
+					<a href="http://www.gfedu.cn/frm/zkz.shtml"><li>FRM准考证</li></a>
+					<a href="http://www.gfedu.cn/frm/chengji.shtml"><li>FRM考试成绩</li></a>
+					<a href="http://www.gfedu.cn/frm/dongtai.shtml"><li>FRM动态</li></a>
+					<a href="http://www.gfedu.cn/frm/kecheng.shtml"><li>FRM课程</li></a>
+					<a href="http://www.gfedu.cn/frm/shiti.shtml"><li>FRM试题精选</li></a>
+					<a href="http://www.gfedu.cn/frm/bkzl.shtml"><li>FRM备考资料</li></a>
+					<a href="http://www.gfedu.cn/frm/part1.shtml"><li>FRM一级</li></a>
+					<a href="http://www.gfedu.cn/frm/part2.shtml"><li>FRM二级</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cfa/"><p>CFA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cfa/kaoshi.shtml"><li>CFA考试</li></a>
+					<a href="http://www.gfedu.cn/cfa/bkzn.shtml"><li>CFA报考指南</li></a>
+					<a href="http://www.gfedu.cn/cfa/zyqj.shtml"><li>CFA职业前景</li></a>
+					<a href="http://www.gfedu.cn/cfa/bkbb.shtml"><li>CFA备考必备</li></a>
+					<a href="http://www.gfedu.cn/cfa/shiti.shtml"><li>CFA试题精选</li></a>
+					<a href="http://www.gfedu.cn/cfa/zkz.shtml"><li>CFA准考证</li></a>
+					<a href="http://www.gfedu.cn/cfa/chengji.shtml"><li>CFA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cfa/dongtai.shtml"><li>CFA动态</li></a>
+					<a href="http://www.gfedu.cn/cfa/kecheng.shtml"><li>CFA课程</li></a>
+					<a href="http://www.gfedu.cn/cfa/cfa1.shtml"><li>CFA一级</li></a>
+					<a href="http://www.gfedu.cn/cfa/cfa2.shtml"><li>CFA二级</li></a>
+					<a href="http://www.gfedu.cn/cfa/cfa3.shtml"><li>CFA三级</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/acca/"><p>ACCA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/acca/kaoshi.shtml"><li>ACCA考试</li></a>
+					<a href="http://www.gfedu.cn/acca/bkzn.shtml"><li>ACCA报考指南</li></a>
+					<a href="http://www.gfedu.cn/acca/zyqj.shtml"><li>ACCA职业前景</li></a>
+					<a href="http://www.gfedu.cn/acca/bkbb.shtml"><li>ACCA备考必备</li></a>
+					<a href="http://www.gfedu.cn/acca/shiti.shtml"><li>ACCA试题精选</li></a>
+					<a href="http://www.gfedu.cn/acca/zkz.shtml"><li>ACCA准考证</li></a>
+					<a href="http://www.gfedu.cn/acca/chengji.shtml"><li>ACCA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/acca/dongtai.shtml"><li>ACCA动态</li></a>
+					<a href="http://www.gfedu.cn/acca/kecheng.shtml"><li>ACCA课程</li></a>
+					<a href="http://www.gfedu.cn/acca/f1.shtml"><li>ACCA F1</li></a>
+					<a href="http://www.gfedu.cn/acca/f2.shtml"><li>ACCA F2</li></a>
+					<a href="http://www.gfedu.cn/acca/f3.shtml"><li>ACCA F3</li></a>
+					<a href="http://www.gfedu.cn/acca/f4.shtml"><li>ACCA F4</li></a>
+					<a href="http://www.gfedu.cn/acca/f5.shtml"><li>ACCA F5</li></a>
+					<a href="http://www.gfedu.cn/acca/f6.shtml"><li>ACCA F6</li></a>
+					<a href="http://www.gfedu.cn/acca/f7.shtml"><li>ACCA F7</li></a>
+					<a href="http://www.gfedu.cn/acca/f8.shtml"><li>ACCA F8</li></a>
+					<a href="http://www.gfedu.cn/acca/f9.shtml"><li>ACCA F9</li></a>
+					<a href="http://www.gfedu.cn/acca/p1.shtml"><li>ACCA P1</li></a>
+					<a href="http://www.gfedu.cn/acca/p2.shtml"><li>ACCA P2</li></a>
+					<a href="http://www.gfedu.cn/acca/p3.shtml"><li>ACCA P3</li></a>
+					<a href="http://www.gfedu.cn/acca/p4.shtml"><li>ACCA P4</li></a>
+					<a href="http://www.gfedu.cn/acca/p5.shtml"><li>ACCA P5</li></a>
+					<a href="http://www.gfedu.cn/acca/p6.shtml"><li>ACCA P6</li></a>
+					<a href="http://www.gfedu.cn/acca/p7.shtml"><li>ACCA P7</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/uscpa/"><p>USCPA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/uscpa/kaoshi.shtml"><li>USCPA考试</li></a>
+					<a href="http://www.gfedu.cn/uscpa/bkzn.shtml"><li>USCPA报考指南</li></a>
+					<a href="http://www.gfedu.cn/uscpa/zyqj.shtml"><li>USCPA职业前景</li></a>
+					<a href="http://www.gfedu.cn/uscpa/bkbb.shtml"><li>USCPA备考必备</li></a>
+					<a href="http://www.gfedu.cn/uscpa/shiti.shtml"><li>USCPA试题精选</li></a>
+					<a href="http://www.gfedu.cn/uscpa/zkz.shtml"><li>USCPA准考证</li></a>
+					<a href="http://www.gfedu.cn/uscpa/chengji.shtml"><li>USCPA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/uscpa/dongtai.shtml"><li>USCPA动态</li></a>
+					<a href="http://www.gfedu.cn/uscpa/kecheng.shtml"><li>USCPA课程</li></a>
+					<a href="http://www.gfedu.cn/uscpa/aud.shtml"><li>AUD</li></a>
+					<a href="http://www.gfedu.cn/uscpa/bec.shtml"><li>BEC</li></a>
+					<a href="http://www.gfedu.cn/uscpa/reg.shtml"><li>REG</li></a>
+					<a href="http://www.gfedu.cn/uscpa/far.shtml"><li>FAR</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/kjcy/"><p>会计从业</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/kjcy/kaoshi.shtml"><li>会计从业考试</li></a>
+					<a href="http://www.gfedu.cn/kjcy/bkzn.shtml"><li>会计从业报考指南</li></a>
+					<a href="http://www.gfedu.cn/kjcy/zyqj.shtml"><li>会计从业职业前景</li></a>
+					<a href="http://www.gfedu.cn/kjcy/bkbb.shtml"><li>会计从业备考必备</li></a>
+					<a href="http://www.gfedu.cn/kjcy/shiti.shtml"><li>会计从业试题精选</li></a>
+					<a href="http://www.gfedu.cn/kjcy/zkz.shtml"><li>会计从业准考证</li></a>
+					<a href="http://www.gfedu.cn/kjcy/chengji.shtml"><li>会计从业考试成绩</li></a>
+					<a href="http://www.gfedu.cn/kjcy/dongtai.shtml"><li>会计从业动态</li></a>
+					<a href="http://www.gfedu.cn/kjcy/kecheng.shtml"><li>会计从业课程</li></a>
+					<a href="http://www.gfedu.cn/kjcy/kjjc.shtml"><li>会计基础</li></a>
+					<a href="http://www.gfedu.cn/kjcy/kjfg.shtml"><li>会计法规</li></a>
+					<a href="http://www.gfedu.cn/kjcy/kjdsh.shtml"><li>会计电算化</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cpa/"><p>CPA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cpa/kaoshi.shtml"><li>CPA考试</li></a>
+					<a href="http://www.gfedu.cn/cpa/bkzn.shtml"><li>CPA报考指南</li></a>
+					<a href="http://www.gfedu.cn/cpa/zyqj.shtml"><li>CPA职业前景</li></a>
+					<a href="http://www.gfedu.cn/cpa/bkbb.shtml"><li>CPA备考必备</li></a>
+					<a href="http://www.gfedu.cn/cpa/shiti.shtml"><li>CPA试题精选</li></a>
+					<a href="http://www.gfedu.cn/cpa/zkz.shtml"><li>CPA准考证</li></a>
+					<a href=""http://www.gfedu.cn/cpa/chengji.shtml><li>CPA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cpa/dongtai.shtml"><li>CPA动态</li></a>
+					<a href="http://www.gfedu.cn/cpa/kecheng.shtml"><li>CPA课程</li></a>
+					<a href="http://www.gfedu.cn/cpa/kuaiji.shtml"><li>会计</li></a>
+					<a href="http://www.gfedu.cn/cpa/shenji.shtml"><li>审计</li></a>
+					<a href="http://www.gfedu.cn/cpa/cwgl.shtml"><li>财务管理</li></a>
+					<a href="http://www.gfedu.cn/cpa/shuifa.shtml"><li>税法</li></a>
+					<a href="http://www.gfedu.cn/cpa/jingjifa.shtml"><li>经济法</li></a>
+					<a href="http://www.gfedu.cn/cpa/zlfx.shtml"><li>战略风险</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cjjjs/"><p>初级经济师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cjjjs/ksjj.shtml"><li>初级经济师考试</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/bkzn.shtml"><li>初级经济师报考指南</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/zyqj.shtml"><li>初级经济师职业前景</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/bkbb.shtml"><li>初级经济师备考必备</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/shiti.shtml"><li>初级经济师试题精选</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/zkz.shtml"><li>初级经济师准考证</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/chengji.shtml"><li>初级经济师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/dongtai.shtml"><li>初级经济师动态</li></a>
+					<a href="http://www.gfedu.cn/cjjjs/kecheng.shtml"><li>初级经济师课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/zjjjs/"><p>中级经济师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/zjjjs/kaoshi.shtml"><li>中级经济师考试</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/bkzn.shtml"><li>中级经济师报考指南</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/qj.shtml"><li>中级经济师职业前景</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/bkbb.shtml"><li>中级经济师备考必备</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/shiti.shtml"><li>中级经济师试题精选</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/zkz.shtml"><li>中级经济师准考证</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/chengji.shtml"><li>中级经济师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/dongtai.shtml"><li>中级经济师动态</li></a>
+					<a href="http://www.gfedu.cn/zjjjs/kecheng.shtml"><li>中级经济师课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/lcghs/"><p>理财规划师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/lcghs/ksjj.shtml"><li>理财规划师考试</li></a>
+					<a href="http://www.gfedu.cn/lcghs/bkzn.shtml"><li>理财规划师报考指南</li></a>
+					<a href="http://www.gfedu.cn/lcghs/zyqj.shtml"><li>理财规划师职业前景</li></a>
+					<a href="http://www.gfedu.cn/lcghs/bkbb.shtml"><li>理财规划师备考必备</li></a>
+					<a href="http://www.gfedu.cn/lcghs/shiti.shtml"><li>理财规划师试题精选</li></a>
+					<a href="http://www.gfedu.cn/lcghs/zkz.shtml"><li>理财规划师准考证</li></a>
+					<a href="http://www.gfedu.cn/lcghs/chengji.shtml"><li>理财规划师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/lcghs/dongtai.shtml"><li>理财规划师动态</li></a>
+					<a href="http://www.gfedu.cn/lcghs/kecheng.shtml"><li>理财规划师课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cjkjzc/"><p>初级会计职称</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cjkjzc/ksjj.shtml"><li>初级会计职称考试</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/bkzn.shtml"><li>初级会计职称报考指南</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/zyqj.shtml"><li>初级会计职称职业前景</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/bkbb.shtml"><li>初级会计职称备考必备</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/shiti.shtml"><li>初级会计职称试题精选</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/zkz.shtml"><li>初级会计职称准考证</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/chengji.shtml"><li>初级会计职称考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/dongtai.shtml"><li>初级会计职称动态</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/kecheng.shtml"><li>初级会计职称课程</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/kjsw.shtml"><li>初级会计职称会计实务</li></a>
+					<a href="http://www.gfedu.cn/cjkjzc/jjf.shtml"><li>初级会计职称经济法</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/zjkjzc/"><p>中级会计职称</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/zjkjzc/ksjj.shtml"><li>中级会计职称考试</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/bkzn.shtml"><li>中级会计职称报考指南</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/zyqj.shtml"><li>中级会计职称职业前景</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/bkbb.shtml"><li>中级会计职称备考必备</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/shiti.shtml"><li>中级会计职称试题精选</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/zkz.shtml"><li>中级会计职称准考证</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/chengji.shtml"><li>中级会计职称考试成绩</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/dongtai.shtml"><li>中级会计职称动态</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/kecheng.shtml"><li>中级会计职称课程</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/jjf.shtml"><li>中级会计职称经济法</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/zjkjsw.shtml"><li>中级会计实务</li></a>
+					<a href="http://www.gfedu.cn/zjkjzc/cwgl.shtml"><li>财务管理</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/gjkjzc/"><p>高级会计职称</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/gjkjzc/ksjj.shtml"><li>高级会计职称考试</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/bkzn.shtml"><li>高级会计职称报考指南</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/zyqj.shtml"><li>高级会计职称职业前景</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/bkbb.shtml"><li>高级会计职称备考必备</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/shiti.shtml"><li>高级会计职称试题精选</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/zkz.shtml"><li>高级会计职称准考证</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/chengji.shtml"><li>高级会计职称考试成绩</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/dongtai.shtml"><li>高级会计职称动态</li></a>
+					<a href="http://www.gfedu.cn/gjkjzc/kecheng.shtml"><li>高级会计职称课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/zqcy/"><p>证券从业</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/zqcy/kaoshi.shtml"><li>证券从业考试</li></a>
+					<a href="http://www.gfedu.cn/zqcy/bkzn.shtml"><li>证券从业报考指南</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zyqj.shtml"><li>证券从业职业前景</li></a>
+					<a href="http://www.gfedu.cn/zqcy/bkbb.shtml"><li>证券从业备考必备</li></a>
+					<a href="http://www.gfedu.cn/zqcy/shiti.shtml"><li>证券从业试题精选</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zkz.shtml"><li>证券从业准考证</li></a>
+					<a href="http://www.gfedu.cn/zqcy/chengji.shtml"><li>证券从业考试成绩</li></a>
+					<a href="http://www.gfedu.cn/zqcy/dongtai.shtml"><li>证券从业动态</li></a>
+					<a href="http://www.gfedu.cn/zqcy/kecheng.shtml"><li>证券从业课程</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zqscjczs.shtml"><li>证券市场基础知识</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zqjy.shtml"><li>证券交易</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zqtzjj.shtml"><li>证券投资基金</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zqfx.shtml"><li>证券分析</li></a>
+					<a href="http://www.gfedu.cn/zqcy/zqfxyxx.shtml"><li>证券发行与承销</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/yhcy/"><p>银行从业</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/yhcy/kaoshi.shtml"><li>银行从业考试</li></a>
+					<a href="http://www.gfedu.cn/yhcy/bkzn.shtml"><li>银行从业报考指南</li></a>
+					<a href="http://www.gfedu.cn/yhcy/zyqj.shtml"><li>银行从业职业前景</li></a>
+					<a href="http://www.gfedu.cn/yhcy/bkbb.shtml"><li>银行从业备考必备</li></a>
+					<a href="http://www.gfedu.cn/yhcy/shiti.shtml"><li>银行从业试题精选</li></a>
+					<a href="http://www.gfedu.cn/yhcy/zkz.shtml"><li>银行从业准考证</li></a>
+					<a href="http://www.gfedu.cn/yhcy/chengji.shtml"><li>银行从业考试成绩</li></a>
+					<a href="http://www.gfedu.cn/yhcy/dongtai.shtml"><li>银行从业动态</li></a>
+					<a href="http://www.gfedu.cn/yhcy/kecheng.shtml"><li>银行从业课程</li></a>
+					<a href="http://www.gfedu.cn/yhcy/gsxd.shtml"><li>公司信贷</li></a>
+					<a href="http://www.gfedu.cn/yhcy/grdk.shtml"><li>个人贷款</li></a>
+					<a href="http://www.gfedu.cn/yhcy/ggjc.shtml"><li>公共基础</li></a>
+					<a href="http://www.gfedu.cn/yhcy/grlc.shtml"><li>个人理财</li></a>
+					<a href="http://www.gfedu.cn/yhcy/fxgl.shtml"><li>风险管理</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/qhcy/"><p>期货从业</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/qhcy/kaoshi.shtml"><li>期货从业考试</li></a>
+					<a href="http://www.gfedu.cn/qhcy/zyqj.shtml"><li>期货从业报考指南</li></a>
+					<a href="http://www.gfedu.cn/qhcy/bkzn.shtml"><li>期货从业职业前景</li></a>
+					<a href="http://www.gfedu.cn/qhcy/bkbb.shtml"><li>期货从业备考必备</li></a>
+					<a href="http://www.gfedu.cn/qhcy/shiti.shtml"><li>期货从业试题精选</li></a>
+					<a href="http://www.gfedu.cn/qhcy/zkz.shtml"><li>期货从业准考证</li></a>
+					<a href="http://www.gfedu.cn/qhcy/chengji.shtml"><li>期货从业考试成绩</li></a>
+					<a href="http://www.gfedu.cn/qhcy/dongtai.shtml"><li>期货从业动态</li></a>
+					<a href="http://www.gfedu.cn/qhcy/kecheng.shtml"><li>期货从业课程</li></a>
+					<a href="http://www.gfedu.cn/qhcy/qhjc.shtml"><li>期货基础</li></a>
+					<a href="http://www.gfedu.cn/qhcy/qhflfg.shtml"><li>期货法律法规</li></a>
+					<a href="http://www.gfedu.cn/qhcy/qhfx.shtml"><li>期货分析</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cima/"><p>CIMA</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cima/kaoshi.shtml"><li>CIMA考试</li></a>
+					<a href="http://www.gfedu.cn/cima/bkzn.shtml"><li>CIMA报考指南</li></a>
+					<a href="http://www.gfedu.cn/cima/zyqj.shtml"><li>CIMA职业前景</li></a>
+					<a href="http://www.gfedu.cn/cima/bkbb.shtml"><li>CIMA备考必备</li></a>
+					<a href="http://www.gfedu.cn/cima/shiti.shtml"><li>CIMA试题精选</li></a>
+					<a href="http://www.gfedu.cn/cima/zkz.shtml"><li>CIMA准考证</li></a>
+					<a href="http://www.gfedu.cn/cima/chengji.shtml"><li>CIMA考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cima/dongtai.shtml"><li>CIMA动态</li></a>
+					<a href="http://www.gfedu.cn/cima/kecheng.shtml"><li>CIMA课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/bjdbr/"><p>保荐代表人</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/bjdbr/ksjj.shtml"><li>保荐代表人考试</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/bkzn.shtml"><li>保荐代表人报考指南</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/zyqj.shtml"><li>保荐代表人职业前景</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/bkbb.shtml"><li>保荐代表人备考必备</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/shiti.shtml"><li>保荐代表人试题精选</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/zkz.shtml"><li>保荐代表人准考证</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/chengji.shtml"><li>保荐代表人考试成绩</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/dongtai.shtml"><li>保荐代表人动态</li></a>
+					<a href="http://www.gfedu.cn/bjdbr/kecheng.shtml"><li>保荐代表人课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/zcsws/"><p>注册税务师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/zcsws/ksjj.shtml"><li>注册税务师考试</li></a>
+					<a href="http://www.gfedu.cn/zcsws/bkzn.shtml"><li>注册税务师报考指南</li></a>
+					<a href="http://www.gfedu.cn/zcsws/zyqj.shtml"><li>注册税务师职业前景</li></a>
+					<a href="http://www.gfedu.cn/zcsws/bkbb.shtml"><li>注册税务师备考必备</li></a>
+					<a href="http://www.gfedu.cn/zcsws/shiti.shtml"><li>注册税务师试题精选</li></a>
+					<a href="http://www.gfedu.cn/zcsws/zkz.shtml"><li>注册税务师准考证</li></a>
+					<a href="http://www.gfedu.cn/zcsws/chengji.shtml"><li>注册税务师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/zcsws/dongtai.shtml"><li>注册税务师动态</li></a>
+					<a href="http://www.gfedu.cn/zcsws/kecheng.shtml"><li>注册税务师课程</li></a>
+					<a href="http://www.gfedu.cn/zcsws/shuifa1.shtml"><li>税法一</li></a>
+					<a href="http://www.gfedu.cn/zcsws/shuifa2.shtml"><li>税法二</li></a>
+					<a href="http://www.gfedu.cn/zcsws/cwykj.shtml"><li>财务与会计</li></a>
+					<a href="http://www.gfedu.cn/zcsws/ssxgfl.shtml"><li>税收相关法律</li></a>
+					<a href="http://www.gfedu.cn/zcsws/ssdlsw.shtml"><li>税收代理实务</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/jss/"><p>精算师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/jss/kaoshi.shtml"><li>精算师考试</li></a>
+					<a href="http://www.gfedu.cn/jss/bkzn.shtml"><li>精算师报考指南</li></a>
+					<a href="http://www.gfedu.cn/jss/zyqj.shtml"><li>精算师职业前景</li></a>
+					<a href="http://www.gfedu.cn/jss/bkbb.shtml"><li>精算师备考必备</li></a>
+					<a href="http://www.gfedu.cn/jss/shiti.shtml"><li>精算师试题精选</li></a>
+					<a href="http://www.gfedu.cn/jss/zkz.shtml"><li>精算师准考证</li></a>
+					<a href="http://www.gfedu.cn/jss/chengji.shtml"><li>精算师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/jss/dongtai.shtml"><li>精算师动态</li></a>
+					<a href="http://www.gfedu.cn/jss/kecheng.shtml"><li>精算师课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/zcpgs/"><p>资产评估师</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/zcpgs/ksjj.shtml"><li>资产评估师考试</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/bkzn.shtml"><li>资产评估师报考指南</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/zyqj.shtml"><li>资产评估师职业前景</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/bkbb.shtml"><li>资产评估师备考必备</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/shiti.shtml"><li>资产评估师试题精选</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/zkz.shtml"><li>资产评估师准考证</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/chengji.shtml"><li>资产评估师考试成绩</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/dongtai.shtml"><li>资产评估师动态</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/kecheng.shtml"><li>资产评估师课程</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/cwkj.shtml"><li>财务会计</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/zcpg.shtml"><li>资产评估</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/jingjifa.shtml"><li>资产评估师经济法</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/jdsbpg.shtml"><li>机电设备评估</li></a>
+					<a href="http://www.gfedu.cn/zcpgs/jzgcpg.shtml"><li>建筑工程评估</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/cfrm/"><p>CFRM</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/cfrm/kaoshi.shtml"><li>CFRM考试</li></a>
+					<a href="http://www.gfedu.cn/cfrm/bkzn.shtml"><li>CFRM报考指南</li></a>
+					<a href="http://www.gfedu.cn/cfrm/zyqj.shtml"><li>CFRM职业前景</li></a>
+					<a href="http://www.gfedu.cn/cfrm/bkbb.shtml"><li>CFRM备考必备</li></a>
+					<a href="http://www.gfedu.cn/cfrm/shiti.shtml"><li>CFRM试题精选</li></a>
+					<a href="http://www.gfedu.cn/cfrm/zkz.shtml"><li>CFRM准考证</li></a>
+					<a href="http://www.gfedu.cn/cfrm/chengji.shtml"><li>CFRM考试成绩</li></a>
+					<a href="http://www.gfedu.cn/cfrm/dongtai.shtml"><li>CFRM动态</li></a>
+					<a href="http://www.gfedu.cn/cfrm/kecheng.shtml"><li>CFRM课程</li></a>
+				</ul>
+			</div>
+			
+			<div class="cont">
+				<a href="http://www.gfedu.cn/jcky/"><p>金程考研</p></a>
+				<ul>
+					<a href="http://www.gfedu.cn/jcky/ksjj.shtml"><li>考研考试</li></a>
+					<a href="http://www.gfedu.cn/jcky/bkzn.shtml"><li>考研报考指南</li></a>
+					<a href="http://www.gfedu.cn/jcky/qianjing.shtml"><li>考研职业前景</li></a>
+					<a href="http://www.gfedu.cn/jcky/bkbb.shtml"><li>考研备考必备</li></a>
+					<a href="http://www.gfedu.cn/jcky/shiti.shtml"><li>考研试题精选</li></a>
+					<a href="http://www.gfedu.cn/jcky/zkz.shtml"><li>考研准考证</li></a>
+					<a href="http://www.gfedu.cn/jcky/chengji.shtml"><li>考研考试成绩</li></a>
+					<a href="http://www.gfedu.cn/jcky/dongtai.shtml"><li>金程考研动态</li></a>
+					<a href="http://www.gfedu.cn/jcky/kecheng.shtml"><li>考研课程</li></a>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<!-- second 项目 end -->
+		
+		<div class="third">
+			<p><i class="iconfont">&#xe647;</i>其他信息</p>
+			<ul>
+				<a href="http://www.gfedu.cn/help10.shtml"><li>关于我们</li></a>
+				<a href="http://www.gfedu.cn/help11.shtml"><li>联系我们</li></a>
+				<a href="http://www.gfedu.cn/sitemap.xml"><li>网站地图</li></a>
+			</ul>
+		</div>
+	</div>
+</div>	
+<!--webmain end-->
+        
+		<!--手机底部 start-->
+	<div class="mbfooter">
+		<ul>
+		<li><a href="">登录</a></li>
+		<li><a href="">注册</a></li>
+		<li><a href="">下载APP</a></li>
+		<li><a href="">用户反馈</a></li>
+		</ul>
+		<dl>
+		<dt>400-700-9596 </dt>
+		<dd>（每日9:00-21:00免长途费 ）</dd>
+		</dl>
+		<p>©2014金程网校保留所有权利 </p>
+	</div>
+	<div class="gotop"><a href="#"><strong>&and;</strong>TOP</a></div>
+		<!--手机底部 end-->
+		
+		<!--webfoot start-->
+	<footer>
+		  <div class="newlinks">
+		    <dl>
+		    <dt>新手指南</dt>
+		    <dd><a href="#">如何注册会员</a></dd>
+		    <dd><a href="#">如何购买课程</a></dd>
+		    <dd><a href="#">如何观看课程</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>学习须知</dt>
+		    <dd><a href="#">网校学习方式</a></dd>
+		    <dd><a href="#">学习效果如何保障</a></dd>
+		    <dd><a href="#">学习条件</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>支付方式</dt>
+		    <dd><a href="#">网上支付</a></dd>
+		    <dd><a href="#">开通支付宝</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>关于金程</dt>
+		    <dd><a href="#">关于我们</a></dd>
+		    <dd><a href="#">联系我们</a></dd>
+		    <dd><a href="#">加入我们</a></dd>
+		    </dl>
+		    <dl>
+		    <dt>400 - 700 - 9596</dt>
+		    <dd>（每日9:00-21:00    免长途费）</dd>
+		    <dd><img src="images2015/bottomWX.png"></dd>
+		    </dl>
+		</div>
+		<div class="copyright">
+		<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+		    </div>
+	</footer>
+	<!--webfoot end-->
+<!-- login start -->
+<!--登录-->
+
+<div class="body_main body_login" id="loginDialog">
+  <div class="box_main">
+    <div id="login" class="login">
+      <form action="/web/Check/CheckCurent.asp" method="post" name="LoginForm" id="LoginForm">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closelogin();">X</a>
+              <p class="phoneReg">登录金程网校</p>
+            </div>
+            <div class="login_msg_wrap">
+            	<p class="login_msg">
+            		<i class="iconfont">&#xf0002;</i>用户名或密码不匹配，请重新输入
+            	</p>
+            </div>            
+            <div class="field-all">
+              <div class="field-group"><input type="hidden" name="S_Login" value="5"> <span class="control-group" id="mobile_input">
+                <div class="input_add_long_background">
+                	<input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+                    <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="field-group"> <span class="control-group" id="password_input">
+                <div class="input_add_long_background">
+                	<input type="password" id="Field_PassWord" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwdL('Field_PassWord');">
+            		<p class="noticeLR" id="noticeLR_Field_PassWord"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="mianDL">
+              	  <p><input type="checkbox" checked="checked">两周内免登录</p>
+                  <a href="/GetPass.shtml">忘记密码？</a>
+              </div>
+              
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="loginB" type="button" value="登录" class="button_button disabled">
+                </div>
+              </div>
+              <div class="hzzh">
+              	<div class="zjdl">
+                	<span>直接登录：</span>
+               		<a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+              	<p><a id="nowReg" href="javascript:;" onclick="LtR();">注册</a>金程账号</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register start -->
+<!--注册-->
+
+<div class="body_main" id="regDialog">
+  <div class="box_main">
+    <div id="register" class="register">
+      <form id="form_reg" name="form_reg" action="http://user.gfedu.net/UserReg.aspx" method="post" onSubmit="return checkReg()">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closereg();">X</a>
+              <p class="phoneReg">注册金程网校</p>
+            </div>
+            <div class="field-all">
+              <div class="field-group"> <span class="control-group" id="realname_input">
+                <div class="input_add_long_background">
+                  <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+                  <p class="noticeLR" id="noticeLR_realnameM"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group handphone"> <span class="control-group" id="tel_input">
+                <div class="input_add_long_background">
+                   <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+                   <p class="noticeLR" id="noticeLR_tel"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="code_input">
+                <div class="input_add_background">
+                  
+                   <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+                <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+                
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="password1_input">
+                <div class="input_add_long_background">
+                 <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+                 <p class="noticeLR" id="noticeLR_passwd"></p>
+                
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              <div class="xieyi">
+                <input type="checkbox">
+                同意金程的《用户协议》 </div>
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="reg_But" type="submit" value="注册" class="button_button disabled"><input type="hidden" name="furl" id="furl" value=""><input type="hidden" name="stationid" id="stationid" value="5"><input type="hidden" name="username" id="Hidden1" value="username"><input type="hidden" name="email" id="email" value="nomail">
+                </div>
+              </div>
+             <div class="hzzh">
+              	<div class="zjdl">
+                	<span>直接登录：</span>
+               		<a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+              	<p>已有账号<a id="nowLogin" href="javascript:;" onclick="RtL();">登录</a></p>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register end -->
+        
+	</body>
+</html>

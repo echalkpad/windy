@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130110604466.png"><div class="cont"><h2>汤震宇</h2><em>CFA“中国第一 人”，金程教育董事长。</em><span>中国“CFA第一人”、金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场.</span></div></li></ul><div class="jcb_content">
+<h5>学历与证书</h5>
+<p>复旦大学会计学博士、CFA（注册金融分析师)、FRM（金融风险管理师）<br />
+CTP（国际财资管理师）、CAIA（特许另类投资分析师<br />
+CMA（美国管理会计师）、RFP（美国注册财务策划师）<br />
+CISI会员（英国特许证券与投资协会会员）、经济师</p>
+<h5>代表著作</h5>
+<p>翻译CFA系列《国际财务报表分析》一书；编著复旦大学出版社&ldquo;注册金融分析师系列&rdquo;《财务报表分析技术》、《固定收益证券定价理论》、《金融衍生产品&mdash;&mdash;衍生金融工具理论与应用》;编著上海人民出版社《商业银行管理学》、《商业银行管理学学习指南》；撰写《董事会结构与我国证券投资基金费率关系的实证研究》、《投资者&ldquo;热手效应&rdquo;与&ldquo;赌徒谬误&rdquo;的心理实验研究》、《从美国次贷危机看金融创新过程中信用创造的缺陷》、《基金投资者的行为方式及其合理性－基于我国证券基金市场的经验证据》、《重塑职业经理人伦理道德范式》等专题文章。</p>
+<h5>工作经验</h5>
+<p>国内授课时间最长、人气最高、口碑最好的金融及财务金牌培训师。十三年讲台一线培训经验，充分了解学生在学习过程中存在的难点与疑问。为金程教育讲授CFA一级达二百多个班次、CFA二级八十多班次，CFA三级三十个班次，FRM三十个班次；会计六十个班次。首创《会计快速突破法》，以平实的案例、生动的表达剖析会计专业的精髓，帮助零会计基础人员轻松读懂复杂的财务信息；掌握财务报告与预算编制的要领。授课逻辑清晰、视角开阔、深入浅出、探本求源；讲课风格从善如流，激情洋溢，深受学员的欢迎和赞誉。亦师亦友，在以专业知识&ldquo;征服&rdquo;学员的同时，更以个人魅力成为无数学员的&ldquo;职场导师&rdquo;，以&ldquo;心有猛虎、细嗅蔷薇&rdquo;之势，激励学员&ldquo;学习的过程需像蚂蚁一样爬行，像雄鹰一样飞翔&rdquo;。在全职投入专业金融培训前，积累了丰富的行业经验丰富，先后供职于大型企业财务公司从事投资项目评估工作, 参与成立证券营业部并任部门经理；任职于某民营公司，参与海外融资和资金管理工作。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

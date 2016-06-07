@@ -1,0 +1,1571 @@
+/*
+Name：老汤煲会计专题
+Author：windy随风缘
+Time:2016-01/22
+
+ */
+/* LESS Document */
+/* 清除浮动 */
+/*常用颜色*/
+/*常用字号*/
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*边框圆角*/
+/* 圆角  */
+/*配模式定位*/
+/*下阴影*/
+/*弹出窗口半透明灰*/
+/*1200屏*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* 背景自适应 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?kabozi');
+  src: url('fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'), url('fonts/icomoon.woff?kabozi') format('woff'), url('fonts/icomoon.ttf?kabozi') format('truestype'), url('fonts/icomoon.svg?kabozi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"],
+i {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mm-menu {
+  background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -ms-background-size: contain;
+}
+/* 共用样式 start */
+body,
+html {
+  min-width: 320px;
+}
+.accountant_hr {
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  bottom: -8px;
+  background: url(../images/border_1.png) 0 0 repeat;
+}
+@media (min-width: 1200px) {
+  .accountant_main {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+.accountant_hd {
+  padding: 20px 0;
+  text-align: center;
+}
+.accountant_hd h2 {
+  font-size: 24px;
+}
+.accountant_hd q {
+  width: 100px;
+  height: 3px;
+  background: #fd7a23;
+  margin: 8px auto 16px;
+  display: block;
+}
+.accountant_hd p {
+  font-size: 16px;
+  color: #999999;
+}
+/* 共用样式 end */
+/* 首屏 start*/
+.first_screen {
+  background: url(../images/banner_bg.png) center center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  width: 100%;
+  position: relative;
+  padding-bottom: 35px;
+}
+.first_screen .banner {
+  position: relative;
+  overflow: hidden;
+}
+.first_screen img {
+  width: 96%;
+  display: block;
+  height: auto;
+}
+.first_screen .banner_1 {
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: 90px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.first_screen .banner_2 {
+  position: absolute;
+  top: 12px;
+}
+.first_screen .banner_3 {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  left: 51%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.first_screen .hard {
+  width: 80%;
+  position: relative;
+  margin: -90px auto 0;
+}
+.first_screen .hard td {
+  display: block;
+  padding: 15px 20px;
+  background: #e9ecf1;
+  margin-top: 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #1f3f64;
+  line-height: 24px;
+}
+.first_screen .phone {
+  display: none;
+}
+@media (min-width: 480px) {
+  .first_screen {
+    padding-bottom: 45px;
+  }
+  .first_screen .banner_2 {
+    top: 22px;
+  }
+  .first_screen .hard {
+    margin-top: -120px;
+  }
+}
+@media (min-width: 640px) {
+  .first_screen .banner_1 {
+    width: 122px;
+  }
+  .first_screen .hard {
+    margin-top: -160px;
+    font-size: 16px;
+  }
+  .first_screen .hard li {
+    line-height: 30px;
+  }
+  .first_screen .hard td {
+    line-height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .first_screen img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .first_screen .banner_2 {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  .first_screen .banner_3 {
+    width: 20%;
+  }
+  .first_screen .hard img {
+    width: 100%;
+  }
+  .first_screen .hard table {
+    border-spacing: 10px;
+    border-collapse: separate;
+  }
+  .first_screen .hard td {
+    display: table-cell;
+    width: 31%;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  .first_screen .phone {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: #fff;
+    color: #d02344;
+    font-size: 20px;
+    padding: 2px 6px;
+  }
+  .first_screen .phone i {
+    margin: 5px;
+    padding-top: 2px;
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .first_screen .banner_1 {
+    width: 150px;
+  }
+  .first_screen .hard {
+    width: 75%;
+    margin-top: -200px;
+  }
+  .first_screen .hard table {
+    width: 90%;
+    margin: 0 auto;
+    border-spacing: 15px;
+  }
+  .first_screen .phone {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .first_screen .hard {
+    margin-top: -250px;
+  }
+}
+/* 首屏 end */
+/* 为什么学习会计第四章 start */
+.accountant_four {
+  background: #7586a0;
+  padding: 30px 0 10px;
+  position: relative;
+  color: #ffffff;
+}
+.accountant_four section {
+  width: 278px;
+  height: 202px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background: url(../images/accountant_four_01.png) 0 0 no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  text-align: center;
+}
+.accountant_four section h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.accountant_four section p {
+  line-height: 24px;
+}
+.accountant_four section span {
+  display: inline-block;
+}
+.accountant_four section strong {
+  color: #fd7e2a;
+  display: block;
+  font-weight: normal;
+}
+.accountant_four article {
+  width: 278px;
+  margin: 20px auto 0;
+}
+.accountant_four article h2 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+}
+.accountant_four article p {
+  padding: 0 0 20px 16px;
+  line-height: 20px;
+  font-size: 12px;
+  position: relative;
+}
+.accountant_four article p i {
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+.accountant_four .accountant_hr {
+  background: url(../images/border_3.png) 0 0 repeat;
+  left: 0;
+}
+@media (min-width: 400px) {
+  .accountant_four section {
+    width: 360px;
+    height: 260px;
+    padding: 40px 30px;
+  }
+  .accountant_four section h3 {
+    font-size: 18px;
+    margin: 8px 0;
+  }
+  .accountant_four section p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .accountant_four section strong {
+    font-size: 16px;
+  }
+  .accountant_four article {
+    width: 360px;
+  }
+  .accountant_four article h2 {
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .accountant_four article p {
+    padding: 0 0 20px 16px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  .accountant_four article p i {
+    font-size: 12px;
+    top: 6px;
+  }
+}
+@media (min-width: 600px) {
+  .accountant_four {
+    padding: 40px 0 20px;
+  }
+  .accountant_four section {
+    width: 468px;
+    height: 338px;
+    padding: 55px;
+  }
+  .accountant_four section h3 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+  .accountant_four section strong {
+    margin-top: 15px;
+  }
+  .accountant_four article {
+    width: 468px;
+  }
+}
+@media (min-width: 992px) {
+  .accountant_four {
+    padding: 40px 30px;
+    *zoom: 1;
+  }
+  .accountant_four:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .accountant_four section {
+    float: left;
+    width: 468px;
+    height: 338px;
+    padding: 55px;
+  }
+  .accountant_four section h3 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+  .accountant_four section strong {
+    margin-top: 15px;
+  }
+  .accountant_four article {
+    width: 48.5%;
+    float: right;
+    margin: 0;
+  }
+  .accountant_four article h2 {
+    font-size: 30px;
+    text-align: left;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .accountant_four {
+    padding: 0;
+  }
+  .accountant_four .accountant_main {
+    padding: 50px 30px 40px 0;
+    *zoom: 1;
+    box-sizing: border-box;
+  }
+  .accountant_four .accountant_main:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .accountant_four section h3 {
+    font-size: 24px;
+    margin: 6px 0 12px;
+  }
+  .accountant_four section p,
+  .accountant_four section strong {
+    font-size: 18px;
+  }
+  .accountant_four article {
+    width: 50%;
+  }
+  .accountant_four article h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+}
+/* 为什么学习会计第四章 end */
+/* 粉末学习法 start */
+.method {
+  padding: 10px 30px 20px;
+  background: #f4f4f4;
+  position: relative;
+}
+.method .mob_method {
+  *zoom: 1;
+  text-align: center;
+}
+.method .mob_method:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.method .mob_method h3 {
+  background: #7a7a7a;
+  color: #ffffff;
+  line-height: 36px;
+}
+.method .mob_method p {
+  color: #666666;
+  padding-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.method .mob_method li {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.method .mob_method li:nth-child(odd) {
+  padding-right: 15px;
+}
+.method .mob_method li:nth-child(even) {
+  padding-left: 15px;
+}
+.method .video {
+  margin: 15px 0 40px;
+}
+.method .video section {
+  background: #6db2ca;
+  padding: 20px 15px;
+}
+.method .video section h3 {
+  font-style: italic;
+  color: #ffffff;
+  font-size: 18px;
+}
+.method .video section h4 {
+  color: #f9cd61;
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+}
+.method .video section p,
+.method .video section h5 {
+  display: none;
+}
+.method .video article {
+  background: #000;
+  height: 150px;
+}
+.method .video article img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.method .accountant_hr {
+  display: none;
+}
+@media (min-width: 480px) {
+  .method .mob_method p {
+    font-size: 16px;
+  }
+  .method .video section {
+    padding: 20px;
+  }
+  .method .video section h3 {
+    font-size: 22px;
+  }
+  .method .video section h4 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 640px) {
+  .method {
+    padding: 20px 65px 30px;
+  }
+  .method .mob_method h3 {
+    font-size: 16px;
+    line-height: 45px;
+  }
+  .method .mob_method p {
+    font-size: 18px;
+  }
+  .method .video {
+    margin: 30px 0 50px;
+  }
+  .method .video section {
+    padding: 25px 40px;
+  }
+  .method .video section h3 {
+    font-size: 26px;
+  }
+  .method .video section h4 {
+    font-size: 30px;
+  }
+  .method .video article {
+    height: 250px;
+  }
+}
+@media (min-width: 768px) {
+  .method .accountant_hr {
+    display: block;
+    left: 0;
+    background: url(../images/border_2.png) 0 0 repeat;
+  }
+}
+@media (min-width: 992px) {
+  .method {
+    padding: 30px 65px;
+  }
+  .method .mob_method li {
+    width: 25%;
+    padding: 30px 15px!important;
+  }
+  .method .mob_method li:nth-child(1) div {
+    background: url(../images/method_01.png) center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .method .mob_method li:nth-child(2) div {
+    background: url(../images/method_02.png) center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .method .mob_method li:nth-child(3) div {
+    background: url(../images/method_03.png) center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .method .mob_method li:nth-child(4) div {
+    background: url(../images/method_04.png) center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .method .mob_method section {
+    width: 180px;
+    margin: 0 auto;
+  }
+  .method .mob_method div {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+  }
+  .method .mob_method h3 {
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -23px;
+  }
+  .method .mob_method p {
+    font-size: 16px;
+  }
+  .method .video {
+    margin: 30px 0 70px;
+    *zoom: 1;
+  }
+  .method .video:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .method .video section,
+  .method .video article {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+  }
+  .method .video section {
+    height: 250px;
+  }
+  .method .video section p,
+  .method .video section h5 {
+    display: block;
+    color: #ffffff;
+  }
+  .method .video section p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0;
+  }
+  .method .video section h5 {
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+    border: 1px dashed #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .method .accountant_hr {
+    background: url(../images/border_2.png) 0 0 repeat;
+    left: 0;
+  }
+}
+@media (min-width: 1100px) {
+  .method .video section p {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 14px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .method {
+    padding: 30px 0 70px;
+  }
+  .method .mob_method li {
+    padding: 30px 45px!important;
+  }
+  .method .mob_method section {
+    width: 208px;
+    margin: 0 auto;
+  }
+  .method .mob_method div {
+    height: 208px;
+  }
+  .method .mob_method p {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  .method .video {
+    margin: 30px 0 90px;
+  }
+  .method .video section {
+    height: 320px;
+    padding: 40px;
+  }
+  .method .video section h3 {
+    font-size: 26px;
+  }
+  .method .video section h4,
+  .method .video section h5 {
+    font-size: 30px;
+  }
+  .method .video section p {
+    margin: 20px 0 25px;
+  }
+  .method .video article {
+    height: 320px;
+  }
+}
+.Schedule li {
+  margin-bottom: 15px;
+}
+.Schedule li a {
+  display: block;
+  height: 50px;
+  position: relative;
+  background: #bccadf;
+  color: #7586a0;
+}
+.Schedule li i,
+.Schedule li em {
+  position: absolute;
+  display: inline-block;
+  line-height: 50px;
+  top: 0;
+  text-align: center;
+}
+.Schedule li i {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: Georgia;
+  width: 40px;
+  left: 5px;
+  line-height: 45px;
+}
+.Schedule li em {
+  background: #fd7a23;
+  color: #ffffff;
+  right: 0;
+  width: 70px;
+}
+.Schedule li p {
+  padding: 0 75px 0 45px;
+  height: 100%;
+}
+.Schedule li p span {
+  display: block;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 50px;
+}
+@media (min-width: 600px) {
+  .Schedule {
+    *zoom: 1;
+  }
+  .Schedule:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .Schedule li {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+  }
+  .Schedule li i {
+    font-size: 24px;
+    width: 40px;
+    left: 5px;
+  }
+  .Schedule li em {
+    width: 70px;
+  }
+  .Schedule li p {
+    padding: 0 75px 0 45px;
+    height: 50px;
+  }
+  .Schedule li:nth-child(odd) {
+    padding-right: 8px;
+  }
+  .Schedule li:nth-child(even) {
+    padding-left: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .Schedule li em {
+    display: none;
+  }
+  .Schedule li p {
+    padding: 0 0 0 55px;
+  }
+  .Schedule li p span {
+    font-size: 14px;
+  }
+  .Schedule li:hover a,
+  .Schedule li.selector a {
+    background: #fd7a23;
+    color: #ffffff;
+  }
+  .Schedule li:hover a span,
+  .Schedule li.selector a span {
+    display: none;
+  }
+  .Schedule li:hover a em,
+  .Schedule li.selector a em {
+    width: 100%;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .Schedule li {
+    width: 25%;
+    padding-left: 0!important;
+    padding-right: 10px!important;
+  }
+  .Schedule li i {
+    width: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .Schedule {
+    width: 1215px!important;
+  }
+  .Schedule li {
+    width: 16.66%;
+    padding-right: 15px!important;
+  }
+  .Schedule li:nth-child(4),
+  .Schedule li:nth-child(8) {
+    padding-right: 15px!important;
+  }
+  .Schedule li i {
+    width: 50px;
+  }
+  .Schedule li em {
+    display: none;
+  }
+  .Schedule li p {
+    padding: 0 0 0 55px;
+  }
+  .Schedule li p span {
+    font-size: 14px;
+  }
+}
+/* 粉末学习法 end */
+/* 第四章导读 start*/
+.introduction {
+  display: none;
+}
+@media (min-width: 768px) {
+  .current {
+    display: block;
+  }
+  .introduction {
+    position: relative;
+    padding: 50px 70px 40px;
+    color: #7586a0;
+    text-align: center;
+  }
+  .introduction em {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    top: -35px;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    border: 1px solid #ddd;
+    background: #ffffff;
+    font-family: Georgia;
+    font-size: 24px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fd7a23;
+  }
+  .introduction h3 {
+    font-size: 18px;
+    color: #fd7a23;
+  }
+  .introduction p {
+    margin: 30px 0 20px;
+  }
+  .introduction ul {
+    *zoom: 1;
+  }
+  .introduction ul:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .introduction li {
+    width: 50%;
+    float: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding-right: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 14px;
+  }
+  .introduction a {
+    display: block;
+    width: 160px;
+    line-height: 50px;
+    background: #fd7a23;
+    color: #ffffff;
+    margin: 25px auto 0;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    font-size: 18px;
+  }
+  .introduction section {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 30px;
+  }
+  .introduction section p {
+    line-height: 24px;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+  }
+  .introduction .accountant_hr {
+    background: url(../images/border_2.png) 0 0 repeat;
+    left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .introduction p,
+  .introduction li {
+    font-size: 16px;
+  }
+  .introduction ul {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .introduction {
+    padding: 0;
+  }
+  .introduction .accountant_main {
+    padding: 70px 70px 50px;
+  }
+  .introduction em {
+    width: 98px;
+    height: 98px;
+    top: -50px;
+    margin-left: -50px;
+    line-height: 100px;
+    font-size: 30px;
+  }
+  .introduction h3 {
+    font-size: 20px;
+  }
+  .introduction a {
+    width: 180px;
+  }
+}
+/* 第四章导读 end */
+/* 金程实力 start */
+.power {
+  background: #f4f4f4;
+}
+.power section {
+  display: none;
+}
+.power article {
+  padding: 30px 20px;
+}
+.power article img {
+  display: block;
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+}
+.power .power_hd {
+  margin: 5px 0;
+  *zoom: 1;
+  line-height: 30px;
+}
+.power .power_hd:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.power .power_hd strong {
+  font-weight: normal;
+  font-size: 18px;
+  float: left;
+}
+.power .power_hd strong em {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.power .power_hd span {
+  color: #fd7a23;
+  font-size: 14px;
+  float: right;
+}
+.power small {
+  font-size: 14px;
+  color: #999999;
+}
+.power article > div {
+  padding: 18px 14px;
+  background: #ffffff;
+  position: relative;
+  margin-top: -160px;
+}
+.power article > div h3 {
+  margin: 20px 0 10px;
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.power article > div p {
+  color: #999999;
+  line-height: 24px;
+}
+@media (min-width: 480px) {
+  .power article {
+    padding: 30px;
+  }
+  .power article img {
+    width: 325px;
+  }
+  .power .power_hd {
+    margin: 10px 0;
+  }
+  .power .power_hd strong {
+    font-size: 28px;
+  }
+  .power .power_hd strong em {
+    font-size: 18px;
+  }
+  .power .power_hd span {
+    font-size: 18px;
+  }
+  .power article > div {
+    padding: 20px;
+    margin-top: -200px;
+  }
+  .power article > div h3 {
+    margin: 20px 0 10px;
+    padding: 15px 5px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 640px) {
+  .power .power_hd strong {
+    font-size: 36px;
+  }
+  .power .power_hd strong em {
+    font-size: 24px;
+  }
+  .power .power_hd span {
+    font-size: 24px;
+  }
+  .power article {
+    padding: 30px 65px 50px;
+  }
+  .power article img {
+    width: 375px;
+  }
+  .power article > div {
+    padding: 20px;
+    margin-top: -230px;
+  }
+  .power article > div h3 {
+    font-size: 18px;
+  }
+  .power article > div p {
+    line-height: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .power article {
+    padding-bottom: 0;
+    *zoom: 1;
+  }
+  .power article:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .power article img {
+    width: 280px;
+    float: left;
+    position: relative;
+    z-index: 2;
+  }
+  .power article small {
+    display: none;
+  }
+  .power article > div {
+    width: 60%;
+    background: none;
+    float: right;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .power article > div h3 {
+    font-size: 18px;
+  }
+  .power article > div p {
+    line-height: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  .power article {
+    padding: 30px 65px 0;
+    width: auto;
+  }
+  .power article img {
+    width: 320px;
+  }
+  .power article > div {
+    margin-top: 50px;
+  }
+  .power article > div h3 {
+    margin: 20px 5px;
+  }
+  .power article > div p {
+    line-height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .power section {
+    display: block;
+  }
+  .power section p {
+    padding: 40px 0;
+    width: 360px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #666666;
+    line-height: 30px;
+    text-align: center;
+  }
+  .power section ul {
+    *zoom: 1;
+  }
+  .power section ul:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .power section li {
+    width: 33.33%;
+    float: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+  }
+  .power section li h3 {
+    font-size: 18px;
+  }
+  .power section li big {
+    display: block;
+    font-size: 16px;
+  }
+  .power section li button {
+    display: block;
+    border: 0;
+    margin: 10px auto 0;
+    width: 128px;
+    line-height: 40px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background: #fff;
+  }
+  .power section li .bshare-custom {
+    margin: 8px 0;
+  }
+  .power section li q {
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .power section li > div {
+    height: 140px;
+    box-sizing: border-box;
+    padding: 14px 5px;
+  }
+  .power section li:nth-child(1) > div {
+    background: url(../images/power_02.png) 0 0 no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .power section li:nth-child(1) > div button a {
+    color: #33acdf;
+  }
+  .power section li:nth-child(2) > div {
+    background: url(../images/power_03.png) 0 0 no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+  .power section li:nth-child(2) > div button a {
+    color: #3fb34f;
+  }
+  .power section li:nth-child(3) > div {
+    background: url(../images/power_04.png) 0 0 no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .power section p {
+    font-size: 18px;
+    width: 400px;
+    padding: 60px 0;
+  }
+  .power section li {
+    padding-right: 15px;
+  }
+  .power section li h3 {
+    font-size: 26px;
+  }
+  .power section li big {
+    font-size: 20px;
+  }
+  .power section li .bshare-custom {
+    margin: 14px 0;
+  }
+  .power section li button {
+    margin: 20px auto 0;
+  }
+  .power section li > div {
+    height: 180px;
+    padding: 20px 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .power section p {
+    width: 440px;
+    font-size: 20px;
+  }
+  .power section ul {
+    width: 1215px!important;
+  }
+  .power section li h3 {
+    font-size: 30px;
+  }
+  .power section li big {
+    font-size: 24px;
+  }
+  .power section li > div {
+    height: 200px;
+    padding: 25px 5px;
+  }
+}
+/* 金程实力 end */
+/* 资料索取 start */
+.Data_for {
+  padding: 50px 0;
+  box-sizing: border-box;
+  height: 400px;
+  background: url(../images/Data_for_bg.png) center center no-repeat;
+}
+.Data_for h2 p,
+.Data_for article ul {
+  display: none;
+}
+.Data_for h2 {
+  text-align: center;
+}
+.Data_for form {
+  width: 240px;
+  margin: 20px auto 0;
+}
+.Data_for form input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.Data_for a {
+  display: block;
+  width: 240px;
+  background: #fd7a23;
+  color: #ffffff;
+  margin: 10px auto;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+}
+@media (min-width: 640px) {
+  .Data_for {
+    padding: 50px 0;
+    height: 450px;
+  }
+  .Data_for form {
+    font-size: 16px;
+  }
+  .Data_for form input {
+    line-height: 50px;
+    height: 50px;
+  }
+  .Data_for a {
+    font-size: 22px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .Data_for {
+    height: auto;
+  }
+  .Data_for h2 p,
+  .Data_for article ul {
+    display: block;
+  }
+  .Data_for h2 p {
+    color: #fd7a23;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .Data_for article {
+    padding: 35px 0 20px;
+    color: #ffffff;
+    width: 800px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .Data_for article:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .Data_for form {
+    float: left;
+    margin-top: 0;
+  }
+  .Data_for ul {
+    width: 58%;
+    *zoom: 1;
+    float: right;
+  }
+  .Data_for ul:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .Data_for ul li {
+    width: 50%;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .Data_for ul li i {
+    color: #fd7a23;
+    background: #ffffff;
+    width: 14px;
+    height: 14px;
+    font-size: 14px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .Data_for h2 p {
+    font-size: 18px;
+  }
+  .Data_for article {
+    padding: 35px 0 20px;
+    width: 900px;
+  }
+  .Data_for form input {
+    margin-bottom: 28px;
+  }
+  .Data_for ul li {
+    margin-bottom: 13px;
+    font-size: 16px;
+  }
+}
+/* 资料索取 end */
+.pop {
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  padding-right: 30px;
+  display: none;
+}
+.pop .buy {
+  display: none;
+}
+.pop h2 {
+  width: 100%;
+  height: 120px;
+  background-image: url(../images/poph2bg.jpg);
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  line-height: 120px;
+  position: relative;
+}
+.pop h2 i {
+  position: absolute;
+  display: block;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #000;
+  color: #ffffff;
+  right: -30px;
+  top: 0;
+  cursor: pointer;
+}
+.pop article {
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+.pop dl {
+  padding: 20px 0 10px;
+  text-align: center;
+}
+.pop dd {
+  line-height: 50px;
+  font-size: 30px;
+  color: #fd5a5a;
+  padding: 10px 0 0;
+}
+.pop a {
+  display: block;
+  text-align: center;
+  border: solid 1px #dddddd;
+  background-color: #ffffff;
+  color: #666666;
+  width: 100px;
+  line-height: 40px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+  }
+  .pop .buy {
+    width: 540px;
+    /* .pos(a);
+        top:50%;
+        left:50%;
+        margin:-150px 0 0 -285px; */
+  
+  }
+}
+@media (min-width: 1200px) {
+  .pop article {
+    width: auto;
+  }
+}
+.accountant .ewm {
+  display: none;
+}
+@media (min-width: 992px) {
+  .accountant .ewm {
+    display: block;
+    position: fixed;
+    top: 45%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+  .accountant .ewm img {
+    display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .accountant .ewm {
+    right: 50%;
+    margin-right: -750px;
+  }
+  .accountant .ewm img {
+    display: block;
+  }
+}

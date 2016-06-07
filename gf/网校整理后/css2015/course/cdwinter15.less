@@ -1,0 +1,223 @@
+
+@csgreen:#4dbdc5;
+@csdgreen:#56ceb9;
+@cw:#fff;
+
+/* iconfont */
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?z6i63c');
+    src:url('fonts/icomoon.eot?#iefixz6i63c') format('embedded-opentype'),
+        url('fonts/icomoon.woff?z6i63c') format('woff'),
+        url('fonts/icomoon.ttf?z6i63c') format('truetype'),
+        url('fonts/icomoon.svg?z6i63c#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media(min-width:1200px){
+    .cicmodesummer{
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.summerbg{
+    background: url(../../images2015/coursedetailnew/summer.png) no-repeat;
+    height: 130px;
+    background-size: 100% 100%;
+}
+.summerbox{
+  .sbox{
+      width: 100%;
+      height: 250px;
+      background: @csgreen;
+      position: relative;
+      margin: 70px 0 0;
+      .scircle{
+          position: absolute;
+          top: -55px;
+          left: 50%;
+          margin-left: -55px;
+          width: 110px;
+          height: 110px;
+          background: @cw;
+          border: 2px solid @csgreen;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          img{
+              display: block;
+              margin: 0 auto;
+              margin-top: 15px;
+          }
+          &:first-child{img{margin-top: 30px;}}
+      }
+      .sboxtext{
+          width: 120px;
+          margin: 0 auto;
+          padding-top: 70px;
+          font-size: 16px;
+          line-height: 28px;
+          p{font-size: 13px; color: #333;}
+          &:first-child{padding: 70px 60px 0;}
+      }
+      &:first-child{
+       .sboxtext{
+            width: 170px;
+        } 
+      }
+  }
+}
+
+.summerline{
+    clear: both;
+    background: url(../../images2015/coursedetailnew/summerline.png) no-repeat;
+    width: 100%;
+    height: 4px;
+    background-size: 100% 100%;
+    margin: 50px 0;
+}
+
+.summermx{
+  padding-top: 30px;
+  h2{
+      font-size: 30px;
+      text-align: center;
+  }
+  .smxbox{
+      width: 49%;
+      margin: 20px 0;
+      float: left;
+      color: #333;
+      text-align: center;
+      line-height: 24px;
+      .smxboxbg{
+        height: 220px;
+        background: @csdgreen;  
+        font-size: 13px;
+        .smxboxw{display: inline-block; color: @cw;}
+      }
+      
+      img{
+        width: 100%;
+        height: 170px;
+        padding: 10px 5px;
+        box-sizing: border-box;  
+      }
+  }
+  .smxp{padding: 15px 0;}
+  .smxbox1,.smxbox3{margin-right: 2%;  }
+  .smxbox2,.smxbox4{.smxboxbg{height: 180px;padding: 10px 0;}}
+  .smxbox3,.smxbox4{margin-bottom: 50px;}
+}
+
+.summertest{
+ .stestitle{
+   text-align: center;
+   font-size: 22px;
+   color: #666;
+   padding: 50px 0 30px;
+   p{color: #ca1010; display: inline;}  
+ }
+ 
+ .ststbox{
+     width: 50%;
+     box-sizing: border-box;
+     border: 1px solid #ddd;
+     float: left;
+     font-size: 12px;
+     color: #666;
+     text-align: center;
+     padding: 30px 0;
+     height: 174px;
+     
+     .icon{
+         width: 70px;
+         height: 70px;
+         margin: 0 auto;
+         color: @cw;
+         background: #30aec5;
+         font-size: 40px;
+         line-height: 70px;           
+         border-radius: 50%;
+         -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+         -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+     }
+     
+     .ststext{
+         p{font-size: 16px; color: #333;}
+     }
+     
+     &:hover{
+         .icon{background: #00348b;}
+         .ststext{
+             p{color: #00348b;}
+         }
+     }
+ }
+}
+
+@media(min-width:480px){
+ .summerbg{
+     height: 200px;
+ }   
+}
+@media(min-width:640px){
+ .summerbg{
+     height: 240px;
+ }   
+ .summerbox{
+   margin-top: 30px;
+  .sbox{ width: 30%; float: left; }
+  .sbox2{margin: 70px 5%;}
+  }
+  
+  .summermx{
+  .smxbox{
+      width: 23%;
+  }
+  .smxbox1,.smxbox2,.smxbox2{margin-right: 2%; }
+  }
+  .summertest{
+   .ststbox{
+     width: 25%;
+   }
+  }
+}
+
+@media(min-width:768px){
+  .summermx{
+  .smxbox2{.smxboxbg{height: 200px;}}
+  }
+}
+@media(min-width:992px){
+   .summerbg{
+     height: 350px;
+    }   
+  
+  .summermx{
+   font-size: 15px;
+  .smxbox{.smxboxbg{font-size: 14px;}}
+  .smxbox2{.smxboxbg{height: 180px;}}
+  }
+}
+

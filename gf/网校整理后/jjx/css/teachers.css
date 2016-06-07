@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*师资团队*/
+.container{width:100%;padding:40px 0 70px;background:#f8f8f8;}
+.teachers{width:1100px;margin:0 auto;overflow:hidden;}
+.sofupage{float:none;margin-top:30px;}
+.teacher{width:350px;height:130px;border:1px solid #eee;border-radius:3px;padding:55px 0 55px 170px;text-align:center;float:left;margin:0 56px 40px 0;}
+.t1{background:#fff url(../images/xu.png) no-repeat 40px 55px;}
+.t2{background:#fff url(../images/tangzy.png) no-repeat 40px 55px;}
+.t3{background:#fff url(../images/shan.png) no-repeat 40px 55px;}
+.t4{background:#fff url(../images/liang.png) no-repeat 40px 55px;}
+.t5{background:#fff url(../images/ji.png) no-repeat 40px 55px;}
+.t6{background:#fff url(../images/yang.png) no-repeat 40px 55px;}
+.t7{background:#fff url(../images/zhang.png) no-repeat 40px 55px;}
+.t8{background:#fff url(../images/dai.png) no-repeat 40px 55px;}
+.t9{background:#fff url(../images/hong.png) no-repeat 40px 55px;}
+.t10{background:#fff url(../images/he.png) no-repeat 40px 55px;}
+.teacher h2{font-size:24px;color:#333;margin-bottom:18px;}
+.teacher h3{font-size:16px;color:#666;line-height:29px;}
+.teacher h4{font-size:14px;color:#666;line-height:29px;}
+.teacher.noMR{margin-right:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

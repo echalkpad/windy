@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>2015年“金程圆梦计划”西北站：西安交通大学、西安财经学院和西北工业大学圆满落幕</h3>
+            <span>时间：2015/10/22 18:30:03</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">&nbsp;<span lang="EN-US" style="text-indent: 21pt;">2015</span><span style="text-indent: 21pt;">年</span><span lang="EN-US" style="text-indent: 21pt;">10</span><span style="text-indent: 21pt;">月</span><span lang="EN-US" style="text-indent: 21pt;">20</span><span style="text-indent: 21pt;">日，明媚的阳光撒向了西安交通大学、西安财经学院和西北工业大学。金程教育走进了这几所高校，为莘莘学子带来了&ldquo;金程杯&rdquo;会计案例大赛的比赛喜讯以及金程圆梦计划的福音。<br />
+<br />
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/xian1.jpg" width="500" height="749" alt="" /></div>
+</span>  </span></span></span>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">活动伊始，</span>鲁总<span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">对此次&ldquo;金程圆梦计划&rdquo;进行了系统而详细的介绍，从大赛的举办背景、特色、如何参与以及比赛内容都做了全面的介绍。作为金程圆梦计划的核心活动，本次金程杯大赛以&ldquo;会计案例&rdquo;为主要内容，从中国当下会计人才实际需求出发，以&ldquo;会计是金融之本，金融是会计之魂&rdquo;为赛事核心，不论是在赛制的安排还是考核内容的制定上都进行了全面的考量。大赛将用知名机构商业案例，此外大赛还得到了众多企业的大力支持，大赛获胜者除收获丰厚的奖金外，还将获得知名金融机构的实习机会。<br />
+</span></span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; text-align: center; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/xian3.jpg" width="280" height="210" alt="" /><img src="http://manager.gfedu.net/GfeduFile/Folder23/xian4.jpg" width="280" height="210" alt="" /><br />
+<span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">（西安财经学院）</span></span></span><br />
+&nbsp; &nbsp;&nbsp;<img src="http://manager.gfedu.net/GfeduFile/Folder23/2016016879.jpg" width="280" height="210" alt="" /><img src="http://manager.gfedu.net/GfeduFile/Folder23/265583236.jpg" width="280" height="210" alt="" /><br />
+<span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;">（西北工业大学）</span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: 10.5pt; line-height: 150%;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">在介绍本次活动的同时，鲁总也结合自身多年的</span><span style="color: rgb(0, 85, 153); border: 1pt none windowtext; padding: 0cm; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">职场</span><span style="background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">经验，在分享个人的职场发展经历，并基于此次活动，剖析大赛将为大学生未来的职业发展和快速融合实际工作中所具有的价值。鼓励大学生抓住一切可能的机会，勇往直前，努力拼搏，她生动幽默的演讲得到了现场观众阵阵热烈的掌声。<br />
+<br />
+</span></span></span></span><span lang="EN-US" style="font-size: 10.5pt; line-height: 150%;"><o:p></o:p></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><span lang="EN-US">&nbsp;</span>&ldquo;金程杯&rdquo;全国大学生竞赛是由金程教育组织的全国性校园公益活动。该赛事自<span lang="EN-US">2012</span>年设立以来，已经成功举办三届，分别以&ldquo;理财案例分析&rdquo;、&ldquo;<span lang="EN-US">Excel</span>金融建模&rdquo;以及&ldquo;职业规划&rdquo;为大赛主题。<span lang="EN-US">2015</span>年，金程教育将&ldquo;金程杯&rdquo;全国大学生竞赛全新升级为&ldquo;金程大学生圆梦计划&rdquo;，突破性地将活动形式由原本纯粹的&ldquo;专业知识竞赛&rdquo;扩展为涵盖：助学计划、职业规划、以及知识竞赛三个模块的综合性高校学生活动，为更多学生搭建了一个促进学习交流、展现自我风采、加强团队协作、提升职业竞争力的平台。<br />
+<br />
+</span></span></span><span style="font-size: 10.5pt; line-height: 150%;"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><strong>在这里将获得【丰厚活动奖品】<span lang="EN-US">+</span>【优质职业前景】<span lang="EN-US">+</span>【专业能力提升】<span lang="EN-US">+</span>【自我个性展现】<span lang="EN-US">+</span>【<span lang="EN-US">.......</span>】</strong><b><span lang="EN-US"><br />
+</span></b><strong>组委会电话：<span lang="EN-US">021-61323513</span></strong><span class="apple-converted-space"><b><span lang="EN-US">&nbsp;</span></b></span><strong>刘老师、韩老师<br />
+<br />
+</strong></span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; text-indent: 21pt; line-height: 150%; text-align: center; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><span style="font-size: small;"><span style="font-family: 宋体;"><span style="line-height: 26px;"><strong><img src="http://manager.gfedu.net/GfeduFile/Folder23/qrcode_for_gh_00bdd6c56c95_1280(6).jpg" width="300" height="300" alt="" /></strong></span></span></span><span lang="EN-US" style="font-size: 10.5pt; line-height: 150%;"><o:p></o:p></span></p>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(7)").addClass("selecded");
+</script>
+
+</body>
+</html>

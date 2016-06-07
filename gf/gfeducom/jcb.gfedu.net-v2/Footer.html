@@ -1,0 +1,182 @@
+<!--footer start-->
+<footer>
+<div class="profooter">
+<ul class="jcbfooter">
+<li><i class="icon-gftel">&#xe603;</i><h3>联系组委会</h3><p>021—61323513</p></li>
+<li><i class="icon-gfqq">&#xe605;</i><h3>QQ群</h3><p>261838433</p></li>
+<li onclick="window.open('http://weibo.com/jinchengjiaoyu')"><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育-金程杯</p></li>
+</ul>
+<article>
+<img src="/images/wx_jcb.jpg"  alt=""/>
+<h3>官方微信</h3>
+<p>微信扫一扫,掌握大赛动态<br/>微信号：gfedu2015</p>
+</article>
+</div>
+<div class="copyright">
+    <p>© 2000 - 2015  上海金程教育培训有限公司.  沪ICP备08016784号  本公司通过ISO9001:2008国际质量管理体系认证</p>
+    <!-- CNZZ统计 20151008 杨 -->
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1256513580'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1256513580%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+    <!-- 百度统计 20151008 杨 -->
+    <script type="text/javascript">
+         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd22271a54a69af57b57ff400b934bf2b' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+</footer>
+<!-- footer end-->
+<style type="text/css">
+    footer {
+        background-image:url(/images/footerbg.png);
+    }
+</style>
+<!-- Go Top -->
+<div class="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+
+
+<!-- 登录 start-->
+<div class="toplogin" id="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li>
+		<input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+        <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+    </li>
+    <li id="password_input">
+        <input type="password" id="password1" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwd1('password1');">
+        <p class="noticeLR" id="noticeLR_password1"></p>
+	</li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" id="WeekLogin" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" id="loginBtn" value="登录" onclick="GetLogin()"></li>
+    </ul>
+    <p><span><a onClick="LtR();" href="javascript:;">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="#">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister" id="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input">
+        <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+        <p class="noticeLR" id="noticeLR_realnameM"></p>
+    </li>
+    <li id="tel_input">
+        <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+        <p class="noticeLR" id="noticeLR_tel"></p>
+    </li>
+    <li class="reghalf" id="code_input">
+        <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+        <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+    </li>
+    <li id="password1_input">
+        <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+        <p class="noticeLR" id="noticeLR_passwd"></p>
+    </li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上<a  onclick="RtL();" href="javascript:;">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="#">&#xe605;</a></i><i class="icon-gfwb"><a href="#">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 注册 end-->
+<input type="hidden" id="HidIsLogin" value="" />
+<script type="text/javascript">
+    $(function () {
+        //GetIsLogin();
+    });
+
+    //是否登录
+    function GetIsLogin() {
+        $.get("/LoginRegAjax.ashx?func=CheckLogin", function (data) {
+            var jsonObj = eval('(' + data + ')');
+            if (jsonObj.Status == "1") {
+                $("#HidIsLogin").val("1");
+                $("#userinfodiv").html("<a href=\"javascript:;\">" + jsonObj.Return.userRealName + "</a><a href=\"javascript:;\" onclick=\"LogOut()\">退出</a>");
+                $("#muserinfodiv").html("<a href=\"javascript:;\"><img src=\"/images/sidebarreg.png\"  alt=\"" + jsonObj.Return.userRealName + "\"/>" + jsonObj.Return.userRealName + "<i class=\"icon-gfright\">&#xe609;</i></a>");
+            }
+            else {
+                $("#HidIsLogin").val("0");
+            }
+        });
+    }
+
+    //是否登录,已登录返回true,否则返回false
+    function IsLogin() {
+        if ($("#HidIsLogin").val() == '1') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    //登录
+    function GetLogin() {
+        var strname = $("#Field_UserName").val();
+        var strpassword = $("#password1").val();
+
+        if (strname == "" || strname == null || strname == "undefined") {
+            __changeRealNameL('Field_UserName');
+            return false;
+        }
+
+        if (strpassword == "" || strpassword == null || strpassword == "undefined") {
+            checkPwd1('password1');
+            return false;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/LoginRegAjax.ashx",
+            data: { func: "GetLogin", user: strname, pwd: strpassword, ischeck: $('#WeekLogin').is(':checked') },
+            dataType: "text",//"xml", "html", "script", "json", "jsonp", "text"
+            success: function (data) {
+                var jsonObj = eval("(" + data + ")");
+                if (jsonObj.Status == "1") {
+                    $("#userinfodiv").html("<a href=\"javascript:;\">" + jsonObj.Return.userRealName + "</a><a href=\"javascript:;\" onclick=\"LogOut()\">退出</a>");//登录成功
+                    $("#muserinfodiv").html("<a href=\"javascript:;\"><img src=\"/images/sidebarreg.png\"  alt=\"" + jsonObj.Return.userRealName + "\"/>" + jsonObj.Return.userRealName + "<i class=\"icon-gfright\">&#xe609;</i></a>");
+                    //location.reload();//刷新当前页
+                    $(".closebox").click();
+                }
+                else {
+                    alert(jsonObj.Return);//登录失败
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    }
+
+    //退出
+    function LogOut() {
+        $.get("/LoginRegAjax.ashx?func=LogOut", function (data) {
+            var jsonObj = eval('(' + data + ')');
+            if (jsonObj.Status == "1") {
+                location.reload();//刷新当前页
+            }
+            else {
+                alert(jsonObj.Return);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        $("#password1").keydown(function (e) {
+            var curKey = e.which;
+            if (curKey == 13) {
+                $("#loginBtn").click();
+                return false;
+            }
+        });
+    });
+</script>
+<!--footer end-->
+
+<!-- 百度分享代码 -->
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "slide": { "type": "slide", "bdImg": "0", "bdPos": "right", "bdTop": "100" } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>

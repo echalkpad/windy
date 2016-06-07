@@ -1,0 +1,135 @@
+@import "../../css/variable.less";
+@import "../../css/proaside.less";
+
+/* 共用样式start */
+// 头部共用样式
+.fc_header{
+	.cf();
+	margin:20px auto 0;
+	p{
+		float: left;
+		line-height: 20px;
+		img{
+			width: 120px;
+			vertical-align: middle;
+			float: left;
+		}
+		span{
+			border-left: 1px solid @cc;
+			margin-left: 8px;
+			padding-left: 8px;
+			display: none;
+			em{
+				display: block;
+				font-weight: bold;
+				.f20();
+			}
+	 	}
+	}
+	.serch{
+		display: table;
+		margin-left: auto;
+		input{
+			width: 105px;
+			height: 40px;
+			float: left;
+			outline: none;
+		}
+		img{
+			height: 40px;
+		}
+	}
+	ul{
+		.cf();
+		margin-top:20px;
+		li{
+			float: left;
+			width: 20%;
+			line-height:48px;
+			box-sizing: border-box;
+			border:1px solid @cc;
+			border-right:none;
+			background-color: #f9f9f9;
+			text-align: center;
+			box-sizing: border-box;
+			a{line-height: 48px;.f12();}
+		}
+		.selected{
+			background-color: @cw;
+			a{color:#d73240;}
+		}
+	}
+}
+@media(min-width:640px){
+	.fc_header{
+		p{
+			padding-left:40px;
+			span{display: inline-block;}
+		}
+		.serch{
+			padding-right:40px;
+			input{width: 200px;}
+		}
+		ul{a{.f14();}}
+	}
+}
+
+@media(min-width:1200px){
+	.fc_header{
+		.lgscreen();
+		margin:40px auto;
+		p{
+			padding-left: 0;
+			img{width: 155px;}
+			span{
+				margin-left: 15px;
+				padding-left: 12px;
+			}
+		}
+		.serch{
+			display:inherit;
+			float: right;
+			padding-right: 0;
+			input{height: 50px;}
+			img{height: 50px;}
+		}
+		ul{
+			float: right;
+			margin-top:0;
+			width:500px;
+			li{a{.f16();}}
+		}
+	}
+}
+
+// 面包屑
+
+
+
+// 页码
+
+/* 共用样式end */
+
+
+
+
+
+
+// 内容包裹层
+.list_main{
+	overflow:hidden;
+	width:1200px;
+	margin:0 auto;
+}
+// 左侧栏
+.list_content{
+	width:900px;
+	height:1200px;
+	.left();
+	border:1px solid #000;
+}
+// 右侧栏
+.proaside{
+	width:280px;
+	.right();
+}

@@ -1,0 +1,78 @@
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:30
+**************************************************/
+
+@import '../common/variable.less';   //公用样式
+
+@cbc:#0a7eae;
+
+.sucontent{
+	background: @cw url(../../images2015/imgsubmit/bg.png);
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.succ{
+		  position: absolute;
+		  top: 50%;
+		  margin-top: -170px;
+		  height: 340px;
+		  width: 700px;
+		  left: 50%;
+		  margin-left: -350px;
+		.suc{
+		  width: 450px;
+		  height: 110px;
+ 		  margin: 0 auto;
+ 		  padding: 20px 0 30px;
+		img{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			float: left;
+			margin-top: -20px;
+		}
+		span{
+				font-size: 24px;
+				color: @c6;
+			}		
+		.sub{
+			font-size: 36px;
+			color: @cbc;
+		}
+	}
+	p{
+		font-size: 18px;
+		color: @c6;
+		text-align: center;
+		margin:50px auto 30px;
+	}
+
+	ul{
+		width: 660px;
+		margin: 20px auto 60px;
+		li{
+			float: left;
+			width: 200px;
+			height: 60px;
+			background: @cbc;
+			font-size: 18px;
+			margin: 10px;
+			.borderRadius(30px);
+			a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				line-height: 60px;
+				color: @cw;
+				text-align: center;
+				img{
+					  vertical-align: middle;
+  					  margin-right: 10px;
+				}
+			}
+		}
+	}
+  }
+}

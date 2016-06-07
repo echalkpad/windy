@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.gfedu.cn/2015/login.shtml -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>登录</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+
+<link href="css/common/common.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/form/login.css" rel="stylesheet" type="text/css">
+
+<script src="script/jquery-2.1.4.min.js"></script>
+<script src="script/common.js"></script>
+<script type="text/javascript" src="script/loginReg/loginReg.js"></script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script/html5shiv.js"></script>
+    <script type="text/javascript" src="script/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<!--登录 start-->
+<div class="screenbox">
+    <!--导航 start-->
+    <div class="ss-nav">
+        <h1><img src="images/sslogo.png" alt=""/></h1>
+    </div>
+    <!--导航 end-->
+
+    <div class="screencontent">
+        <section class="contentbox">
+            <article class="lcontent">
+            <h2>登录学习天空</h2>
+             <form action="http://www.gfedu.cn/web/Check/CheckCurent.asp" method="post" name="LoginFormPC" id="LoginFormPC">
+            <ul>
+            	<div class="login_msg_wrap">
+                	<p class="login_msg">
+                		<i class="iconfont">&#xf0002;</i>账户名与密码不匹配，请重新输入
+                	</p>
+                </div>
+                <li><input type="text" name="Field_UserNamePC" id="Field_UserNamePC" maxlength="20" placeholder="手机号\用户名" onblur="__changeRealName('Field_UserNamePC');"><p class="noticeLR" id="noticeLR_Field_UserNamePC"></p></li>
+                <li><input type="password" id="Field_PassWordPC" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwd1('Field_PassWordPC');">
+                	<p class="noticeLR" id="noticeLR_Field_PassWordPC"></p>
+                </li>
+                <li><span><a href="">找回密码</a></span><a href=""><input type="checkbox" checked="checked">两周内免登录</a></li>
+                <li><input type="button" value="登录" onclick="CheckUserLogin('Field_UserNamePC')"></li>
+                <li>
+                <span><a href=""><strong>注册</strong>金程帐号</a></span>
+                <dl><dt><h3>合作账直接号登录:</h3></dt><dd><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=QQ"><i class="s1"><img src="images/qq.png" alt=""></i></a><a href="http://www.gfedu.cn/Login/QQLogin.aspx?Type=SINA"><i class="s2"><img src="images/weibo.png" alt=""></i></a></dd></dl></li>
+            </ul>
+            </form>
+            </article>
+            <aside class="rcontent"><img src="images/fromads01.jpg"></aside>
+        </section>
+    </div>
+
+    <div class="footer">©2016 PZ Academy. All Rights Reserved. 沪ICP备 15048842号-1</div>
+</div>
+<!--登录 end-->
+
+</body>
+</html>

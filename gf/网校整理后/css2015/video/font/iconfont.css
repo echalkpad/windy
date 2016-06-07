@@ -1,0 +1,78 @@
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	   url('iconfont.woff') format('woff'), /* chrome、firefox */
+	   url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	   url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+.icon-duigou:before { content: "\e60d"; }
+.icon-cha:before { content: "\e605"; }
+.icon-xing:before { content: "\3485"; }
+.icon-xing1:before { content: "\f0055"; }
+.icon-iconfontbiaoji2:before { content: "\e616"; }
+.icon-72:before { content: "\e66d"; }
+.icon-iconcha:before { content: "\e625"; }
+.icon-duigouthin:before { content: "\e602"; }
+.icon-xinlang01:before { content: "\e624"; }
+.icon-douban:before { content: "\f0006"; }
+.icon-qqkongjian:before { content: "\e82c"; }
+.icon-renrenicon:before { content: "\e606"; }
+.icon-weibiaoti20:before { content: "\e64d"; }
+.icon-shixinduigoudaibiankuang:before { content: "\e6b8"; }
+.icon-sty-cross-fill:before { content: "\e643"; }
+.icon-18:before { content: "\e612"; }
+.icon-caidan01:before { content: "\e60a"; }
+.icon-xiazai:before { content: "\e6b7"; }
+.icon-wenhao:before { content: "\e61f"; }
+.icon-bianji:before { content: "\e607"; }
+*/
+
+.ico1{
+	position: absolute;
+    top: 11px;
+    color: #666;
+	left: 26px;
+	color: #fff;
+	font-size: 26px;
+}
+.ico2{
+	position: absolute;
+    top: 10px;
+    color: #666;
+	
+	font-size: 28px;
+	left: 98px;
+}
+.ico3{
+	position: absolute;
+    top: 13px;
+    font-size: 28px;
+    color: #666;
+	left: 173px;
+}
+.ico4{
+  left: 250px;
+  font-size: 29px;
+  margin-top: 10px;
+  display: inline-block;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbpttl">
+        <i class="icon-e020">&#xe904;</i>
+        <h2>大赛评委</h2>
+    </div>
+    <div class="jcbpbox">
+        <div class="p9_judge">
+        <style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style><ul><li><img src="http://manager.gfedu.net/InfoSys/upload/20151130110658910.png"><div class="cont"><h2>王联合</h2><em>复旦大学出版社副总经理·经管分社总编辑·教授</em><span>本科毕业留校上海财经大学党委宣传部，此后投身新闻出版业，相继供职于上海财经大学出版社、复旦大学出版社现为复旦大学出版社副总经理，经管分社总编辑。</span></div></li></ul><div class="jcb_content">
+<h5>工作单位及职务：</h5>
+<p>复旦大学毕业留校上海财经大学党委宣传部，此后投身新闻出版业，相继供职于上海财经大学出版社、复旦大学出版社现为复旦大学出版社副总经理，经管分社总编辑。</p>
+<h5>代表著作：</h5>
+<p>业余时间从事出版经济学、证券投资学的研究。在核心学术期刊如《出版发行研究》《中国出版》《外国经济与管理》等发表论文22篇，多部篇被人大报刊资料中心全文刊登。主要著作有《编辑的微世界》（复旦大学出版社）《B股投资价值点击》（东方出版中心）等。</p>
+<h5>专业特长概述：</h5>
+<p>从业20年来，先后策划、编辑出版国家级重点财经学术著作项目近30项，作品包括会计学泰斗葛家澍教授的《会计理论》、王松年教授的《国际会计》等；策划、编辑包括《姚明之路》在内的优秀畅销书200余种。独立策划及编辑图书获省部级以上奖励超过60项。</p>
+<p>2009年赴美国纽约大学作全球数字化出版专题学术交流，2015年应德国比肯费尔德市长邀请参加&ldquo;中德学前教育工作者交流项目&rdquo;。</p>
+</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

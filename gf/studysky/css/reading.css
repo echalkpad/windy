@@ -1,0 +1,40 @@
+.ss_reading{
+    background: #fff;
+}
+.reading_content{overflow:hidden;}
+.reading_content .subject{
+    overflow:hidden;
+    zoom:1;
+    padding: 60px 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+.reading_content .subject section{
+    width: 33.33333333%;
+    float:left;
+}
+.reading_content .subject section a{
+    font-size: 1pc;
+    padding-top: 14px;
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #28ada0;
+    color: #28ada0;
+}
+.reading_content .subject section a:hover{
+    text-decoration:underline;
+}
+.reading_content .subject section ul{
+    color: #9599a4;
+    overflow:hidden;
+    zoom:1;
+}
+.reading_content .subject section li{
+    margin-right: 10%;
+    display: inline-block;
+    float: left;
+}
+.reading_content .subject article{
+    width: 58.33333333%;
+    float: right;
+}

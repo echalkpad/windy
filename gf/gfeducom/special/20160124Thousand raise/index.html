@@ -1,0 +1,791 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>千人众筹计划</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/gfiphone.png">
+<link rel="shortcut icon" href="images/gfico.ico">
+
+<link href="../../css/headfooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/nav.css" rel="stylesheet" type="text/css" />
+<link href="css/raise.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="../../script/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+<!-- 调用的jQuery　v1.7.2JS -->
+<script type="text/javascript" src="../../script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../script/jquery.SuperSlide.2.1.1.js"></script>
+
+<!-- 表单验证JS -->
+<script type="text/javascript" src="../../script/bdscript.js" ></script>
+<script type="text/javascript" src="../../script/bdloginReg.js" ></script>
+<script type="text/javascript" src="../../script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="../../script/headfoot.js"></script>
+<!-- 公用移动侧边栏推出插件 -->
+<script src="../../script/jquery.mmenu.min.all.js"></script>
+
+<script type="text/javascript">
+    $(function() {
+        $('#menu').mmenu(
+        );
+    });
+</script>
+
+<!-- 专题JS -->
+<script type="text/javascript" src="script/raise.js"></script>
+</head>
+
+<body>
+
+<nav id="menu"  class="mbnavadd">
+    <h2><a href=""><img src="../../images/sidebarreg.png"  alt=""/>月里飘舞<i class="icon-gfright">&#xe609;</i></a></h2>
+    <dl>
+        <dt class="selecded"><a href="#" title="金程网校">金程网校</a></dt>
+        <dd><a href="" title="金程内训">金程内训</a></dd>
+        <dd><a href="" title="肆大会计">肆大会计</a></dd>
+    </dl>
+</nav>
+
+<div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+    <article>
+    <h3><a href="javascript:;" id="alogin">登录</a><a href="javascript:;" id="aregister">注册</a></h3>
+    <h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+    <h6>
+     <nav>
+        <a href="javascript:;">金程网校</a>
+        <a href="javascript:;">金程内训</a>
+        <a href="javascript:;">金程考研</a>
+        <a id="school" href="javascript:">金程分校<i></i><em></em></a>
+        <a href="javascript:;">金程动态</a>
+    </nav>
+    </h6>
+    <section>
+    <dl>
+    <dt><h5>虹口分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a><a href="javascript:;">经济学考研</a><a href="javascript:;">企业内训</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>徐汇分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>浦东分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>北京分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a><a href="javascript:;">经济学考研</a><a href="javascript:;">企业内训</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>南京分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a><a href="javascript:;">CMA</a><a href="javascript:;">EXCEL</a><a href="javascript:;">从业资格</a></dd>
+    </dl>
+
+    <dl>
+    <dt><h5>深圳分校</h5></dt>
+    <dd><a href="javascript:;">CFA</a><a href="javascript:;">CPA</a><a href="javascript:;">RFP</a><a href="javascript:;">FRM</a><a href="javascript:;">ACCA</a><a href="javascript:;">考研</a><a href="javascript:;">CFRM</a></dd>
+    </dl>
+    </section>
+
+    </article>
+    </div>
+    <!-- proheader-->
+</div>
+<!-- header end-->
+
+
+
+<!-- 中间内容 start-->
+<div class="raise" id="raise">
+    <!-- 首屏 -->
+    <div class="first_screen">
+        <div class="raise_pc">
+            <img src="images/deng.png" class="deng">
+            <section>
+                <img src="images/banner_01.png">
+                <img src="images/banner_02.png" class="yun">
+            </section>
+            <p>从“公众”中筹到好伙伴、好学友、好学霸！<br>
+筹人、筹智、筹资金......实现CFA通关梦！</p>
+            <article><img src="images/banner_03.png"></article>
+            <a class="down trans" href="#top" ></a>
+            <a class="down arrow-1 trans" href="#top">
+        </div>
+    </div>
+    <!-- 众筹计划 -->
+    <div class="raise_plan" id="top">
+        <div class="raise_pc">
+            <img src="images/raise_plan_01.png" class="raise_plan_hr">
+            <h2>“百题·千人”众筹计划——寻找你的“CFA合伙人”</h2>
+            <h3>筹资金，筹考友，筹人脉，只为一次通过！</h3>
+            <section>
+                <ul>
+                    <li><img id="ds" src="images/0.png"/></li>
+                    <li><img id="df" src="images/0.png"/></li>
+                    <li><img id="hs" src="images/0.png"/></li>
+                    <li><img id="hf" src="images/0.png"/></li>
+                    <li><img id="ms" src="images/0.png"/></li>
+                    <li><img id="mf" src="images/0.png"/></li>
+                    <li><img id="ss" src="images/0.png"/></li>
+                    <li><img id="sf" src="images/0.png"/></li>
+                </ul>
+                <p><span>Day</span><span class="hour">Hour</span><span class="minu">Minute</span><span>Seconds</span></p>
+            </section>
+            <!-- 浮动导航 -->
+           <article class="flaot_nav" style="display:none">
+                <ol>
+                    <li><a href=""><i></i>首页</a></li>
+                    <li><a href=""><i></i>百题众筹</a></li>
+                    <li><a href=""><i></i>百题介绍</a></li>
+                    <li><a href=""><i></i>百题特色</a></li>
+                    <li><a href=""><i></i>历年成绩</a></li>
+                    <li><a href=""><i></i>百题推荐</a></li>
+                    <li><a href=""><i></i>以客户为荣</a></li>
+                </ol>
+                <img src="images/raise_plan_03.png">
+            </article>
+        </div>
+    </div>
+    <!-- 加入众筹 -->
+    <div class="raise_join">
+        <section>
+            <div><strong><em>预付费</em>¥199</strong></div>
+            <ul>
+                <li class="selector"><i>众筹方案：</i>最低只需99元，即可享受原价2999金程CFA百题四天精华课程，助您一次通过！</li>
+                <li><i>众筹对象：</i>所有参加2016年6月考试的CFA一二三级考生</li>
+                <li><i>众筹时间：</i>2016年2月1日0:00—2月15日24:00</li>
+                <li><i>差价退补：</i>活动结束时，根据最终参与人数及对应的众筹价，进行差价的补缴或返还。</li>
+            </ul>
+        </section>
+        <article>
+            <ul>
+                <li><span><em></em>当前</span><q class="join">参与人数：<i>1-100</i></q><big><small></small></big><q>众筹价：<strong>999<em>元</em></strong></q><q>差价：补<strong>800<em>元</em></strong></q></li>
+
+                <li class="current"><span><em></em>当前</span><q class="join">参与人数：<i>101-300</i></q><big><small></small></big><q>众筹价：<strong>799<em>元</em></strong></q><q>差价：补<strong>500<em>元</em></strong></q></li>
+
+                <li><span><em></em>当前</span><q class="join">参与人数：<i>301-500</i></q><big><small></small></big><q>众筹价：<strong>499<em>元</em></strong></q><q>差价：补<strong>300<em>元</em></strong></q></li>
+
+                <li><span><em></em>当前</span><q class="join">参与人数：<i>501-700</i></q><big><small></small></big><q>众筹价：<strong>199<em>元</em></strong></q><q>差价：补<strong>0<em>元</em></strong></q></li>
+
+                <li><span><em></em>当前</span><q class="join">参与人数：<i>701-1000</i></q><big><small></small></big><q>众筹价：<strong>99<em>元</em></strong></q><q>差价：退<strong>100<em>元</em></strong></q></li>
+            </ul>
+        </article>
+        <div class="demo">
+            <p><i>案例：</i>金小程同学是第350人参加本次众筹计划，预付费199元，活动结束时总人数达到701人及以上，则金程教育返还100元至金小程的银行账户，实际报班付费仅99元。</p>
+            <div>
+                <a href="" class="zong">我要众筹</a>
+
+                <div class="bshare-custom">
+                    <em>我要分享</em>
+                    <div class="bsPromo bsPromo2"></div>
+                    <a title="分享到微信" class="bshare-weixin"></a>
+                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                    <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                    <a title="分享到QQ空间" class="bshare-qzone"></a>
+                </div>
+     
+                 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh"></script>
+                 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+         </div>
+        </div>
+        <div class="pop" >
+            <div class="chose">
+                <span class="closec" id="closec">X</span>
+                <h3>“百题·千人”众筹计划——寻找你的“CFA合伙人”</h3>
+                <p>筹资金，筹考友，筹人脉，只为一次通过！</p>
+                <ul>
+                    <li>
+                        <select name="">
+                            <option>CFA一级百题</option>
+                            <option>CFA二级百题</option>
+                            <option>CFA三级百题</option>
+                        </select>
+                    </li>
+                    <li class="cf"><label class="fl" for="">授课地区：</label>
+                        <select id="city" class="fl" >
+                            <option>请选择</option>
+                            <option value="0">上海</option>
+                            <option value="1">北京</option>
+                            <option value="2">南京</option>
+                            <option value="2">广州</option>
+                            <option value="2">深圳</option>
+                        </select>
+                        <select class="fl" >
+                            <option>请选择</option>
+                            <option value="0">上海复旦</option>
+                        </select>
+                        <select class="adress fl">
+                            <option>上海复旦</option>
+                            <option>上海复旦</option>
+                            <option>上海复旦</option>
+                        </select>
+                        <select class="adress fl">
+                            <option>北京大学</option>
+                            <option>北京大学</option>
+                            <option>北京大学</option>
+                        </select>
+                        <select class="adress fl">
+                            <option>南京大学</option>
+                            <option>南京大学</option>
+                            <option>南京大学</option>
+                        </select>
+                    </li>
+                    <li><label for="">授课类型：</label>
+                        <select><option>面授课程</option></select>
+                    </li>
+                </ul>
+                <input type="button" value="我已选好" />
+            </div>
+        </div>
+    </div>
+    <!-- 百题介绍 -->
+    <div class="topic_info" id="topic_info">
+        <div class="raise_hd">
+            <h2>百题介绍</h2>
+        </div>
+        <div class="raise_pc">
+            <article>作为国内首家CFA培训机构，金程教育15年CFA培训经验和实践的总结：CFA考试不是“驾考”，漫无目的的考前“题海战术”绝非最佳备考方式，考前通过对考点的系统梳理及知识点整合，对易考知识点加强把握，才是抓分关键！15年来，金程教育以对CFA知识体系的完全渗透及对历年考试题型的精准判断，打造了独家CFA考试真题研究体系。</article>
+            <section>
+                <span>上课时间：2016年5月</span><i></i>
+                <q>针对人群：2016年6月CFA一二三级考生</q>
+            </section>
+            <a href="">立即参加</a>
+            <div class="contact">
+                <div>
+                    <i>&#xe904;</i>
+                    <em>24小时咨询电话</em>
+                    <p><span>13386008177</span>18019149786</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 百题特色 -->
+    <div class="features" id="features">
+        <div class="raise_hd">
+            <h2>百题特色</h2>
+            <p>金程百题预测班  20,000万名学员<span>的共同选择</span></p>
+            <p>预测考题≥1000题，预测考点≥700个，<span>预测必读点≥200个</span></p>
+        </div>
+        <ul>
+            <li class="selector">
+                <article>
+                    <i>&#xe902;</i>
+                    <h3>短时高效</h3>
+                    <p>CFA考试范围广、杂、多、备考时间不够用怎么办</p>
+                    <section>
+                        <h4>精炼必考点</h4>
+                        <p>总结提炼6本原版书</p>
+                        <p>80套模拟真题精炼</p>
+                        <p>经典课程在此升级4天授课≥4个月</p>
+                    </section>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <i>&#xe903;</i>
+                    <h3>精准预测</h3>
+                    <p>CFA考试内容多，难度好，基础不好，抓不住考试方向与重点</p>
+                    <section>
+                        <h4>直击考试题型</h4>
+                        <p>十五年考题预测大数据</p>
+                        <p>直击考试根本，剖析得分要素</p>
+                        <p>百题预测命中率高达95.86%</p>
+                    </section>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <i>&#xe900;</i>
+                    <h3>智能便捷</h3>
+                    <p>CFA备考是长续而艰苦的，平衡工作、生活，备考压力大</p>
+                    <section>
+                        <h4>多终端学习备考</h4>
+                        <p>智能题库在线模拟考测</p>
+                        <p>手机APP指尖题库，有效利用碎片化时间</p>
+                        <p>题库视频练、讲、测三位一体</p>
+                    </section>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <i>&#xe901;</i>
+                    <h3>质量保障</h3>
+                    <p>备考选择繁杂，选择不当浪费时间与经济成本</p>
+                    <section>
+                        <h4>十五年品质保障</h4>
+                        <p>中农工建交五大行课程提供商</p>
+                        <p>最高通过率100%</p>
+                        <p>平均通过率82%</p>
+                        <p>题库视频练、讲、测三位一体</p>
+                    </section>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 历年成绩 -->
+    <div class="past_grade" id="past_grade">
+        <div class="raise_hd">
+            <h2>历年成绩</h2>
+            <p>15年CFA教学经验、平均授课5000课时名师把关、第十五季百题预测95.86%命中、打造湖北建行100%完美通过率。</p>
+        </div>
+        <div class="raise_pc">
+            <article>
+                <ul>
+                    <li>
+                        <section>
+                            <span>18季</span>
+                            金程百题《千人计划》
+                            <em>2016. 6</em>
+                            <a href="">立即参加</a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>17季</span>
+                            金程百题《蚁人》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>96</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>14季</span>
+                            金程百题《归来》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>96</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>13季</span>
+                            金程百题《正青春》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>94</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>10季</span>
+                            金程百题《诺亚方舟》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>84</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>9季</span>
+                            金程百题《源代码》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>80</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>6季</span>
+                            金程百题《阿凡达》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>82</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>5季</span>
+                            金程百题《开卷大业》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>84</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>2季</span>
+                            金程百题《集结号》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>82</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>1季</span>
+                            金程百题《前世今生》
+                            <em>2015. 12</em>
+                            <big>
+                                <strong>80</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                </ul>
+                <ol>
+                    <li>
+                        <section>
+                            <span>16季</span>
+                            金程百题《大白》
+                            <em>2015. 6</em>
+                            <big>
+                                <strong>95</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>15季</span>
+                            金程百题《奔跑》
+                            <em>2014. 12</em>
+                            <big>
+                                <strong>93</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>12季</span>
+                            金程百题《中国梦》
+                            <em>2015. 6</em>
+                            <big>
+                                <strong>91</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>11季</span>
+                            金程百题《钓鱼岛号》
+                            <em>2014. 12</em>
+                            <big>
+                                <strong>90</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>8季</span>
+                            金程百题《核系列》
+                            <em>2015. 6</em>
+                            <big>
+                                <strong>83</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>7季</span>
+                            金程百题《盗梦空间》
+                            <em>2014. 12</em>
+                            <big>
+                                <strong>96</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>4季</span>
+                            金程百题《温暖》
+                            <em>2015. 6</em>
+                            <big>
+                                <strong>84</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <span>3季</span>
+                            金程百题《海啸》
+                            <em>2015. 6</em>
+                            <big>
+                                <strong>81</strong>%<br>
+                                <em>命中率</em>
+                            </big>
+                        </section>
+                    </li>
+                </ol>
+            </article>
+            <div class="contact">
+                <p>
+                    <i>&#xe904;</i>
+                    <em>咨询电话：（过年值班电话）</em>
+                    <strong>400-700-9596</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 学员反馈 -->
+   <div class="feedback">
+       <div class="raise_hd">
+           <h2>学员反馈</h2>
+       </div>
+       <div class="raise_pc">
+           <section>
+                <div class="hd">
+                    <ol>
+                       <li class="current">陈同学</li>
+                       <li>苏同学</li>
+                       <li>周同学</li>
+                   </ol>
+                </div>
+               <div class="bd">
+                   <ul>
+                       <li><a href="">
+                       <img src="images/video_01.png">
+                        <p>金程教育CFA学员  陈同学<i>&#xea15;</i></p>
+                       </a></li>
+                       <li><a href="">
+                       <img src="images/video_02.jpg">
+                        <p>金程教育CFA学员  苏同学<i>&#xea15;</i></p>
+                       </a></li>
+                       <li><a href="">
+                       <img src="images/video_03.jpg">
+                        <p>金程教育CFA学员  周同学<i>&#xea15;</i></p>
+                       </a></li>
+                   </ul>
+               </div>
+           </section>
+           <article>
+               <div class="bd">
+                   <ul>
+                       <li><a href=""><img src="images/feedback_01.jpg"></a></li>
+                       <li><a href=""><img src="images/feedback_02.jpg"></a></li>
+                       <li><a href=""><img src="images/feedback_03.jpg"></a></li>
+                       <li><a href=""><img src="images/feedback_04.jpg"></a></li>
+                       <li><a href=""><img src="images/feedback_05.jpg"></a></li>
+                   </ul>
+               </div>
+               <i class="prev">&#xe63d;</i>
+                <i class="next">&#xe63b;</i>
+           </article>
+       </div>
+   </div>
+
+   <!-- 更多班级推荐 -->
+   <div class="raise_more" id="raise_more">
+       <div class="raise_pc">
+           <section>
+               <h2>更多班级推荐</h2>
+               <ul>
+                   <li>
+                        <h4 class="pic"></h4>
+                       <img src="images/raise_more_01.png">
+                       <div>
+                           <h3>2016年6月CFA一级长线无忧套餐班</h3>
+                           <q>￥<strong>9580</strong><del>¥11800</del></q>
+                           <p data-text="梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p>
+                           <a href="http://cfa.gfedu.com/class/class_11724_384.shtml">了解详情</a>
+                       </div>
+                   </li>
+                   <li>
+                       <img src="images/raise_more_02.png">
+                       <h4 class="pic"></h4>
+                       <div>
+                           <h3>2016年6月CFA二级长线无忧套餐班</h3>
+                           <q>￥<strong>9580</strong><del>¥11800</del></q>
+                           <p data-text="梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p>
+                           <a href="http://cfa.gfedu.com/class/class_11736_391.shtml">了解详情</a>
+                       </div>
+                   </li>
+                   <li>
+                        <h4 class="pic"></h4>
+                       <img src="images/raise_more_03.png">
+                       <div>
+                           <h3>2016年6月CFA三级长线无忧套餐班</h3>
+                           <q>￥<strong>9580</strong><del>¥11800</del></q>
+                           <p data-text="梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。">梳理CFA考试所涉及的知识点，形成“CFA考试知识脉络图”，迅速帮助您搭建CFA考试知识结构体系。由点到线，由线到面的形成CFA识体系网络。</p>
+                           <a href="http://cfa.gfedu.com/class/class_11726_386.shtml">了解详情</a>
+                       </div>
+                   </li>
+               </ul>
+           </section>
+           <article>
+               <h2>更多证书培训</h2>
+               <ol>
+                    <li><a href="http://frm.gfedu.com"><img src="images/raise_more_04.png"></a></li>
+                    <li><a href="http://cfrm.gfedu.net/"><img src="images/raise_more_05.png"></a></li>
+                    <li><a href="http://cpa.gfedu.com/"><img src="images/raise_more_06.png"></a></li>
+                    <li><a href="http://cma.gfedu.com/"><img src="images/raise_more_07.png"></a></li>
+                    <li><a href="http://www.sjtu-edu.org/"><img src="images/raise_more_08.png"></a></li>
+                    <li><a href="http://rfp.gfedu.net/"><img src="images/raise_more_09.png"></a></li>
+                </ol>
+           </article>
+       </div>
+   </div>
+
+   <div class="succeed_cases" id="succeed_cases">
+       <div class="raise_hd">
+           <h2>以客户为荣</h2>
+       </div>
+        <section>
+            <img src="images/succeed_cases.png">
+        </section>
+   </div>
+
+    <!-- 浮动导航 -->
+   <article class="flaot_nav">
+        <ol>
+            <li><a href="#raise"><i></i>首页</a></li>
+            <li><a href="#top"><i></i>百题众筹</a></li>
+            <li><a href="#topic_info"><i></i>百题介绍</a></li>
+            <li><a href="#features"><i></i>百题特色</a></li>
+            <li><a href="#past_grade"><i></i>历年成绩</a></li>
+            <li><a href="#raise_more"><i></i>百题推荐</a></li>
+            <li><a href="#succeed_cases"><i></i>以客户为荣</a></li>
+        </ol>
+        <img src="images/raise_plan_03.png">
+    </article>
+</div>
+<!-- 中间内容 end-->
+
+<!--选好课程后弹窗-->
+<div class="pop popup">
+    <div class="checkpopup chose">
+    <span class="closec" id="pup_close">X</span>
+        <h3>恭喜您，您是第<i>25</i>位参与<strong>“百题,千人众筹”</strong>的用户！</h3>
+        <h4><img src="images/99.png"></h4>
+        <div class="bshare-custom">
+            <em>我要分享</em>
+            <div class="bsPromo bsPromo2"></div>
+            <a title="分享到微信" class="bshare-weixin"></a>
+            <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+            <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+            <a title="分享到QQ空间" class="bshare-qzone"></a>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=3&amp;lang=zh"></script>
+         <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+        <p>温馨提示：课程暂未上线，敬请期待，客服人员将于3个工作日内与您取得联系！</p>
+    </div>
+</div>
+
+<div class="schoolarea">
+    <section>
+        <i>全国分校</i>
+        <ul>
+        <li><h3><span>上海上海</span><a href="">在线咨询</a></h3><p>虹口区松花江路2539号复旦科技园1号楼11楼 </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>徐汇上海</span><a href="">在线咨询</a></h3><p>徐汇区广元西路45号交大慧谷科技街415A室</p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>浦东上海</span><a href="">在线咨询</a></h3><p>东新区张杨路601号华诚大厦7012室  </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>北京上海</span><a href="">在线咨询</a></h3><p>北京西城区南菜园街2号国泰大厦2楼 </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>南京上海</span><a href="">在线咨询</a></h3><p>白下区中山东路90号华泰证券大厦10楼S2室（210002） </p><p>咨询电话：400-700-9596</p></li>
+        <li><h3><span>深圳上海</span><a href="">在线咨询</a></h3><p>罗湖区银湖路金湖一街CDI大厦3楼(518029) </p><p>咨询电话：400-700-9596</p></li>
+        </ul>
+    </section>
+</div>
+<!-- 全国分校 end-->
+
+<!-- footer start-->
+<footer>
+<div class="profooter">
+<dl>
+<dt><h3>客服热线</h3><p><strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p></dt>
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育官方微博</p></dd>
+</dl>
+<article>
+<img src="../../images/wx_cfa.jpg"  alt=""/>
+<h3>官方微博</h3>
+<p>微信扫一扫,掌握最新动态<br/>微信号：cfa-4009596</p>
+</article>
+</div>
+<div class="copyright"><p>© 2000 - 2015  上海金程国际金融专修学院.  沪ICP备08016784号  本学院通过ISO9001:2008国际质量管理体系认证</p></div>
+</footer>
+<!-- footer end-->
+<!-- Go Top -->
+<div class="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+
+
+
+<!-- 登录 start-->
+<div class="toplogin" id="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li>
+    <input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+        <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+    </li>
+    <li id="password_input">
+        <input type="password" id="password1" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwd1('password1');">
+        <p class="noticeLR" id="noticeLR_password1"></p>
+  </li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span><a onClick="LtR();" href="javascript:;">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister" id="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input">
+        <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+        <p class="noticeLR" id="noticeLR_realnameM"></p>
+    </li>
+    <li id="tel_input">
+        <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+        <p class="noticeLR" id="noticeLR_tel"></p>
+    </li>
+    <li class="reghalf" id="code_input">
+        <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+        <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+    </li>
+    <li id="password1_input">
+        <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+        <p class="noticeLR" id="noticeLR_passwd"></p>
+    </li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上<a  onclick="RtL();" href="javascript:;">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+
+<!-- 注册 end-->
+</body>
+</html>

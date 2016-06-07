@@ -1,0 +1,89 @@
+/* LESS Document */
+
+/* 模块集 */
+
+/* 基本 */
+@import "../../css/reset.less";
+@import "../../css/variable.less";
+@import "../../css/core.less";
+@import "../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../css/headfoot.less";
+@import "../../css/jMmenu.less";
+
+/* 职业发展-就业招聘、	机构合作友情链接、全国分校 */
+@import "../../css/common.less";
+
+
+/* frm非共用部分 */
+@import "frmindex.less";
+
+
+/* 颜色设置 */
+@import "frmvariable.less";
+
+/* 项目头部 */
+.proheader{
+	.protitle{h1{color:@proc1;}}
+	.prosearch{input[type="text"]{border: solid 2px @proc1;}input[type="button"]{background-color:@proc1;}}
+}
+.navbar{
+	background-color:@proc2;
+	li{
+		a{color:@proc3;&:hover{background-color:@proc1;}}
+		&.selecded{background-color:@proc1;}
+		.navbar2{
+            width: auto;
+            margin-top: -1px;
+            background: @proc1;
+            a:hover{background: @proc2;}
+        }
+	}
+}
+/* 考试指南 */
+.proguide{	li{i{color:@proc1;}	}}
+
+/* 切换TTL */
+.secTabs{
+	ul{border-bottom:solid 2px @proc1;}
+	li:hover,.selected,{background-color:@proc1;}
+	.message{a:hover{color:@proc1;}}
+}
+/* 考试试资讯 */
+.information{
+	li:hover{a{border:solid 1px @proc1;}h3,h4{color:@proc1;}}
+}
+/*考试推荐*/
+.recommend{
+	li:hover{h3{color:@proc1;}}
+}
+/*课程中心*/
+.coursecenter{
+	dd:hover{h3,h4{color:@proc1;}}
+	li:hover{a{border:solid 1px @proc1;}h3,h4{color:@proc1;}}
+}
+/*学习中心*/
+.learncenter{
+	li{i{background-color:@proc1;} strong{color:@proc1;}}
+	li:hover,.selecded{i{background-color:@cblue;}}
+}
+
+/*研发中心*/
+.devcenter{
+	article{color:@proc3;}
+	section{background-color:@proc1;}
+}
+
+/* 考试经验 */
+.experience{
+	li:hover{h3{color:@proc1;}}
+}
+
+/*职业发展-就业招聘* */
+.career,.recruitment{
+	li:hover{h3{color:@proc1;}}
+}
+
+
+

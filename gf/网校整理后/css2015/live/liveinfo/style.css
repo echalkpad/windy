@@ -1,0 +1,695 @@
+button{
+	outline: none;
+}
+/*导航*/
+#crumb{
+	width: 1180px;
+	padding: 0 10px;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	margin-top: 16px;
+	display: none;
+}
+#crumb p a{
+	color: #7c7b7a;
+}
+#crumb p span{
+	color: #4e4c4b;
+}
+/*头部标题*/
+#info_title{
+	width: 300px;
+	padding: 21px 10px 0 10px;
+	height: 41px;
+	margin: 0 auto;
+}
+#info_title h1{
+	float: left;
+	width: 220px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+}
+.info_title_right{
+	width: 80px;
+	float: right;
+	height: 20px;
+}
+.info_title_right div{
+	float: left;
+	width: 40px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	cursor: pointer;
+}
+.info_title_right .share{
+	width: 20px;
+	padding-left: 20px;
+}
+.info_title_right div .text{
+	display: none;
+}
+.info_title_right .share{
+	background-image: url(../../../images2015/liveinfo/share.png);
+}
+.info_title_right .collect{
+	background-image: url(../../../images2015/liveinfo/collect.png);
+}
+@media (max-width: 640px){
+	#bsBox{
+		margin-left: -160px !important;
+	}
+	#bsBox,.bsTop,#bsMorePanel{
+		width: 320px !important;
+	}
+	.bFind{
+		width: 260px !important;
+	}
+}
+
+
+/*课程简介*/
+#lesson_introduction{
+	margin: 0 auto;
+	width: 300px;
+	padding: 0 10px 20px 10px;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	background-color: #fafafa;
+}
+.introduction_pic{
+	width: 280px;
+	height: 186px;
+	margin: 0 auto;
+	margin-top: 17px;
+}
+.introduction_pic img{
+	width: 100%;
+	height: 100%;
+}
+.introduction_text{
+	width: 280px;
+	padding-top: 10px;
+	margin: 0 auto;
+}
+.introduction_text div{
+	height: 40px;
+	line-height: 40px;
+}
+.introduction_text .text{
+	font-size: 14px;
+	color: #797a7a;
+	padding-right: 24px;
+}
+.introduction_text .text2{
+	font-size: 18px;
+	color: #3f3f3f;
+	padding-right: 24px;
+}
+.introduction_text .text3{
+	font-size: 12px;
+	color: #878888;
+}
+.introduction_text .new_price{
+	color: #88bb59;
+}
+.introduction_text .old_price{
+	text-decoration: line-through;
+}
+
+.info_title_right .pd{
+	display: none;
+}
+.btns{
+	width: 278px;
+	height: 54px;
+	/* border: none; */
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	text-align: center;
+	line-height: 54px;
+	background-color: #2ebfce;
+	border: 1px solid #2ebfce;
+	border-radius: 28px;
+	margin: 18px auto 0;
+	display: none;
+}
+.now_appointment{
+	display: block;
+}
+.btns:hover{
+	background-color: #fff;
+	color: #2ebfce;
+}
+.appointment_success{
+	display: block;
+	border-color: #38a656;
+	background-color: #fff;
+	color: #38a656;
+	background-image: url(../../../images2015/liveinfo/duigou.png);
+	background-repeat: no-repeat;
+	background-position: 25px 20px;
+	
+}
+.appointment_success:hover{
+	color: #38a656;
+}
+.playing{
+	display: block;
+}
+.back_look{
+	display: block;
+}
+.finish{
+	display: block;
+	border: 1px solid #dddddd;
+	background-color: #e9e8e8;
+	color: #cccbcc;
+}
+.finish:hover{
+	background-color: #e9e8e8;
+	color: #cccbcc;
+}
+/*课程介绍*/
+#lesson_info{
+	width: 320px;
+	margin: 0 auto;
+}
+.title_wrap{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #ededed;
+	position: relative;
+}
+.title_wrap h3{
+	font-size: 20px;
+	width: 106px;
+	height: 24px;
+	line-height: 24px;
+	position: absolute;
+	top: 18px;
+	background-color: #fff;
+	text-align: center;
+}
+.title_wrap h3 span{
+	display: inline-block;
+	width: 3px;
+	height: 16px;
+	margin-right: 10px;
+	background-color: #2ebfce;
+	border-radius: 1px;
+}
+.title_wrap .dowload{
+	position: absolute;
+	width: 136px;
+	padding-left: 6px;
+	height: 42px;
+	top: 10px;
+	right: 4px;
+	background-color: #fff;
+}
+.title_wrap .dowload a{
+	display: block;
+	width: 134px;
+	height: 40px;
+	border: 1px solid #3ac2df;
+	border-radius: 21px;
+	text-indent: 46px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #3ac2df;
+	background-image: url(../../../images2015/liveinfo/dowload.png);
+	background-repeat: no-repeat;
+	background-position: 20px 7px;
+}
+.info_text{
+	margin-top: 50px;
+	padding: 0 10px;
+}
+.info_text p{
+	line-height: 36px;
+	font-size: 14px;
+	text-indent: 2em;
+}
+/*讲师介绍*/
+#teacher{
+	width: 320px;
+	margin: 0 auto;
+}
+#teacher .cont{
+	width: 290px;
+	padding: 10px 0;
+	padding-left: 20px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#teacher .cont img{
+	width: 80px;
+	height: 80px;
+	float: left;
+	border-radius: 40px;
+}
+#teacher .cont .teacher_info{
+	float: left;
+	width: 190px;
+	padding-left: 18px;
+	overflow: hidden;
+}
+#teacher .cont .teacher_info h4{
+	font-size: 16px;
+	color: #323232;
+}
+#teacher .cont .teacher_info h4 i{
+	font-size: 12px;
+	color: #929292;
+}
+#teacher .cont .teacher_info p{
+	color: #929292;
+	padding-top: 6px;
+}
+#teacher .cont .teacher_info p span{
+	color: #404040;
+}
+#teacher .ewm{
+	width: 320px;
+	height: 159px;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+.satisfied_wrap{
+	width: 158px;
+	height: 159px;
+	border-right: 1px solid #e8e8e8;
+	float: left;
+	text-align: center;
+}
+.satisfied_wrap .satisfied{
+	display: block;
+	padding-top: 40px;
+	font-size: 30px;
+	color: #f18f31;
+}
+.satisfied_text{
+	font-size: 16px;
+	padding-top: 24px;
+}
+.erweima{
+	width: 161px;
+	height: 159px;
+	float: left;
+	background-color: #f5f5f5;
+	/* background-image: url(../../../images2015/liveinfo/erweima.jpg);
+	background-repeat: no-repeat; */
+}
+.erweima .erweima_text{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.erweima img{
+	width: 100%;
+	height: 100%;
+}
+/*相关推荐*/
+#recommend{
+	padding: 0 10px;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.recommend_cont{
+	margin-top: 30px;
+	width: 300px;
+	float: left;
+}
+.recommend_cont_wrap .cont2{
+	float: right;
+	display: none;
+}
+.recommend_cont li{
+	font-size: 14px;
+	line-height: 20px;
+	padding: 8px 0;
+	padding-left: 30px;
+	background-image: url(../../../images2015/liveinfo/disc.png);
+	background-repeat: no-repeat;
+	background-position: 17px 18px;
+}
+.package{
+	display: none;
+}
+@media(min-width: 640px){
+	#info_title {
+		width: 600px;
+		padding: 21px 20px 0 20px;
+		height: 41px;
+		margin: 0 auto;
+	}
+	#info_title h1{
+		width: auto;
+	}
+	#lesson_introduction{
+		width: 600px;
+		padding: 0 20px 20px 20px;
+	}
+	.introduction_pic{
+		float: left;
+		margin-right: 20px;
+	}
+	.introduction_text{
+		float: left;
+	}
+	.info_title_right{
+		width: 150px;
+	}
+	
+	.info_title_right .share{
+		width: 90px;
+	}
+	.info_title_right .bshare-custom{
+		width: 80px;
+	}
+	.btns{
+		float: left;
+	}
+	#lesson_info{
+		width: 600px;
+	}
+	#teacher{
+		width: 600px;
+	}
+	#teacher .cont{
+		float: left;
+		border: 1px solid #e8e8e8;
+		padding-top: 29px;
+		padding-bottom: 50px;
+	}
+	#teacher .ewm{
+		width: 297px;
+		float: left;
+		margin-top: 20px;
+		border-right: 1px solid #e8e8e8;
+	}
+	#teacher .satisfied_wrap{
+		float: left;
+		width: 138px;
+	}
+	#teacher .erweima{
+		float: left;
+		width: 158px;
+	}
+
+	#recommend{
+		width: 640px;
+
+	}
+	.recommend_cont_wrap .cont2{
+		display: block;
+	}
+}
+@media(min-width: 1180px){
+	body{
+		background-color: #f7f8f8;
+	}
+	#crumb{
+		display: block;
+	}
+	#info_title{
+		width: 1180px;
+		padding: 21px 10px 0 10px;
+
+	}
+	#info_title h1{
+		width: auto;
+		font-size: 22px;	
+		height: 30px;
+		line-height: 30px;	
+	}
+	.info_title_right{
+		width: 400px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.info_title_right div{
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.info_title_right div .text{
+		display: block;
+		width: 60px;
+		padding-left: 20px;
+		float: left;
+	}
+	.info_title_right .bshare-custom{
+		float: left;
+		width: 220px;
+		height: 20px;
+		padding-top: 6px;
+	}
+	.info_title_right .pd{
+		display: inline-block;
+	}
+	.info_title_right .share{
+		padding-left: 0;
+	}
+	.info_title_right div .text:hover{
+		color: #3ac2df;
+	}
+	.info_title_right .share{
+		background-position: 0 6px;
+		text-align: center;
+		width: 300px;
+	}
+	.info_title_right .collect{
+		background-position: 0 8px;
+		text-align: center;
+	}
+	#lesson_introduction{
+		width: 1178px;
+		padding: 0;
+		margin: 0 auto;
+		border: 1px solid #eae8e8;
+		background-color: #fff;
+		margin-bottom: 20px;
+	}
+	.introduction_pic{
+		margin-top: 0;
+		margin-right: 0;
+	}
+	.introduction_text{
+		width: 700px;
+		height: 150px;
+		padding-top: 30px;
+	}
+	.introduction_text div{
+		width: 230px;
+		height: auto;
+		line-height: none;
+		float: left;
+		border-right: 1px dashed #d8d8d8;
+	}
+	.introduction_text div.price{
+		border-right: none;
+	}
+	.introduction_text .text2{ font-size: 20px; }
+	#lesson_introduction .introduction_text div span{
+		display: block;
+		text-align: center;
+		padding-right: 0;
+	}
+	.btns{
+		width: 170px;
+		margin-top: 64px;
+	}
+	.appointment_success{
+		padding-right: 30px;
+		text-align: right; 
+	}
+	.content_wrap{
+		width: 1180px;
+		margin: 0 auto;
+	}
+	.content_wrap .cont_left{
+		float: left;
+		width: 838px;
+	}
+	.content_wrap .cont_right{
+		float: right;
+		width: 320px;
+	}
+	#lesson_info{
+		float: left;
+		width: 838px;
+		border: 1px solid #e9e8e8;
+		background-color: #fff;
+		min-height: 208px;
+	}
+	.info_text p{
+		padding-bottom: 20px;
+	}
+	#teacher{
+		float: left;
+		width: 318px;
+		height: 366px;
+		border: 1px solid #e9e8e8;
+		background-color: #fff;
+	}
+	#teacher .cont{
+		border: none;
+		padding-top: 36px;
+    	padding-bottom: 36px;
+	}
+	#teacher .ewm{
+		width: 270px;
+		height: 134px;
+		margin-top: 0;
+		margin-left: 23px;
+		border-left: 1px solid #e8e8e8;
+	}
+	#teacher .satisfied_wrap{
+		width: 135px;
+		height: 134px;
+	}
+	#teacher .erweima{
+		width: 134px;
+		height: 134px;
+	}
+
+	#recommend{
+		float: left;
+		width: 318px;
+		height: 252px;
+		margin: 0;
+		padding: 0;
+		background-color: #fff;
+		border: 1px solid #e8e8e8;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.cont_inner{
+		width: 268px;
+		border: 1px solid #eeeeee;
+		background-color: #fff;
+	}
+	.cont_inner .images{
+		width: 268px;
+		height: 184px;
+		background-color: #f8f8f8;
+		overflow: hidden;
+		position: relative;
+	}
+	.cont_inner:hover{
+		border: 1px solid #61C9E0;
+		box-shadow: 0px 3px 2px 0px #E3E8EA;
+	}
+	.cont_inner:hover .images img{
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+	.cont_inner .images img{
+		width: 100%;
+		height: 100%;
+	}
+	.cont_inner .img_mask{
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		background-color: #000;
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+		top: 154px;
+	}
+	.cont_inner .img_mask_text{
+		font-size: 14px;
+		color: #fff;
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		position: absolute;
+		top: 154px;
+		overflow: hidden;
+	}
+	.cont_info{
+		padding: 0 13px;
+	}
+	.cont_info h3{
+		padding-top: 10px;
+		height: 26px;
+		line-height: 26px;
+		font-size: 16px;
+		color: #404040;
+		width: 100%;
+		overflow: hidden;
+	}
+	.cont_info .introduction{
+		font-size: 14px;
+		color: #6f7070;
+		height: 70px;
+		line-height: 24px;
+		padding-top: 10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+	.cont_info .teacher{
+		height: 46px;
+		font-size: 14px;
+		padding-top: 10px;
+		color: #a3a3a3;
+	}
+	.cont_info .teacher .name{
+		float: left;
+		width: 122px;
+		height: 46px;
+		line-height: 46px;
+		/* background-image: url(../../../images2015/tang.png);
+		background-repeat: no-repeat;
+		background-position: left center; */
+	}
+	.cont_info .teacher .name img{
+		width: 26px;
+		height: 26px;
+		border-radius: 13px;
+		margin-right: 4px;
+		vertical-align: middle;
+	}
+	.cont_info .teacher .nums{
+		float: right;
+		width: 100px;
+		padding-left: 20px;
+		height: 46px;
+		line-height: 46px;
+		font-size: 12px;
+		background-image: url(../../../images2015/icon-online.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+	.recommend_cont_wrap .cont2{
+		display: none;
+	}
+	.package{
+		display: block;
+		width: 838px;
+		margin: 0 auto;
+		padding: 30px 0;
+		float: left;
+	}
+	.package .cont_inner{
+		float: left;
+		margin-right: 14px;
+	}
+	.package .margin_right_none{
+		margin-right: 0;
+	}
+
+}

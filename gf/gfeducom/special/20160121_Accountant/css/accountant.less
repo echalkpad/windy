@@ -1,0 +1,1278 @@
+
+/*
+Name：老汤煲会计专题
+Author：windy随风缘
+Time:2016-01/22
+
+ */
+
+@import "../../../css/variable.less";
+
+//iconfont
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?kabozi');　
+  src:url('fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'),
+    url('fonts/icomoon.woff?kabozi') format('woff'),
+    url('fonts/icomoon.ttf?kabozi') format('truestype'),
+    url('fonts/icomoon.svg?kabozi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"],i{
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mm-menu{
+  .bg(contain);
+}
+/* 共用样式 start */
+body,html{
+  min-width:320px;
+}
+// 边框线
+.accountant_hr{
+  width:100%;
+  height:16px;
+  .pos(a);
+  bottom:-8px;
+  background: url(../images/border_1.png) 0 0 repeat;
+}
+
+// 正文
+@media(min-width:1200px){
+  .accountant_main{
+    width:1200px;
+    margin:0 auto;
+    box-sizing:border-box;
+    .pos(r);
+  }
+}
+
+// 标题
+.accountant_hd{
+  padding:20px 0;
+  text-align: center;
+  h2{.f24();}
+  q{
+    width:100px;
+    height:3px;
+    background: #fd7a23;
+    margin:8px auto 16px;
+    display:block;
+  }
+  p{
+    .f16();
+    color:@c9;
+  }
+}
+
+/* 共用样式 end */
+
+.accountant{}
+/* 首屏 start*/
+.first_screen{
+  background: url(../images/banner_bg.png) center center no-repeat;
+  .bg(cover);
+  width:100%;
+  .pos(r);
+  padding-bottom:35px;
+  .banner{
+    .pos(r);
+    overflow:hidden;
+  }
+  img{
+    width:96%;
+    display:block;
+    height:auto;
+  }
+  .banner_1{
+    height:auto;
+    .pos(a);
+    left:50%;
+    top:8%;
+    width:90px;
+    -webkit-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+    -ms-transform:translate(-50%,0);
+    -o-transform:translate(-50%,0);
+    transform:translate(-50%,0);
+  }
+  .banner_2{
+    .pos(a);
+    top:12px;
+  }
+  .banner_3{
+    width:25%;
+    height:auto;
+    .pos(a);
+    left:51%;
+    top:45%;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+  }
+  .hard{
+    width:80%;
+    .pos(r);
+    margin:-90px auto 0;
+    td{
+      display:block;
+      padding:15px 20px;
+      background: #e9ecf1;
+      margin-top:20px;
+      .bdr(5px);
+      color:#1f3f64;
+      line-height:24px;
+    }
+  }
+  .phone{display:none;}
+}
+ @media(min-width:480px){
+  .first_screen{
+    padding-bottom:45px;
+    .banner_2{top:22px;}
+    .hard{margin-top:-120px;}
+  }
+}
+ @media(min-width:640px){
+  .first_screen{
+    .banner_1{width:122px;}
+    .hard{
+      margin-top:-160px;
+      .f16();
+      li{line-height:30px;}
+      td{line-height:30px;}
+    }
+  }
+}
+ @media(min-width:768px){
+  .first_screen{
+    img{
+      width:80%;
+      margin:0 auto;
+    }
+    .banner_2{
+      left:50%;
+      -webkit-transform:translate(-50%,0);
+      -moz-transform:translate(-50%,0);
+      -ms-transform:translate(-50%,0);
+      -o-transform:translate(-50%,0);
+      transform:translate(-50%,0);
+    }
+    .banner_3{width:20%;}
+    .hard{
+      img{width:100%;}
+      table{
+        border-spacing: 10px;
+        border-collapse: separate;
+      }
+      td{
+        display:table-cell;
+        width:31%;
+        box-sizing: border-box;
+        vertical-align:top;
+      }
+    }
+    .phone{
+      display:block;
+      .pos(a);
+      right:0;
+      top:40px;
+      background: #fff;
+      color:#d02344;
+      .f20();
+      padding:2px 6px;
+      i{margin:5px;padding-top:2px;display:inline-block;}
+    }
+  }
+}
+@media(min-width:992px){
+  .first_screen{
+    .banner_1{width:150px;}
+    .hard{
+      width:75%;
+      margin-top:-200px;
+      table{
+        width:90%;
+        margin:0 auto;
+        border-spacing: 15px;
+      }
+    }
+    .phone{font-size: 22px;}
+  }
+}
+@media(min-width:1200px){
+  .first_screen{
+    .hard{
+      margin-top:-250px;
+    }
+  }
+}
+/* 首屏 end */
+
+/* 为什么学习会计第四章 start */
+.accountant_four{
+  background: #7586a0;
+  padding:30px 0 10px;
+  .pos(r);
+  color:@cw;
+  section{
+    width:278px;
+    height:202px;
+    margin:0 auto;
+    box-sizing: border-box;
+    padding:20px;
+    background:url(../images/accountant_four_01.png) 0 0 no-repeat;
+    .bg(cover);
+    text-align:center;
+    h3{.f16();margin:5px 0;}
+    p{line-height:24px;}
+    span{display:inline-block;}
+    strong{color:#fd7e2a;display:block;font-weight:normal;}
+  }
+  article{
+    width:278px;
+    margin:20px auto 0;
+    h2{.f18();text-align:center;line-height:50px;}
+    p{
+      padding:0 0 20px 16px;
+      line-height:20px;
+      .f12();
+      .pos(r);
+      i{
+        .pos(a);
+        left:0;
+        top:4px;
+      }
+    }
+  }
+  .accountant_hr{
+    background: url(../images/border_3.png) 0 0 repeat;
+    left:0;
+  }
+}
+@media(min-width:400px){
+  .accountant_four{
+    section{
+      width:360px;
+      height:260px;
+      padding:40px 30px;
+      h3{.f18();margin:8px 0;}
+      p{
+        .f16();
+        line-height:30px;
+      }
+      strong{.f16();}
+    }
+    article{
+      width:360px;
+      h2{.f20();line-height:50px;}
+      p{
+        padding:0 0 20px 16px;
+        line-height:24px;
+        .f14();
+        i{
+          .f12();
+          top:6px;
+        }
+      }
+    }
+  }
+}
+@media(min-width:600px){
+  .accountant_four{
+    padding:40px 0 20px;
+    section{
+      width:468px;
+      height:338px;
+      padding:55px;
+      h3{.f20();margin:12px 0;}
+      strong{margin-top:15px;}
+    }
+    article{width:468px;}
+  }
+}
+@media(min-width:992px){
+  .accountant_four{
+    padding:40px 30px;
+    .cf();
+    section{
+      .left();
+      width:468px;
+      height:338px;
+      padding:55px;
+      h3{.f20();margin:12px 0;}
+      strong{margin-top:15px;}
+    }
+    article{
+      width:48.5%;
+      .right();
+      margin:0;
+      h2{
+        .f30();
+        text-align:left;
+        line-height:30px;
+        padding-bottom:20px;
+      }
+    }
+  }
+}
+@media(min-width:1200px){
+  .accountant_four{
+    padding:0;
+    .accountant_main{
+      padding:50px 30px 40px 0;
+      .cf();
+      box-sizing: border-box;
+    }
+    section{
+      h3{.f24();margin:6px 0 12px;}
+      p,strong{.f18();}
+    }
+    article{
+      width:50%;
+      h2{
+        .f40();
+        padding-bottom:30px;
+      }
+    }
+  }
+}
+/* 为什么学习会计第四章 end */
+
+
+/* 粉末学习法 start */
+.method{
+  padding:10px 30px 20px;
+  background:#f4f4f4;
+  .pos(r);
+  .mob_method{
+    .cf();
+    text-align: center;
+    h3{
+      background: #7a7a7a;
+      color:@cw;
+      line-height:36px;
+    }
+    p{
+      color:@c6;
+      padding-top:10px;
+      .ellipsis();
+    }
+    li{
+      width:50%;
+      .left();
+      box-sizing: border-box;
+      margin-bottom:20px;
+      &:nth-child(odd){
+        padding-right:15px;
+      }
+      &:nth-child(even){
+        padding-left:15px;
+      }
+    }
+  }
+  .video{
+    margin:15px 0 40px;
+    section{
+      background: #6db2ca;
+      padding:20px 15px;
+      h3{
+        font-style:italic;
+        color:@cw;
+        .f18();
+      }
+      h4{
+        color:#f9cd61;
+        .f20();
+        text-align: center;
+        font-style:italic;
+      }
+      p,h5{display:none;}
+    }
+    article{
+      background: #000;
+      height:150px;
+      img{
+        display:block;
+        width:100%;
+        height:auto;
+      }
+    }
+  }
+  .accountant_hr{
+    display:none;
+  }
+}
+@media(min-width:480px){
+  .method{
+    .mob_method{p{.f16();}}
+    .video{
+      section{
+        padding:20px;
+        h3{font-size:22px;}
+        h4{font-size:26px;}
+      }
+    }
+  }
+}
+@media(min-width:640px){
+  .method{
+    padding:20px 65px 30px;
+    .mob_method{
+      h3{
+        .f16();
+        line-height:45px;
+      }
+      p{.f18();}
+    }
+    .video{
+      margin:30px 0 50px;
+      section{
+        padding:25px 40px;
+        h3{font-size:26px;}
+        h4{.f30();}
+      }
+      article{
+        height:250px;
+      }
+    }
+  }
+}
+@media(min-width:768px){
+  .method{
+    .accountant_hr{
+      display:block;
+      left:0;
+      background: url(../images/border_2.png) 0 0 repeat;
+    }
+  }
+}
+@media(min-width:992px){
+  .method{
+    padding:30px 65px;
+    .mob_method{
+      li{
+        width:25%;
+        padding:30px 15px!important;
+        &:nth-child(1){
+          div{
+            background: url(../images/method_01.png) center center no-repeat;
+            .bg(cover);
+          }
+        }
+        &:nth-child(2){
+          div{
+            background: url(../images/method_02.png) center center no-repeat;
+            .bg(cover);
+          }
+        }
+        &:nth-child(3){
+          div{
+            background: url(../images/method_03.png) center center no-repeat;
+            .bg(cover);
+          }
+        }
+        &:nth-child(4){
+          div{
+            background: url(../images/method_04.png) center center no-repeat;
+            .bg(cover);
+          }
+        }
+      }
+      section{
+        width:180px;
+        margin:0 auto;
+      }
+      div{
+        width:100%;
+        height:180px;
+        .bg(cover);
+        .pos(r);
+        .bdr(50%);
+        overflow:hidden;
+      }
+      h3{
+        .f16();
+        background: rgba(0, 0, 0, 0.5);
+        .pos(a);
+        width:100%;
+        top:50%;
+        margin-top:-23px;
+      }
+      p{.f16();}
+    }
+    .video{
+      margin:30px 0 70px;
+      .cf();
+      section,article{
+        box-sizing:border-box;
+        width:50%;
+        .left();
+      }
+      section{
+        height: 250px;
+        p,h5{display:block;color:@cw;}
+        p{
+          .f14();
+          line-height:24px;
+          margin:10px 0;
+        }
+        h5{
+          font-size:22px;
+          font-style:italic;
+          text-align: center;
+          border:1px dashed #fff;
+          padding:3px 5px;
+          .bdr(3px);
+        }
+      }
+    }
+    .accountant_hr{
+      background: url(../images/border_2.png) 0 0 repeat;
+      left:0;
+    }
+  }
+}
+@media(min-width:1100px){
+  .method{
+    .video{
+      section{
+        p{
+          .f16();
+          line-height:30px;
+          margin:14px 0;
+        }
+      }
+    }
+  }
+}
+@media(min-width:1200px){
+  .method{
+    padding:30px 0 70px;
+    .mob_method{
+      li{
+        padding:30px 45px!important;
+      }
+      section{
+        width:208px;
+        margin:0 auto;
+      }
+      div{height:208px;}
+      p{.f18();padding-top:20px;}
+    }
+    .video{
+      margin:30px 0 90px;
+      section{
+        height:320px;
+        padding:40px;
+        h3{font-size:26px;}
+        h4,h5{.f30();}
+        p{margin:20px 0 25px;}
+      }
+      article{height:320px;}
+    }
+  }
+}
+.Schedule{
+  li{
+    margin-bottom:15px;
+    a{
+      display:block;
+      height:50px;
+      .pos(r);
+      background: #bccadf;
+      color:#7586a0;
+    }
+    i,em{
+      .pos(a);
+      display:inline-block;
+      line-height:50px;
+      top:0;
+      text-align: center;
+    }
+    i{
+      .f20();
+      color:@cw;
+      font-family: Georgia;
+      width:40px;
+      left:5px;
+      line-height:45px;
+    }
+    em{
+      background: #fd7a23;
+      color:@cw;
+      right:0;
+      width:70px;
+    }
+    p{
+      padding:0 75px 0 45px;
+      height:100%;
+      span{
+        display:block;
+        height:50px;
+        .ellipsis();
+        .f12();
+        line-height:50px;
+      }
+    }
+  }
+}
+@media(min-width:600px){
+  .Schedule{
+    .cf();
+    li{
+      width:50%;
+      box-sizing: border-box;
+      .left();
+      i{
+        .f24();
+        width:40px;
+        left:5px;
+      }
+      em{width:70px;}
+      p{
+        padding:0 75px 0 45px;
+        height:50px;
+      }
+      &:nth-child(odd){
+        padding-right:8px;
+      }
+      &:nth-child(even){
+        padding-left:8px;
+      }
+    }
+  }
+}
+@media(min-width:768px){
+  .Schedule{
+    li{
+      em{display:none;}
+      p{
+        padding:0 0 0 55px;
+        span{.f14();}
+      }
+      &:hover,&.selector{
+        a{
+          background:#fd7a23;
+          color:@cw;
+          span{display:none;}
+          em{
+            width:100%;
+            display:block;
+          }
+        }
+      }
+    }
+  }
+}
+@media(min-width:992px){
+  .Schedule{
+    li{
+      width:25%;
+      padding-left:0!important;
+      padding-right:10px!important;
+      i{width:50px;}
+    }
+  }
+}
+@media(min-width:1200px){
+  .Schedule{
+    width:1215px!important;
+    li{
+      width:16.66%;
+      &:nth-child(4),&:nth-child(8){
+        padding-right:15px!important;
+      }
+      padding-right:15px!important;
+      i{width:50px;}
+      em{display:none;}
+      p{
+        padding:0 0 0 55px;
+        span{.f14();}
+      }
+    }
+  }
+}
+/* 粉末学习法 end */
+
+
+/* 第四章导读 start*/
+.introduction{display:none;}
+@media(min-width:768px){
+  .current{display:block;}
+  .introduction{
+    .pos(r);
+    padding:50px 70px 40px;
+    color:#7586a0;
+    text-align: center;
+    em{
+      display:block;
+      .pos(a);
+      left:50%;
+      margin-left:-35px;
+      top:-35px;
+      width:68px;
+      height:68px;
+      line-height: 68px;
+      border:1px solid #ddd;
+      background:@cw;
+      font-family:Georgia;
+      .f24();
+      .bdr(50%);
+      color:#fd7a23;
+    }
+    h3{
+      .f18();
+      color:#fd7a23;
+    }
+    p{margin:30px 0 20px;}
+    ul{.cf();}
+    li{
+      width:50%;
+      .left();
+      text-align: left;
+      box-sizing: border-box;
+      padding-right:30px;
+      .ellipsis();
+      margin-bottom:14px;
+    }
+    a{
+      display:block;
+      width:160px;
+      line-height:50px;
+      background: #fd7a23;
+      color:@cw;
+      margin:25px auto 0;
+      .bdr(25px);
+      .f18();
+    }
+    section{
+      width:60%;
+      margin:0 auto;
+      text-align: left;
+      margin-top:30px;
+      p{
+        line-height:24px;
+        margin:0 0 12px 0;
+        .f14();
+      }
+    }
+    .accountant_hr{
+      background: url(../images/border_2.png) 0 0 repeat;
+      left:0;
+    }
+  }
+}
+@media(min-width:992px){
+  .introduction{
+    p,li{.f16();}
+    ul{
+      width:900px;
+      margin:0 auto;
+    }
+  }
+}
+@media(min-width:1200px){
+  .introduction{
+    .accountant_main{
+      padding:70px 70px 50px;
+    }
+    padding:0;
+    em{
+      width:98px;
+      height:98px;
+      top:-50px;
+      margin-left:-50px;
+      line-height:100px;
+      .f30();
+    }
+    h3{.f20();}
+    a{width:180px;}
+  }
+}
+/* 第四章导读 end */
+
+
+/* 金程实力 start */
+.power{
+  background:#f4f4f4;
+  section{display:none;}
+  article{
+    padding:30px 20px;
+    img{
+      display:block;
+      width:260px;
+      height:auto;
+      margin:0 auto;
+    }
+  }
+  .power_hd{
+    margin:5px 0;
+    .cf();
+    line-height:30px;
+    strong{
+      font-weight:normal;
+      .f18();
+      em{.f14();margin-left:5px;}
+      .left();
+    }
+    span{
+      color:#fd7a23;
+      .f14();
+      .right();
+    }
+  }
+  small{
+    .f14();
+    color:@c9;
+  }
+  article>div{
+    padding:18px 14px;
+    background:@cw;
+    .pos(r);
+    margin-top:-160px;
+    h3{
+      margin:20px 0 10px;
+      padding:8px 4px;
+      text-align: center;
+      .f12();
+      color:@c6;
+      border-top:1px solid #ddd;
+      border-bottom:1px solid #ddd;
+      .ellipsis();
+    }
+    p{
+      color:@c9;
+      line-height:24px;
+    }
+  }
+}
+@media(min-width:480px){
+  .power{
+    article{
+      padding:30px;
+      img{width:325px;}
+    }
+    .power_hd{
+      margin:10px 0;
+      strong{
+        .f28();
+        em{.f18();}
+      }
+      span{.f18();}
+    }
+    article>div{
+      padding:20px;
+      margin-top:-200px;
+      h3{
+        margin:20px 0 10px;
+        padding:15px 5px;
+        .f16();
+      }
+    }
+  }
+}
+@media(min-width:640px){
+  .power{
+    .power_hd{
+      strong{
+        .f36();
+        em{.f24();}
+      }
+      span{.f24();}
+    }
+    article{
+      padding:30px 65px 50px;
+      img{width:375px;}
+    }
+    article>div{
+      padding:20px;
+      margin-top:-230px;
+      h3{.f18();}
+      p{line-height:28px;}
+    }
+  }
+}
+@media(min-width:992px){
+  .power{
+    article{
+      padding-bottom:0;
+      .cf();
+      img{
+        width:280px;
+        .left();
+        .pos(r);
+        z-index:2;
+      }
+      small{display:none;}
+    }
+    article>div{
+      width:60%;
+      background:none;
+      .right();
+      padding:20px;
+      margin-top:30px;
+      h3{.f18();}
+      p{line-height:28px;}
+    }
+  }
+}
+@media(min-width:1200px){
+  .power{
+    article{
+      padding:30px 65px 0;
+      width:auto;
+      img{width:320px;}
+    }
+    article>div{
+      margin-top:50px;
+      h3{margin:20px 5px;}
+      p{line-height:30px;}
+    }
+  }
+}
+@media(min-width:768px){
+  .power{
+    section{
+      display:block;
+      p{
+        padding:40px 0;
+        width:360px;
+        margin:0 auto;
+        .f16();
+        color:@c6;
+        line-height:30px;
+        text-align: center;
+      }
+      ul{.cf();}
+      li{
+        width:33.33%;
+        .left();
+        padding-right:10px;
+        box-sizing: border-box;
+        text-align: center;
+        color:@cw;
+        h3{.f18();}
+        big{
+          display:block;
+          .f16();
+        }
+        button{
+          display:block;
+          border:0;
+          margin:10px auto 0;
+          width:128px;
+          line-height:40px;
+          .bdr(20px);
+          background: #fff;
+        }
+        .bshare-custom{
+          margin:8px 0;
+        }
+        q{
+          .f12();
+          .ellipsis();
+          display:block;
+        }
+      }
+      li>div{
+        height:140px;
+        box-sizing:border-box;
+        padding:14px 5px;
+      }
+      li:nth-child(1)>div{
+        background: url(../images/power_02.png) 0 0 no-repeat;
+        .bg(cover);
+        button{a{color:#33acdf;}}
+      }
+      li:nth-child(2)>div{
+        background: url(../images/power_03.png) 0 0 no-repeat;
+        .bg(cover);
+        button{a{color:#3fb34f;}}
+      }
+      li:nth-child(3)>div{
+        background: url(../images/power_04.png) 0 0 no-repeat;
+        .bg(cover);
+      }
+    }
+  }
+}
+@media(min-width:992px){
+  .power{
+    section{
+      p{
+        .f18();
+        width:400px;
+        padding:60px 0;
+      }
+      li{
+        padding-right:15px;
+        h3{font-size:26px;}
+        big{.f20();}
+        .bshare-custom{
+          margin:14px 0;
+        }
+        button{margin:20px auto 0;}
+      }
+      li>div{
+        height:180px;
+        padding:20px 5px;
+      }
+    }
+  }
+}
+@media(min-width:1200px){
+  .power{
+    section{
+      p{
+        width:440px;
+        .f20();
+      }
+      ul{width:1215px!important;}
+      li{
+        h3{.f30();}
+        big{.f24();}
+      }
+      li>div{
+        height:200px;
+        padding:25px 5px;
+      }
+    }
+  }
+}
+/* 金程实力 end */
+
+
+/* 资料索取 start */
+.Data_for{
+  padding:50px 0;
+  box-sizing:border-box;
+  height:400px;
+  background: url(../images/Data_for_bg.png) center center no-repeat;
+  h2 p,article ul{display:none;}
+  h2{text-align: center;}
+  form{
+    width:240px;
+    margin:20px auto 0;
+    input{
+      width:100%;
+      margin-bottom:20px;
+    }
+  }
+  a{
+    display:block;
+    width:240px;
+    background: #fd7a23;
+    color:@cw;
+    margin:10px auto;
+    .f18();
+    text-align:center;
+    line-height:40px;
+  }
+}
+@media(min-width:640px){
+  .Data_for{
+    padding:50px 0;
+    height:450px;
+    form{
+      .f16();
+      input{
+        line-height:50px;
+        height:50px;
+      }
+    }
+    a{
+      font-size:22px;
+      line-height:50px;
+    }
+  }
+}
+@media(min-width:992px){
+  .Data_for{
+    height:auto;
+    h2 p,article ul{display:block;}
+    h2{
+      p{
+        color:#fd7a23;
+        .f16();
+        padding-top:10px;
+      }
+    }
+    article{
+      padding:35px 0 20px;
+      color:@cw;
+      width:800px;
+      margin:0 auto;
+      .cf();
+    }
+    form{
+      .left();
+      margin-top:0;
+    }
+    ul{
+      width:58%;
+      .cf();
+      .right();
+      li{
+        width:50%;
+        cursor:pointer;
+        .left();
+        margin-bottom:13px;
+        .ellipsis();
+        i{
+          color:#fd7a23;
+          background:@cw;
+          width:14px;
+          height:14px;
+          .f14();
+          .bdr(50%);
+          margin-right:5px;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width:1200px){
+  .Data_for{
+    h2{p{.f18();}}
+    article{
+      padding:35px 0 20px;
+      width:900px;
+    }
+    form{
+      input{margin-bottom:28px;}
+    }
+    ul{
+      li{
+        margin-bottom:13px;
+        .f16();
+      }
+    }
+  }
+}
+/* 资料索取 end */
+
+// 购买弹出
+.pop{
+  background:rgba(0, 0, 0, 0.8);
+  box-sizing:border-box;
+  padding-right:30px;
+  display:none;
+  .buy{display:none;}
+  h2{
+    width: 100%;
+    height: 120px;
+    background-image: url(../images/poph2bg.jpg);
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 120px;
+    .pos(r);
+    i{
+      .pos(a);
+      display:block;
+      .f16();
+      width: 30px;
+      height: 30px;
+      line-height:30px;
+      background:#000;
+      color:@cw;
+      right:-30px;
+      top:0;
+      cursor:pointer;
+    }
+  }
+  article{
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  dl{
+    padding:20px 0 10px;
+    text-align: center;
+  }
+  dd{
+    line-height: 50px;
+    .f30();
+    color: #fd5a5a;
+    padding:10px 0 0;
+  }
+  a{
+    display:block;
+    text-align: center;
+    border: solid 1px #dddddd;
+    background-color: #ffffff;
+    color: #666666;
+    width: 100px;
+    line-height: 40px;
+    .bdr(20px);
+    margin:0 auto;
+  }
+}
+@media(min-width:768px){
+  .pop{
+    .pos(a);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:1111;
+    .buy{
+      width:540px;
+      /* .pos(a);
+      top:50%;
+      left:50%;
+      margin:-150px 0 0 -285px; */
+    }
+  }
+}
+@media(min-width:1200px){
+  .pop{
+    article{width:auto;}
+  }
+}
+
+.accountant{
+  .ewm{display: none;}
+}
+@media(min-width:992px){
+  .accountant{
+    .ewm{
+      display:block;
+      position: fixed;
+      top:45%;
+      right:0;
+      -webkit-transform:translate(0,-50%);
+      -moz-transform:translate(0,-50%);
+      -ms-transform:translate(0,-50%);
+      -o-transform:translate(0,-50%);
+      transform:translate(0,-50%);
+      img{display:block;}
+    }
+  }
+}
+@media(min-width:1440px){
+  .accountant{
+    .ewm{
+      right:50%;
+      margin-right:-750px;
+      img{display:block;}
+    }
+  }
+}

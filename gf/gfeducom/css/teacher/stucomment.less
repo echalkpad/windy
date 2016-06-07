@@ -1,0 +1,170 @@
+/*
+ * == 学员评价
+ *******************************/
+@import "teachereset.less";
+
+.stucomment{
+   textarea{width: 100%; height: 60px; margin: 30px 0 10px;padding-left: 10px; box-sizing: border-box;}
+   .stusbt{
+      color: @c6;
+      margin: 10px 0;
+       i{.f18(); padding-right: 10px; cursor: pointer; vertical-align: middle;}
+       .icon-smile{color: #db7262;}
+       .icon-pic{color: #49b19a;}
+      span{
+          float: right;
+          width: auto;
+          a{
+              .f14();
+              color: @cw;
+              padding: 5px 10px;
+              background: @csblue;
+              margin-left: 5px;
+              .bdr2();
+          }
+      }
+      
+      em{display: none;}
+   }
+    
+  .stucheck{
+      padding: 30px 20px;
+      color: @c6;
+      .somecheck{
+         &:first-child{color: @c6;}
+         h4{display: inline-block; float: left;}
+         p{
+            padding-left: 70px;
+            span{
+                display: inline-block;
+                width: 50%;
+            }
+         }
+         input{ margin-left: 20px; }
+      }
+      .somecheck2{margin-top: 20px; p{span{width: 100%; color: @csblue;}}}
+
+  }  
+}
+@media(min-width:480px){
+ .stucomment{
+   .stucheck{
+     .somecheck{
+        p{
+            span{width: 33.33%;}
+        }
+     }  
+     .somecheck2{p{span{width: 49%;}}}
+   }  
+ }   
+}
+@media(min-width:640px){
+ .stucomment{
+   .stusbt{i{padding-right: 5px;} em{padding-right: 10px;}}  
+   .stucheck{
+     .somecheck{
+        p{
+            span{width: 25%;}
+        }
+     }  
+     .somecheck2{p{span{width: 32%;}}}
+     em{display: inline-block;}
+   }  
+ }   
+}
+@media(min-width:768px){
+ .stucomment{
+   .stucheck{
+     .somecheck{
+        p{
+            span{width: 25%;}
+        }
+     }  
+     .somecheck2{p{span{width: 24%;}}}
+   }  
+ }   
+}
+
+@media(min-width:992px){
+ .stucomment{
+  .stucheck{
+      padding: 50px 20px 0;
+      p{
+         &:first-child{color: @c6;}
+         span{width: 19%; color: @c6;}
+         input{ margin-left: 25px; }
+      }
+      .stusbt{span{width: auto;}}
+  }  
+  
+ }   
+}
+@media(min-width:1200px){
+ .stucomment{
+   .stucheck{
+     .somecheck{
+     }  
+     .somecheck2{p{span{width: 19%;}}}
+   }  
+ }   
+}
+
+.stucomment{
+  .stucommt{
+    .cf();
+    margin: 30px 20px;
+    border-bottom: 1px solid @cd;
+    a{img{
+        width: 40px;
+        height: 40px;
+        .bdrhalf();
+        float: left;
+    }} 
+    .sturetext{.cf(); clear: both;}
+    .stutext{
+        padding-left: 50px;
+        p{
+            a{color: @csblue;padding: 0 10px;.f14();}
+            span{color: @c9; .f12(); float: right;}
+            .replybtn,.replybtnagain,.replyclose{float: right; padding-bottom: 15px;}
+            .replyclose{display: none;}
+            
+           /* em{
+                float: right;
+                padding-left: 15px;
+            }*/
+        }
+        h3{
+            .f14();
+            line-height: 28px;
+            color: @c6;
+        }
+    }
+    
+    .stureplay{
+       margin-left: 50px;
+   //    display: none;
+       textarea{height: 40px; margin: 0;}
+    }
+  }
+}
+
+@media(min-width:640px){
+ .stucomment{
+  .stucommt{
+     margin: 30px;
+  }
+ }   
+}
+
+@media(min-width:768px){
+    .stucomment{
+        padding: 0 60px;
+      .stucommt {
+       .sturetext{
+           margin-left: 50px;
+       }
+      }
+    }
+}
+

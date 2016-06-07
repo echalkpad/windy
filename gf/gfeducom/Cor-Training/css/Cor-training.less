@@ -1,0 +1,540 @@
+@import '../../css/variable.less';
+.pos(r){position: relative;}
+.pos(a){position: absolute;}
+.tcenter(){text-align: center;}
+.cor-training_title{
+  .tcenter();
+  padding:55px 0 40px;
+  h2{
+    .f20();
+    color:#041123;
+    border-bottom:2px solid #ffc30b;
+    width:150px;
+    font-weight:bold;
+    margin:0 auto;
+    .pos(r);
+    padding-bottom: 10px;
+    em{
+      display:block;
+      .pos(a);
+      bottom:-8px;
+      left:50%;
+      margin-left:-5px;
+      width:14px;
+      height:14px;
+      background: #ffc30b;
+      border-radius: 100%;
+    }
+  }
+  p{
+    margin-top:25px;
+    padding:0 5px;
+    color:#ffc30b;
+    .f14();
+  }
+}
+.cor-btn{
+		width:150px;
+		height: 30px;
+		clear: both;
+		margin:45px auto 0;
+		a{
+			background-color: #ffb401;
+			display: block;
+			line-height: 30px;
+			margin:45px auto 0!important;
+			width: 100%!important;
+			border-radius: 20px;
+			color:@cw;
+		}
+}
+
+@media(min-width:640px){
+	.cor-training_title{
+		padding:85px 0 40px;
+		h2{.f24();}
+		p{
+			padding:0 45px;
+			.f16();
+		}
+	}
+}
+@media(min-width:1200px){
+	.cor-training_title{
+		padding:135px 0 40px;
+		h2{.f36();}
+		p{.f18();}
+	}
+}
+//header
+.nxnav {
+	border-top:1px solid @cd; 
+	background: #fff!important;
+	li{
+		a{color:@c6!important;}
+		&.selecded{
+			background-color:#ffb401!important;
+			a{color: @cw!important;}
+		}
+		&:hover{
+			background-color: #ffb401!important;
+			a{color:@cw!important;}
+		}
+	}
+}
+	.prosearch{
+		input[type="button"] {
+ 			 background: #fcbe01!important;
+		}
+	}
+	.prophone{color:#fcbe01!important;}
+
+//banner
+.cor-banner{
+	background:url(../images/banner.jpg) no-repeat;
+	.cf();
+	h3{
+		.tcenter();
+		padding: 73px 10px;
+		.cf();
+		img{width: 100%;}
+	}
+	.tbform{display: none;}
+}
+	.tbform{
+		.cf();
+		width: 320px;
+		box-sizing: border-box;
+		margin:30px auto;
+		padding:25px 25px 10px;
+		h2{
+			font-size: 20px;
+			padding-bottom: 20px;
+		}
+		input{
+			clear: both;
+			display: block;
+			width: 100%;
+			margin-bottom: 20px;
+			height: 43px;
+		}
+		.btn{
+			background: #ffb401;
+			.f16();
+		}
+	}
+@media(min-width:448px){
+	.cor-banner{
+		.inner{
+			h3{img{width: 411px;}}
+		}
+	}
+	.tbform{width: 411px;}
+}
+@media(min-width:768px){
+	.cor-banner{
+		.inner{
+			display: table;
+			margin:0 auto;
+			h3{
+				float: left;
+				padding-top: 150px;
+				img{width: 370px;}
+			}
+			.tbform{
+				display: block;
+				float: right;
+				width: 350px;
+				h2{color:@cw;}
+			}
+		}
+	}
+	.tbform{display:none;width: 411px;}
+}
+@media(min-width:1200px){
+	.cor-banner{
+		background-size: cover;
+		.inner{
+			.lgscreen();
+			h3{
+				float: left;
+				img{width: 100%}
+			}
+			.tbform{
+				background:rgba(0, 0, 0, 0.4);
+				padding:45px 45px 20px;
+	            margin:50px 0;
+	            width: 40%;
+	            	input{
+						margin-bottom: 30px;
+						height: 53px;
+					}
+					.btn{.f20();}
+			}
+		}
+	}
+}
+//金牌系列 star
+.cor-train_content{
+	.cf();
+	.cor-items{
+		.cf();
+		box-sizing: border-box;
+		width: 100%;
+		padding:15px 0px;
+		margin:0 auto;
+		background: #0d2a43;
+		background-image: -moz-linear-gradient(50% 180px 90deg, #000000 0%, #FFFFFF 30%, #336600 60%,#662C13 90%);
+		ul{.cf();}
+		li{
+			float: left;
+			.f16();
+			width: 50%;
+			box-sizing: border-box;
+			color:@cw;
+			.tcenter();
+			&:nth-child(-n+2){margin-bottom: 20px;}
+			span{
+				display: block;
+				.f12();
+			}
+		}
+	}
+	.cor-golden{
+		.cf();
+		h3{
+			.tcenter();
+			padding:20px 0;
+			.f16();
+		}
+		a{
+			display: block;
+			float: left;
+			width: 50%;
+			.tcenter();
+			margin:10px auto;
+		}
+		img{
+			display: block;
+			margin:0 auto;
+			width: 97px;
+		}
+		h4{.f14();}
+		span{color:@c9;.f12();}
+	}
+}
+@media(min-width:448px){
+    .cor-train_content{
+		.cor-items{
+			li{
+				width: 25%;
+				&:nth-child(-n+2){margin-bottom: 0px;}
+				.f18();
+				span{.f14();}
+			}
+		}
+		.cor-golden{
+			a{width: 33.3%;}
+			img{margin-bottom: 10px;}
+			h3{.f18(); padding-top: 40px;}
+			h4{.f16();}
+			span{.f14();}
+		}
+    }
+}
+@media(min-width:640px){
+	 .cor-train_content{
+		.cor-golden{
+			a{width: 25%;}
+			h3{.f20(); padding: 40px 0;}
+			span{font-size:13px;}
+		}
+    }
+}
+@media(min-width:768px){
+	 .cor-train_content{
+	 	.cor-items{
+	 		ul{width: 768px;margin:0 auto;}
+	 		li{.f20();}
+	 	}
+		.cor-golden{
+			width: 768px;
+			margin:0 auto;
+			img{margin-bottom: 10px;}
+			h3{.f20(); padding: 40px 0;}
+			h4{.f16();}
+			span{font-size:13px;}
+		}
+    }
+}
+@media(min-width:1200px){
+	.cor-train_content{
+		.cor-items{
+			ul{width: 1200px}
+			li{
+				text-align: left;
+				.f36();
+				padding-left: 115px;
+			}
+		}
+		.cor-golden{
+			width: 860px;
+			h3{
+				.f24();
+				padding:55px 0 59px;
+			}
+			img{
+				margin-bottom: 20px;
+				width: 120px;
+			}
+			h4{.f18();}
+			span{.f14();}
+			.cor-btn{
+				width: 195px;
+				height: 40px;
+				a{line-height: 40px;.f16();}
+			}
+		}
+	}
+}
+
+//科技项目
+.cor-Sci-Tech{
+	margin-top: 50px;
+	padding-bottom: 30px;
+	background:url(../images/bg2.jpg) no-repeat;
+	background-size: cover;
+	.cor-training_title{
+		h2,p{color:@cw;}
+	}
+	.p-left{
+		clear: both;
+		text-align: center;
+		img{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+	.platform{
+		.cf();
+		padding:0 10px;
+		article{
+			.cf();
+			color:@cw;
+			h3{.f16();padding:0 0 30px;}
+				ul{
+					border-left:1px solid #ffb20b;
+					padding:10px 0 0px 20px;
+					.cf();
+					.pos(r);
+					li{
+						margin:10px auto;
+						i{
+							display: inline-block;
+							width: 9px;
+							height: 9px;
+							background: #ffb20b;
+							border-radius: 100%;
+							.pos(a);
+							left:-5px;
+							margin-top:8px;
+						}
+					}
+				}
+				.cor-btn{
+					margin:0;
+					a{.tcenter();}
+				}
+		}
+		.p-right{
+			display: none;
+			width:100%;
+			.cf();
+			margin:20px auto;
+			img{width: 100%;}
+		}
+	}
+}
+@media(min-width:448px){
+	.cor-Sci-Tech{
+		.p-left{img{width: 414px;}}
+		.platform{
+			article{
+				h3{.f20();}
+				ul{
+					li{
+						margin:10px auto 25px;
+						line-height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+@media(min-width:768px){
+	.cor-Sci-Tech{
+		padding-bottom: 50px;
+		.p-left{display: none;}
+		.platform{
+			article{float: left;width: 50%;}
+			.p-right{
+				display: block;
+				float: left;
+				width: 50%;
+				img{width: 100%;}
+			}
+		}
+	}
+}
+@media(min-width:1000px){
+	.cor-Sci-Tech{
+		.platform{
+			article{
+				h3{.f20();}
+				ul{li{margin:45px auto;}}
+			}
+		}
+	}
+}
+@media(min-width:1200px){
+	.cor-Sci-Tech{
+		padding-bottom: 90px;
+		.platform{
+			.lgscreen();
+			article{
+				width: 35%;
+				margin-top: 80px;
+				h3{font-size: 46px;}
+				ul{
+					li{
+						margin:10px auto 45px;
+						.f16();
+						i{margin-top: 8px;}
+					}
+					li:last-child{margin-bottom:0px;}
+				}
+				.cor-btn{
+					width: 195px;
+					height: 40px;
+					margin-top: 65px;
+					a{line-height: 40px;.f16();}
+				}
+			}
+			.p-right{
+				img{
+					width: auto;
+					margin-left: -35px;
+				}
+			}
+		}
+	}
+	.cor-diploma{
+		.platform{
+			article{h3{.f30();}}
+		}
+	}
+}
+.cor-diploma{
+	margin-top: 0;
+	background: url(../images/bg3.jpg) no-repeat;
+	background-size: cover;
+	.cor-training_title{h2,p{color:#041123;}}
+	.platform{
+		.p-right{
+			display: block;
+			width: 50%;
+			img{margin-left: 0;}
+		}
+		article{
+
+			h3,li{color:#041123;}
+		}
+	}
+}
+@media(min-width:1200px){
+	.cor-diploma{
+		.platform{
+			.p-right{
+				width: 65%;
+			}
+		}
+	}
+}
+//企业合作
+.cor-cooperative{
+	.cf();
+	margin: 60px auto 30px;
+	padding:0 10px;
+	box-sizing: border-box;
+	h3{
+		.f18();
+		padding:0 0 30px 10px;
+	}
+	ul{
+		.cf();
+		li{
+			float: left;
+			box-sizing: border-box;
+			margin:10px;
+			img{width: 110px;}
+		}
+	}
+}
+@media(min-width:1200px){
+	.cor-cooperative{
+		.lgscreen();
+		margin: 80px auto;
+		ul{
+			li{
+			img{width: 215px;}
+			}
+		}
+	}
+}
+
+//footer
+footer{
+	.cf();
+	a:hover{color:#fbe4ad;}
+	ul{
+		.cf();
+		margin-bottom: 30px;
+		padding-bottom: 15px;
+		border-bottom:1px solid @c5;
+		li{
+			color:@cw;
+			float: left;
+			padding:0 20px;
+			border-right:1px solid @cw;
+			margin:10px 0;
+			&:first-child{border-right:none;}
+			&:last-child{border-right:none;}
+			a{color:@cw;}
+			
+		}
+	}
+	dt{
+		padding-top: 20px;
+		img{display: block;margin-bottom: 10px;}
+	}
+	dd{
+		.cf();
+		
+		p{
+			.cf();
+			display: none;
+			float: left;
+			margin-right: 30px;
+			a{
+				color:@cw;
+				display: block;
+			}
+		}
+	}
+	article{padding-top: 15px;}
+}
+@media(min-width:768px){
+	footer{
+		dd{p{display: block;}}
+	}
+}

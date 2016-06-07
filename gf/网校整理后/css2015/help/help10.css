@@ -1,0 +1,343 @@
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:05
+**************************************************/
+/**
+*  description: CFA内训注册页
+*  author: Dolores
+*  date: 2015-6-4 16:05
+**************************************************/
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #ffffff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/* 面包屑 */
+.crumb {
+  display: none;
+}
+@media (min-width: 768px) {
+  .crumb {
+    display: block;
+    *zoom: 1;
+    zoom: 1;
+    line-height: 50px;
+  }
+  .crumb:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .crumb p {
+    color: #999;
+  }
+  .crumb p a {
+    padding: 0 10px;
+  }
+  .crumb p span {
+    padding-left: 10px;
+  }
+}
+body {
+  background: #f8f8f8;
+}
+/* iconfont */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?1yhgzu');
+  src: url('fonts/icomoon.eot?#iefix1yhgzu') format('embedded-opentype'), url('fonts/icomoon.ttf?1yhgzu') format('truetype'), url('fonts/icomoon.woff?1yhgzu') format('woff'), url('fonts/icomoon.svg?1yhgzu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.breadcru {
+  font-size: 14px;
+  color: #999999;
+  padding: 20px;
+}
+.breadcru i {
+  font-family: '宋体';
+  font-size: 15px;
+  padding: 0 8px;
+}
+@media (min-width: 768px) {
+  .breadcru {
+    padding: 25px 0;
+  }
+}
+.helpcontent section dl {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0 10px 25px;
+}
+.helpcontent section dt {
+  font-size: 18px;
+  color: #333333;
+}
+.helpcontent section dt i {
+  font-size: 30px;
+  padding-right: 8px;
+  vertical-align: middle;
+}
+.helpcontent section dd {
+  display: none;
+  margin-left: 40px;
+  line-height: 36px;
+}
+.helpcontent section dd a {
+  display: block;
+  color: #666666;
+}
+.helpcontent section dd em {
+  display: none;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-width: 6px;
+  border-color: transparent transparent transparent #ffffff;
+  border-style: dashed dashed dashed solid;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.helpcontent section dl:hover {
+  background: #e6e6e6;
+}
+.helpcontent section dd:hover {
+  background: #33b0c4;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 16px;
+}
+.helpcontent section dd:hover em {
+  display: inline-block;
+}
+.helpcontent section dd:hover a {
+  color: #ffffff;
+}
+.helpcontent section .active {
+  background: #e6e6e6;
+}
+.helpcontent section .select {
+  background: #33b0c4;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 16px;
+}
+.helpcontent section .select a {
+  color: #ffffff;
+}
+.helpcontent section .select em {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .helpcontent section {
+    width: 220px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 35px;
+  }
+  .helpcontent section dl {
+    padding: 10px 0 10px 10px;
+  }
+  .helpcontent section dd {
+    display: block;
+  }
+}
+.helpcontent article {
+  overflow: hidden;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-bottom: 60px;
+}
+.helpcontent article h2 {
+  background: url(../../images2015/help/line.jpg) repeat no-repeat 100% 100%;
+  font-size: 30px;
+  color: #33b0c4;
+  line-height: 70px;
+  margin-bottom: 30px;
+}
+.helpcontent article dl dt {
+  margin: 60px 10px 40px;
+  font-size: 16px;
+  color: #333333;
+  border-left: 3px solid #53afbe;
+  padding: 0 6px;
+  height: 18px;
+  line-height: 18px;
+}
+.helpcontent article dl dd {
+  padding-left: 20px;
+  line-height: 30px;
+  color: #666666;
+}
+.helpcontent article dl dd img {
+  width: 100%;
+  padding: 30px 0;
+}
+@media (min-width: 768px) {
+  .helpcontent article {
+    min-height: 620px;
+    padding: 40px;
+    border: 1px solid #dddddd;
+  }
+  .helpcontent article h2 {
+    font-size: 36px;
+    line-height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .helpcontent article {
+    padding: 40px 60px;
+    margin-bottom: 100px;
+  }
+  .helpcontent article dl {
+    padding-bottom: 100px;
+  }
+  .helpcontent article dl dt {
+    font-size: 18px;
+  }
+  .helpcontent article dl dd img {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .helpcontent {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+.helpcontent article .contact {
+  line-height: 33px;
+}
+.helpcontent article .contact h1 {
+  font-size: 20px;
+  padding: 30px 0;
+}
+.helpcontent article .contact p span {
+  display: block;
+}
+.helpcontent article dl dt {
+  position: relative;
+  margin: 60px 0 20px;
+  height: auto;
+  border-left: 0;
+  padding: 0;
+}
+.helpcontent article dl dt img {
+  width: 100%;
+}
+.helpcontent article dl dt span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px;
+  color: #ffffff;
+  background: #33b0c4;
+  font-size: 14px;
+}
+.helpcontent article dl dd {
+  padding-left: 0;
+}
+.helpcontent article ul {
+  padding: 40px 0;
+  line-height: 30px;
+}
+@media (min-width: 992px) {
+  .helpcontent article dl dd {
+    padding-left: 20px;
+  }
+  .helpcontent article ul {
+    padding: 0 0 40px;
+    padding-left: 20px;
+  }
+}

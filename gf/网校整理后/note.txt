@@ -1,0 +1,255 @@
+
+网校=====>>>
+
+gfschool.html------------------------------------网校首页(新增友情链接)
+app.html -----------------------------------------app页
+wx.html ------------------------------------------- 微信页
+cfa.html--------------------------------------------cfa
+cfa1.html / cfa2.html / cfaAll.html----------------cfa列表页
+cfacontent.html------------------------------------cfa文章页
+cfalist1.html / cfalist2.html-------------------------文章列表页
+cfanx.html-------------------------------------------cfa内训登录页
+cfanxReault.html------------------------------------cfa内训提交成功
+cfaqa.html-------------------------------------------cfa问答
+choiceDir.html---------------------------------------选择兴趣方向
+login.html-------------------------------------------登录页
+register.html-----------------------------------------注册
+findpwd.html----------------------------------------找回密码
+revisesuccess.html-----------------------------------密码修改成功
+webmap.html----------------------------------------网站地图
+live.html---------------------------------------------直播页
+liveinfo.html-----------------------------------------直播详情页
+livelist.html-------------------------------------------直播列表页
+ord_pay.html-------------------------------------------支付页
+ord_personal.html--------------------------------------支付-个人中心
+ord_subOrders.html------------------------------------支付--购物车
+ord_toPay.html-----------------------------------------支付--支付流程
+help1.html / help2.html / help3.html / help4.html / help5.html / help6.html / help7.html / help8.html /  help9.html / help10.html /  help11.html /  --------------------------网校帮助页
+Coursedetail.html--------------------------------课程详情页
+//详情页内专题
+cd_cfa_fast150708.html---------------------------课程详情页之快速拿CFA
+cd_cfa_sistar150708.html-------------------------课程详情页之快速拿cpa
+cd_cfa_summerblue150708.html-----------------课程详情页之夏季蓝色专题
+cd_congye_cdcongye150710.html----------------课程详情页之会计从业资格
+cd_dx_autumn150707.html------------------------课程详情页之秋季密训
+cd_dx_summer1507006.html----------------------课程详情页之夏季密训
+cd_dx_winter150707.html--------------------------课程详情页之寒假班
+cd_dx_cicintro151110.html--------------------------课程详情页之班型介绍页
+cd_frm_fast150708.html----------------------------课程详情页之快速拿FRM
+cd_frm_noworries_fast150708.html----------------课程详情页之无忧快速拿FRM
+cd_frm_safe_fast150708.html----------------------课程详情页之稳妥快速拿FRM
+cd_cpa_accounting150911.html-------------------课程详情页之快速拿下CPA
+cd_frm_sprint151008.html-----------------------课程详情页之冲刺押题班
+cmaspecial.html--------------------------------------cma专题
+learningsystem1.html / learningsystem3.html / learningsystem4.html -----------------------学习系统
+//通关
+clearance_index.html----------------------------------------通关计划clearance_subcard.html------------------------------------------通关之科目关卡
+clearance_video.html----------------------------------------------通关之视频播放
+spread.html / spread2.html / spread3.html / spread4.html / spread5.html / spread6.html / spread7.html-----------CMA
+
+
+//样式
+CSS2015
+	common--------------------------公用
+		common.less / common.css ------------------------------公用样式
+		core.less + reset,less---------------------------------------基本样式
+		share.less---------------------------------------------------共享样式
+		footer.less--------------------------------------------------头尾样式
+		indexadd.less-----------------------------------------------登录注册
+		login_after.less---------------------------------------------登录之后
+		jMmenu.less------------------------------------------------移动端侧边栏
+		variable.less-------------------------------------------------变量
+		friend.less------------------------------------------------友情链接
+	course----------------------------课程
+		main.less / main.css----------------------------------------公用
+		courselist.less-----------------------------------------------课程列表
+		coursedetail.less--------------------------------------------课程详情
+		coursedetailmode.less--------------------------------------课程模块
+		cd_cpa_account15.less / cd_cpa_account15.csss -----------课程详情页之快速拿下CPA
+		cd_frm_fast150708.less / cd_frm_fast150708.css------------ 课程详情页之快速拿FRM
+		cdautumn15.less / cdautumn15.css-------------------------课程详情页之秋季密训
+		cdcongye15.less / cdcongye15.css---------------------------课程详情页之会计从业资格
+		cdFast15.less / cdFast15.css-----------------------------------课程详情页之快速拿CFA
+		cdsistar15.less / cdsistar15.css--------------------------------课程详情页之快速拿cpa
+		cdsummer15.less / cdsummer15.css--------------------------课程详情页之夏季密训
+		cdsummerblue15.less / cdsummerblue15.css----------------课程详情页之夏季蓝色专题
+		cdwinter15.less / cdwinter15.css ------------------------------课程详情页之寒假班
+		fonts------------------------------------------------------------字体
+
+	cfanx---------------------------------CFA内训
+		main.less / main.css--------------------------------------------cfa内训
+	
+	cfanxresult---------------------------CFA内训提交成功
+		submit.less / submit.css
+
+	cfalive--------------------------------
+	
+	choiseDir-----------------------------选择兴趣方向
+		style.css / iconfont
+	
+	gfschool------------------------------网校首页
+		school.less / school.css + login_reg.css
+
+	help-----------------------------------网校帮助页
+		helpcom.less / helpcom.css
+		help1.less / help1.css
+		help4.less / help4.css
+		help5.less / help5.css
+		help10.less / help10.css
+		help11.less / help11.css
+		
+	learnsystem----------------------------学习系统
+		main.less / main.css
+		learnsys.less / learnsys.css
+
+	live--------------------------------------直播
+		liveinfo----------------------直播详情
+			style.css
+		livelist------------------------直播列表
+			livelist.css
+		style.css
+		
+	payment---------------------------------支付
+		paymentcom / paymentcom.css-----支付公用
+		pay.less / pay.css----------------------支付页
+		nullshop----------------------------购物车为空
+			nullshop.less / nullshop.css
+			font
+		personal-----------------------------个人页
+			style.css
+		suborder-----------------------------订单
+			style.css
+			iconfont
+		toPay---------------------------------支付流程
+			style.css
+			font
+	
+	 form-------------------------------------表单
+		cfanx.less / cfanx.css-------------------------------CFA内训
+		findpwd.less / findpwd.css-------------------------找回密码
+		login.less / login.css--------------------------------登录
+
+	 project------------------------------------专题
+		main.less / main.css
+		project.less / project.css
+		projectlist.less / projectlist.css
+		projectspecial.less / projectspecial.css
+		prospread.less / prospread.css
+		
+                  webmap-----------------------------------网站地图
+		webmap.less / webmap.css
+	  wxapp-------------------------------------微信+APP
+		wechat.less / wechat.css
+		app.less / app.css
+
+	  tongguan----------------------------------通关
+		tongguan.css-----------------------------通关
+		subcard.css--------------------------------关卡	
+  	  video---------------------------------------通关之通关视频
+		video.css
+		reset.css
+		font / iconfont
+
+	  font-----------------------------------------icon字体
+	  css-------------------------------------------老样式
+	
+
+//JS
+script2015
+	  
+	findpwd----------------------------------------找回密码
+		findpwd.js
+	floatNav----------------------------------------侧边栏
+		floatNav.js
+	gfschool-----------------------------------------网校首页
+		school.js	
+		loginReg.js	
+		timer.js--------------------------------定时器
+	help----------------------------------------------帮助
+		help.js
+	jslearnsys-----------------------------------------学习系统
+		charts.js---------------------------柱形图插件引用
+		FusionCharts.js-------------------图表插件
+		diacrisis.js-------------------------表单验证
+	live------------------------------------------------直播
+		liveinfo-----------------------------直播信息
+			liveinfo.js
+		livelist-------------------------------直播列表
+			livelist.js
+		page.js-------------------------------直播流程
+	loginreg----------------------------------------注册登录
+		script.js
+		loginReg.js
+		passwordCheck.js
+
+	payment----------------------------------------支付
+		ord_pay----------------------------支付
+			ord_pay.js
+		 ord_toPay--------------------------支付--支付流程
+			ord_toPay.js
+		 personal---------------------------支付-个人中心
+			script.js
+			data.js
+		 subOrder---------------------------支付--购物车
+			data.js
+			script.js
+		  paycom.js--------------------------支付公用
+	  subsucc-----------------------------------------提交成功
+		  submit.js
+	  tonguan---------------------------------------通关
+		  subcard.js-----------------------------关卡
+		  raphael-min.js------------------------进度条插件
+		  jq_q.js
+	 video-------------------------------------------通关视频
+		  video.js
+	 wxapp-----------------------------------------微信+APP
+		wechat.js-------------------------------微信
+	
+	 carouselnew.js---------------------------------轮播图插件
+	 clickD.js-----------------------------------------一些页面的点击效果
+	  LoginReg.js---------------------------------------表单验证
+	  RegLogin.js---------------------------------------表单验证
+	  script.js
+	  html5shiv.js---------------------------------------IE9以下支持html5
+	  respond.min.js------------------------------------IE8支持媒体查询
+	  jquery.mCustomScrollbar.concat.min.js
+	  jquery.mmenu.min.all.js---------------------------移动侧边栏插件
+	  modal.js---------------------------------------------模态框 
+	  jquery.min.js---------------------------------------jquery插件
+	  jquery-1.9.1.min.js
+	  jquery-1.10.2.min.js
+	  jquery-2.0.3.min.js
+	  jquery.validate.js
+	  jquery.yomi.js
+	  koala.min.1.5.js
+	  Regyz.js
+	  terminator2.2.min.js
+	  validate.js
+	  validate_expand.js
+	  yz.js
+
+images2015
+pic2015
+
+
+special--------------------------------------------------------专题
+	201508_cmaWeekend--------------------------CMA周末班
+	201509_frmautum------------------------------FRM中秋国庆双节
+	
+
+
+
+
+考研------jjx
+	专题：
+	v2_151022_sprint---------------------考研冲刺
+                1511_GoldenEagle--------------------金鹰奖
+                1512_jjx-winter-寒假密训----------------寒假密训
+
+
+
+
+
+
+
+

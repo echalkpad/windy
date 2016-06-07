@@ -1,0 +1,360 @@
+/* LESS Document */
+.cicmode {
+  width: 100%;
+}
+.cicmode:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .bordereee {
+  border: solid 1px #eee;
+  padding: 15px;
+  position: relative;
+}
+.cicmode .bordereee:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicharacteristic,
+.cicmode .cicprofit,
+.cicmode .ciccrowd {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.cicmode .cicharacteristic:after,
+.cicmode .cicprofit:after,
+.cicmode .ciccrowd:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicharacteristic h2,
+.cicmode .cicprofit h2,
+.cicmode .ciccrowd h2 {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  background-color: #fff;
+}
+.cicmode .cicharacteristic h2 i,
+.cicmode .cicprofit h2 i,
+.cicmode .ciccrowd h2 i {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: solid 1px #eee;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.cicmode .cicharacteristic h2 strong,
+.cicmode .cicprofit h2 strong,
+.cicmode .ciccrowd h2 strong {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  color: #30aec5;
+  line-height: 30px;
+  font-size: 18px;
+}
+.cicmode .cicharacteristic,
+.cicmode .cicprofit,
+.cicmode .ciccrowd {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.cicmode .cicharacteristic img,
+.cicmode .cicprofit img,
+.cicmode .ciccrowd img {
+  width: 64px;
+  height: 64px;
+  margin: 10px 0;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+.cicmode .cicharacteristic p,
+.cicmode .cicprofit p,
+.cicmode .ciccrowd p {
+  text-align: left;
+  color: #666;
+  line-height: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.cicmode .cicharacteristic img {
+  background-color: #51dcca;
+}
+.cicmode .cicprofit img {
+  background-color: #7db9f4;
+}
+.cicmode .ciccrowd img {
+  background-color: #51c1dc;
+}
+.cicmode .cicmode1 .cicmode1_01 {
+  padding: 15px;
+}
+.cicmode .cicmode1 .cicmode1_01:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicmode1 .cicmode1_01 li {
+  width: 25%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  float: left;
+}
+.cicmode .cicmode1 .cicmode1_01 li p {
+  border: solid 1px #76cbc2;
+  display: block;
+  padding: 5px 10px;
+  color: #666;
+}
+.cicmode .cicmode1 .cicmode1_02 {
+  background-image: url(../images2015/cicmode1_02.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 310px;
+}
+.cicmode .cicmode1 .cicmode1_02 li {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 22px;
+  color: #fff;
+}
+.cicmode .cicmode1 .cicmode1_02 li:last-child {
+  margin-bottom: 0;
+}
+.cicmode .cicmode1 .cicmode1_02 li:first-child {
+  padding-top: 20px;
+  font-size: 16px;
+}
+.cicmode .cicmode1 .cicmode1_03 {
+  padding: 10px 0;
+}
+.cicmode .cicmode1 .cicmode1_03 li {
+  width: 33.33%;
+  float: left;
+  padding: 10px 5px 10px 14px;
+  box-sizing: border-box;
+  position: relative;
+}
+.cicmode .cicmode1 .cicmode1_03 li:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.cicmode .cicmode1 .cicmode1_03 li i {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 15px;
+  height: 24px;
+  background-image: url(../images2015/cicmode1_03.png);
+  background-repeat: no-repeat;
+}
+.cicmode .cicmode1 .cicmode1_03 li p {
+  border: solid 1px #76cbc2;
+  color: #666;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.cicmode .cicmode1 h3 {
+  text-align: center;
+  line-height: 50px;
+  padding-bottom: 50px;
+  font-size: 18px;
+  color: #666;
+}
+.cicmode .cicmode2 {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 0;
+}
+.cicmode .cicmode2 ul {
+  width: 100%;
+  border: solid 1px #76cbc2;
+}
+.cicmode .cicmode2 ul li {
+  border-bottom: solid 1px #76cbc2;
+  height: 60px;
+}
+.cicmode .cicmode2 ul li:first-child {
+  height: 95px;
+}
+.cicmode .cicmode2 ul li:last-child {
+  border-bottom: none;
+}
+.cicmode .cicmode2 .dl01,
+.cicmode .cicmode2 .dl02 {
+  position: absolute;
+  top: 10px;
+  width: 130px;
+}
+.cicmode .cicmode2 .dl01 dt,
+.cicmode .cicmode2 .dl02 dt {
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 38px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 0 10px;
+}
+.cicmode .cicmode2 .dl01 dd,
+.cicmode .cicmode2 .dl02 dd {
+  margin-bottom: 12px;
+  font-size: 12px;
+  background-color: #fff;
+  color: #666;
+  line-height: 48px;
+}
+.cicmode .cicmode2 .dl01 dd span,
+.cicmode .cicmode2 .dl02 dd span {
+  height: 48px;
+  display: block;
+  text-align: center;
+  border-radius: 22px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+}
+.cicmode .cicmode2 .dl01 {
+  right: 50%;
+}
+.cicmode .cicmode2 .dl01 dt {
+  border-right: solid 2px #fff;
+  background-color: #76cbc2;
+  border-radius: 30px 0 0 30px;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+}
+.cicmode .cicmode2 .dl01 dd span {
+  border: solid 1px #76cbc2;
+}
+.cicmode .cicmode2 .dl02 {
+  left: 50%;
+}
+.cicmode .cicmode2 .dl02 dt {
+  border-left: solid 2px #fff;
+  background-color: #30aec5;
+  border-radius: 0 30px 30px 0;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+}
+.cicmode .cicmode2 .dl02 dd span {
+  border: solid 1px #30aec5;
+}
+@media (min-width: 640px) {
+  .cicmode .cicmode2 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cicmode .cicmode2 .dl01,
+  .cicmode .cicmode2 .dl02 {
+    width: 260px;
+  }
+  .cicmode .cicmode2 .dl01 dt,
+  .cicmode .cicmode2 .dl02 dt {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+  }
+  .cicmode .cicmode2 .dl01 dd,
+  .cicmode .cicmode2 .dl02 dd {
+    width: 220px;
+    font-size: 16px;
+  }
+  .cicmode .cicmode2 .dl01 dd {
+    float: right;
+  }
+  .cicmode .cicmode2 .dl01 span {
+    margin-right: 20px;
+  }
+  .cicmode .cicmode2 .dl02 span {
+    margin-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .cicmode .threebox:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .cicmode .bordereee {
+    height: 240px;
+  }
+  .cicmode .cicharacteristic,
+  .cicmode .cicprofit,
+  .cicmode .ciccrowd {
+    width: 33.33%;
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  .cicmode .cicmode1 {
+    display: block;
+  }
+  .cicmode .cicmode1:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+  .cicmode .cicmode1 .cicmode1_01 {
+    width: 170px;
+    float: left;
+  }
+  .cicmode .cicmode1 .cicmode1_01 li {
+    width: 100%;
+    padding: 12px 0 38px 0;
+  }
+  .cicmode .cicmode1 .cicmode1_02 {
+    width: 450px;
+    float: left;
+    background-image: url(../images2015/cicmode1_02l.png);
+  }
+  .cicmode .cicmode1 .cicmode1_02 li {
+    padding-left: 13px;
+  }
+  .cicmode .cicmode1 .cicmode1_03 {
+    width: 180px;
+    float: left;
+  }
+  .cicmode .cicmode1 .cicmode1_03 li {
+    width: 100%;
+    display: block;
+    margin-bottom: 26px;
+  }
+  .cicmode .cicmode1 .cicmode1_03 li:first-child {
+    margin-bottom: 80px;
+  }
+  .cicmode .cicmode1 h3 {
+    float: left;
+    width: 100%;
+    display: block;
+    font-size: 24px;
+  }
+  .cicmode .cicmode1 h3:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+}

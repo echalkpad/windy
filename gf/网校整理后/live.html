@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images2015/gfiphone.png">
+<link rel="shortcut icon" href="images2015/gfico.ico">
+<title>直播</title>
+<link rel="stylesheet" type="text/css" href="css2015/common/common.css">
+<link rel="stylesheet" type="text/css" href="css2015/live/style.css">
+<!--[if lt IE 9]><link href="css/main.lte8.css" rel="stylesheet" type="text/css"><![endif]-->
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="script2015/html5shiv.js"></script>
+    <script type="text/javascript" src="script2015/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="script2015/jquery.min.js"></script>
+<script type="text/javascript" src="script2015/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="script2015/loginreg/script.js"></script>
+<script type="text/javascript" src="script2015/loginreg/loginReg.js"></script>
+<script type="text/javascript" src="script2015/loginreg/passwordCheck.js"></script>
+<script type="text/javascript" src="script2015/live/page.js"></script>
+<script type="text/javascript">
+		$(function() {
+			$('nav#menu').mmenu();
+		});
+</script>
+</head>
+<body>
+<!--phonenav start-->
+<div class="mbbody">
+<div class="mbttl"><i><a href="javascript:;"></a></i><h2>直播</h2></div>
+</div>
+<!--phonenav end-->
+
+<!--手机title start-->
+<div class="mbtitle">
+    <div class="mbnav">
+        <a href="#menu" class="glyphicon glyphicon-th-large"><img src="http://www.gfedu.cn/images2015/phoneNav.png"  alt=""/></a>
+        <input type="hidden" id="divdiscon" name="divdiscon" value="0">
+    </div>
+</div>
+<nav id="menu" class="mbnavadd">
+    <h2><a href=""><i><img src="http://www.gfedu.cn/images2015/mbnavreg.png"  alt=""/></i>登录</a></h2>
+    <ul>
+        <li class="Selected"><a href="classify.html">课程</a></li>
+        <li><a href="intro.html">题库</a></li>
+        <li><a href="list_1.html">直播</a></li>
+        <li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+        <li><a href="bookstore.html">商城</a></li>
+        <li><a href="app.html">应用</a></li>
+    </ul>
+</nav>
+<!--手机title end-->
+
+
+<!--webnav start-->
+<div class="webbody">
+    <div class="gtopttl">
+    <nav>
+    <h2><img src="http://www.gfedu.cn/images2015/logo.png"  alt=""/></h2>
+    <span><a href="javascript:void(0);" onClick="login();">登录</a><a href="javascript:void(0);" onClick="reg();">注册</a></span>
+    <ul>
+        <li><a href="classify.html">课程</a></li>
+        <li><a href="intro.html">题库</a></li>
+        <li><a href="list_1.html">直播</a></li>
+        <li><a href="http://www.gfedu.cn/cfa/">资讯</a></li>
+        <li><a href="bookstore.html">商城</a></li>
+        <li><a href="app.html">应用</a></li>
+    <!--#<!-- #include file = "menu.html" -->
+    <!--menu end-->
+    </ul>
+    </nav>
+    </div>
+    <!-- <div style="position:fixed; width:100px;height:100px; background:red;"></div> -->
+</div>
+<!--webnav end-->
+<div id="banner">
+	<!-- <img src="img/banner.jpg" /> -->
+	<div class="banner_text">
+		<h3>金程名师一波一波</h3>
+		<p>2015年CFA在线公开课，知识点定制、节点学习，名师点拨一次通过考试</p>
+		<a>
+			<span class="arrow_wrap">
+				<span class="arrow_right"></span>
+			</span>
+			点击进入
+		</a>
+	</div>
+</div>
+<div id="newPlay">
+	<h4 class="title">
+		<span>最新直播</span>
+	</h4>
+	<ul class="newPlay_list cf">
+		<li class="mbshow">
+			<span class="active">
+				<img src="pic2015/live/list.jpg" alt="CFA一级考前串讲100题（上）" />
+				<i><em></em></i>
+			</span>
+			<p class="people_num">156人正在上课</p>
+			<p class="lesson" title="CPA会计股权投资专题十讲之十 长投经典题解">CPA会计股权投资专题十讲之十 长投经典题解</p>
+			<a class="nowin" href="">马上进入</a>
+		</li>
+		<li class="mbshow">
+			<span>
+				<img src="pic2015/live/list.jpg" alt="CFA一级考前串讲100题（上）" />
+				<i><em></em></i>
+			</span>
+			<p class="people_num people_num_down1"><i class="d">03</i>天&nbsp;&nbsp;<i class="h">23</i>时&nbsp;&nbsp;<i class="m">30</i>分&nbsp;&nbsp;<i class="s">32</i>秒</p>
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<a class="nowin" href="">立即预约</a>
+		</li>
+		<li>
+			<span>
+				<img src="pic2015/live/list.jpg" alt="CFA一级考前串讲100题（上）" />
+				<i><em></em></i>
+			</span>
+			<p class="people_num people_num_down2"><i class="d">03</i>天&nbsp;&nbsp;<i class="h">23</i>时&nbsp;&nbsp;<i class="m">30</i>分&nbsp;&nbsp;<i class="s">32</i>秒</p>
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<a class="nowin" href="">立即预约</a>
+		</li>
+		<li>
+			<span class="active">
+				<img src="pic2015/live/list.jpg" alt="CFA一级考前串讲100题（上）" />
+				<i><em></em></i>
+			</span>
+			<p class="people_num">156人正在上课</p>
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<a class="nowin" href="">马上进入</a>
+		</li>
+	</ul>
+	<input id="HidLiveSecond" type="hidden" value="['2016/3/17 19:00:00','2016/4/14 17:11:00','2016/4/28 19:00:00','2015/5/9 8:40:00']" />
+</div>
+<div id="hisPlay">
+	<h4 class="title">
+		<span>精彩回顾</span>
+	</h4>
+	<ul class="hisPlay_list cf">
+		<li class="mbshow">
+			<p class="lesson" title="CPA会计股权投资专题十讲之十 长投经典题解">CPA会计股权投资专题十讲之十 长投经典题解</p>
+			<p class="lessonInfo">能提前解析CFA考试中最可能出现的考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试</p>
+			<a class="nowlook">立即查看</a>
+		</li>
+		<li class="mbshow">
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<p class="lessonInfo">能提前解析CFA考试中最可能出现的考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试能提前解析考试中最可能出现考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试</p>
+			<a class="nowlook">立即查看</a>
+		</li>
+		<li>
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<p class="lessonInfo">能提前解析CFA考试中最可能出现的考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试</p>
+			<a class="nowlook">立即查看</a>
+		</li>
+		<li>
+			<p class="lesson">CFA一级考前串讲100题（上）</p>
+			<p class="lessonInfo">能提前解析CFA考试中最可能出现的考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试能提前解析考试最可能出现的考点或考题，提前掌握CFA考试中最可能出现的难点，以此顺利应对考试</p>
+			<a class="nowlook">立即查看</a>
+		</li>
+	</ul>
+</div>
+<div class="otherWrapper">
+	<div id="finance" class="other">
+		<dl class="title cf">
+			<dt>金融类</dt>
+			<dd class="active">CFA<span class="uline"></span></dd>
+			<dd>FRM<span class="uline"></span></dd>
+			<dd>CFRM<span class="uline"></span></dd>
+			<dd class="bn">RFP<span class="uline"></span></dd>
+		</dl>
+		<div class="finance_list_wrap active">
+			<ul class="finance_list cf">
+				<li class="mbshow">
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4 title="CPA会计股权投资专题十讲之十 长投经典题解"><a href="#">CPA会计股权投资专题十讲之十 长投经典题解</a></h4>
+					<p class="info">提前解析CFA考考试中最可能出现的考点或考题提前解析考试中最可能出现的考点或考题提前解析试中最可能出现的考点或考题提前解析考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+				<li class="mbshow">
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">FRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">FRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">FRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">FRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+				<li class="mbshow">
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFRM一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+				<li class="mbshow">
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">RFP一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">RFP一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">RFP一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div class="otherWrapper">
+	<div id="accounting" class="other">
+		<dl class="title cf">
+			<dt>会计类</dt>
+			<dd class="active">CPA<span class="uline"></span></dd>
+			<dd class="bn">CMA<span class="uline"></span></dd>
+		</dl>
+		<div class="finance_list_wrap active">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4 title="CPA一级考前串讲100题（上）"><a href="#">CPA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CPA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CPA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CPA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CMA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CMA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CMA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">CMA一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="otherWrapper">
+	<div id="ractitioners" class="other">
+		<dl class="title cf">
+			<dt>从业类</dt>
+			<dd class="active">证劵从业<span class="uline"></span></dd>
+			<dd>银行从业<span class="uline"></span></dd>
+			<dd>期货从业<span class="uline"></span></dd>
+			<dd class="bn">会计从业<span class="uline"></span></dd>
+		</dl>
+		<div class="finance_list_wrap active">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4 title="证劵从业一级考前串讲100题"><a href="#">证劵从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">证劵从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">证劵从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">证劵从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">银行从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">银行从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">银行从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">银行从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">期货从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">期货从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">期货从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">期货从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		<div class="finance_list_wrap">
+			<ul class="finance_list cf">
+			<li class="mbshow">
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">会计从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">会计从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">会计从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			<li>
+				<div class="img_wrap">
+					<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+					<span class="mask"></span>
+					<b class="mask_text">6月1日16:00开课</b>
+				</div>
+				<h4><a href="#">会计从业一级考前串讲100题（上）</a></h4>
+				<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+				<div class="cf">
+					<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+					<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+				</div>
+			</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div class="otherWrapper">
+	<div id="KY" class="other">
+		<dl class="title cf">
+			<dt>金程考研</dt>
+		</dl>
+		<div class="finance_list_wrap active">
+			<ul class="finance_list cf">
+				<li class="mbshow">
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4 title="CPA会计股权投资专题十讲之十 长投经典题解"><a href="#">CPA会计股权投资专题十讲之十 长投经典题解</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<a href="#" class="imgs"><img src="pic2015/live/list.jpg" /></a>
+						<span class="mask"></span>
+						<b class="mask_text">6月1日16:00开课</b>
+					</div>
+					<h4><a href="#">CFA一级考前串讲100题（上）</a></h4>
+					<p class="info">提前解析CFA考试中最可能出现的考点或考题提前解析CFA考试中最可能出现的考点或考题</p>
+					<div class="cf">
+						<p class="teacher">讲师：<span class="color4aacd1">纪慧诚</span></p>
+						<p class="subscribe">已预约<span class="color4aacd1">163</span>人</p>
+					</div>
+				</li>
+			</ul>
+			<div class="more_wrapper cf">
+				<a href="" class="more">更多<span class="more_inner">CFA课程</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mbbody">
+<!--手机底部 start-->
+<div class="mbfooter">
+<ul>
+<li><a href="">登录</a></li>
+<li><a href="">注册</a></li>
+<li><a href="">下载APP</a></li>
+<li><a href="">用户反馈</a></li>
+</ul>
+<dl>
+<dt>400-700-9596 </dt>
+<dd>（每日9:00-21:00免长途费 ）</dd>
+</dl>
+<p>©2014金程网校保留所有权利 </p>
+</div>
+<div class="gotop"><a href="#"><strong>&and;</strong>TOP</a></div>
+<!--手机底部 end-->
+</div>
+
+
+<div class="webbody">
+<!--底部-->
+<footer>
+  <div class="newlinks">
+    <dl>
+    <dt>新手指南</dt>
+    <dd><a href="#">如何注册会员</a></dd>
+    <dd><a href="#">如何购买课程</a></dd>
+    <dd><a href="#">如何观看课程</a></dd>
+    </dl>
+    <dl>
+    <dt>学习须知</dt>
+    <dd><a href="#">网校学习方式</a></dd>
+    <dd><a href="#">学习效果如何保障</a></dd>
+    <dd><a href="#">学习条件</a></dd>
+    </dl>
+    <dl>
+    <dt>支付方式</dt>
+    <dd><a href="#">网上支付</a></dd>
+    <dd><a href="#">开通支付宝</a></dd>
+    </dl>
+    <dl>
+    <dt>关于金程</dt>
+    <dd><a href="#">关于我们</a></dd>
+    <dd><a href="#">联系我们</a></dd>
+    <dd><a href="#">加入我们</a></dd>
+    </dl>
+    <dl>
+    <dt>400 - 700 - 9596</dt>
+    <dd>（每日9:00-21:00    免长途费）</dd>
+    <dd><img src="http://www.gfedu.cn/2015/images2015/bottomWX.png"></dd>
+    </dl>
+</div>
+<div class="copyright" style="background:none; border:none;">
+<span>© 2014 </span>金程网校保留所有权利. 本站所有内容归上海金程国际金融专修学院旗下金程网校版权所有, 翻版必究
+    </div>
+</footer>
+<!--底部--> 
+</div>
+<!-- login start -->
+<!--登录-->
+
+<div class="body_main body_login" id="loginDialog">
+  <div class="box_main">
+    <div id="login" class="login">
+      <form action="/web/Check/CheckCurent.asp" method="post" name="LoginForm" id="LoginForm">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closelogin();">X</a>
+              <p class="phoneReg">登录金程网校</p>
+            </div>
+            <div class="login_msg_wrap">
+            	<p class="login_msg">
+            		<i class="iconfont">&#xf0002;</i>用户名或密码不匹配，请重新输入
+            	</p>
+            </div>            
+            <div class="field-all">
+              <div class="field-group"><input type="hidden" name="S_Login" value="5"> <span class="control-group" id="mobile_input">
+                <div class="input_add_long_background">
+                	<input type="text" name="Field_UserName" id="Field_UserName" maxlength="20" placeholder="手机号\用户名" onBlur="__changeRealNameL('Field_UserName');">
+                    <p class="noticeLR" id="noticeLR_Field_UserName"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="field-group"> <span class="control-group" id="password_input">
+                <div class="input_add_long_background">
+                	<input type="password" id="Field_PassWord" name="Field_PassWordPC"  placeholder="密码" onBlur="checkPwdL('Field_PassWord');">
+            		<p class="noticeLR" id="noticeLR_Field_PassWord"></p>
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              
+              <div class="mianDL">
+              	  <p><input type="checkbox" checked="checked">两周内免登录</p>
+                  <a href="/GetPass.shtml">忘记密码？</a>
+              </div>
+              
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="loginB" type="button" value="登录" class="button_button disabled">
+                </div>
+              </div>
+              <div class="hzzh">
+              	<div class="zjdl">
+                	<span>直接登录：</span>
+               		<a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+              	<p><a id="nowReg" href="javascript:;" onclick="LtR();">注册</a>金程账号</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register start -->
+<!--注册-->
+
+<div class="body_main" id="regDialog">
+  <div class="box_main">
+    <div id="register" class="register">
+      <form id="form_reg" name="form_reg" action="http://user.gfedu.net/UserReg.aspx" method="post" onSubmit="return checkReg()">
+        <div id="form_submit" class="form_submit">
+          <div class="fieldset">
+            <div class=""> <a href="javascript:;" class="newclosereg" onClick="closereg();">X</a>
+              <p class="phoneReg">注册金程网校</p>
+            </div>
+            <div class="field-all">
+              <div class="field-group"> <span class="control-group" id="realname_input">
+                <div class="input_add_long_background">
+                  <input id="realnameM" maxlength="20" name="realname" tabindex="4" placeholder="填写真实姓名" onBlur="__changeRealName('realnameM');" type="text">
+                  <p class="noticeLR" id="noticeLR_realnameM"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group handphone"> <span class="control-group" id="tel_input">
+                <div class="input_add_long_background">
+                   <input name="tel" id="tel" maxlength="11" placeholder="请填写手机号码" onBlur="__changeUserName('tel');" type="text">
+                   <p class="noticeLR" id="noticeLR_tel"></p>
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="code_input">
+                <div class="input_add_background">
+                  
+                   <input autocomplete="off" placeholder="输入收到的验证码" name="verifyCode" id="verifyCodeP" onFocus="document.getElementById('noticeLR_verifyCodeP').innerHTML = '';" type="text"><input id="btnP" value="获取短信验证码" type="button">
+                <p class="noticeLR" id="noticeLR_verifyCodeP"></p>
+                
+                </div>
+                </span>
+              </div>
+              <div class="field-group"> <span class="control-group" id="password1_input">
+                <div class="input_add_long_background">
+                 <input name="passwd" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" onBlur="checkPwd1('passwd');" type="password">
+                 <p class="noticeLR" id="noticeLR_passwd"></p>
+                
+                </div>
+                </span>
+                <label class="tips"></label>
+              </div>
+              <div class="xieyi">
+                <input type="checkbox">
+                同意金程的《用户协议》 </div>
+              <div id="div_submit" class="div_submit">
+                <div class="div_submit_button">
+                  <input id="reg_But" type="submit" value="注册" class="button_button disabled"><input type="hidden" name="furl" id="furl" value=""><input type="hidden" name="stationid" id="stationid" value="5"><input type="hidden" name="username" id="Hidden1" value="username"><input type="hidden" name="email" id="email" value="nomail">
+                </div>
+              </div>
+             <div class="hzzh">
+              	<div class="zjdl">
+                	<span>直接登录：</span>
+               		<a href="" class="qq"></a>
+                    <a href="" class="weibo"></a>
+                </div>
+              	<p>已有账号<a id="nowLogin" href="javascript:;" onclick="RtL();">登录</a></p>
+              </div>             
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- register end -->
+</body>
+</html>

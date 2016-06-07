@@ -1,0 +1,303 @@
+/*
+ * == 专题之备考规划
+ *************************************************/
+
+@import 'kscom.less';
+
+.content{
+    article{
+        background: @cw;
+        padding: 30px 20px;
+        .f12();
+        line-height: 26px;
+        
+        h6{width: 80%; margin: 20px 10%;}
+    }
+}
+
+@media(min-width:1200px){
+ .content{
+    article{
+      h6{width: 66%; margin: 20px 17%;}
+    }
+  }   
+}
+
+.planfx{display: none;}
+@media(min-width:768px){
+    .planfx{
+        display: block;
+        margin: 70px auto; 
+        h2{
+          padding: 3px 20px;
+          color: @cw;
+          background: @cksblue;
+          .f16();
+          width: 140px;
+          padding: 3px 40px;
+          margin: 20px;
+        }
+        section{
+            .cf();
+            width: 768px;
+            background: url(../../images/ks/plantu.png) no-repeat;
+            height: 60px;
+            position: relative;
+            margin: 160px auto;
+            ul{
+               position: absolute;
+               clear: both;
+              li{
+                  border: 1px solid @c6;
+                  text-align: center;
+                  width: 147px;
+                  height: 75px;
+                  float: left;
+                  padding: 16px 8px;
+                  box-sizing: border-box;
+                  margin: 0 122px 0 10px;
+                  
+                  &:last-child{margin: 0 0 0 12px;}
+                  
+                  &:hover{
+                      background: #7aa878;
+                      color: @cw;
+                      border: 0;
+                  }
+              }
+              top:58px;
+              left: 140px;
+              &:first-child{top: -75px; left: 0; li{&:first-child{padding: 5px 8px;}}}
+            }
+        }
+    }
+}
+@media(min-width:1200px){
+  .planfx{
+      width: 1200px;
+      margin: 80px auto;
+     h2{
+         margin: 20px 90px;
+     }
+  }  
+}
+
+@media(min-width:768px){
+    .content{
+        article{
+            background: #f0f0f0;
+            .f16();
+            padding: 50px 0;
+            text-align: center;
+            span{display: block;}
+            h3{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+.planget{
+    h2{
+        padding: 3px 20px;
+        color: @cw;
+        background: @cksblue;
+        .f16();
+        width: 140px;
+        margin: 0 auto 30px;
+    }
+    //mb
+    .mbplan{
+        .cf();
+        width: 300px;
+        margin: 0 auto 50px;
+        dl{
+          color: @cw;
+          position: relative;
+          width: 100px;
+          height: 120px;
+          background: #efa361;
+          float: left;
+          margin: 8%;
+          text-align: center;
+          
+          dt{
+              padding-top: 10px;
+              padding-bottom: 10px;
+              .f16();
+            }
+            dd{
+                i{
+                    position: absolute;
+                    right: -30px;
+                    top: 50%;
+                    margin-top: -15px;
+                    .triangle(right,@w:15px,@c:#efa361);
+                }
+            }
+          &:first-child{background: #7aa878;  dt{padding-top: 35px;} dd{i{.triangle(right,@w:15px,@c:#7aa878);}} }
+        
+          &:hover{
+          //  background: @cksblue;
+          //  dd{i{.triangle(right,@w:15px,@c:@cksblue);}}
+          }
+        }
+        
+    }
+    .pcplan{display: none;}
+}
+
+@media(min-width:640px){
+  .planget{
+      .mbplan{
+          width: 600px;
+          dl{margin: 4%;}
+      }
+  } 
+}
+
+@media(min-width:768px){
+  .planget{
+      h2{margin: 20px; padding: 3px 40px;}
+      .mbplan{
+         display: none;
+      }
+      
+      .pcplan{
+          display: block;
+          width: 768px;
+          margin: 0 auto 60px;
+          section{
+              .cf();
+              display: block;
+              padding-left: 70px;
+              border-top: 4px solid #456694;
+              dl{  
+                  width: 120px;
+                  height: 140px;
+                  margin: 40px 25px;
+                  color: @cw;
+                  text-align: center;
+                  background:#efa361;
+                  float:left;
+                  position: relative;
+                  dt{padding-bottom: 10px; .f16(); padding-top: 20px; }
+                  dd{
+                      .f14(); 
+                       em{
+                           position: absolute;
+                           left: 50%;
+                           margin-left: -15px;
+                           top: -28px;
+                           .triangle(top,@w:15px,@c:#efa361);
+                       }
+                       
+                       i{   color: @cw;
+                            width: 25px;
+                            height: 25px;
+                            line-height: 25px;
+                            display: inline-block;
+                            .bdrhalf();
+                            background: #6598cb;
+                            position: absolute;
+                            left: 50%;
+                            font-size: 22px;
+                            margin-left: -12px;
+                            top: -70px;
+                       }
+                   }
+                   
+                   &:first-child{background: #e87877; 
+                      dd{em{
+                          .triangle(top,@w:15px,@c:#e87877);
+                      }}
+                   }
+                   
+                   &:nth-child(3){
+                      background: #356d9b; 
+                      dd{em{
+                          .triangle(top,@w:15px,@c:#356d9b);
+                      }} 
+                   }
+                   &:nth-child(4){
+                      background: #495f6c; 
+                      dd{em{
+                          .triangle(top,@w:15px,@c:#495f6c);
+                      }} 
+                   }
+              }
+              dl:hover{
+                   background:#7aa878;
+                   dd{em{border-color: transparent transparent #7aa878 transparent;}}
+              } 
+               
+              &:first-child{
+                  border-top: 0; margin-left: -70px; 
+                  dl{
+                      dt{}
+                      
+                      dd{
+                          em{
+                           top: auto;
+                           bottom: -28px;
+                           .triangle(bottom,@w:15px,@c:#efa361);
+                         }
+                         i{
+                            background: #ed8843;
+                            top: auto;
+                            bottom: -70px;
+                          }
+                      }
+                      
+                      &:first-child{background: #7aa878;
+                        dt{padding-top: 35px;}
+                        dd{em{
+                           .triangle(bottom,@w:15px,@c:#7aa878);
+                        }}
+                      }
+                      
+                      &:nth-child(2){
+                        background: #90546e;
+                        dt{padding-top: 10px;}
+                        dd{em{
+                           .triangle(bottom,@w:15px,@c:#90546e);
+                        }}
+                      }
+                      
+                      &:nth-child(3){
+                        background: #475e7e;
+                        dt{padding-top: 30px;}
+                        dd{em{
+                           .triangle(bottom,@w:15px,@c:#475e7e);
+                        }}
+                      }
+                      
+                      &:nth-child(4){
+                        background: #456693;
+                        dt{padding-top: 10px;}
+                        dd{em{
+                           .triangle(bottom,@w:15px,@c:#456693);
+                        }}
+                      }
+                      
+                  }
+                  
+                  dl:hover{
+                   background:#e87877;
+                   dd{em{border-color: #e87877 transparent transparent transparent;}}
+                  } 
+              }
+          }
+      }
+  }     
+}
+@media(min-width:1200px){
+  .planget{
+      width: 1200px;
+      margin: 0 auto;
+      h2{margin: 20px 90px;}
+  }  
+}
+
+
+

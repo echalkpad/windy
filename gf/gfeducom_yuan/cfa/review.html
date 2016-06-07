@@ -1,0 +1,388 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>CFA备考</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/gfiphone.png">
+<link rel="shortcut icon" href="images/gfico.ico">
+<link href="css/cfaexam/cfacommon.css" rel="stylesheet" type="text/css" />
+<link href="css/cfaexam/review.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="../script/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+<!-- 调用的jQuery　v1.7.2JS -->
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<!-- 头部常用的轮翻切换JS -->
+<script type="text/javascript" src="../script/headfoot.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="../script/bdscript.js" ></script>
+<script type="text/javascript" src="../script/bdloginReg.js" ></script>
+<script type="text/javascript" src="../script/bdpasswordCheck.js" ></script>
+
+<!-- 公用移动侧边栏推出插件 -->
+<script src="../script/jquery.mmenu.min.all.js"></script>
+<!-- cfaexamJS -->
+<script type="text/javascript" src="script/cfaexam.js"></script>
+</head>
+<!--
+	description：CFA备考
+	author：Dolores
+	time：2015-06-09 9:00
+-->
+<body>
+<!-- 课程详情快捷导航-->
+<div class="cdsidenav" id="cdsidenav">
+<ul>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc01">考试介绍</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc02">考试内容</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc03">报名时间与费用</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc04">考试报名</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc02">复习备考</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc03">考试时间与费用</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc04">成绩与通过率</a></li>
+</ul>    
+</div>
+
+<nav id="menu"  class="mbnavadd">
+    <h2><a href=""><img src="../images/sidebarreg.png"  alt=""/>月里飘舞<i class="icon-gfright">&#xe609;</i></a></h2>
+    <ul>
+    <li class="selecded"><a href="#" title="考试内容">考试内容</a></li>
+    <li><a href="#" title="报名时间费用">报名时间与费用</a></li>
+    <li><a href="#" title="报名流程">考试报名</a></li>
+    <li><a href="#" title="复习备考">复习备考</a></li>
+    <li><a href="#" title="考试时间地点">考试时间地点</a></li>
+    <li><a href="#" title="成绩与通过率">成绩与通过率</a></li>
+    </ul>
+</nav>
+
+<div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+    <article>
+    <h3><a href="javascript:;" id="alogin">登录</a><a href="javascript:;" id="aregister">注册</a></h3>
+    <h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+    <h2><img src="../images/topnavlogo.png" alt="金程教育GOLDEN FUTURE"/></h2>
+    <dl>
+    <dt><a href="">CFA</a></dt>
+    <dd>
+    	<ul id="navBar">
+		<li><a href="">考试指南</a></li>
+		<li>
+		<a href="">课程中心<span></span></a>
+		<nav>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		</nav>
+		</li>
+		<li><a href="">学员中心</a></li>
+		<li><a href="">学术团队</a></li>
+		<li><a href="">经验分享<span></span></a>
+		<nav>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		</nav>
+		</li>
+		<li><a href="">职业发展</a></li>
+		<li><a href="">关于我们</a>
+		</li>
+    	</ul>
+    </dd>
+    </dl>
+    </article>
+    </div>
+</div>
+<!-- header end-->
+
+<!--body main start-->
+<div class="topbanner">
+	<div class="topcontent">
+	<p>距离2015年12月CFA一级考试还有：<strong id="day"></strong>天</p>
+	<p><img src="images/cfaexam/cfa.png" /><img src="images/cfaexam/examtext.png" /></p>
+	<p>金程代报名永久免费</p>
+	<ul>
+	<li><a href="">2015年12月CFA一级</a></li>
+	<li><a href="">2016年6月CFA一级</a></li>
+	<li><a href="">2016年6月CFA二级</a></li>
+	<li><a href="">2016年6月CFA三级</a></li>
+	</ul>
+	</div>
+</div>
+<!-- 复习备考 start-->
+<div id="exam_wrap">
+	<div id="exam">
+		<h3>复习备考</h3>
+		<p class="line"><span class="round"></span></p>
+		<p class="text">CFA考试作为全球金融第一考，并非浪得虚名。一方面是由于其权威性毋庸置疑，另外一方面则是因为其考试周期长，复习难度大，综合要求高。</p>
+	</div>
+</div>
+<!-- 复习备考 end-->
+<!--复习方法 start-->
+<div id="review_method">
+	<h3>复习方法</h3>
+	<p class="line"><span class="round"></span></p>
+	<p class="text">根据考纲的要求，找出考试要点、难点，逐个攻破。从分数比重来看，财务报表分析、职业伦理、数量、资产定价等科目比较重要，考生投入的精力也应多些。</p>
+	<p class="text">每门科目的知识都是自成体系，考生可分科目复习，总结这部分的理论、公式，经典题、难题。在吃透每门科目的基础上，再将整个知识体系融会贯通，全面性、条理性、逻辑性地把握知识要点。</p>
+</div>
+<!--复习方法 end-->
+<!--CFA级别 start-->
+<div id="CFA_level">
+	<ul class="cf">
+		<li class="level_1">
+			<div class="imgs">
+				<span class="imgs_tip">CFA一级</span>
+			</div>
+			<p class="text">
+				CFA一级侧重于考察知识点的广度，而不是深度，知识点的数量达到上千个，所以考生在准备CFA一级的时候要侧重对基础知识的学习和掌握。CFA一级的重点是：财务、道德和基础的投资分析工具，尤其是财务部分，占比达到了20%，考生应该更加尤为注意。
+			</p>
+			<div class="column cf">
+				<a class="border_left_none" href="">大纲变化</a>
+				<a href="">复习时间</a>
+				<a href="">备考建议</a>
+				<a class="border_right_none" href="">备考经验</a>
+			</div>
+		</li>
+		<li class="level_2">
+			<div class="imgs">
+				<span class="imgs_tip">CFA二级</span>
+			</div>
+			<p class="text">
+				CFA一级侧重于考察知识点的广度，而不是深度，知识点的数量达到上千个，所以考生在准备CFA一级的时候要侧重对基础知识的学习和掌握。CFA一级的重点是：财务、道德和基础的投资分析工具，尤其是财务部分，占比达到了20%，考生应该更加尤为注意。
+			</p>
+			<div class="column cf">
+				<a class="border_left_none" href="">大纲变化</a>
+				<a href="">复习时间</a>
+				<a href="">备考建议</a>
+				<a class="border_right_none" href="">备考经验</a>
+			</div>
+		</li>
+		<li class="level_3 margin_right_none">
+			<div class="imgs">
+				<span class="imgs_tip">CFA三级</span>
+			</div>
+			<p class="text">
+				CFA一级侧重于考察知识点的广度，而不是深度，知识点的数量达到上千个，所以考生在准备CFA一级的时候要侧重对基础知识的学习和掌握。CFA一级的重点是：财务、道德和基础的投资分析工具，尤其是财务部分，占比达到了20%，考生应该更加尤为注意。
+			</p>
+			<div class="column cf">
+				<a class="border_left_none" href="">大纲变化</a>
+				<a href="">复习时间</a>
+				<a href="">备考建议</a>
+				<a class="border_right_none" href="">备考经验</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--CFA级别 end-->
+<!--备考规划 start-->
+<div class="plan_wrap">
+	<div id="plan">
+		<h3 class="title">备考规划</h3>
+		<h4 class="times">协会建议复习时间</h4>
+		<ul class="times_list cf">
+			<li>
+				<span>TOTAL</span>
+				<span>307</span>
+			</li>
+			<li>
+				<span>level Ⅰ</span>
+				<span>285</span>
+			</li>
+			<li>
+				<span>level Ⅱ</span>
+				<span>315</span>
+			</li>
+			<li class="margin_right_none">
+				<span>level Ⅲ</span>
+				<span>325</span>
+			</li>
+		</ul>
+		<h4 class="advice">金程建议</h4>
+		<ul class="advice_list cf">
+			<li class="short first">听课<i class="icon-sdjiaort"></i></li>
+			<li class="short">讲义复习</li>
+			<li class="short">Notes学习</li>
+			<li class="short">原版书后习题练习</li>
+			<li class="yellow">Notes习题</li>
+			<li class="questions_100_wrap">CFA协会官方题目 or <a class="questions_100" href="">百题预测</a></li>
+			<li>讲义、Notes再复习</li>
+			<li>错题回顾及总复习</li>
+			<li class="margin_right_none">考前最后一天，复习总结，早点休息，充满信心参加考试！</li>
+		</ul>
+	</div>
+</div>
+<!--备考规划 end-->
+<!--资料选择 start-->
+<div id="selection" class="cf">
+	<div class="head">
+		<h3>复习备考</h3>
+		<p class="line"><span class="round"></span></p>
+		<p class="text">CFA复习材料主要有两类：Study Notes(学习精要）与CFA的指定教材</p>
+	</div>
+	<div class="introduction cf">
+		<img src="images/cfaexam/review/introduction_pic.jpg" alt="金融分析师CFA中文考试手册" />
+		<span class="reco">金程推荐：</span>
+		<h4 class="book_name">《金融分析师CFA中文考试手册》</h4>
+		<p class="reco_text">
+			自考生角度出发，集金程教育13年CFA培训经验，力邀国内外众多金融投资专业人士与CFA协会投资系列译者精心打造，依据CFA协会颁布的最新考试大纲及指定教材编写，由多位教学经验丰富的资深CFA培训师执笔，完全参照CFA协会官方指定用书编写，核心和重要的内容全部囊括，契合中国考生的实际情况，有利于考生快速阅读、备考。
+		</p>
+	</div>
+	<div class="info cf">
+		<div class="notes">
+			<h5>Study Notes</h5>
+			<p class="text">
+				Study Notes就像是快餐，帮助考生总结复习要点，但原来知识点中内在的逻辑关系可能被省略，有些notes甚至没有覆盖到考试要点。
+			</p>
+		</div>
+		<div class="notes notes_right">
+			<h5>CFA指定教材</h5>
+			<p class="text">
+				CFA指定的原版教材，虽然复习量较大，但保证了内容的原汁原味。因此，对于选择notes的考生，应尽量选那些内容相对全面的版本，结合指定教材进行复习。 
+			</p>
+		</div>
+	</div>
+</div>
+<!--资料选择 end-->
+<!--金程独家内部资料 start-->
+<div id="internal">
+	<div class="head">
+		<h3>金程独家内部资料</h3>
+		<p class="line"><span class="round"></span></p>
+	</div>
+	<ul class="internal_cont cf">
+		<li class="internal_list cf">
+			<div class="internal_list_pic">
+				<img src="images/cfaexam/review/internal_list_pic0.png">
+				<span class="pic_name">CFA公示表</span>
+			</div>
+			<p class="text">
+				公式表根据CFA各级各科目及考试逻辑集合CFA考试涉及到的所有公式，可于CFA备考冲刺阶段使用。结合公示表来回
+			</p>
+		</li>
+		<li class="internal_list">
+			<div class="internal_list_pic">
+				<img src="images/review/internal_list_pic1.png">
+				<span class="pic_name">CFA冲刺宝典</span>
+			</div>
+			<p class="text">
+				公式表根据CFA各级各科目及考试逻辑集合CFA考试涉及到的所有公式，可于CFA备考冲刺阶段使用。结合公示表来回
+			</p>
+		</li>
+		<li class="internal_list">
+			<div class="internal_list_pic">
+				<img src="images/review/internal_list_pic2.png">
+				<span class="pic_name">CFA金融词典</span>
+			</div>
+			<p class="text">
+				公式表根据CFA各级各科目及考试逻辑集合CFA考试涉及到的所有公式，可于CFA备考冲刺阶段使用。结合公示表来回
+			</p>
+		</li>
+		<li class="internal_list">
+			<div class="internal_list_pic">
+				<img src="images/review/internal_list_pic3.png">
+				<span class="pic_name">CFA模考试卷</span>
+			</div>
+			<p class="text">
+				公式表根据CFA各级各科目及考试逻辑集合CFA考试涉及到的所有公式，可于CFA备考冲刺阶段使用。结合公示表来回
+			</p>
+		</li>
+		<li class="internal_list margin_right_none">
+			<div class="internal_list_pic">
+				<img src="images/review/internal_list_pic4.png">
+				<span class="pic_name">CFA学习指南及课堂笔记</span>
+			</div>
+			<p class="text">
+				公式表根据CFA各级各科目及考试逻辑集合CFA考试涉及到的所有公式，可于CFA备考冲刺阶段使用。结合公示表来回
+			</p>
+		</li>
+	</ul>
+</div>
+<!--金程独家内部资料 end-->
+<!--资料索取 start-->
+<a id="get" href="#" >资料索取</a>
+<!--资料索取 end-->
+<!-- 全国分校 start-->
+<div class="schoolarea">
+<section>
+	<i>全国分校</i>
+	<ul>
+    <li><h3><span>上海</span><a href="">在线咨询</a></h3><p>虹口区松花江路2539号复旦科技园1号楼11楼 </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>徐汇</span><a href="">在线咨询</a></h3><p>徐汇区广元西路45号交大慧谷科技街415A室</p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>浦东</span><a href="">在线咨询</a></h3><p>东新区张杨路601号华诚大厦7012室  </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>北京</span><a href="">在线咨询</a></h3><p>北京西城区南菜园街2号国泰大厦2楼 </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>南京</span><a href="">在线咨询</a></h3><p>白下区中山东路90号华泰证券大厦10楼S2室（210002） </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>深圳</span><a href="">在线咨询</a></h3><p>罗湖区银湖路金湖一街CDI大厦3楼(518029) </p><p>咨询电话：400-700-9596</p></li>
+    </ul>
+</section>
+</div>
+<!-- 全国分校 end-->
+
+<!-- footer start-->
+<footer>
+<div class="profooter">
+<dl>
+<dt><h3>客服热线</h3><p><strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p></dt>
+<dd><i class="icon-gfqq">&#xe605;</i><h3>企业QQ</h3><p>QQ群：119758791</p></dd>
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育-CFA</p></dd>
+</dl>
+<article>
+<img src="images/review/wx_cfa.jpg"  alt=""/>
+<h3>官方微博</h3>
+<p>微信扫一扫,掌握最新动态<br/>微信号：cfa-4009596</p>
+</article>
+</div>
+<div class="copyright"><p>© 2000 - 2015  上海金程国际金融专修学院.  沪ICP备08016784号  本学院通过ISO9001:2008国际质量管理体系认证</p></div>
+</footer>
+<!-- footer end-->
+<!-- Go Top -->
+<div class="gotop" id="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+<!-- 登录 start-->
+<div class="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li id="mobile_input">
+			<input type="text" id="usernameL" placeholder="手机号\用户名" onBlur="__changeUserName1('usernameL');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>账号与密码不匹配></p-->
+		</li>
+    <li id="password_input">
+			<input id="password1" name="password1" maxLength="20" type="text" placeholder="密码" onBlur="checkPwd($(this).val());if(!value){value=defaultValue;}">
+		</li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span><a href="">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input"><input class="register_input" id="realname" type="text" placeholder="真实姓名" onBlur="__changeRealName('realname');if(!value){value=defaultValue;}"></li>
+    <li id="tel_input"><input type="text" placeholder="手机号" id="tel" onBlur="__changeUserName('tel');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>手机号码格式错误</p--></li>
+    <li class="reghalf" id="code_input"><input type="text" id="code" name="code" max_length="6" placeholder="短信验证码" onFocus="this.value=''" onBlur="checkAuthCode(this.value);if(!value){value=defaultValue;}"><input type="button" value="获得短信验证码"></li>
+    <li id="password1_input"><input type="text" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" tabindex="2" onBlur="checkPwd1(this.value);"></li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上登录<a href="">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 注册 end-->
+
+</body>
+</html>

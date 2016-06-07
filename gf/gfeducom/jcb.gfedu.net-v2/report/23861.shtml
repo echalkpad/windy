@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <article class="pgs_detail">
+        <div class="jcbpages">
+        <div class="jcbpttl">
+            <h3>战鼓铮铮，红旗飘飘</h3>
+            <span>时间：2015/9/30 12:11:38</span>
+        </div>
+        <div class="jcbpbox">
+            <div class="hr"></div>
+            <div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 夏雷滚滚，秋风瑟瑟，跨酷暑而历中秋，经过两个月的准备，2015年金程杯终于要和大家见面了。虽历经寒暑，而不改初衷，我们共青春，我们同成长。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 金程杯，从雏形走向成熟，靠的是金程人和广大财经学子的不懈努力，从第一届的&ldquo;金程杯&rdquo;理财大赛到今年的金程大学生圆梦计划，四届金程杯准备的经历，三届金程杯积累的经验，足以让金程杯发生质的飞跃。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 金程杯将从单一的二维比赛模式变成三维立体人才培养模式，从知识积累到社会经验培养，从学校生活资助到实习职位提供，背后发生的是我们对策划上百次的更改与尝试，只愿君心似我心，不负金程不负梦。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 梦虽远，但总会走到。我们已经与国内38所高校建立联系，并与花旗银行、九鼎辰星建立战略同盟，我们有足够的能力将今年的金程大学生圆梦计划成功举办，并取得辉煌成就。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 鲜艳的金程旗帜在微风中飞舞，庄严的战鼓声也已敲响，我们蓄势待发。伴随着国庆的哨声，我们将在接下来的一个月内，陆续走访华东、华北、西北等地的38所高校，进行校园宣讲，请大家关注。</div>
+<div><br />
+&nbsp; &nbsp; &nbsp; &nbsp; 金程杯大学生圆梦计划已经拉开序幕，加入我们&mdash;&mdash;金色前程，你我共筑！<br />
+<br />
+&nbsp; &nbsp; &nbsp;</div>
+<div style="text-align: center;"><img src="http://manager.gfedu.net/GfeduFile/Folder23/gugu(2).jpg" width="514" height="370" alt="" /></div>
+        </div>
+        </div>
+    </article>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+
+</body>
+</html>

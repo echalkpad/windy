@@ -1,0 +1,36 @@
+
+/*
+ * === 专题公用
+ * ******************************************/
+
+/* 基本 */
+@import "../../../css/reset.less";
+@import "../../../css/variable.less";
+@import "../../../css/core.less";
+@import "../../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../../css/headfoot.less";
+@import "../../../css/jMmenu.less";
+/* 全国分校 */
+@import "../../../css/common.less";
+
+
+/* 项目头部 */
+.proheader{
+    .protitle{h1{color:@proc1;}}
+    .prosearch{input[type="text"]{border: solid 2px @proc1;}input[type="button"]{background-color:@proc1;}}
+}
+.navbar{
+    background-color:#2d3d51;
+    li{
+        a{color:@proc3; display:block; &:hover{background-color:#006c99;}}
+        &.selecded{background-color:#006c99;}
+        .navbar2{
+            width: auto;
+            margin-top: -1px;
+            background: @proc1;
+            a:hover{background: #006c99;}
+        }
+    }
+}

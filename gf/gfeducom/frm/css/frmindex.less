@@ -1,0 +1,543 @@
+/* LESS Document */
+
+@import "../../css/variable.less";
+
+
+/*轮翻大图*/
+.topTitle{
+	.obtain{
+		display:none;
+	}
+}
+@media (min-width:992px) {
+	.topTitle{
+		.obtain{
+			display:block;
+			.pos(a);
+			z-index:99;
+			top:0;
+			right:0;
+			height:100%;
+			width:300px;
+			padding:30px 30px;
+			box-sizing:border-box;
+			background-color:rgba(0,0,0,.7);
+			li{
+				padding:5px 0;
+				padding-bottom:15px;
+				input{
+					width:100%;
+				}
+				input[type="button"]{
+					background-color:@golden;
+					.f18();
+				}
+				.msg{
+					color:@cw;
+				}
+			}
+		}
+	}
+}
+@media (min-width:1200px) {
+	.topTitle{
+		.obtain{
+			top:0;
+			right:50%;
+			margin-right:-600px;
+		}
+	}
+}
+
+
+/* banner修改添加 start */
+ .topTitle{
+     height: 170px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{
+               a{
+                    display: block;
+                    width: 100%;
+                    height: 170px;
+                    background-position: 20% 50% !important;
+                    background-size: auto 100% !important;
+                 //   background-repeat-x: no-repeat !important;
+                  /*  background-size: cover !important;
+                    -webkit-background-size: cover !important;
+                    -moz-background-size: cover !important;
+                    -ms-background-size: cover !important;
+                    -o-background-size: cover !important; */
+                }
+            }
+        }
+    }
+}
+@media(min-width:480px){
+  .topTitle{
+     height: 200px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{
+               a{
+                  height: 200px;  
+                }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:640px){
+  .topTitle{
+     height: 240px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{
+               a{
+                  height: 240px;  
+                }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:768px){
+  .topTitle{
+     height: 300px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{
+               a{
+                  height: 300px;  
+                }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:992px){
+  .topTitle{
+     height: 350px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{ a{ height: 350px;  background-size: 100% 100% !important; }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:1200px){
+  .topTitle{
+     height: 400px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{ a{ height: 400px; }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:1500px){
+  .topTitle{
+     height: 400px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{ a{ height: 450px; }
+            }
+        }
+    }
+ }   
+}
+@media(min-width:1920px){
+  .topTitle{
+     height: 400px;
+    .slideBoxIndex{
+        .bdIndex{
+            li{ a{ height: 450px; background-position: 0 0 !important; }
+            }
+        }
+    }
+ }   
+}
+/* banner修改添加 end */
+
+
+/* 考试指南 */
+.proguide{
+	background-image:url(../images/guidebg.jpg);
+	margin-bottom:30px;
+	section{
+		.cf();
+		width:100%;
+		height:180px;
+		overflow:hidden;
+		box-sizing:border-box;
+		padding:0 50px;
+		.pos(r);
+	}
+	#pgleft,
+	#pgright{
+		.pos(a);
+		.f48();
+		top:60px;
+		color:@golden;
+		z-index:20;
+	}
+	#pgleft{
+		left:10px;
+	}
+	#pgright{
+		right:10px;
+	}
+	.bd{
+		.pos(r);
+		width:100%;
+		height:180px;
+		overflow:hidden;
+	}
+	ul{
+		.pos(a);
+		left:0;
+		top:0;
+		overflow:hidden; zoom:1;
+	}
+	li{
+		float:left;
+		width:110px;
+		height:180px;
+		float:left;
+		box-sizing:border-box;
+		padding-top:40px;
+		_display:inline;
+		overflow:hidden;
+		i{
+			.bdrhalf();
+			.f48();
+			background-color:@cw;
+			width:65px;
+			height:65px;
+			line-height:65px;
+			margin:0 auto;
+			display:block;
+			margin-bottom:15px;
+		}
+		a{
+			color:@cw;
+			text-align:center;
+			display:block;
+		}
+		&:hover{
+			background-color:@golden;
+			i{
+				color:@golden;
+			}
+		}
+		
+	}
+}
+@media (min-width:1200px){
+	.proguide{
+		margin-bottom:60px;
+		section{
+			width:1200px;
+			margin:0 auto;
+		}
+	}
+}
+
+/* 学习中心 */
+.learncenter{
+	li:first-child{
+		width:100%;
+		padding:30px;
+		i{
+			margin:0;
+			float:left;
+		}
+		p{
+			overflow:hidden;
+			text-align:left;
+			padding-left:30px;
+			
+		}
+		strong{
+			padding-top:20px;
+			overflow:hidden;
+			padding-left:30px;
+			text-align:left;
+		}
+	}
+}
+@media (min-width:768px){
+	.learncenter{
+		li{
+			width:14.28%;
+			&:first-child{
+				width:14.28%;
+				padding:20px 0;
+				i{
+					margin:0 auto;
+					float:none;
+					margin-bottom:15px;
+				}
+				p{
+					overflow:auto;
+					padding:0;
+					text-align:center;
+					.ellipsis();
+				}
+				strong{
+					.ellipsis();
+					text-align:center;
+					padding-top:0;
+					padding-left:0;
+				}
+	
+			}
+		}
+	}
+}
+
+/* 研发中心 */
+.devcenter{
+	display:none;
+}
+@media (min-width:768px){
+	.devcenter{
+		display:block;
+		padding-bottom:60px;
+		h2{
+			.f24();
+			color:@c3;
+			line-height:30px;
+			padding-bottom:20px;
+			padding-left:30px;
+			a{
+				color:@c3;
+			}
+			i{
+				color:@c9;
+				line-height:30px;
+			}
+		}
+		article{
+			.cf();
+			background-image:url(../images/devcenterbg.jpg);
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:cover;
+			padding:30px 40px 0;
+			text-align:center;
+			h3{
+				.f40();
+				font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+				padding-bottom:10px;
+			}
+			p{
+				.f14();
+				font-family:"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+			}
+			.devteacher{
+				
+			}
+			/*
+			h4{img{width:100%;}
+			}
+			h5{width:100%;box-sizing:border-box;padding:0 8%;
+				display:block;.pos(a);bottom:0;height:60px;
+				line-height:60px;background-color:@c0;
+				opacity:0.5;filter:alpha(opacity=50);
+				text-align:left;
+				a{width:20%;color:@cw;.f16();display:inline-block;
+					box-sizing:border-box;padding-right:20px;
+					i{float:right;.f30();line-height:60px;}
+				}
+			}*/
+			ul{
+				.cf();
+				width:100%;
+				box-sizing:border-box;
+				padding:0 8%;
+				padding-top:30px;
+				li{
+					.pos(r);
+					width:19%;
+					overflow:hidden;
+					display:inline-block;
+					vertical-align:bottom;
+					margin:0;
+					padding:0 5px;
+					box-sizing:border-box;
+					img{
+						width:100%;
+						vertical-align:bottom;
+					}
+					h5{
+						.pos(a);
+						color:@cw;
+						.f16();
+						left:0;
+						bottom:0;
+						width:94.5%;
+						box-sizing:border-box;
+						padding:0 10px;
+						margin:0 5px;
+						height:50px;
+						line-height:50px;background-color:@c0;
+						opacity:0.5;filter:alpha(opacity=50);
+						text-align:left;
+						i{
+							float:right;
+							.f30();
+							line-height:50px;}
+					}
+					&:hover{
+						img{
+							filter:alpha(opacity=50);
+							-moz-opacity:0.5;
+							-khtml-opacity: 0.5;
+							opacity: 0.5;
+						}
+					}
+				}
+			}
+		}
+		section{
+			.cf();
+			li{
+				width:33.33%;
+				float:left;
+				line-height:100px;
+				.f24();
+				text-align:center;
+				a{
+					color:@cw;
+				}
+				&:nth-child(1){ background-color:@cpred;}
+				&:nth-child(2){ background-color:@ctblue;}
+				&:nth-child(3){ background-color:@cpurple;}
+			}
+		}
+	}
+}
+@media (min-width:1200px){
+	.devcenter{
+		h2{
+			width:1200px;
+			margin:0 auto;
+			box-sizing:border-box;
+		}
+		article{
+			h3{
+				.f48();
+			}
+			p{
+				.f18();
+				width:980px;
+				margin:0 auto;
+			}
+			.devteacher{
+				width:1200px;
+				margin:0 auto;
+			}
+		}
+		section{
+			ul{
+				width:1200px;
+				margin:0 auto;
+			}
+			li{
+				line-height:150px;
+			}
+		}
+	}
+}
+/* 考试经验 */
+.experience{
+	display:none;
+}
+@media (min-width:768px){
+	.experience{
+		display:block;
+		padding-bottom:60px;
+		h2{
+			.f24();
+			color:@c3;
+			line-height:30px;
+			padding-bottom:20px;
+			padding-left: 10px;
+			a{
+				color:@c3;
+			}
+			i{
+				color:@c9;
+				line-height:30px;
+			}
+		}
+		ul{
+			.cf();
+		}
+		li{
+			width:33.33%;
+			padding:0 10px;
+			float:left;
+			box-sizing:border-box;
+			a{
+				border:solid 1px @cd;
+				display:block;
+				padding-bottom:20px;
+				&:hover{
+					background-color:@cf0;
+				}
+			}
+			h3{
+				.f16();
+				padding:10px 15px;
+				em{.ellipsis();}
+				span{
+					display:block;
+					.f12();
+					color:@c6;
+					.ellipsis();
+				}
+			}
+			p{
+				padding:0 15px;
+				.f12();
+				color:@c9;
+				.spill2();
+				height: 35px;
+			}
+			h4{
+				.pos(r);
+			}
+			img{
+				width:100%;
+				height: 160px;
+			}
+			i{
+				.pos(a);
+				left:50%;
+				margin-left:-28px;
+				top:50%;
+				margin-top:-28px;
+				.f56();
+				color:@cw;
+			}
+		}
+	}
+}
+@media(min-width:992px){
+ .experience{
+     li{
+         img{
+             height: 200px;
+         }
+     }
+ }   
+}
+@media (min-width:1200px){
+	.experience{
+	    li{img{height: 240px;}}
+	}
+}

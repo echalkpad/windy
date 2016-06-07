@@ -1,0 +1,313 @@
+/**
+*  description:题库－做题前样式综合
+*  author: lotus
+*  date: 2015-12-22 14:00
+**************************************************/
+
+
+@import "common.less";
+
+
+.ibtabttl{
+	padding-bottom:20px;
+	ul{
+		width:280px;
+	}
+	li{
+		width:33.3333%;
+	}
+}
+@media (min-width:768px){
+	.ibtabttl{
+		padding-bottom:50px;
+		ul{
+			width:350px;
+		}
+	}
+}
+
+.ib_mypractice{
+}
+
+.ctn{
+	.ibmy_collection,
+	.ibmy_error{
+		display:none;
+	}
+}
+
+
+
+/*选题中心*/
+/*选题中心*/
+.ibt_ttl{
+	.cf();
+	padding:15px 0x;
+	text-align:center;
+	h2{
+		line-height:30px;
+		.f18();
+	}
+	p{
+		.f12();
+		color:@c6;
+		padding:0 15px;
+		em{
+			padding-left:10px;
+		}
+		strong{
+			color:@ibl;
+			.f14();
+			padding:0 5px;
+		}
+	}
+	span{
+		padding-top:20px;
+		display:block;
+		padding-bottom:20px;
+		a{
+			width:120px;
+			line-height:30px;
+			display:inline-block;
+			text-align:center;
+			.f14();
+			margin:0 5px;
+			.bdr(15px);
+			background-color:@cw;	
+			border:solid 1px @cd;
+			&:hover{
+				background-color:@ibc;	
+				border:solid 1px @ibc;
+				color:@cw;
+			}
+		}
+	}
+}
+@media (min-width:768px){
+	.ibt_ttl{
+		padding:0;
+		text-align:left;
+		margin:40px 0;
+		border-left:solid 2px @ibc;
+		position:relative;
+		.ibhr{
+			display:none;
+		}
+		h2{
+			.f24();
+			padding-left:10px;
+		}
+		p{strong{
+			.f16();
+		}}
+		span{
+			padding-top:0;
+			padding-bottom:0;
+			position:absolute;
+			top:0;
+			right:0;
+			a{
+				line-height:40px;
+				.bdr(20px);
+			}
+		}
+	}
+}
+
+.ib_topic{
+	.cf();
+	padding:10px;
+	dl{
+		.cf();
+		padding:10px;
+		box-sizing:border-box;
+	}
+	dt{
+		float:left;
+		width:50px;
+		height:50px;
+		.bdr(25px);
+		text-align:center;
+		background-color:@cw;
+		i{
+			.f30();
+			line-height:50px;
+		}
+	}
+	.ib_top01{
+		padding-bottom:10px;
+		dl{background-color:@ibc_b1;}
+		i{color:@ibc_b2;}
+	}
+	.ib_top02{
+		padding-bottom:10px;
+		dl{background-color:@ibc_y1;}
+		i{color:@ibc_y2;}
+	}
+	.ib_top03{
+		padding-bottom:10px;
+		dl{background-color:@ibc_g1;}
+		i{color:@ibc_g2;}
+	}
+	.ib_top04{
+		dl{background-color:@ibc_p1;}
+		i{color:@ibc_p2;}
+	}
+	dd{
+		overflow:hidden;
+		color:@cw;
+		padding-left:20px;
+		h3{
+			.f16();
+		}
+		p{
+			padding:5px 0 10px;
+			.f12();
+			width:100%;
+			box-sizing:border-box;
+			.ellipsis();
+		}
+		strong{
+			color:@iborange;
+			.f18();
+			padding-right:5px;
+		}
+		a{
+			display:inline-block;
+			width:90px;
+			height:30px;
+			line-height:30px;
+			text-align:center;
+			.bdr(15px);
+			border:solid 1px @cw;
+			background-color:@cw;
+			color:@c3;
+			margin-right:5px;
+
+		}
+	}
+}
+@media (min-width:768px){
+	.ib_topic{
+		.ib_top01,
+		.ib_top02,
+		.ib_top03,
+		.ib_top04{
+			width:50%;
+			box-sizing:border-box;
+			float:left;
+			padding-bottom:20px;
+			&:hover{
+				dt{background-color:@cw;}
+				dd a{border:solid 1px @cw;}
+			}
+			dl{
+				background-color:@cw;
+				border:solid 1px @cd;
+			}
+		}
+		.ib_top01,
+		.ib_top03{
+			padding-right:10px;
+		}
+		.ib_top02,
+		.ib_top04{
+			padding-left:10px;
+		}
+
+		.ib_top01{
+			dt{background-color:@ibc_b1;}
+		}
+		.ib_top02{
+			dt{background-color:@ibc_y1;}
+			dd a{ float:right;}
+		}
+		.ib_top03{
+			dt{background-color:@ibc_g1;}
+		}
+		.ib_top04{
+			dt{background-color:@ibc_p1;}
+		}
+
+		.ib_top01:hover{dl{
+			background-color:@ibc_b1;
+			dd a{color:@ibc_b2;}
+		}}
+		.ib_top02:hover{dl{
+			background-color:@ibc_y1;
+			dd a{color:@ibc_y2;}
+		}}
+		.ib_top03:hover{dl{
+			background-color:@ibc_g1;
+			dd a{color:@ibc_g2;}
+		}}
+		.ib_top04:hover{dl{
+			background-color:@ibc_p1;
+			dd a{color:@ibc_p2;}
+		}}
+		dl{
+			padding:20px 30px;
+			height:140px;
+			box-sizing:border-box;
+			&:hover{
+				color:@cw;
+				a,h3,p,del{
+					color:@cw;
+				}
+			}
+		}
+		dd{
+			h3{
+				.f18();
+				color:@c3;
+			}
+			p{
+				color:@c9;
+			}
+			del{color:@c9;}
+			a{
+				width: 70px;
+				height: 28px;
+				line-height: 28px;
+				.f12();
+				.bdr(16px);
+				border:solid 1px @ibc;
+				color:@ibl;
+			}
+		}
+	}
+}
+@media (min-width:992px){
+	.ib_topic{
+		dt{
+			width:70px;
+			height:70px;
+			.bdr(35px);
+			i{
+				.f40();
+				line-height:70px;
+			}
+		}
+		dd{
+			a{
+				width:100px;
+				line-height:32px;
+				height:32px;
+				.f14();
+			}
+		}
+	}
+}
+@media (min-width:1200px){
+	.ib_topic{
+		dt{
+			width:80px;
+			height:80px;
+			.bdr(40px);
+			i{
+				.f50();
+				line-height:80px;
+			}
+		}
+	}
+}

@@ -1,0 +1,93 @@
+/*
+ * ==> 支付流程公用
+*********************************************/
+
+
+/* 基本 */
+@import "../reset.less";
+@import "../variable.less";
+@import "../core.less";
+@import "../global.less";
+
+/* 头部及尾部 */
+@import "../headfoot.less";
+@import "../jMmenu.less";
+/* 全国分校 */
+@import "../common.less";
+
+/* 右栏内容 */
+@import "../proaside.less";
+
+/* 左栏内容 */
+@import "../pagecontent.less";
+
+
+/* 颜色设置 */
+@import "../../cfa/css/cfavariable.less";
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot?-ivr5ln');
+    src:url('fonts/icomoon.eot?#iefix-ivr5ln') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?-ivr5ln') format('truetype'),
+        url('fonts/icomoon.woff?-ivr5ln') format('woff'),
+        url('fonts/icomoon.svg?-ivr5ln#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@font-face {font-family: "iconfont";
+  src: url('font/iconfont.eot'); /* IE9*/
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@cpaygreen:#74b95a;
+
+
+/* 项目头部 */
+.proheader{
+    .protitle{h1{color:@proc1;}}
+    .prosearch{input[type="text"]{border: solid 2px @proc1;}input[type="button"]{background-color:@proc1;}}
+}
+.navbar{
+    background-color:@proc2;
+    li{
+        a{color:@proc3;&:hover{background-color:@proc1;}}
+        &.selecded{background-color:@proc1;}
+    }
+}
+/* 小图加标题内容 */
+.listimgtxt:hover{
+    dt{a{color:@proc1;}}
+}
+
+
+
+

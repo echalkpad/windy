@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title>金程杯竞赛赛事介绍-金程杯</title>
+<meta name="keywords" content="金程杯竞赛,金程杯比赛,金程杯赛事介绍">
+<meta name="description" content="金程杯赛事介绍：针对学校和大学生最关心的两个方面 “学术培养”和“实习就业”，面向全国大学生群体的公益活动，设立于2012年，已成功举办三届！-金程杯">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+<script type="text/javascript" src="/script/preliminary.js"></script>
+</head>
+<body onload="GetOnload()">
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+    <!--左侧内容-->
+
+<div class="pgs_preliminary">
+    <div class="jcbpages">
+        <div class="jcbpbox">
+        <h3>2015年"金程杯"会计案列大赛初赛须知</h3>
+        <p>1.初赛时间为11月6日12:00至24:00；<br>2.试题为60道单选题，题目以会计基础为主；<br>3.比赛设定时间为60分钟，可提前交卷；<br>4.初赛晋级名单于11月8日公布；<br>5.多次提交者以第一次提交为准；<br>6.禁止作弊，相关解释权归金程教育所有。</p>
+        <button>初赛答题</button>
+        <div id="ServerTimeDiv" style="width:100%;text-align:center;color:gray;">0000-00-00 00:00:00</div>
+        </div>
+        
+    </div>
+    <div class="screen">
+        <form id="login" class="login">
+            <h4>2015年全国大学生会计案例大赛</h4>
+            <div>账号：<input type="text" id="Field_UserName"></div>
+            <div>密码：<input type="password" id="Field_PassWord"></div>
+            <a href="javascript:;" onclick="CheckUserLogin()">初赛答题</a>
+            <span><i class="icon-gfwb">&#xea0f;</i></span>
+        </form>
+        <form id="suceess" class="suceess">
+            <h4>答题成功<i class="icon-gfwb">&#xe639;</i></h4>
+            <p>晋级复赛名单，我们会在11月8号公布，<br>请及时关注哦！</p>
+            <span><i class="icon-gfwb">&#xea0f;</i></span>
+        </form>
+    </div>
+</div>
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+</div>
+
+<input type="hidden" id="hidTips"/>
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+</body>
+</html>

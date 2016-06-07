@@ -1,0 +1,172 @@
+#exam{
+	width: 292px;
+	margin: 0 auto;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 14px;
+}
+#exam h3,#review_method h3{
+	height: 48px;
+	line-height: 48px;
+	font-size: 22px;
+	text-align: center;
+}
+.line{
+	width: 180px;
+	border-top: 1px solid #000;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 26px;
+}
+.round{
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	top: -6px;
+	left: 50%;
+	margin-left: -5px;
+	background-color: #fff;
+}
+#review_method{
+	width: 292px;
+	padding: 128px 14px 30px 14px;
+	margin: 0 auto;
+	background-image: url(../images/review_method_bg.png);
+	background-repeat: no-repeat;
+	background-position: 0 18px;
+}
+#exam .text,#review_method .text{
+	width: 292px;
+	text-align: center;
+	line-height: 24px;
+}
+/*CFA级别*/
+#CFA_level{
+	width: 320px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+}
+#CFA_level li{
+	width: 318px;
+	height: 416px;
+	padding-top: 20px;
+	border: 1px solid #eeeeee;
+}
+#CFA_level li .imgs{
+	width: 318px;
+	height: 184px;
+	background-image: url(../images/level_li_bg1.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+}
+#CFA_level li .imgs_tip{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 118px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	background-color: #7fbb00;
+}
+#CFA_level li.level_2 .imgs_tip{
+	background-color: #eb5424;
+}
+#CFA_level li.level_3 .imgs_tip{
+	background-color: #4285f4;
+}
+#CFA_level li .text{
+	padding-left: 22px;
+	padding-top: 16px;
+	width: 268px;
+	height: 150px;
+	line-height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+.column{
+	margin-top: 22px;
+	width: 318px;
+	height: 42px;
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+.column a{
+	float: left;
+	width: 78px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	font-size: 14px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+.column .border_left_none{
+	border-left: none;
+}
+.column .border_right_none{
+	border-right: none;
+}
+/*备考规划*/
+#plan{
+	width: 296px;
+	height: 596px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-image: url(../images/plan_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #fff;
+}
+#plan .title{
+	font-size: 22px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	padding-top: 40px;
+}
+#plan .times{
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.times_list li{
+	float: left;
+	width: 56px;
+	height: 34px;
+	border: 3px solid #d0dadc;
+	margin-right: 16px;
+	text-align: center;
+	font-size: 12px;
+}
+.times_list li.margin_right_none{
+	margin-right: 0;
+}
+#plan .advice{
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding-top: 10px;
+}
+.advice_list li{
+	width: 296px;
+	height: 36px;
+	background-color: #297fa3;
+	margin-bottom: 6px;
+}
+.advice_list li.short{
+	width: 146px;
+	display: inline-block;
+}
+.icon-sdjiaort{
+	color: #fff;
+}

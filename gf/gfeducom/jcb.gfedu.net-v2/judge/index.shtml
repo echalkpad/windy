@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe904;</i>
+    <h2>大赛评委</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p9_judge">
+            <li><a href="/judge/24722.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151130110604466.png"><div class="cont"><h2>汤震宇</h2><em>CFA“中国第一 人”，金程教育董事长。</em><span>中国“CFA第一人”、金程教育首席培训师、上海交通大学继续教育学院客座教授、对外经济贸易大学金融学院兼职教授、上海财经大学公共经济与管理学院投资学校外实践教育基地校外导师、综合开发研究院（中国 深圳）培训中心副教授、南京大学中国机构投资者研究中心专家、中国市场.</span></div></a></li><li><a href="/judge/25072.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151214135902698.png"><div class="cont"><h2>Felix Fu</h2><em></em><span>ACCA上海代表处教育拓展经理<br>
+爱尔兰都柏林国立大学 项目管理硕士</span></div></a></li><li><a href="/judge/25020.shtml"><img src="http://manager.gfedu.net/InfoSys/upload/20151214121436776.jpg"><div class="cont"><h2>Echo Xu</h2><em></em><span>安永华明会计师事务所资深审计经理<br>
+曾在澳大利亚留学5年，获得悉尼大学金融学和银行学双专业硕士学位。</span></div></a></li><style>.jcbpbox .p9_judge li img{width:200px;height:256px;}</style>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index.shtml">上一页</a>
+	<span>1/5</span>
+	<a href="index_2.shtml">下一页</a>
+	<a href="index_5.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',5)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    $(".topttl ul li:eq(6)").addClass("selecded");
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

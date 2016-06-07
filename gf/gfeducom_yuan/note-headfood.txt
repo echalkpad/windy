@@ -1,0 +1,58 @@
+
+
+
+常用头尾的iconfont
+
+下拉箭头  class="icon-bars"    &#xf0c9;
+关闭     class="icon-cross"   &#xea0f; 
+ＱＱ     class="icon-gfqq"    &#xe605;
+微博     class="icon-gfwb"    &#xe604;
+
+
+
+
+金程分校下拉箭头class="icon-bars"  &#xf0c9;
+<h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+
+
+
+注册登录
+class="icon-cross"    &#xea0f; 
+class="icon-gfqq"    &#xe605;
+class="icon-gfwb"    &#xe604;
+
+
+
+<a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+
+
+<p><span><a onClick="LtR();" href="javascript:;">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+ 
+</section></div>
+
+底部微博   class="icon-gfwb"    &#xe604;
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>
+微博号：金程教育</p></dd>
+
+
+gfeducom/CSS/headfoot.less-------------------------头尾共用样
+
+gfedunet/script
+
+	html5shiv.js-------------------------支持HTML5新标签IE9以下兼容
+	respond.min.js-----------------------支持CSS3新样式IE9以下兼容
+	jquery.min.js------------------------JQuery样式
+
+	常用JS库
+	jquery.mmenu.min.all.js------------移动端左侧推出插件
+
+	表单验证
+	bdscript.js
+	bdloginReg.js
+	bdpasswordCheck.js
+
+	headfoot.js
+
+
+
+

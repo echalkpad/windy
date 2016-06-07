@@ -1,0 +1,540 @@
+/* LESS Document */
+
+/* 模块集 */
+
+/* 基本 */
+@import "../../css/reset.less";
+@import "../../css/variable.less";
+@import "../../css/core.less";
+@import "../../css/global.less";
+
+/* 头部及尾部 */
+@import "../../css/headfoot.less";
+@import "../../css/jMmenu.less";
+
+/* 职业发展-就业招聘、   机构合作友情链接、全国分校 */
+@import "../../css/common.less";
+
+/* 课程详情共用 */
+@import "../../css/classdetail.less";
+
+
+/* 颜色设置 */
+@import "cfavariable.less";
+html{overflow-x: hidden;}
+/*导入字体*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/cfaexam/icomoon.eot?kabozi');　
+    src:url('../fonts/cfaexam/icomoon.eot?#iefixkabozi') format('embedded-opentype'),
+        url('../fonts/cfaexam/icomoon.woff?kabozi') format('woff'),
+        url('../fonts/cfaexam/icomoon.ttf?kabozi') format('truestype'),
+        url('../fonts/cfaexam/icomoon.svg?kabozi#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+ 
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mm-menu ul li a {
+  color: #a18f69 !important;
+  text-align: left;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+/*课程详情快捷导航*/
+@media (min-width:768px){
+    .cdsidenav{
+        display: none;
+        top: 10%;
+        li{width: 110px;}
+        a{ padding-right: 5px;
+            text-align: right;
+            background-color:#06729f;
+        }
+        i{color:#06729f;}
+        li:hover{
+            a{background-color:@c0;}
+            i{color:@c0;}
+        }
+    }
+}
+@media (min-width:1600px){
+    .cdsidenav{
+        li{width: 140px;}
+        a{padding-right: 10px;}
+    }
+}
+@media (min-width:1400px){
+    .cdsidenav{
+        margin-left: -720px;
+    }
+}
+body{background: #F3F3F3;}
+/** main **/
+.topbanner{
+    background: @cc url(../images/cfaexam/parallax.jpg) no-repeat;
+    background-size: cover;
+    padding-bottom: 14%;
+    color: @cw;
+    width: 100%;
+    .topcontent{width: 100%; padding: 0 0 80px;}
+    p{
+        text-align: center;
+        .f14();
+         box-sizing: border-box;
+        strong{.f24();}
+       img{  height: 70px;} 
+       &:nth-child(2){padding: 20px 0 10px;}
+       &:nth-child(3){.f18();}
+       
+       &:first-child{display: none;}
+    }
+
+    ul{
+          width: 300px;
+          margin: 20px auto;
+          
+        li{
+            float: left;
+            width: 140px;
+            height: 35px;
+            .bdr2();
+            border: 2px solid @c9;
+            box-sizing: border-box;
+            line-height: 35px;
+            text-align: center;
+            margin: 10px auto;
+            
+            margin: 5px;
+            
+            a{color: @cw; }
+            &:hover{background: #9c9c9c;}
+        }
+    }
+}
+@media(min-width:640px){
+  .topbanner{
+      .topcontent{padding: 0;}
+      p{&:first-child{text-align: right; padding-right: 20px;}}
+      ul{
+          width: 370px;
+          margin: 20px auto;
+          li{
+            width: 170px;
+            margin:0 ;
+            margin-bottom:10px; 
+            &:nth-child(2n+1){margin-right: 30px;}
+          }
+      }
+  }  
+}
+@media(min-width:768px){
+    .topbanner{
+         p{&:first-child{display: block;};}
+    }
+}
+@media(min-width:1200px){
+    .topbanner{
+        padding-bottom: 8%;
+    .topcontent{
+        width: 1200px;
+        margin: 0 auto;
+        p{
+         img{height: auto;}
+         &:first-child{padding: 20px;}
+        }
+    }   
+    } 
+}
+
+.cfawrap{
+    background: #F3F3F3;
+    color: @c6;
+    padding: 20px 0 0;
+    div{
+        padding: 10px 20px 40px;
+        article{
+            text-align: center;
+            em{
+            display:inline-block; 
+            width: 100px;
+            height: 100px;
+            color: @cw;
+            .bdrhalf();
+            }
+            p{
+                .f20();
+                span{.f12();display: block;}
+            }
+        }
+        
+        dl{ padding-top: 20px;}
+        dt{.f24();color: @c3; display: none;}
+        dd{.f14();.spill3();  line-height: 26px;
+            a{color: @cblue;}
+        }
+    }
+    .cfachartered{
+        img{display: none;}
+        article{em{background: #2985be;
+        i{font-size: 100px; color: @cw; line-height: 100px;}
+        }}
+        
+        .tl{
+            i{position: absolute; color: @cc;}
+            .icon-top{top: -10px;right: -7.5px;}
+            .icon-left{bottom: -8px;left: -7.5px;}
+        }
+    }
+    
+    .cfainstitute{display: none;}
+    
+/* mb message */
+    .mbmsg{
+        background: @cw;
+        ul{
+            height: 450px;
+            box-sizing: border-box;
+            li{
+                float: left;
+                width: 50%;
+                text-align: center;
+                padding: 20px 0;
+                box-sizing: border-box;
+                a{color: @c6; .f16();}
+                span{
+                    display: inline-block;
+                    width: 80px;
+                    height: 80px;
+                    .bdrhalf();
+                    i{
+                        font-size: 40px;
+                        line-height: 80px;
+                        color: @cw;
+                    }
+                }
+                p{
+                    color: @c6;
+                    padding-top: 10px;
+                }
+                
+                &:first-child{span{background: #594e75;}}
+                &:nth-child(2){span{background: #fcbb19;}}
+                &:nth-child(3){span{background: #0bacb6;}}
+                &:nth-child(4){span{background: #008ed6;}}
+                &:nth-child(5){span{background: #a7c7b8;}}
+                &:last-child{span{background: #25aae2;}}
+            }
+        }
+    }
+    
+    //CFA前景与未来
+    .cfafuture{
+        article{display: none;}
+        dl{
+            padding-top: 0;
+            dt{display: block; padding-bottom: 10px;}
+            dd{-webkit-line-clamp: inherit;
+                p{
+                    .f16();
+                    color: @c3;
+                    padding: 10px 0;
+                }
+                span{a{
+                        display: inline-block;
+                        .f14();
+                        background: @cw;
+                        color: @c3;
+                        padding: 5px 10px;
+                        margin:0 20px 10px 0;
+                        .bdr2();
+                        box-sizing: border-box;
+                        
+                        &:hover{color: @cblue;}
+                    }
+                }
+
+            }
+            img{display: none;}
+        }
+        
+        ul{
+            padding-top: 10px;
+            li{
+                line-height: 35px;
+                .ellipsis();
+                a{color: @c3;
+                &:hover{color: @cblue;}
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:640px){
+        .cfawrap{
+          div{
+            article{display: inline-block;float: left; padding-right: 40px;}
+            dl{
+                padding-top: 0;
+                dt{display: block;}
+                dd{
+                    -webkit-line-clamp:inherit;
+                }
+        
+            }
+          }  
+         .cfafuture{dl{img{
+             display: inline-block;float: left;padding-right: 20px;
+         }}}   
+        .mbmsg{
+          ul{ 
+              height: 300px;
+              li{width: 33.33%;}
+              }
+          }
+        }
+ }
+
+@media(min-width:768px){
+.cfawrap{ 
+    padding: 40px 0;
+  div{ padding: 10px 0 10px 20px;}
+  .cfawrapleft{
+      width: 50%; 
+      float: left;
+      padding-right: 50px;
+  }
+  
+  .cfachartered{
+      position: relative;
+      padding: 0 40px 20px 20px;
+      border-bottom: 1px dashed @cc;
+      border-right: 1px dashed @cc;
+      img{
+          display: block;
+          position: absolute;
+          right: -7px;
+          bottom: -50px;
+      }  
+   }
+  .cfainstitute{border-right: 1px dashed @cc;}
+  
+ .mbmsg{display: none;}
+ 
+   .cfainstitute{
+       position: relative;
+       display: block;
+       padding: 20px 40px 0 0;
+       article{
+           em{img{width: 100%;}}
+           p{padding-top: 5px;}
+       }
+       .tl{i{position: absolute; right: -7.5px; color: @cc;}}
+   }
+   
+   .cfafuture{
+       article{
+           display: block;
+           em{background: #20a37d;
+            i{font-size: 80px; color: @cw; line-height: 100px;}
+           }
+       }
+       dl{img{display: none;}
+         dd{
+             span{a{padding: 5px 10px;}}
+             &:last-child{padding-left: 163px;}
+         }
+       }
+       
+       ul{
+           li{background: @cw; padding: 0 10px; margin-bottom: 8px;}
+       }
+   }
+   
+ }
+}
+
+@media(min-width:1200px){
+    .cfawrap{
+        width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+}
+
+.cfaneer{
+    display: none;
+    width: 100%;
+    height: 850px;
+    background: @cw;
+    clear: both;
+    padding: 30px 0;
+    
+    dl{
+        box-sizing: border-box;
+        width: 30.3%;
+        position: relative;
+        float: left;
+        height:390px;
+        color: @c3;
+        margin: 1.5%;
+        text-align: center;
+        border: 1px solid @cc;
+        
+        section{
+            position: absolute;
+            color: @cw;
+             width: 0;
+             height: 0;
+             left: 0;
+             .f30();
+             z-index: 2;
+             border-top: 80px solid #f27a62;
+             border-right: 80px solid transparent;
+             span{  position: absolute;
+                    top: -80px;
+                    left: 5px;
+              }
+        }
+        
+        &:first-child{dt{em{background: #594e75;}}}
+        &:nth-child(2){dt{em{background: #fcbb19;}}}
+        &:nth-child(3){dt{em{background: #0bacb6;}}}
+        &:nth-child(4){dt{em{background: #008ed6;}}}
+        &:nth-child(5){dt{em{background: #a7c7b8;}}}
+        &:last-child{dt{em{background: #25aae2;}}}
+       
+        dt{.f24();
+            padding-top: 40px;
+            em{
+                width: 100px;
+                height: 100px;
+                .bdrhalf();
+                display: inline-block;
+                i{
+                  color: #fff;
+                  font-size: 50px;
+                  line-height: 100px;
+                }
+            }
+            h2{padding-top: 10px;}
+        }
+        dd{
+            .f14();
+            a{
+                display: inline-block; 
+                padding: 8px 40px;
+                border: 1px solid @cc;
+                color: @cc;
+                .bdr2();
+                 position: absolute;
+                 bottom: 10%;
+                 left: 50%;
+                margin-left: -69px;
+                z-index: 3;
+            }
+            img{  
+                  display: none;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+             } 
+          p{
+              position: absolute;
+              z-index: 9;
+              padding: 10px 20px 15px;
+              text-align: left;
+              line-height: 26px;
+          } 
+           
+        }
+        .bg{
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            top:0;
+            left:0;  
+        }
+        &:first-child{.bg{background: #483b66;}}
+        &:nth-child(2){.bg{background: #fcbb19;}}
+        &:nth-child(3){.bg{background: #0bacb6;}}
+        &:nth-child(4){.bg{background: #a7c7b8;}}
+        &:nth-child(5){.bg{background: #4d92cb;}}
+        &:last-child{.bg{background: #25aae2;}}
+    } 
+
+   dl:hover{
+       dt{
+           position: absolute;
+           text-align: center;
+           width: 100%;
+           color: @cw;
+           top: 10%;
+           z-index: 2;
+           em{display: none;}
+           
+       }
+       dd{
+            img{display: block;}
+            p{color: @cw; top: 40%;}
+            a{color: @cw; border-color: @cw;}
+        }
+        .opacity{position: absolute;
+               width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+               background: #000;
+               opacity: 0.8;
+            }
+        .title{display: block;}
+        .bg{display: block;}
+   }
+}
+
+@media(min-width:768px){
+    .cfaneer{display: block;}
+}
+
+@media(min-width:1200px){
+    .cfaneercont{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.gotop{display: none;}
+.schoolarea{
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

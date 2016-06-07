@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?rym8sl');
+    src:    url('fonts/icomoon.eot?rym8sl#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?rym8sl') format('truetype'),
+        url('fonts/icomoon.woff?rym8sl') format('woff'),
+        url('fonts/icomoon.svg?rym8sl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE60C:before {
+    content: "\e60c";
+}
+.icon-uniE60D:before {
+    content: "\e60d";
+}
+.icon-uniE60F:before {
+    content: "\e60f";
+}
+.icon-uniE610:before {
+    content: "\e610";
+}
+.icon-uniE611:before {
+    content: "\e611";
+}
+.icon-uniE612:before {
+    content: "\e612";
+}
+.icon-uniE613:before {
+    content: "\e613";
+}
+.icon-uniE61B:before {
+    content: "\e61b";
+}
+.icon-cr-mn1-1:before {
+    content: "\e936";
+}
+.icon-gfright:before {
+    content: "\e953";
+}
+.icon-head:before {
+    content: "\e95c";
+}
+.icon-ib-time2:before {
+    content: "\e96b";
+}
+.icon-gfleft:before {
+    content: "\e97c";
+}
+.icon-plus7:before {
+    content: "\e99d";
+}
+.icon-bookmark:before {
+    content: "\e27b";
+}
+

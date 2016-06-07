@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/gfiphone.png">
+<link rel="shortcut icon" href="/images/gfico.ico">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/script/html5shiv.js"></script>
+    <script type="text/javascript" src="/script/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/jquery.mmenu.min.all.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="/script/bdscript.js" ></script>
+<script type="text/javascript" src="/script/bdloginReg.js" ></script>
+<script type="text/javascript" src="/script/bdpasswordCheck.js" ></script>
+<script type="text/javascript" src="/script/headfoot.js"></script>
+<script type="text/javascript" src="/script/jcb.js"></script>
+
+<!-- 临时CSS -->
+<style type="text/css">
+    /*.p2_intro a img {
+        width:100%;
+        height:240px;    
+    }
+    .p2_intro a h4 {
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .p2_intro a p {
+        overflow:hidden;
+        display:-webkit-box;
+        word-break:break-all;
+        -webkit-line-clamp:3;
+        -webkit-box-orient:vertical;
+        height:75px;
+    }*/
+</style>
+</head>
+<body>
+<!-- Header Start -->
+<!--#include file="/Header.html"-->
+<!-- Header End -->
+
+<!--共用导航及日程表 start-->
+    <!--#include file="/Floating.html"-->
+<!--共用导航及日程表 end-->
+
+<!--内页内容 start-->
+<div class="jcbwrap">
+
+<!-- 右侧栏内容 -->
+	<!--#include file="/Sidebar.html"-->
+<!-- 右侧栏结束 -->
+    
+<!--左侧内容-->
+    <div class="jcbpages">
+    <div class="jcbq"></div>
+    <div class="jcbpttl">
+    <i class="icon-jcb-intro">&#xe614;</i>
+    <h2>金程杯介绍视频</h2>
+    </div>
+    
+    <div class="jcbpbox">
+        <div class="p6_review">
+            <a href="/List_1277/23817.shtml">
+<img src="" alt="金程杯介绍视频">
+<h4>金程杯介绍视频</h4>
+<p>&lt;script src=&quot;http://p.bokecc.com/player?vid=9BAD8C358BDE50329C33DC5901307461&amp;siteid=206A8A63A6A2557D&amp;autoStart=false&amp;width=100%&amp;height=100%&amp;playerid=B1643C314F1B7BBC&amp;playertype=1&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</p>
+</a>
+            <section class="paginator">
+            	<a href="index.shtml">首页</a>
+	<a href="index.shtml">上一页</a>
+	<span>1/1</span>
+	<a href="index.shtml">下一页</a>
+	<a href="index.shtml">尾页</a>
+	<input id="ToPageNum" type="text"><input  type="button" id="btnGetPage"  onclick="GetPage('index',1)" value="跳转">
+            </section>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- 合作机构的开始 -->
+    <!--#include file="/Friends.html"-->
+<!-- 合作机构的结束 -->
+
+<!--内页内容 end-->
+
+<!-- Footer Start -->
+    <!--#include file="/Footer.html"-->
+<!-- Footer End -->
+
+<!-- 导航高亮 -->
+<script type="text/javascript">
+    
+</script>
+<script type="text/javascript">
+    function GetPage(pagelistname,max)
+    {
+        var num = document.getElementById('ToPageNum').value;
+        if (parseInt(num) > 0 && parseInt(num)<=parseInt(max))
+        {
+            window.location.href = pagelistname + (parseInt(num) == 1 ? "" : ("_" + num)) + ".shtml";
+        }
+        else
+        {
+            alert("请输入正确的页码！");
+        }
+    }
+</script>
+</body>
+</html>

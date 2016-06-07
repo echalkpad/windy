@@ -1,0 +1,122 @@
+/* 清除浮动 */
+.cf(){
+    // IE7-
+    *zoom: 1;
+    // others
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+  }
+}
+
+@import '../../css/jMmenu.less';
+body{
+    background: #fff;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", Arial;
+}
+#sidelink:hover{ text-decoration: none; }
+/* 头部   */
+.head,.bot{
+  a{
+    color:#333;
+    &:hover{text-decoration: none;}
+  }
+}
+
+/* 头部   */
+.head{display: none;}
+.mbtop{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    h2{color: #fff;
+        a{
+          display: inline-block;
+          left: 0;
+          float: left;
+          padding-left: 20px;
+          color: #fff;
+        }
+    }
+}
+.top{display: none;}
+@media(min-width:640px){
+  .mbtop{
+      display: none;
+  }
+  .head{display: block; }
+}
+
+html,body{
+    overflow-x: hidden !important;
+}
+
+.bot{
+    display: none;
+}
+.mb_footer{
+   display: block;
+  width: 100%;
+  text-align: center;
+  background: #21292a;
+  padding: 10px 0;
+  color: #fff;
+  font-family: "微软雅黑";
+  ul{
+     padding: 10px 5px;
+     li{
+         float: left;
+         width: 25%;
+         padding: 5px;
+         box-sizing: border-box;
+         
+         a{
+          width: 100%;
+          display: block;
+          color: #fff;
+          padding: 10px 0;
+          background: #2e3738;
+          border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          -o-border-radius: 3px;
+         }
+     }
+  }
+  
+  dl{
+      padding: 20px 0;
+      dt{
+          font-size: 30px;
+          line-height: 30px;
+          padding-top: 20px;
+      }
+      dd{
+          font-size: 14px;
+          color: #dbdbdb;
+          margin-top: 10px;
+      }
+  }
+  p{  line-height: 30px; }
+}
+
+@media(min-width:640px){
+  .bot{
+    display: block;
+    .bottomMainBot{
+      li{
+        p{color:#57585a}
+      }
+    }
+  }
+   .mb_footer{
+        display: none;
+   }  
+}

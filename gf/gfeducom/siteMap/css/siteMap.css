@@ -1,0 +1,427 @@
+/* LESS Document */
+/* 清除浮动 */
+/*常用颜色*/
+/*常用字号*/
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*边框圆角*/
+/* 圆角  */
+/*配模式定位*/
+/*下阴影*/
+/*弹出窗口半透明灰*/
+/*1200屏*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* 背景自适应 */
+/*导入字体*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?kabozi');
+  src: url('fonts/icomoon.eot?#iefixkabozi') format('embedded-opentype'), url('fonts/icomoon.woff?kabozi') format('woff'), url('fonts/icomoon.ttf?kabozi') format('truestype'), url('fonts/icomoon.svg?kabozi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mp-title {
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.mp-title i {
+  display: block;
+  width: 85px;
+  height: 2px;
+  background-color: #ef3739;
+  margin: 10px auto 0px;
+}
+.map-banner {
+  *zoom: 1;
+  height: 300px;
+  background: url(../images/banner.jpg) no-repeat top center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+.map-banner:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-banner h2 {
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.map-banner h2 em {
+  color: #fce563;
+}
+.map-content {
+  *zoom: 1;
+  margin-top: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.map-content:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content p {
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.map-content .lists {
+  *zoom: 1;
+  margin-top: 50px;
+}
+.map-content .lists:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists ul {
+  *zoom: 1;
+}
+.map-content .lists ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li {
+  *zoom: 1;
+  margin: 35px auto;
+  padding-bottom: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.map-content .lists li:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li p {
+  text-align: left;
+  padding: 0 25px;
+  color: #666666;
+  box-sizing: border-box;
+}
+.map-content .lists li h4 {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+.map-content .lists li h4 img {
+  width: 50%;
+}
+.map-content .lists li h3 {
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 25px 0;
+}
+.map-content .lists li h3 i {
+  font-style: italic;
+  display: block;
+  font-size: 16px;
+}
+.map-content .lists li .over {
+  margin-top: 20px;
+  *zoom: 1;
+}
+.map-content .lists li .over:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li .over p {
+  color: #333333;
+  font-weight: bold;
+}
+.map-content .lists li .over p a {
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 8px;
+}
+.map-content .lists li .over table {
+  *zoom: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+.map-content .lists li .over table:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li .over table tr {
+  border-bottom: 4px solid #ffffff;
+}
+.map-content .lists li .over table tr td {
+  width: 50%;
+  height: 35px;
+  text-align: center;
+  background: #fcc247;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+}
+.map-content .lists li .over table tr td:nth-child(odd) {
+  border-right: 4px solid #ffffff;
+}
+.map-content .lists li .over .green tr td {
+  background: #add753;
+}
+.map-content .lists li .over .blue tr td {
+  background: #16b0cc;
+}
+.map-content .lists li .over .banner-h {
+  position: relative;
+  margin-bottom: 30px;
+  *zoom: 1;
+}
+.map-content .lists li .over .banner-h:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li .over .banner-h .bdIndex {
+  width: 329px;
+  height: 144px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: relative;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.map-content .lists li .over .banner-h .bdIndex:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li .over .banner-h .bdIndex ul {
+  position: absolute;
+  height: 144px;
+  margin: 0 auto;
+  left: 0;
+  top: 0;
+}
+.map-content .lists li .over .banner-h .bdIndex li {
+  border: none;
+  margin-right: 0px;
+  width: 165px;
+  *zoom: 1;
+  text-align: center;
+  float: left;
+}
+.map-content .lists li .over .banner-h .bdIndex li:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .lists li .over .banner-h i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  cursor: pointer;
+}
+.map-content .lists li .over .banner-h .icon-prev {
+  left: 10px;
+}
+.map-content .lists li .over .banner-h .icon-next {
+  right: 10px;
+}
+.map-content .lists li span {
+  width: 140px;
+  height: 45px;
+  display: block;
+  margin: 20px auto 0;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 20px;
+}
+.map-content .lists li span a {
+  color: #ffffff;
+  display: block;
+}
+.map-content .mp-float {
+  *zoom: 1;
+  margin-top: 30px;
+}
+.map-content .mp-float:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+.map-content .mp-float img {
+  width: 100%;
+}
+@media (min-width: 448px) {
+  .map-content .sever {
+    padding: 0 30px;
+    color: #666666;
+  }
+  .map-content .lists li {
+    width: 411px;
+  }
+}
+@media (min-width: 640px) {
+  .map-content .lists li {
+    float: left;
+    width: 49%;
+  }
+  .map-content .lists li:nth-child(odd) {
+    margin-right: 9px;
+  }
+  .map-content .mp-float {
+    width: 603px;
+    margin: 30px auto;
+  }
+}
+@media (min-width: 768px) {
+  .map-banner {
+    height: 400px;
+  }
+  .map-banner h2 {
+    line-height: 400px;
+    font-size: 50px;
+  }
+  .map-content {
+    padding: 0 30px;
+    width: 768px;
+    margin: 50px auto;
+  }
+  .map-content .lists li {
+    float: left;
+    width: 331px;
+  }
+  .map-content .lists li:nth-child(odd) {
+    margin-right: 45px;
+  }
+}
+@media (min-width: 992px) {
+  .map-content {
+    width: 992px;
+    padding: 0 50px;
+  }
+  .map-content .mp-title {
+    font-size: 40px;
+    margin: 50px auto;
+  }
+  .map-content .mp-title i {
+    width: 150px;
+  }
+  .map-content .lists li {
+    float: left;
+    width: 48%;
+  }
+  .map-content .lists li:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .map-content .mp-float {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .map-content {
+    width: 1200px;
+    padding: 0 0px;
+  }
+  .map-content .sever {
+    width: 770px;
+    margin: auto auto;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .map-content .lists li {
+    float: left;
+    width: 23%;
+    transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+  }
+  .map-content .lists li:not(:last-child) {
+    margin-right: 30px;
+  }
+  .map-content .lists li .over {
+    display: none;
+    transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+  }
+  .map-content .lists li .over .banner-h .bdIndex {
+    width: 276px;
+  }
+  .map-content .lists li .over .banner-h .bdIndex li {
+    width: 137px;
+  }
+  .map-content .lists li:hover .over {
+    display: block;
+  }
+  .map-content .mp-float {
+    width: 580px;
+    margin-top: 50px;
+  }
+  .map-content .mleft {
+    margin-right: 40px;
+  }
+}

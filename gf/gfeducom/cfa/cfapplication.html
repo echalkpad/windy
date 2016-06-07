@@ -1,0 +1,497 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8 lte9" lang="zh-CN"><![endif]-->
+<!--[if IE 9]><html class="ie9 lte9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>CFA备考之成绩与通过率</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/gfiphone.png">
+                               <link rel="shortcut icon" href="images/gfico.ico">
+<link href="css/cfaexam/cfapplication.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="../script/html5shiv.js"></script>
+    <script type="text/javascript" src="http://gfedu.net/public/script/respond.min.js"></script>
+<![endif]-->
+<!-- 调用的jQuery　v1.7.2JS -->
+<script type="text/javascript" src="../script/jquery.min.js"></script>
+<!-- 头部常用的轮翻切换JS -->
+<script type="text/javascript" src="../script/headfoot.js"></script>
+<!-- 表单验证JS -->
+<script type="text/javascript" src="../script/bdscript.js" ></script>
+<script type="text/javascript" src="../script/bdloginReg.js" ></script>
+<script type="text/javascript" src="../script/bdpasswordCheck.js" ></script>
+<!-- 大图作背景轮翻JS  -->
+<script type="text/javascript" src="../script/jquery.touchSlider.js"></script>
+
+<!-- 公用移动侧边栏推出插件 -->
+<script src="../script/jquery.mmenu.min.all.js"></script>
+<!-- cfaexamJS -->
+<script type="text/javascript" src="script/cfaexam.js"></script>
+<script type="text/javascript" src="script/cfarate.js"></script>
+</head>
+<!--
+	description：CFA备考之考试通过率
+	author：Dolores
+	time：2015-07-03 14:30
+-->
+<body>
+<!-- 课程详情快捷导航-->
+<div class="cdsidenav" id="cdsidenav">
+<ul>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc01">考试介绍</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc02">考试内容</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc03">报名时间与费用</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc04">考试报名</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc02">复习备考</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc03">考试时间与费用</a></li>
+<li><i class="icon-sdjiaort">&#xe632;</i><i class="icon-sdjiaorb">&#xe630;</i><a href="#cdc04">成绩与通过率</a></li>
+</ul>    
+</div>
+
+<nav id="menu"  class="mbnavadd">
+    <h2><a href=""><img src="../images/sidebarreg.png"  alt=""/>月里飘舞<i class="icon-gfright">&#xe609;</i></a></h2>
+    <ul>
+    <li class="selecded"><a href="#" title="考试内容">考试内容</a></li>
+    <li><a href="#" title="报名时间费用">报名时间与费用</a></li>
+    <li><a href="#" title="报名流程">考试报名</a></li>
+    <li><a href="#" title="复习备考">复习备考</a></li>
+    <li><a href="#" title="考试时间地点">考试时间地点</a></li>
+    <li><a href="#" title="成绩与通过率">成绩与通过率</a></li>
+    </ul>
+</nav>
+
+<div class="header">
+    <!-- topheader-->
+    <div class="topheader">
+    <article>
+    <h3><a href="javascript:;" id="alogin">登录</a><a href="javascript:;" id="aregister">注册</a></h3>
+    <h4 class="icon-bars"><a href="#menu" id="sidelink">&#xf0c9;</a></h4>
+    <h2><img src="../images/topnavlogo.png" alt="金程教育GOLDEN FUTURE"/></h2>
+    <dl>
+    <dt><a href="">CFA</a></dt>
+    <dd>
+    	<ul id="navBar">
+		<li><a href="">考试指南</a></li>
+		<li>
+		<a href="">课程中心<span></span></a>
+		<nav>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		</nav>
+		</li>
+		<li><a href="">学员中心</a></li>
+		<li><a href="">学术团队</a></li>
+		<li><a href="">经验分享<span></span></a>
+		<nav>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		<a href="">课程中心</a>
+		</nav>
+		</li>
+		<li><a href="">职业发展</a></li>
+		<li><a href="">关于我们</a>
+		</li>
+    	</ul>
+    </dd>
+    </dl>
+    </article>
+    </div>
+    
+</div>
+<!-- header end-->
+
+<!--topbanner start-->
+<div class="topbanner">
+	<div class="topcontent">
+	<p>距离2015年12月CFA一级考试还有：<strong id="day"></strong>天</p>
+	<h1 class="btext"><span><a href="cfaexam.html">CFA考试专题之</a><i class="icon-sdjiaolt">&#xe634;</i><i class="icon-sdjiaolb">&#xe633;</i></span></h1>
+	<p><img src="images/cfaexam/application/application.png" /></p>
+	<p>金程代报名永久免费</p>
+	<ul>
+	<li><a href="">2015年12月CFA一级</a></li>
+	<li><a href="">2016年6月CFA一级</a></li>
+	<li><a href="">2016年6月CFA二级</a></li>
+	<li><a href="">2016年6月CFA三级</a></li>
+	</ul>
+	</div>
+</div>
+<!--topbanner end-->
+
+<!-- 导语 start -->
+<div class="applilead">
+<h2>导语<i></i></h2>
+<p>2015年伊始，CFA考试也即将拉开战幕，报考CFA证书也正如火如荼地开展着，CFA考试报名条件有哪些，你是否有资格报考，报名需要哪些资料，怎么注册报名……本专题帮你解决这一系列问题。
+<em>温馨提示：CFA考试报名越早越优惠！</em></p>
+<a href="javascript:;">费用详情</a>
+</div>
+<!-- 导语end -->
+
+<div class="applimain">
+<!-- 报名条件 start -->
+<div class="applicondition">
+<h2>报名条件<i></i></h2>
+<p>CFA考试对考生的专业背景不做限制，但需拥有学士学位或相当的专业水准，即取得大学学习年限与全职工作经验合计满四年的同等资格；在校大学生，在毕业前18个月内注册报名考试。</p>
+<ul>
+<li>
+<img src="images/cfaexam/application/appli1.png" />
+<em></em>
+<p>
+<i class="icon-gfok">&#xea10;</i>
+<span><strong>4年制本科学历</strong></span>
+<span>(在校大四学生)</span>
+</p>
+</li>
+<li>
+<img src="images/cfaexam/application/appli2.png" />
+<em></em>
+<p>
+<i class="icon-gfok">&#xea10;</i>
+<span><strong>3年</strong>制大专学历加上</span>
+<span><strong>1年</strong>全职工作经验</span>
+</p>
+</li>
+<li class="applili">
+<img src="images/cfaexam/application/appli3.png" />
+<em></em>
+<p>
+<i class="icon-gfok">&#xea10;</i>
+<span><strong>3年</strong>制大专学历加上</span>
+<span><strong>1年</strong>全职工作经验</span>
+</p>
+</li>
+</ul>
+</div>
+<!-- 报名条件 end -->
+
+<!-- 在校生-专业要求 start -->
+<div class="applireq">
+	<div class="applireql">
+    <div class="secTabs2 J_secTabs">
+    <em><img src="images/cfaexam/application/reqpro.png"/></em>
+    <ul>
+    <li class="selected"><a href="javascript:void(0);">在校生</a></li>
+    <li><a href="javascript:void(0);">同等学历</a></li>
+    <li><a href="javascript:void(0);">专业要求</a></li>
+    </ul>
+    </div>	
+    
+    <div class="ctn">
+	<div>
+	<img src="images/cfaexam/application/person.png" />	
+	<dl><a href="javascript:;">
+	<dt>在校本科生能否报考CFA考试？</dt>
+	<dd>可以，CFA报名要求本科学历（大4就可报考，最快的方式是大4上半年顺利拿下CFA1级，接着6月份顺利拿下CFA2级）</dd>
+	</a></dl>
+	<dl class="applireqdl"><a href="javascript:;">
+	<dt>在校大专生能否报考CFA考试？</dt>
+	<dd>大专在校生不能报考CFA。大专毕业后，只要大专学习时间和工作时间总共达到四年就可以报考的，对行业没有限制，不过考完三级申请证书的时候需要具备四年投资及相关工作经验。</dd>
+	</a></dl>
+	<dl><a href="javascript:;">
+	<dt>在校大学生最早什么时候能报名CFA考试？</dt>
+	<dd>在校大学生，最早可在毕业前18个月内注册报名考试。</dd>
+	</a></dl>
+	</div>
+	
+	<div class="applirequndis">
+	<img src="images/cfaexam/application/person.png" />	
+	<dl><a href="javascript:;">
+	<dt>在校本科生能否报考CFA考试？</dt>
+	<dd>可以，CFA报名要求本科学历（大4就可报考，最快的方式是大4上半年顺利拿下CFA1级，接着6月份顺利拿下CFA2级）</dd>
+	</a></dl>
+	<dl class="applireqdl"><a href="javascript:;">
+	<dt>在校大专生能否报考CFA考试？</dt>
+	<dd>大专在校生不能报考CFA。大专毕业后，只要大专学习时间和工作时间总共达到四年就可以报考的，对行业没有限制，不过考完三级申请证书的时候需要具备四年投资及相关工作经验。</dd>
+	</a></dl>
+	<dl><a href="javascript:;">
+	<dt>在校大学生最早什么时候能报名CFA考试？</dt>
+	<dd>在校大学生，最早可在毕业前18个月内注册报名考试。</dd>
+	</a></dl>
+	</div>
+	
+	<div class="applirequndis">
+	<img src="images/cfaexam/application/person.png" />	
+	<dl><a href="javascript:;">
+	<dt>在校本科生能否报考CFA考试？</dt>
+	<dd>可以，CFA报名要求本科学历（大4就可报考，最快的方式是大4上半年顺利拿下CFA1级，接着6月份顺利拿下CFA2级）</dd>
+	</a></dl>
+	<dl class="applireqdl"><a href="javascript:;">
+	<dt>在校大专生能否报考CFA考试？</dt>
+	<dd>大专在校生不能报考CFA。大专毕业后，只要大专学习时间和工作时间总共达到四年就可以报考的，对行业没有限制，不过考完三级申请证书的时候需要具备四年投资及相关工作经验。</dd>
+	</a></dl>
+	<dl><a href="javascript:;">
+	<dt>在校大学生最早什么时候能报名CFA考试？</dt>
+	<dd>在校大学生，最早可在毕业前18个月内注册报名考试。</dd>
+	</a></dl>
+	</div>
+    </div>
+    </div>
+    
+    <div class="applireqr">
+    <form>
+    	<h3>免费索取代报名资格</h3>
+    	<input type="text" placeholder="姓名：" />
+    	<input type="text" placeholder="电话" />
+    	<input type="text" placeholder="邮箱" />
+    	<input type="button" value="提交" />
+    </form>	
+    </div>
+</div>
+<!-- 在校生-专业要求 end -->
+
+<!-- 报名流程 start -->
+<div class="appliprocess">
+<div class="processl">
+<div class="processlcont">
+<h3>报名流程</h3>
+<h4>网上报名<a href="javascript:;">报名入口>></a></h4>
+<ul>
+<li><em>01<i></i><i></i></em><span>注册用户名</span></li>
+<li><em>02<i></i><i></i></em><span>请填写个人资料</span></li>
+<li><em>03<i></i><i></i></em><span>选择考点</span></li>
+<li><em>04<i></i><i></i></em><span>报名成功</span></li>
+<li><em>05<i></i><i></i></em><span>付费</span></li>
+</ul>
+
+<h4>金程代报名</h4>
+<p>金程教育代理报名，详情请登录：<a href="javascript:;">http://cfa.gfedu.net/dbm.asp</a><span>改成金程教育代理报名永久免费，汇率以网站公布为准。</span></p>
+
+<h5>金程代报名优势</h5>
+<div class="appligood">
+<dl>
+<dt>免费</dt>
+<dd>金程免费为广大CFA考生提供考试代理报名服务</dd>
+</dl>
+<dl>
+<dt>高效</dt>
+<dd>在收到报名费用后，2-3周内完成所有报名程序</dd>
+</dl>
+<dl>
+<dt>便捷</dt>
+<dd>CFA报名须持具有外币功能的信用卡，代报名则支持所有银行卡</dd>
+</dl>
+<dl>
+<dt>保障</dt>
+<dd>报名结束后如需变更信息可与金程客服联系：<span>33926722-8000</span></dd>
+</dl>
+</div>
+
+<h4>报名方法三：邮递办理（不推荐）</h4>
+<p class="not">打印报名表，然后仔细认真填写，保证信息的准确性。<br/>
+去中国银行办理支票，抬头开给cfa institute；<br/>
+去邮局办理EMS，把支票和报名表快递出去就可以了。(一般不推荐这种报名方式)</p>
+</div>
+</div>
+<!-- 右边 -->
+<div class="processr">
+<div class="processrcont">
+<h3>报名相关问题<a href="javascript:;">更多报名问题>></a></h3>
+<dl>
+<dt><h4>CFA考试报名的注意事项</h4></dt>
+<dd>2015年CFA考试将于6月6日举行，考生已经可以第二阶段的报名了，在此之前，需要考生们对报名注意事项多加了解，以免造成必要的错误。</dd>
+</dl>
+<dl>
+<dt><h4>CFA考试报名流程是怎么样的</h4></dt>
+<dd>CFA报名程序繁复，让许多考生惊恐万分。填写信息不仅包括个人基本信息还包括工作经历等等，对中国考生来说，可能对英文填写不熟悉，就会有信息误填。</dd>
+</dl>
+<dl>
+<dt><h4>CFA报名需要什么特别的材料？</h4></dt>
+<dd>CFA报名不需要什么特别的材料，只要已经办理护照，并符合CFA报名条件就可以进行报名。CFA考试报名会有一些要求，其中也有值得注意的地方。</dd>
+</dl>
+<dl>
+<dt><h4>CFA考试报名需要什么样的条件</h4></dt>
+<dd>具有四年或以上的 CFA 认可的与投资决策过程相关的专业工作经验(相关经验可在考前、考中、考后积累)，符合这些基本就可以报名考试了。</dd>
+</dl>
+<dl>
+<dt><h4></h4></dt>
+<dd></dd>
+</dl>
+</div>
+</div>
+</div>
+<!-- 报名流程 end -->
+
+</div>
+<!-- 课程中心 start-->
+<div class="contentcourse">
+<div class="wrap">
+    <div class="secTabs2 J_secTabs">
+    <h2><a href="">CFA课程中心<i class="icon-gfright">&#xe60e;</i></a></h2>
+    <ul>
+    <li class="selected"><a href="javascript:void(0);">CFA一级</a></li>
+    <li><a href="javascript:void(0);">CFA二级</a></li>
+    <li><a href="javascript:void(0);">CFA三级</a></li>
+    </ul>
+    </div>
+    <div class="ctn">
+        <div class="contcenter">
+        <ul>
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+                
+        </ul>
+        </div>
+        <div class="contcenter contcenterundis">
+        <ul>
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            	
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+    
+        </ul>
+        </div>
+        <div class="contcenter contcenterundis">
+        <ul>
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            	
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+            
+            <li><a href="javascript:;">
+            <em style="background: url(images/cfaexam/content/dgpic1.png) no-repeat;"></em>
+            <h3>零基础长线班</h3>
+            <p>金程教育凭借10余年FRM培训经验，基于经典“3+2”教学模式，针对FRM考试难度逐年增加从基础前导到考前押题。</p>
+            <h4>讲师：<em>纪慧诚</em><span><i class="icon-man">&#xe616;</i>122在线</span></h4></a></li>
+    
+        </ul>
+        </div>
+	</div>
+</div>
+</div>
+<!-- 课程中心 end-->
+
+<!-- 全国分校 start-->
+<div class="schoolarea">
+<section>
+	<i>全国分校</i>
+	<ul>
+    <li><h3><span>上海</span><a href="">在线咨询</a></h3><p>虹口区松花江路2539号复旦科技园1号楼11楼 </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>徐汇</span><a href="">在线咨询</a></h3><p>徐汇区广元西路45号交大慧谷科技街415A室</p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>浦东</span><a href="">在线咨询</a></h3><p>东新区张杨路601号华诚大厦7012室  </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>北京</span><a href="">在线咨询</a></h3><p>北京西城区南菜园街2号国泰大厦2楼 </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>南京</span><a href="">在线咨询</a></h3><p>白下区中山东路90号华泰证券大厦10楼S2室（210002） </p><p>咨询电话：400-700-9596</p></li>
+    <li><h3><span>深圳</span><a href="">在线咨询</a></h3><p>罗湖区银湖路金湖一街CDI大厦3楼(518029) </p><p>咨询电话：400-700-9596</p></li>
+    </ul>
+</section>
+</div>
+<!-- 全国分校 end-->
+
+<!-- footer start-->
+<footer>
+<div class="profooter">
+<dl>
+<dt><h3>客服热线</h3><p><strong>400-700-9596</strong>(每日9：00-21：00 免长途费)</p></dt>
+<dd><i class="icon-gfqq">&#xe605;</i><h3>企业QQ</h3><p>QQ群：119758791</p></dd>
+<dd><i class="icon-gfwb">&#xe604;</i><h3>官方微博</h3><p>微博号：金程教育-CFA</p></dd>
+</dl>
+<article>
+<img src="images/wx_cfa.jpg"  alt=""/>
+<h3>官方微博</h3>
+<p>微信扫一扫,掌握最新动态<br/>微信号：cfa-4009596</p>
+</article>
+</div>
+<div class="copyright"><p>© 2000 - 2015  上海金程国际金融专修学院.  沪ICP备08016784号  本学院通过ISO9001:2008国际质量管理体系认证</p></div>
+</footer>
+<!-- footer end-->
+<!-- Go Top -->
+<div class="gotop" id="gotop"><a href="#"><strong>∧</strong>TOP</a></div>
+<!-- 登录 start-->
+<div class="toplogin">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox" id="close1"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>登录金程教育</h2>
+    <ul>
+    <li id="mobile_input">
+			<input type="text" id="usernameL" placeholder="手机号\用户名" onBlur="__changeUserName1('usernameL');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>账号与密码不匹配></p-->
+		</li>
+    <li id="password_input">
+			<input id="password1" name="password1" maxLength="20" type="text" placeholder="密码" onBlur="checkPwd($(this).val());if(!value){value=defaultValue;}">
+		</li>
+    <li><span><a href="">忘记密码？</a></span><input type="checkbox" value="两周内免登录">两周内免登录</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span><a href="">注册</a>金程帐号</span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 登录 end-->
+
+<!-- 注册 start-->
+<div class="topregister">
+    <div class="regbox"><section>
+    <a href="javascript:;" class="closebox2"><i class="icon-cross">&#xea0f;</i></a>
+    <h2>注册金程教育</h2>
+    <ul>
+    <li id="realname_input"><input class="register_input" id="realname" type="text" placeholder="真实姓名" onBlur="__changeRealName('realname');if(!value){value=defaultValue;}"></li>
+    <li id="tel_input"><input type="text" placeholder="手机号" id="tel" onBlur="__changeUserName('tel');if(!value){value=defaultValue;}"><!--p><i class="icon-warning">&#xea07;</i>手机号码格式错误</p--></li>
+    <li class="reghalf" id="code_input"><input type="text" id="code" name="code" max_length="6" placeholder="短信验证码" onFocus="this.value=''" onBlur="checkAuthCode(this.value);if(!value){value=defaultValue;}"><input type="button" value="获得短信验证码"></li>
+    <li id="password1_input"><input type="text" id="passwd" placeholder="密码由8～15位数字和字母组成" value="" maxlength="20" tabindex="2" onBlur="checkPwd1(this.value);"></li>
+    <li><input type="checkbox" value="同意金程的《用户协议》">同意金程的《用户协议》</li>
+    <li><input type="button" value="登录"></li>
+    </ul>
+    <p><span>已有账号马上登录<a href="">登录</a></span>合作帐号直接登录<i class="icon-gfqq"><a href="">&#xe605;</a></i><i class="icon-gfwb"><a href="">&#xe604;</a></i></p>
+    </section></div>
+</div>
+<!-- 注册 end-->
+
+</body>
+</html>

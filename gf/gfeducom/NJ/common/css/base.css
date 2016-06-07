@@ -1,0 +1,81 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,span,strong,small {
+	margin:0;
+	padding:0;
+}
+b{font-style:normal;}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+caption,th {
+	text-align:left;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym {
+	border:0;
+}
+/*基础默认开始*/	
+h2, h3 , ul ,li , dl ,dt , dd ,h2 strong,h2 span {
+	margin:0px;
+	padding:0px;
+	}	
+ul {
+	list-style:none;
+	}
+a {
+	color:#164A63;
+	text-decoration:none;}
+a:hover {
+	color:#3E796B;
+	}
+/*基础默认结束*/		
+/*通用父子盒子嵌套浮动问题解决，开始*/
+.clearfix:after {  
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+} 
+.clearfix {
+	display: inline-block;
+} 
+* html .clearfix {
+	height: 1%;
+}  
+.clearfix {
+	display: block;
+}
+/*通用父子盒子嵌套浮动问题解决，结束*/
+
+/*间隙层开始*/
+.space_hx { /*横向间隙*/
+	clear:both;
+	width:100%;
+	height:10px;
+	font-size:1px;
+	overflow:hidden;
+}
+.space_zx { /*纵向间隙*/
+	float:left;
+	width:10px;
+	font-size:1px;
+	overflow:hidden;
+}
+/*间隙层结束*/
+.fr {
+	float:right;
+	}
+.fl {
+	float:left;
+	}	

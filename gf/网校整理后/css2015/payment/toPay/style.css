@@ -1,0 +1,309 @@
+body {
+    background: #f7f8f8;
+}
+@font-face {
+    font-family: "iconfont";
+    src: url('font/iconfont.eot');
+    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('font/iconfont.woff') format('woff'), /* chrome、firefox */ url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('font/iconfont.svg#iconfont') format('svg');
+
+    /* IE9*/
+    /* iOS 4.1- */
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.color_f15822{
+    color: #f15822;
+}
+.paycontent h5 {
+    display: none;
+    font-size: 14px;
+    color: #333333;
+    padding: 15px 0;
+}
+.paycontent .process {
+    *zoom: 1;
+    zoom: 1;
+}
+.paycontent .process:after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+.paycontent .process ul {
+    padding: 20px 0px;
+}
+.paycontent .process li {
+    width: 38%;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+}
+.paycontent .process li a {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #dddddd;
+    color: #999999;
+    font-weight: bold;
+    line-height: 40px;
+}
+.paycontent .process li a i {
+    position: absolute;
+    right: -14px;
+    top: 30%;
+    border-width: 8px;
+    border-color: transparent transparent transparent #dddddd;
+    border-style: dashed dashed dashed solid;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.paycontent .process li span {
+    display: none;
+}
+.paycontent .process li em {
+    padding-left: 25%;
+    color: #cccccc;
+    line-height: 40px;
+}
+/*.paycontent .process li:hover,*/
+.paycontent .process .selected {
+    border-bottom-color: #74b95a;
+}
+.paycontent .process li:hover a,
+.paycontent .process .selected a {
+    color: #ffffff;
+    background: #74b95a;
+}
+.paycontent .process li:hover a i,
+.paycontent .process .selected a i {
+    border-width: 8px;
+    border-color: transparent transparent transparent #74b95a;
+    border-style: dashed dashed dashed solid;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.paycontent .process li:hover em,
+.paycontent .process .selected em {
+    color: #74b95a;
+}
+.paycontent .process .nth3 {
+    width: 24%;
+}
+.paycontent h3 {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    margin: 20px 0;
+}
+.paycontent h3 strong {
+    font-size: 18px;
+    padding-right: 10px;
+    color: #666666;
+}
+.paycontent h3 span {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #999999;
+    border-left: 2px solid #999999;
+}
+.paycontent h2 {
+    clear: both;
+    padding: 0 10px;
+    border-left: 3px solid #53afbe;
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 10px 20px;
+}
+.paycontent h2 span {
+    font-size: 12px;
+    color: #d6a128;
+    padding-left: 10px;
+}
+.stay_pay{
+    padding-left: 6%;
+    margin-top: 40px;
+}
+.stay_pay .text_list1{
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+}
+.stay_pay .text_list1 .round{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #74b95a;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+    color: #75b35d;
+}
+.stay_pay .text_list1 .text1{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+}
+.text_list2{
+    padding-left: 60px;
+}
+.pay_method{
+    margin-top: 50px;
+    padding: 0 20px;
+}
+.pay_method .pay_method_text{
+    height: 20px;
+    line-height: 20px;
+    padding: 20px 0;
+}
+.method .list{
+    float: left;
+    width: 128px;
+    height: 98px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.method div.active{
+    border-color: #51b6c7;
+}
+.method div.list em{
+    display: none;
+}
+.method div.active em{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ffffff;
+    width: 0;
+    height: 0;
+    border-top: 40px solid #51b6c7;
+    border-left: 40px solid transparent;
+}
+.method .list em i{
+    position: absolute;
+    top: -40px;
+    left: -20px;
+}
+
+.method .Online_banking{
+    float: right;
+}
+.method .list img{
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+}
+.pay_method .pay{
+    display: block;
+    width: 280px;
+    height: 46px;
+    background-color: #f4981f;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 5px;
+    margin: 35px 0;
+}
+@media (min-width: 400px) {
+    .pay_method{
+        width: 400px;
+    }
+    .method .list{
+        width: 168px;
+        height: 132px;
+    }
+}
+@media (min-width: 640px) {
+    .paycontent h5 {
+        display: block;
+    }
+    .paycontent .process ul{
+        padding: 20px;
+    }
+    .paycontent .process li {
+        position: relative;
+        width: 42%;
+        height: 20px;
+        border-bottom: 1px dashed #cccccc;
+        text-align: left;
+        margin-right: 3%;
+    }
+    .paycontent .process li a {
+        text-align: center;
+    }
+    .paycontent .process li span {
+        display: block;
+        font-size: 14px;
+        color: #666666;
+    }
+    .paycontent .process li em {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .paycontent .process .nth3 {
+        margin-right: 0;
+        width: 18%;
+        text-align: center;
+        width: 50px;
+        border-bottom: 0;
+    }
+    .paycontent h3 {
+        margin: 70px 10px 20px;
+    }
+    .paycontent h3 span {
+        font-size: 14px;
+    }
+    .stay_pay{
+        padding-left: 20px;
+        margin-top: 80px;
+    }
+}
+@media (min-width: 992px) {
+    .paycontent .process li {
+        width: 44%;
+    }
+}
+@media (min-width: 1200px) {
+    .paybox {
+        background: #ffffff;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .paycontent h5 {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0 0;
+        box-sizing: border-box;
+    }
+    .paycontent .paybox {
+        width: 1200px;
+        margin: 20px auto;
+        padding: 30px 90px;
+        box-sizing: border-box;
+    }
+}
+
