@@ -1,0 +1,7 @@
+//食物介绍 
+mui("#foodLibListUl").on('tap', 'li', function() {
+	mui.openWindow({
+		id: 'foodDetali',
+		url: "foodDetali.html",
+	});
+})

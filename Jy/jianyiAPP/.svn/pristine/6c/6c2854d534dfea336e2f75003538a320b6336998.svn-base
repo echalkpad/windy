@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>修改密码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-input-group {
+				background: none;
+				margin-top: 15px;
+			}
+			
+			.mui-input-group:after {
+				display: none;
+			}
+			
+			.mui-input-group .mui-input {
+				width: 65%;
+				text-align: right;
+				color: #777;
+				float: right;
+				padding-right: 40px;
+			}
+			
+			.mui-input-row {
+				padding: 0 15px;
+				line-height: 40px;
+				background: #fff;
+			}
+			
+			.mui-input-row:after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			
+			.mui-input-row i {
+				display: block;
+				height: 40px;
+				width: 30px;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				background: url(../../img/btn_show_password.png) no-repeat scroll right center;
+				background-size: 25px 17px;
+			}
+			
+			.mui-input-group small {
+				color: #999;
+				line-height: 36px;
+				display: block;
+				padding: 0 15px 10px;
+				font-size: 12px;
+			}
+			
+			.mui-input-group section {
+				padding: 0 15px;
+				text-align: center;
+			}
+			
+			.mui-input-row span {
+				color: #666;
+				font-size: 14px;
+			}
+			
+			.mui-btn-block {
+				background: #00b6f3;
+				border: 0;
+				padding: 0;
+				line-height: 40px;
+				font-size: 16px;
+				border-radius: 5px;
+				color: rgba(255, 255, 255, .9);
+			}
+			
+			.forgotPassword {
+				border: 1px solid #00b6f3;
+				background: none;
+				padding: 0 15px;
+				line-height: 30px;
+				border-radius: 15px;
+				color: #00b6f3;
+				font-size: 14px;
+				margin-top: 15px;
+			}
+			
+			.btn-add {
+				color: rgba(255, 255, 255, .9);
+			}
+			
+			.determine {
+				color: #fff!important;
+			}
+			
+			.mui-input-row .pass {
+				background: url(../../img/btn_close_password.png) no-repeat scroll right center;
+				background-size: 25px 17px!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">修改密码</h1>
+			<!--<a href="" class="mui-action-back btn-add mui-pull-right" id="determine" style="font-size:14px;line-height: 40px;">保存</a>-->
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group" name="oForm">
+				<div class="mui-input-row">
+					<span>原密码</span>
+					<input type="password" class="mui-input" id="originalPassword" autocomplete="off" onpaste="return false" ondragenter="return false" onkeyup="this.value=check(this.value,this)"  value="">
+					
+				</div>
+				<div class="mui-input-row">
+					<span>新密码</span>
+					<input type="password" class="mui-input" id="newPassword"  autocomplete="off" value="" onpaste="return false" ondragenter="return false" onkeyup="this.value=check(this.value,this)" >
+					
+				</div>
+				<small>密码由6-20位英文字母、数字或下划线组成</small>
+				<section>
+					<button class="mui-btn mui-btn-block" id="determine">确定</button>
+					<a href="tel:400-111-5289" class="mui-btn forgotPassword">忘记原密码？</a>
+				</section>
+			</form>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/me/changePassword.js"></script>
+
+</html>

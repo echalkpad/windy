@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				padding-bottom: 20px;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.ul {
+				padding-top: 17px;
+				padding-bottom: 10px;
+				margin: 0;
+				background: #fff;
+				list-style: none;
+				padding-left: 0;
+			}
+			
+			.ul li {
+				padding: 0 15px;
+			}
+			
+			.ul li h1 {
+				padding-bottom: 5px;
+				color: #4A4A4A;
+				font-size: 14px;
+			}
+			
+			.ul li p {
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.ul li img {
+				width:100%;
+				height:auto;
+			}
+			.qs-img{
+				width: 50px;
+				display:inline-block;
+				margin-right:10px;
+			}
+			.ul li .question {
+				border-bottom: 1px solid #EFECEC;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+			
+			.all-question {
+				background: #fff;
+				display: block;
+				height: 35px;
+				line-height: 35px;
+				font-size: 14px;
+				color: #00B6F3;
+				text-align: center;
+				border-top: 1px solid #EFECEC;
+			}
+			
+			.all-question span {
+				position: relative;
+				bottom: -3px;
+			}
+			
+			.evaluation {
+				margin: 0 5%;
+				display: block;
+				background: #f2f6f9;
+				height: 50px;
+				line-height: 50px;
+				background: #00B6F3;
+				color: #fff;
+				font-size: 21px;
+				border-radius: 5px;
+				text-align: center;
+			}
+			
+			.mui-content {
+				background: #f2f6f9;
+			}
+			
+			textarea {
+				border: none;
+				outline: none;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell span {
+				color: #4A4A4A;
+				text-align: left;
+				padding-right: 30px;
+			}
+			
+			.mui-table-view-cell span i {
+				color: #4A4A4A;
+				padding-left: 35px;
+				font-style: normal;
+			}
+			
+			.doc-evaluation {
+				font-size: 14px;
+			}
+			
+			.doc-evaluation span {
+				float: right;
+			}
+			
+			.border-b li {
+				color: #9B9B9B;
+			}
+			
+			.xing-active {
+				background-image: url(../../img/pay/icon_star_fills.png)!important;
+			}
+			
+			.xing {
+				background: url(../../img/pay/icon_star.png) no-repeat;
+				background-size: 20px 20px;
+				width: 20px;
+				height: 20px;
+			}
+			h2{
+				color:#333;
+				font-size: 16px;
+				line-height:30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="orderEvalueationBackCellId"></a>
+			<h1 class="mui-title">订单评价</h1>
+		</header>
+		<div class="mui-content">
+
+			<ul class="mui-table-view border-b">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right"><span>医<i>生</i></span><span id="doctorNameId"></span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right"><span>服务时间</span><span id="orderTimeId"></span></a>
+
+				</li>
+			</ul>
+			<ul class="ul">
+				<li>
+					<div class="question">
+						<h2>咨询问题：</h2>
+						<p class="ellipsis" id="zixunwentId"></p>
+						<div id="picPeopleId"></div>
+					</div>
+					<div class="sum">
+						<h2>诊断总结：</h2>
+						<p class="ellipsis" id="zdzjId"></p>
+					</div>
+				</li>
+			</ul>
+			<a href="" class="all-question">查看全部<span class="mui-icon mui-icon-arrowdown"></span></a>
+			<ul class="mui-table-view border-t border-b doc-evaluation">
+				<li class="mui-table-view-cell" id="xingxing">
+					就诊评价 <span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>
+				</li>
+			</ul>
+			<textarea name="" rows="" cols="" id="orderEvaluationTextarea">对医生的诊疗还满意吗？分享下吧！</textarea>
+			<a href="" class="evaluation" id="pingjiaOrderEvaluationId">评价</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/pay/orderEvaluation.js"></script>
+</html>

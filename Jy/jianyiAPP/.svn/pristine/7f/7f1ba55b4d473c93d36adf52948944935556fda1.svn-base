@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+			}
+			
+			.jkwd-ul {
+				margin: 0;
+				list-style: none;
+				padding-left: 0px;
+			}
+			
+			.jkwd-ul li {
+				padding: 10px 0;
+				border-bottom: 2px solid rgb(240, 240, 240);
+				height: 97px;
+				width: 100%;
+			}
+			
+			.jkwd-ul li .li-l {
+				border: 1px solid #ccc;
+				display: inline-block;
+				float: left;
+				width: 70px;
+				height: 70px;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+			
+			.jkwd-ul li .li-l img {
+				width: 70px;
+				height: 70px;
+			}
+			
+			.jkwd-ul li .li-r {
+				display: inline-block;
+				float: left;
+			}
+			
+			.jkwd-ul li .li-r h2 {
+				margin-top: 0;
+				font-size: 16px;
+				color: #000;
+				height: 20px;
+				line-height: 20px;
+			}
+			
+			.jkwd-ul li .li-r h2 span {
+				position: relative;
+				top: -2px;
+				color: #fff;
+				background: rgb(249, 157, 46);
+				padding: 0 1px;
+				font-size: 10px;
+				border-radius: 3px;
+				margin-left: 6px;
+			}
+			
+			.jkwd-ul li .li-r h3 {
+				font-size: 15px;
+				margin: 4px 0;
+				color: #000;
+			}
+			
+			.jkwd-ul li .li-r h3 .sp1 {
+				padding-right: 5px;
+				color: rgb(249, 157, 46);
+				font-size: 20px;
+			}
+			
+			.jy-li:nth-child(3) .phone-btn {
+				padding-right: 200px;
+			}
+			
+			.jkwd-ul li .li-r p {
+				font-size: 12px;
+			}
+			
+			.jkwd-ul li .li-r p .sp1 {
+				padding-left: 5px;
+			}
+			
+			.jkwd-ul li .li-r p .sp2 {
+				position: absolute;
+				right: 20px
+			}
+			
+			.jkwd-ul li h4 {
+				margin-top: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp1 {
+				color: #f00;
+				font-size: 20px;
+			}
+			
+			.jkwd-ul li h4 .sp2 {
+				text-decoration: line-through;
+				padding-left: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp3 {
+				position: absolute;
+				right: 20px;
+				display: block;
+				margin-top: -10px;
+			}
+			
+			.jkwd-yhyh {}
+			
+			.jkwd-yhyh div {
+				padding: 10px;
+			}
+			
+			dl {
+				padding: 0 10px;
+			}
+			
+			dl dd {
+				margin-left: 0;
+			}
+			
+			dl dt span {
+				float: right;
+			}
+			
+			.jy-li .phone-btn {
+				background: none;
+				color: #4A4A4A;
+				float: none;
+			}
+			
+			.rmtc {}
+			
+			.rmtc h3 {
+				margin: 5px auto 10px;
+			}
+			
+			.rmtc h3,
+			.rmtc p {
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.rmtc p del {
+				margin-right: 30px;
+			}
+			
+			.rmtc p span:nth-child(2) {
+				font-size: 12px;
+			}
+			
+			.rmtc p span:nth-child(3) {
+				color: #f00;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康网点</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-top" id="healthNetworkDetailTopId">
+			</div>
+		</div>
+		<div class="jkwd-yd border-t" id="healthNetworkDetailProductId">
+			<p class="jy-li jy-navigate-right f12 weak"><span style="top: -2px;position: relative;background: rgb(232,80,63);">热</span>热门套餐</p>
+			<ul class="mui-table-view rmtc" id="healthNetworkDetailProductULId">
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h3>职场白领套餐</h3>
+						<p>门市价：<del>￥123起</del><span>健e价：</span><span>￥123起</span></p>
+					</a>
+				</li>-->
+			</ul>
+		</div>
+		<div class="jkwd-yhyh border-t" id="healthNetworkDetailDiscountId">
+		</div>
+		<div class="jkwd-kjcz border-t" id="healthNetworkDetailCouponsId">
+		</div>
+		<div class="jkwd-yhdp border-t" id="healthNetworkDetailCommentId">
+		</div>
+		<div id="showAddressMap" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="1" />
+					<a href="">苹果地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="2" />
+					<a href="">百度地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="3" />
+					<a href="">高德地图</a>
+				</li>
+				<!--<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="4" />
+					<a href="#">谷歌地图</a>
+				</li>-->
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#showAddressMap"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/util/gps.js"></script>
+	<script src="../../js/healthNetwork/healthNetworkDetail.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

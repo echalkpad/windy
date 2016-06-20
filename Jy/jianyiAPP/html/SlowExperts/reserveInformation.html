@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-table-view:before,.mui-table-view-cell:after,.mui-table-view:after{
+				background: #f1f1f1;
+			}
+			.mui-content>.mui-table-view{
+				margin:0 0 15px;
+			}
+			.mui-table-view{
+				overflow: hidden;
+			}
+			.mui-table-view h2{
+				font-size:14px;
+				float:left;
+				width:75px;
+				line-height:21px;
+				color:#666;
+			}
+			.mui-table-view strong{
+				font-weight:normal;
+				color:#f00;
+				font-size:14px;
+			}
+			.mui-table-view span{
+				float:left;
+				font-size:14px;
+				max-width:65%;
+			}
+			.lettersapcing2 h2{
+				letter-spacing:12px;
+			}
+			.lettersapcing3 h2{
+				letter-spacing:7px;
+			}
+			.mui-table-view-cell textarea{
+				border:1px solid #eee;
+				margin-top:5px;
+				font-size:14px;
+				color:#666;
+				margin:0;
+			}
+			.mui-input-row{
+				font-size:12px;
+				padding:0 0 0 40px;
+				position: relative;
+				margin-top:-10px;
+			}
+			.mui-input-row input[type=checkbox]{
+				right:auto;
+				left:15px;
+				top:6px;
+			}
+			.mui-input-row input[type=checkbox]:before{
+				font-size:22px;
+			}
+			.mui-input-row:after{display:none;}
+			.allMony{
+				line-height:40px;
+				position: relative;
+				background:#eee;
+				padding:0 15px;
+				margin-top:10px;
+			}
+			.allMony a{
+				position: absolute;
+				right:0;
+				top:0;
+				display:block;
+				width:30%;
+				height:40px;
+				background:#00b6f3;
+				color:#fff;
+				text-align: center;
+			}
+			.mui-btn, button, input[type=button], input[type=reset], input[type=submit]{
+				border:0;
+				background:none;
+			}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit]{
+				background:none;
+				border:0;
+				color:#333;
+			}
+			.mui-input-row small{
+				display:block;
+			    width: 100%;
+			    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+			    line-height: 1.1;
+			    padding: 11px 15px;
+			    font-size: 14px;
+			}
+			.mui-table-view input[type=number],.mui-table-view input[type=text]{
+				margin:0;
+				width:100%;
+				padding:0;
+				height:auto;
+				border:0;
+			}
+			.submitBooking{
+				width:100%;
+				padding:8px 15px;
+				/*position: fixed;
+				bottom:0;*/
+				margin:20px 0;
+			}
+			.submitBooking a{
+				display:block;
+				line-height: 40px;
+				color:#fff;
+				background:#00b6f3;
+				border-radius:5px;
+				text-align:center;
+				font-size:16px;
+			}
+			.copyright{
+				font-size:14px;
+				color:#999;
+				text-align:center;
+				margin-top:10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约信息</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing2"><h2>医&nbsp;生</h2><span id="reserveDocotrNameID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>医&nbsp;院</h2><span id="reserveHospitalNameID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>科&nbsp;室</h2><span id="reserveDepartmentNameID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊日期</h2><span id="reserveAppointmentTimeID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊地点</h2><span id="reserveAddressID"></span></li>
+				<!--<input type="hidden" id="reservePhoneID" value="" />
+				<input type="hidden" id="reserveIDNumberID" value="" />-->
+				<input type="hidden" id="reserveSourceID" value="" />
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3" id="patient">
+					<a href="" class="mui-navigate-right">
+						<h2>就诊人</h2>
+						<span id="patientResult">请选择</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell lettersapcing2" id="name">
+					<h2>姓&nbsp;名</h2>
+					<span id="nameResult"><!--  onkeyup="commomUtil.validateKeyUp(this,1);"-->
+						<input type="text" id="reservePatientNameID" value="" placeholder="请填写/选择就诊人" onkeyup="commomUtil.validateKeyUp(this,2);"/>
+					</span>
+				</li>
+				<li class="mui-table-view-cell lettersapcing3" id="IdCard">
+					<h2>身份证</h2>
+					<span id="IdCardResult">
+						<input type="text" id="reserveIDNumberID" value="" placeholder="请填写正确的身份证号码" onkeyup="commomUtil.validateKeyUp(this,2);"/>
+					</span>
+				</li>
+				<li class="mui-table-view-cell lettersapcing2" id="phone">
+					<h2>手&nbsp;机</h2>
+					<span id="phoneResult"><!-- onkeyup="commomUtil.validatePhontKeyUp(this);"-->
+						<input type="number" id="reservePhoneID" value="" placeholder="请填写正确的手机号码" maxlength="11"/>
+					</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<h2>病情描述</h2>
+					<textarea name="" rows="3" cols="" id="diseaseDescID" placeholder="请输入病情描述" onkeyup="commomUtil.validateKeyUp(this,1);"></textarea>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>咨询费</h2><span id="reservePriceID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>保证金</h2><span id="reserveEnsureID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3" id="coupons"><a href="" class="mui-navigate-right"><h2>优惠券</h2><span id="couponsResult">暂无优惠券<!--请选择--></span></a></li>
+				<li class="mui-table-view-cell lettersapcing2" id="mony"><h2>合&nbsp;计</h2><strong id="monyResult">0.01</strong></li>
+				<!--<li class="mui-table-view-cell lettersapcing3">
+					<h2>现金券</h2>
+					<div class="mui-switch mui-switch-mini">
+					  <div class="mui-switch-handle"></div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell lettersapcing2 mui-checkbox">
+					<label><h2>券&nbsp;1</h2><span>0元</span></label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</li>
+				<li class="mui-table-view-cell lettersapcing2 mui-checkbox">
+					<label><h2>券&nbsp;2</h2><span>0元</span></label>
+					<input name="checkbox1" value="Item 1" type="checkbox">
+				</li>-->
+			</ul>
+			<div class="mui-input-row mui-checkbox" id="reservecheckboxID">
+			 	<input id="reserveCheckDivID" name="checkbox1" value="0" type="checkbox">
+			  	<small>我已了解并同意<a href="">《预约挂号协议》</a></small>
+			</div>
+			<!--<div class="allMony" id="reserveTotalID">
+			</div>-->
+			<!--<div class="copyright">本次服务由郁金香挂号网提供</div>-->
+			<div class="submitBooking" id="reserveSubmitAppointmentID">
+				<a href="">提交预约</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/mui.picker.min.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/reserveInformation.js"></script>
+</html>

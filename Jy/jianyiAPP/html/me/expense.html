@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-content>.mui-table-view:first-child{
+				margin:0;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				padding-left:55px;
+			}
+			.mui-table-view p{
+				font-size:12px;
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			.mui-table-view h3{
+				color:#333;
+				font-size:14px;
+				line-height:24px;
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.mui-table-view-cell{
+				position: relative;
+				padding-right:75px;
+			}
+			.mui-table-view span{
+				display: block;
+				width:60px;
+				position: absolute;
+				right:15px;
+				top:12px;
+				font-size:14px;
+				text-align:right;
+				color:#8f8f94;
+			}
+			.mui-table-view strong{
+				font-weight: normal;
+				font-size:16px;
+				display:block;
+				color:#E73029;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">交易记录</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<h3>益丰大药房-控江路店</h3>
+					<p>2016-06-05 12:20:27</p>
+					<span>
+						<strong>14元</strong>消费
+					</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<h3>益丰大药房-控江路店</h3>
+					<p>2016-06-05 12:20:27</p>
+					<span>
+						<strong>14元</strong>消费
+					</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<h3>益丰大药房-控江路店</h3>
+					<p>2016-06-05 12:20:27</p>
+					<span>
+						<strong>14元</strong>消费
+					</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

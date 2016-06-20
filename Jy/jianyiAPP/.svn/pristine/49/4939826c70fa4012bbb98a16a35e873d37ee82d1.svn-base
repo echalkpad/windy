@@ -1,0 +1,115 @@
+//订单剩余过期时间
+var residueTiem = "";
+var payFlag = true;
+var orders = {
+	/*
+		"ID": "1",
+		"DoctorName": "测试医生",
+		"VisitDate": "2016-4-27 10:00",
+		"OrderNo": "1",
+		"TotalFee": "0.01"*/
+};
+var backid = "";
+var backurl = "";
+document.addEventListener('plusready', function() {
+	var payFlag = true;
+	var self = plus.webview.currentWebview();
+	var orderId = self.orderId;
+	backid = self.backid;
+	backurl = self.backurl;
+	slowOrderDetailsPay.initOrderDetails(orderId);
+});
+var slowOrderDetailsPay = {
+	initOrderDetails: function(orderId) {
+		if (payFlag) {
+			jyapp.getApi({
+				method: 'Treat/OrderDetails',
+				data: 'orderId=' + orderId,
+				timeout: 10000,
+				onsuccess: function(response) {
+					var dataValue = response.data;
+					if (dataValue != null) {
+						orders = dataValue;
+						var strTime = dataValue.VisitDate;
+						var endLen = strTime.length - 2;
+						var time = strTime.substring(6, endLen);
+						var visit = commomUtil.formatStringToDate(time, 2);
+						var VisitDate = (visit.substring(0, visit.length - 3));
+						var week = commomUtil.formatDateToWeek(time);
+						document.getElementById("slowOrderPaySpanNameID").innerHTML = dataValue.doctorName;
+						document.getElementById("slowOrderPaySpanTimeID").innerHTML = VisitDate + '(' + week + ')';
+						document.getElementById("slowOrderPayAddressID").innerHTML = dataValue.VisitPlace;
+						document.getElementById("slowOrderPayPatientID").innerHTML = dataValue.patientName;
+						document.getElementById("slowOrderPayIdNumberID").innerHTML = dataValue.IDCard;
+						document.getElementById("slowOrderPayPhoneID").innerHTML = dataValue.Phone;
+						document.getElementById("slowOrderPayConsultingPriceID").innerHTML = "¥" + dataValue.Fee;
+						document.getElementById("slowOrderPayEnsureID").innerHTML = "¥" + dataValue.Deposit;
+						var cashCoupon = dataValue.TotalFee - (dataValue.Deposit + dataValue.Fee);
+						document.getElementById("slowOrderPayCashCouponID").innerHTML = "¥" + cashCoupon;
+						document.getElementById("slowOrderPayTotalPriceID").innerHTML = "¥" + dataValue.TotalFee;
+						document.getElementById("slowOrderPayOrderNoID").value = dataValue.OrderNo;
+						residueTiem = dataValue.residueTiem;
+					}
+				},
+				onerror: function(e) {
+					console.log("getCoustomerInfo:" + e);
+					//					plus.nativeUI.alert(e, '', '提示', '确认');
+					return false;
+				}
+			});
+		}
+	},
+	submitOrderDetailsPay: function() {
+		var payinfo = {
+			subject: '慢病预约订单',
+			body: "您预约的医生: " + orders.DoctorName + ",就诊时间:" + orders.VisitDate,
+			orderno: orders.OrderNo,
+			totalfee: orders.TotalFee,
+			orderId: orders.ID,
+			type: "slowOrder",
+			backurl:backurl,
+			backid : backid,
+			successpage: {
+				id: 'payOrderSucceed',
+				url: '../pay/payOrderSucceed.html'
+			},
+			backCell: {
+				id: 'slowOrderList',
+				url: "../SlowExperts/slowOrderList.html",
+				index: 0
+			}
+		}
+//		console.log(JSON.stringify(payinfo));
+		commomUtil.closeWebviewById("payment");
+		mui.openWindow({
+			id: 'payment',
+			url: "../core/payment.html",
+			createNew: true,
+			extras: {
+				payinfo: payinfo
+			}
+		});
+	},
+	cancelOrderDetailsPay: function() {
+		commomUtil.closeWebviewById("slowOrderList");
+		mui.openWindow({
+			id: 'slowOrderList',
+			url: "slowOrderList.html",
+//			createNew: true,
+			extras: {
+				backurl:backurl,
+				backid : backid,
+				index: 0
+			}
+		});
+	}
+}
+//绑定返回按钮
+document.getElementById("orderDetailsPayReBackID").addEventListener('click', slowOrderDetailsPay.cancelOrderDetailsPay);
+//mui.back = function(e){
+//	slowOrderDetailsPay.cancelOrderDetailsPay();
+//}
+//取消支付
+document.getElementById("slowCancel").addEventListener('click', slowOrderDetailsPay.cancelOrderDetailsPay);
+//绑定支付页面跳转
+document.getElementById("slowSubmitPayID").addEventListener('click', slowOrderDetailsPay.submitOrderDetailsPay);

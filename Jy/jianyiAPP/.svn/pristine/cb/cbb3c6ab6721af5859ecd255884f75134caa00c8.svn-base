@@ -1,0 +1,476 @@
+mui(".mui-content").on('tap', '#drugInfo', function() {
+	mui.openWindow({
+		id: 'indexFamilyDoctor',
+		url: "../../html/medication/medicationManage.html"
+	});
+})
+mui('.mui-table-view').on('tap', '#meHabit', function(e) {
+	mui('#habit').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meLabourStrength', function(e) {
+	mui('#labourStrength').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meHouseholdDevices', function(e) {
+	mui('#householdDevices').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meAllergy', function(e) {
+	mui('#allergy').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meMedicalContraindications', function(e) {
+	mui('#medicalContraindications').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meMedicationHistory', function(e) {
+	mui('#medicationHistory').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meGxy', function(e) {
+	mui('#gxy').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meGxyb', function(e) {
+	mui('#gxyb').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meTnb', function(e) {
+	mui('#tnb').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meTnbb', function(e) {
+	mui('#tnbb').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meGxz', function(e) {
+	mui('#gxz').popover('toggle');
+});
+mui('.mui-table-view').on('tap', '#meXnxg', function(e) {
+	mui('#xnxg').popover('toggle');
+});
+
+function hasClass(elements, cName) {
+	return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
+};
+
+function addClass(elements, cName) {
+	if (!hasClass(elements, cName)) {
+		elements.className += " " + cName;
+	};
+};
+
+function removeClass(elements, cName) {
+	if (hasClass(elements, cName)) {
+		elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), " ");
+	};
+};
+
+function att(e) {
+	var aLi = e.parentNode.children;
+	for (var i = 0; i < aLi.length; i++) {
+		removeClass(aLi[i], 'selector');
+		addClass(e, 'selector');
+	}
+}
+
+function Last(e) {
+	var arr = e.parentNode.children;
+	var m = arr.length - 1;
+	var Last = arr[m];
+	removeClass(Last, 'selector');
+}
+
+mui('.more').on('tap', 'li:not(:last-child)', function() {
+	if (hasClass(this, 'selector')) {
+		removeClass(this, 'selector');
+	} else {
+		var tn1 = document.getElementById("tn1")
+		var tn2 = document.getElementById("tn2")
+		Last(this);
+		addClass(this, 'selector');
+		if (this == tn1) {
+			removeClass(tn2, 'selector');
+		}
+		if (this == tn2) {
+			removeClass(tn1, 'selector');
+		}
+	}
+})
+
+mui('.more').on('tap', 'li:last-child', function() {
+	if (hasClass(this, 'selector')) {
+		removeClass(this, 'selector');
+	} else {
+		att(this);
+	}
+})
+mui('.pup').on('tap', '.btn-cancel', function() {
+	var L = this.parentNode.parentNode.children[1].children[0].children[0].children;
+	for (var i = 0; i < L.length; i++) {
+		removeClass(L[i], 'selector');
+	}
+})
+
+mui('#labourStrength').on('tap', 'li', function() {
+	if (hasClass(this, 'selector')) {
+		removeClass(this, 'selector');
+	} else {
+		att(this);
+	}
+})
+
+function InText(e, result) {
+	var S = e.parentNode.parentNode.children[1].children[0].children[0].children;
+	var Text;
+	for (var i = 0; i < S.length; i++) {
+		if (hasClass(S[i], 'selector')) {
+			Text += S[i].children[0].innerHTML + '、';
+		}
+	}
+	var inner = Text.slice(9).substring(0, Text.slice(9).length - 1);
+	result.innerHTML = inner;
+}
+
+mui('#habit').on('tap', '.btn-ok', function() {
+	var habitResult = document.getElementById('habitResult');
+	InText(this, habitResult);
+})
+mui('#labourStrength').on('tap', '.btn-ok', function() {
+	var labourStrengthResult = document.getElementById('labourStrengthResult');
+	InText(this, labourStrengthResult);
+})
+
+mui('#householdDevices').on('tap', '.btn-ok', function() {
+	var householdDevicesResult = document.getElementById('householdDevicesResult');
+	InText(this, householdDevicesResult);
+})
+
+mui('#allergy').on('tap', '.btn-ok', function() {
+	var allergyResult = document.getElementById('allergyResult');
+	InText(this, allergyResult);
+})
+mui('#medicalContraindications').on('tap', '.btn-ok', function() {
+	var medicalContraindicationsResult = document.getElementById('medicalContraindicationsResult');
+	InText(this, medicalContraindicationsResult);
+})
+mui('#gxy').on('tap', '.btn-ok', function() {
+	var gxyResult = document.getElementById('gxyResult');
+	InText(this, gxyResult);
+})
+mui('#gxyb').on('tap', '.btn-ok', function() {
+	var gxybResult = document.getElementById('gxybResult');
+	InText(this, gxybResult);
+})
+mui('#tnb').on('tap', '.btn-ok', function() {
+	var tnbResult = document.getElementById('tnbResult');
+	InText(this, tnbResult);
+})
+mui('#tnbb').on('tap', '.btn-ok', function() {
+	var tnbbResult = document.getElementById('tnbbResult');
+	InText(this, tnbbResult);
+})
+mui('#gxz').on('tap', '.btn-ok', function() {
+	var gxzResult = document.getElementById('gxzResult');
+	InText(this, gxzResult);
+})
+mui('#xnxg').on('tap', '.btn-ok', function() {
+	var xnxgResult = document.getElementById('xnxgResult');
+	InText(this, xnxgResult);
+})
+mui('#medicationHistory').on('tap', '.btn-ok', function() {
+	var medicationHistoryResult = document.getElementById('medicationHistoryResult');
+	InText(this, medicationHistoryResult);
+})
+
+mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});
+
+//初始化
+var height = '',
+	weight = '';
+var FamilyId = null;
+//是否新增
+var isF = false;
+var isFamilyId = false; //判断是不是家人健康档案是为true
+var newDate = JSON.parse(localStorage.getItem("oneInfo"));
+var mePic = document.getElementById("mePic");
+var Name = document.getElementById("Name") //姓名
+var Sex = document.getElementById("Sex") //性别
+var Birthday = document.getElementById("Birthday") //生日
+var Height = document.getElementById("Height") //身高
+var Weight = document.getElementById("Weight") //体重
+var habit = document.getElementById("habit").querySelectorAll('li'); //习惯
+var labourStrength = document.getElementById("labourStrength").querySelectorAll('li'); //劳动强度
+var householdDevices = document.getElementById("householdDevices").querySelectorAll('li'); //家用设备
+var allergy = document.getElementById("allergy").querySelectorAll('li'); //药物过敏史
+var medicalContraindications = document.getElementById("medicalContraindications").querySelectorAll('li'); //用药禁忌症
+var medicationHistory = document.getElementById("medicationHistory").querySelectorAll('li'); //用药史
+var gxy = document.getElementById("gxy").querySelectorAll('li'); //高血压
+var gxyb = document.getElementById("gxyb").querySelectorAll('li'); //高血压并发症
+var tnb = document.getElementById("tnb").querySelectorAll('li'); //糖尿病
+var tnbb = document.getElementById("tnbb").querySelectorAll('li'); //糖尿病并发症
+var gxz = document.getElementById("gxz").querySelectorAll('li'); //高血脂
+var xnxg = document.getElementById("xnxg").querySelectorAll('li'); //心脑血管疾病
+var medicationHistoryResult = document.getElementById("medicationHistoryResult") //用药史
+var FastingBloodGlucose = document.getElementById("FastingBloodGlucose"); //空腹血糖
+var GlycosylatedHemoglobin = document.getElementById("GlycosylatedHemoglobin") //糖化血红蛋白
+var TotalCholesterol = document.getElementById("TotalCholesterol") //总胆固醇
+var GlycerinThreeFat = document.getElementById("GlycerinThreeFat") //甘油三脂
+var HighDensityLipoprotein = document.getElementById("HighDensityLipoprotein") //高密度脂蛋白
+var LowDensityLipoprotein = document.getElementById("LowDensityLipoprotein") //低密度脂蛋白
+
+//点击提交
+mui('header').on('tap', '#hr-submit', function() {
+	healthRecords.setData(FamilyId);
+	var InpNum=document.getElementsByTagName('input')
+	for(var i=0;i<InpNum.length;i++){
+		InpNum[i].blur();
+	}
+
+})
+
+	//初始化
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	if (!!self) {
+		FamilyId = self.familyId;
+		healthRecords.init(FamilyId);
+		return false
+	}
+	healthRecords.init();
+})
+
+var healthRecords = {
+	setData: function(FamilyId) {
+		Habit = getCode(habit);
+		LabourIntensity = getCode(labourStrength);
+		HouseholdEquipment = getCode(householdDevices);
+		DrugAllergyHistory = getCode(allergy);
+		Contraindications = getCode(medicalContraindications);
+		MedicationHistory1 = getCode(medicationHistory);
+		Hypertension = getCode(gxy);
+		HypertensionComplications = getCode(gxyb);
+		Diabetes = getCode(tnb);
+		DiabeticComplications = getCode(tnbb);
+		HighBloodLipid = getCode(gxz);
+		CCVd = getCode(xnxg);
+		var data = "Height=" + parseInt(Height.innerText.slice(0, -3)) + "&Weight=" +
+			parseInt(Weight.innerText.slice(0, -2)) + "&Habit=" + Habit + "&LabourIntensity=" + LabourIntensity + "&HouseholdEquipment=" + HouseholdEquipment + "&DrugAllergyHistory=" + DrugAllergyHistory + "&Contraindications=" + Contraindications + "&Hypertension=" + Hypertension + "&HypertensionComplications=" +
+			HypertensionComplications + "&Diabetes=" + Diabetes + "&DiabeticComplications=" + DiabeticComplications + "&HighBloodLipid=" + HighBloodLipid + "&CCVd=" + CCVd + "&MedicationHistory=" +
+			MedicationHistory1 + "&FastingBloodGlucose=" + FastingBloodGlucose.value.slice(0, -6) + "&GlycosylatedHemoglobin=" + GlycosylatedHemoglobin.value.slice(0, -1) + "&TotalCholesterol=" + TotalCholesterol.value.slice(0, -6) + "&GlycerinThreeFat=" +
+			GlycerinThreeFat.value.slice(0, -6) + "&HighDensityLipoprotein=" + HighDensityLipoprotein.value.slice(0, -6) + "&LowDensityLipoprotein=" + LowDensityLipoprotein.value.slice(0, -6);
+		//判断是新增还是跟新并跟新入参
+		if (!!isF) {
+			data = data + '&ID=' + isF;
+			if (isFamilyId) {
+				data = data + '&familyId=' + isFamilyId + '&accountType=1' + '&ID=' + isF;
+			}
+		} else if (isFamilyId) {
+			data = data + '&familyId=' + isFamilyId + '&accountType=1'
+		}
+		//判断是不是家人健康档案保存并更新入参
+		var url = 'Profile/UpdateHealthFile';
+		ajax(url, data, function() {});
+	},
+	init: function(FamilyId) {
+		var FamilyId;
+		if (FamilyId) {
+			isFamilyId = FamilyId;
+			FamilyId = 'accountType=1&familyId=' + FamilyId;
+		}
+		//跟新头像
+		jyapp.getApi({
+			method: 'Profile/PersonData',
+			onsuccess: function(data) {
+				if (data.data.Head !== null) {
+					mePic.setAttribute('src', data.data.Head);
+					mePic.setAttribute('onerror', "this.src='../../img/default/huiyuan_touxiang.png';this.onerror=null");
+				}
+			},
+			onerror: function(e) {
+				alert(e);
+			}
+		});
+		ajax('Profile/HealthFile', FamilyId, function(data) {
+			console.log('---' + JSON.stringify(data))
+			Name.innerText = newDate.fullname;
+			Sex.innerText = ['男', '女', '保密', '未知'][newDate.gender];
+			if (data.Birthday == null) {
+				Birthday.innerText = '';
+			} else {
+				Birthday.innerText = getNewYear(data.Birthday);
+			}
+			if (data.Height != null || data.Weight != null) {
+				Height.innerText = data.Height + '/cm,';
+				Weight.innerText = data.Weight + 'kg';
+			}
+			//判断是不是家人健康档案并更新个人信息
+			if (isFamilyId) {
+				var url = 'profile/FamilyInformation';
+				ajax(url, FamilyId, function(data) {
+					Name.innerText = data.Name;
+					Sex.innerText = ['男', '女', '保密', '未知'][data.Gender];
+					if (data.Birthday == null) {
+						Birthday.innerText = '';
+					} else {
+						Birthday.innerText = getNewYear(data.Birthday);
+					}
+					//跟新头像
+					if (data.Head !== null) {
+						mePic.setAttribute('src', data.Head);
+						mePic.setAttribute('onerror', "this.src='../../img/default/huiyuan_touxiang.png';this.onerror=null");
+					}
+				})
+			}
+			//判断身高是不是从页面传的还是接口读取的
+			var self = plus.webview.currentWebview();
+			if (!!self.height) {
+				var height = self.height;
+				var perWeight = self.perWeight;
+				Height.innerText = height + '/cm,';
+				Weight.innerText = perWeight + 'kg';
+			}
+			//判断是新增还是跟新
+			if (data.ID == 0 || data == null) {
+				return
+			}
+			isF = data.ID;
+			var medicationHistoryN = document.getElementById("medicationHistory").querySelectorAll('li'); //用药史
+			var habitResult = document.getElementById("habitResult"); //习惯
+			var labourStrengthResult = document.getElementById("labourStrengthResult") //劳动强度
+			var householdDevicesResult = document.getElementById("householdDevicesResult") //家用设备
+			var drugInfo = document.getElementById("drugInfo") //我的用药信息
+			var allergyResult = document.getElementById("allergyResult") //药物过敏史
+			var medicalContraindicationsResult = document.getElementById("medicalContraindicationsResult") //用药禁忌症
+			var medicationHistoryResult = document.getElementById("medicationHistoryResult"); //用药史
+			var gxyResult = document.getElementById("gxyResult") //高血压
+			var gxybResult = document.getElementById("gxybResult") //高血压并发症
+			var tnbResult = document.getElementById("tnbResult") //糖尿病
+			var tnbbResult = document.getElementById("tnbbResult") //糖尿病并发症
+			var gxzResult = document.getElementById("gxzResult") //高血脂
+			var xnxgResult = document.getElementById("xnxgResult") //心脑血管疾病
+			setCode(habit, data.Habit, habitResult);
+			setCode(labourStrength, data.LabourIntensity, labourStrengthResult);
+			setCode(householdDevices, data.HouseholdEquipment, householdDevicesResult);
+			setCode(allergy, data.DrugAllergyHistory, allergyResult);
+			setCode(medicalContraindications, data.Contraindications, medicalContraindicationsResult);
+			setCode(gxy, data.Hypertension, gxyResult);
+			setCode(gxyb, data.HypertensionComplications, gxybResult);
+			setCode(tnb, data.Diabetes, tnbResult);
+			setCode(tnbb, data.DiabeticComplications, tnbbResult);
+			setCode(gxz, data.HighBloodLipid, gxzResult);
+			setCode(xnxg, data.CCVd, xnxgResult);
+			setCode(medicationHistoryN, data.MedicationHistory, medicationHistoryResult);
+			data.FastingBloodGlucose == null ? FastingBloodGlucose.value = '' : FastingBloodGlucose.value = data.FastingBloodGlucose + 'mmol/l';
+			data.GlycosylatedHemoglobin == null ? GlycosylatedHemoglobin.value = '' : GlycosylatedHemoglobin.value = data.GlycosylatedHemoglobin + '%';
+			data.TotalCholesterol == null ? TotalCholesterol.value = '' : TotalCholesterol.value = data.TotalCholesterol + 'mmol/l';
+			data.GlycerinThreeFat == null ? GlycerinThreeFat.value = '' : GlycerinThreeFat.value = data.GlycerinThreeFat + 'mmol/l';
+			data.HighDensityLipoprotein == null ? HighDensityLipoprotein.value = '' : HighDensityLipoprotein.value = data.HighDensityLipoprotein + 'mmol/l';
+			data.LowDensityLipoprotein == null ? LowDensityLipoprotein.value = '' : LowDensityLipoprotein.value = data.LowDensityLipoprotein + 'mmol/l';
+		})
+	}
+}
+
+function ajax(url, data, ca) {
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			console.log(JSON.stringify(data));
+			if (data.code == 1) {
+				if (data.msg != 'ok') {
+					mui.toast(data.msg);
+				}
+				if (ca) ca(data.data);
+			}
+		},
+		onerror: function(e) {
+			console.log(JSON.stringify(e));
+			mui.toast(e.msg);
+		}
+	});
+}
+//获取页面加载的cod值和高亮class
+function getCode(data) {
+	var newData = '';
+	for (var i = 0, len = data.length; i < len; i++) {
+		if (data[i].classList.contains("selector")) {
+			newData += data[i].getAttribute('cod') + ',';
+		}
+	}
+	return newData.slice(0, -1);
+}
+//设置页面加载的cod值和高亮class
+function setCode(data, cod, data2) {
+	if (cod == null) {
+		for (var i = 0, len = data.length; i < len; i++) {
+			data[i].setAttribute('cod', 0);
+			data2.innerText = '无';
+		}
+		return
+	}
+	var cod = cod.split(',');
+	for (var j = 0, len = cod.length; j < len; j++) {
+		for (var i = 0, len = data.length; i < len; i++) {
+			if (data[i].getAttribute('cod') === cod[j]) {
+				data[i].setAttribute('class', 'selector');
+				data2.innerText = data2.innerText + data[i].innerText + '、';
+			}
+		}
+	}
+	data2.innerText = data2.innerText.slice(0, -1);
+}
+//获取岁数
+function getNewYear(data) {
+	var year, newYear;
+	year = new Date(parseInt(data.slice(6, -2))).getFullYear();
+	newYear = new Date().getFullYear() - year
+	return '，' + newYear + '岁'
+}
+
+//获取尺子页面的宽高
+window.addEventListener('sendHW', function(event) {
+	var height = event.detail.height;
+	var perWeight = event.detail.perWeight;
+	Height.innerText = height + '/cm,';;
+	Weight.innerText = perWeight + 'kg';;
+});
+
+//自动获取单位
+mui('.mui-content').on('click', '.sr', function() {
+	console.log()
+	var V = this.childNodes[1].childNodes[1];
+	V.value = '';
+	V.focus();
+})
+
+function obtain(e) {
+	var Text = e.value;
+	if (e.value == '' || e.value == undefined || e.value == null || e.value == 0) {
+		e.value = '0mmol/l';
+		return
+	}
+	e.value = Text + 'mmol/l';
+	//	var inner = Text.slice(0).substring(0, Text.slice(5).length - 1);
+}
+
+function obtain2(e) {
+	var Text = e.value;
+	if (e.value == '' || e.value == undefined || e.value == null || e.value == 0) {
+		e.value = '0%';
+		return
+	}
+	e.value = Text + '%';
+}
+
+function check(str, t) {
+	console.log(str);
+	var temp = ""
+	var reg = /^[0-9]*.$/;
+	if (!reg.test(str)) {
+		return ''
+	}
+	temp = str
+	return temp
+}
+
+document.addEventListener('keyup', function(event) {
+	//键盘回车事件
+	if (!(event.keyCode < 48 || event.keyCode < 57)) {
+		return false;
+	}
+});
+

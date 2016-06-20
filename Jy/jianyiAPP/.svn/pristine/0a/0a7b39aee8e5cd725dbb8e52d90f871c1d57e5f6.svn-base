@@ -1,0 +1,386 @@
+html,
+body {
+	background-color: #f2f6f9!important;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+header {
+	background: #00b6f3!important;
+	height: 50px!important;
+	line-height: 50px!important;
+}
+
+header h1 {
+	color: #fff!important;
+}
+
+header a {
+	color: #fff;
+}
+
+.mui-bar-nav,
+.mui-bar {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.mui-bar-nav~.mui-content {
+	padding-top: 50px!important;
+}
+
+.title {
+	height: 40px;
+	line-height: 40px;
+	color: #9b9b9b;
+	background-color: #fff;
+	padding-left: 10px;
+	font-size: 14px;
+}
+
+.title-more {
+	float: right;
+	margin-right: 20px;
+	margin-top: 7px;
+}
+
+.title-jkzx {
+	position: relative;
+}
+
+.mui-content {
+	background: #fff;
+	overflow: hidden;
+}
+
+.mui-navigate-right:after {
+	font-size: x-large;
+}
+
+.border-b {
+	border-bottom: 10px solid #f2f6f9!important;
+}
+
+.border-t {
+	border-top: 10px solid #f2f6f9!important;
+}
+
+.meta-img {
+	width: 80px;
+	max-width: 80px!important;
+	height: 55px!important;
+}
+
+.ellipsis {
+	font-size: 13px;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.jy-li {
+	padding-left: 10px;
+	position: relative;
+	height: 42px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #000;
+	border-bottom: 1px solid rgb(240, 240, 240);
+	margin: 0;
+}
+
+.jy-li img {
+	margin: 0 10px 0 0;
+}
+
+.jy-li span {
+	padding: 1px;
+	font-size: 9px;
+	color: #fff;
+	border-radius: 2px;
+	margin: 0 5px 0 0;
+}
+
+.jy-li a {
+	margin-top: 7.5px;
+	margin-right: 10px;
+	color: #fff;
+	background: rgb(232, 80, 63);
+	height: 25px;
+	line-height: 25px;
+	width: 55px;
+	text-align: center;
+	float: right;
+}
+
+.jy-navigate-right:after {
+	right: 15px;
+	content: '\e583';
+	font-size: x-large;
+	font-family: Muiicons;
+	line-height: 1;
+	position: absolute;
+	top: 20px;
+	display: inline-block;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-decoration: none;
+	color: #bbb;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/*字体大小规范*/
+
+.mui-bar .mui-title,
+h1 {
+	color: #fff!important;
+	font-size: 18px!important;
+}
+
+.f12 {
+	font-size: 12px!important;
+}
+
+.f13 {
+	font-size: 13px!important;
+	color: #9B9B9B!important;
+}
+
+.f14 {
+	font-size: 14px!important;
+	color: #4A4A4A!important;
+}
+
+.f15 {
+	font-size: 15px!important;
+	color: ＃4A4A4A!important;
+}
+
+.f16 {
+	font-size: 16px!important;
+	color: ＃4A4A4A!important;
+}
+
+.f18 {
+	font-size: 18px!important;
+}
+
+.f20 {
+	font-size: 20px!important;
+}
+
+.weak {
+	color: #9B9B9B!important;
+}
+
+.emphasize {
+	color: #000!important;
+}
+
+.standarder {
+	color: #4A4A4A!important;
+}
+
+.redstars:after {
+	content: '*';
+	color: #f00;
+}
+
+.xingxing {
+	font-size: 20px;
+	color: rgb(249, 157, 46);
+}
+
+.tab-con a {
+	display: block;
+	text-align: center;
+	border-left: 1px solid rgb(244, 244, 244);
+	float: left;
+	width: 50%;
+	position: relative;
+	height: 100px;
+}
+
+.plus span {
+	text-align: center;
+	height: 64px;
+	width: 64px;
+	display: block;
+	border-radius: 50%;
+	background: rgb(247, 245, 247);
+	border: 2px solid rgb(244, 243, 244);
+	padding: ;
+	margin: 15px auto;
+	position: relative;
+}
+
+.plus i {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	left: 50%;
+	font-style: normal;
+	-webkit-transform: translate(-50%, -50%);
+	background: url(../img/btn_yongyao_add.png) no-repeat scroll top left;
+	background-size: cover;
+}
+
+
+/*提交 按钮*/
+
+.medicationSave {
+	padding: 15px 15px 0;
+}
+
+.medicationSave a {
+	background: #00B6F3;
+	border: 1px solid #00B6F3;
+}
+
+
+/*日历控件*/
+
+.mui-checkbox:after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 15px;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #c8c7cc;
+}
+
+.mui-checkbox:last-child:after {
+	background: none;
+}
+
+.mc-container,
+.mc-container a {
+	color: #fff;
+	font-size: 1em;
+}
+
+.mc-container {
+	background: #00b6f3;
+}
+
+.mc-toolbar {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px 20px;
+	text-align: center;
+}
+
+.mc-toolbar img {
+	vertical-align: middle;
+	margin-right: 8px;
+}
+
+.mc-table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 14px;
+	text-align: center;
+	border: 0;
+}
+
+.mc-table-row {
+	height: 40px;
+	padding: 0 10px;
+}
+
+.mc-table-head {
+	border: 0;
+	height: 30px;
+	line-height: 30px;
+	background: #04abe3;
+}
+
+.mc-table-cell[disabled='disabled'] a {
+	color: #dddddd;
+}
+
+.mc-cell-selected {
+	background-color: none;
+}
+
+.mc-cell-selected a {
+	color: #00b6f3;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.mc-table-cell-today a {
+	border-radius: 50%;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+}
+
+#mc-btn-previous {
+	width: 30px;
+	height: 100%;
+	border: 0;
+	background: url(../img/btn_return.png) no-repeat scroll center 15px;
+	background-size: 10px 17px;
+	float: left;
+}
+
+#mc-btn-today {
+	height: 30px;
+	color: #333;
+	display: none;
+}
+
+#mc-btn-next {
+	width: 30px;
+	height: 100%;
+	border: 0;
+	background: url(../img/btn_next.png) no-repeat scroll center 15px;
+	background-size: 10px 17px;
+	float: right;
+}
+
+
+/*复选框颜色*/
+
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+	color: #00b6f3;
+}
+
+.mui-table-view-cell span,
+.mui-table-view-cell input {
+	overflow: initial!important;
+}
+
+

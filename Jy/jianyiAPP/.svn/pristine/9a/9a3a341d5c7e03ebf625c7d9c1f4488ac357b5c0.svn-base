@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			article img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			
+			.expertsEntrance {
+				margin: 0;
+				padding: 0;
+				background: #fff;
+			}
+			
+			.expertsEntrance:after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			
+			.expertsEntrance li {
+				list-style: none;
+				width: 25%;
+				float: left;
+			}
+			
+			.expertsEntrance a {
+				display: block;
+				height: 110px;
+				padding-top: 70px;
+				text-align: center;
+				border-right: 1px solid #f2f6f9;
+			}
+			
+			.expertsEntrance li:nth-child(1) a {
+				background: url(../../img/cancerExperts/btn_yiyuan.png) no-repeat scroll center 24px;
+				background-size: 40px 36px;
+			}
+			
+			.expertsEntrance li:nth-child(2) a {
+				background: url(../../img/cancerExperts/btn_jibin.png) no-repeat scroll center 24px;
+				background-size: 40px 34px;
+			}
+			
+			.expertsEntrance li:nth-child(3) a {
+				background: url(../../img/cancerExperts/btn_sousuo.png) no-repeat scroll center 20px;
+				background-size: 40px 40px;
+			}
+			
+			.expertsEntrance li:nth-child(4) a {
+				background: url(../../img/cancerExperts/btn_zixun.png) no-repeat scroll center 20px;
+				border: 0;
+				background-size: 40px 40px;
+			}
+			
+			.expertsEntrance h2 {
+				font-size: 18px;
+				color: #333;
+			}
+			
+			.events {
+				margin: 15px auto;
+				background: #fff;
+			}
+			
+			.events ul:last-child {
+				border-top: 15px solid #f2f6f9;
+			}
+			
+			.events h2 {
+				color: #999;
+				font-size: 16px;
+				padding: 15px 0 5px 15px;
+			}
+			
+			.events .mui-table-view:before {
+				display: none;
+			}
+			
+			.events img {
+				border-radius: 50%;
+				float: left;
+				width: 70px;
+				height: auto;
+				margin-right: 10px;
+			}
+			
+			.events h3 {
+				color: #333;
+				font-size: 18px;
+			}
+			
+			.events p {
+				font-size: 14px;
+				line-height: 22px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.events section {
+				position: relative;
+			}
+			
+			.events section h3 {
+				padding-right: 55px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 24px;
+				font-size: 16px;
+			}
+			
+			.events span {
+				display: block;
+			}
+			
+			.events small {
+				font-size: 16px;
+			}
+			
+			.events strong {
+				position: absolute;
+				right: 0;
+				top: 2px;
+				color: #ff5e5e;
+				font-size: 18px;
+			}
+			
+			.events em {
+				font-style: normal;
+				font-size: 16px;
+				color: #333;
+			}
+			
+			.zl-title-yy {
+				float: right;
+				line-height: 44px;
+			}
+			
+			.mui-slider {
+				max-height: 160px;
+			}
+			
+			.mui-slider-group img{
+				display:block;
+			}
+			
+			#pullrefresh2 {
+				top: 50px
+			}
+			
+			.mui-bar-nav~.mui-content .mui-pull-top-pocket {
+				top: 0;
+			}
+			.zanwu_none{
+				display: /*none*/;
+				text-align: center;
+				height:92px;
+				font-size:14px;
+				color:#999;
+				margin-top:5px;
+				margin-top:5px;
+				border-top:1px solid #f1f1f1;
+			}
+			.zanwu_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="cancerExpertsBackCellId"></a>
+			<h1 class="mui-title">肿瘤专家</h1>
+			<a href="" class="zl-title-yy" id="goCancerOrderList">我的预约</a>
+		</header>
+		<div class="mui-content">
+			<div id="pullrefresh2" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<article>
+						<div id="slider" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop" id="cancerExpertsBannerDivID">
+								<script id="tpl1" type="text/template">
+									{@each list as it,index} {@if index==0}
+									<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate" URL=${it.lastURL} description=${it.lastDescription}>
+										<a href="#">
+											<img src=${it.lastPic}>
+											<!--<img src="../img/common/pic_home_banner.png">-->
+										</a>
+									</div>
+									{@/if}
+									<!-- 第N张 -->
+									<div class="mui-slider-item" URL=${it.URL} description=${it.Description}>
+										<a href="#">
+											<img src=${it.Pic}>
+										</a>
+									</div>
+									{@if index==(list.length-1)}
+									<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+									<div class="mui-slider-item mui-slider-item-duplicate" URL=${it.firstURL} description=${it.firstDescription}>
+										<a href="#">
+											<img src=${it.firstPic}>
+										</a>
+									</div>
+									{@/if} {@/each}
+								</script>
+							</div>
+							<div class="mui-slider-indicator" id="cancerExpertsBannerDiv2ID">
+								<div class="mui-indicator mui-active"></div>
+								<script id="tpl2" type="text/template">
+									{@each list as it} {@if index != (list.length-1)}
+									<div class="mui-indicator"></div>
+									{@/if} {@/each}
+								</script>
+							</div>
+						</div>
+					</article>
+					<ul class="expertsEntrance">
+						<li><a href="" id="cancerExpertsList"><h2>按医院</h2></a></li>
+						<li><a href="" id="cancerDiseaseTypes"><h2>按疾病</h2></a></li>
+						<li><a href="" id="cancerExpertsSearch"><h2>搜索</h2></a></li>
+						<li><a href="" id="cancerExpertsmfzx"><h2>免费咨询</h2></a></li>
+					</ul>
+					<div class="events" id="cancerExpertsDetails">
+						<ul class="mui-table-view" id="cancerExpertsHavId">
+							<h2>热门活动</h2>
+							<!--<li class="mui-table-view-cell">
+								<a href="#">
+									<img src="../../img/pic_people.png" />
+									<section>
+										<h3>任天平&nbsp;副主任医师</h3>
+										<p>北京大学第一医院&nbsp;血液内科<span>预约量：<small>0</small></span></p>
+										<strong>300<em>元</em></strong>
+									</section>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a href="#">
+									<img src="../../img/pic_people.png" />
+									<section>
+										<h3>任天平&nbsp;副主任医师</h3>
+										<p>北京大学第一医院&nbsp;血液内科<span>预约量：<small>0</small></span></p>
+										<strong>300<em>元</em></strong>
+									</section>
+								</a>
+							</li>-->
+							<div class="zanwu_none" id="cancerExpertsHavZanwuID" style="display: none;">
+								<i></i>
+								暂无数据
+							</div>
+						</ul>
+						<ul class="mui-table-view" id="cancerExpertstuijianId">
+							<h2>推荐医师</h2>
+							<!--<li class="mui-table-view-cell">
+								<a href="#">
+									<img src="../../img/pic_people.png" />
+									<section>
+										<h3>任天平&nbsp;副主任医师</h3>
+										<p>北京大学第一医院&nbsp;血液内科<span>预约量：<small>0</small></span></p>
+										<strong>300<em>元</em></strong>
+									</section>
+								</a>
+							</li>-->
+							<div class="zanwu_none" id="cancerExpertsRecZanwuID" style="display: none;">
+								<i></i>
+								暂无数据
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/cancerExperts/cancerExperts.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+		
+		/*mui.init({
+			pullRefresh: {
+				container: '#pullrefresh2',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		
+		// 下拉刷新具体业务实现
+		function pulldownRefresh() {
+			setTimeout(function() {
+				cancerExperts.initcancerExperts();
+				cancerExperts.initSliderBanner();
+				mui('#pullrefresh2').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}*/
+	</script>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+		#showCityPicker {
+				line-height: 21px;
+				width: 100%;
+				height: 40px;
+				margin-bottom: 15px;
+				padding: 10px 8px;
+				-webkit-user-select: text;
+				border: 1px solid rgba(0, 0, 0, .2);
+				border-radius: 3px;
+				outline: 0;
+				background-color: #fff;
+				-webkit-appearance: none;
+				font-size: 14px;
+				height: auto;
+				margin-top: 1px;
+				border: 0!important;
+				background-color: #fff;
+				text-align: center;
+		}
+		.mui-content {
+			background: none;
+		}
+		.hospitalList li:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+		.hospitalList li img {
+			width: 70px;
+			height: 70px;
+			float: left;
+			margin-right: 10px;
+		}
+		.hospitalList h3 {
+			font-size: 18px;
+			line-height: 30px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.hospitalList p {
+			font-size: 16px;
+			line-height: 24px;
+			white-space: nowrap;
+		    text-overflow: ellipsis;
+			overflow:hidden;
+		}
+		.demand {
+			background: #fff;
+		    height: 50px;
+		    list-style: none;
+		    padding: 0;
+		    overflow: hidden;
+		    margin: 0;
+		    position: fixed;
+		    top: 50px;
+		    z-index: 999;
+		    width: 100%;
+		    border-bottom: 2px solid #F1F1F1;
+		}
+		.demand li:nth-child(1) {
+			width: 25%;
+			float: left;
+			position: relative;
+			padding: 5px 0 0;
+		}
+		.demand li:nth-child(1) label {
+			font-family: Muiicons;
+			color: #bbb;
+			/*position: absolute;
+			right: 0;
+			top: 15px;*/
+		}
+		.demand select {
+			background: none;
+			margin: 0;
+		}
+		.demand li:nth-child(2) {
+			width: 75%;
+			float: left;
+			position: relative;
+			padding: 10px 15px;
+			background: #fff;
+		}
+		.sea {
+			position: absolute;
+			top: 16px;
+			left: 25px;
+			display: inline-block;
+			width: 18px;
+			height: 19px;
+			background: url(../../img/icon_search.png) no-repeat scroll center center;
+			background-size: cover;
+		}
+		.demand li:nth-child(2) input {
+			background: #f1f1f1;
+			border-radius: 16px;
+			border: 0;
+			margin: 0;
+			height: 32px;
+			line-height: 32px;
+			padding-left: 35px;
+			color: #444;
+		}
+		
+		
+		.search {
+			background: #f2f6f9!important;
+			height: 300px;
+			position: fixed;
+			width:100%;
+			top:100px;
+			z-index:999;
+		}
+		
+		.search .mui-popover {
+			top: 0;
+			height: 300px;
+			background: #fff;
+		}
+		
+		.search .mui-popover .mui-table-view {
+			background: #fff;
+		}
+		
+		.mui-table-view-cell{padding:11.5px 15px;}
+		.search ul li a {
+			color: #4A4A4A;
+			padding:0;
+			margin:0;
+		}
+		
+		.mui-backdrop {
+			top:100px;
+		}
+		
+		#cancerExpertsDetails {
+			position: relative;
+			top: -260px;
+		}
+		
+		
+		#search-qg .search-qg-l {
+			left: initial;
+			width: 100%;
+		}
+		
+		#search-qg .search-qg-l ul,
+		#search-qg .search-qg-r ul {
+			padding-left: 0;
+			list-style: none;
+		}
+		#householdDevices,#search-qg{
+			height:100%;
+		}
+		.mui-popover .mui-scroll-wrapper{
+			margin:0;
+			border-radius: 0;
+		}
+		.mui-popover.mui-popover-action .mui-table-view{
+			margin:0;
+			border-radius: 0;
+			background:#fff; 
+			color:#333;
+			text-align:left;
+		}
+		.mui-table-view-cell>a:not(.mui-btn){padding-right:25px;}
+		.mui-navigate-right:after, .mui-push-right:after{right:5px;}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.hospitalList {
+			    position: absolute;
+			    top: 100px;
+			    width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">肿瘤医院列表</h1>
+		</header>
+		<div id='cityResult' class="ui-alert"></div>
+		<div class="mui-content">
+			<ul class="demand">
+				<li>
+					<div name="" id="showCityPicker"><span>上海市</span><label class="mui-icon-arrowdown"></label></div>
+					<input type="hidden" value="310000" id="showCityPickerId" />
+				</li>
+				<li>
+					<label for="sea" class="sea"></label>
+					<input type="text" name="" id="sea" placeholder="医院" />
+				</li>
+			</ul>
+			<div class="search mui-popover mui-popover-action">
+				<div id="search-qg">
+					<div class="mui-scroll-wrapper search-qg-l">
+						<div class="mui-scroll">
+							<ul class="mui-table-view" id="areaCancerExpertsListId">
+								<!--<li class="mui-table-view-divider mui-indexed-list-group">A</li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								<li class="mui-table-view-divider mui-indexed-list-group">B</li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>
+								<li class="mui-table-view-cell"><a href="">北京</a></li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="hospitalList" id="cancerExpertsDoctorList">
+				<ul class="mui-table-view" id="cancerExpertsyyId">
+					<!--<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>上海复旦大学附属中山医院</h3>
+								<p>上海市徐汇区上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>同济大学附属天佑医院</h3>
+								<p>上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>上海中医药大学附属中山医院</h3>
+								<p>上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>中国人民解放军第八五医院</h3>
+								<p>上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>武警上海市总队医院</h3>
+								<p>上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>上海交通大学附属第九人民医院</h3>
+								<p>上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>上海复旦大学附属中山医院</h3>
+								<p>上海市徐汇区上海市徐汇区封岭路180号</p>
+							</section>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerExpertsListwsjId" style="display: none;">
+					<i></i>
+					暂无数据
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<!--<script src="../../js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="../../js/route.js"></script>
+	<script src="../../js/cancerExperts/cancerExpertsList.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+		mui('.demand').on('tap','#showCityPicker',function(){
+			mui('.search').popover('toggle');
+			var mask = mui.createMask();//callback为用户点击蒙版时自动执行的回调；
+			mask.show();//显示遮罩
+			mask.close();//关闭遮罩
+		})
+		
+		
+	</script>
+</html>

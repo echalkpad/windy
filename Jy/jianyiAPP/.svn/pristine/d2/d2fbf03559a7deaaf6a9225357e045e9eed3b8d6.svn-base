@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.mui-table-view .mui-media-object {
+				line-height:42px;
+				max-width:42px;
+				height:42px;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after,.mui-table-view:after{
+				background: #f1f1f1;
+			}
+			.mui-media-body {
+				color: #000;
+				font-size: 14px;
+			}
+			.mui-media-body h3{
+				line-height:20px;
+			}
+			
+			.mui-media-body .mui-ellipsis {
+				color: #9b9b9b;
+				font-size: 13px;
+			}
+			
+			.mui-slider {
+				height: 150px;
+			}
+			
+			li p {
+				font-size: 12px!important;
+			}
+			
+			#noNetwork {
+				display: none;
+				position: relative;
+				top: 0px;
+				left: 0px;
+				z-index: 999;
+				background: rgb(254, 223, 224);
+				width: 100%;
+				height: 35px;
+				line-height: 32px;
+				padding-left: 20px;
+				border: 2px solid rgb(254, 224, 246)
+			}
+			
+			#noNetwork span {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				line-height: 22px;
+				border-radius: 50%;
+				background: rgb(245, 99, 100);
+				border: 1px solid rgb(254, 193, 194);
+				text-align: center;
+				color: #fff;
+				margin-right: 13px;
+			}
+			
+			#noNetwork p {
+				color: #9B9B9B;
+			}
+			.rq {
+				position: absolute;
+				right: 15px;
+				bottom: 5px;
+				color:#666;
+			}
+			time{
+				position:absolute;
+				left: 105px;
+				bottom: 5px;
+				color:#666;
+			}
+			.mui-content{background:none;}
+			.mui-scroll{background:#fff;}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<section id="noNetwork">
+						<p><span>!</span>当前网络不可用，请检查你的网络设置</p>
+					</section>
+					<div class="mui-content">
+						<div class="title f13">热门服务
+							<a href=""><img src="../img/home_btn_add@2x.png" class="title-more" width="20px" /></a>
+						</div>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="familyDoctor">
+									<img class="mui-media-object mui-pull-left" src="../img/icon_jiatingyisheng@2x.png">
+									<div class="mui-media-body f16">
+										家庭医生
+										<p class='mui-ellipsis f13'>描述症状，及时解答</p>
+									</div>
+								</a>
+							</li>
+
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="goHealthSelfTesting">
+									<img class="mui-media-object mui-pull-left" src="../img/icon_jiankangceliang.png">
+									<div class="mui-media-body f16">
+										健康测量
+										<p class='mui-ellipsis f13'>健康记录每一天</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="goMefamily">
+									<img class="mui-media-object mui-pull-left" src="../img/icon_family.png">
+									<div class="mui-media-body f16">
+										我的家人
+										<p class='mui-ellipsis f13'>随时随地关爱家人健康</p>
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="healthNetwork">
+									<img class="mui-media-object mui-pull-left" src="../img/icon_wangdian.png">
+									<div class="mui-media-body f16">
+										健康网点
+										<p class='mui-ellipsis f13'>快速查找附近医疗机构</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mui-content border-b border-t" id="sliderDivShowID">
+						<div id="slider" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop" id="mainIndexBannerDivID">
+								<!--
+                                	首页轮播图
+                                -->
+							</div>
+							<div class="mui-slider-indicator" id="mainIndexBannerDiv2ID">
+								<!--
+                                	轮播图圆点
+                                -->
+							</div>
+						</div>
+					</div>
+					<div class="mui-content">
+						<div class="title mui-navigate-right title-jkzx f13" id="healthInformation">健康资讯</div>
+						<ul class="mui-table-view" id="jkzx">
+							<!--<li class="mui-table-view-cell mui-media "><a href="">
+								<input type="hidden" value="4" />
+								<img class="mui-media-object mui-pull-left meta-img" src="http://tnfs.tngou.net/img/lore/160326/c282fd061e073c53215453589ca071bd.jpg" }>
+								<div class="mui-media-body">
+									<h3 class="f15 ellipsis">醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿</h3>
+									<time>2015-05-05</time>
+									<span class="rq f12">人气 50</span>
+								</div>
+							</a></li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/core/config.js"></script>
+	<script src="../js/core/common.js"></script>
+	<script src="../js/util/common_util.js"></script>
+	<script src="../js/mainIndex.js"></script>
+	<script src="../js/route.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				//初始化首页轮播图片
+				mainIndex.initSliderBanner();
+				//初始化主页健康咨询
+				mainIndex.initMainConsultationList(1, 10);
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1000);
+		}
+	</script>
+
+</html>

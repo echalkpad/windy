@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-segmented-control {
+				background-color: #fff;
+				border: none;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				position: relative;
+				background-color: #fff;
+				color: #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				position: absolute;
+				content: '';
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				border-bottom: 1px solid #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				background-color: #fff;
+				color: #000;
+				border: none
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view-cell h2 {
+				letter-spacing: -1px;
+				overflow: hidden;
+			}
+			
+			.mui-table-view-cell h2 span {
+				line-height: 34px;
+				float: left;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(1) {
+				float: left;
+				font-size: 16px;
+			}
+			
+			.mui-ios .mui-table-view-cell {
+				border-bottom: 1px solid rgb(242, 246, 249);
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				margin-left: 10px;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				font-size: 13px;
+				color: #8f8f94;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-media-body p {
+				line-height: 20px;
+				font-size: 13px;
+			}
+			
+			.mui-media .pay {
+				text-align: center;
+				padding: 0 15px;
+				line-height: 20px;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 6px;
+				border: 1px solid #f00;
+				color: #f00;
+				border-radius: 3px;
+			}
+			
+			.pay-end {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: rgb(240, 145, 53);
+			}
+			
+			.mui-media {
+				position: relative;
+			}
+			
+			.pay-end img {
+				position: absolute;
+				bottom: -10px;
+				right: 0;
+				width: 70px;
+			}
+			
+			.mui-table-view {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				margin-bottom: 10px;
+				background: #fff;
+			}
+			
+			.mui-table-view-cell small {
+				display: block;
+				font-size: 12px;
+				color: #666;
+				margin-top: 20px;
+				padding-top: 8px;
+				line-height: 20px;
+				border-top: 1px solid #eee;
+				position: relative;
+			}
+			
+			.mui-table-view-cell small strong {
+				font-weight: normal;
+				color: #f00;
+			}
+			
+			.mui-table-view-cell small em {
+				font-style: normal;
+				float: right;
+			}
+			
+			.order_none {
+				width: 100px;
+				position: fixed;
+				top: 30%;
+				left: 50%;
+				margin-left: -50px;
+				text-align: center;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.order_none i {
+				display: block;
+				width: 30px;
+				height: 36px;
+				margin: 10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size: cover;
+			}
+			@-webkit-keyframes topRun{
+				from{bottom:-41px;}
+				to{bottom:0;}
+			}
+			
+			
+			.mui-pull-bottom-tips{
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				position:fixed;
+				line-height: 40px;
+				color: #777;
+				bottom:-41px;
+				width:100%;
+			}
+			.nomore{padding-bottom:41px;}
+			.nomore .mui-pull-bottom-tips{
+				-webkit-animation:topRun 1.5s ease-out;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="showOrderListReBackID"></a>
+			<h1 class="mui-title">慢病</h1>
+		</header>
+		<div class="mui-content" id="slowOrderListContent">
+			<!--<div id="pullrefreshSlowOrderList" class="mui-content mui-scroll-wrapper">-->
+			<div id="solwSegmentedControl" class="mui-segmented-control border-b">
+				<a class="mui-control-item mui-active" href="#itemSlowOrderList1">
+					待支付
+					</a>
+				<a class="mui-control-item" href="#itemSlowOrderList2">
+					待就诊
+					</a>
+				<a class="mui-control-item" href="#itemSlowOrderList3">
+					待评价
+					</a>
+				<a class="mui-control-item" href="#itemSlowOrderList4">
+					已完成
+					</a>
+			</div>
+
+			<div id="itemSlowOrderList1" class="mui-control-content mui-active">
+				<ul class="mui-table-view" id="slow-non-payment">
+				</ul>
+				<div class="order_none" id="order_none_dzf" style="display: none;">
+					<i></i> 暂无待支付订单
+				</div>
+			</div>
+			<div id="itemSlowOrderList2" class="mui-control-content">
+				<ul class="mui-table-view" id="slow-orderSee">
+				</ul>
+				<div class="order_none" id="order_none_djz" style="display: none;">
+					<i></i> 暂无待就诊订单
+				</div>
+			</div>
+			<div id="itemSlowOrderList3" class="mui-control-content ">
+				<ul class="mui-table-view" id="slow-orderEvaluation">
+				</ul>
+				<div class="order_none" id="order_none_dpj" style="display: none;">
+					<i></i> 暂无待评价订单
+				</div>
+			</div>
+			<div id="itemSlowOrderList4" class="mui-control-content ">
+				<ul class="mui-table-view" id="slow-orderFinish">
+				</ul>
+				<div class="order_none" id="order_none_ywc" style="display: none;">
+					<i></i> 暂无已完成订单
+				</div>
+			</div>
+			<!--</div>-->
+			<div class="mui-pull-bottom-tips">
+				<div class="mui-pull-bottom-wrapper">
+					<span class="mui-pull-loading" id="slowOrderListTips">上拉加载更多...</span>
+				</div>
+			</div>
+		</div>
+		<input type="hidden" value="0" id="backslowOrderListWebviewId"/>
+		<input type="hidden" value="0" id="backslowOrderListWebviewUrl"/>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/slowOrderList.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

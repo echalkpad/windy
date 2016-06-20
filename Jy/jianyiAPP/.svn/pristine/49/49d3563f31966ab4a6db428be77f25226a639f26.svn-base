@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding-left: 55px;
+			}
+			.mui-table-view-cell a img{
+				width:36px;
+				height:36px;
+				position:absolute;
+				left:10px;
+				top:16px;
+			}
+			
+			.mui-table-view p {
+				font-size: 12px;
+			}
+			
+			.mui-table-view p em,
+			.mui-table-view p i,
+			.mui-table-view p span,
+			.mui-table-view p small,
+			.mui-table-view p b {
+				font-style: normal;
+				display: inline-block;
+				color: #E73029;
+				vertical-align: middle;
+				font-weight: normal;
+				margin-right: 8px;
+				font-size:12px;
+			}
+			
+			.mui-table-view h3 {
+				color: #333;
+				font-size: 14px;
+				line-height: 24px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="myOrderBackCellId"></a>
+			<h1 class="mui-title">我的订单</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<!--<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="expense">
+						<img src="../../img/me/icon_xiaofei.png" alt="" />
+						<h3>刷卡消费</h3>
+						<p>待支付:<em>1</em>待评价:<span>0</span></p>
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="doctor">
+						<img src="../../img/me/icon_service_jiating.png" alt="" />
+						<h3>家庭医生</h3>
+						<p>待支付:<em id="docOnlin1"></em>待评价:<span id="docOnlin2"></span></p>
+					</a>
+				</li>
+				<!--<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right">
+						<img src="../../img/me/icon_service_guahao.png" alt="" />
+						<h3>预约挂号</h3>
+						<p>待支付:<em>1</em>待评价:<span>0</span></p>
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="meSlowOrderList">
+						<img src="../../img/me/icon_service_manbing.png" alt="" />
+						<h3>慢病专家</h3>
+						<p>待支付:<small id="treat1"></small>待就诊:<em id="treat2"></em>待评价:<span id="treat3"></span></p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="meCancerOrderList">
+						<img src="../../img/icon_zhongliuzhuanjia@2x.png" alt="" />
+						<h3>肿瘤专家</h3>
+						<p>待确认:<small id="tumour1"></small>待支付:<em id="tumour2"></em>待就诊:<b id="tumour3"></b>待评价:<span id="tumour4"></span></p>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="">
+						<img src="../../img/healthy/icon_service_jiyinjiance.png" alt="" />
+						<h3>基因检测</h3>
+						<p>待确认:<small></small>待支付:<em></em>预约成功:<b></b>待评价:<span></span></p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="">
+						<img src="../../img/healthy/icon_service_liaoyang.png" alt="" />
+						<h3>疗养</h3>
+						<p>待确认:<small></small>待支付:<em></em>预约成功:<b></b>待评价:<span></span></p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#" class="mui-navigate-right" id="">
+						<img src="../../img/healthy/icon_service_tijian.png" alt="" />
+						<h3>体检</h3>
+						<p>待支付:<em></em>预约成功:<b></b>待评价:<span></span></p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/me/myOrder.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

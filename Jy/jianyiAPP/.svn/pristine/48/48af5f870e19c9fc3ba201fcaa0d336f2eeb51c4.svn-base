@@ -1,0 +1,10 @@
+mui('.mui-content').on('tap', '.mui-control-content', function() {
+	var oid = this.id;
+	mui.openWindow({
+		id: 'spaOrderDetali',
+		url: "spaOrderDetali.html",
+		extras: {
+			"type": oid
+		}
+	})
+})

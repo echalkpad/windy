@@ -1,0 +1,198 @@
+mui('.mui-content').on('tap', 'li', function() {
+	var oid = this.parentNode.parentNode.id;
+	if (this.parentNode.className == 'healthExamin-cancal') {
+		oid = 'cancal';
+	}
+	if (this.parentNode.className == 'healthExamin-back') {
+		oid = 'back';
+	}
+	mui.openWindow({
+		id: 'healthExaminationOrderDetali',
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": oid,
+		}
+	});
+});
+
+var healthExamDQRPageIndex = 1;
+var healthExamDZFPageIndex = 1;
+var healthExamYYCGPageIndex = 1;
+var healthExamDPJPageIndex = 1;
+var healthExamYWCPageIndex = 1;
+
+var healthExamDQRTotal = 0;
+var healthExamDZFTotal = 0;
+var healthExamYYCGTotal = 0;
+var healthExamDPJTotal = 0;
+var healthExamYWCTotal = 0;
+
+var pageSize = 10;
+
+var healthExamDQRhtml = '';
+var healthExamDZFhtml = '';
+var healthExamYYCGhtml = '';
+var healthExamDPJhtml = '';
+var healthExamYWChtml = '';
+//定位订单列表tab页面
+var index = 0;
+
+var backid = "";
+var backUrl = "";
+
+//初始化体检订单列表页
+document.addEventListener('plusready', function() {
+	//设置显示页面
+	var self = plus.webview.currentWebview();
+	index = self.index;
+	backid = self.backid;
+	backUrl = self.backurl;
+	if(!index || typeof(index) == 'undefined' || index == ""){
+		index = 0;
+	}
+	//调用初始化数据方法
+	healthExaminationOrderList.initOrderListPage(index);
+});
+
+//自定义刷新数据事件
+window.addEventListener("refreshHealthExamOrderList",function(event){
+	healthExamDQRPageIndex = 1;
+	healthExamDZFPageIndex = 1;
+	healthExamYYCGPageIndex = 1;
+	healthExamDPJPageIndex = 1;
+	healthExamYWCPageIndex = 1;
+	
+	healthExamDQRTotal = 0;
+	healthExamDZFTotal = 0;
+	healthExamYYCGTotal = 0;
+	healthExamDPJTotal = 0;
+	healthExamYWCTotal = 0;
+	
+	pageSize = 10;
+	
+	healthExamDQRhtml = '';
+	healthExamDZFhtml = '';
+	healthExamYYCGhtml = '';
+	healthExamDPJhtml = '';
+	healthExamYWChtml = '';
+	index = event.detail.index;
+	backid = event.detail.backid ? event.detail.backid : "0";
+	backUrl = event.detail.backurl ? event.detail.backurl : "0";
+	//调用初始化数据方法
+	healthExaminationOrderList.initOrderListPage(index);
+});
+
+var healthExaminationOrderList = {
+	initOrderListPage : function(index){
+		document.getElementById("backHealthExamOrderListWebviewId").value = backid;
+		document.getElementById("backHealthExamOrderListWebviewUrl").value = backUrl;
+		//初始化订单列表页面--待确认模块
+		healthExaminationOrderList.initHEOrderListDQR(healthExamDQRPageIndex, pageSize);
+		//初始化订单列表页面--待支付模块
+		healthExaminationOrderList.initHEOrderListDZF(healthExamDZFPageIndex, pageSize);
+		//初始化订单列表页面--预约成功模块
+		healthExaminationOrderList.initHEOrderListYYCG(healthExamYYCGPageIndex, pageSize);
+		//初始化订单列表页面--待评价模块
+		healthExaminationOrderList.initHEOrderListDPJ(healthExamYWCPageIndex, pageSize);
+		//初始化订单列表页面--已完成模块
+		healthExaminationOrderList.initHEOrderListYWC(healthExamYWCPageIndex, pageSize);
+		var divs = document.getElementById("healthExamSegmentedControl");
+		var consultingas = divs.getElementsByTagName("a");
+		if (index) {
+			for (var i = 0; i < consultingas.length; i++) {
+				consultingas[i].setAttribute('class', 'mui-control-item');
+				document.getElementById("healthExamOrderList" + (i + 1)).setAttribute("class", "mui-control-content");
+				if (i == index) {
+					consultingas[i].setAttribute('class', 'mui-control-item mui-active');
+					document.getElementById("healthExamOrderList" + (i + 1)).setAttribute("class", "mui-control-content mui-active");
+				}
+			}
+		}
+		//加载上拉刷新事件
+		document.addEventListener("plusscrollbottom", function() {
+			var divid = 0;
+			for (var i = 0; i < consultingas.length; i++) {
+				if (consultingas[i].className == "mui-control-item mui-active") {
+					divid = i + 1;
+					break;
+				}
+			}
+			if(divid == 1){
+				if(healthExamDQRTotal == pageSize){
+					healthExamDQRPageIndex ++;
+					//初始化订单列表页面--待确认模块
+					healthExaminationOrderList.initHEOrderListDQR(healthExamDQRPageIndex, pageSize);
+				}else{
+					return false;
+				}
+			}else if(divid == 2){
+				if(healthExamDZFTotal == pageSize){
+					healthExamDZFPageIndex++;
+					//初始化订单列表页面--待支付模块
+					healthExaminationOrderList.initHEOrderListDZF(healthExamDZFPageIndex, pageSize);
+				}else{
+					return false;
+				}
+			}else if(divid == 3){
+				if(healthExamYYCGTotal == pageSize){
+					healthExamYYCGPageIndex++;
+					//初始化订单列表页面--预约完成模块
+					healthExaminationOrderList.initHEOrderListYYCG(healthExamYYCGPageIndex, pageSize);
+				}else{
+					return false;
+				}
+			}else if(divid == 4){
+				if(healthExamDPJTotal == pageSize){
+					healthExamDPJPageIndex++;
+					//初始化订单列表页面--待评价模块
+					healthExaminationOrderList.initHEOrderListDPJ(healthExamDPJPageIndex, pageSize);
+				}else{
+					return false;
+				}
+			}else if(divid == 5){
+				if(healthExamYWCTotal == pageSize){
+					healthExamYWCPageIndex++;
+					//初始化订单列表页面--已完成模块
+					healthExaminationOrderList.initHEOrderListYWC(healthExamYWCPageIndex, pageSize);
+				}else{
+					return false;
+				}
+			}
+		});
+	},
+	initHEOrderListDQR : function(){
+		document.getElementById('healthExamOrderListOrderNoneDQRID').style.display = 'none';
+	},
+	initHEOrderListDZF : function(){
+		document.getElementById('healthExamOrderListOrderNoneDZFID').style.display = 'none';
+	},
+	initHEOrderListYYCG : function(){
+		document.getElementById('healthExamOrderListOrderNoneYYCGID').style.display = 'none';
+	},
+	initHEOrderListDPJ : function(){
+		document.getElementById('healthExamOrderListOrderNoneDPJID').style.display = 'none';
+	},
+	initHEOrderListYWC : function(){
+		document.getElementById('healthExamOrderListOrderNoneYWCID').style.display = 'none';
+	},
+	rebackHealthExamination: function() {
+		var webviewId = ""; 
+		if(backid && backUrl && backUrl != "0"){
+			webviewId = backid;
+		}else{
+			webviewId = "healthExamination";
+		}
+		commomUtil.backWebView({id:webviewId});
+	}
+}
+
+//绑定取消服务单按钮事件
+
+//绑定申请退款按钮事件
+
+//绑定评价按钮事件
+
+//绑定删除订单按钮事件
+
+//绑定回退按钮事件
+document.getElementById('healthExamOrderListReBackID').addEventListener('click', healthExaminationOrderList.rebackHealthExamination);

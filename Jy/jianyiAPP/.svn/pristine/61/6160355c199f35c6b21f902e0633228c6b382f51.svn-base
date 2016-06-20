@@ -1,0 +1,17 @@
+//提交预约
+mui(".btn").on('tap', '#packageGeneticOrder', function() {
+	commomUtil.closeWebviewById('geneticOrder');
+	mui.openWindow({
+		id: 'geneticOrder',
+		url: "geneticOrder.html"
+	});
+})
+
+//选择地址
+mui(".mui-content").on('tap', '#packageShippingAddress', function() {
+	commomUtil.closeWebviewById('shippingAddress');
+	mui.openWindow({
+		id: 'shippingAddress',
+		url: "shippingAddress.html"
+	});
+})

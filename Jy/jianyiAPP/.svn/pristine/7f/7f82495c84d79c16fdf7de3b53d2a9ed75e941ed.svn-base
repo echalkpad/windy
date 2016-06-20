@@ -1,0 +1,7 @@
+//药品详情
+mui(".mui-content").on('tap', 'li', function() {
+	mui.openWindow({
+		id: 'symptomaticMedicineDetail',
+		url: "symptomaticMedicineDetail.html"
+	});
+})

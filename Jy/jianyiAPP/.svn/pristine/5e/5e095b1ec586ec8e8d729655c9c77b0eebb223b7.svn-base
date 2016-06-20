@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-content p {
+				margin: 0;
+			}
+			
+			.spaAppointment article{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				/*background-image: -webkit-gradient(linear, left 0%, left 100%, from(transparent), to(#000));
+				background-image: -webkit-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: -moz-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);*/
+				background-repeat: repeat-x;
+				position: relative;
+				margin-top: 0;
+				height: 222px;
+			}
+			.spaAppointment article:after{
+				display:block;
+				position: absolute;
+				width:100%;
+				height:100%;
+				background-image: -webkit-linear-gradient(top, transparent 40%, rgba(0,0,0,.8) 100%);
+				content:"";
+				
+			}
+			
+			.spaAppointment h2{
+				color: #fff;
+				font-size: 17px;
+				position: absolute;
+				bottom: 15px;
+				width:100%;
+				margin-left: 15px;
+			}
+			.spaContent span{
+				display:block;
+				position:absolute;
+				top:-6px;
+				right:15px;
+				width:50px;
+				height:22px;
+				text-align: center;
+				line-height:22px;
+				background: url(../../../img/healthy/geneticDiagnosis/bg_tag.png) no-repeat scroll top left;
+				background-size:cover;
+				font-size:14px;
+			}
+			.spaAppointment1 article{
+				background-color:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.3)), to(rgba(0,0,0,.5)));
+				background-image: url(../../../img/healthy/geneticDiagnosis/taocan_1.png);
+				background-repeat:no-repeat;
+				background-position:center center;
+				background-size: cover;
+			}
+			
+			.spaAppointment2 article{
+				background: url(../../../img/healthy/geneticDiagnosis/taocan_2.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.spaAppointment3 article{
+				background: url(../../../img/healthy/geneticDiagnosis/taocan_3.png) no-repeat center center;
+				background-size: cover;
+			}
+			.spaAppointment4 article{
+				background: url(../../../img/healthy/geneticDiagnosis/taocan_4.png) no-repeat center center;
+				background-size: cover;
+			}
+			.spaContent{
+				position:absolute;
+				width:100%;
+				height:100%;
+				z-index:1;
+			}
+			.spaAppointment p{
+				height:40px;
+				line-height:45px;
+				margin-bottom:10px;
+				padding:0 15px;
+				background:#fff;
+			}
+			.spaAppointment del{
+				font-size:16px;
+				margin-right:20px;
+			}
+			.spaAppointment strong{
+				font-weight:normal;
+				font-size:16px;
+				color:#F60404;
+				margin-right:10px;
+			}
+			.gene{
+				width:100%;
+			}
+			.gene img{
+				display:block;
+				width:100%;
+				height:auto;
+				max-height: 160px;
+			}
+			.gene-nav{
+				width:100%;
+				height:100px;
+				background:#fff;
+			}
+			.gene-nav a{
+				display:block;
+				width:33.33%;
+				height:100%;
+				float:left;
+				border-left:1px solid #f1f1f1;
+				color:#333;
+				text-align: center;
+				padding-top:60px;
+				font-size:14px;
+			}
+			.gene-nav a:nth-child(1){
+				border:0;
+				background: url(../../../img/healthy/geneticDiagnosis/icon_fuwujieshao.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			.gene-nav a:nth-child(2){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_taocan.png) no-repeat scroll center 20px;
+				background-size:30px 30px;
+			}
+			.gene-nav a:nth-child(3){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_kefu.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			
+			.jkwd-nav {
+				width: 100%;
+				top: 50px;
+				background: #fff;
+				z-index: 9;
+				position: fixed;
+				height: 44px;
+				line-height: 44px;
+				border-bottom: 1px solid rgb(244, 244, 244);
+			}
+			
+			.jkwd-nav a {
+				position: relative;
+				width: 33.33%;
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				float: left;
+				color: #4A4A4A;
+				font-size: 15px;
+				border-left: 1px solid rgb(240, 240, 240);
+			}
+			.jkwd-nav img{margin-left:5px;}
+			.jkwd-nav a:first-child {
+				border-left: none;
+			}
+			.search {
+				top: 94px;
+				background: #f2f6f9!important;
+				position: fixed;
+				width:100%;
+				z-index:999;
+			}
+			
+			.search .mui-popover {
+				top: 0;
+				height: 300px;
+			}
+			.search-qg{
+				background:#fff;
+			}
+			.search .mui-popover .mui-table-view {
+				background: #fff;
+			}
+			
+			.search ul{
+				list-style: none;
+				display:none;
+			}
+			.search .selector{
+				display:block;
+			}
+			
+			
+			.search ul li a {
+				color: #4A4A4A;
+			}
+			
+			.mui-backdrop {
+				top: 94px;
+			}
+			.search-qg .search-qg-l {
+				left: initial;
+				width: 100%;
+			}
+			
+			.search-qg .search-qg-r {
+				background: rgba(000, 000, 000, .2);
+				right: 0;
+				left: initial;
+				width: 65%;
+				border-radius: 0;
+				margin: 0;
+			}
+			
+			.search-qg .search-qg-l ul,
+			.search-qg .search-qg-r ul {
+				padding-left: 0;
+				list-style: none;
+			}
+			
+			.search-qg .search-qg-l ul li,
+			.search-qg .search-qg-r ul li {}
+			
+			.search-qg .search-qg-l .search-qg-text {
+				background: rgba(158, 156, 156, 0.1);
+			}
+
+			.packageContent{
+				position: absolute;
+				width:100%;
+			    /*top: -256px;*/
+			   top:94px;
+			    min-height: 301px;
+			}
+			.search-default{
+				background:#fff;
+				padding:5px 15px;
+				font-size:14px;
+				display: none;
+			}
+			.mui-popover-action{
+				height:300px;
+			}
+			.mui-popover .mui-scroll-wrapper{
+				margin:0;
+				border-radius: 0;
+			}
+			.mui-popover.mui-popover-action .mui-table-view{
+				margin:0;
+				border-radius: 0;
+				background:#fff; 
+				color:#333;
+				text-align:left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基因检测套餐</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-nav" id="jytc-nav">
+				<a href="" class="search-qg">全部类型<img src="../../../img/common/btn_down.png" width="15px"/></a>
+				<a href="" class="search-szn">全部人群<img src="../../../img/common/btn_down.png" width="15px"/></a>
+				<a href="" class="search-mrpx">智能排序<img src="../../../img/common/btn_down.png" width="15px"/></a>
+			</div>
+			<div class="search">
+				<div id="jytcSearch" class="mui-popover mui-popover-action">
+					<div class="search-qg">
+						<div class="mui-scroll-wrapper search-qg-l">
+							<div class="mui-scroll">
+								<ul class="mui-table-view selector">
+									<li class="mui-table-view-divider mui-indexed-list-group">A</li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								</ul>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-divider mui-indexed-list-group">A</li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+									<li class="mui-table-view-cell"><a href="">安庆</a></li>
+								</ul>
+								<ul class="mui-table-view">
+									<li class="mui-table-view-divider mui-indexed-list-group">A</li>
+									<li class="mui-table-view-cell"><a href="">B</a></li>
+									<li class="mui-table-view-cell"><a href="">C</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="" class="search-default">
+						默认
+					</div>
+				</div>
+			</div>
+			<div class="packageContent">
+				<div class="spaAppointment spaAppointment1">
+					<a href="">
+						<article>
+							<div class="spaContent">
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment2">
+					<a href="">
+						<article>
+							<div class="spaContent">
+								<h2>心脑血管基因检测<span>类型</span></h2>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment3">
+					<a href="">
+						<article>
+							<div class="spaContent">
+								<h2>烟酒茶(咖啡)损伤及成瘾套餐<span>类型</span></h2>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment4">
+					<a href="">
+						<article>
+							<div class="spaContent">
+								<h2>健康尊享套餐<span>类型</span></h2>
+							</div>
+						</article>
+						<p><strong>¥303</strong>赠送价值4000元十五号不耐受检测</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/geneticDiagnosis.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		var Jynav=document.getElementById("jytc-nav").children;
+		var JySearch=document.getElementById("jytcSearch");
+		var ulSearch=JySearch.getElementsByTagName('ul');
+		
+
+		mui.each(ulSearch,function(i,t){
+		  Jynav[i].index = i;
+		  Jynav[i].onclick=function(){
+		  	var j=this.index;
+		  	for(var k=0;k<3;k++){
+		  		ulSearch[k].setAttribute('class','mui-table-view');
+		  	}
+		  	ulSearch[j].setAttribute('class','mui-table-view selector');
+		  }
+		})
+		
+	  	mui('.mui-scroll-wrapper').scroll({
+			deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+		});
+		
+		mui('.mui-bar').on('tap','.mui-title',function(){
+			mui('#jytcSearch').popover('show');
+			var mask = mui.createMask();//callback为用户点击蒙版时自动执行的回调；
+			mask.show();//显示遮罩
+			mask.close();//关闭遮罩
+		})
+	</script>
+</html>

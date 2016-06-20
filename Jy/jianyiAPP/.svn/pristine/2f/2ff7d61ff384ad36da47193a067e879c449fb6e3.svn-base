@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>修改手机号</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-input-group {
+				background: none;
+			}
+			
+			.mui-input-group:after {
+				display: none;
+			}
+			
+			.mui-input-group .mui-input {
+				width: 70%;
+				color: #777;
+			}
+			
+			.mui-input-row {
+				padding: 0 15px;
+				line-height: 40px;
+				background: #fff;
+				position: relative;
+			}
+			
+			.mui-input-group small {
+				color: #999;
+				line-height: 36px;
+				display: block;
+				padding: 5px 15px 0;
+				font-size: 12px;
+			}
+			
+			.mui-input-group small span {
+				color: #ff5e5e;
+				font-size: 14px;
+			}
+			
+			.mui-input-group section {
+				padding: 30px 15px 0;
+				text-align: center;
+			}
+			
+			.mui-input-row span {
+				color: #666;
+				font-size: 14px;
+			}
+			
+			.mui-btn-block {
+				background: #00b6f3;
+				border: 0;
+				padding: 0;
+				line-height: 40px;
+				font-size: 16px;
+				border-radius: 5px;
+				color: rgba(255, 255, 255, .9);
+			}
+			
+			.mui-input-row a {
+				font-size: 14px;
+				color: #fff;
+				background: #ff5e5e;
+				line-height: 30px;
+				padding: 0 10px;
+				border-radius: 5px;
+				position: absolute;
+				top: 5px;
+				right: 15px;
+			}
+			
+			.mui-input-row:nth-child(2n) .mui-icon-clear {
+				right: 100px!important;
+			}
+			
+			/*.modifyphone1,
+			.modifyphone2 {
+				display: none;
+			}*/
+			
+			/*@media only screen and (min-width: 320px) and (max-width: 320px) {
+				.mui-input-row:nth-child(2n) .mui-icon-clear {
+					color: rgba(000,000,000,.1);
+					left: 75px;
+				}
+			}*/
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">修改手机号</h1>
+			<!--<a href="" class="mui-action-back btn-add mui-pull-right" id="" style="font-size:14px;line-height: 40px;">保存</a>-->
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group modifyphone1">
+				<small>验证码将发至您的手机<span id="ModifyPhone"></span></small>
+				<div class="mui-input-row">
+					<span>验证码</span>
+					<input type="number" class="mui-input mui-input-clear" value="" id="oldPhoneCod">
+					<a href="" id="sedOldPhoneCod" onclick="SmsSend2(this)">发送验证码</a>
+				</div>
+				<div class="mui-input-row" style="margin-bottom: 10px;border-bottom: none;">
+					<span>支付密码</span>
+					<input type="password" class="mui-input mui-input-clear" value="" id="password">
+				</div>
+				<div class="mui-input-row ">
+					<span>新手机号</span>
+					<input type="number" class="mui-input mui-input-clear" value="" id="newPhone">
+					<a href="" id="sedNewPhoneCod" onclick="SmsSend(this)">发送验证码</a>
+				</div>
+				<div class="mui-input-row">
+					<span>验证码</span>
+					<input type="number" class="mui-input mui-input-clear" value="" id="newPhoneCod">
+				</div>
+				<section>
+					<button class="mui-btn mui-btn-block sedPhoneCod">确定</button>
+				</section>
+			</form>
+			<form class="mui-input-group modifyphone2 border-t">
+				<div class="mui-input-row" style="display: none;">
+					<input type="password" class="mui-input mui-input-clear" value="" disabled="disabled">
+				</div>
+				<div class="mui-input-row ">
+					<span>手机号码</span>
+					<input type="number" class="mui-input mui-input-clear" value="" id="newPhone1">
+					<a href="" id="sedNewPhoneCod" onclick="SmsSend(this)">发送验证码</a>
+				</div>
+				<div class="mui-input-row">
+					<span>验证码</span>
+					<input type="number" class="mui-input mui-input-clear" value="" id="newPhoneCod1">
+				</div>
+				<div class="mui-input-row" style="display: none;">
+					<input type="password" class="mui-input mui-input-clear" value="" disabled="disabled">
+				</div>
+				<div class="mui-input-row" style="margin-bottom: 10px;border-bottom: none;">
+					<span style="letter-spacing: 4px;">支付密码</span>
+					<input type="password" class="mui-input mui-input-clear" value="" id="password1">
+				</div>
+
+				<section>
+					<button class="mui-btn mui-btn-block sedPhoneCod">确定</button>
+				</section>
+			</form>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/me/ModifyPhone.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

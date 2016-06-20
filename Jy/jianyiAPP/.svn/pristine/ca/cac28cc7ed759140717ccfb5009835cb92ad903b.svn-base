@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.banner a,
+			.banner img {
+				display: block;
+			}
+			html,body,.mui-content{
+				height:100%;
+			}
+			
+			#refreshContainer {
+				display: none;
+				top: 270px
+			}
+			
+			.mui-fullscreen {
+				top: 50px;
+				height: auto;
+			}
+			
+			.mui-table-view-cell {
+				color: #666;
+			}
+			
+			.rq {
+				position: absolute;
+				right: 15px;
+				bottom: 5px;
+			}
+			
+			.mui-table-view-cell p.ellipsis {
+				font-size: 12px!important;
+				line-height: 16px;
+			}
+			
+			.meta-img {
+				height: 65px!important;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item {
+				color: #444;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #D32121;
+			}
+			#indexHealthDetails,.mui-control-content{height:100%;}
+			.mui-segmented-control .mui-control-item.mui-active{
+				color:#e90808;
+				background:none;
+			}
+			.mui-segmented-control .mui-control-item{
+				color:#444;
+				border:0;
+			}
+			.mui-segmented-control{border: 0;}
+			/*.mui-table-view{padding-bottom:45px;}*/
+			.mui-table-view:after{display:none;}
+			.mui-table-view-cell:last-child:after, .mui-table-view-cell:last-child:before{
+				height:1px;
+			}
+			.banner{position: relative;}
+			.banner p{
+				position: absolute;
+				width:100%;
+				padding-left:15px;
+				bottom:0;
+				line-height:30px;
+				background:rgba(0,0,0,.5);
+				color:#fff;
+				margin:0;
+			}
+			.mui-pull-bottom-tips {
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				line-height: 40px;
+				color: #777;
+			}
+			.mui-segmented-control{
+				line-height:0;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				height:38px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+				padding:0 10px;
+			}
+			.mui-media-body h3 {
+			    line-height: 20px;
+			}
+			time{
+				position:absolute;
+				left: 105px;
+				bottom: 5px;
+				color:#666;
+				font-size:12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康资讯</h1>
+		</header>
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen mui-scroll-wrapper mui-content">
+				<div class="mui-scroll">
+					
+				</div>
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div id="indexHealthInfoTitleAID" class="mui-segmented-control mui-scroll">
+						
+					</div>
+				</div>
+				
+				<div id="indexHealthDetails">
+					<div id="item1" class="mui-control-content mui-active">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<!--<div class="banner" id="indexHealthInfoBunnerID">
+									<img src="../../img/healthy/Jjyy-jk.png" />
+									<p>保持皮肤干燥生活</p>
+								</div>-->
+								<ul class="mui-table-view" id="indexHealthInfoCategoryID">
+									<!--<li class="mui-table-view-cell mui-media "><a href="">
+										<input type="hidden" value="4" />
+										<img class="mui-media-object mui-pull-left meta-img" src="http://tnfs.tngou.net/img/lore/160326/c282fd061e073c53215453589ca071bd.jpg" }>
+										<div class="mui-media-body">
+											<h3 class="f15 ellipsis">醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿醋泡三宝可以吃出长寿</h3>
+											<time>2015-05-05</time>
+											<span class="rq f12">人气 50</span>
+										</div>
+									</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+				
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/healthInformation/indexHealthInformation.js"></script>
+	<script src="../../js/mui.pullToRefresh.js"></script>
+	<script src="../../js/mui.pullToRefresh.material.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

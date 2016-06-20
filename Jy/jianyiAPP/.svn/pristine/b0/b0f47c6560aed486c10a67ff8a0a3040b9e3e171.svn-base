@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view{
+				font-size:14px;
+				color:#4A4A4A;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin:0;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after{
+				background:#F1F1F1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">检测项目</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					高甘油三脂血症
+				</li>
+				<li class="mui-table-view-cell">
+					脑动脉瘤
+				</li>
+				<li class="mui-table-view-cell">
+					高血压
+				</li>
+				<li class="mui-table-view-cell">
+					外周动脉病变
+				</li>
+				<li class="mui-table-view-cell">
+					冠状动脉硬化性心脏病
+				</li>
+				<li class="mui-table-view-cell">
+					心房颤动
+				</li>
+				<li class="mui-table-view-cell">
+					静脉血栓栓塞
+				</li>
+				<li class="mui-table-view-cell">
+					心机梗死
+				</li>
+				<li class="mui-table-view-cell">
+					中风
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+
+</html>

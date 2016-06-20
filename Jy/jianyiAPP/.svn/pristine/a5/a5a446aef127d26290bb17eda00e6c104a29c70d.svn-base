@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				padding: 11px 120px 11px 40px;
+				font-size: 14px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.mui-table-view-cell.mui-checkbox input[type=checkbox] {
+				width: 25px;
+				height: 25px;
+				right: 0;
+				left: 15px;
+				top: 10px;
+			}
+			
+			.mui-checkbox input[type=checkbox]:before {
+				font-size: 22px;
+			}
+			
+			.medication-foot {
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+				overflow: hidden;
+				background: #fff;
+			}
+			
+			.medication-foot button {
+				width: 50%;
+				line-height: 40px;
+				font-size: 16px;
+				float: left;
+				text-align: center;
+				box-sizing: border-box;
+				padding: 0;
+				border: 0;
+				color: #e85a59;
+			}
+			
+			.medication-foot i {
+				font-size: 20px;
+				display: inline-block;
+				vertical-align: middle;
+				margin: -4px 5px 0 0;
+			}
+			
+			.medication-foot .all {
+				border-right: 1px solid #eee;
+				color: #00b6f3;
+			}
+			
+			.del i {
+				width: 20px;
+				height: 20px;
+				background: url(../../img/common/btn_delete.png) no-repeat scroll center center;
+				background-size: cover;
+			}
+			
+			.add-more {
+				position: fixed;
+				line-height: 44px;
+				color: #00b6f3;
+				bottom: 0;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				border-radius: 0;
+				font-size: 16px;
+			}
+			
+			.add-more i {
+				font-size: 24px;
+				font-style:normal!important;
+				display: inline-block;
+				vertical-align: middle;
+				margin: -5px 5px 0 0;
+			}
+			
+			.mui-table-view-cell input[type=checkbox] {
+				display: none;
+			}
+			
+			.mui-table-view-cell i {
+				display: block;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				position: absolute;
+				left: 15px;
+				top: 12px;
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EAEAEA), color-stop(100%, #DDDDDD));
+			}
+			
+			.mui-table-view-cell.on i {
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00D7F9), color-stop(100%, #00BFF5));
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav"><!--mui-action-back -->
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="managementRebackMedIndexID"></a>
+			<h1 class="mui-title">用药方案管理</h1>
+			<a href="" class="btn-add mui-pull-right" id="editorMedicationSchameID">
+				<input type="hidden" id="accountTypeEditor" value="0" />
+				<input type="hidden" id="familyIdEditor" value="0" />
+				<input type="hidden" id="isFamilyTypeEditor" value="0" />
+				编辑
+			</a>
+		</header>
+		<div class="mui-content editor">
+			<input type="hidden" id="medicationPlanID" value="" />
+			<ul class="mui-table-view" id="medicationSchemeListUlID">
+				<!--<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" >
+						<span class="mui-badge mui-badge-inverted"></span>
+						<input name="checkbox1" value="" type="checkbox">
+						<i></i>
+					</a>
+				</li>
+				<li class="mui-table-view-cell on">
+					<a href="" class="mui-navigate-right" >
+						123
+						<span class="mui-badge mui-badge-inverted">每日3次</span>
+						<input name="checkbox1" value="" type="checkbox">
+						<i></i>
+					</a>
+				</li>-->
+			</ul>
+			<a href="" class="mui-btn mui-btn-block add-more" id="medManageAddMoreID">
+				<input type="hidden" id="accountTypeAdd" value="0" />
+				<input type="hidden" id="familyIdAdd" value="0" />
+				<input type="hidden" id="isFamilyTypeAdd" value="0" />
+				<i>+</i> 添加用药
+			</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/medication/medicationManage.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

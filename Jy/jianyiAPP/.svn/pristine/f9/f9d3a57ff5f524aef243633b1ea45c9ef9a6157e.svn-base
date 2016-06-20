@@ -1,0 +1,176 @@
+var newDate = JSON.parse(localStorage.getItem("oneInfo"));
+mui.plusReady(function() {
+	onBulr();
+	newDate.phone == null;
+	if (newDate.phone == null) {
+		document.querySelector('.mui-title').innerText = '绑定手机';
+		document.querySelector(".modifyphone2").style.display = 'block';
+		return
+	}
+	var ophone = document.getElementById("ModifyPhone");
+	document.querySelector(".modifyphone1").style.display = 'block';
+	newDate.phone == null || newDate.phone == '' ? ophone.innerHTML = '无' : ophone.innerHTML = newDate.phone.slice(0, 3) + '****' + newDate.phone.slice(7, 11);
+})
+
+mui('.mui-content').on('tap', '.sedPhoneCod', function() {
+	getPhoneCod()
+});
+document.addEventListener('keyup', function(event) {
+	//键盘回车事件
+	if (event.keyCode == 13) {
+		getPhoneCod();
+	}
+});
+
+function onBulr() {
+	var input = document.getElementsByTagName('input')[0];
+	var val = document.getElementsByTagName('input')[0].value;
+	input.focus();
+	input.value = '';
+	input.value = val;
+}
+
+function getPhoneCod() {
+	var oldPhoneCod = document.getElementById("oldPhoneCod");
+	var password0 = document.getElementById("password");
+	var newPhone = document.getElementById("newPhone");
+	var newPhoneCod = document.getElementById("newPhoneCod");
+	var newPhone1 = document.getElementById("newPhone1");
+	var newPhoneCod1 = document.getElementById("newPhoneCod1");
+	var password1 = document.getElementById("password1");
+	var url = 'Profile/ChangeMobile';
+	var data = '';
+	var reg = /^[1][35789][0-9]{9}$/;
+	if (newDate.phone != null) {
+		if (oldPhoneCod.value == '' || password0.value == '' || newPhone.value == '' || newPhoneCod.value == '') {
+			mui.toast('请输入完全再重试！');
+			return false
+		}
+		if (!reg.test(newPhone.value)) {
+			mui.toast('手机号码格式不正确！');
+			return false
+		}
+		data = 'pwd=' + password0.value.toString() + '&phone=' + newPhone.value.toString() + '&checkpwd=1&authcode=' + newPhoneCod.value.toString() + '&oldPhone=' + newDate.phone.toString() + '&oldPhoneAuthcode=' + oldPhoneCod.value.toString();
+	} else {
+		if (newPhone1.value == '' || newPhoneCod1.value == '' || password1.value == '') {
+			mui.toast('请输入完全再重试！');
+			return false
+		}
+		if (!reg.test(newPhone1.value)) {
+			mui.toast('手机号码格式不正确！');
+			return false
+		}
+		data = 'pwd=' + password1.value.toString() + '&phone=' + newPhone1.value.toString() + '&checkpwd=1&authcode=' + newPhoneCod1.value.toString();
+	}
+
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			mui.toast(data.msg);
+			if (!commomUtil.closeWebviewById('mainMe')) {
+				commomUtil.closeWebviewById('mainMe');
+			}
+			var subpage_style = {
+				top: '50px',
+				bottom: '50px'
+			};
+			//预加载返回页面
+			var mainPage = plus.webview.getLaunchWebview();
+			var sub = plus.webview.create("../mainMe.html", "mainMe", subpage_style);
+			mainPage.append(sub);
+			mainPage.show();
+		},
+		onerror: function(e) {
+			//			console.log(JSON.stringify(e))
+			mui.toast(e.msg);
+		}
+	});
+}
+
+var num;
+var time = null;
+
+function minusOne(self) {
+	self.style.backgroundColor = '#ccc';
+	self.innerText = '等待（' + num + '）';
+	num--;
+	if (num < 0 || num < -1) {
+		clearInterval(time);
+		self.style.backgroundColor = '#ff5e5e';
+		self.innerText = '发送验证码';
+		time = null;
+		return false
+	}
+}
+
+function SmsSend(phone) {
+
+	if (!!time) {
+		return false
+	}
+	num = 59;
+	var self = phone;
+	var ophone = phone.parentNode.querySelector('input').value;
+	var reg = /^[1][35789][0-9]{9}$/;
+	if (ophone == '') {
+		mui.toast('手机号码不能为空！');
+		return false
+	}
+
+	if (!reg.test(ophone)) {
+		mui.toast('手机号码格式不正确！');
+		return false
+	}
+	time = setInterval(function() {
+		minusOne(self);
+	}, 1000);
+
+	var url = 'sms/send';
+	var data = 'mobile=' + ophone;
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			mui.toast(data.msg);
+		},
+		onerror: function(e) {
+			mui.toast(e.msg);
+		}
+	});
+}
+
+function SmsSend2(phone) {
+	var self = phone;
+
+	if (!!time) {
+		return false
+	}
+	num = 59;
+	var reg = /^[1][35789][0-9]{9}$/;
+	if (ophone == '') {
+		mui.toast('手机号码不能为空！');
+		return false
+	}
+	if (!reg.test(ophone)) {
+		mui.toast('手机号码格式不正确！');
+		return false
+	}
+	time = setInterval(function() {
+		minusOne(self);
+	}, 1000);
+
+	var ophone = newDate.phone;
+	var url = 'sms/send';
+	var data = 'mobile=' + ophone;
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			mui.toast(data.msg);
+		},
+		onerror: function(e) {
+			mui.toast(e.msg);
+		}
+	});
+}

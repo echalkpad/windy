@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新增地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.poppicker.css"/>
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view:before {
+				display: none;
+			}
+			
+			.mui-input-group p {
+				font-size: 12px;
+			}
+			
+			.mui-input-group {
+				position: relative;
+			}
+			
+			.mui-input-group h3 {
+				color: #333;
+				font-size: 14px;
+				line-height: 24px;
+				float: left;
+				width: 90px;
+				position: absolute;
+				left: 15px;
+				top: 8px;
+			}
+			
+			.mui-input-group input {
+				border: 0;
+				display: block;
+				width: 100%;
+				padding-left: 85px;
+				color: #666;
+				font-size: 14px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.zju h3 {
+				letter-spacing: 7px;
+			}
+			
+			.searchAddress {
+				position: relative;
+				padding: 10px 15px;
+				background: #fff;
+				margin-bottom: 10px;
+			}
+			
+			.searchAddress .search {
+				position: absolute;
+				top: 16px;
+				left: 25px;
+				display: inline-block;
+				width: 18px;
+				height: 19px;
+				background: url(../../img/icon_search.png) no-repeat scroll top left;
+				background-size: cover;
+			}
+			
+			.mui-input-group:after,
+			.mui-input-group:before,
+			.mui-input-group .mui-input-row:last-child:after {
+				height: 0;
+			}
+			
+			.searchAddress input {
+				background: #f1f1f1;
+				border-radius: 16px;
+				border: 0;
+				margin: 0;
+				height: 32px;
+				line-height: 32px;
+				padding-left: 35px;
+				color: #444;
+			}
+			.mui-btn, button, input[type=button], input[type=reset], input[type=submit]{
+				border:0;
+				background:none;
+			}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit]{
+				background:none;
+				border:0;
+				color:#333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">新增地址</h1>
+			<a href="" class="btn-add mui-pull-right" id="submitAddress" style="font-size:14px;line-height: 44px;">确定</a>
+		</header>
+		<div class="mui-content">
+			<!--<section class="searchAddress">
+				<label for="" class="search"></label>
+				<input type="text" name="" id="" placeholder="搜索地址" />
+			</section>-->
+			<form class="mui-input-group border-t">
+				<div class="mui-input-row">
+					<h3>所在地址</h3>
+					<input type="text" class="mui-input-clear" id="Addr1" value="" placeholder="省/市/区"/>
+				</div>
+				<div class="mui-input-row">
+					<h3>完善信息</h3>
+					<input type="text" class="mui-input-clear" id="Addr2" value="" placeholder="小区名称、楼号、楼层、室号" />
+				</div>
+				<div class="mui-input-row zju">
+					<h3>联络人</h3>
+					<input type="text" class="mui-input-clear" id="ConsigneeName" value="" placeholder="姓名" />
+				</div>
+				<div class="mui-input-row">
+					<h3>手机号码</h3>
+					<input type="tel" class="mui-input-clear" id="Mobile" value="" placeholder="请输入手机号码" />
+				</div>
+			</form>
+			<form class="mui-input-group border-t">
+				<div class="mui-input-row">
+					<h3>设置默认地址</h3>
+					<div class="mui-switch mui-switch-mini mui-active" id="defaultAddress">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/mui.picker.min.js"></script>
+	<script src="../../js/mui.poppicker.js"></script>
+	<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/me/newAddress.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

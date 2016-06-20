@@ -1,0 +1,7 @@
+//对症药品
+mui(".mui-col-xs-7").on('tap', 'li', function() {
+	mui.openWindow({
+		id: 'symptomaticMedicineList',
+		url: "symptomaticMedicineList.html"
+	});
+})

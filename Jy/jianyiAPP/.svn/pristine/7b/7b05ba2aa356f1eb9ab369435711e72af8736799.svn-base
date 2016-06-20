@@ -1,0 +1,307 @@
+var packageId = '';
+var itemList = {};
+var packageInfo = {};
+var PriceList = {};
+//初始化
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	packageId = self.packageId;
+	var StoreId = self.StoreId;
+	if(StoreId && typeof(StoreId) != "undefined" && StoreId != ""){
+		packageInfo.StoreId = self.StoreId;
+		packageInfo.ShortName = self.ShortName;
+		packageInfo.Address = self.Address;
+		packageInfo.Lng = self.Lng;
+		packageInfo.Lat = self.Lat;
+		document.getElementById('healthExaminationPackageNetChooseID').innerText = self.ShortName;
+	}
+	//初始化套餐详情页面
+	healthExaminationPackage.initHealthExaminationPackage();
+});
+
+//window.addEventListener('netChoosePackageRefresh',function(event){
+//	setTimeout(function(){
+//		packageId = event.detail.packageId;
+//		//初始化套餐详情页面
+//		healthExaminationPackage.initHealthExaminationPackage();
+//	},500);
+//});
+
+window.addEventListener('chooseNetRefresh',function(event){
+//	测试使用网点ID：782  ShortName：瑞慈体检-国定路店      Address：国定路323号创业大厦13楼    "Lng":121.50913 "Lat":31.296307
+	packageInfo.StoreId = event.detail.StoreId;
+	packageInfo.ShortName = event.detail.ShortName;
+	packageInfo.Address = event.detail.Address;
+	packageInfo.Lng = event.detail.Lng;
+	packageInfo.Lat = event.detail.Lat;
+	document.getElementById('healthExaminationPackageNetChooseID').innerText = event.detail.ShortName;
+});
+
+var healthExaminationPackage = {
+	initHealthExaminationPackage : function(){
+		//初始化选择框
+		healthExaminationPackage.selectInit();
+		//初始化套餐详情banner
+		healthExaminationPackage.initPackageBanner();
+		//初始化套餐详情数据
+		healthExaminationPackage.initPackageDetails();
+	},
+	selectInit : function() {
+		//购买选择
+		var chooseBuy = new mui.PopPicker();
+		chooseBuy.setData([{
+			"value": "man",
+			"text": "男性"
+		}, {
+			"value": "womenMarry",
+			"text": "女已婚"
+		}, {
+			"value": "women",
+			"text": "女未婚"
+		}]);
+		var ohealthExaminationPackageBuy = document.getElementById('healthExaminationPackageBuy');
+		var ohealthExaminationPackageBuyResult = document.getElementById('healthExaminationPackageBuyResult');
+		ohealthExaminationPackageBuy.addEventListener('tap', function(event) {
+			chooseBuy.show(function(items) {
+				var s = JSON.stringify(items[0].text);
+				s = s.replace("\"", "").replace("\"", "");
+				var priceCode = JSON.stringify(items[0].value);
+				priceCode = priceCode.replace("\"", "").replace("\"", "");
+				ohealthExaminationPackageBuyResult.innerText = s;
+				document.getElementById('healthExaminationPackageBuyResult').innerText = s;
+				ohealthExaminationPackageBuyResult.setAttribute('chooseBuyId', priceCode);
+				if(PriceList.length > 0){
+					for(var k = 0;k < PriceList.length; k++){
+						if(PriceList[k].PriceCode == priceCode){
+							document.getElementById('healthExaminationPackageBuyPriceID').value = PriceList[k].ID;
+						}
+					}
+				}
+			});
+		}, false);
+	},
+	initPackageBanner : function(){
+		var requestPackageBanner = "packageId="+packageId;
+		var intervalValue = 0;
+		jyapp.getApi({
+			method: 'HealthExamination/PackageBanner',
+			data:requestPackageBanner,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initPackageBanner---->:"+JSON.stringify(response));
+				var htmlBannerSlder = '';
+				var htmlBannerSlderPoint = '';
+				if(response.code != 1){
+					intervalValue = 0;
+					htmlBannerSlder += '<div class="mui-slider-item">';
+					htmlBannerSlder += '	<a href="#">';
+					htmlBannerSlder += '		<img src="../../../img/healthy/tijian_1.png">';
+					htmlBannerSlder += '	</a>';
+					htmlBannerSlder += '</div>';
+					htmlBannerSlderPoint += '<div class="mui-indicator mui-active"></div>';
+				}else{
+					if(response.data && response.data.length > 0){
+						intervalValue = 3000;
+						var dataValues = response.data;
+						htmlBannerSlder += '<div class="mui-slider-item">';
+						htmlBannerSlder += '	<input type="hidden" value="'+dataValues[dataValues.length-1].URL+'" />';
+						htmlBannerSlder += '	<input type="hidden" value="'+dataValues[dataValues.length-1].Description+'" />';
+						htmlBannerSlder += '	<a href="#">';
+						htmlBannerSlder += '		<img src="'+dataValues[dataValues.length-1].Pic+'">';
+						htmlBannerSlder += '	</a>';
+						htmlBannerSlder += '</div>';
+						for(var i = 0; i < dataValues.length; i++){
+							htmlBannerSlder += '<div class="mui-slider-item">';
+							htmlBannerSlder += '	<input type="hidden" value="'+dataValues[i].URL+'" />';
+							htmlBannerSlder += '	<input type="hidden" value="'+dataValues[i].Description+'" />';
+							htmlBannerSlder += '	<a href="#">';
+							htmlBannerSlder += '		<img src="'+dataValues[i].Pic+'">';
+							htmlBannerSlder += '	</a>';
+							htmlBannerSlder += '</div>';
+							if(i == 0){
+								htmlBannerSlderPoint += '<div class="mui-indicator mui-active"></div>';
+							}
+							if(i == (dataValues.length-1)){
+								htmlBannerSlderPoint += '<div class="mui-indicator"></div>';
+							}
+						}
+						htmlBannerSlder += '<div class="mui-slider-item mui-slider-item-duplicate">';
+						htmlBannerSlder += '	<input type="hidden" value="'+dataValues[0].URL+'" />';
+						htmlBannerSlder += '	<input type="hidden" value="'+dataValues[0].Description+'" />';
+						htmlBannerSlder += '	<a href="#">';
+						htmlBannerSlder += '		<img src="'+dataValues[0].Pic+'">';
+						htmlBannerSlder += '	</a>';
+						htmlBannerSlder += '</div>';
+					}else{
+						intervalValue = 0;
+						htmlBannerSlder += '<div class="mui-slider-item">';
+						htmlBannerSlder += '	<a href="#">';
+						htmlBannerSlder += '		<img src="../../../img/healthy/tijian_1.png">';
+						htmlBannerSlder += '	</a>';
+						htmlBannerSlder += '</div>';
+						htmlBannerSlderPoint += '<div class="mui-indicator mui-active"></div>';
+					}
+				}
+				document.getElementById('detailPackageBannerSlderID').innerHTML = htmlBannerSlder;
+				document.getElementById('detailPackageBannerSlderPointID').innerHTML = htmlBannerSlderPoint;
+				if(intervalValue != 0){
+					//获得slider插件对象
+					mui('.mui-slider').slider({
+						interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+					});
+				}
+			},
+			onerror: function(e) {
+				var htmlBannerSlder = '';
+				var htmlBannerSlderPoint = '';
+				htmlBannerSlder += '<div class="mui-slider-item">';
+				htmlBannerSlder += '	<a href="#">';
+				htmlBannerSlder += '		<img src="../../../img/healthy/tijian_1.png">';
+				htmlBannerSlder += '	</a>';
+				htmlBannerSlder += '</div>';
+				htmlBannerSlderPoint += '<div class="mui-indicator mui-active"></div>';
+				document.getElementById('detailPackageBannerSlderID').innerHTML = htmlBannerSlder;
+				document.getElementById('detailPackageBannerSlderPointID').innerHTML = htmlBannerSlderPoint;
+				console.log("healthExamination:" + e);
+			}
+		});
+	},
+	initPackageDetails : function(){
+		var requestPackageDetails = "packageId="+packageId;
+		jyapp.getApi({
+			method: 'HealthExamination/PackageDetails',
+			data:requestPackageDetails,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initPackageDetails---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','提示','确认');
+					return false;
+				}else{
+					if(response.data){
+						var dataValues = response.data;
+						if(response.data.Entity){
+							var Entity = response.data.Entity;
+							packageInfo.PackageId = Entity.ID;
+							packageInfo.PackageName = Entity.PackageName;
+							document.getElementById('healthExaminationPackageNetStoreID').value = Entity.OrganizationId;
+							document.getElementById('detailPackageNameHID').innerHTML = Entity.PackageName;
+							document.getElementById('detailStoreNameSID').innerHTML = Entity.OrganizationShortName;
+							document.getElementById('detailPackageSummaryArtID').innerHTML = Entity.Summary;
+						}
+						if(dataValues.PriceList && dataValues.PriceList.length > 0){
+							PriceList = dataValues.PriceList;
+							var htmlOriginalPrice = '';
+							var htmlPresentPrice = '';
+							for(var i = 0;i < PriceList.length; i++){
+								htmlOriginalPrice += '<p><del>'+PriceList[i].PriceType+'</del><del>¥'+PriceList[i].OriginalPrice+'</del></p>';
+								htmlPresentPrice += '<p>'+PriceList[i].PriceType+'<span class="red">¥'+PriceList[i].PresentPrice+'</span></p>';
+							}
+							document.getElementById('detailPackageOriginalPriceID').innerHTML = htmlOriginalPrice;
+							document.getElementById('detailPackagePresentPriceID').innerHTML = htmlPresentPrice;
+						}
+						if(dataValues.ItemList && dataValues.ItemList.length > 0){
+							itemList = dataValues.ItemList;
+						}
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("healthExamination:" + e);
+			}
+		});
+	}
+}
+
+//检测项目
+mui('.mui-table-view').on('tap', '#healthExaminationPackageTestItems', function() {
+	commomUtil.closeWebviewById('healthExaminationPackageTestItems');
+	mui.openWindow({
+		id: 'healthExaminationPackageTestItems',
+		url: "healthExaminationPackageTestItems.html",
+		extras:{
+			itemList : itemList
+		}
+	});
+});
+//常见问题
+mui('.mui-table-view').on('tap', '#healthExaminationPackageProblems', function() {
+	commomUtil.closeWebviewById('healthExaminationPackageProblems');
+	mui.openWindow({
+		id: 'healthExaminationPackageProblems',
+		url: "healthExaminationPackageProblems.html",
+		extras:{
+			packageId : packageId
+		}
+	});
+});
+//历史评价
+mui('.mui-table-view').on('tap', '#healthExaminationPackageEvaluation', function() {
+	commomUtil.closeWebviewById('healthExaminationPackageEvaluation');
+	mui.openWindow({
+		id: 'healthExaminationPackageEvaluation',
+		url: "healthExaminationPackageEvaluation.html",
+		extras:{
+			packageId : packageId
+		}
+	});
+});
+//网点选择
+mui('.mui-table-view').on('tap', '#healthExaminationPackageNet', function() {
+	commomUtil.closeWebviewById('healthExaminationNet');
+	var organizationId = document.getElementById('healthExaminationPackageNetStoreID').value;
+//	alert("体检机构ID："+organizationId);
+	mui.openWindow({
+		id: 'healthExaminationNet',
+		url: "healthExaminationNet.html",
+		extras: {
+			organizationId : organizationId
+		}
+	});
+});
+//立即预约
+mui('body').on('tap', '#healthExaminationInformation', function() {
+	commomUtil.closeWebviewById('healthExaminationInformation');
+	var packagePriceID = document.getElementById('healthExaminationPackageBuyPriceID').value;
+	if(!packagePriceID || typeof(packagePriceID) == 'undefined' || packagePriceID == ""){
+		plus.nativeUI.alert('请选择购买选择','','提示','确认');
+		return false;
+	}
+	packageInfo.packagePriceID = packagePriceID;
+//	packageInfo.StoreId = 782;
+//	packageInfo.ShortName = '瑞慈体检-国定路店';
+//	packageInfo.Address = '国定路323号创业大厦13楼';
+//	packageInfo.Lng = '121.50913';
+//	packageInfo.Lat = '31.296307';
+	if(!packageInfo.StoreId || typeof(packageInfo.StoreId) == 'undefined' || packageInfo.StoreId == ""){
+		plus.nativeUI.alert('请选择网点选择','','提示','确认');
+		return false;
+	}
+	mui.openWindow({
+		id: 'healthExaminationInformation',
+		url: "healthExaminationInformation.html",
+		extras: {
+			packageInfo : packageInfo
+		}
+	});
+});
+
+//轮播图点击链接跳转事件
+mui('#detailPackageBannerSlderID').on('click', '.mui-slider-item', function() {
+	var inputId = this.querySelectorAll('input');
+	if (!inputId[0] || typeof(inputId[0]) == "undefined" || inputId[0] == "") {
+		return false;
+	}
+	var jumpUrl = inputId[0].value;
+	var description = inputId[1].value;
+	mui.openWindow({
+		id: 'sliper',
+		url: '../../sliper.html',
+		extras: {
+			description: description,
+			url: jumpUrl
+		}
+	});
+});

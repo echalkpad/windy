@@ -1,0 +1,74 @@
+//食物介绍 
+mui("#foodLibListUl").on('tap', 'li', function() {
+	var foodId = this.querySelectorAll('input')[0].value;
+	
+	mui.openWindow({
+		id: 'foodDetali',
+		url: "foodDetali.html",
+		extras:{
+			'foodId':foodId
+		}
+	});
+});
+//初始化相关数据
+var foodTypeId = 0;
+var foodTypeName = '';
+var type = '';
+var foodName = '';
+
+mui.plusReady(function(){
+	var self = plus.webview.currentWebview();
+	foodTypeId = self.foodTypeId;
+	foodTypeName = self.foodTypeName;
+	type = self.type;
+	foodName = self.foodName;
+	foodLibList.foodList();
+	
+	
+});
+
+var foodLibList = {
+	
+	/**
+	 * 加载食物列表
+	 */
+	foodList:function(){
+		var title = '';
+		var dataPars = '';
+		if(type=='foodType'){
+			//根据类别查询
+			title = foodTypeName;
+			dataPars = 'typeId='+foodTypeId;
+		}else if(type=='foodName'){
+			//根据名称查询
+			title = '搜索结果';
+			dataPars = 'foodName='+foodName;
+		}
+		//给title赋值
+		document.getElementById('foodListTitle').innerHTML=title;
+		jyapp.getApi({
+			method:'FoodHealth/FoodList',
+			data:dataPars,
+			timeout:'10000',
+			onsuccess:function(data){
+				console.log(JSON.stringify(data));
+				if(data.code==1&&data.data!=null&&data.data.length>0){
+					//拼接html页面
+					var html ='';
+					for(var i=0;i<data.data.length;i++){
+						var food = data.data[i];
+						html+='<li class="mui-table-view-cell mui-media"><a href="javascript:;">';
+						html+='<input type="hidden" value="'+food.ID+'" /><img class="mui-media-object mui-pull-left" src="'+food.FoodPic+'">';
+						html+='<div class="mui-media-body">'+food.FoodName;
+						html+='<p class="ellipsis">'+food.FoodEffect+'</p></div></a></li>';
+					}
+					document.getElementById('foodLibListUl').innerHTML=html;
+				}
+			},
+			onerror:function(e){
+				console.log(e);
+			}
+		})
+	}
+	
+}

@@ -1,0 +1,390 @@
+mui('.mui-content').on('tap', '.spaOrderList-c', function() {
+	var oid = this.parentNode.parentNode.parentNode.id;
+	if (this.parentNode.parentNode.className == 'canceledList') {
+		oid = 'cancel';
+	}else if(this.parentNode.parentNode.className == 'refundedList'){
+		oid = 'refund';
+	}
+	console.log(oid);
+	mui.openWindow({
+		id: 'geneticOrderDetail',
+		url: "geneticOrderDetail.html",
+		extras: {
+			"type": oid
+		}
+	})
+});
+
+var index = 0;
+var pageSize = 10;
+var dqrpageIndex = 1;
+var dqrpagetatel = 0;
+var dqrgeneticOrderHtml = "";
+
+var dzfpageIndex = 1;
+var dzfpagetatel = 0;
+var dzfgeneticOrderHtml = "";
+
+var yycgpageIndex = 1;
+var yycgpagetatel = 0;
+var yycgeneticOrderHtml = "";
+
+var dpjpageIndex = 1;
+var dpjpagetatel = 0;
+var dpjgeneticOrderHtml = "";
+
+var ywcpageIndex = 1;
+var ywcpagetatel = 0;
+var ywcgeneticOrderHtml = "";
+
+document.addEventListener("plusready",function(e){
+	//设置显示页面
+	var self = plus.webview.currentWebview();
+	index = self.index;
+	//初始化数据
+	geneticOrder.initData();
+	//加载下拉刷新事件
+	document.addEventListener( "plusscrollbottom", function(){
+		var divs = document.getElementById("geneticOrderId");
+		var consultingas = divs.getElementsByTagName("a");
+		var divid = 0;
+		for(var i=0;i<consultingas.length;i++){
+			if(consultingas[i].className == "mui-control-item mui-active"){
+				divid = i+1;
+				break;
+			}
+		}
+		if(divid == 1){
+			if(dqrpagetatel == pageSize){
+				dqrpageIndex ++;
+				consultingRecord.initGeneticOrderdqr();
+			}
+		}else if(divid == 2){
+			if(dzfpagetatel == pageSize){
+				dzfpageIndex++;
+				consultingRecord.initGeneticOrderdzf();
+			}
+		}else if(divid == 3){
+			if(yycgpagetatel == pageSize){
+				yycgpageIndex++;
+				consultingRecord.initGeneticOrderyyc();
+			}
+		}else if(divid == 4){
+			if(dpjpagetatel == pageSize){
+				dpjpageIndex++;
+				consultingRecord.initGeneticOrderdpj();
+			}
+		}else if(divid == 5){
+			if(ywcpagetatel == pageSize){
+				ywcpageIndex++;
+				consultingRecord.initGeneticOrderywc();
+			}
+		}
+	});
+},false);
+
+var geneticOrder = {
+	initData : function(){
+		//加载待确认数据
+		geneticOrder.initGeneticOrderdqr();
+		//加载待支付数据
+		geneticOrder.initGeneticOrderdzf();
+		//加载预约成功数据
+		geneticOrder.initGeneticOrderyyc();
+		//加载待评价数据
+		geneticOrder.initGeneticOrderdpj();
+		//加载已完成数据
+		geneticOrder.initGeneticOrderywc();
+		
+	//	console.log(self.index);
+		var divs = document.getElementById("geneticOrderId");
+		var consultingas = divs.getElementsByTagName("a");
+		if(index){
+			for(var i=0;i<consultingas.length;i++){
+				consultingas[i].setAttribute('class','mui-control-item');
+				document.getElementById("item"+(i+1)).setAttribute("class","mui-control-content");
+				if(i == index){
+					consultingas[i].setAttribute('class','mui-control-item mui-active');
+					document.getElementById("item"+(i+1)).setAttribute("class","mui-control-content mui-active");
+				}
+			}
+		}
+	},
+	initGeneticOrderdqr : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/OrderList',
+   			data:'orderType=1&pageIndex='+dqrpageIndex+'&pageSize='+pageSize,
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("dqrGeneticOrderzwddId").style.display = "none";
+					var dataValue = data.data.orders;
+					dqrpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						var PackageName = dataValue[i].PackageName ? dataValue[i].PackageName : "尚未确认";
+						dqrgeneticOrderHtml += "<li class=\"border-b\">";
+						dqrgeneticOrderHtml += "<section class=\"spaOrderList-t\">";
+						dqrgeneticOrderHtml += "<article>订单编号："+dataValue[i].OrderNo+" <span class=\"red\">待客服确认</span></article>";
+						dqrgeneticOrderHtml += "</section>";
+						dqrgeneticOrderHtml += "<section class=\"spaOrderList-c\">";
+						dqrgeneticOrderHtml += "<p><strong>选择套餐</strong><span>"+PackageName+" </span></p>";
+						dqrgeneticOrderHtml += "<p class=\"lettersapcing3\"><strong>被检人</strong><span class=\"active\">"+dataValue[i].Name+" </span></p>";
+						dqrgeneticOrderHtml += "</section>";
+						dqrgeneticOrderHtml += "<section class=\"spaOrderList-b\">";
+						if(PackageName){
+							dqrgeneticOrderHtml += "<p><span>套餐价格<i>¥"+dataValue[i].TotalFee+"</i></span><a href=\"\" class=\"black cancle\">取消预约<input type=\"hidden\"/><input type=\"hidden\"/></a><a href=\"tel:400-111-5289\">电话催办</a></p>";
+						}else{
+							//取消预约单更换为取消预约  同时结构有所增加（2016/5/23 明星东）
+							dqrgeneticOrderHtml += "<p><a href=\"\" class=\"black cancle\">取消预约<input type=\"hidden\"/><input type=\"hidden\"/></a><a href=\"tel:400-111-5289\">电话催办</a></p>";
+						}
+						dqrgeneticOrderHtml += "</section>";
+						dqrgeneticOrderHtml += "</li>";
+					}
+				}else{
+					if(dqrgeneticOrderHtml == ""){
+						document.getElementById("dqrGeneticOrderzwddId").style.display = "";
+					}
+				}
+				document.getElementById("dqrGeneticOrderdataId").innerHTML = dqrgeneticOrderHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	},
+	initGeneticOrderdzf : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/OrderList',
+   			data:'orderType=2&pageIndex='+dzfpageIndex+'&pageSize='+pageSize,
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("dzfGeneticOrderzwddId").style.display = "none";
+					var dataValue = data.data.orders;
+					dzfpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						var PackageName = dataValue[i].PackageName ? dataValue[i].PackageName : "尚未确认";
+						dzfgeneticOrderHtml += "<li class=\"border-b\">";
+						dzfgeneticOrderHtml += "<section class=\"spaOrderList-t\">";
+						dzfgeneticOrderHtml += "<article>订单编号："+dataValue[i].OrderNo+" <span class=\"red\">待支付</span></article>";
+						dzfgeneticOrderHtml += "</section>";
+						dzfgeneticOrderHtml += "<section class=\"spaOrderList-c\">";
+						dzfgeneticOrderHtml += "<p><strong>选择套餐</strong><span>"+PackageName+" </span></p>";
+						dzfgeneticOrderHtml += "<p class=\"lettersapcing3\"><strong>被检人</strong><span class=\"active\">"+dataValue[i].Name+" </span></p>";
+						dzfgeneticOrderHtml += "</section>";
+						dzfgeneticOrderHtml += "<section class=\"spaOrderList-b\">";
+						dzfgeneticOrderHtml += "<p><span>套餐价格<i>¥"+dataValue[i].TotalFee+"</i></span><a href=\"\" class=\"black cancle\">取消预约</a><input type=\"hidden\"/><input type=\"hidden\"/><a href=\"\">支付</a></p>";
+						dzfgeneticOrderHtml += "</section>";
+						dzfgeneticOrderHtml += "</li>";
+					}
+				}else{
+					if(dzfgeneticOrderHtml == ""){
+						document.getElementById("dzfGeneticOrderzwddId").style.display = "";
+					}
+				}
+				document.getElementById("dzfGeneticOrderdataId").innerHTML = dzfgeneticOrderHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	},
+	initGeneticOrderyyc : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/OrderList',
+   			data:'orderType=3&pageIndex='+yycgpageIndex+'&pageSize='+pageSize,
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("yycGeneticOrderzwddId").style.display = "none";
+					var dataValue = data.data.orders;
+					yycgpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						var PackageName = dataValue[i].PackageName ? dataValue[i].PackageName : "尚未确认";
+						yycgeneticOrderHtml += "<li class=\"border-b\">";
+						yycgeneticOrderHtml += "<section class=\"spaOrderList-t\">";
+						yycgeneticOrderHtml += "<article>订单编号："+dataValue[i].OrderNo+" <span class=\"red\">预约成功</span></article>";
+						yycgeneticOrderHtml += "</section>";
+						yycgeneticOrderHtml += "<section class=\"spaOrderList-c\">";
+						yycgeneticOrderHtml += "<p><strong>选择套餐</strong><span>"+PackageName+" </span></p>";
+						yycgeneticOrderHtml += "<p class=\"lettersapcing3\"><strong>被检人</strong><span class=\"active\">"+dataValue[i].Name+" </span></p>";
+						yycgeneticOrderHtml += "</section>";
+						yycgeneticOrderHtml += "<section class=\"spaOrderList-b\">";
+						yycgeneticOrderHtml += "<p><a href=\"\" >申请退款</a></p>";
+						yycgeneticOrderHtml += "</section>";
+						yycgeneticOrderHtml += "</li>";
+					}
+				}else{
+					if(yycgeneticOrderHtml == ""){
+						document.getElementById("yycGeneticOrderzwddId").style.display = "";
+					}
+				}
+				document.getElementById("yycGeneticOrderdataId").innerHTML = yycgeneticOrderHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	},
+	initGeneticOrderdpj : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/OrderList',
+   			data:'orderType=4&pageIndex='+dpjpageIndex+'&pageSize='+pageSize,
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("dpjGeneticOrderzwddId").style.display = "none";
+					var dataValue = data.data.orders;
+					dpjpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						var PackageName = dataValue[i].PackageName ? dataValue[i].PackageName : "尚未确认";
+						dpjgeneticOrderHtml += "<li class=\"border-b\">";
+						dpjgeneticOrderHtml += "<section class=\"spaOrderList-t\">";
+						dpjgeneticOrderHtml += "<article>订单编号："+dataValue[i].OrderNo+" <span class=\"red\">待评价</span></article>";
+						dpjgeneticOrderHtml += "</section>";
+						dpjgeneticOrderHtml += "<section class=\"spaOrderList-c\">";
+						dpjgeneticOrderHtml += "<p><strong>选择套餐</strong><span>"+PackageName+" </span></p>";
+						dpjgeneticOrderHtml += "<p class=\"lettersapcing3\"><strong>被检人</strong><span class=\"active\">"+dataValue[i].Name+" </span></p>";
+						dpjgeneticOrderHtml += "</section>";
+						dpjgeneticOrderHtml += "<section class=\"spaOrderList-b\">";
+						dpjgeneticOrderHtml += "<p><a href=\"\" >评价</a></p>";
+						dpjgeneticOrderHtml += "</section>";
+						dpjgeneticOrderHtml += "</li>";
+					}
+				}else{
+					if(dpjgeneticOrderHtml == ""){
+						document.getElementById("dpjGeneticOrderzwddId").style.display = "";
+					}
+				}
+				document.getElementById("dpjGeneticOrderdataId").innerHTML = dpjgeneticOrderHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	},
+	initGeneticOrderywc : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/OrderList',
+   			data:'orderType=4&pageIndex='+ywcpageIndex+'&pageSize='+pageSize,
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("dpjGeneticOrderzwddId").style.display = "none";
+					var dataValue = data.data.orders;
+					ywcpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						var PackageName = dataValue[i].PackageName ? dataValue[i].PackageName : "尚未确认";
+						var status = dataValue[i].status;
+						var title = "";
+						switch(status){
+							case 6 :
+								title = "已完成";
+								break;
+							case 0 :
+								title = "已取消";
+								break;
+							case 8 :
+								title = "已退款";
+								break;
+						};
+						ywcgeneticOrderHtml += "<li class=\"border-b\">";
+						ywcgeneticOrderHtml += "<section class=\"spaOrderList-t\">";
+						ywcgeneticOrderHtml += "<article>订单编号："+dataValue[i].OrderNo+" <span class=\"red\">"+title+"</span></article>";
+						ywcgeneticOrderHtml += "</section>";
+						ywcgeneticOrderHtml += "<section class=\"spaOrderList-c\">";
+						ywcgeneticOrderHtml += "<p><strong>选择套餐</strong><span>"+PackageName+" </span></p>";
+						ywcgeneticOrderHtml += "<p class=\"lettersapcing3\"><strong>被检人</strong><span class=\"active\">"+dataValue[i].Name+" </span></p>";
+						ywcgeneticOrderHtml += "</section>";
+						ywcgeneticOrderHtml += "<section class=\"spaOrderList-b\">";
+						if(status == 6){
+							ywcgeneticOrderHtml += "<p>";
+							var Score = dataValue[i].Score?dataValue[i].Score:0;
+							for(var j=0;j<Score;j++){
+								ywcgeneticOrderHtml += "<span class=\"xing xing-active\"></span>";
+							}
+							for(var k=0;k<5-Score;k++){
+								ywcgeneticOrderHtml += "<span class=\"xing\"></span>";
+							}
+							ywcgeneticOrderHtml += "<a href=\"\" >删除订单</a></p>";
+						}else{
+							ywcgeneticOrderHtml += "<p><a href=\"\" >删除订单</a></p>";
+						}
+						
+						ywcgeneticOrderHtml += "</section>";
+						ywcgeneticOrderHtml += "</li>";
+					}
+				}else{
+					if(ywcgeneticOrderHtml == ""){
+						document.getElementById("ywcGeneticOrderzwddId").style.display = "";
+					}
+				}
+				document.getElementById("ywcGeneticOrderdataId").innerHTML = ywcgeneticOrderHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	},
+	
+};
+
+//取消预约原因详细----明星东2016-5-23 17:43更新
+mui('.mui-content').on('tap','.cancle',function(){
+	console.log('123');
+	var userCancle = new mui.PopPicker();
+		userCancle.setData([{
+			value: 'nobuy',
+			text: '我不想买了'
+		}, {
+			value: 'noappropriate',
+			text: '时间/套餐/网点不理想'
+		}, {
+			value: 'error',
+			text: '信息填写错误,重新下单'
+		}, {
+			value: 'nohere',
+			text: '不在这里预约'
+		}]);
+		var cancleButton = this;
+		var cancleResult = this.children[0];
+		userCancle.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			s = s.replace("\"", "").replace("\"", "");
+			cancleResult.value = s;
+			console.log(cancleResult.value);
+		});
+});
+
+//自定义事件
+window.addEventListener("newidsGeneticOrder",function(event){
+	dqrpageIndex = 0;
+	dqrpagetatel = 0;
+	dqrgeneticOrderHtml = "";
+	
+	dzfpageIndex = 0;
+	dzfpagetatel = 0;
+	dzfgeneticOrderHtml = "";
+	
+	yycgpageIndex = 0;
+	yycgpagetatel = 0;
+	yycgeneticOrderHtml = "";
+	
+	dpjpageIndex = 0;
+	dpjpagetatel = 0;
+	dpjgeneticOrderHtml = "";
+	
+	ywcpageIndex = 0;
+	ywcpagetatel = 0;
+	ywcgeneticOrderHtml = "";
+	index = event.detail.index;
+	geneticOrder.initData();
+});
+
+
+

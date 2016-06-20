@@ -1,0 +1,73 @@
+var backid = "";
+var backurl = "";
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	var orderId = self.orderId;
+	backid = self.backid;
+	backurl = self.backurl;
+	//初始化订单详情页面数据
+	slowOrderDetailsFinish.initSlowOrderDetailsFinish(orderId);
+});
+
+var slowOrderDetailsFinish = {
+	initSlowOrderDetailsFinish : function(orderId){
+		jyapp.getApi({
+ 			method: 'Treat/OrderDetailsRe',
+ 			data:'orderId='+orderId,
+ 			timeout : 10000,
+ 			onsuccess: function(response) {
+				var dataValue = response.data;
+				if (dataValue != null) {
+					orders = dataValue;
+					var strTime = dataValue.VisitDate;
+					var endLen = strTime.length - 2;
+					var time = strTime.substring(6, endLen);
+					var visit = commomUtil.formatStringToDate(time, 2);
+					var VisitDate = (visit.substring(0, visit.length - 3));
+					var week = commomUtil.formatDateToWeek(time);
+					document.getElementById("slowDetailsFinishSpanNameID").innerHTML = dataValue.doctorName;
+					document.getElementById("slowDetailsFinishSpanTimeID").innerHTML = VisitDate + '(' + week + ')';
+					document.getElementById("slowDetailsFinishAddressID").innerHTML = dataValue.VisitPlace;
+					document.getElementById("slowDetailsFinishPatientID").innerHTML = dataValue.patientName;
+					document.getElementById("slowDetailsFinishIdNumberID").innerHTML = dataValue.IDCard;
+					document.getElementById("slowDetailsFinishPhoneID").innerHTML = dataValue.Phone;
+					document.getElementById("slowDetailsFinishConsultingPriceID").innerHTML = "¥" + dataValue.Fee;
+					document.getElementById("slowDetailsFinishEnsureID").innerHTML = "¥" + dataValue.Deposit;
+					var cashCoupon = dataValue.TotalFee - (dataValue.Deposit + dataValue.Fee);
+					document.getElementById("slowDetailsFinishCashCouponID").innerHTML = "¥" + cashCoupon;
+					document.getElementById("slowDetailsFinishTotalPriceID").innerHTML = "¥" + dataValue.TotalFee;
+					var ulXingXing = document.getElementById('slowDetailsFinishXingXingID');
+					var ul_lisXing = ulXingXing.getElementsByTagName('span');
+					for (var i = 0; i < parseInt(dataValue.Score); i++) {
+						ul_lisXing[i].className = 'xing xing-active';
+					}
+					document.getElementById("slowDetailsFinishEvaluateID").innerHTML = dataValue.Comment;
+				}
+ 			},
+ 			onerror: function(e) {
+				console.log("initSlowDetailsFinish:" + e);
+// 				plus.nativeUI.alert(e,'','提示','确认');
+ 				return false;
+ 			}
+ 		});
+	},
+	orderDetailsFinishBackCell : function(){
+		commomUtil.closeWebviewById("slowOrderList");
+		mui.openWindow({
+			id: 'slowOrderList',
+			url: "slowOrderList.html",
+			/*createNew:true,*/
+			backurl:backurl,
+			backid : backid,
+			extras : {
+				index:3
+			}
+		});
+	}
+}
+
+//绑定回退事件
+document.getElementById("orderDetailsFinishBackCellId").addEventListener("tap",slowOrderDetailsFinish.orderDetailsFinishBackCell);
+//mui.back = function(e){
+//	slowOrderDetailsFinish.orderDetailsFinishBackCell();
+//}

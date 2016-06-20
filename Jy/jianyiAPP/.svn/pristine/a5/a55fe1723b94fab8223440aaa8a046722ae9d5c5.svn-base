@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<script src="../../js/mui.min.js"></script>
+		<style type="text/css">
+			#spaAppointmentDetail_btn {
+				border-top: 1px solid #ccc;
+				width: 100%;
+				background: #fff;
+				position: fixed;
+				bottom: 0px;
+				padding: 5px 0;
+				display: block;
+				color: #fff;
+				text-align: center;
+			}
+			
+			#spaAppointmentDetail_btn span {
+				display: block;
+				line-height: 40px;
+				border-radius: 5px;
+				position: relative;
+				width: 90%;
+				left: 5%;
+				background: #00BFF5;
+			}
+			ul{
+				padding:0;
+				padding-left:20px;
+				margin:0;
+			}
+			ul li{
+				color:#555;
+				font-size: 14px;
+			}
+			h3{
+				font-size: 16px;
+				line-height: 30px;
+				padding-top:10px;
+			}
+			
+			table{
+				border-spacing:1px;
+				border-collapse:inherit;
+				width:100%;
+				background:#dedede;
+				margin-top:10px;
+			}
+			td{
+				height:36px;
+				padding-left:5px;
+				font-size:14px;
+				color:#333;
+			}
+			thead th{
+				background:#fff;
+				color:#333;
+				font-size:14px;
+			}
+			td:nth-child(2),td:nth-child(3){
+				text-align:center;
+			}
+		</style>
+		<title>香山健康山谷</title>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">香山健康山谷</h1>
+		</header>
+		<a href="tel:400-111-5289" id="spaAppointmentDetail_btn"><span>我要咨询/预约</span></a>
+		<div style="line-height:30px;padding: 60px 10px 60px; font-family: Microsoft YaHei;">
+			<p><img src="xiangshan/640.jpeg" style="width:100%;"></p>
+			<p>香江健康山谷坐落在广州增城白水寨风景区，白水寨以中国大陆落差最大瀑布（落差达428.5米）闻名，被誉为“北回归线上的瑰丽翡翠”。茂密的森林、充足的日照与湍急的水流，具备了产生充沛空气负离子的三要素。据权威机构中南林学院测定，区域空气中的负离子含量高达11.25万个/立方厘米，是名副其实的天然大氧吧，优越独特的地理环境也造就了可以媲美瑞士的健康度假之都，其中的慢病调治及养老养生更是别有特色的国内著名的疗养休闲胜境——香江疗养院！</p>
+			<p><img src="xiangshan/640-3.jpeg" style="width:100%;"></p>
+			<p>香江疗养院始建于2013年，目前拥有别墅楼，景观型、豪华型、商务型套房，标准房等300余床的七星级国际金钥匙酒店，及大丰门景区的身心灵休养基地配套。医疗装备先进新颖，技术力量精湛雄厚，医、食、住、行、娱设施齐全。秉承香江集团的良好传统，坚持“爱，诚，信”的办院理念，疗养院下设与全国示范中医院广东省中医院合作的中医治未病基地，已与多家国内外知名医疗机构及保险公司达成战略合作，拥有国际先进的细胞实验室，拥有前沿检测，远程会诊，海外疗养康复、健康管理、慢性病防治，生物细胞治疗等高端权威的健康服务。</p>
+			<p><img src="xiangshan/640-4.jpeg" style="width:100%;"></p>
+			<p>疗养院的专家顾问团队涵盖国内外多位业界名老中医、权威专家，其中包括：骨伤科专家、消化科专家、皮肤科专家、肝胆外科专家、生物治疗专家、海外私人医生等。服务项目包含：</p>
+			<ul style="list-style:none;">
+				<li>◇ 前端检测：全维度医疗体检，基因检测，德国量子医学检测，美国功能医学检测，亚健康功能测评</li>
+				<li>◇ 中端管理：健康顾问（中医治未病、私人营养师、私人健身教练）、定制抗衰老亚健康调治（海外医疗、医疗美容、生物细胞治疗）、体质调理、康复理疗等</li>
+				<li>◇ 后端服务：专属私人健康管家、家庭私人医生服务、VIP就诊通道服务、特约远程会诊。</li>
+			</ul>
+			<h3>为了更好的为客户服务，香江疗养院又分为以下几大中心：</h3>
+			<ul style="list-style:none;">
+				<li>◇ 健康管理中心—360度健康管理</li>
+				<li>◇ 健康医疗中心</li>
+				<li>◇ 生物免疫治疗中心</li>
+				<li>◇ 中医治未病中心</li>
+			</ul>
+			<p><img src="xiangshan/640-5.jpeg" style="width:100%;height:auto;"></p>
+			<p>香江疗养院始终坚持以客户为中心，为社会各界精英人士提供全方位的优质服务，备受赞誉。</p>
+			<h3>热门套餐</h3>
+			<table>
+				<thead>
+					<th>套餐</th>
+					<th>原价</th>
+					<th>优惠价</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td bgcolor="#FFFFFF">2天1晚全面体检（男）</td>
+						<td bgcolor="#FFFFFF">5437</td>
+						<td bgcolor="#FFFFFF">4349.6</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">2天1晚全面体检（女）</td>
+						<td bgcolor="#FFFFFF">5617</td>
+						<td bgcolor="#FFFFFF">4493.6</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">2天1晚脊柱套餐</td>
+						<td bgcolor="#FFFFFF">6438</td>
+						<td bgcolor="#FFFFFF">5150.4</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">3天2晚舒睡套餐</td>
+						<td bgcolor="#FFFFFF">11318</td>
+						<td bgcolor="#FFFFFF">9054.4</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">3天2晚运动康复套餐</td>
+						<td bgcolor="#FFFFFF">9378</td>
+						<td bgcolor="#FFFFFF">7502.4</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">7天6晚瘦身套餐</td>
+						<td bgcolor="#FFFFFF">23458</td>
+						<td bgcolor="#FFFFFF">18766.4</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>

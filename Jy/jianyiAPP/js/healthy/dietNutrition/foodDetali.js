@@ -1,0 +1,83 @@
+/**
+ * 食物详情
+ */
+
+var foodId = 0;
+
+
+mui.plusReady(function(){
+	var self = plus.webview.currentWebview();
+	foodId = self.foodId;
+	//console.log(foodId);
+	foodDetali.initFoodDetail();
+	
+});
+
+var foodDetali = {
+	//加载食物详情
+	initFoodDetail:function(){
+		jyapp.getApi({
+			method:'FoodHealth/Food',
+			data:'foodId='+foodId,
+			timeout:10000,
+			showWaiting:true,
+			onsuccess:function(data){
+				//console.log(JSON.stringify(data.data));
+				if(data.code==1&&data.data!=null){
+					var foodDetail = data.data;
+					//console.log(JSON.stringify(foodDetail.relationDd));
+					var html ='';
+					html+='<ul class="mui-table-view"><li class="mui-table-view-cell mui-media"><a href="javascript:;">';
+					html+='<img class="mui-media-object mui-pull-left" src="'+foodDetail.food[0].FoodPic+'" onerror="this.src=\'../../../img/default/pic_shiwu_moren.png\';this.onerror=null;">';
+					var seasonal = foodDetail.food[0].Seasonal==null||foodDetail.food[0].Seasonal=="" ? '--' : foodDetail.food[0].Seasonal;
+					var heat = foodDetail.food[0].Heat==null ? '--' : foodDetail.food[0].Heat;
+					html+='<div class="mui-media-body">'+foodDetail.food[0].FoodName+'<p>应季：'+seasonal+'</p><p>热量：'+heat+'</p></div></a></li></ul>';
+					html+='<dl><dt>【食疗功效】</dt><dd><p>'+foodDetail.food[0].FoodEffect+'</p></dd>';
+					
+					html+='<dt>【相克食物】</dt>';
+					mui.each(foodDetail.relationDd,function(indexDd,foodxk){
+						html+='<dd><p>'+foodxk.FoodName+'</p>';
+						html+='<p>'+foodxk.FoodEffect+'</p></dd>';
+					});
+					
+					html+='<dt>【相生食物】</dt>';
+					mui.each(foodDetail.relationPlus,function(indexPlus,foodxs){
+						html+='<dd><p>'+foodxs.FoodName+'</p>';
+						html+='<p>'+foodxs.FoodEffect+'</p></dd></dl>';
+					});
+					
+					html+='<div class="foodMenu border-t"><h2>食疗菜谱</h2><ul>';
+					mui.each(foodDetail.relationCookBook,function(indexCookBook,cookBook){
+						html+='<li><a href="javascript:;"><input type="hidden" value="'+cookBook.ID+'" /><input type="hidden" value="'+cookBook.Name+'" /><img src="'+cookBook.Pic+'" onerror="this.src=\'../../../img/default/pic_caipu_moren.png\';this.onerror=null;"/><p>'+cookBook.Name+'</p></li>';
+					});
+					html+='</ul></div>';
+					//设置内容
+					document.getElementById('foodetailContent').innerHTML=html;
+					
+					//食疗菜谱tap事件
+					mui(".foodMenu").on('tap', 'li', function() {
+						var cookBookId = this.querySelectorAll('input')[0].value;
+						var cookBookName = this.querySelectorAll('input')[1].value;
+						mui.openWindow({
+							id: 'dietRecipes',
+							url: "dietRecipes.html",
+							extras:{
+								'cookBookId':cookBookId,
+								'cookBookName':cookBookName
+							}
+						});
+					});
+					
+				}
+			},
+			onerror:function(e){
+				console.log(e);
+			}
+			
+			
+		})
+	}
+	
+}
+
+

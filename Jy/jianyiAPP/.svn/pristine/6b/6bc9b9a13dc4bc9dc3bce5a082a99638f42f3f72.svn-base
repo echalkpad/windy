@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/echarts.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: #f2f6f9!important;
+			}
+			
+			.con {
+				display: none;
+			}
+			
+			.tab-con {
+				height: 100px;
+			}
+			
+			.active {
+				display: block;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				border-left: none;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				color: #000;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				color: #000;
+				background: none;
+				position: relative;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				content: '';
+				position: absolute;
+				width: 50%;
+				left: 25%;
+				right: 0;
+				border-bottom: 2px solid #00b6f3;
+				bottom: 0;
+			}
+			
+			.mui-segmented-control {
+				font-size: 12px;
+				border: none
+			}
+			
+			.yy-time {
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			.yy-time .yy-time-l,
+			.yy-time .yy-time-r {
+				display: block;
+				width: 40%;
+				float: left;
+			}
+			
+			.yy-time .yy-time-l {
+				text-align: right;
+			}
+			
+			.yy-time .yy-time-r {
+				text-align: left;
+			}
+			
+			.yy-time .yy-time-c {
+				height: 50px;
+				line-height: 50px;
+				font-size: 16px;
+				text-align: center;
+				width: 20%;
+				float: left;
+			}
+			
+			.yy-time .yy-time-c p {
+				color: #000;
+				font-size: 15px;
+			}
+			
+			.con h2 {
+				font-size: 14px;
+				margin-top: 0;
+				margin-bottom: 10px;
+				color: #8f8f94;
+			}
+			
+			#tab-dian {
+				width: 30px;
+				margin: 0 auto;
+				list-style: none;
+			}
+			
+			#tab-dian ul {
+				margin-left: -60px;
+			}
+			
+			#tab-dian li {
+				text-align: right;
+				float: left;
+				display: block;
+				width: 25%;
+				height: 10px;
+				position: relative;
+			}
+			
+			#tab-dian li:after {
+				border-radius: 50%;
+				position: absolute;
+				padding: 3px;
+				background: rgb(233, 233, 233);
+				content: '';
+			}
+			
+			#tab-dian .health-tab-active:after {
+				border-radius: 50%;
+				position: absolute;
+				padding: 3px;
+				background: #00b6f3!important;
+				content: '';
+			}
+			
+			.tab {
+				border-bottom: 1px solid rgb(244, 244, 244);
+				padding-bottom: 10px;
+			}
+			
+			.bloodSugar-t-jl {
+				text-align: center;
+				padding-top: 10px;
+			}
+			
+			.bloodSugar-t-jl h2 {
+				padding: 10px;
+			}
+			
+			.bloodSugar-t-jl .bloodSugar-t-jl-p {
+				width: 80%;
+				margin: 20px auto;
+				height: 10px;
+				background: rgb(241, 241, 241);
+				border-radius: 5px;
+				overflow:hidden;
+			}
+			
+			.bloodSugar-t-jl .bloodSugar-t-jl-p span {
+				display: block;
+				height: 10px;
+				border-radius: 5px;
+				background:#00b6f3;
+				width:0;
+			}
+			
+			.bloodSugar-t-jl .bloodSugar-t-jl-p span.blood-yellow {
+				background: #FFB200;
+			}
+			
+			.bloodSugar-t-jl .bloodSugar-t-jl-p span.blood-green {
+				background: #1EC434;
+			}
+			
+			.bloodSugar-t-jl .bloodSugar-t-jl-p span.blood-red {
+				background: #FF5E5E;
+			}
+			
+			.bloodSugar-t-jl .pian {
+				overflow: hidden;
+			}
+			
+			.bloodSugar-t-jl .pian p {
+				display: block;
+				float: left;
+				width: 33.33%;
+				font-size: 13px;
+			}
+			
+			table {
+				border: none;
+				width: 100%;
+				font-size: 10px;
+				color: #9B9B9B;
+				text-align: center;
+			}
+			
+			table thead {
+				font-size: 12px;
+			}
+			
+			table thead td {
+				padding: 15px 0 5px;
+				border-left: 1px solid rgb(241, 241, 241);
+				border-bottom: 1px solid rgb(241, 241, 241);
+			}
+			
+			table thead span {
+				font-size: 10px;
+				width:50%;
+			}
+			table tbody span{
+				height:36px;
+				width:50%;
+				line-height:36px;
+			}
+			table tbody tr{
+				height:36px;
+			}
+			table .qian {
+				float: left;
+				border-right:1px solid rgb(241, 241, 241);
+			}
+			
+			table .hou {
+				float: right;
+			}
+			
+			/*table tbody td {
+				padding: 10px 0;
+			}*/
+			
+			.stepCounter {}
+			
+			.stepCounter .stepCounter-t {
+				width: 100%;
+				padding-top: 20px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-l,
+			.stepCounter .stepCounter-t .stepCounter-t-c,
+			.stepCounter .stepCounter-t .stepCounter-t-r {
+				display: block;
+				text-align: center;
+				padding-top: 30px;
+				padding-bottom: 10px;
+			}
+			.stepCounter .stepCounter-t .stepCounter-t-c{
+				padding-top: 45px;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-r {
+				width: 70px;
+				float: right;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-l {
+				width: 70px;
+				float: left;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-c {
+				border-radius: ;
+				position: absolute;
+				left: 50%;
+				border-top-left-radius: 150px;
+				border-top-right-radius: 150px;
+				border-bottom-right-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border: 6px solid rgb(241, 241, 241);
+				width: 150px;
+				margin-left: -75px;
+				z-index: 8;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-c:after {
+				content: '';
+				width: 100%;
+				display: block;
+				height: 12px;
+				padding: 30px 20px 0;
+				z-index: 9;
+				background: #fff;
+				margin-left: -10px;
+			}
+			
+			.stepCounter .stepCounter-t h3 {
+				margin-top: -25px;
+				color: rgb(253, 177, 46);
+				font-size: 30px;
+			}
+			
+			.stepCounter .stepCounter-t h4,
+			.stepCounter .stepCounter-t h3 span {
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.stepCounter .stepCounter-t h2 {
+				color: rgb(253, 177, 46);
+				font-size: 26px;
+			}
+			
+			.stepCounter .stepCounter-t p {
+				color: #4a4a4a;
+				font-size: 16px;
+			}
+			
+			.stepCounter .stepCounter-t .stepCounter-t-r {}
+			
+			.stepCounter .stepCounter-b {}
+			
+			.bloodPressure {}
+			
+			.bloodPressure .bloodPressure-c {
+				overflow: hidden;
+				height: 140px;
+				padding: 50px 0 0px;
+				border-bottom: 1px solid rgb(239, 239, 239);
+				text-align: center;
+			}
+			
+			.bloodPressure-c .bloodPressure-l {
+				width: 25%;
+				float: left;
+				text-align: center;
+			}
+			
+			.bloodPressure-c .bloodPressure-l p {
+				padding-top: 10px;
+				font-size: 12px;
+			}
+			
+			.bloodPressure-c .bloodPressure-l h2 {
+				font-size: 16px;
+				color: #4A4A4A;
+			}
+			
+			.bloodPressure-c .bloodPressure-l p span {
+				margin-right: 5px;
+				font-size: 24px;
+				color: rgb(240, 154, 88);
+			}
+			
+			.bloodPressure-c .bloodPressure-r {
+				width: 25%;
+				float: right;
+			}
+			
+			.bloodPressure-c .bloodPressure-r a {
+				float: right;
+				margin-top:5px;
+				border-radius: 50%;
+				border: 1px solid rgb(239, 239, 239);
+				display: block;
+				width: 60px;
+				height: 60px;
+				background: rgb(247, 245, 247);
+				text-align: center;
+			}
+			
+			.bloodPressure-c .bloodPressure-r a img {
+				margin-top: 15px;
+			}
+			/*跨webview需要手动指定位置*/
+			
+			.mui-plus .plus {
+				display: inline;
+			}
+			
+			/*.plus {
+				display: none;
+			}*/
+			
+			#topPopover {
+				position: fixed!important;
+				top: 5%!important;
+				left: 5%!important;
+			}
+			
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-popover {
+				width: 90%;
+				margin: 0 auto;
+				height: 90%;
+			}
+			
+			.mui-content {
+				padding: 10px;
+			}
+			
+			.mui-scrollbar {
+				display: none;
+			}
+			
+			.mui-popover .mui-scroll-wrapper:nth-child(3) {
+				left: 32%;
+			}
+			
+			.mui-popover .mui-scroll-wrapper:nth-child(4) {
+				left: 65%;
+			}
+			
+			.mui-scroll-wrapper {
+				width: 33.33%;
+			}
+			
+			.mui-table-view-radio .mui-table-view-cell>a:not(.mui-btn) {
+				margin-right: 0;
+			}
+			
+			.mui-table-view-radio .mui-table-view-cell {
+				padding-right: 0;
+			}
+			
+			.mui-popover .mui-popover-arrow {
+				display: none;
+			}
+			
+			.mui-popover .mui-scroll-wrapper {
+				margin: 0;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				margin: 0;
+			}
+			
+			#btn {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				z-index: 9;
+				background: #fff;
+			}
+			
+			#btn a {
+				float: left;
+				width: 50%;
+				display: block;
+				color: #00B6F3;
+				text-align: center;
+			}
+			
+			.bloodPressure caption {
+				line-height: 40px;
+			}
+			
+			.bloodPressure tr {
+				line-height: 30px;
+			}
+			
+			.bloodPressure tr th {
+				font-size: 12px;
+				font-family: arial;
+				font-weight: normal;
+			}
+			
+			.bloodPressure tr td {
+				padding: 0;
+			}
+			
+			.bloodPressure tr td:first-child {
+				width: 22.3%;
+			}
+			
+			.bloodPressure td:nth-child(even),
+			.bloodPressure th:nth-child(even) {
+				background: #f7f7f7;
+			}
+			
+			#item1 table thead td:last-child {
+				border-right: 1px solid rgb(241, 241, 241);
+			}
+			
+			#item1 table tbody td:nth-child(2n+1) {
+				border-left: 1px solid rgb(241, 241, 241);
+			}
+			
+			#item1 table tbody td {
+				border-right: 1px solid rgb(241, 241, 241);
+				border-bottom: 1px solid rgb(241, 241, 241);
+			}
+			canvas{
+				width:100%!important;
+				left:50%!important;
+				-webkit-transform:translate(-49%,0)!important;
+				height:250px!important;
+			}
+			.circle{
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				background:#FE9808;
+				position: absolute;
+				top: 30px;
+				left: 50%;
+				-webkit-transform: translate(-50%, 0);
+				display:none;
+			}
+			.circle_bottom{
+				width:100%;
+				height:20px;
+				position: absolute;
+				bottom:-8px;
+				background:#fff;
+			}
+			.circle .pie_left,
+			.circle .pie_right {
+				width: 64px;
+				height: 64px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.circle .left,
+			.circle .right {
+				display: block;
+				width: 64px;
+				height: 64px;
+				background: #E9E9E8;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition:all 1s;
+				-webkit-transition: all 1s;
+			}
+			
+			.circle .pie_right,
+			.circle .right {
+				clip: rect(0, auto, auto, 32px);
+			}
+			
+			.circle .pie_left,
+			.circle .left {
+				clip: rect(0, 32px, auto, 0);
+			}
+			
+			.circle .mask {
+				width:56px;
+				height:56px;
+				border-radius: 50%;
+				left: 4px;
+				top: 4px;
+				background: #fff;
+				position: absolute;
+				text-align: center;
+				font-size: 18px;
+				padding-top:5px;
+				box-sizing:border-box;
+				padding-top:8px;
+				transition:all 1s;
+				-webkit-transition: all 1s;
+			}
+			.circle .mask h3{
+				color:#FE9808;
+				line-height:16px;
+				font-size: 16px;
+			}
+			.circle .mask em {
+				display:block;
+				font-size: 12px;
+				color:#666;
+			}
+			
+			.circle i {
+				color: #28ada0;
+				font-size: 50px;
+				text-align: center;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="healthSelfTestingBackCellId"></a>
+			<h1 class="mui-title">健康测量</h1>
+		</header>
+		<div class="mui-content">
+			<div>
+				<div id="segmentedControl" class="mui-segmented-control border-b">
+					<a class="mui-control-item mui-active" href="#item1">
+						血糖
+					</a>
+					<a class="mui-control-item" href="#item2">
+						血压
+					</a>
+					<a class="mui-control-item" href="#item3">
+						记步
+					</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active bloodSugar">
+					<div class="bloodSugar-t">
+						<div class="bloodSugar-t-can">
+							<p style="text-align: center;margin: 10px 0 -5px;" id="healthSelfTestingSugarTimeId">2016.1.2</p>
+							<div class="mui-content tab">
+								<div class="yy-time" id="time">
+									<a href="" class="yy-time-l" id="prevonclick"><img src="../../img/pharmacy_btn_angle_left@2x.png" width="8px" /></a>
+									<div id="ctime" class='yy-time-c '>
+										<p class="morning">早餐</p>
+									</div>
+									<a href="" class="yy-time-r" id="nextonclick"><img src="../../img/pharmacy_btn_angle_right@2x.png" width="8px" /></a>
+								</div>
+								<div class="mui-conten tab-con" id="con">
+									<div class="con con1 active" id="con1">
+										<a href="" id="xtBeforeAID">
+											<input type="hidden" id="xtBeforeInputID" value="0" />
+											<input type="hidden" id="healthypressurebeforeId" value="0" />
+											<h2 id="healthselfTestingstartH2Id">之前</h2>
+											<p class="plus" id="xtBefore">
+												<span><i></i></span>
+											</p>
+											<div class="circle" id="circleBefore">
+												<div class="pie_left">
+													<div class="left"></div>
+												</div>
+												<div class="pie_right">
+													<div class="right"></div>
+												</div>
+												<div class="mask">
+													<h3 id="xtBeforeH3"></h3>
+													<em>mmol/L</em>
+												</div>
+												<div class="circle_bottom"></div>
+											</div>
+										</a>
+										<a href="" id="xtafterAID">
+											<input type="hidden" id="xtafterInputID" value="0" />
+											<input type="hidden" id="healthypressureafterId" value="0" />
+											<h2 id="healthselfTestingendH2Id">之后</h2>
+											<p class="plus" id="xtafter">
+												<span><i></i></span>
+											</p>
+											<div class="circle" id="circleafter">
+												<div class="pie_left">
+													<div class="left"></div>
+												</div>
+												<div class="pie_right">
+													<div class="right"></div>
+												</div>
+												<div class="mask">
+													<h3 id="xtafterH3"></h3>
+													<em>mmol/L</em>
+												</div>
+												<div class="circle_bottom"></div>
+											</div>
+										</a>
+									</div>
+									<!--<div class="con con2 " id="con2">
+										<a href="">
+											<h2>之前</h2>
+											<p class="plus"></p>
+										</a>
+										<a href="">
+											<h2>之后</h2>
+											<p class="plus"></p>
+										</a>
+									</div>
+									<div class="con con3" id="con3">
+										<a href="">
+											<h2>之前</h2>
+											<p class="plus"></p>
+										</a>
+										<a href="">
+											<h2>之后</h2>
+											<p class="plus"></p>
+										</a>
+									</div>
+									<div class="con con4 " id="con4">
+										<a href="">
+											<h2>之前</h2>
+											<p class="plus"></p>
+										</a>
+										<a href="">
+											<h2>之后</h2>
+											<p class="plus"></p>
+										</a>
+									</div>-->
+								</div>
+								<div id="tab-dian">
+									<ul>
+										<li class="health-tab-active"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class=" bloodSugar-t border-b">
+						<div class="bloodSugar-t-jl">
+							<h2 class="f13">每周进行记录，2次餐前，2次餐后</h2><!--，2次餐前，2次餐后-->
+							<h3 class="f12 weak" id="bloodSugarH3SumId">已记录5次</h3>
+							<p class="bloodSugar-t-jl-p"><span class="blood-sp"></span></p>
+							<div class="pian">
+								<p>偏低<br><span style="font-size: 16px;color: rgb(240,154,88);" id="bloodSugarSumSpandiId">0次</span></p>
+								<p>正常<br><span style="font-size: 16px;color:rgb(55,201,70);" id="bloodSugarSumSpanzcId">0</span></p>
+								<p>偏高<br><span style="font-size: 16px;color: #f00;" id="bloodSugarSumSpanpgId">0</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="bloodSugar-b">
+						<table>
+							<thead>
+								<tr>
+									<td><br><span>日期</span></td>
+									<td>早餐<br><span class="qian">餐前</span><span class="hou">餐后</span></td>
+									<td>午餐<br><span class="qian">餐前</span><span class="hou">餐后</span></td>
+									<td>晚餐<br><span class="qian">餐前</span><span class="hou">餐后</span></td>
+									<td>其他<br><span class="qian">睡前</span><span class="hou">其他</span></td>
+								</tr>
+							</thead>
+							<tbody id="bloodPressurTbodyHtmlId">
+								<!--<tr>
+									<td>03-20</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>
+								<tr>
+									<td>09-20</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>
+								<tr>
+									<td>02-30</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>
+								<tr>
+									<td>02-30</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>
+								<tr>
+									<td>02-30</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>
+								<tr>
+									<td>09-20</td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+									<td><span class="qian">-</span><span class="hou">-</span></td>
+								</tr>-->
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+
+				<div id="item2" class="mui-control-content bloodPressure">
+					<p style="text-align: center;margin: 10px 0 -5px;" id="healthSelfTestingPressurlTimeId">2016.1.2</p>
+					<div class="bloodPressure-c">
+						<div class="bloodPressure-l">
+							<p><span id="bloodPressure1">0</span>mmHg</p>
+							<h2>舒张压</h2>
+						</div>
+						<div class="bloodPressure-l">
+							<p><span id="bloodPressure2">0</span>mmHg</p>
+							<h2>收缩压</h2>
+						</div>
+						<div class="bloodPressure-l">
+							<p><span id="bloodPressure3">0</span>T/min</p>
+							<h2>心率</h2>
+						</div>
+						<div class="bloodPressure-r">
+							<!--<a  href="#topPopover" id="popovers">12323</a>-->
+							<a href="" id="goxyjl"><img src="../../img/btn_xiugai.png" width="27" /></a>
+						</div>
+					</div>
+
+					<div class=" bloodSugar-t border-b">
+						<div class="bloodSugar-t-jl">
+							<!--<h2 class="f13">每周进行记录，2次餐前，2次餐后</h2>-->
+							<h2 class="f13">建议静坐后进行血压测量,每周至少测试4天</h2>
+							<h3 class="f12 weak" id="bloodPressurSumSpanzjId">已记录5次</h3>
+							<p class="bloodSugar-t-jl-p"><span class="blood-pre"></span></p>
+							<div class="pian">
+								<p>偏低<br><span style="font-size: 16px;color: rgb(240,154,88);" id="bloodPressurSumSpanpdId">1</span></p>
+								<p>正常<br><span style="font-size: 16px;color:rgb(55,201,70);" id="bloodPressurSumSpanzcId">4</span></p>
+								<p>偏高<br><span style="font-size: 16px;color: #f00;" id="bloodPressurSumSpanpgId">2</span></p>
+							</div>
+						</div>
+
+					</div>
+					<table border="" cellspacing="" cellpadding="" class="bloodPressure" id="healthSelfTestingPressurlTableId">
+						<caption>周血压记录</caption>
+						<tr>
+							<th></th>
+							<th>03-07</th>
+							<th>03-08</th>
+							<th>03-09</th>
+							<th>03-10</th>
+							<th>03-11</th>
+							<th>03-12</th>
+							<th>03-13</th>
+						</tr>
+						<tr>
+							<td>平均舒张压</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>平均收缩压</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>平均心率</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</table>
+				</div>
+				<div id="item3" class="mui-control-content stepCounter">
+					<p style="text-align: center;margin: 10px 0 -5px;" id="healthSelfTestingjblTimeId">2016.1.2</p>
+					<div class="stepCounter-t">
+						<div class="stepCounter-t-l">
+							<h2>0.0</h2>
+							<p>公里</p>
+						</div>
+						<div class="stepCounter-t-c">
+							<div class="stepCounter-t-border">
+								<h3>2900 <span>步</span></h3>
+								<h4>目标10000步</h4>
+							</div>
+						</div>
+						<div class="stepCounter-t-r">
+							<h2>0</h2>
+							<p>大卡</p>
+						</div>
+					</div>
+					<div class="stepCounter-b border-t">
+						<div id="echart" style="width: 400px;height:300px;margin: 0 auto;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="topPopover" class="mui-popover">
+			<div id="btn"><a href="" class="btn-cancel">取消</a><a href="" class="btn-confirm">确定</a></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell ">
+							<a class="mui-navigate-right ">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 4</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 5</a>
+						</li>
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right">Item 6</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 7</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 8</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 9</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 10</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 11</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 12</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 13</a>
+						</li>
+						<li class="mui-table-view-cell ">
+							<a class="mui-navigate-right">Item 14</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 15</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 16</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 17</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 18</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell ">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-radio">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell mui-selected">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell ">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">Item 2</a>
+						</li>
+						<li class="mui-table-view-cell ">
+							<a class="mui-navigate-right">Item 3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--<p>
+			阁下：<span id="alpha">0</span>
+		</p>
+		<p>
+			前后：<span id="beta">0</span>
+		</p>
+		<p>
+			扭转：<span id="gamma">0</span>
+		</p>
+		<p>
+			指北针指向：<span id="heading">0</span>度
+		</p>
+		<p>
+			指北针精度：<span id="accuracy">0</span>度
+		</p>
+		<hr />
+		<p>
+			x轴加快度：<span id="x">0</span>米每二次方秒
+		</p>
+		<p>
+			y轴加快度：<span id="y">0</span>米每二次方秒
+		</p>
+		<p>
+			z轴加快度：<span id="z">0</span>米每二次方秒
+		</p>
+		<hr />
+		<p>
+			x轴加快度(推敲重力加快度)：<span id="xg">0</span>米每二次方秒
+		</p>
+		<p>
+			y轴加快度(推敲重力加快度)：<span id="yg">0</span>米每二次方秒
+		</p>
+		<p>
+			z轴加快度(推敲重力加快度)：<span id="zg">0</span>米每二次方秒
+		</p>
+		<hr />
+		<p>
+			阁下扭转速度：<span id="Ralpha">0</span>度每秒
+		</p>
+		<p>
+			前后扭转速度：<span id="Rbeta">0</span>度每秒
+		</p>
+		<p>
+			扭转速度：<span id="Rgamma">0</span>度每秒
+		</p>
+		<hr />
+		<p>
+			前次收到通知的间隔：<span id="interval">0</span>毫秒
+		</p>
+
+		
+		
+		-->
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/code/jquery-1.8.3.min.js"></script>
+	<script src="../../js/healthy/healthSelfTesting.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		function orientationHandler(event) {
+//			document.getElementById("alpha").innerHTML = event.alpha;
+//			document.getElementById("beta").innerHTML = event.beta;
+//			document.getElementById("gamma").innerHTML = event.gamma;
+//			document.getElementById("heading").innerHTML = event.webkitCompassHeading;
+//			document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;
+		}
+		
+		function motionHandler(event) {
+			plus.accelerometer.getCurrentAcceleration( 
+				function(successCB){
+					console.log("getCurrentAccelerationsuccessCB:"+JSON.stringify(successCB));
+				}, 
+				function(errorCB){
+					console.log("getCurrentAccelerationerrorCB:"+JSON.stringify(errorCB));
+				});
+		
+			plus.accelerometer.watchAcceleration(
+				function(successCB){
+					console.log("watchAccelerationsuccessCB:"+JSON.stringify(successCB));
+				}, 
+				function(errorCB){
+					console.log("watchAccelerationerrorCB:"+JSON.stringify(errorCB));
+				}, {frequency:1000} );
+			
+			
+			
+//			document.getElementById("interval").innerHTML = event.interval;
+//			var acc = event.acceleration;
+//			document.getElementById("x").innerHTML = acc.x;
+//			document.getElementById("y").innerHTML = acc.y;
+//			document.getElementById("z").innerHTML = acc.z;
+//			var accGravity = event.accelerationIncludingGravity;
+//			document.getElementById("xg").innerHTML = accGravity.x;
+//			document.getElementById("yg").innerHTML = accGravity.y;
+//			document.getElementById("zg").innerHTML = accGravity.z;
+//			var rotationRate = event.rotationRate;
+//			document.getElementById("Ralpha").innerHTML = rotationRate.alpha;
+//			document.getElementById("Rbeta").innerHTML = rotationRate.beta;
+//			document.getElementById("Rgamma").innerHTML = rotationRate.gamma;
+		}
+//		document.addEventListener("plusready", motionHandler, false);
+//		if (window.DeviceMotionEvent) {
+//			window.addEventListener("devicemotion", motionHandler, false);
+//		} else {
+//			document.body.innerHTML = "What user agent u r using？？？";
+//		}
+//		
+//		if (window.DeviceOrientationEvent) {
+//			window.addEventListener("deviceorientation", orientationHandler, false);
+//		} else {
+//			document.body.innerHTML = "What user agent u r using？？？";
+//		};
+		
+		
+	</script>
+</html>

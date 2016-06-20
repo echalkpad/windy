@@ -1,0 +1,157 @@
+var organizationId = '';
+var pageIndex = 1;
+var pageSize = 10;
+var total = 0;
+var storeName = "";
+var areaNo = 1;
+var areaType = 1;
+var areaLevel = 2;
+var distance = "";
+var filter = "";
+var storeType = "-1";
+var sortType = "znpx";
+var htmlHealthExaminationNet = '';
+var requestHealthExaminationNet = '';
+//初始化
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	organizationId = self.organizationId;
+	//初始化套餐网点选择页面
+	healthExaminationPackage.locationPosition(requestHealthExaminationNet);
+});
+
+var healthExaminationNet = {
+	initHealthExaminationNet : function(requestHealthExaminationNet){
+		console.log("requestHealthExaminationNet---->:" + requestNetWorkData);
+		jyapp.getApi({
+			method: 'store/storelist',
+			data: requestNetWorkData,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHealthExaminationNet---->:" + JSON.stringify(response));
+				if(response.code != 1){
+					document.getElementById('healthExaminationNetZanwuID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','提示','确认');
+					return false;
+				}else{
+					if(response.data != null && response.data.list != null && response.data.list.length > 0){
+						total = response.data.list.length;
+						htmlHealthExaminationNet += '';
+						for (var i = 0; i < total; i++) {
+							var store = response.data.list[i];
+							var score = "";
+							if (store.Score == 1) {
+								score = "★";
+							} else if (store.Score == 2) {
+								score = "★★";
+							} else if (store.Score == 3) {
+								score = "★★★";
+							} else if (store.Score == 4) {
+								score = "★★★★";
+							} else {
+								score = "★★★★★";
+							}
+							htmlHealthExaminationNet += '<li class="mui-table-view-cell">';
+							htmlHealthExaminationNet += '	<input type="hidden" value="' + store.ID + '" />';
+							htmlHealthExaminationNet += '	<div class="li-l">';
+							htmlHealthExaminationNet += '		<img src="' + store.Src + '" id="hndImg" onerror="this.src=\'../../../img/default/pic_moren.png\';this.onerror=null"/>';
+							htmlHealthExaminationNet += '	</div>';
+							htmlHealthExaminationNet += '	<div class="li-r">';
+							htmlHealthExaminationNet += '		<h2>' + store.ShortName + '</h2>';
+							htmlHealthExaminationNet += '		<h3><span class="sp1 xingxing">' + score + '</span></h3>';
+							htmlHealthExaminationNet += '		<p>';
+							htmlHealthExaminationNet += '			<span class="sp1">' + store.StoreType + '</span><span class="sp2">' + store.Distance + 'km</span></p>';
+							htmlHealthExaminationNet += '	</div>';
+							htmlHealthExaminationNet += '</li>';
+						}
+						document.getElementById('healthExaminationNetZanwuID').style.display = 'none';
+					}else{
+						document.getElementById('healthExaminationNetZanwuID').style.display = 'block';
+					}
+				}
+				document.getElementById('healthExaminationNetUlId').innerHTML = htmlHealthExaminationNet;
+				healthNetwork.loadEventHealth();
+			},
+			onerror: function(e) {
+				document.getElementById('healthExaminationNetZanwuID').style.display = 'block';
+				console.log("queryNetWorkError:" + e);
+			}
+		});
+	},
+	locationPosition: function() {
+		if (plus.geolocation) {
+			plus.geolocation.getCurrentPosition(function(p) {
+				var province = city.province;
+				healthNetwork.addCityF(p.address.city);
+				//经度
+				lng = p.coords.longitude;
+				//纬度
+				lat = p.coords.latitude;
+				areaNo = p.coords.cityCode;
+				if (storeType != -1) {
+					//调用定位筛选
+					healthNetwork.searchByScreen();
+				} else {
+					requestHealthExaminationNet = "storeName=&lat=" + lat + "&lng=" + lng + "&orgnazitionId=" + organizationId + "&areaNo=" + areaNo + "&sortType=" + sortType + "&filter=" + filter + "&areaType=" + areaType +
+					"&areaLevel=" + areaLevel + "&storeType=43&distance=" + distance + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+					healthExaminationPackage.initHealthExaminationPackage(requestHealthExaminationNet);
+				}
+			}, function(error) {
+				switch (error.code) {
+					case 1:
+						plus.nativeUI.alert("位置服务被拒绝", "", "提示", "确认");
+						break;
+					case 2:
+						plus.nativeUI.alert("暂时获取不到位置信息", "", "提示", "确认");
+						break;
+					case 3:
+						plus.nativeUI.alert("获取信息超时", "", "提示", "确认");
+						break;
+					case 4:
+						plus.nativeUI.alert("未知错误", "", "提示", "确认");
+						break;
+				}
+			}, {
+				provider: 'system',
+				coordsType:'wgs84'
+			});
+		} else {
+			plus.nativeUI.alert("浏览器不兼容", "", "提示", "确认");
+		}
+	},
+	searchByScreen: function() {
+		requestHealthExaminationNet = '';
+		document.getElementById('healthExaminationNetUlId').innerHTML = requestHealthExaminationNet;
+		storeName = document.getElementById("healthNetworkStoreNameValueID").value;
+		if (!storeName || typeof(storeName) == "undefined") {
+			storeName = "";
+		}
+		/*距离,单位km,默认3*/
+		distance = document.getElementById("healthNetworkRangeValueID").value;
+		if (!distance || typeof(distance) == "undefined" || distance == "") {
+			distance = "3";
+		}
+		/*筛选标志,默认空, 可选值--coupon,discount*/
+		filter = document.getElementById("healthNetworkScreenValueID").value;
+		if (!filter || typeof(filter) == "undefined" || filter == "") {
+			filter = "";
+		}
+		/*网点类型,默认-1, 若值为60是网上药店,43是体检机构*/
+		storeType = document.getElementById("healthNetworkTypeValueID").value;
+		if (!storeType || typeof(storeType) == "undefined" || storeType == "") {
+			storeType = "-1";
+		}
+		if (storeType == "43" || storeType == "41") {
+			areaNo = document.getElementById("healthNetworkAreaValueID").value;
+		}
+		/*网点类型,默认空, 可选值--rqzg,pjzh,znpx,lwzj*/
+		sortType = document.getElementById("healthNetworkSortValueID").value;
+		if (!sortType || typeof(sortType) == "undefined" || sortType == "") {
+			sortType = "znpx";
+		}
+		requestHealthExaminationNet = "storeName=&lat=" + lat + "&lng=" + lng + "&orgnazitionId=" + organizationId + "&areaNo=" + areaNo + "&sortType=" + sortType + "&filter=" + filter + "&areaType=" + areaType +
+		"&areaLevel=" + areaLevel + "&storeType=43&distance=" + distance + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+		healthExaminationPackage.initHealthExaminationPackage(requestHealthExaminationNet);
+	}
+}

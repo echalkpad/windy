@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="indexFamilyDoctorBackId"></a>
+			<h1 class="mui-title">我的家人</h1>
+			<!--			<a href="" class="btn-add mui-pull-right" id="addFamily" style="font-size:14px;line-height: 40px;" id="addFamily">新增</a>-->
+		</header>
+		
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		mui.plusReady(function() {
+				var isGoMeFamily = (function() {
+					var url = 'profile/family';
+					jyapp.getApi({
+						method: url,
+						onsuccess: function(data) {
+							//				console.log(JSON.stringify(data))
+							if (data.data != null) {
+								mui.openWindow({
+									id: 'meFamily',
+									url: "meFamily.html"
+								});
+							}
+						},
+						onerror: function(e) {
+							mui.toast(e);
+						}
+					});
+				})();
+			})
+			//绑定回退事件
+		document.getElementById("indexFamilyDoctorBackId").addEventListener("tap", function() {
+			var mianPage = plus.webview.getLaunchWebview();
+			mui.openWindow({
+				id: mianPage.id,
+				url: mianPage.uri,
+				extras: {
+					index: 4
+				}
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				padding-bottom: 50px;
+			}
+			
+			.mui-content p {
+				margin: 20px 15px;
+				text-indent: 2em;
+			}
+			
+			#spaAppointmentDetail_btn {
+				position: fixed;
+				left: 5%;
+				bottom: 10px;
+				width: 90%;
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				background: #00BFF5;
+				color: #fff;
+				border-radius: 5px;
+				text-align: center;
+			}
+		</style>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				line-height: 28px;
+			}
+			
+			.jiyin ul {
+				overflow: hidden;
+			}
+			
+			.jiyin ol li {
+				float: left;
+				width: 48%;
+			}
+			
+			.jiyin strong {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" id="spa_tile">基因检测详情</h1>
+		</header>
+		<div class="mui-content jiyin">
+			<div id="spa-con1">
+				<h3>肿瘤全套基因检测</h3>
+				<p>市场价：<strong>6800元</strong>，健e价：<strong>3160元</strong></p>
+
+				<ol>
+					<li>瘢痕瘤</li>
+					<li>黑色素瘤</li>
+					<li>神经母细胞瘤</li>
+					<li>膀胱癌</li>
+					<li>基底细胞癌</li>
+					<li>食管癌</li>
+					<li>鼻咽癌</li>
+					<li>甲状腺癌</li>
+					<li>胃癌</li>
+					<li>慢性淋巴细胞性白血病</li>
+					<li>大肠癌</li>
+					<li>淋巴瘤</li>
+					<li>胰腺癌</li>
+					<li>肺癌</li>
+					<li>肝癌</li>
+					<li>睾丸癌（男）</li>
+					<li>卵巢癌（女）</li>
+					<li>前列腺癌（男）</li>
+					<li>乳腺癌（女）</li>
+					<li>子宫肌瘤（女）</li>
+				</ol>
+			</div>
+			<div id="spa-con2">
+				<h3>心脑血管基因检测</h3>
+				<p>市场价：<strong>4900元</strong>，健e价：<strong>3160元</strong></p>
+				<ol>
+					<li>高甘油三脂血症</li>
+					<li>脑动脉瘤</li>
+					<li>高血压</li>
+					<li>外周动脉病变</li>
+					<li>冠状动脉硬化性心脏病</li>
+					<li>心房颤动</li>
+					<li>静脉血栓栓塞</li>
+					<li>心肌梗死</li>
+					<li>中风</li>
+				</ol>
+			</div>
+			<div id="spa-con3">
+				<h3>烟酒茶（咖啡）损伤及成瘾套餐</h3>
+				<p>市场价：<strong>600元</strong>，健e价：<strong>303元</strong></p>
+				<ol>
+					<li>烟草损伤</li>
+					<li>饮酒损伤</li>
+					<li>酒精依赖</li>
+					<li>咖啡因依赖</li>
+					<li>尼古丁依赖</li>
+				</ol>
+			</div>
+			<div id="spa-con4">
+				<h3>健康尊享套餐（150项）</h3>
+				<p><strong>27160元</strong>赠送价值<strong>4000元</strong>食物不耐受检测</p>
+				<ol>
+					<li>肿瘤疾病25项</li>
+					<li>心脑血管疾病22项</li>
+					<li>呼吸系统疾病6项</li>
+					<li>消化系统疾病15项</li>
+					<li>血液系统疾病6项</li>
+					<li>代谢类疾病6项</li>
+					<li>免疫类疾病19项</li>
+					<li>泌尿系统疾病7项</li>
+					<li>生殖系统疾病8项</li>
+					<li>皮肤系统疾病6项</li>
+					<li>精神心理疾病10项</li>
+					<li>眼耳疾病13项</li>
+					<li>骨骼肌肉疾病7项</li>
+
+				</ol>
+
+			</div>
+			<!--<img src="../../img/healthy/liaoyang_pic.png" />
+			<p>汤山疗养院为江苏省总工会直属大型疗养院，是江苏省职工康复医院，全国劳模疗休养基地。本院位于南京市东郊汤山温泉风景旅游区内，距市区25公里。东临汤泉湖，西望中山陵，北依汤山镇，南接禄口机场，沪宁高速公路汤山出口和宁杭公路紧靠疗养院东西两侧。南京汤山快速通道2009年8月开建，2012年建成通车后，汤山到南京只需15分钟。院内建有曲径亭池、紫藤长廓、花园假山，森林覆盖率85%。“晨起听鸟语、夜来泡温泉”，白天林荫道上漫步，惬意无限。</p>
+			<p>疗养院现有医技人员70人，其中27人具有中高级职称，我院康复中心是江苏省工伤康复定点、南京市及江宁区医保定点医疗机构。环境设备和康复技术省内一流。在皮肤病、骨关节疾病的治疗，心脑血管疾病康复等方面有独到之处。疗养院始建于1956年，占地9.5万平方米。现有客房大楼五幢，高、中、低档床位500余张，其中林荫环抱之中的“天泉楼”、“天泓楼”、“天源楼”为豪华双标房，温泉水直通客房，楼内大小会议室、舞厅、OK厅一应俱全。餐厅设有包间20余间，大厅可同时满足260人就餐。 “温泉中心”设有室内游泳馆、器械水疗、水按摩、温泉桑拿、泰式按摩、健身房、娱乐室等，露天泡池有16个。体检中心设施先进，舒适怡人。</p>
+			<p>“诚信、仁爱、准确、周到”是我们的服务宗旨。我们从健康的角度精心为您安排疗养、体检、旅游、休假、会议，以我们的优质服务换来您健康的体魄，愉快的心情！</p>-->
+			<a href="tel:400-111-5289" id="spaAppointmentDetail_btn">我要预约</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		mui.plusReady(function() {
+			var self = plus.webview.currentWebview();
+			var type = self.type;
+			document.getElementById("spa-con1").style.display = 'none';
+			document.getElementById("spa-con2").style.display = 'none';
+			document.getElementById("spa-con3").style.display = 'none';
+			document.getElementById("spa-con4").style.display = 'none';
+			if (type == 'geneticTesting geneticTesting1') {
+				document.getElementById("spa_tile").innerHTML = '肿瘤全套基因检测';
+				document.getElementById("spa-con1").style.display = 'block';
+			} else if (type == 'geneticTesting geneticTesting2') {
+				document.getElementById("spa_tile").innerHTML = '心脑血管基因检测';
+				document.getElementById("spa-con2").style.display = 'block';
+			} else if (type == 'geneticTesting geneticTesting3') {
+				document.getElementById("spa_tile").innerHTML = '烟酒茶（咖啡）损伤及成瘾套餐';
+				document.getElementById("spa-con3").style.display = 'block';
+			} else {
+				document.getElementById("spa_tile").innerHTML = '健康尊享套餐（150项）';
+				document.getElementById("spa-con4").style.display = 'block';
+			}
+		})
+	</script>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+				height:100%;
+			}
+			
+			.mui-content {
+				text-align: center;
+				position:absolute;
+				top:45%;
+				width:100%;
+				-webkit-transform:translateY(-50%);
+			}
+			
+			.mui-content img {
+				height: 250px;
+				margin: 3% 0;
+			}
+			
+			
+			.mui-content h2 {
+				color: #9B9B9B;
+				font-size: 14px;
+				padding: 10px 0 5px;
+			}
+			
+			.mui-content h3 {
+				color: #9B9B9B;
+				margin-bottom: 30px;
+				font-size: 14px;
+			}
+			
+			.mui-content h3 span {
+				color: rgb(227, 75, 77);
+				font-size: 20px;
+			}
+			
+			.mui-content h4 {
+				margin-bottom: 30px;
+			}
+			
+			.mui-content h4 a {
+				box-sizing: border-box;
+				margin: 0 2%;
+				border-radius: 5px;
+				width: 46%;
+				float: left;
+				height: 45px;
+				font-size: 17px;
+				line-height: 45px;
+				color: #fff;
+			}
+			
+			.mui-content h4 #gohome {
+				display: none;
+				background: rgb(44, 194, 62);
+			}
+			
+			.mui-content h4 #refresh {
+				display: none;
+				background: #00B6F3;
+			}
+			
+			.mui-content #cleartime {
+				width: 90%;
+				margin: 0 auto;
+				background: rgb(252,95,98);
+				border-radius: 5px;
+				height: 45px;
+				font-size: 17px;
+				line-height: 45px;
+				color: #fff;
+				display: block;
+			}
+			
+			.mui-content p {
+				color: rgb(227, 75, 77);
+				font-size: 35px;
+			}
+			#cleartimeDoctorIng{
+				display:block;
+				margin:0 15px;
+				padding:11px;
+				border-radius:5px;
+				background:rgb(227, 75, 77);
+				color:#fff;
+				font-size:16px;
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="callDocIngBackCellId"></a>
+			<h1 class="mui-title">呼叫医生</h1>
+		</header>
+		<div class="mui-content">
+			<img src="../../img/familyDoctor/gif_phone.gif" />
+			<p id="time"></p>
+			<h2 id="h2">问题已提交,等待医生就诊</h2>
+			<h3 id="h3"><!--已通知<span>2</span>位医生--></h3>
+			<h4><a href="" id='gohome' class="">返回主页</a><a href="" id="refresh" class="">重新呼叫</a></h4>
+			<a href="" id="cleartimeDoctorIng" class="">取消呼叫</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/familyDoctor/callDoctorIng.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

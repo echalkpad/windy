@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			.medicalAppointment_pack_banner{
+				width:100%;
+			}
+			.medicalAppointment_pack_banner img{
+				display:block;
+				width:100%;
+			}
+			.medicalAppointment_pack_fixed{
+				position:fixed;
+				bottom:0;
+			}
+			.medicalAppointment_pack_fixed ul{
+				margin:0;
+				padding:0;
+				list-style:none;
+				height:50px;
+				background:#fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">体检预约套餐</h1>
+			<a class="healthyr-succed" id="healthy-btn">咨询小e</a>
+		</header>
+		<div class="medicalAppointment_pack_fixed">
+			<img src="" alt="" />
+			<ul class="">
+				<li>关注商品</li>
+				<li>加购物车</li>
+				<li>立即购买</li>
+			</ul>
+		</div>
+		<div class="mui-content">
+			<div class="medicalAppointment_pack_banner">
+				<img src="../../img/healthy/liaoyang_pic.png" height="164" />
+			</div>
+			<div class="medicalAppointment_pack_t">
+				<h2></h2>
+				<p></p>
+			</div>
+			<div class="medicalAppointment_pack_c">
+				<p><span class="sp1"></span><span class="sp2"></span><span class="sp3"></span><span class="sp4"></span></p>
+				<p><span class="sp1"></span><span class="sp2"></span><span class="sp3"></span></p>
+			</div>
+			<div class="medicalAppointment_pack_nav">
+				<ul>
+					<li>检测项目</li>
+					<li>常见问题</li>
+					<li>历史评价</li>
+					<li>购买选择</li>
+				</ul>
+			</div>
+			<div class="medicalAppointment_pack_text">
+				<h2>体检须知</h2>
+				<p>● 每日体检时间为早7：30am-10：30am。 </p>
+				<p>● 体检前一天请勿饮酒、吃油腻过大食物，并注意休息。体检当日请您禁食、空腹，否则将影响体检结果的准确性。</p>
+				<p>● 体检当日请勿携带贵重物品，如不便保管可到前台领取储物柜钥匙。</p>
+				<p>● 当您来到体检中心后，请您先到前台登记。领取体检表。</p>
+				<p>● 为保证您在体检过程中的舒适度，当您检查完下列体检项目后就可以享用我中心特别为您准备的营养丰富的免费早餐了。须空腹完成的体检项目：抽血、腹部彩超、碳十三呼吸试验、电子肠胃镜检查、腹部CT检查。</p>
+				<p>● 胸透等X线检查前，请您除去并妥善保管金、银、玉器等饰物。</p>
+				<p>● 应主动告知医生身体上的异常状况或已患疾病，切勿心存考验医生的心态，与自己的健康开玩笑。同时，您也可以在体检过程中直接向主检医师进行咨询。这样，有助于主检医师对体检结果作出综合判断。</p>
+				<p>● 便常规请留晨便，请提前作好准备。</p>
+				<p class="medicalAppointment_pack_p">女性体检特别提示：</p>
+				<p>女性客人在体检当日请勿穿着连衣类衣物及长筒靴，避免在体检过程中造成不必要的麻烦。同时，特别提醒您在月经期间请勿体检，否则将影响体检结果的准确性。</p>
+				<p class="medicalAppointment_pack_p">已怀孕，准备怀孕或哺乳期的女性请预先告知医护人员，我们将不安排您进行胸片科检查或自行放弃胸片科检查。</p>
+				<p>女性客人在进行盆腔彩超前1小时，请到餐饮区饮水6-8杯（400-500毫升）。其目的在于使膀胱中度充盈，以保证检查结果的准确。</p>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

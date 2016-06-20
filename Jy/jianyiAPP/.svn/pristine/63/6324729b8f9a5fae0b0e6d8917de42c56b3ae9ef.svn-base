@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+		html,
+			body {
+				background-color: #fff!important;
+				height: 100%;
+			}
+			
+			.jkwd-nav {
+				background: #fff;
+				z-index: 1001;
+				position: fixed;
+				top: 50px;
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				border-bottom: 2px solid rgb(244, 244, 244);
+			}
+			
+			.jkwd-nav a {
+				position: relative;
+				width: 33.33%;
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				float: left;
+				color: #4A4A4A;
+				font-size: 15px;
+				border-left: 1px solid rgb(240, 240, 240);
+			}
+			
+			.jkwd-nav a img {
+				margin-left: 5px;
+				width: 10px;
+				height: auto;
+				position: relative;
+				top: -1px;
+			}
+			
+			.jkwd-nav a:first-child {
+				border-left: none;
+			}
+			
+			ul {
+				margin: 0;
+				list-style: none;
+				padding-left: 0px;
+			}
+			
+			li {
+				padding: 10px 15px;
+				border-bottom: 2px solid rgb(240, 240, 240);
+				height: 97px;
+				width: 100%;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			li .li-l {
+				border: 1px solid #ccc;
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				position: absolute;
+				left: 10px;
+				top: 10px;
+			}
+			
+			li .li-l img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			li .li-r {}
+			
+			li .li-r h2 {
+				max-width: 80%;
+				margin-top: 0;
+				font-size: 16px;
+				color: #333;
+				height: 20px;
+				line-height: 20px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			
+			li .li-r h2 span {
+				position: relative;
+				top: -2px;
+				color: #fff;
+				background: rgb(249, 157, 46);
+				padding: 0 1px;
+				font-size: 10px;
+				border-radius: 3px;
+				margin-left: 6px;
+			}
+			
+			li .li-r h3 {
+				font-size: 15px;
+				margin: 4px 0;
+				color: #000;
+			}
+			
+			li .li-r h3 .sp1 {
+
+				font-size: 20px;
+			}
+			
+			li .li-r p {
+				font-size: 14px;
+			}
+			
+			li .li-r p .sp1 {
+				max-width: 80%;
+				display: block;
+				text-overflow: ellipsis;
+				overflow: hidden!important;
+				white-space: nowrap;
+			}
+			
+			li .li-r p .sp2 {
+				position: absolute;
+				right: 20px;
+				bottom: 15px;
+			}
+			
+			.searchCriteria {}
+			
+			.search {
+				/*display: none;*/
+				z-index: 1000;
+				position: fixed;
+				width: 100%;
+				background: rgba(0, 0, 0, .2);
+			}
+			
+			.search .mui-popover {
+				top: 0;
+				height: 300px;
+				background: #fff;
+				transform: none!important;
+			}
+			
+			.search .mui-popover .mui-table-view {
+				background: #fff;
+			}
+			
+			.search ul li {
+				height: 44px;
+				padding-left: 15px;
+			}
+			
+			.search ul li a {
+				color: #4A4A4A;
+			}
+			
+			.mui-backdrop {
+				top: 294px;
+			}
+			
+			#healthExaminationNetUlId {
+				/*position: absolute;*/
+				width: 100%;
+				/*top: 140px;*/
+				z-index: 2;
+			}
+			
+			#search-qbsq {}
+			
+			#search-qbsq .search-qbsq-l {
+				margin: 0;
+				left: initial;
+			}
+			
+			#search-qbsq .search-qbsq-r {
+				background: rgba(234, 231, 231, 0.4);
+				right: 0;
+				left: initial;
+				width: 100%;
+				border-radius: 0;
+				margin: 0;
+			}
+			
+			#search-qbsq .search-qbsq-l ul,
+			#search-qbsq .search-qbsq-r ul,
+			#search-qt ul {
+				padding-left: 0;
+				list-style: none;
+			}
+			
+			#search-qbsq .search-qbsq-l ul li,
+			#search-qbsq .search-qbsq-r ul li,
+			#search-qt ul li {
+				border-bottom: 1px solid #E8E8E8;
+				margin: 0 10px;
+			}
+			
+			@media only screen and (min-width: 320px) and (max-width: 374px) {
+				.jkwd-nav a {
+					font-size: 14px;
+					letter-spacing: -1px;
+				}
+			}
+		}
+		.mui-title-add {
+			right: 0px;
+			float: right;
+			display: inline-block;
+			overflow: hidden;
+			width: auto;
+			margin: 0;
+			text-overflow: ellipsis;
+			height: 44px;
+			line-height: 44px;
+			font-size: 17px;
+		}
+		.medicationSearch {
+			z-index: 1001;
+			clear: left;
+			height: 40px;
+			line-height: 40px;
+			position: fixed;
+			display: block;
+			top: 50px;
+			width: 100%;
+			background: #00b6f3;
+		}
+		.medicationSearch .search {
+			z-index: 9;
+			position: absolute;
+			top: 6px;
+			left: 35px;
+			display: inline-block;
+			width: 18px;
+			height: 19px;
+			background: url(../../../img/icon_search.png) no-repeat scroll top left;
+			background-size: cover;
+		}
+		.medicationSearch input {
+			position: absolute;
+			background: #fff;
+			border-radius: 16px;
+			border: 0;
+			margin: 0 5%;
+			height: 30px;
+			width: 90%!important;
+			line-height: 30px;
+			padding-left: 40px;
+			font-size: 16px;
+			color: #444;
+		}
+		#health-add {
+			display: none;
+			z-index: 1001;
+			top: 90px;
+			height: auto;
+			width: 100%;
+		}
+		.mui-bar-nav~.mui-content {
+			height: 100%;
+			overflow: hidden;
+			padding-top: 94px!important;
+		}
+		#Jkpullrefresh {
+			top: 94px;
+		}
+		.zanwu_none {
+			display: none;
+			width: 140px;
+			position: fixed;
+			top: 30%;
+			left: 50%;
+			margin-left: -70px;
+			text-align: center;
+			font-size: 14px;
+			color: #999;
+		}
+		.zanwu_none i {
+			display: block;
+			width: 38px;
+			height: 36px;
+			margin: 10px auto;
+			background: url(../../../img/icon_zanwuwangdian.png) no-repeat scroll top left;
+			background-size: cover;
+		}
+		.mui-table-view-cell {
+			position: relative;
+		}
+		.mui-table-view-cell.mui-active {
+			background-color: rgba(000, 000, 000, .03)!important;
+		}
+		.mui-table-view-cell.mui-active:before {
+			position: absolute;
+			left: auto;
+			right: 15px;
+			font-family: Muiicons;
+			-webkit-transform: none;
+			transform: none;
+			background-color: #fff!important;
+			content: '\e442';
+			font-size: xx-large;
+			top: 15px;
+			color: #00b6f3;
+			border-radius: 50%;
+		}
+		.mui-table-view-cell:before {
+			font-size: xx-large;
+			font-family: Muiicons;
+			position: absolute;
+			left: auto;
+			right: 15px;
+			content: '\e411';
+			-webkit-transform: none;
+			transform: none;
+			background: #fff;
+			color: #aaa;
+			top: 15px;
+			border-radius: 50%;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">体检网点选择</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-nav">
+				<a class="search-qbsq" id="search-qbsq-reset">全部区域<img src="../../../img/common/btn_down.png"/></a>
+				<a class="search-ck" id="search-ck-TypeID">全部距离<img src="../../../img/common/btn_down.png"/></a>
+				<a class="search-znpx">筛选<img src="../../../img/common/btn_down.png"/></a>
+			</div>
+			<div class="search">
+				<div id="householdDevices" class="mui-popover mui-popover-action">
+					<div id="search-qt">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<input type="hidden" id="healthExaminationNetAreaValueID" />
+								<ul class="search-ul" id="healthExaminationNetAreaID">
+									<li class="mui-table-view-cell" item=",1"></li>
+								</ul>
+								<input type="hidden" id="healthExaminationNetRangeValueID" />
+								<ul id="healthExaminationNetRangeID">
+								</ul>
+								<input type="hidden" id="healthExaminationNetSortValueID" />
+								<ul id="healthExaminationNetSortID">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-scroll-wrapper" id="Jkpullrefresh">
+				<div class="mui-scroll">
+					<ul id="healthExaminationNetUlId">
+						<!--<li class="mui-table-view-cell">
+							<input type="hidden" value="" />
+							<div class="li-r">
+								<h2>网点名称网点名称网点名称网点名称网网点名称网点名称网点名称网点名称网点名称网点名称网点名称网点名称网点名称点名称网点名称网点名称网点名称网点名称</h2>
+								<h3><span class="sp1 xingxing">★★</span></h3>
+								<p>
+									<span class="sp1">网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址网点地址</span><span class="sp2">距离km</span></p>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="zanwu_none" id="healthExaminationNetZanwuID">
+				<i></i> 没有筛选到网点
+			</div>
+		</div>
+
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/city.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/healthy/healthExamination/healthExaminationNet.js"></script>
+	<script type="text/javascript">
+		if (mui.os.ios) {
+			mui.init({
+				//加载上拉刷新事件
+				pullRefresh: {
+					container: '#Jkpullrefresh',
+					up: {
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: pullRefreshUp
+					}
+				}
+			});
+
+			function pullRefreshUp() {
+				setTimeout(function() {
+					if (total == pageSize) {
+						pageIndex++;
+						requestHealthExaminationNet = "storeName=&lat=" + lat + "&lng=" + lng + "&orgnazitionId=" + organizationId + "&areaNo=" + areaNo + "&sortType=" + sortType + "&filter=" + filter + "&areaType=" + areaType + "&areaLevel=" + areaLevel + "&storeType=43&distance=" + distance + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+						healthExaminationPackage.initHealthExaminationPackage(requestHealthExaminationNet);
+						mui('#Jkpullrefresh').pullRefresh().endPullupToRefresh(false);
+					} else {
+						mui('#Jkpullrefresh').pullRefresh().endPullupToRefresh(true);
+						return false;
+					}
+				}, 1000);
+			}
+		} else {
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			});
+		}
+	</script>
+
+</html>

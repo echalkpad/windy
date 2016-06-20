@@ -1,0 +1,99 @@
+//菜谱
+mui(".diet-content").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'recipe',
+		url: "recipe.html",
+	});
+})
+
+//食物库
+mui(".diet-top").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'foodLib',
+		url: "foodLib.html",
+	});
+})
+
+mui.plusReady(function(){
+	
+	dietNutrition.initType();
+	
+});
+
+var dietNutrition = {
+	
+	initType:function (){
+		jyapp.getApi({
+			method: 'FoodHealth/Diseases',
+			//data:'diseaseId=1',
+			timeout: 10000,
+			showWaiting:true,
+			onsuccess:function(data){
+				//console.log(JSON.stringify(data));
+				if(data.code==1&&data.data!=null&&data.data.length>0){
+					//console.log(JSON.stringify(data.data));
+					/*//各类别html
+					var care ='';
+					var respiratorySystem='';
+					var digestiveSystem='';
+					var circulatorySystem='';
+					var women='';
+					var infant='';
+					var reproductiveUrinary='';
+					mui.each(data.data,function(index,disType){
+						//console.log(dis.TpyeName);
+						//设置页面
+						
+						if(disType.TpyeName=='养生保健'){
+							care+='<ul class="mui-table-view KeepingHealthy" id="KeepingHealthy"><li class="mui-table-view-cell">';
+							care+='<a href="" class="mui-navigate-right"><h3>养生保健</h3></a></li>';
+							care=='<li class="menuList">';
+							mui.each(disType.Disease,function(index2,disease){
+								care+='<a href="">'+disease.Name+'</a>';
+			
+							});
+							care+='</li></ul>';
+							
+						}
+						
+					});
+					console.log("养生保健"+care);*/
+					var dietContent = '';
+					mui.each(data.data,function(index,disType){
+						
+						dietContent+='<ul class="mui-table-view"><li class="mui-table-view-cell">';
+						dietContent+='<a href="" class="mui-navigate-right"><h3><img src="'+disType.Icon+'" >'+disType.TpyeName+'</h3></a></li>';
+						dietContent+='<li class="menuList">';
+						mui.each(disType.Disease,function(index2,disease){
+							dietContent+='<a href="">'+disease.Name+'</a>';
+			
+						});
+						dietContent+='</li></ul>';
+					});
+				
+				//	console.log(dietContent);
+					
+					document.getElementById('dietContent').innerHTML=dietContent;
+					/*var mydata = data.data;
+					var typeName = mydata[0].TpyeName;
+					console.log(typeName);*/
+				}
+			},
+			onerror:function(e){
+				console.log(e);
+			}
+		});
+	},
+	/**
+	 * 添加返回函数
+	 */
+	dietNutritionBack:function(){
+		jyapp.backWebView({id:"mainHealthy",index:3});
+	}
+	
+}
+//添加返回事件
+document.getElementById('dietNutritionBack').addEventListener('click',dietNutrition.dietNutritionBack);
+mui.back=function(){
+	dietNutrition.dietNutritionBack();
+}

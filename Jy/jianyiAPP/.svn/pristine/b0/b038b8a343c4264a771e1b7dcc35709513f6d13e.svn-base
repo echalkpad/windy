@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+				text-align: center;
+			}
+			.xtjl-h2 {
+				font-size: 15px;
+				padding: 20px 30px;
+			}
+			
+			.xtjl-h3 {
+				font-size: 35px;
+				color: rgb(253, 177, 46);
+			}
+			
+			.xtjl-h4 {
+				padding: 10px 0 20px;
+				font-size: 12px;
+			}
+			
+			.xtjl-p {
+				border: none;
+				background: #fff;
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+			
+			.medicationSave {
+				padding: 0;
+				border-right: 20px solid #f2f6f9;
+				border-left: 20px solid #f2f6f9;
+			}
+			
+			textarea.xtjl-p.ellipsis.weak.border-t.border-b {
+				padding-bottom: 50px;
+				border-bottom: 50px solid #f2f6f9!important;
+			}
+			
+			.medicationSave a {
+				margin-bottom: 0;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				text-align: left;
+				color: #4A4A4A;
+				font-size: 15px;
+			}
+			
+			.mui-badge {
+				font-size: 16px;
+			}
+			
+			.healthyR-btn {
+				background: rgb(252, 94, 98);
+				width: 95%;
+				margin: 0 auto;
+				color: #fff;
+				display: block;
+				box-sizing: border-box;
+				padding: 15px 0;
+				border-radius: 5px;
+				font-size: 17px;
+			}
+			
+			.healthyr-succed {
+				float: right;
+				line-height: 44px;
+			}
+			
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			button.mui-btn {
+				float: left;
+			}
+			
+			button.mui-btn-blue {
+				float: right;
+			}
+			
+			.mui-dtpicker-title {
+				clear: left;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			
+			.xtjl-h3{
+				font-size: 35px;
+				color: rgb(253, 177, 46);
+				width:100%;
+				overflow:hidden;
+			}
+			.xtjl-h3 section{
+				width:2940px;
+				background: url(../../img/healthy/pic_kedu_xuetang.png) no-repeat scroll 0 0;
+				background-size:cover;
+				height:40px;
+			}
+			.list{
+				padding-bottom:15px;
+				border-bottom:1px solid #ddd;
+				width:290px;
+				margin:0 auto;
+			}
+			.list strong{
+				color:#FFB000;
+				font-size:40px;
+				display:block;
+				font-weight:normal;
+			}
+			.list small{
+				display:block;
+				color:#9B9B9B;
+				padding:10px 0;
+				font-size:14px;
+			}
+			.list i{
+				display:block;
+				position: absolute;
+				width:2px;
+				height:18px;
+				background:#F73333;
+				top:0;
+				left:50%;
+				margin-left:-1px;
+			}
+			article{
+				width:100%;
+				position: relative;
+			}
+			.mui-dtpicker-title{
+				overflow:hidden;
+			}
+			.mui-dtpicker-title h5{
+				box-sizing:border-box;
+				display:block;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">血糖记录</h1>
+			<a class="healthyr-succed" id="healthy-btn">完成</a>
+		</header>
+		<div class="mui-content">
+			<!--<div class="list">
+				<h2 class="xtjl-h2 weak">收缩压(高压)</h2>
+				<strong id="perHigh">7.8</strong>
+				<small>mmHg</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+			<div class="list">
+				<h2 class="xtjl-h2 weak">舒张压(低压)</h2>
+				<strong id="perLow">7.8</strong>
+				<small>mmHg</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll2"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+			<div class="list">
+				<h2 class="xtjl-h2 weak">心率</h2>
+				<strong id="perHeartRate">60</strong>
+				<small>次/分钟</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll3"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>-->
+			<div class="list">
+				<h2 class="xtjl-h2 weak" id="healthy-meal"></h2>
+				<strong id="healthy-cod"></strong>
+				<small>mmol/l</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll2"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+			<ul class="mui-table-view border-t">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="meDepartment">测量时段
+						<span class="mui-badge mui-badge-inverted" id="departmentResult"></span>
+						<input type="hidden" id="departmentResultInputId" value="1" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="healthBR-time1" data-options='{"type":"time"}'>测量时间<span class="mui-badge mui-badge-inverted" id="healthBR-time"></span></a>
+				</li>
+			</ul>
+			<textarea class="xtjl-p ellipsis weak border-t border-b" placeholder="此处记录您要备注说明的信息" id="healthBR-remark"></textarea>
+
+		</div>
+		<a href="" id="deleRecord"></a>
+	</body>
+	<script src="../../js/mui.picker.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/code/jquery-1.8.3.min.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/healthy/healthyBloodRecord.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

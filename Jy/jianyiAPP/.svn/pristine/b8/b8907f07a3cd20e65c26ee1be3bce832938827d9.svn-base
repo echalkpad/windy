@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:#eee;padding-bottom:30px;}
+			.dose input,.dose textarea{
+				border:0;
+				margin-bottom: 0;
+				padding:0;
+				height:auto;
+			}
+			.mui-table-view .active{
+				color:#666;
+				background:#eee;
+			}
+			.mui-table-view h2{font-size:16px;}
+			.mui-table-view .active:after{display:none;}
+			.switch{
+				background:#fff;
+				margin-top:15px;
+			}
+			.switch:after{
+				display: table;
+				content:"";
+				clear:both;
+			}
+			.switch h2{
+				font-size:16px;
+				float: left;
+				padding:15px;
+			}
+			.mui-switch{
+				margin:5px 15px 0 0;
+			}
+			.mui-table-view-cell ol{
+				overflow:hidden;
+				list-style:none;
+				padding:0;
+				margin:8px -3px 0;
+			}
+			ol li{
+				display:block;
+				float:left;
+				width:25%;
+				box-sizing:border-box;
+				padding:0 3px;
+				text-align:center;
+				margin-top:5px;
+			}
+			ol li span,section span{
+				display:block;
+				line-height:24px;
+				border:1px solid #ddd;
+				border-radius:2px;
+				font-size:12px;
+				color:#777;
+			}
+			.selector span{
+				background:#00B6F3;
+				color:#fff;
+			}
+
+			.editTime{
+				text-align: center;
+				color:#00B6F3;
+			}
+			.editTime strong{
+				font-size: 24px;
+				font-weight:normal;
+				margin-right:5px;
+			}
+			.mui-btn, button, input[type=button], input[type=reset], input[type=submit]{
+				border:0;
+				background:none;
+			}
+			.mui-btn-blue, .mui-btn-primary, input[type=submit]{
+				background:none;
+				border:0;
+				color:#333;
+			}
+			.mui-dtpicker-title{display:none;}
+			.result{font-size:14px;}
+			.mui-table-view-cell .mui-badge,.mui-table-view-cell input{
+				max-width:50%;
+				font-size:14px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.mui-table-view-cell input{
+				text-align:right;
+				border: 0;
+			}
+			.mui-navigate-right{
+			    position: relative;
+			    display: block;
+			    overflow: hidden;
+			    margin: -11px -15px;
+			    padding: 11px 15px;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    color: inherit;
+			}
+			.mui-navigate-right:after{
+				right:15px!important;
+			}
+			.mui-btn-danger, .mui-btn-negative, .mui-btn-red {
+			    color: #fff;
+			    border: 1px solid #dd524d;
+			    background-color: #dd524d;
+			}
+			.mui-navigate-right>.mui-badge{
+				position: absolute;
+			    top: 50%;
+			    right: 15px;
+			    -webkit-transform: translateY(-50%);
+			    transform: translateY(-50%);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">更新用药方案</h1>
+			<a href="" class="btn-add mui-pull-right" style="font-size:14px;line-height: 40px;" id="medicationPlanEditSubmitID">完成</a>
+		</header>
+		<div class="mui-content" id="medicatioPlanEditDivID">
+			<input type="hidden" id="medicatioPlanEditID" value=""/>
+			<div class="switch">
+				<h2>是否提醒</h2>
+				<div class="mui-switch mui-switch-mini mui-pull-right" id="isRemindTapEditID">
+					<input type="hidden" id="isRemindEditID" value=""/>
+					<div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell active"><h2>药品信息</h2></li><!-- onkeyup="commomUtil.validateKeyUp(this,2);"-->
+				<li class="mui-table-view-cell">药品名称<input type="text" id="drugNameEditID" placeholder="酸二甲双弧片(格华止)" value="" class="mui-badge mui-badge-inverted"/></li>
+				<li class="mui-table-view-cell dose">使用剂量<input type="text" id="dosageEditID" placeholder="例：1片/1颗/1mg/1ml等" value="" class="mui-badge mui-badge-inverted"/></li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" id="requirementEditID" value="" />
+					<h2>使用要求</h2>
+					<ol class="use" id="requirementOlEditID">
+						<li><span item="0">空腹服用</span></li>
+						<li><span item="1">随餐服用</span></li>
+						<li><span item="2">餐后服用</span></li>
+						<li><span item="3">外用</span></li>
+						<li><span item="4">吸入</span></li>
+						<li><span item="5">不限</span></li>
+					</ol>
+				</li>
+			</ul>
+			<ul class="mui-table-view" id="roleModularID">
+				<li class="mui-table-view-cell active"><h2>用药周期</h2></li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" id="ruleEditID" value="0" />
+					<h2>重复规则</h2>
+					<ol class="repeat" id="ruleOlEditID">
+						<li id="day"><span item="0">每日</span></li>
+						<li id="gday"><span item="1">隔日</span></li>
+					</ol>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell active"><h2>备注信息</h2></li>
+				<li class="mui-table-view-cell dose"><!-- onkeyup="commomUtil.validateKeyUp(this,1);"-->
+					<textarea name="" id="descriptionEditID" cols="30" rows="2" maxlength="50" placeholder="此处可填写50字以内的信息"></textarea>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/mui.picker.min.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/medication/medicationPlanEdit.js"></script>
+</html>

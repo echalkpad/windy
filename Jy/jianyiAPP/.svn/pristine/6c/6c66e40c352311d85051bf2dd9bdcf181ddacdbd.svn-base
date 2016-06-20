@@ -1,0 +1,140 @@
+//提交预约
+mui(".btn").on('tap', '#packageGeneticOrder', function() {
+	
+	packageabout.submitPackageAbout();
+//	mui.openWindow({
+//		id: 'geneticOrder',
+//		url: "geneticOrder.html"
+//	});
+})
+
+//选择地址
+mui(".mui-content").on('tap', '#packageShippingAddress', function() {
+	mui.openWindow({
+		id: 'shippingAddress',
+		url: "shippingAddress.html",
+		extras : {
+			type : 0
+		}
+	});
+})
+var Pageckage = "";
+var addressId = "";
+document.addEventListener("plusready",function(){
+	var self = plus.webview.currentWebview();
+	Pageckage = self.Pageckage;
+	//初始化数据
+	packageabout.initData();
+	//添加选择性别事件
+	packageabout.initSex();
+});
+var packageabout = {
+	initData : function(){
+		document.getElementById("packageaboutPriceid").innerHTML = "¥"+Pageckage.PresentPrice;
+		document.getElementById("packageaboutjcNameId").innerHTML = Pageckage.PackageName;
+		document.getElementById("packageaboutgsNameId").innerHTML = Pageckage.StoreName;
+	},
+	initSex : function(){
+		var userSex = new mui.PopPicker();
+		var data = [{
+			text : "女",
+			value : "0"
+		},{
+			text : "男",
+			value : "1"
+		}];
+		userSex.setData(data);
+		var showSexButton = document.getElementById('packageSex');
+		var sexResult = document.getElementById('packageSexResult');
+		var sexID = document.getElementById('packageSexValueId');
+		showSexButton.addEventListener('tap', function(event) {
+			userSex.show(function(items) {
+				var s = items[0].text;
+				var v = items[0].value;
+				sexResult.innerText = s;
+				sexID.value = v;
+			});
+		}, false);
+	},
+	submitPackageAbout : function(){
+		var packageaboutName = document.getElementById("packageaboutNameId").value;
+		if (!packageaboutName || packageaboutName == "") {
+			plus.nativeUI.alert('姓名必须填写！','','提示','确认');
+			return false;
+		}
+		var packageSexValue = document.getElementById("packageSexValueId").value;
+		if (!packageSexValue || packageSexValue == "") {
+			plus.nativeUI.alert('性别必须填写！','','提示','确认');
+			return false;
+		}
+		var packageaboutAge = document.getElementById("packageaboutAgeId").value;
+		if (!packageaboutAge || packageaboutAge == "") {
+			plus.nativeUI.alert('年龄必须填写！','','提示','确认');
+			return false;
+		}
+		var packageaboutMobel = document.getElementById("packageaboutMobelId").value;
+		if (!packageaboutMobel || packageaboutMobel == "") {
+			plus.nativeUI.alert('电话号码必须填写！','','提示','确认');
+			return false;
+		}
+		if (!addressId || addressId == "") {
+			plus.nativeUI.alert('收货地址必须填写！','','提示','确认');
+			return false;
+		}
+		var packageaboutCommon = document.getElementById("packageaboutCommonId").value;
+		var requestData = "OrgID="+Pageckage.OrganizationId+"&PackageID="+Pageckage.ID+"&PackageType=&Name="+packageaboutName+"&Sex="+packageSexValue;
+		requestData += "&Age="+packageaboutAge+"&Mobile="+packageaboutMobel+"&Remark="+packageaboutCommon+"&AddressID="+addressId;
+		console.log(requestData);
+		jyapp.getApi({
+			method: 'GeneDetection/SubmitAppointment',
+			data:requestData,
+			timeout : 10000,
+			onsuccess: function(data) {
+				console.log(JSON.stringify(data));
+				if(data.code == 1){
+					var config = {
+						id : "geneticOrder",
+						url : "../../healthy/geneticDiagnosis/geneticOrder.html",
+						method : "newidsGeneticOrder",
+						extras : {
+							index : 0
+						}
+					}
+					commomUtil.backWebView(config);
+				}else{
+					plus.nativeUI.alert(data.msg,'','提示','确认');
+				}
+			},
+			onerror: function(e) {
+				console.log(e);
+			}
+		});
+		
+	}
+}
+
+window.addEventListener("newIdspackageAbout",function(event){
+	//设置地址数据
+	addressId = event.detail.addressId;
+	var addressName = event.detail.addressName;
+	var ConsigneeName = event.detail.ConsigneeName;
+	var Mobile = event.detail.Mobile;
+	var IsDefault = event.detail.IsDefault;
+	var html = '';
+	
+	html +='<li class="mui-table-view-cell default haveAddress"><a href="" class="mui-navigate-right" id="packageShippingAddress">';
+	html +='<section>';
+	html +='<h2>收件人：<span>'+ConsigneeName+'</span><strong>'+Mobile+'</strong></h2>';
+	html +='<p>'+addressName+'</p>';
+	if(IsDefault == 1){
+		html += '<em>默认</em>';
+	}
+	html +='</section>';
+	html +='<article>';
+	html +='<h2>收货地址</h2>';
+	html +='<span class="mui-badge mui-badge-inverted">请添加收货地址</span>';
+	html +='</article>';
+	html +='</a></li>';
+	document.getElementById("packageaboutAddressIdUl").innerHTML = html;
+});
+

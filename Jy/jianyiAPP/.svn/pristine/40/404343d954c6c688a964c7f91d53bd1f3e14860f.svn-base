@@ -1,0 +1,54 @@
+//提交预约
+mui(".btn").on('tap', '#packageGeneticOrder', function() {
+	commomUtil.closeWebviewById('geneticOrder');
+	mui.openWindow({
+		id: 'geneticOrder',
+		url: "geneticOrder.html"
+	});
+})
+
+//选择地址
+mui(".mui-content").on('tap', '#packageShippingAddress', function() {
+	commomUtil.closeWebviewById('shippingAddress');
+	mui.openWindow({
+		id: 'shippingAddress',
+		url: "shippingAddress.html"
+	});
+})
+var Pageckage = "";
+document.addEventListener("plusready",function(){
+	var self = plus.webview.currentWebview();
+	Pageckage = self.Pageckage;
+	//初始化数据
+	packageabout.initData();
+});
+var packageabout = {
+	initData : function(){
+		document.getElementById("packageaboutPriceid").innerHTML = "¥"+Pageckage.PresentPrice;
+		document.getElementById("packageaboutjcNameId").innerHTML = Pageckage.PackageName;
+		document.getElementById("packageaboutgsNameId").innerHTML = Pageckage.StoreName;
+	}
+}
+
+
+/*性别*/
+mui.init();
+mui.ready(function() {
+	var userSex = new mui.PopPicker();
+	userSex.setData([{
+		value: 'nan',
+		text: '男'
+	}, {
+		value: 'nv',
+		text: '女'
+	}]);
+	var showSexButton = document.getElementById('packageSex');
+	var sexResult = document.getElementById('packageSexResult');
+	showSexButton.addEventListener('tap', function(event) {
+		userSex.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			s = s.replace("\"", "").replace("\"", "");
+			sexResult.innerText = s;
+		});
+	}, false);
+});

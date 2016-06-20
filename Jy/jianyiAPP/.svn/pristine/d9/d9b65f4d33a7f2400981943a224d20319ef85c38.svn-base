@@ -1,0 +1,29 @@
+mui.plusReady(function() {
+	var card_balance = document.getElementById("card_balance");
+	var carName = document.getElementById("carName");
+	var endtime = document.getElementById("endtime");
+	var carNum = document.getElementById("carNum");
+	var balance = document.getElementById("balance");
+	var recharge = document.getElementById("recharge");
+	var enddatetime = document.getElementById("enddatetime");
+	var newDate = plus.storage.getItem('oneInfo');
+
+	jyapp.getApi({
+		method: 'Profile/cardinfo',
+		onsuccess: function(data) {
+			console.log(JSON.stringify(data));
+			JSON.parse(newDate).jycardnumber == null ? card_balance.innerHTML = '0000000000000000' : card_balance.innerHTML = JSON.parse(newDate).jycardnumber; 
+			carName.innerHTML = (data.data.policys[0].name).slice(0,15);
+			var datatime = (data.data.policys[0].endtime).slice(6, -2);
+			endtime.innerHTML = (new Date(parseInt(datatime)).getFullYear()+'/'+(new Date(parseInt(datatime)).getMonth()+1)+"/"+new Date(parseInt(datatime)).getDate()).toString()
+			carNum.innerHTML = data.data.policys[0].id;
+			balance.innerHTML = data.data.policys[0].balance;
+			recharge.innerHTML = data.data.policys[0].recharge;
+			enddatetime.innerHTML = (data.data.policys[0].enddatetime).slice(-8);
+//			console.log(JSON.stringify(data));
+		},
+		onerror: function(e) {
+			alert(e);
+		}
+	})
+})

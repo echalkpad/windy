@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.yy-top {
+				background: #00b6f3;
+				text-align: center;
+				height: 220px;
+				position: relative;
+			}
+			
+			.yy-top p {
+				color: #fff;
+				font-size: 15px;
+			}
+			
+			.yy-top .yy-lu {
+				padding-top: 25px;
+			}
+			
+			.yy-top h2 {
+				color: rgba(255, 255, 255, .5);
+				font-size: 13px;
+				line-height: 30px;
+			}
+			
+			.yy-top h3 {
+				font-size: 27px;
+				color: #F7DB65;
+			}
+			
+			.yy-top-btn {
+				line-height: 30px;
+				border-radius: 20px;
+				font-size: 15px;
+				color: #fff;
+				font-family: "微软雅黑";
+				background: rgba(255, 255, 255, .6);
+				padding: 0 18px 0 8px;
+				position: absolute;
+				bottom: -40px;
+				left: 50%;
+				margin-left: -68px;
+				width: 136px;
+			}
+			
+			.yy-top-btn:visited {
+				color: #fff;
+			}
+			
+			.mui-icon-arrowright:before {
+				position: absolute;
+				right: 8px;
+				top: 1px;
+				font-size: large;
+				font-family: Muiicons;
+			}
+			
+			.yy-bottom a {
+				-webkit-box-sizing: border-box;
+				display: block;
+				float: left;
+				box-sizing: border-box;
+				width: 33%;
+				border-left: 1px solid #f1f1f1;
+			}
+			
+			.yy-bottom a:nth-child(1) {
+				border: none
+			}
+			
+			.yy-bottom h2 {
+				font-size: 16px;
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-bottom: 4px;
+			}
+			
+			.yy-bottom h3 {
+				padding-left: 10px;
+				font-size: 12px;
+				color: #9B9B9B;
+				line-height: 24px;
+			}
+			
+			.yy-bottom a:nth-child(1) h2 {
+				color: #ff9805;
+			}
+			
+			.yy-bottom a:nth-child(2) h2 {
+				color: #35a235;
+			}
+			
+			.yy-bottom a:nth-child(3) h2 {
+				color: #07a9f4;
+			}
+			
+			.yy-time {
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 1px solid #f1f1f1;
+			}
+			
+			.yy-time .yy-time-l,
+			.yy-time .yy-time-r {
+				display: block;
+				width: 20%;
+				float: left;
+			}
+			
+			.yy-time .yy-time-c {
+				height: 50px;
+				line-height: 50px;
+				font-size: 16px;
+				text-align: center;
+				width: 60%;
+				float: left;
+			}
+			
+			.morning {
+				color: rgb(255, 142, 53);
+			}
+			
+			.noon {
+				color: rgb(53, 162, 53);
+			}
+			
+			.night {
+				color: rgb(7, 169, 244);
+			}
+			
+			.bed {
+				color: rgb(59, 63, 59);
+			}
+			
+			.yy-time .yy-time-c img {
+				margin-right: 5px;
+				margin-bottom: -2px;
+			}
+			
+			.con {
+				display: none;
+			}
+			
+			.active {
+				display: block;
+			}
+			
+			.circle {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				margin-top: -5px;
+			}
+			
+			.circle .pie_left,
+			.circle .pie_right {
+				width: 120px;
+				height: 120px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.circle .left,
+			.circle .right {
+				display: block;
+				width: 120px;
+				height: 120px;
+				background: #4CCBF7;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 1s;
+				-webkit-transition: all 1s;
+			}
+			
+			.circle .pie_right,
+			.circle .right {
+				clip: rect(0, auto, auto, 60px);
+			}
+			
+			.circle .pie_left,
+			.circle .left {
+				clip: rect(0, 60px, auto, 0);
+			}
+			
+			.circle .mask {
+				width: 110px;
+				height: 110px;
+				border-radius: 50%;
+				left: 5px;
+				top: 5px;
+				background: #00b6f3;
+				position: absolute;
+				text-align: center;
+				line-height: 86px;
+				color: #28ADA0;
+				font-size: 18px;
+			}
+			
+			.circle .mask em {
+				font-size: 12px;
+			}
+			
+			.circle i {
+				color: #28ada0;
+				font-size: 50px;
+				text-align: center;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			.plus {
+				width: 130px;
+				height: 130px;
+				border-radius: 50%;
+				background: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+			}
+			
+			.plus:after {
+				display: none;
+			}
+			
+			.plus span {
+				height: 100px;
+				width: 100px;
+				background: rgb(161, 232, 253);
+				margin: 15px auto;
+				border: 0;
+			}
+			
+			.plus i {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.circle-none p {
+				margin-top: 150px;
+				font-size: 14px;
+			}
+			
+			#con {
+				display: none;
+				text-align: center;
+			}
+			
+			#con div {
+				text-align: left;
+			}
+			
+			#con2 {
+				display: none;
+			}
+			
+			#con3 {
+				display: none;
+			}
+			
+			#con4 {
+				display: none;
+			}
+			
+			#con5 {
+				display: none;
+			}
+			
+			#initConMainMedication {
+				display: none;
+			}
+			
+			#circleCon {
+				display: block;
+			}
+			
+			#con-none {
+				padding: 10px 15px 0;
+			}
+			
+			.mui-checkbox label h3 {
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				font-size: 14px;
+				line-height: 18px;
+			}
+			
+			time {
+				display: block;
+				color: #666;
+				font-size: 14px;
+				margin-top: 4px;
+			}
+			
+			time span {
+				font-size: 12px;
+				margin-left: 15px;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 14px;
+			}
+			
+			#pullrefresh {
+				background: #f2f6f9;
+			}
+			
+			.yy-bottom {
+				text-align: center;
+			}
+			
+			.yy-bottom h2,
+			.yy-bottom h3 {
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<input type="hidden" id="accountTypeMainPull" value="0" />
+			<input type="hidden" id="familyIdMainPull" value="0" />
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="mui-content yy-top">
+						<p>每日按照用药方案服用并记录</p>
+						<div class="circle" id="circleCon">
+							<div class="pie_left">
+								<div class="left"></div>
+							</div>
+							<div class="pie_right">
+								<div class="right"></div>
+							</div>
+							<div class="mask yy-lu">
+								<h2>已服用</h2>
+								<h3 id="usePercentHID"></h3>
+							</div>
+							<a href="" class="yy-top-btn mui-icon mui-icon-arrowright" id="manageMyMedPlanAID">
+								<input type="hidden" id="accountTypeToManage" value="0" />
+								<input type="hidden" id="familyIdToManage" value="0" />管理用药方案</a>
+						</div>
+						<div class="circle-none" id="initConMainMedication">
+							<a href="" class="plus">
+								<input type="hidden" id="accountTypeMain" value="0" />
+								<input type="hidden" id="familyIdMain" value="0" />
+								<span><i></i></span>
+							</a>
+							<p>添加一个用药方案吧</p>
+						</div>
+					</div>
+
+					<div class="mui-content tab">
+						<div class="yy-time" id="time">
+							<a href="javascript:void(0)" class="yy-time-l" id="prev"><img src="../img/pharmacy_btn_angle_left@2x.png" width="8px" /></a>
+							<div id="ctime" class='yy-time-c '>
+								<input type="hidden" id="chooseUseTimeID" value="1" />
+								<p class="morning"><img src="../img/pharmacy_icon_morning@2x.png" alt="" width="20px" />早上</p>
+							</div>
+							<a href="javascript:void(0)" class="yy-time-r" id="next"><img src="../img/pharmacy_btn_angle_right@2x.png" width="8px" /></a>
+						</div>
+						<div id="con-none">
+							<p style="width: 100%;text-align: center;"><img src='../img/icon_zanwuyongyao.png' style='width:65px;margin:22px auto' /></p>
+						</div>
+						<div class="mui-conten tab-con" id="con">
+							<div class="con active" id="cons">
+								<!--<div class="mui-input-row mui-checkbox">
+									<label>
+										<h3>盐酸二甲双弧片（美迪康）</h3>
+										<time>8:30<span>餐后</span></time>
+									</label>
+									<input name="useTypeCheckBox" value="" type="checkbox">
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="mui-content yy-bottom border-t border-b">
+						<a href="" id="DrugSafety">
+							<h2>对症寻药</h2>
+							<h3>用药安全有我保障</h3>
+							<img src="../img/pic_fujingyaodian@2x.png" height="85" />
+						</a>
+						<a href="" id="jumpNearMedicationAID">
+							<h2>附近药店</h2>
+							<h3>快速寻找附近药店</h3>
+							<img src="../img/Bitmap.png" height="85" />
+						</a>
+						<a href="" id="DeliveryDoor">
+							<h2>送药上门</h2>
+							<h3>足不出户送药直达</h3>
+							<img src="../img/pic_songyaoshangmen@2x.png" height="85" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/core/config.js"></script>
+	<script src="../js/core/common.js"></script>
+	<script src="../js/route.js"></script>
+	<script src="../js/code/jquery-1.8.3.min.js"></script>
+	<script src="../js/util/common_util.js"></script>
+	<script src="../js/mainMedication.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+				    contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+			        contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				var accountTypeMain = document.getElementById('accountTypeMainPull').value;
+				var familyIdMain = document.getElementById('familyIdMainPull').value;
+//				mainMedication.initMedicationPlanListAll(accountTypeMain, familyIdMain);
+				mainMedication.initMedicationSchemeListMain(accountTypeMain, familyIdMain);
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}
+		/*document.getElementById("DrugSafety").addEventListener('tap', function() {
+			plus.nativeUI.alert("敬请期待！", function() {}, "健医宝", "好的");
+		})*/
+		document.getElementById("DeliveryDoor").addEventListener('tap', function() {
+			plus.nativeUI.alert("敬请期待！", function() {}, "健医宝", "好的");
+		})
+	</script>
+
+</html>

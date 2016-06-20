@@ -1,0 +1,167 @@
+var orderId = 0;
+var order = "";
+var checkId = 0;
+var backid = "";
+var backurl = "";
+mui('.mui-content').on('tap','.all-question',function(){
+	var s=document.querySelector(".ul p");
+	var r=document.querySelector('.all-question span');
+	if(s.getAttribute('class')=='ellipsis'){
+		console.log();
+		r.setAttribute('class','mui-icon mui-icon-arrowup')
+		s.setAttribute('class','')
+	}else{
+		s.setAttribute('class','ellipsis')
+		r.setAttribute('class','mui-icon mui-icon-arrowdown')
+	}
+})
+
+document.addEventListener("plusready", function() {
+	commomUtil.closeAll(plus.webview.currentWebview().id);
+	var self = plus.webview.currentWebview();
+	orderId = self.orderId;
+	checkId = 1;
+	backid = self.backid;
+	backurl = self.backurl;
+	//初始化页面数据
+	payOrderFailure.initPayOrderFailure(orderId);
+});
+var payOrderFailure = {
+	initPayOrderFailure : function(oid){
+		if(checkId == 1){
+			checkId ++;
+			jyapp.getApi({
+	   			method: 'DoctorOnline/OrderDetails',
+	   			data:'orderId='+oid,
+	   			timeout : 10000,
+	   			onsuccess: function(data) {
+	   				checkId = 1;
+	   				var payOrderFailureoneHtml = "";
+	   				var payOrderFailuretwoHtml = "";
+	   				var code = data.code;
+	   				order = data;
+//	   				console.log(JSON.stringify(data));
+	   				if(code == 1){
+	   					var Name = data.data.Name ? data.data.Name : "--";
+	   					var DoctorTitle = data.data.DoctorTitle ? data.data.DoctorTitle : "--";
+	   					var HospitalName = data.data.HospitalName ? data.data.HospitalName : "--";
+	   					var SickDescription = data.data.SickDescription ? data.data.SickDescription : "--";
+	   					var DoctorSummary = data.data.DoctorSummary ? data.data.DoctorSummary : "--";
+	   					payOrderFailureoneHtml +="<li class=\"mui-table-view-cell mui-media\">";
+						payOrderFailureoneHtml +="<a href=\"javascript:;\">";
+						payOrderFailureoneHtml +="<img class=\"mui-media-object mui-pull-left\" src="+data.data.Pic+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" />";
+						payOrderFailureoneHtml +="<div class=\"mui-media-body\">"+Name+"<span>"+DoctorTitle+"</span>";
+						payOrderFailureoneHtml +="<p class=\"mui-ellipsis\">"+HospitalName+"</p>";
+						payOrderFailureoneHtml +="</div>";
+						payOrderFailureoneHtml +="</a>";
+						payOrderFailureoneHtml +="</li>";
+						document.getElementById("payOrderFailureoneHtmlId").innerHTML = payOrderFailureoneHtml;
+						payOrderFailuretwoHtml +="<li>";
+						payOrderFailuretwoHtml +="<div class=\"question\">";
+						payOrderFailuretwoHtml +="<h2>咨询问题：</h2>";
+						payOrderFailuretwoHtml +="<p class=\"ellipsis\">"+SickDescription +"</p>";
+						var isPicture = data.data.isPicture;
+						if(isPicture){
+							var pic1 = data.data.Pic1;
+							if(pic1){
+								payOrderFailuretwoHtml +="<div class=\"qs-img\"><img src="+pic1+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" /></div>";
+							}
+							var pic2 = data.data.Pic2;
+							if(pic2){
+								payOrderFailuretwoHtml +="<div class=\"qs-img\"><img src="+pic2+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" /></div>";
+							}
+							var pic3 = data.data.Pic3;
+							if(pic3){
+								payOrderFailuretwoHtml +="<div class=\"qs-img\"><img src="+pic3+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" /></div>";
+							}
+							var pic4 = data.data.Pic4;
+							if(pic4){
+								payOrderFailuretwoHtml +="<div class=\"qs-img\"><img src="+pic4+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" /></div>";
+							}
+						}
+						payOrderFailuretwoHtml +="</div>";
+						payOrderFailuretwoHtml +="<div class=\"sum\">";
+						payOrderFailuretwoHtml +="<h2>诊断总结：</h2>";
+						payOrderFailuretwoHtml +="<p class=\"ellipsis\">"+DoctorSummary+"</p>";
+						payOrderFailuretwoHtml +="</div>";
+						payOrderFailuretwoHtml +="</li>";
+	   					document.getElementById("payOrderFailuretwoHtmlId").innerHTML = payOrderFailuretwoHtml;
+	   					document.getElementById("payOrderFailurepriceId").innerHTML = data.data.TotalFee+"元";
+	   				}
+	   			},
+	   			onerror: function(e) {
+	   				checkId = 1;
+	   				console.log("initPayOrderFailure------>:"+e);
+//	   				plus.nativeUI.alert(e,'','健医宝','确认');
+	   			}
+	   		});
+	   	}
+	},
+	initPayOrderFailuryOnclick : function(){
+		var payinfo = {
+			subject:'手机尾号:'+order.data.Phone+'在线问诊订单',
+			body:"呼叫医生在线问诊，接诊医生为 "+order.data.Name+",订单时间:"+commomUtil.stringToDate(order.data.OrderTime),
+			orderno:order.data.OrderNo,
+			totalfee:order.data.TotalFee,
+			orderId:order.data.ID,
+			type:"familyDoctor",
+			backurl:backurl,
+			backid : backid,
+			method : "newIdsConsultingRecord",
+			successpage:{
+				id:'payOrderSucceed',
+				url:'../pay/payOrderSucceed.html'
+			},
+			backCell:{
+				id: 'consultingRecords',
+				url: "../familyDoctor/consultingRecords.html",
+				index : 0
+			}
+		};
+		commomUtil.closeWebviewById("payment");
+		mui.openWindow({
+			id: 'payment',
+			url: "../core/payment.html",
+			createNew: true,
+			extras : {
+				payinfo : payinfo
+			}
+		});
+	},
+	initnoPayOrderFailureOnclick : function(){
+//		console.log(order.data.ID);
+		//服务不好，拒绝支付
+		mui.openWindow({
+			id: 'nonPayment',
+			url: "nonPayment.html",
+			extras: {
+				backurl:backurl,
+				backid : backid,
+				orderId : orderId
+			}
+		});
+	},
+	payOrderFailureBackCell : function(){
+		var config = {
+			id : "consultingRecords",
+			url: "../familyDoctor/consultingRecords.html",
+			method : "newIdsConsultingRecord",
+			extras : {
+				backurl: backurl,
+				backid : backid,
+				index: 0
+			}
+		}
+		jyapp.backWebView(config);
+	}
+}
+//绑定支付页面跳转
+document.getElementById("payOrderFailureId").addEventListener('click',payOrderFailure.initPayOrderFailuryOnclick);
+//绑定服务不好拒绝支付
+document.getElementById("noPayOrderFailureId").addEventListener('click',payOrderFailure.initnoPayOrderFailureOnclick);
+//绑定回退事件
+document.getElementById("payOrderFailureBackCellId").addEventListener("click",payOrderFailure.payOrderFailureBackCell);
+
+//mui.back = function(e){
+//	payOrderFailure.payOrderFailureBackCell();
+//};

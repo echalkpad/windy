@@ -1,0 +1,2418 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "com.jytech.jyb",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "健医宝",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.1.2",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "html/main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+			"description": "访问加速度感应器"
+		},
+		"Audio": {
+			"description": "访问麦克风"
+		},
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+		"Camera": {
+			"description": "访问摄像头"
+		},
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+		"Contacts": {
+			"description": "访问系统联系人信息"
+		},
+		"Device": {
+			"description": "访问设备信息"
+		},
+		"Downloader": {
+			"description": "文件下载管理"
+		},
+		"Events": {
+			"description": "应用扩展事件"
+		},
+		"File": {
+			"description": "访问本地文件系统"
+		},
+		"Gallery": {
+			"description": "访问系统相册"
+		},
+		"Geolocation": {
+			"description": "访问位置信息"
+		},
+		"Invocation": {
+			"description": "使用Native.js能力"
+		},
+
+		"Orientation": {
+			"description": "访问方向感应器"
+		},
+		"Proximity": {
+			"description": "访问距离感应器"
+		},
+		"Storage": {
+			"description": "管理应用本地数据"
+		},
+
+		"Uploader": {
+			"description": "管理文件上传任务"
+		},
+		"Runtime": {
+			"description": "访问运行期环境"
+		},
+		"XMLHttpRequest": {
+			"description": "跨域网络访问"
+		},
+		"Zip": {
+			"description": "文件压缩与解压缩"
+		},
+		"Barcode": {
+			"description": "管理二维码扫描插件"
+		},
+
+		"Speech": {
+			"description": "管理语音识别插件"
+		},
+		"Webview": {
+			"description": "窗口管理"
+		},
+		"NativeUI": {
+			"description": "原生UI控件"
+		},
+		"Navigator": {
+			"description": "浏览器信息"
+		},
+		"NativeObj": {
+			"description": "原生对象"
+		},
+		"Push": {},
+		"Maps": {},
+		"Payment": {}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"plugins": {
+				"payment": {
+					"alipay": {
+						"description": "阿里支付",
+						"scheme": ""
+					},
+					"weixin": {
+						"description": "微信支付",
+						"appid": "wxf1e5f10da326c27c"
+					}
+				},
+				"maps": {
+					"baidu": {
+						"appkey_ios": "QkkwwxI1pOI6H5hZ2nxOmcSB4U8Nuwgx",
+						"appkey_android": "GvL9QiuaYFbWxpebH8jN5O4iKL2xseny",
+						"appkey": "",
+						"description": ""
+					}
+				},
+				"push": {
+					"igexin": {
+						"appid": "kWN1uLrvFS7UyWhwWLjWz8",
+						"appkey": "jq5S3CBoN99CAxH4AIYDv",
+						"appsecret": "q2psmnz8QP9mjf8RyoDhM2"
+					}
+				}
+			},
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"ImmersedStatusbar": false,
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.GET_TASKS\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+				]
+			},
+			"orientation": ["portrait-primary","portrait-secondary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png",
+						"retina8": "unpackage/res/icons/180x180.png",
+						"settings-retina8": "unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "E:/DOC/健医宝/启动页/iOS-启动页/iphone4.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "E:/DOC/健医宝/启动页/iOS-启动页/iphone5.png",
+						"retina55": "E:/DOC/健医宝/启动页/iOS-启动页/iphone6p.png",
+						"retina47": "E:/DOC/健医宝/启动页/iOS-启动页/iphone6.png"
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "E:/DOC/健医宝/启动页/Android/android_240x282.png", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "E:/DOC/健医宝/启动页/Android/android_320x442.png", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "E:/DOC/健医宝/启动页/Android/android_480x762.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "E:/DOC/健医宝/启动页/Android/android_720x1242.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "E:/DOC/健医宝/启动页/Android/android_1080x1882.png"
+				}
+			},
+			"debug": true
+		}
+	},
+	"dependencies": {
+		"pages": {
+			"lib/html/mainMedication.html": {
+				"resources": [
+					"lib/js/mainMedication.js",
+					"lib/img/pic_songyaoshangmen@2x.png",
+					"lib/img/pic_fujingyaodian@2x.png",
+					"lib/img/pic_yongyaoanquan@2x.png",
+					"lib/img/pharmacy_btn_angle_right@2x.png",
+					"lib/img/pharmacy_icon_morning@2x.png",
+					"lib/img/pharmacy_btn_angle_left@2x.png",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"lib/html/mainInterrogation.html": {
+				"resources": [
+					"lib/js/mainInterrogation.js",
+					"lib/img/icon_zhongliuzhuanjia@2x.png",
+					"lib/img/icon_yuyueguahao@2x.png",
+					"lib/img/icon_manbinzhuanjia@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"lib/html/main.html": {
+				"resources": [
+					"lib/js/main.js",
+					"js/mui.min.js",
+					"lib/css/common.css",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"lib/html/mainIndex.html",
+					"about.html",
+					"lib/html/mainMe.html",
+					"lib/img/pharmacy_btn_date@2x.png",
+					"lib/img/pharmacy_btn_add@2x.png",
+					"lib/img/btn_xiaoxi@2x.png",
+					"lib/img/btn_pay@2x.png"
+				],
+				"refer": [
+					"lib/html/mainMedication.html",
+					"lib/html/mainInterrogation.html",
+					"lib/html/mainHealthy.html"
+				],
+				"priority": 0
+			},
+			"lib/html/mainHealthy.html": {
+				"resources": [
+					"lib/js/mainHealthy.js",
+					"lib/img/health_btn_yinshiyingyang@2x.png",
+					"lib/img/pic_tijian@2x.png",
+					"lib/img/health_btn_jiankangzice@2x.png",
+					"lib/img/health_btn_jiankangwangdian@2x.png",
+					"lib/img/pic_liaoyang@2x.png",
+					"lib/img/pic_jiyinjiance@2x.png",
+					"lib/img/health_btn_jiankangpinggu@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"lib/html/mainMe.html": {
+				"resources": [
+					"lib/js/mainMe.js",
+					"lib/img/my_icon_wodedingdan@2x.png",
+					"lib/img/my_icon_kaquan@2x.png",
+					"lib/img/my_icon_shoucang@2x.png",
+					"lib/img/my_icon_wodefuwu@2x.png",
+					"lib/img/my_icon_shezhi@2x.png",
+					"lib/img/my_icon_jiankangdian@2x.png",
+					"lib/img/my_icon_wodejifen@2x.png",
+					"lib/img/my_icon_wodebaodan@2x.png",
+					"lib/img/my_icon_wodejiaren@2x.png",
+					"lib/img/my_icon_jiankangdangan@2x.png",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"lib/html/mainIndex.html": {
+				"resources": [
+					"lib/js/mainIndex.js",
+					"img/pic_jiyinjiance@3x.png",
+					"lib/img/pic_jiyinjiance@3x.png",
+					"lib/img/icon_jiankangwangdian@2x.png",
+					"lib/img/icon_jiankanghuodong@2x.png",
+					"lib/img/icon_anquanyongyao@2x.png",
+					"fonts/mui.ttf",
+					"lib/img/icon_jiatingyisheng@2x.png",
+					"js/mui.min.js",
+					"lib/css/common.css",
+					"css/mui.min.css",
+					"js/juicer-min.js",
+					"lib/img/home_btn_add@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"about.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/config.js",
+					"lib/html/main.html",
+					"html/main.html",
+					"lib/css/mui.min.css",
+					"lib/js/mui.min.js",
+					"img/btn_show_password.png",
+					"img/icon_password.png",
+					"css/common.css",
+					"img/icon_number.png",
+					"img/btn_login.png",
+					"about.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mainInterrogation.html": {
+				"resources": [
+					"js/mainInterrogation.js",
+					"img/icon_manbinzhuanjia@2x.png",
+					"img/icon_yuyueguahao@2x.png",
+					"img/icon_zhongliuzhuanjia@2x.png",
+					"img/icon_jiatingyisheng@2x.png",
+					"/js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png",
+					"img/pic_people.png",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/mui.min.js",
+					"img/icon_help@2x.png",
+					"js/familyDoctor/doctorTeam.js",
+					"img/default/yisheng_touxiang.png",
+					"js/util/common_util.js",
+					"img/icon_zanwutuijian.png"
+				],
+				"refer": [
+					"html/interrogation/cancerExperts.html",
+					"html/interrogation/SlowExperts.html",
+					"html/interrogation/appointmentRegister.html",
+					"html/index/indexFamilyDoctor.html",
+					"html/SlowExperts/SlowExperts.html",
+					"html/familyDoctor/indexFamilyDoctor.html",
+					"html/appointmentRegister/appointmentRegister.html",
+					"html/cancerExperts/cancerExperts.html",
+					"html/SlowExperts/SlowExpertsDetails.html",
+					"html/cancerExperts/orderDetailsPay.html",
+					"html/cancerExperts/cancerExpertsDetails.html",
+					"html/emergencyRescue.html",
+					"html/SlowExperts/slowMain.html",
+					"login.html"
+				],
+				"priority": 0
+			},
+			"html/mainIndex.html": {
+				"resources": [
+					"img/pic_jiyinjiance@3x.png",
+					"img/icon_jiankangwangdian@2x.png",
+					"img/home_btn_add@2x.png",
+					"img/icon_jiankanghuodong@2x.png",
+					"img/icon_anquanyongyao@2x.png",
+					"js/mainIndex.js",
+					"lib/js/juicer-min.js",
+					"img/icon_jiatingyisheng@2x.png",
+					"img/pic_jiyinjiance@2x.png",
+					"lib/fonts/mui.ttf",
+					"js/juicer-min.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/common/pic_news.png",
+					"img/common/pic_home_banner.png",
+					"img/icon_wangdian.png",
+					"img/icon_family.png",
+					"img/icon_jiankangceliang.png",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/index/indexFamilyDoctor.html",
+					"html/index/indexHealthNetwork.html",
+					"html/familyDoctor/indexFamilyDoctor.html",
+					"html/healthNetwork/indexHealthNetwork.html",
+					"html/healthInformation/indexHealthDetails.html",
+					"html/healthInformation/indexHealthInformation.html",
+					"html/me/meFamily.html",
+					"html/sliper.html",
+					"html/healthy/healthSelfTesting.html"
+				],
+				"priority": 0
+			},
+			"html/mainMe.html": {
+				"resources": [
+					"js/mainMe.js",
+					"img/my_btn_redact@2x.png",
+					"img/my_icon_shoucang@2x.png",
+					"img/my_icon_wodebaodan@2x.png",
+					"img/my_icon_wodejiaren@2x.png",
+					"img/my_icon_jiankangdangan@2x.png",
+					"img/my_icon_wodejifen@2x.png",
+					"img/my_icon_kaquan@2x.png",
+					"img/my_icon_wodefuwu@2x.png",
+					"img/my_icon_wodedingdan@2x.png",
+					"lib/fonts/mui.ttf",
+					"img/my_icon_shezhi@2x.png",
+					"img/icon_man@2x.png",
+					"img/my_icon_jiankangdian@2x.png",
+					"fonts/mui.ttf",
+					"css/common.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"img/me/icon_my_card.png",
+					"img/icon_woman@2x.png",
+					"js/core/common.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png",
+					"img/default/huiyuan_touxiang.png"
+				],
+				"refer": [
+					"html/me/personalData.html",
+					"html/me/healthRecords.html",
+					"html/me/meFamily.html",
+					"html/me/JeCard.html",
+					"html/me/guaranteeSlip.html",
+					"login.html",
+					"html/me/meOrder.html",
+					"html/me/myService.html",
+					"html/me/myOrder.html"
+				],
+				"priority": 0
+			},
+			"html/main.html": {
+				"resources": [
+					"js/main.js",
+					"img/pharmacy_btn_add@2x.png",
+					"img/btn_xiaoxi@2x.png",
+					"html/mainIndex.html",
+					"css/common.css",
+					"lib/css/iconfont.css",
+					"lib/fonts/iconfont.ttf",
+					"img/btn_pay@2x.png",
+					"img/pharmacy_btn_date@2x.png",
+					"about.html",
+					"css/iconfont.css",
+					"fonts/iconfont.ttf",
+					"js/route.js",
+					"html/medication/medicationPlan.html",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/mcTime.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/core/update.js",
+					"js/core/immersed.js",
+					"html/mainMedication.html",
+					"fonts/mui.ttf",
+					"img/me/btn_qiehuan.png",
+					"js/util/common_util.js",
+					"html/mainMe.html"
+				],
+				"refer": [
+					"html/mainInterrogation.html",
+					"html/mainHealthy.html",
+					"html/index/indexPayment.html",
+					"html/medication/medicalAssistant.html",
+					"html/mainMctime.html",
+					"html/pay/indexPayment.html",
+					"login.html",
+					"guidePage.html"
+				],
+				"priority": 0
+			},
+			"html/mainHealthy.html": {
+				"resources": [
+					"img/health_btn_jiankangpinggu@2x.png",
+					"img/health_btn_jiankangzice@2x.png",
+					"img/pic_jiyinjiance@2x.png",
+					"img/health_btn_jiankangwangdian@2x.png",
+					"js/mainHealthy.js",
+					"img/health_btn_yinshiyingyang@2x.png",
+					"img/pic_tijian@2x.png",
+					"img/pic_liaoyang@2x.png",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"js/route.js",
+					"img/Oval.png",
+					"img/btn_next.png",
+					"js/core/common.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/healthy/healthSelfTesting.html",
+					"html/index/indexHealthNetwork.html",
+					"html/healthNetwork/indexHealthNetwork.html",
+					"html/healthy/geneticTesting.html",
+					"html/healthy/spaAppointment.html",
+					"login.html",
+					"html/healthy/geneticDiagnosis/geneticDiagnosis.html",
+					"html/healthy/healthExamination/healthExamination.html",
+					"html/healthy/spa/spa.html"
+				],
+				"priority": 0
+			},
+			"html/mainMedication.html": {
+				"resources": [
+					"img/pharmacy_icon_morning@2x.png",
+					"img/pharmacy_icon_night@2x.png",
+					"js/mainMedication.js",
+					"img/pic_yongyaoanquan@2x.png",
+					"img/pharmacy_btn_angle_left@2x.png",
+					"img/pic_fujingyaodian@2x.png",
+					"img/pic_songyaoshangmen@2x.png",
+					"img/pharmacy_icon_sleep@2x.png",
+					"img/pharmacy_icon_nooning@2x.png",
+					"img/pharmacy_btn_angle_right@2x.png",
+					"lib/fonts/mui.ttf",
+					"css/common.css",
+					"lib/js/mui.min.js",
+					"lib/css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/route.js",
+					"html/medication/medicationPlan.html",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/code/jquery-1.3.2.min.js",
+					"img/pharmacy_icon_pm@2x.png",
+					"js/util/common_util.js",
+					"img/Bitmap.png",
+					"img/icon_zanwuyongyao.png",
+					"js/code/jquery-1.8.3.min.js",
+					"img/btn_yongyao_add.png"
+				],
+				"refer": [
+					"html/healthNetwork/indexHealthNetwork.html",
+					"html/medication/drugSafety.html",
+					"html/medication/medicationManage.html"
+				],
+				"priority": 0
+			},
+			"html/index/indexPayment.html": {
+				"resources": [
+					"img/index/icon_shuaxin.png",
+					"img/index/btn_zhifu_dongtaifukuan.png",
+					"css/common.css",
+					"lib/css/mui.min.css",
+					"lib/js/mui.min.js",
+					"lib/fonts/mui.ttf",
+					"img/index/btn_zhifu_dianzikahao.png",
+					"img/index/bg_zhifuma.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/indexFamilyDoctor.html": {
+				"resources": [
+					"css/common.css",
+					"lib/css/mui.min.css",
+					"lib/js/mui.min.js",
+					"lib/fonts/mui.ttf",
+					"img/index/btn_yishengtuandui.png",
+					"img/index/btn_hujiaoyisheng.png",
+					"js/mui.min.js",
+					"img/index/btn_zixunjilu.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/index/btn_fuwuliucheng.png",
+					"js/route.js",
+					"js/index/indexFamilyDoctor.js",
+					"img/index/yisheng.png"
+				],
+				"refer": [
+					"html/index/callDoctor.html",
+					"html/index/serviceFlow.html",
+					"html/index/doctorTeam.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/index.html": {
+				"resources": [
+					"js/main.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/medication/medicationPlan.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"html/mainMedication.html",
+					"html/main.html",
+					"js/medication/medicationPlan.js",
+					"js/mui.picker.min.js",
+					"css/mui.picker.min.css"
+				],
+				"refer": [
+					"html/medication/medicationManage.html",
+					"html/medication/medicationClassify.html",
+					"html/medication/medicationRepeat.html",
+					"html/medication/medicationTime.html"
+				],
+				"priority": 0
+			},
+			"html/medication/medicalAssistant.html": {
+				"resources": [
+					"img/medication/icon_yongyaozhushou.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/pharmacy_btn_add@2x.png",
+					"fonts/mui.ttf",
+					"img/medication/bg_talk.png"
+				],
+				"refer": [
+					"html/medication/medicationPlan.html"
+				],
+				"priority": 0
+			},
+			"html/medication/medicationManage.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/pharmacy_btn_add@2x.png",
+					"js/core/common.js",
+					"js/medication/medicationManage.js",
+					"js/core/config.js",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/mainMedication.html"
+				],
+				"priority": 0
+			},
+			"html/medication/medicationRepeat.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/medication/medicationClassify.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/icon_search.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/interrogation/cancerExperts.html": {
+				"resources": [
+					"img/interrogation/pic_zhongliu_banner.png",
+					"img/interrogation/btn_zixun.png",
+					"img/interrogation/btn_jibin.png",
+					"img/interrogation/pic_people.png",
+					"img/interrogation/btn_yiyuan.png",
+					"img/interrogation/btn_sousuo.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/interrogation/SlowExperts.html": {
+				"resources": [
+					"img/interrogation/pic_people.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/icon_search.png",
+					"img/interrogation/btn_my.png",
+					"js/interrogation/SlowExperts.js"
+				],
+				"refer": [
+					"html/interrogation/SlowExpertsList.html"
+				],
+				"priority": 0
+			},
+			"html/index/callDoctor.html": {
+				"resources": [
+					"js/index/callDoctor.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					null
+				],
+				"refer": [
+					"html/index/callDocIngIng.html",
+					"html/index/check.html"
+				],
+				"priority": 0
+			},
+			"html/index/serviceFlow.html": {
+				"resources": [
+					"html/index/服务流程.hyperesources/手.png",
+					"html/index/服务流程.hyperesources/pic_ripple1@2x.png",
+					"html/index/服务流程.hyperesources/医生在线－呼叫医生－已接诊.jpg",
+					"html/index/服务流程.hyperesources/pic_phone@2x.png",
+					"html/index/服务流程.hyperesources/医生在线－呼叫医生－订单支付.jpg",
+					"html/index/服务流程.hyperesources/pic_ripple2@2x.png",
+					"html/index/服务流程.hyperesources/iconfont-xiala-copy.svg",
+					"html/index/服务流程.hyperesources/pic_ripple5@2x.png",
+					"html/index/服务流程.hyperesources/医生在线－呼叫医生－正在呼叫.jpg",
+					"html/index/服务流程.hyperesources/HYPE-466.thin.min.js",
+					"html/index/服务流程.hyperesources/来电.png",
+					"html/index/服务流程.hyperesources/pic_ripple3@2x.png",
+					"html/index/服务流程.hyperesources/_hype_generated_script.js",
+					"html/index/服务流程.hyperesources/iconfont-banyuanyou (1).svg",
+					"html/index/服务流程.hyperesources/pic_ripple4@2x.png",
+					"html/index/服务流程.hyperesources/医生在线－呼叫医生.jpg",
+					"html/index/服务流程.hyperesources/医生在线.jpg",
+					"html/index/服务流程.hyperesources/医生在线－评价.jpg",
+					"css/common.css",
+					null,
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/mainMctime.html": {
+				"resources": [
+					"js/mainMedication.js",
+					"js/mui.min.js",
+					"img/pic_yongyaoanquan@2x.png",
+					"img/pharmacy_btn_angle_left@2x.png",
+					"css/common.css",
+					"img/btn_next.png",
+					"img/pic_fujingyaodian@2x.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/pic_songyaoshangmen@2x.png",
+					"js/route.js",
+					"img/pharmacy_btn_angle_right@2x.png",
+					"img/btn_return.png",
+					"img/pharmacy_icon_morning@2x.png",
+					"img/pharmacy_btn_date@2x.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/interrogation/appointmentRegister.html": {
+				"resources": [
+					"img/interrogation/pic_zhongliu_banner.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/interrogation/btn_jibin.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png",
+					"img/interrogation/btn_yiyuan.png",
+					"img/interrogation/btn_sousuo.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthy/healthSelfTesting.html": {
+				"resources": [
+					"js/echarts.min.js",
+					"img/pharmacy_btn_angle_left@2x.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/healthy/healthSelfTesting.js",
+					"img/healthy/btn_xiugai.png",
+					"js/route.js",
+					"img/pharmacy_btn_angle_right@2x.png",
+					"img/btn_xiugai.png",
+					"js/core/common.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"js/code/jquery-1.3.2.min.js",
+					"img/btn_yongyao_add.png"
+				],
+				"refer": [
+					"html/healthy/healthyBloodRecord.html",
+					"html/healthy/healthyPressureRecord.html"
+				],
+				"priority": 0
+			},
+			"html/index/indexHealthNetwork.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"img/common/pic_yaofang.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [
+					"html/index/healthNetworkDetail.html"
+				],
+				"priority": 0
+			},
+			"html/me/personalData.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"js/me/personalData.js",
+					"js/mui.picker.min.js",
+					"img/default/yisheng_touxiang.png",
+					"js/core/common.js",
+					"css/mui.picker.min.css",
+					"js/core/config.js",
+					"img/default/huiyuan_touxiang.png",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/me/meName.html",
+					"html/me/meSex.html",
+					"html/me/signature.html"
+				],
+				"priority": 0
+			},
+			"html/me/meSex.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/medication/medicationTime.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/doctorTeam.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png"
+				],
+				"refer": [
+					"html/index/doctorTeamDetails.html"
+				],
+				"priority": 0
+			},
+			"html/index/healthNetworkDetail.html": {
+				"resources": [
+					"img/index/icon_phone.png",
+					"img/index/icon_comments.png",
+					"js/index/indexFamilyDoctor.js",
+					"img/index/icon_address.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/interrogation/SlowExpertsList.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png",
+					"js/interrogation/SlowExpertsList.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/callDocIngIng.html": {
+				"resources": [
+					"js/index/callDoctorIng.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/check.html": {
+				"resources": [
+					"js/index/check.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [
+					"html/index/callDocIng.html",
+					"html/index/checkFailure.html",
+					"html/index/serviceFlow.html"
+				],
+				"priority": 0
+			},
+			"html/index/hasAdmissions.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/orderEvaluation.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/index/payOrderSucceed.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/pay/indexPayment.html": {
+				"resources": [
+					"img/index/icon_shuaxin.png",
+					"img/index/btn_zhifu_dongtaifukuan.png",
+					"img/index/btn_zhifu_dianzikahao.png",
+					"img/index/bg_zhifuma.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/pay/bg_zhifuma.png",
+					"img/familyDoctor/btn_zhifu_dianzikahao.png",
+					"img/familyDoctor/icon_shuaxin.png",
+					"img/familyDoctor/btn_zhifu_dongtaifukuan.png",
+					"js/code/jquery-1.3.2.min.js",
+					"js/code/jquery.qrcode.min.js",
+					"js/code/qrcode.js",
+					"js/code/jquery-barcode.min.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/code/jquery-1.8.3.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthNetwork/indexHealthNetwork.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"img/common/pic_yaofang.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/juicer-min.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/healthNetwork/healthNetwork.js",
+					"js/city.js",
+					"img/icon_search.png",
+					"img/default/pic_moren.png",
+					"js/util/common_util.js",
+					"img/icon_zanwuwangdian.png"
+				],
+				"refer": [
+					"html/healthNetwork/healthNetworkDetail.html",
+					"html/healthNetwork/selectMap.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/indexFamilyDoctor.html": {
+				"resources": [
+					"img/index/btn_yishengtuandui.png",
+					"img/index/btn_hujiaoyisheng.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"img/index/btn_zixunjilu.png",
+					"fonts/mui.ttf",
+					"js/index/indexFamilyDoctor.js",
+					"css/mui.min.css",
+					"img/index/btn_fuwuliucheng.png",
+					"js/route.js",
+					"img/index/yisheng.png",
+					"img/familyDoctor/btn_yishengtuandui.png",
+					"js/familyDoctor/indexFamilyDoctor.js",
+					"img/familyDoctor/btn_fuwuliucheng.png",
+					"img/familyDoctor/btn_hujiaoyisheng.png",
+					"img/familyDoctor/btn_zixunjilu.png",
+					"img/familyDoctor/yisheng.png",
+					"js/core/common.js",
+					"js/util/common_util.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/familyDoctor/callDoctor.html",
+					"html/familyDoctor/consultingRecords.html",
+					"html/familyDoctor/doctorTeam.html",
+					"html/familyDoctor/serviceFlow.html",
+					"html/mainIndex.html",
+					"html/main.html",
+					"html/pay/payOrderSucceed.html",
+					"html/familyDoctor/Service_process.html"
+				],
+				"priority": 0
+			},
+			"html/healthNetwork/healthNetworkDetail.html": {
+				"resources": [
+					"img/index/icon_phone.png",
+					"img/index/icon_comments.png",
+					"js/index/indexFamilyDoctor.js",
+					"img/index/icon_address.png",
+					"js/familyDoctor/indexFamilyDoctor.js",
+					"img/familyDoctor/icon_comments.png",
+					"img/familyDoctor/icon_address.png",
+					"img/familyDoctor/icon_phone.png",
+					"js/healthNetwork/healthNetworkDetail.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/consultingRecords.html": {
+				"resources": [
+					"img/interrogation/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/pic_people.png",
+					"js/juicer-min.js",
+					"js/familyDoctor/consultingRecords.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"img/familyDoctor/bg_wancheng.png",
+					"js/util/common_util.js",
+					"img/default/yisheng_touxiang.png",
+					"img/icon_dingdan.png"
+				],
+				"refer": [
+					"html/pay/payOrderFailure.html",
+					"html/pay/orderEvaluation.html",
+					"html/pay/orderFinish.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/callDoctor.html": {
+				"resources": [
+					"js/index/callDoctor.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/familyDoctor/callDoctor.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/util/common_util.js",
+					"img/btn_yongyao_add.png"
+				],
+				"refer": [
+					"html/familyDoctor/consultingRecords.html",
+					"html/familyDoctor/check.html",
+					"html/familyDoctor/chooseClass.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/check.html": {
+				"resources": [
+					"js/index/check.js",
+					"js/familyDoctor/check.js",
+					"js/juicer-min.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/familyDoctor/checkFailure.html",
+					"html/familyDoctor/callDocIng.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/doctorTeam.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/interrogation/pic_people.png",
+					"img/pic_people.png",
+					"js/juicer-min.js",
+					"js/familyDoctor/doctorTeam.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [
+					"html/familyDoctor/doctorTeamDetails.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/serviceFlow.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"html/familyDoctor/服务流程.hyperesources/_hype_generated_script.js",
+					"html/familyDoctor/serviceProcess.hyperesources/_hype_generated_script.js",
+					"html/familyDoctor/serviceProcess.hyperesources/HYPE-466.thin.min.js",
+					"html/familyDoctor/service.hyperesources/iconfont-xiala-copy.svg",
+					"html/familyDoctor/service.hyperesources/pic_ripple5@2x.png",
+					"html/familyDoctor/service.hyperesources/pic_phone@2x.png",
+					"html/familyDoctor/service.hyperesources/service_hype_generated_script.js",
+					"html/familyDoctor/service.hyperesources/pic_ripple3@2x.png",
+					"html/familyDoctor/service.hyperesources/03.jpg",
+					"html/familyDoctor/service.hyperesources/04.jpg",
+					"html/familyDoctor/service.hyperesources/07.jpg",
+					"html/familyDoctor/service.hyperesources/pic_ripple1@2x.png",
+					"html/familyDoctor/service.hyperesources/iconfont-banyuanyou (1).svg",
+					"html/familyDoctor/service.hyperesources/hand.png",
+					"html/familyDoctor/service.hyperesources/pic_ripple2@2x.png",
+					"html/familyDoctor/service.hyperesources/pic_ripple4@2x.png",
+					"html/familyDoctor/service.hyperesources/01.png",
+					"html/familyDoctor/service.hyperesources/05.png",
+					"html/familyDoctor/service.hyperesources/HYPE-466.thin.min.js",
+					"html/familyDoctor/service.hyperesources/02.jpg",
+					"html/familyDoctor/service.hyperesources/06.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthInformation/indexHealthInformation.html": {
+				"resources": [
+					"img/common/pic_yaofang.png",
+					"img/common/btn_more.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/common/pic_home_banner.png",
+					"js/healthInformation/indexHealthInformation.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/util/common_util.js",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js"
+				],
+				"refer": [
+					"html/healthInformation/indexHealthDetails.html"
+				],
+				"priority": 0
+			},
+			"html/healthInformation/indexHealthDetails.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"img/common/pic_home_banner.png",
+					"js/healthInformation/indexHealthDetails.js",
+					"js/util/common_util.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png",
+					"img/default/huiyuan_touxiang.png",
+					"img/icon_good.png",
+					"img/icon_good_pre.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/SlowExperts/SlowExperts.html": {
+				"resources": [
+					"js/interrogation/SlowExperts.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/icon_search.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/interrogation/btn_my.png",
+					"js/route.js",
+					"img/interrogation/pic_people.png",
+					"img/pic_people.png",
+					"img/cancerExperts/btn_my.png",
+					"js/SlowExperts/SlowExperts.js",
+					"img/cancerExperts/btn_jibin.png",
+					"img/cancerExperts/btn_sousuo.png",
+					"js/core/common.js",
+					"img/cancerExperts/pic_zhongliu_banner.png",
+					"img/cancerExperts/btn_yiyuan.png",
+					"js/core/config.js",
+					"js/util/common_util.js",
+					"img/default/yisheng_touxiang.png",
+					"js/juicer-min.js",
+					"img/icon_dingdan.png"
+				],
+				"refer": [
+					"html/SlowExperts/SlowExpertsList.html",
+					"html/SlowExperts/SlowExpertsDetails.html"
+				],
+				"priority": 0
+			},
+			"html/SlowExperts/SlowExpertsList.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"js/interrogation/SlowExpertsList.js",
+					"js/SlowExperts/SlowExpertsList.js",
+					"js/mui.picker.min.js",
+					"img/icon_search.png",
+					"js/mui.poppicker.js",
+					"img/cancerExperts/btn_my.png",
+					"css/mui.poppicker.css",
+					"css/mui.picker.min.css"
+				],
+				"refer": [
+					"html/SlowExperts/SlowExpertsDoctorList.html"
+				],
+				"priority": 0
+			},
+			"html/me/healthRecords.html": {
+				"resources": [
+					"img/me/icon_my_jiben.png",
+					"img/me/icon_my_jiangkang.png",
+					"img/me/icon_my_tijian.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"img/me/icon_my_yongyao.png",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"js/me/healthRecords.js",
+					"js/code/jquery-1.3.2.min.js",
+					"js/core/common.js",
+					"img/default/yisheng_touxiang.png",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"img/btn_show_password.png",
+					"img/icon_password.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/icon_number.png",
+					"img/btn_login.png",
+					"js/config.js",
+					"js/core/common.js",
+					"js/login.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/main.html"
+				],
+				"priority": 0
+			},
+			"html/appointmentRegister/appointmentRegister.html": {
+				"resources": [
+					"img/cancerExperts/btn_jibin.png",
+					"img/cancerExperts/btn_sousuo.png",
+					"img/pic_people.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/cancerExperts/pic_zhongliu_banner.png",
+					"js/route.js",
+					"img/cancerExperts/btn_yiyuan.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerExperts.html": {
+				"resources": [
+					"img/cancerExperts/btn_jibin.png",
+					"img/cancerExperts/btn_sousuo.png",
+					"img/pic_people.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/cancerExperts/pic_zhongliu_banner.png",
+					"js/route.js",
+					"img/cancerExperts/btn_yiyuan.png",
+					"img/cancerExperts/btn_zixun.png",
+					"js/cancerExperts/cancerExperts.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png",
+					"js/juicer-min.js",
+					"img/icon_dingdan.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerExpertsList.html",
+					"html/cancerExperts/cancerExpertsDetails.html",
+					"html/cancerExperts/cancerExpertsSearch.html",
+					"html/cancerExperts/cancerDiseaseTypes.html",
+					"html/cancerExperts/cancerOrderList.html",
+					"html/cancerExperts/freeConsultation.html"
+				],
+				"priority": 0
+			},
+			"html/medication/drugSafety.html": {
+				"resources": [
+					"img/pharmacy_btn_add@2x.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/me/meFamily.html": {
+				"resources": [
+					"img/me/btn_delete.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"js/juicer-min.js",
+					"js/core/common.js",
+					"js/me/meFamily.js",
+					"js/core/config.js",
+					"img/me/icon_dangan.png",
+					"img/me/icon_xuetang.png",
+					"img/default/huiyuan_touxiang.png",
+					"img/me/icon_yongyao.png",
+					"img/me/btn_bianji.png"
+				],
+				"refer": [
+					"html/me/addFamily.html"
+				],
+				"priority": 0
+			},
+			"html/me/JeCard.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/me/icon_my_baodan.png",
+					"img/me/icon_my_hongbao.png",
+					"js/route.js",
+					"js/core/common.js",
+					"js/me/jeCard.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/me/guaranteeSlip.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/me/guaranteeSlip.js",
+					"js/core/common.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test.html": {
+				"resources": [
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/chooseClass.html": {
+				"resources": [
+					"js/familyDoctor/chooseClass.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/default/icon_keshi.png",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/checkFailure.html": {
+				"resources": [
+					"img/familyDoctor/bg_weitongguo.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/callDocIng.html": {
+				"resources": [
+					"js/familyDoctor/callDoctorIng.js",
+					"img/familyDoctor/gif_phone.gif",
+					"img/familyDoctor/gif_phone_fail.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerExpertsList.html": {
+				"resources": [
+					"js/cancerExperts/cancerExpertsList.js",
+					"js/city.js",
+					"js/mui.picker.min.js",
+					"img/icon_search.png",
+					"js/mui.poppicker.js",
+					"img/cancerExperts/btn_my.png",
+					"css/mui.poppicker.css",
+					"css/mui.picker.min.css",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/common.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"img/pic_people.png",
+					"img/default/yisheng_touxiang.png",
+					"img/default/pic_moren.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerExpertsDoctorList.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerExpertsDoctorList.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"js/cancerExperts/cancerExpertsDoctorList.js",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"img/btn_return.png",
+					"img/btn_next.png",
+					"img/default/yisheng_touxiang.png",
+					"js/city.js",
+					"img/icon_dingdan.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerExpertsDetails.html"
+				],
+				"priority": 0
+			},
+			"html/SlowExperts/SlowExpertsDoctorList.html": {
+				"resources": [
+					"img/common/btn_down.png",
+					"js/SlowExperts/SlowExpertsDoctorList.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/me/meOrder.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/my_people.png",
+					"js/core/common.js",
+					"js/me/meOrder.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/doctorTeamDetails.html": {
+				"resources": [
+					"img/pic_people.png",
+					"js/familyDoctor/doctorTeamDetail.js",
+					"js/juicer-min.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerExpertsDetails.html": {
+				"resources": [
+					"js/familyDoctor/doctorTeamDetail.js",
+					"js/juicer-min.js",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"fonts/mui.ttf",
+					"js/cancerExperts/cancerExpertsDetails.js",
+					"js/util/common_util.js",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerOrder.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerExpertsSearch.html": {
+				"resources": [
+					"img/pic_people.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/icon_search.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/common.js",
+					"js/cancerExperts/cancerExpertsSearch.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerExpertsDetails.html",
+					"html/cancerExperts/cancerExpertsDoctorList.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerDiseaseTypes.html": {
+				"resources": [
+					"img/border-line.jpg",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/cancerExperts/cancerDiseaseTypes.js",
+					"js/core/common.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/cancerExperts/cancerExpertsDoctorList.html"
+				],
+				"priority": 0
+			},
+			"html/me/myService.html": {
+				"resources": [
+					"img/me/icon_service_manbing.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/me/icon_service_jiating.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/icon_service_guahao.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/test.html": {
+				"resources": [
+					"js/mui.min.js"
+				],
+				"refer": [
+					"html/familyDoctor/hasAdmissions.html"
+				],
+				"priority": 0
+			},
+			"html/familyDoctor/hasAdmissions.html": {
+				"resources": [
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/familyDoctor/hasAdminssions.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerOrder.html": {
+				"resources": [
+					"js/cancerExperts/cancerOrder.js",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png",
+					"img/btn_yongyao_add.png"
+				],
+				"refer": [
+					"html/cancerExperts/cancerOrderList.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/cancerOrderList.html": {
+				"resources": [
+					"js/cancerExperts/cancerOrderList.js",
+					"img/familyDoctor/bg_wancheng.png",
+					"js/juicer-min.js",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png",
+					"img/icon_dingdan.png"
+				],
+				"refer": [
+					"html/cancerExperts/orderDetailsPay.html",
+					"html/cancerExperts/orderDetailsSee.html",
+					"html/cancerExperts/orderDetailsConfirmed.html",
+					"html/cancerExperts/orderDetailsEvaluate.html",
+					"html/cancerExperts/orderDetailsFinish.html",
+					"html/cancerExperts/cancerExperts.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/orderDetailsPay.html": {
+				"resources": [
+					"js/cancerExperts/canccerConfirmed.js",
+					"js/juicer-min.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"js/cancerExperts/orderDetailsPay.js",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/cancerExperts/payOrderFailure.html",
+					"html/cancerExperts/choosePayment.html",
+					"html/core/payment.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/orderDetailsSee.html": {
+				"resources": [
+					"js/cancerExperts/canccerConfirmed.js",
+					"js/juicer-min.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/orderDetailsConfirmed.html": {
+				"resources": [
+					"js/cancerExperts/canccerConfirmed.js",
+					"js/juicer-min.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/orderDetailsEvaluate.html": {
+				"resources": [
+					"js/juicer-min.js",
+					"js/cancerExperts/canccerConfirmed.js",
+					"img/pay/icon_star.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js",
+					"img/pay/icon_star_fills.png",
+					"js/cancerExperts/orderDetailsEvaluate.js",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/cancerExperts/cancerOrderList.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/payOrderFailure.html": {
+				"resources": [
+					"img/pic_people.png",
+					"js/pay/payOrderFailure.js",
+					"js/util/common_util.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/cancerExperts/payOrderSucceed.html"
+				],
+				"priority": 0
+			},
+			"html/cancerExperts/payOrderSucceed.html": {
+				"resources": [
+					"img/pay/icon_payFinished.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/orderDetailsFinish.html": {
+				"resources": [
+					"js/juicer-min.js",
+					"js/cancerExperts/canccerConfirmed.js",
+					"img/pay/icon_star.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/core/config.js",
+					"img/pay/icon_star_fills.png",
+					"js/cancerExperts/orderDetailsFinish.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/pay/payOrderSucceed.html": {
+				"resources": [
+					"img/pay/icon_payFinished.png",
+					"fonts/mui.ttf",
+					"js/route.js",
+					"js/pay/payOrderSucceed.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"html/cancerExperts/cancerOrderList.html",
+					"html/familyDoctor/consultingRecords.html"
+				],
+				"priority": 0
+			},
+			"html/pay/payOrderFailure.html": {
+				"resources": [
+					"js/pay/payOrderFailure.js",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/pay/payOrderSucceed.html",
+					"html/core/payment.html",
+					"html/pay/nonPayment.html"
+				],
+				"priority": 0
+			},
+			"html/core/payment.html": {
+				"resources": [
+					"img/pay/icon_weixin.png",
+					"img/pay/icon_yinlian.png",
+					"img/pay/icon_zhifubao.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"js/core/common.js",
+					"css/mui.min.css",
+					"js/core/config.js",
+					"fonts/mui.ttf",
+					"js/core/payment.js"
+				],
+				"refer": [
+					"html/pay/payOrderSucceed.html"
+				],
+				"priority": 0
+			},
+			"html/pay/nonPayment.html": {
+				"resources": [
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/pay/nonPayment.js",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/pay/orderEvaluation.html": {
+				"resources": [
+					"img/pay/icon_star.png",
+					"js/pay/orderEvaluation.js",
+					"img/pay/icon_star_fills.png",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [
+					"html/pay/orderFinish.html",
+					"html/familyDoctor/consultingRecords.html"
+				],
+				"priority": 0
+			},
+			"html/pay/orderFinish.html": {
+				"resources": [
+					"js/pay/orderFinish.js",
+					"img/pay/icon_star.png",
+					"img/pic_people.png",
+					"css/common.css",
+					"js/mui.min.js",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"img/pay/icon_star_fills.png",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/choosePayment.html": {
+				"resources": [
+					"img/pay/icon_weixin.png",
+					"img/pay/icon_yinlian.png",
+					"img/pay/icon_zhifubao.png",
+					"js/pay/choosePayment.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/route.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"pay.html": {
+				"resources": [
+					"js/mui.min.js",
+					"js/core/common.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/core/payment.html"
+				],
+				"priority": 0
+			},
+			"html/SlowExperts/SlowExpertsDetails.html": {
+				"resources": [
+					"js/code/jquery-1.3.2.min.js",
+					"js/SlowExperts/SlowExpertsDetails.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"img/pharmacy_btn_angle_left@2x.png",
+					"img/pharmacy_btn_angle_right@2x.png",
+					"img/default/yisheng_touxiang.png"
+				],
+				"refer": [
+					"html/SlowExperts/reserveInformation.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/healthyBloodRecord.html": {
+				"resources": [
+					"img/pharmacy_icon_morning@2x.png",
+					"js/healthy/healthyBloodRecord.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/mui.picker.min.js",
+					"css/mui.picker.min.css",
+					"img/pharmacy_icon_night@2x.png",
+					"img/pharmacy_icon_sleep@2x.png",
+					"js/core/common.js",
+					"js/util/common_util.js",
+					"js/core/config.js",
+					"js/code/jquery-1.3.2.min.js",
+					"img/me/pic_kedu.png",
+					"img/pharmacy_icon_nooning@2x.png",
+					"img/healthy/pic_kedu_xuetang.png"
+				],
+				"refer": [
+					"html/healthy/healthSelfTesting.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/healthyPressureRecord.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"css/mui.picker.min.css",
+					"js/healthy/healthyPressureRecord.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/common.js",
+					"js/core/config.js",
+					"js/juicer-min.js",
+					"js/util/common_util.js",
+					"js/code/jquery-1.3.2.min.js",
+					"img/me/pic_kedu.png",
+					"img/healthy/pic_kedu_shuzhang.png",
+					"img/healthy/pic_kedu_shousuo.png",
+					"img/healthy/pic_kedu_xinlv.png"
+				],
+				"refer": [
+					"html/healthy/healthSelfTesting.html"
+				],
+				"priority": 0
+			},
+			"guidePage.html": {
+				"resources": [
+					"img/guide/guidePage3.png",
+					"img/guide/guidePage2.png",
+					"js/mui.min.js",
+					"img/guide/guidePage4.png",
+					"css/mui.min.css",
+					"img/guide/guidePage1.png",
+					"login.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthNetwork/selectMap.html": {
+				"resources": [
+					"js/city.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/icon_search.png",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/cancerExperts/freeConsultation.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/core/common.js",
+					"js/core/config.js"
+				],
+				"refer": [
+					"html/cancerExperts/meConsult.html"
+				],
+				"priority": 0
+			},
+			"html/me/addFamily.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"js/me/addFamily.js",
+					"css/mui.picker.min.css"
+				],
+				"refer": [
+					"html/me/meFamily.html"
+				],
+				"priority": 0
+			},
+			"html/me/myOrder.html": {
+				"resources": [
+					"img/me/icon_service_manbing.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/me/icon_service_jiating.png",
+					"fonts/mui.ttf",
+					"img/me/icon_xiaofei.png",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/me/icon_service_guahao.png",
+					"js/core/common.js",
+					"js/me/myOrder.js",
+					"js/core/config.js",
+					"img/healthy/icon_service_liaoyang.png",
+					"img/healthy/icon_service_tijian.png",
+					"img/healthy/icon_service_jiyinjiance.png"
+				],
+				"refer": [
+					"html/familyDoctor/consultingRecords.html",
+					"html/SlowExperts/slowOrderList.html",
+					"html/cancerExperts/cancerOrderList.html"
+				],
+				"priority": 0
+			},
+			"html/emergencyRescue.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/familyDoctor/icon_address.png",
+					"img/btn_jijiubohao.png",
+					"img/familyDoctor/icon_phone.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/SlowExperts/slowOrderList.html": {
+				"resources": [
+					"js/juicer-min.js",
+					"js/SlowExperts/slowOrderList.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"img/default/yisheng_touxiang.png",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/familyDoctor/bg_wancheng.png",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthy/geneticTesting.html": {
+				"resources": [
+					"img/healthy/liaoyang_pic.png",
+					"img/healthy/jyjc-jj.png",
+					"img/healthy/jyjc-zl.png",
+					"img/healthy/Jjyy-jk.png",
+					"img/healthy/jyjc-xnxg.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [
+					"html/healthy/geneticTestingDetail.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/spaAppointment.html": {
+				"resources": [
+					"img/healthy/liaoyang_pic.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/healthy/lyy1.png",
+					"img/healthy/lyy2.png"
+				],
+				"refer": [
+					"html/healthy/spaAppointmentDetail.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/spaAppointmentDetail.html": {
+				"resources": [
+					"img/healthy/tangshan2.png",
+					"img/healthy/tangshan0.png",
+					"img/healthy/lyy-hz.png",
+					"img/healthy/tangshan3.png",
+					"img/healthy/tangshan.png",
+					"img/healthy/lyy-xj.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/SlowExperts/slowMain.html": {
+				"resources": [
+					"html/SlowExperts/SlowExperts.html",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/SlowExperts/reserveInformation.html": {
+				"resources": [
+					"js/juicer-min.js",
+					"js/mui.picker.min.js",
+					"js/SlowExperts/reserveInformation.js",
+					"css/mui.picker.min.css",
+					"js/mui.min.js",
+					"css/common.css",
+					"js/core/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js",
+					"js/util/common_util.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/familyDoctor/Service_process.html": {
+				"resources": [
+					"img/service_hyperesources/05.png",
+					"css/jquery.fullPage.css",
+					"img/service_hyperesources/02.png",
+					"js/code/jquery.easing.min.js",
+					"img/btn_down.png",
+					"img/service_hyperesources/06.jpg",
+					"js/familyDoctor/Service_process.js",
+					"img/service_hyperesources/07.png",
+					"js/code/jquery.fullPage.min.js",
+					"img/service_hyperesources/04.png",
+					"img/familyDoctor/gif_phone.gif",
+					"js/code/jquery-1.8.3.min.js",
+					"img/service_hyperesources/01.png",
+					"img/service_hyperesources/hand.png",
+					"img/service_hyperesources/03.png",
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/sliper.html": {
+				"resources": [
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthy/geneticDiagnosis/geneticDiagnosis.html": {
+				"resources": [
+					"img/healthy/geneticDiagnosis/icon_taocan.png",
+					"js/healthy/geneticDiagnosis/geneticDiagnosis.js",
+					"img/healthy/geneticDiagnosis/taocan_4.png",
+					"img/healthy/geneticDiagnosis/bg_tag.png",
+					"img/healthy/geneticDiagnosis/taocan_2.png",
+					"img/healthy/geneticDiagnosis/icon_fuwujieshao.png",
+					"img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png",
+					"fonts/mui.ttf",
+					"img/healthy/geneticDiagnosis/taocan_3.png",
+					"img/healthy/geneticDiagnosis/taocan_1.png",
+					"img/healthy/geneticDiagnosis/icon_kefu.png"
+				],
+				"refer": [
+					"html/healthy/geneticDiagnosis/testingPlan.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/geneticDiagnosis/testItems.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/route.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthy/geneticDiagnosis/testingPlan.html": {
+				"resources": [
+					"img/healthy/geneticDiagnosis/icon_lishipingjia.png",
+					"img/healthy/geneticDiagnosis/icon_jiancexiangmu.png",
+					"img/healthy/geneticDiagnosis/taocan_2.png",
+					"js/mui.min.js",
+					"css/common.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/healthy/geneticDiagnosis/icon_changjianwenti.png",
+					"js/route.js",
+					"js/healthy/geneticDiagnosis/testingPlan.js",
+					"js/util/common_util.js"
+				],
+				"refer": [
+					"html/healthy/geneticDiagnosis/testItems.html"
+				],
+				"priority": 0
+			},
+			"html/healthy/healthExamination/healthExamination.html": {
+				"resources": [
+					"js/core/common.js",
+					"img/healthy/icon_kefu.png",
+					"js/healthy/healthExamination/healthExamination.js",
+					"fonts/mui.ttf",
+					"js/util/common_util.js",
+					"css/common.css",
+					"img/healthy/tijian_1.png",
+					"js/mui.min.js",
+					"img/healthy/icon_fuwujieshao.png",
+					"css/mui.min.css",
+					"img/healthy/icon_tijianjigou.png",
+					"js/route.js",
+					"js/core/config.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/healthy/spa/spa.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/common.css",
+					"js/healthy/spa/spa.js",
+					"css/mui.min.css",
+					"js/route.js",
+					"img/healthy/lyy1.png",
+					"img/healthy/liaoyang_pic.png",
+					"img/healthy/lyy2.png",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"index.html",
+				"js/mui.js",
+				"css/mui.css"
+			]
+		}
+	},
+	"fullscreen": false
+}

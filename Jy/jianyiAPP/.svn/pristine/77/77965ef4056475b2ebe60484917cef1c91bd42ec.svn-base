@@ -1,0 +1,65 @@
+var healthExaminationOrderDetali = {};
+var orderDetali1 = document.getElementById("healthExaminationOrderDetali1"),
+	orderDetali2 = document.getElementById("healthExaminationOrderDetali2"),
+	orderDetali5 = document.getElementById("healthExaminationOrderDetali5"),
+	orderDetali4 = document.getElementById("healthExaminationOrderDetali4"),
+	orderDetali3 = document.getElementById("healthExaminationOrderDetali3"),
+	orderDetali6 = document.getElementById("healthExaminationOrderDetali6"),
+	orderDetali7 = document.getElementById("healthExaminationOrderDetali7"),
+	oRemark = document.getElementById("healthExaminationOrderDetali-remark"),
+	oCoupons = document.getElementById("healthExaminationOrderDetali-coupons"),
+	oPay = document.getElementById("healthExaminationOrderDetali-pay"),
+	oAppraise = document.getElementById("healthExaminationOrderDetali-appraise");
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	var type = self.type;
+	healthExaminationOrderDetali.type(type);
+})
+healthExaminationOrderDetali.type = function(type) {
+	switch (type) {
+		case 'healthExamOrderList1':
+			orderDetali1.style.display = 'block';
+			oRemark.style.display = 'block';
+			break;
+		case 'healthExamOrderList2':
+			orderDetali2.style.display = 'block';
+			oRemark.style.display = 'block';
+			oCoupons.style.display = 'block';
+			oPay.style.display = 'block';
+			break;
+		case 'healthExamOrderList5':
+			orderDetali5.style.display = 'block';
+			oAppraise.style.display = 'block';
+			break;
+		case 'healthExamOrderList4':
+			orderDetali4.style.display = 'block';
+			break;
+		case 'healthExamOrderList3':
+			orderDetali3.style.display = 'block';
+			break;
+		case 'cancal':
+			orderDetali6.style.display = 'block';
+			break;
+		case 'back':
+			orderDetali7.style.display = 'block';
+			break;
+	}
+}
+
+var ul = document.getElementById('xingxing');
+var ul_lis = ul.getElementsByTagName('span');
+clearAll = function() {
+	for (var i = 0; i < ul_lis.length; i++) {
+		ul_lis[i].className = 'xing';
+	}
+}
+for (var i = 0; i < ul_lis.length; i++) {
+	ul_lis[i].index = i;
+	ul_lis[i].onclick = function() {
+		clearAll();
+		var j = this.index + 1;
+		for (var i = 0; i < j; i++) {
+			ul_lis[i].className = 'xing xing-active';
+		}
+	}
+}

@@ -1,0 +1,252 @@
+var paypageIndex = 1;
+var dpjpageIndex = 1;
+var ywcpageIndex = 1;
+var pageSize = 10;
+var paytotal = 0;
+var dpjtotal = 0;
+var ywctotal = 0;
+var ConsultingRecordPayhtml = "";
+var ConsultingRecordbedhtml = "";
+var ConsultingRecordCompletedhtml = "";
+var backid = "";
+var backUrl = "";
+/**
+ * 入口绑定初始化刷新事件
+ */
+document.addEventListener('plusready', function() {
+	//设置显示页面
+	var self = plus.webview.currentWebview();
+	var index = self.index;
+	backid = self.backid ? self.backid : "0";
+	backUrl = self.backurl ? self.backurl : "0";
+	//调用初始化数据方法
+	consultingRecord.initdata(index);
+	//加载下拉刷新事件
+	document.addEventListener( "plusscrollbottom", function(){
+		var divs = document.getElementById("segmentedControl");
+		var consultingas = divs.getElementsByTagName("a");
+		var divid = 0;
+		for(var i=0;i<consultingas.length;i++){
+			if(consultingas[i].className == "mui-control-item mui-active"){
+				divid = i+1;
+				break;
+			}
+		}
+		if(divid == 1){
+			if(paytotal == pageSize){
+				paypageIndex ++;
+				consultingRecord.initConsultingRecordPay();
+			}else{
+				return false;
+			}
+		}else if(divid == 2){
+			if(dpjtotal == pageSize){
+				dpjpageIndex++;
+				consultingRecord.initConsultingRecordbed();
+			}else{
+				return false;
+			}
+		}else if(divid == 3){
+			if(ywctotal == pageSize){
+				ywcpageIndex++;
+				consultingRecord.initConsultingRecordCompleted();
+			}else{
+				return false;
+			}
+		}
+	});
+}, false);
+var consultingRecord = {
+	initdata : function(index){
+		//加载待支付数据
+		consultingRecord.initConsultingRecordPay();
+		//加载待评论数据
+		consultingRecord.initConsultingRecordbed();
+		//加载已完成数据
+		consultingRecord.initConsultingRecordCompleted();
+		document.getElementById("backWebviewId").value = backid;
+		document.getElementById("backWebviewUrl").value = backUrl;
+	//	console.log(self.index);
+		var divs = document.getElementById("segmentedControl");
+		var consultingas = divs.getElementsByTagName("a");
+		if(index){
+			for(var i=0;i<consultingas.length;i++){
+				consultingas[i].setAttribute('class','mui-control-item');
+//				document.getElementById("item"+(i+1)).setAttribute("class","mui-control-content");
+				if(i == index){
+					consultingas[i].setAttribute('class','mui-control-item mui-active');
+//					document.getElementById("item"+(i+1)).setAttribute("class","mui-control-content mui-active");
+				}
+			}
+		}
+	},
+	initConsultingRecordPay : function(){
+		jyapp.getApi({
+ 			method: 'DoctorOnline/OrderList',
+ 			data:'orderType=3&pageIndex='+paypageIndex+'&pageSize='+pageSize,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+// 				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.list && data.data.list.length > 0){
+					document.getElementById("zwddpayId").style.display = "none";
+					var dataValue = data.data.list;
+					paytotal = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						ConsultingRecordPayhtml += "<li class=\"mui-table-view-cell mui-media\">";
+						ConsultingRecordPayhtml += "<a href=\"javascript:;\">";
+						ConsultingRecordPayhtml += "<input type='hidden' value="+dataValue[i].ID+" />"
+						ConsultingRecordPayhtml += "<img class=\"mui-media-object mui-pull-left\" src="+dataValue[i].Pic+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\">";
+						ConsultingRecordPayhtml += "<div class=\"mui-media-body\">";
+						ConsultingRecordPayhtml += "<h2 class=\"mui-ellipsis\"><span>"+dataValue[i].doctorName+"</span><span>"+dataValue[i].departmentName+"</span><span>"+commomUtil.stringToDate(dataValue[i].VisitDate)+"</span></h2>";
+						ConsultingRecordPayhtml += "<p class=\"mui-ellipsis\">"+dataValue[i].HospitalName+"<span class=\"pay\">支付</span></p>";
+						ConsultingRecordPayhtml += "</div>";
+						ConsultingRecordPayhtml += "</a>";
+						ConsultingRecordPayhtml += "</li>";
+					}
+				}else{
+					if(ConsultingRecordPayhtml == ""){
+						document.getElementById("zwddpayId").style.display = "";
+					}
+				}
+				document.getElementById("consultingRecordItem1Id").innerHTML = ConsultingRecordPayhtml;
+//				if(dataValue.length == 0){
+//					ConsultingRecordPayhtml +='<li class="mui-table-view-cell mui-media">';
+//					ConsultingRecordPayhtml +='<a href="javascript:;">';
+//					ConsultingRecordPayhtml += "<input type='hidden' value='505' />"
+//					ConsultingRecordPayhtml +='<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">';
+//					ConsultingRecordPayhtml +='<div class="mui-media-body">';
+//					ConsultingRecordPayhtml +='<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>';
+//					ConsultingRecordPayhtml +='<p class="mui-ellipsis">北京协和医院<span class="pay">支付</span></p>';
+//					ConsultingRecordPayhtml +='</div>';
+//					ConsultingRecordPayhtml +='</a>';
+//					ConsultingRecordPayhtml +='</li>';
+//				}
+				
+ 			},
+ 			onerror: function(e) {
+ 				console.log(e);
+ 			}
+ 		});
+	},
+	initConsultingRecordbed : function(){
+//		console.log('orderType=5&pageIndex='+dpjpageIndex+'&pageSize='+pageSize);
+		jyapp.getApi({
+ 			method: 'DoctorOnline/OrderList',
+ 			data:'orderType=5&pageIndex='+dpjpageIndex+'&pageSize='+pageSize,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+// 				console.log(JSON.stringify(data));
+
+				if(data.code == 1 && data.data && data.data.list && data.data.list.length > 0){
+					document.getElementById("zwdddpjId").style.display = "none";
+					var dataValue = data.data.list;
+					dpjtotal = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						ConsultingRecordbedhtml +="<li class=\"mui-table-view-cell mui-media\">";
+						ConsultingRecordbedhtml +="<a href=\"javascript:;\">";
+						ConsultingRecordbedhtml += "<input type='hidden' value="+dataValue[i].ID+" />"
+						ConsultingRecordbedhtml +="<img class=\"mui-media-object mui-pull-left\" src="+dataValue[i].Pic+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\">";
+						ConsultingRecordbedhtml +="<div class=\"mui-media-body\">";
+						ConsultingRecordbedhtml +="<h2><span>"+dataValue[i].doctorName +"</span><span>"+dataValue[i].departmentName+"</span><span>"+commomUtil.stringToDate(dataValue[i].VisitDate)+"</span></h2>";
+						ConsultingRecordbedhtml +="<p class=\"mui-ellipsis\">"+dataValue[i].HospitalName+"<span class=\"pay\">评价</span></p>";
+						ConsultingRecordbedhtml +="</div>";
+						ConsultingRecordbedhtml +="</a>";
+						ConsultingRecordbedhtml +="</li>";
+					}
+				}else{
+					if(ConsultingRecordbedhtml == ""){
+						document.getElementById("zwdddpjId").style.display = "";
+					}
+				}
+				document.getElementById("consultingRecordItem2Id").innerHTML = ConsultingRecordbedhtml;
+ 			},
+ 			onerror: function(e) {
+	   			console.log("initConsultingRecordbed------>:"+e);
+// 				plus.nativeUI.alert(e,'','提示','确认');
+ 			}
+ 		});
+	},
+	initConsultingRecordCompleted : function(){
+//		console.log('orderType=7&pageIndex='+ywcpageIndex+'&pageSize='+pageSize);
+		jyapp.getApi({
+ 			method: 'DoctorOnline/OrderList',
+ 			data:'orderType=7&pageIndex='+ywcpageIndex+'&pageSize='+pageSize,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+// 				console.log(JSON.stringify(data));
+				if(data.code == 1 && data.data && data.data.list && data.data.list.length > 0){
+					document.getElementById("zwddywcId").style.display = "none";
+					var dataValue = data.data.list;
+					ywctotal = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						ConsultingRecordCompletedhtml +="<li class=\"mui-table-view-cell mui-media\">";
+						ConsultingRecordCompletedhtml +="<a href=\"javascript:;\">";
+						ConsultingRecordCompletedhtml += "<input type='hidden' value="+dataValue[i].ID+" />"
+						ConsultingRecordCompletedhtml += "<input type='hidden' value="+dataValue[i].OrderNo+" />"
+						ConsultingRecordCompletedhtml +="<img class=\"mui-media-object mui-pull-left\" src="+dataValue[i].Pic+" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\" />";
+						ConsultingRecordCompletedhtml +="<div class=\"mui-media-body\">";
+						ConsultingRecordCompletedhtml +="<h2><span>"+dataValue[i].doctorName +"</span><span>"+dataValue[i].departmentName+"</span><span>"+commomUtil.stringToDate(dataValue[i].VisitDate)+"</span></h2>";
+						ConsultingRecordCompletedhtml +="<p class=\"mui-ellipsis\">"+dataValue[i].HospitalName+"<span class=\"pay-end\"><img src=\"../../img/familyDoctor/bg_wancheng.png\"/></span></p>";
+						ConsultingRecordCompletedhtml +="</div>";
+						ConsultingRecordCompletedhtml +="</a>";
+						ConsultingRecordCompletedhtml +="</li>";
+					}
+				}else{
+					if(ConsultingRecordCompletedhtml == ""){
+						document.getElementById("zwddywcId").style.display = "";
+					}
+				}
+				document.getElementById("consultingRecordItem3Id").innerHTML = ConsultingRecordCompletedhtml;
+ 			},
+ 			onerror: function(e) {
+	   			console.log("initConsultingRecordCompleted------>:"+e);
+// 				plus.nativeUI.alert(e,'','提示','确认');
+ 			}
+ 		});
+	},
+	familyDoctorBack : function(){
+		var config = null;
+		if(backid && backUrl && backUrl != "0"){
+			config = {
+				id : backid
+			}
+		}else{
+			config = {
+				id : "indexFamilyDoctor"
+			}
+		}
+		commomUtil.backWebView(config);
+	}
+};
+
+document.getElementById("familyDoctorBackId").addEventListener("tap",consultingRecord.familyDoctorBack);
+
+
+//mui.back = function(e){
+//	consultingRecord.familyDoctorBack();
+//}
+
+
+
+window.addEventListener("newIdsConsultingRecord",function(event){
+//	var wvs = plus.webview.all();
+//	for(var i=0;i<wvs.length;i++){
+//		console.log("webview"+i+":"+wvs[i].getURL());
+//	}
+	paypageIndex = 1;
+	dpjpageIndex = 1;
+	ywcpageIndex = 1;
+	pageSize = 10;
+	paytotal = 0;
+	dpjtotal = 0;
+	ywctotal = 0;
+	ConsultingRecordPayhtml = "";
+	ConsultingRecordbedhtml = "";
+	ConsultingRecordCompletedhtml = "";
+	index = event.detail.index;
+	backid = event.detail.backid ? event.detail.backid : "0";
+	backUrl = event.detail.backurl ? event.detail.backurl : "0";
+//	console.log("index:"+index);
+	//调用初始化数据方法
+	consultingRecord.initdata(index);
+});

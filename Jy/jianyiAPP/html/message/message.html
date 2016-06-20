@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-table-view .mui-media-object {
+				line-height:42px;
+				max-width:42px;
+				height:42px;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after,.mui-table-view:after{
+				background: #f1f1f1;
+			}
+			.mui-media-body {
+				color: #000;
+				font-size: 14px;
+			}
+			
+			.mui-media-body .mui-ellipsis {
+				color: #9b9b9b;
+				font-size: 13px;
+			}
+			
+			.mui-slider {
+				height: 150px;
+			}
+			
+			li p {
+				font-size: 12px!important;
+			}
+			
+			section {
+				display: none;
+				position: relative;
+				top: 0px;
+				left: 0px;
+				z-index: 999;
+				background: rgb(254, 223, 224);
+				width: 100%;
+				height: 35px;
+				line-height: 32px;
+				padding-left: 20px;
+				border: 2px solid rgb(254, 224, 246)
+			}
+			
+			section span {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				line-height: 22px;
+				border-radius: 50%;
+				background: rgb(245, 99, 100);
+				border: 1px solid rgb(254, 193, 194);
+				text-align: center;
+				color: #fff;
+				margin-right: 13px;
+			}
+			
+			section p {
+				color: #9B9B9B;
+			}
+			.mui-content{background:none;}
+			.mui-scroll{background:#fff;padding-top:50px;}
+			.mui-content>.mui-table-view:first-child{margin:0;}
+			h2{
+				font-size: 16px;
+				color:#4B4B4B;
+				line-height:24px;
+				position: relative;
+				padding-right:105px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+			}
+			h2 span{
+				color:#666;
+				position:absolute;
+				right:25px;
+				font-size:14px;
+			}
+			.mui-media-body p{
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				padding-right:25px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">系统通知</h1>
+		</header>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<section>
+						<p><span>!</span>当前网络不可用，请检查你的网络设置</p>
+					</section>
+					<div class="mui-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="noticeInform">
+									<img class="mui-media-object mui-pull-left" src="../../img/icon_jiatingyisheng@2x.png">
+									<div class="mui-media-body">
+										<h2>新公告<span>2016-02-21</span></h2>
+										<p class='mui-ellipsis f13'>有新的公告#4月千元活动基金等你拿#点击查看</p>
+									</div>
+								</a>
+							</li>
+
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;" class="mui-navigate-right" id="orderInform">
+									<img class="mui-media-object mui-pull-left" src="../../img/icon_jiankangceliang.png">
+									<div class="mui-media-body">
+										<h2>订单通知<span>2016-02-26</span></h2>
+										<p class='mui-ellipsis f13'>您的基因检测预约已成功，采样盒将会以快递形式寄往您的地址，请留意查收！</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/message/message.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				/*//初始化首页轮播图片
+				mainIndex.initSliderBanner();
+				//初始化主页健康咨询
+				mainIndex.initMainConsultationList(1, 10);*/
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1000);
+		}
+	</script>
+
+</html>

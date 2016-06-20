@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<style type="text/css">
+			.mui-table-view:before {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.mui-table-view-cell img {
+				height: 30px;
+			}
+			
+			.mui-table-view-cell span {
+				left: 10px;
+				position: relative;
+				top: -8px
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">选择科室</h1>
+		</header>
+		<div class="mui-content">
+
+			<ul class="mui-table-view" id="chooseClassId">
+				<!--<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right"><img src="../../img/familyDoctor/icon_keshi_pifu.png" /><span>皮肤科</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+
+					<a href="" class="mui-navigate-right"><img src="../../img/familyDoctor/icon_keshi_erke.png" /><span>儿科</span></a>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<a href="" class="mui-navigate-right"><img src="../../img/familyDoctor/icon_keshi_fucha.png" /><span>妇产科</span></a>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<a href="" class="mui-navigate-right"><img src="../../img/familyDoctor/icon_keshi_erke.png" /><span>内科</span></a>
+
+				</li>
+				<li class="mui-table-view-cell">
+
+					<a href="" class="mui-navigate-right"><img src="../../img/familyDoctor/icon_keshi_nanke.png" /><span>男科及泌尿外科</span></a>
+
+				</li>-->
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/familyDoctor/chooseClass.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

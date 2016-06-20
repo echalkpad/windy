@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+				height:100%;
+			}
+			
+			.mui-content {
+				text-align: center;
+				position:absolute;
+				top:45%;
+				width:100%;
+				margin-top:-12px;
+				-webkit-transform:translateY(-50%);
+			}
+			
+			.mui-content p {
+				color: rgb(227, 75, 77);
+				font-size: 35px;
+			}
+			
+			.mui-content h4 {
+				color: rgb(227, 75, 77);
+				font-size: 28px;
+				padding: 10px 0 5px;
+			}
+			
+			.mui-content h2 {
+				color: #9B9B9B;
+				font-size: 20px;
+				padding: 10px 0 40px;
+			}
+			
+			.mui-content h3 {
+				color: #9B9B9B;
+				margin-bottom: 30px;
+				font-size: 14px;
+			}
+			
+			.mui-content h3 span {
+				color: rgb(227, 75, 77);
+				font-size: 20px;
+			}
+			
+			.mui-content a {
+				width: 90%;
+				margin: 0 auto;
+				background: rgb(252, 95, 99);
+				padding:11px;
+				font-size: 16px;
+				border-radius: 5px;
+				color: #fff;
+				display: block;
+			}
+			.time-border{
+				margin: 50px auto 20px;
+				border:3px solid rgb(227, 75, 77);
+				width: 185px;
+				height: 185px;
+				line-height: 185px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">呼叫医生</h1>
+		</header>
+		<div class="mui-content">
+			<div class="time-border">
+				<p id="time"></p>
+			</div>
+			<h4>审核中···</h4>
+			<h2>问题已提交,待审核</h2>
+			<!--<a href="" id="checkcleartime" class="mui-action-back">取消呼叫</a>-->
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/familyDoctor/check.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

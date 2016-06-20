@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/config.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css">
+		<style>
+			html,body{background:#00b6f3!important;}
+			.mui-content{
+				background: none;
+				text-align: center;
+				color:#fff;
+				font-family: "微软雅黑";
+			}
+			h2{
+				font-size:20px;
+				line-height:50px;
+			}
+			h1{
+				font-size:32px;
+				padding:20px 0 40px;
+			}
+			form{
+				width:85%;
+				margin:0 auto;
+				background:#fff;
+				padding:30px 20px 50px;
+				box-sizing: border-box;
+				border-radius:10px;
+				position: relative;
+				margin-bottom:90px;
+			}
+			form input[type=text],form input[type=password]{
+				border:none;
+				border-bottom:1px solid #ffb200;
+				color:#333;
+				padding:0 35px 0 45px;
+			}
+			form small{
+				display:block;
+				background: url(img/btn_show_password.png) no-repeat scroll top left;
+				width:28px;
+				height:20px;
+				background-size:cover;
+				position: absolute;
+				top: 92px;
+				right:20px;
+			}
+			.name{
+				display:block;
+				width: 35px;
+				height:24px;
+				background: url(img/icon_number.png) no-repeat scroll top left;
+				background-size:cover;
+				position: absolute;
+				top:38px;
+				left:20px;
+			}
+			.password{
+				display: block;
+				width:25px;
+				height:28px;
+				background: url(img/icon_password.png) no-repeat scroll top left;
+				background-size:cover;
+				position: absolute;
+				top: 90px;
+				left:20px;
+			}
+			form button{
+				position: absolute;
+				left:50%;
+				margin-left:-45px;
+				bottom:-45px;
+				display:block;
+				width:90px;
+				height:90px;
+				border:0;
+				background: url(img/btn_login.png) no-repeat scroll top left;
+				background-size:cover;
+				border-radius:50%;
+			}
+			.mui-btn{
+				color:#fff;
+				padding:10px 30px;
+				background: none;
+				border-radius:20px;
+				border:1px solid #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<h2>登录</h2>
+			<h1>企业员工宝</h1>
+			<form>
+				<label for="name" class="name"></label>
+				<label for="password" class="password"></label>
+				<small></small>
+				<input type="text" name="" id="name" placeholder="请输入账号"/>
+				<input type="password" name="" id="password" value="" />
+				<button type="submit" id="open"></button>
+			</form>
+			<a href="" class="mui-btn">忘记密码？</a>
+		</div>
+		
+	</body>
+
+</html>

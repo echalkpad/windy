@@ -1,0 +1,6 @@
+mui('.mui-bar').on('tap', '#healthExaminationOrder', function() {
+	mui.openWindow({
+		id: 'healthExaminationOrder',
+		url: "healthExaminationOrder.html"
+	})
+})

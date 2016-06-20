@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>对症寻药</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-5,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			.mui-col-xs-5{background:#f2f6f9;}
+			.mui-col-xs-5 a{text-align:left!important;}
+			.mui-col-xs-5 img{
+				width:18px;
+				height:auto;
+				margin:0 5px 0 8px;
+				vertical-align:middle;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item, .mui-segmented-control.mui-segmented-control-inverted.mui-segmented-control-vertical .mui-control-item.mui-active{
+				border:0;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+				color:#333;
+				background: url(../../../img/border-line.jpg) no-repeat scroll left center;
+				background-size:2px 36px;
+			}
+			.mui-table-view-cell{color:#666;}
+			input[type=text]{display: none;}
+			.searchMedicine{
+				position:relative;
+				padding:10px 15px;
+				background:#fff;
+				border-bottom:#F1F1F1;
+			}
+			.searchMedicine .search{
+			    position: absolute;
+			    top:16px;
+			    left:25px;
+			    display: inline-block;
+			    width:18px;
+			    height:19px;
+			    background: url(../../../img/icon_search.png) no-repeat scroll top left;
+			    background-size:cover;
+			}
+			
+			.searchMedicine input{
+				background:#f1f1f1;
+				border-radius:16px;
+				border:0;
+				margin:0;
+				height:32px;
+				line-height:32px;
+				padding-left:35px;
+				color:#444;
+				display:block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">对症寻药</h1>
+		</header>
+		<div class="mui-content mui-row mui-fullscreen">
+			<section class="searchMedicine" style="display: none;">
+				<label for="" class="search"></label>
+				<input type="text" name="" id="searchMedicine" placeholder="搜索药品"/>
+			</section>
+			<div class="mui-col-xs-5">
+				<div id="symptomaticMedicineItemsId" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<!--<a class="mui-control-item mui-active" href="#content0"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />家庭常备</a>
+					<a class="mui-control-item" href="#content1"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />感冒发热</a>
+					<a class="mui-control-item" href="#content2"><img src="../../../img/medication/symptomaticMedicine/icon_huxixitong.png" alt="" />呼吸系统</a>
+					<a class="mui-control-item" href="#content3"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />皮肤系统</a>
+					<a class="mui-control-item" href="#content4"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />糖尿病</a>
+					<a class="mui-control-item" href="#content5"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心脏病</a>
+					<a class="mui-control-item" href="#content6"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心肌梗塞</a>
+					<a class="mui-control-item" href="#content7"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心律失常</a>
+					<a class="mui-control-item" href="#content8"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心力衰竭</a>
+					<a class="mui-control-item" href="#content9"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心绞痛</a>
+					<a class="mui-control-item" href="#content10"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />外周血管病</a>
+					<a class="mui-control-item" href="#content11"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />动脉硬化症</a>
+					<a class="mui-control-item" href="#content12"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />动脉粥样硬化症</a>
+					<a class="mui-control-item" href="#content13"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />大血管病</a>
+					<a class="mui-control-item" href="#content14"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心肌桥</a>
+					<a class="mui-control-item" href="#content15"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心肌病</a>
+					<a class="mui-control-item" href="#content16"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />心脏瓣膜病</a>
+					<a class="mui-control-item" href="#content17"><img src="../../../img/medication/symptomaticMedicine/icon_ganmaofare.png" alt="" />病毒性心肌炎</a>-->
+				</div>
+			</div>
+			<div class="mui-col-xs-7">
+				<div id="content0" class="mui-control-content mui-active">
+					<ul class="mui-table-view"  id="symptomaticMedicineItemChiledsId" >
+						<!--<li class="mui-table-view-cell">糖尿病糖尿病
+							<input type="hidden" value="1">
+							<input type="hidden" value="糖尿病糖尿病">
+						</li>-->
+					</ul>
+				</div>
+				<div id="content1" class="mui-control-content">
+					<ul class="mui-table-view">
+						<!--<li class="mui-table-view-cell">原发性高血压
+							<input type="hidden" value="2">
+							<input type="hidden" value="原发性高血压">
+						</li>
+						<li class="mui-table-view-cell">继发性高血压
+							<input type="hidden" value="2">
+							<input type="hidden" value="继发性高血压">
+						</li>
+						<li class="mui-table-view-cell">顽固性高血压
+							<input type="hidden" value="2">
+							<input type="hidden" value="顽固性高血压">
+						</li>
+						<li class="mui-table-view-cell">高血压
+							<input type="hidden" value="2">
+							<input type="hidden" value="高血压">
+						</li>-->
+					</ul>
+				</div>
+				<div id="content2" class="mui-control-content">
+					<ul class="mui-table-view">
+						<!--<li class="mui-table-view-cell">冠心病
+							<input type="hidden" value="3">
+							<input type="hidden" value="冠心病">
+						</li>-->
+					</ul>
+				</div>
+				<div id="content3" class="mui-control-content">
+					<ul class="mui-table-view">
+						<!--<li class="mui-table-view-cell">高血脂
+							<input type="hidden" value="4">
+							<input type="hidden" value="高血脂">
+						</li>-->
+					</ul>
+				</div>
+				<div id="content4" class="mui-control-content">
+					<ul class="mui-table-view">
+						<!--<li class="mui-table-view-cell">糖尿病
+							<input type="hidden" value="5">
+							<input type="hidden" value="糖尿病">
+						</li>-->
+					</ul>
+				</div>
+				<div id="content5" class="mui-control-content">
+					<ul class="mui-table-view">
+						<!--<li class="mui-table-view-cell">临床电生理
+							<input type="hidden" value="6">
+							<input type="hidden" value="临床电生理">
+						</li>
+						<li class="mui-table-view-cell">介入治疗
+							<input type="hidden" value="6">
+							<input type="hidden" value="介入治疗">
+						</li>
+						<li class="mui-table-view-cell">先天性心脏病
+							<input type="hidden" value="6">
+							<input type="hidden" value="先天性心脏病">
+						</li>
+						<li class="mui-table-view-cell">冠脉搭桥术
+							<input type="hidden" value="6">
+							<input type="hidden" value="冠脉搭桥术">
+						</li>
+						<li class="mui-table-view-cell">冠脉支架置入术
+							<input type="hidden" value="6">
+							<input type="hidden" value="冠脉支架置入术">
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/medication/symptomaticMedicine/symptomaticMedicine.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			h2 {
+				padding: 80px 0 10px;
+				width: 140px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			h2 img {
+				display: block;
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+			}
+			
+			h2 p {
+				font-size: 16px;
+				color: #666;
+				line-height: 22px;
+				width: 166px;
+				height: 120px;
+				background: url(../../img/medication/bg_talk.png) no-repeat scroll top left;
+				background-size: 85% 60%;
+				position: absolute;
+				left: -70px;
+				top: 28px;
+				padding: 20px 0 0 15px;
+			}
+			
+			.medicationSave a {
+				width: 260px;
+				margin: 25px auto;
+				border-radius: 8px;
+				color: #fff;
+			}
+			
+			.meFamily-tip {
+				text-align: center;
+				font-size: 16px;
+				color: #2a2a2a;
+				padding: 10px 0;
+			}
+			
+			article {
+				text-align: center;
+				font-size: 14px;
+				color: #4A4A4A;
+				margin-top: -20px;
+			}
+			
+			article span {
+				color: red;
+				opacity: .6;
+			}
+			
+			article div {
+				padding-top: 20px;
+				width: 260px;
+				margin: 0 auto;
+				border: 1px solid #C0C0C0;
+				border-radius: 10px;
+			}
+			
+			article h2 {
+				position: relative;
+				bottom: -15px;
+				background: #F2F6F9;
+				padding-top: 0;
+				width: 200px;
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的家人</h1>
+			<!--			<a href="" class="btn-add mui-pull-right" id="addFamily" style="font-size:14px;line-height: 40px;" id="addFamily">新增</a>-->
+		</header>
+		<div class="mui-content">
+			<h2>
+				<p>您还没添加家人</p>
+				<img src="../../img/medication/icon_yongyaozhushou.png"/>
+			</h2>
+			<p class="meFamily-tip">
+				添加家人，随时随地关爱家人健康
+			</p>
+			<article>
+				<h2>有了健医宝,您可以为家人</h2>
+				<div>
+					<p> <span>建立健康档案</span>,时时备查</p>
+					<p><span>记录血糖血压</span>,管理健康</p>
+					<p><span>设定用药方案</span>,温馨提示</p>
+				</div>
+			</article>
+			<div class="medicationSave">
+				<a class="mui-btn mui-btn-block addFamily"  href="">添加家人</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

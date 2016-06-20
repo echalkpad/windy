@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style>
+			.mui-popover {
+				height: 100px;
+				width: 100%;
+			}
+			
+			.mui-title-add {
+				right: 0px;
+				float: right;
+				display: inline-block;
+				overflow: hidden;
+				width: auto;
+				margin: 0;
+				text-overflow: ellipsis;
+				height: 44px;
+				line-height: 44px;
+				font-size: 17px;
+			}
+			
+			.medicationSearch {
+				z-index: 1001;
+				clear: left;
+				height: 40px;
+				line-height: 40px;
+				position: fixed;
+				display: block;
+				top: 50px;
+				width: 100%;
+				background: #00b6f3;
+			}
+			
+			.medicationSearch .search {
+				z-index: 9;
+				position: absolute;
+				top: 6px;
+				left: 35px;
+				display: inline-block;
+				width: 18px;
+				height: 19px;
+				background: url(../../img/icon_search.png) no-repeat scroll top left;
+				background-size: cover;
+			}
+			
+			.medicationSearch input {
+				position: absolute;
+				background: #fff;
+				border-radius: 16px;
+				border: 0;
+				margin: 0 5%;
+				height: 30px;
+				width: 90%!important;
+				line-height: 30px;
+				padding-left: 40px;
+				font-size: 16px;
+				color: #444;
+			}
+			
+			#health-add {
+				display: none;
+				z-index: 1001;
+				top: 90px;
+				height: auto;
+				width: 100%;
+			}
+			
+			#health-add .mui-scroll {}
+			
+			.mui-bar-nav~.mui-content {
+				padding-top: 90px!important;
+			}
+			
+			.mui-scroll-wrapper {
+				top: 90px;
+				font-size: 17px!important;
+				color: #4A4A4A;
+			}
+			
+			h2 {
+				font-size: 15px;
+				color: #9B9B9B;
+				padding-left: 15px;
+			}
+			
+			.selectMap-dw {
+				color: #4A4A4A;
+				background: #fff;
+				height: 43px;
+				line-height: 43px;
+				padding: 0;
+				padding-left: 15px;
+			}
+			
+			.selectMap-rm ul {
+				margin-top: 5px;
+				overflow: hidden;
+				list-style: none;
+				padding-left: 0;
+			}
+			
+			.selectMap-rm li {
+				text-align: center;
+				width: 29%;
+				display: inline-block;
+				float: left;
+				box-sizing: border-box;
+				margin: 2%;
+				font-size: 15px;
+				height: 30px;
+				line-height: 30px;
+				padding: 0;
+				background: #fff;
+			}
+			
+			.selectMap-rm li:nth-child(1),
+			.selectMap-rm li:nth-child(4) {
+				margin-left: 3%;
+			}
+			
+			.mui-table-view {
+				margin-top: -20px;
+				clear: left;
+			}
+			
+			.selectMap-zm {
+				background: #f2f6f9!important;
+				border: none;
+			}
+			
+			.mui-table-view:before,
+			.selectMap-zm:after,
+			.selectMap-rm .mui-table-view-cell:after,
+			.selectMap-dw:after {
+				height: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-left"></a>
+			<h1 class="mui-title">当前城市:<span id="selectMap-title">上海市</span></h1>
+		</header>
+		<section class="medicationSearch">
+			<label for="" class="search"></label><!-- oninput="commomUtil.validateInput(event);"-->
+			<input type="search" name="" id="search-city" placeholder="搜索"/>
+		</section>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<p class="selectMap-dw mui-table-view-cell" id="selectMap-dw" city-id=""><span>定位中...</span>(GPS定位)</p>
+				<section class="selectMap-rm" id="search-add" style="visibility: hidden;">
+					<h2>搜索城市结果如下：</h2>
+					<ul>
+					</ul>
+				</section>
+				<h2>国内热门城市</h2>
+				<section class="selectMap-rm">
+					<ul>
+						<li class="mui-table-view-cell" city-id='2'>北京市</li>
+						<li class="mui-table-view-cell" city-id='859'>上海市</li>
+						<li class="mui-table-view-cell" city-id='2135'>广州市</li>
+						<li class="mui-table-view-cell" city-id='2161'>深圳市</li>
+						<li class="mui-table-view-cell" city-id='2505'>成都市</li>
+						<li class="mui-table-view-cell" city-id='20'>天津市</li>
+					</ul>
+				</section>
+				<ul class="mui-table-view" id="selectMap-ul">
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/route.js"></script>
+		<script src="../../js/core/config.js"></script>
+		<script src="../../js/core/common.js"></script>
+		<script src="../../js/util/common_util.js"></script>
+		<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/util/gps.js"></script>
+		<script src="../../js/healthNetwork/selectMap.js"></script>
+	</body>
+
+</html>

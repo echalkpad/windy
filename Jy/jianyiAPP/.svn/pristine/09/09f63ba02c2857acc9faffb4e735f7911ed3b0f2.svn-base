@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+				padding-bottom: 60px;
+			}
+			
+			.plan-info {
+				padding: 0 15px;
+				background: #fff;
+			}
+			
+			.plan-info h2 {
+				font-size: 16px;
+				color: #333;
+				line-height: 30px;
+			}
+			
+			.plan-info small {
+				font-size: 14px;
+				display: block;
+				color: #777;
+				padding:0 15px 0 20px;
+				background: url(../../../img/healthy/icon_jigou.png) no-repeat scroll left center;
+				background-size:16px 15px;
+				margin-bottom:5px;
+			}
+			
+			.plan-info article {
+				color: #777;
+				line-height: 24px;
+				font-size: 14px;
+			}
+			
+			.plan-info p {
+				border-top: 1px solid #f1f1f1;
+				margin-top: 8px;
+				line-height: 36px;
+				margin-bottom: 10px;
+				padding: 0 15px;
+			}
+			
+			.plan-info del {
+				font-size: 16px;
+				margin-right: 20px;
+			}
+			
+			.plan-info strong {
+				font-weight: normal;
+				font-size: 16px;
+				color: #F60404;
+				margin-right: 10px;
+			}
+			
+			.mui-table-view {
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view-cell:after {
+				background: #F1F1F1;
+			}
+			
+			h3 {
+				height: 1px;
+				background: #ddd;
+				margin: 30px 0;
+				text-align: center;
+			}
+			
+			h3 span {
+				font-size: 14px;
+				background: #f2f6f9;
+				padding: 0 8px;
+				position: relative;
+				top: -15px;
+				color: #4A4A4A;
+			}
+			
+			section p {
+				padding: 0 15px;
+				font-size: 14px;
+				color: #666;
+			}
+			
+			.fixbottom {
+				width: 100%;
+				background: #fff;
+				position: fixed;
+				bottom: 0;
+				padding: 5px 15px;
+			}
+			
+			.yellow {
+				color: rgb(242, 164, 51);
+			}
+			
+			.fixbottom a {
+				display: block;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				border-radius: 5px;
+				background: #00b6f3;
+				font-size: 16px;
+			}
+			
+			.mui-table-view {
+				clear: both;
+			}
+			
+			.mui-table-view-cell img {
+				width: 20px;
+				margin-right: 8px;
+			}
+			
+			.mui-slider {
+				height: 165px;
+			}
+			.mui-slider p{
+				position:absolute;
+				background: url(../../../img/healthy/icon_tupianshibai.png) no-repeat scroll left center;
+				background-size:20px 18px;
+				padding-left:30px;
+				text-align:center;
+				top:50%;
+				left:50%;
+				margin-top:-5px;
+				-webkit-transform:translate(-50%);
+			}
+			.mui-table-view-cell img:not(.mui-table-view li:nth-child(1) img) {
+				position: relative;
+				bottom: -4px;
+			}
+			
+			.plan-info h2 {
+				padding: 10px 0 0;
+			}
+	
+			.plan-tc {
+				border-top: 1px solid rgba(000, 000, 000, .05);
+				background: #fff;
+				overflow: hidden;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			
+			.plan-tc div p {
+				text-align: right;
+				margin-bottom: -2px;
+				border: none;
+				margin: 0;
+				line-height: 2;
+				padding: 0;
+			}
+			
+			.plan-info del {
+				font-size: 14px;
+				margin-right: 0;
+			}
+			
+			.plan-info article {
+				padding-bottom: 10px;
+			}
+			
+			.plan-tc div {
+				float: left;
+				box-sizing: border-box;
+			}
+			
+			.plan-tc div:nth-child(1),
+			.plan-tc div:nth-child(3) {
+				font-size: 14px;
+				color: #9B9B9B;
+				width: 16%;
+				position: relative;
+				bottom: -3px;
+			}
+			
+			.plan-tc div:nth-child(2),
+			.plan-tc div:nth-child(4) {
+				width: 34%;
+			}
+			
+			.plan-tc div:nth-child(1) p,
+			.plan-tc div:nth-child(3) p {
+				padding-left: 10px;
+			}
+			
+			.plan-tc div p del:last-child {
+				padding-left: 5px;
+			}
+			
+			.plan-tc div p span:last-child {
+				padding-left: 5px;
+			}
+			
+			.plan-tc div:nth-child(2) p,
+			.plan-tc div:nth-child(4) p {
+				padding-right: 30px;
+			}
+			
+			.healthExaminationPackage-love {
+				background: url(../../../img/healthy/btn_shoucang.png) no-repeat center center;
+				background-size: contain;
+				width: 20px;
+				height: 20px;
+				float: right;
+				margin-top: 13px;
+			}
+			
+			.healthExaminationPackage-love.healthExaminationPackage-love-active {
+				background: url(../../../img/healthy/btn_shoucang_2.png) no-repeat center center;
+				background-size: contain;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			@media only screen and (min-width: 320px) and (max-width: 321px) {
+				.plan-tc div:nth-child(2) p,
+				.plan-tc div:nth-child(4) p {
+					padding-right: 18px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">体检套餐详情</h1>
+			<a href="" class="healthExaminationPackage-love healthExaminationPackage-love-active"></a>
+		</header>
+		<div class="mui-content">
+			<div class="plan-banner">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop" id="detailPackageBannerSlderID">
+						<!--<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>-->
+					</div>
+					<div class="mui-slider-indicator" id="detailPackageBannerSlderPointID">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+					<p style="display: none;" id="detailPackageBannerPid">图片获取失败</p>
+				</div>
+			</div>
+			<div class="plan-info">
+				<h2 id="detailPackageNameHID"></h2>
+				<small id="detailStoreNameSID"></small>
+				<article id="detailPackageSummaryArtID"></article>
+				<div class="plan-tc">
+					<div class="plan-tc-l">门市价:</div>
+					<div class="plan-tc-c1" id="detailPackageOriginalPriceID">
+						<!--<p><del>男性</del><del>¥600</del></p>
+						<p>女未婚<del>¥600</del></p>
+						<p>女已婚<del>¥600</del></p>-->
+					</div>
+					<div class="plan-tc-r">健e价:</div>
+					<div class="plan-tc-c2" id="detailPackagePresentPriceID">
+						<!--<p>男性<span class="red">¥600</span></p>
+						<p>女未婚<span class="red">¥600</span></p>
+						<p>女已婚<span class="red">¥600</span></p>-->
+					</div>
+				</div>
+			</div>
+			<ul class="mui-table-view border-t">
+				<li class="mui-table-view-cell" id="healthExaminationPackageTestItems">
+					<a href="" class="mui-navigate-right">
+						<img src="../../../img/healthy/icon_jiancexiangmu.png" alt="" />检测项目
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="healthExaminationPackageProblems">
+					<a href="" class="mui-navigate-right">
+						<img src="../../../img/healthy/icon_changjianwenti.png" alt="" />常见问题
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="healthExaminationPackageEvaluation">
+					<a href="" class="mui-navigate-right">
+						<img src="../../../img/healthy/icon_lishipingjia.png" alt="" />历史评价
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="healthExaminationPackageNet">
+					<input type="hidden" id="healthExaminationPackageNetStoreID" value="" />
+					<a href="" class="mui-navigate-right">
+						<img src="../../../img/healthy/icon_wangdianxuanze.png" />网点选择<span id="healthExaminationPackageNetChooseID" class="mui-badge mui-badge-inverted" style="font-size: 14px;color: #4A4A4A;">选择的内容</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" id="healthExaminationPackageBuy">
+					<input type="hidden" id="healthExaminationPackageBuyPriceID" value="" />
+					<a href="" class="mui-navigate-right">
+						<img src="../../../img/healthy/icon_buy.png" alt="" />购买选择<span id="healthExaminationPackageBuyResult" class="mui-badge mui-badge-inverted" style="font-size: 14px;color: #4A4A4A;"></span>
+					</a>
+				</li>
+			</ul>
+			<h3><span>检测须知</span></h3>
+			<section>
+				<p>● 每日体检时间为早7：30am-10：30am。 </p>
+				<p>● 体检前一天请勿饮酒、吃油腻过大食物，并注意休息。体检当日请您禁食、空腹，否则将影响体检结果的准确性。</p>
+				<p>● 体检当日请勿携带贵重物品，如不便保管可到前台领取储物柜钥匙。</p>
+				<p>● 当您来到体检中心后，请您先到前台登记。领取体检表。</p>
+				<p>● 为保证您在体检过程中的舒适度，当您检查完下列体检项目后就可以享用我中心特别为您准备的营养丰富的免费早餐了。须空腹完成的体检项目：抽血、腹部彩超、碳十三呼吸试验、电子肠胃镜检查、腹部CT检查。</p>
+				<p>● 胸透等X线检查前，请您除去并妥善保管金、银、玉器等饰物。</p>
+				<p>● 应主动告知医生身体上的异常状况或已患疾病，切勿心存考验医生的心态，与自己的健康开玩笑。同时，您也可以在体检过程中直接向主检医师进行咨询。这样，有助于主检医师对体检结果作出综合判断。</p>
+				<p>● 便常规请留晨便，请提前作好准备。</p>
+				<p class="yellow">女性体检特别提示：</p>
+				<p>女性客人在体检当日请勿穿着连衣类衣物及长筒靴，避免在体检过程中造成不必要的麻烦。同时，特别提醒您在月经期间请勿体检，否则将影响体检结果的准确性。</p>
+				<p class="yellow">已怀孕，准备怀孕或哺乳期的女性请预先告知医护人员，我们将不安排您进行胸片科检查或自行放弃胸片科检查。</p>
+				<p>女性客人在进行盆腔彩超前1小时，请到餐饮区饮水6-8杯（400-500毫升）。其目的在于使膀胱中度充盈，以保证检查结果的准确。</p>
+			</section>
+			<div class="fixbottom">
+				<a href="" id="healthExaminationInformation">立即预约</a>
+			</div>
+		</div>
+	</body>
+
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/mui.picker.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/healthExamination/healthExaminationPackage.js"></script>
+
+</html>

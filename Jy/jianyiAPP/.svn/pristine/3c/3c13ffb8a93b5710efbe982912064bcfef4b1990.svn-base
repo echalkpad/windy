@@ -1,0 +1,36 @@
+//检测项目
+mui(".mui-content").on('tap', '#testItems', function() {
+	mui.openWindow({
+		id: 'testItems',
+		url: "testItems.html"
+	});
+})
+
+//常见问题
+mui(".mui-content").on('tap', '#commonProblems', function() {
+	mui.openWindow({
+		id: 'commonProblems',
+		url: "commonProblems.html"
+	});
+})
+
+//历史评价
+mui(".mui-content").on('tap', '#historicalEvaluation', function() {
+	mui.openWindow({
+		id: 'historicalEvaluation',
+		url: "historicalEvaluation.html"
+	});
+})
+
+//立即预约
+mui(".mui-content").on('tap', '#package-about', function() {
+	mui.openWindow({
+		id: 'package-about',
+		url: "package-about.html"
+	});
+})
+
+//收藏
+mui('.mui-bar').on('tap','.btn-add',function(){
+	this.getAttribute('class')=='btn-add mui-pull-right collect'?this.setAttribute('class','btn-add mui-pull-right'):this.setAttribute('class','btn-add mui-pull-right collect');
+})

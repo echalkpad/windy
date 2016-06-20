@@ -1,0 +1,41 @@
+[0408/180613:ERROR:gpu_info_collector_win.cc(103)] Can't retrieve a valid WinSAT assessment.
+[0408/180613:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0411/151053:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0411/151130:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0411/151237:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0411/151621:ERROR:renderer_main.cc(227)] Running without renderer sandbox
+[0411/151622:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151622:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151622:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151631:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151631:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151631:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151801:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151801:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/151801:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/152020:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/152020:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/152020:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0411/153444:INFO:CONSOLE(13)] "Uncaught ReferenceError: plus is not defined", source: http://127.0.0.1:8020/JYApp/js/healthy/healthyBloodRecord.js (13)
+[0411/162127:INFO:CONSOLE(334)] "Uncaught ReferenceError: $ is not defined", source: http://127.0.0.1:8020/JYApp/html/mainMedication.html (334)
+[0411/163510:INFO:CONSOLE(334)] "Uncaught ReferenceError: $ is not defined", source: http://127.0.0.1:8020/JYApp/html/mainMedication.html (334)
+[0411/164428:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'setAttribute' of null", source: http://127.0.0.1:8020/JYApp/html/familyDoctor/serviceProcess.hyperesources/_hype_generated_script.js (6)
+[0411/164540:INFO:CONSOLE(6)] "Uncaught TypeError: Cannot read property 'setAttribute' of null", source: http://127.0.0.1:8020/JYApp/html/familyDoctor/serviceProcess.hyperesources/_hype_generated_script.js (6)
+[0413/155231:ERROR:proxy_service_factory.cc(105)] Cannot use V8 Proxy resolver in single process mode.
+[0413/155239:ERROR:renderer_main.cc(227)] Running without renderer sandbox
+[0413/155240:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155240:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155240:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155249:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155249:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155249:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155839:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155839:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/155839:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/160103:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/160103:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/160103:WARNING:dhcp_proxy_script_adapter_fetcher_win.cc(264)] Error fetching PAC URL from DHCP: 2
+[0413/160703:INFO:CONSOLE(49)] "Uncaught TypeError: undefined is not a function", source: http://127.0.0.1:8020/jianyiAPP/js/me/personalData.js (49)
+[0413/160917:INFO:CONSOLE(49)] "Uncaught TypeError: undefined is not a function", source: http://127.0.0.1:8020/jianyiAPP/js/me/personalData.js (49)
+[0413/160930:INFO:CONSOLE(49)] "Uncaught TypeError: undefined is not a function", source: http://127.0.0.1:8020/jianyiAPP/js/me/personalData.js (49)
+[0413/162349:INFO:CONSOLE(12)] "Uncaught SyntaxError: Unexpected identifier", source: http://127.0.0.1:8020/jianyiAPP/js/me/changePassword.js (12)

@@ -1,0 +1,100 @@
+mui.plusReady(function() {
+	mefamily.init();
+})
+var mefamily = {
+	init: function() {
+		var url = 'profile/FamilyListRe';
+		jyapp.getApi({
+			method: url,
+			onsuccess: function(data) {
+//				console.log(JSON.stringify(data));
+				var tpl = document.getElementById('tpl').innerHTML;
+				document.getElementById('myFamily').innerHTML = juicer(tpl, data);
+			},
+			onerror: function(e) {
+				mui.toast(e.msg);
+			}
+		})
+	},
+	indexFamilyDoctorBack: function() {
+		var mianPage = plus.webview.getLaunchWebview();
+		mui.openWindow({
+			id: mianPage.id,
+			url: mianPage.uri,
+			extras: {
+				index: 4
+			}
+		});
+	}
+};
+
+//删除家人
+mui('.mui-table-view').on('tap', '.delFamily', function() {
+		var self = this;
+		var btnArray = ['取消', '确定'];
+		var url = 'profile/DelFamily';
+		var data = 'fid=' + parseInt(self.parentNode.getAttribute('fid'));
+		mui.confirm('确定要删除您的家人？', '健医宝', btnArray, function(e) {
+			if (e.index == 1) {
+//				console.log(url, data)
+				jyapp.getApi({
+					method: url,
+					data: data,
+					onsuccess: function(data) {
+//						console.log(JSON.stringify(data))
+						self.parentNode.parentNode.remove();
+						mui.toast('删除成功');
+					},
+					onerror: function(e) {
+//						console.log(JSON.stringify(e))
+						mui.toast(e.msg);
+					}
+				})
+			}
+		})
+	})
+	//修改家人
+mui('.mui-table-view').on('tap', '.updateFamily', function() {
+		var fid = this.parentNode.getAttribute('fid');
+		mui.openWindow({
+			id: 'addFamily',
+			url: "addFamily.html",
+			createNew: true,
+			extras: {
+				'fid': fid
+			}
+		})
+	})
+	//编辑家人
+document.getElementById("updateFamily").addEventListener('tap', function() {
+	var obtnDel = document.getElementById('myFamily').querySelectorAll(".delFamily");
+	var obtnUpdate = document.getElementById('myFamily').querySelectorAll(".updateFamily");
+	if (this.innerText == '编辑') {
+		this.innerText = '完成'
+		for (var i = 0, len = obtnDel.length; i < len; i++) {
+			obtnDel[i].style.display = 'inline';
+			obtnUpdate[i].style.display = 'none';
+		}
+	} else {
+		this.innerText = '编辑'
+		for (var i = 0, len = obtnDel.length; i < len; i++) {
+			obtnDel[i].style.display = 'none';
+			obtnUpdate[i].style.display = 'inline';
+		}
+	}
+	var old_back = mui.back;
+	mui.back = function() {
+		if (document.getElementById("updateFamily").innerText == '完成') {
+			document.getElementById("updateFamily").innerText = '编辑'
+			for (var i = 0, len = obtnDel.length; i < len; i++) {
+				obtnDel[i].style.display = 'none';
+				obtnUpdate[i].style.display = 'inline';
+			}
+		} else {
+			old_back();
+		}
+	}
+})
+
+//绑定回退事件
+document.getElementById("indexFamilyDoctorBackId").addEventListener("tap", mefamily.indexFamilyDoctorBack);

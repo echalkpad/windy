@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			section {
+				display: none;
+				position: relative;
+				top: 0px;
+				left: 0px;
+				z-index: 999;
+				background: rgb(254, 223, 224);
+				width: 100%;
+				height: 35px;
+				line-height: 32px;
+				padding-left: 20px;
+				border: 2px solid rgb(254, 224, 246)
+			}
+			
+			section span {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				line-height: 22px;
+				border-radius: 50%;
+				background: rgb(245, 99, 100);
+				border: 1px solid rgb(254, 193, 194);
+				text-align: center;
+				color: #fff;
+				margin-right: 13px;
+			}
+			
+			section p {
+				color: #9B9B9B;
+			}
+			.mui-content{background:none;}
+			.mui-scroll{padding-top:50px;}
+			.orderInformList span{
+				line-height:24px;
+				display:block;
+				color:#666;
+				font-size:14px;
+			}
+			.orderInformList{
+				border:1px solid #F1F1F1;
+				border-radius:10px;
+				margin:15px;
+				background:#fff;
+				padding:5px 15px;
+			}
+			.orderInformList p{
+				font-size:14px;
+				color:#4B4B4B;
+				line-height:24px;
+			}
+			.orderInformList p em,.orderInformList p time{
+				font-style:normal;
+				color:#DD3434;
+			}
+			.orderInformList a{
+				display:block;
+				text-align:center;
+				line-height:30px;
+				border-top:1px solid #F1F1F1;
+				padding-top:4px;
+				color:#00b6f3;
+				font-size:14px;
+			}
+			.orderInformList i{
+				font-style:normal;
+				font-family: Arial;
+				font-size:15px;
+				margin-left:3px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订单通知</h1>
+		</header>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<section>
+						<p><span>!</span>当前网络不可用，请检查你的网络设置</p>
+					</section>
+					<div class="mui-content">
+						<div class="orderInformList gene">
+							<span>2016-06-05 12:00</span>
+							<p>您的基因检测预约已成功，采样盒将会以快递的形式既往您的地址，请留意查收!</p>
+							<a href="">查看订单<i>></i></a>
+						</div>
+						<div class="orderInformList health">
+							<span>2016-06-05 12:00</span>
+							<p>您的体检预约已成功，请您于<time>****-**-**</time>早上8点带好您的身份证，空腹至**店进行体检（<em>地址：**区**路****</em>）。温馨提醒：前一晚饮食清淡，请勿饮酒熬夜，20点之后尽量不要进食，如身体不适或特殊情况请提前告知体检医生，根据医生的建议进行体检！</p>
+							<a href="">查看订单<i>></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/message/orderInform.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				/*//初始化首页轮播图片
+				mainIndex.initSliderBanner();
+				//初始化主页健康咨询
+				mainIndex.initMainConsultationList(1, 10);*/
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1000);
+		}
+	</script>
+
+</html>

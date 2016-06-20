@@ -1,0 +1,7 @@
+//新增地址
+mui(".mui-content").on('tap', '#shippingNewAddress', function() {
+	mui.openWindow({
+		id: 'newAddress',
+		url: "../../../html/me/newAddress.html"
+	});
+})

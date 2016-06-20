@@ -1,0 +1,34 @@
+var spaOrderDetali = {};
+var orderDetali1 = document.getElementById("spaOrderDetali1"),
+	orderDetali2 = document.getElementById("spaOrderDetali2"),
+	orderDetali3 = document.getElementById("spaOrderDetali3"),
+	orderDetali4 = document.getElementById("spaOrderDetali4"),
+	oRemark = document.getElementById("spaOrderDetali-remark"),
+	oCoupons = document.getElementById("spaOrderDetali-coupons"),
+	oPay = document.getElementById("spaOrderDetali-pay"),
+	oAppraise = document.getElementById("spaOrderDetali-appraise");
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	var type = self.type;
+	spaOrderDetali.type(type);
+})
+
+spaOrderDetali.type = function(type) {
+	switch (type) {
+		case 'spaOrderList1':
+			orderDetali1.style.display = 'block';
+			oRemark.style.display = 'block';
+			oCoupons.style.display = 'block';
+			oPay.style.display = 'block';
+			break;
+		case 'spaOrderList2':
+			orderDetali2.style.display = 'block';
+			oAppraise.style.display = 'block';
+			break;
+		case 'spaOrderList3':
+			orderDetali3.style.display = 'block';
+			break;
+		default:
+			orderDetali4.style.display = 'block';
+	}
+}

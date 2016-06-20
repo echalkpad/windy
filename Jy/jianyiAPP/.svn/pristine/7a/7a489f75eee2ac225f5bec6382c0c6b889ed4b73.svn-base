@@ -1,0 +1,72 @@
+var storeInfo = {};
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	var storeID = self.storeID;
+	storeInfo = self.storeInfo;
+	healthNetworkPlan.initHotPackageList(storeID);
+});
+
+var healthNetworkPlan = {
+	initHotPackageList : function(storeID){
+		var requestProduct = "storeId=" + storeID;
+		jyapp.getApi({
+			method: 'HealthExamination/HotPackageList',
+			data: requestProduct,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("initHotPackageList---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					var htmlHealthNetworkPlan = '';
+					var dataValues = response.data;
+					if (dataValues != null && dataValues.length > 0) {
+						for(var i = 0; i < dataValues.length; i++){
+							var product = response.data[i];
+							htmlHealthNetworkPlan += '<li class="mui-table-view-cell">';
+							htmlHealthNetworkPlan += "	<input type=\"hidden\" value=\"" + product.ID + "\" />";
+							htmlHealthNetworkPlan += '	<a class="mui-navigate-right">';
+							htmlHealthNetworkPlan += '		<h3>' + product.PackageName + '</h3>';
+							htmlHealthNetworkPlan += '		<p>门市价：<del>￥' + product.OriginalPrice + '起</del><span>健e价：</span><span>￥' + product.PresentPrice + '起</span></p>';
+							htmlHealthNetworkPlan += '	</a>';
+							htmlHealthNetworkPlan += '</li>';
+						}
+					}
+					document.getElementById('healthNetworkPlanProductULId').innerHTML = htmlHealthNetworkPlan;
+				}
+				//初始化选择套餐事件
+				healthNetworkPlan.choosePackage();
+			},
+			onerror: function(e) {
+				console.log("StoreProductList:" + e);
+			}
+		});
+	},
+	choosePackage : function() {
+		mui('#healthNetworkPlanProductULId').on('click', 'li', function() {
+			commomUtil.closeWebviewById('healthExaminationPackage');
+			var packageId = this.querySelectorAll('input')[0].value;
+			mui.openWindow({
+				id: 'healthExaminationPackage',
+				url: "../healthy/healthExamination/healthExaminationPackage.html",
+				extras: {
+					"packageId": packageId,
+					"StoreId": storeInfo.ID,
+					"ShortName": storeInfo.ShortName,
+					"Address": storeInfo.Address,
+					"Lng": storeInfo.Lng,
+					"Lat": storeInfo.Lat
+				}
+			});
+		});
+	}/*,
+	rebackHealthNetworkDetailsPage : function(){
+		jyapp.backWebView({
+			id:"healthNetworkDetail",
+			url:"healthNetworkDetail.html"
+		});
+	}*/
+}
+
+//document.getElementById('rebackHealthNetworkDetailsPageID').addEventListener('click',healthNetworkPlan.rebackHealthNetworkDetailsPage);

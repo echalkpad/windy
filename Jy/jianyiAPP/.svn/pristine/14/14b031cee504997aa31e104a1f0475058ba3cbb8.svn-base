@@ -1,0 +1,79 @@
+var doctorId = "";
+var initDoctorTeamDetailscheckId = 1;
+var initellipsisCheckId = 1;
+document.addEventListener('plusready', function() {
+	doctorTeamDetails.initDoctorTeamDetails();
+	//初始化客户评论内容
+	doctorTeamDetails.initellipsis();
+});
+
+var doctorTeamDetails = {
+	initDoctorTeamDetails :function(){
+		var self = plus.webview.currentWebview();
+		doctorId = self.doctorTeamid;
+		var requestData = "doctorId="+doctorId;
+		if(initDoctorTeamDetailscheckId == 1){
+			initDoctorTeamDetailscheckId ++;
+			jyapp.getApi({
+	 			method: 'DoctorOnline/DoctorDetails',
+	 			data:requestData,
+	 			timeout : 10000,
+	 			onsuccess: function(data) {
+//	 				console.log(JSON.stringify(data));
+	 				initDoctorTeamDetailscheckId = 1;
+					var html = "<li class=\"mui-table-view-cell mui-media\">";
+					html+="<a href=\"javascript:;\">";
+					html+="<img class=\"mui-media-object mui-pull-left\" src=\""+data.data.Pic+"\" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\">";
+					html+="<div class=\"mui-media-body\">";
+					html+="<h2 class=\"mui-ellipsis\">"+data.data.Name+"<span>"+data.data.Title+"</span></h2>";
+					html+="<p class=\"mui-ellipsis\">接诊量："+data.data.OrderCount+" <span class=\"xingxing\">★"+data.data.Score+"</span></p>";
+					html+="<p class=\"mui-ellipsis\">"+data.data.HospitalName+" "+data.data.departmentName+"</p>";
+					html+="</div>";
+					html+="</a>";
+					html+="</li>";
+					document.getElementById('doctorTeamDetailsId').innerHTML = html;
+					var doctorTeamPidhtml = data.data.Introduction;
+					document.getElementById("doctorTeamPid").innerHTML = doctorTeamPidhtml;
+	 			},
+	 			onerror: function(e) {
+	   				console.log("initDoctorTeamDetails------>:"+e);
+	 				initDoctorTeamDetailscheckId = 1;
+	 			}
+	 		});
+		}
+	},
+	initellipsis : function(){
+		var requestData = "doctorId="+doctorId+"&pageIndex=1&pageSize=10";
+		if(initellipsisCheckId == 1){
+			initellipsisCheckId ++;
+			jyapp.getApi({
+	 			method: 'DoctorOnline/DoctorCommentList',
+	 			data:requestData,
+	 			timeout : 10000,
+	 			onsuccess: function(data) {
+	 				initellipsisCheckId = 1;
+//	 				console.log(JSON.stringify(data));
+	   				var dataValue = data.data.list;
+	   				var html = "";
+	   				for(var i=0;i<dataValue.length;i++){
+	   					var time = dataValue[i].CreateTime;
+						var endLen = time.length - 2;
+						var time = time.substring(6, endLen);
+	   					
+	   					html += "<div >";
+	   					html += "<h2>"+dataValue[i].Name+"<span>"+ commomUtil.formatStringToDate(time,3) +"</span></h2>";
+	   					html += "<p class=\"ellipsis\">"+dataValue[i].Comment+"</p>";
+	   					html += "</div>";
+	   				}
+					document.getElementById('item2').innerHTML = html;
+	 			},
+	 			onerror: function(e) {
+	   				console.log("initellipsis------>:"+e);
+	 				initellipsisCheckId = 1;
+//	   				plus.nativeUI.alert(e,'','提示','确认');
+	 			}
+	 		});
+	 	}
+	}
+
+}

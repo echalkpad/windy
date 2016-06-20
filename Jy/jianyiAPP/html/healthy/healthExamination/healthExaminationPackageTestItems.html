@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view {
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin: 0;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view-cell:after {
+				background: #F1F1F1;
+			}
+			
+			.mui-table-view-cell div {
+				display: none;
+				padding: 15px 0;
+			}
+			
+			.mui-icon-arrowdown {
+				font-family: inherit;
+				line-height: inherit;
+				-webkit-font-smoothing: auto;
+				color: #4A4A4A!important;
+				font-size: 14px;
+			}
+			
+			.mui-icon-arrowdown:before {
+				font-family: Muiicons;
+				float: right;
+				color: #bbb;
+				font-size: x-large;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="heptiBackAID"></a>
+			<h1 class="mui-title">体检项目</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="healthExaminationPackageTestItemsID">
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+			                Item 1
+			            </a>
+					<div class="">
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+			                 Item 2
+			            </a>
+					<div class="">
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+			                 Item 3
+			            </a>
+					<div class="">
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>-->
+			</ul>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/healthExamination/healthExaminationPackageTestItems.js"></script>
+	<script>
+		mui(".mui-content").on('tap', 'li', function() {
+			var odiv = this.querySelector("div");
+			var oa = this.querySelector("a");
+			odiv.style.display == 'none' || odiv.style.display == '' ? odiv.style.display = 'block' : odiv.style.display = 'none';
+			oa.classList != 'mui-navigate-right mui-active' ? oa.setAttribute('class', 'mui-navigate-right mui-active') : oa.setAttribute('class', 'mui-icon mui-icon-arrowdown');
+		})
+	</script>
+
+</html>

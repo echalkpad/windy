@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-segmented-control {
+				background-color: #fff;
+				border: none;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				position: relative;
+				background-color: #fff;
+				color: #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				position: absolute;
+				content: '';
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				border-bottom: 1px solid #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				background-color: #fff;
+				color: #000;
+				border: none
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view-cell h2 {
+				letter-spacing: -1px;
+				overflow: hidden;
+			}
+			
+			.mui-table-view-cell h2 span {
+				line-height: 34px;
+				float: left;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(1) {
+				float: left;
+				font-size: 16px;
+			}
+			
+			.mui-ios .mui-table-view-cell {
+				border-bottom: 1px solid rgb(242, 246, 249);
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				margin-left: 10px;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				font-size: 13px;
+				color: #8f8f94;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-media-body p {
+				line-height: 20px;
+				font-size: 13px;
+			}
+			
+			.mui-media .pay {
+				text-align: center;
+				padding: 0 15px;
+				line-height: 20px;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 6px;
+				border: 1px solid #f00;
+				color: #f00;
+				border-radius: 3px;
+			}
+			
+			.pay-end {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: rgb(240, 145, 53);
+			}
+			
+			.mui-media {
+				position: relative;
+			}
+			
+			.pay-end img {
+				position: absolute;
+				bottom: -10px;
+				right: 0;
+				width: 70px;
+			}
+			
+			.mui-table-view {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				margin-bottom: 10px;
+				background: #fff;
+			}
+			
+			.mui-table-view-cell small {
+				display: block;
+				font-size: 12px;
+				color: #666;
+				margin-top: 20px;
+				padding-top: 8px;
+				line-height: 20px;
+				border-top: 1px solid #eee;
+				position: relative;
+			}
+			
+			.mui-table-view-cell small strong {
+				font-weight: normal;
+				color: #f00;
+			}
+			
+			.mui-table-view-cell small em {
+				font-style: normal;
+				float: right;
+			}
+			
+			.order_none {
+				width: 100px;
+				position: fixed;
+				top: 30%;
+				left: 50%;
+				margin-left: -50px;
+				text-align: center;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.mui-control-content {
+				background: #fff;
+			}
+			
+			.spaOrderList-t {
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+				height: 40px;
+				padding: 0 15px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.spaOrderList-t span {
+				font-size: 15px;
+				float: right;
+			}
+			
+			.spaOrderList-c {
+				padding: 10px 15px;
+			}
+			
+			.spaOrderList-c .spaOrderList-c-l,
+			.spaOrderList-c .spaOrderList-c-c,
+			.spaOrderList-c .spaOrderList-c-r {
+				float: left;
+			}
+			
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.spaOrderList-c {
+				overflow: hidden;
+				padding: 10px 15px 10px;
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+			}
+			
+			.spaOrderList-c p {
+				padding: 5px 0;
+				margin-bottom: 0;
+			}
+			
+			.spaOrderList-c p span.active {
+				color: #4A4A4A;
+			}
+			
+			.spaOrderList-b {
+				margin-right: 10px;
+				text-align: right;
+				overflow: hidden;
+				clear: both;
+			}
+			
+			.spaOrderList-b h2 {
+				padding: 10px 0;
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.spaOrderList-b p {
+				margin-top: 5px;
+				padding: 10px 0;
+			}
+			
+			.spaOrderList-b p span {
+				margin-left: 10px;
+				font-size: 14px;
+				float: left;
+			}
+			
+			.xingxing {
+				margin-left: 0!important;
+			}
+			
+			.xingxing:nth-child(1) {
+				margin-left: 15px!important;
+			}
+			
+			.spaOrderList-b p span i {
+				font-style: normal!important;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.spaOrderList-b a:active {
+				border: 1px solid rgb(255, 255, 255)!important;
+				background: rgba(000, 000, 000, .3);
+				color: #fff!important;
+			}
+			
+			.spaOrderList-b a {
+				border: 1px solid rgba(255, 000, 000, .6);
+				border-radius: 5px;
+				margin: 10px 0 10px 10px;
+				padding: 5px 10px;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.spaOrderList-b a.black {
+				border: 1px solid #9B9B9B;
+				color: #4A4A4A;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的预约</h1>
+		</header>
+		<div class="mui-content">
+			<div id="" class="mui-segmented-control border-b">
+				<a class="mui-control-item mui-active" href="#spaOrderList1">
+					待支付
+					</a>
+				<a class="mui-control-item" href="#spaOrderList4">
+					预约成功
+					</a>
+				<a class="mui-control-item" href="#spaOrderList2">
+					 待评价
+					</a>
+				<a class="mui-control-item" href="#spaOrderList3">
+					 已完成
+				</a>
+			</div>
+			<!--待支付-->
+			<div id="spaOrderList1" class="mui-control-content mui-active">
+				<ul>
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="red">待支付</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><span>实付金额<i>￥123</i></span><a href="" class="black">取消服务单</a><a href="tel:400-111-5289">支付</a></p>
+						</section>
+					</li>
+				</ul>
+			</div>
+			<!--待评价-->
+			<div id="spaOrderList2" class="mui-control-content">
+				<ul>
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="red">待评价</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><span>实付金额<i>￥123</i></span><a href="" class="black">取消服务单</a><a href="">评价</a></p>
+						</section>
+					</li>
+				</ul>
+			</div>
+			<!--已完成-->
+			<div id="spaOrderList3" class="mui-control-content ">
+				<ul>
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="">已完成</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><span class="xingxing">★</span><span class="xingxing">★</span><span class="xingxing">★</span><span class="xingxing">★</span><span class="xingxing">★</span><a href="tel:400-111-5289">删除订单</a></p>
+						</section>
+					</li>
+				</ul>
+				<!--已取消-->
+				<ul class="spa-cancel">
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="">已取消</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><a href="">删除订单</a></p>
+						</section>
+					</li>
+				</ul>
+				<!--已退款-->
+				<ul class="spa-back">
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="">已退款</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><a href="">删除订单</a></p>
+						</section>
+					</li>
+				</ul>
+			</div>
+			<!--预约成功-->
+			<div id="spaOrderList4" class="mui-control-content">
+				<ul>
+					<li class="border-b">
+						<section class="spaOrderList-t">
+							<article>订单编号：123123213 <span class="red">预约成功</span></article>
+						</section>
+						<section class="spaOrderList-c">
+							<p>疗养套餐 <span>尚未确认</span></p>
+							<p>疗养人 <span class="active">受到法是否</span></p>
+							<p>疗养时间 <span>尚未确认</span></p>
+							<p>疗养地址 <span>尚未确认</span></p>
+						</section>
+						<section class="spaOrderList-b">
+							<p><a href="">申请退款</a></p>
+						</section>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/spa/spaOrder.js"></script>
+
+</html>

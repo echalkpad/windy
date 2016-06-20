@@ -1,0 +1,64 @@
+var healthExaminationCoustomer = {};
+//初始化
+mui.plusReady(function() {
+	healthExaminationCoustomer.selectInit();
+})
+
+healthExaminationCoustomer.selectInit = function() {
+	//性别
+	var userSex = new mui.PopPicker();
+	userSex.setData([{
+		"value": 1,
+		"text": "女"
+	}, {
+		"value": 2,
+		"text": "男"
+	}]);
+	var showSexButton = document.getElementById('meSex');
+	var sexResult = document.getElementById('sexResult');
+	showSexButton.addEventListener('tap', function(event) {
+		userSex.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			var sexid = JSON.stringify(items[0].id);
+			s = s.replace("\"", "").replace("\"", "");
+			sexResult.innerText = s;
+			sexResult.setAttribute('sexid', sexid);
+		});
+	}, false);
+	//婚否
+	var userMarry = new mui.PopPicker();
+	userMarry.setData([{
+		"value": 1,
+		"text": "未婚"
+	}, {
+		"value": 2,
+		"text": "已婚"
+	}]);
+	var marryButton = document.getElementById('marry');
+	var marryResult = document.getElementById('marryResult');
+	marryButton.addEventListener('tap', function(event) {
+		userMarry.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			var marryid = JSON.stringify(items[0].id);
+			s = s.replace("\"", "").replace("\"", "");
+			marryResult.innerText = s;
+			marryResult.setAttribute('marryid', marry);
+		});
+	}, false);
+	//日期
+	var result = mui('#birthResult')[0];
+	var btns = mui('#mebirthday');
+	btns.each(function(i, btn) {
+		btn.addEventListener('tap', function() {
+			var optionsJson = '{"type":"date","beginYear":1900,"endYear":' + new Date().getFullYear() + '}';
+			var options = JSON.parse(optionsJson);
+			var id = this.getAttribute('id');
+			var picker = new mui.DtPicker(options);
+			picker.show(function(rs) {
+				result.innerText = rs.text;
+				picker.dispose();
+			});
+		}, false);
+	})
+
+}

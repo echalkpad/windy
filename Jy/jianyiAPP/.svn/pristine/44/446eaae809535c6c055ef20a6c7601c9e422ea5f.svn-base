@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+				padding-top: 10px;
+			}
+			
+			.mui-table-view-cell h2 {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell p {
+				font-size: 13px;
+			}
+			
+			.mui-table-view-cell h2 span {
+				font-size: 14px;
+				color: #4A4A4A;
+				padding-left: 10px;
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view:after,
+			.mui-table-view:before{
+				height: 0;
+			}
+			
+			.xingxing {
+				font-size: 18px;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				border-left: none;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				color: #000;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				color: #000;
+				background: none;
+				position: relative;
+			}
+			
+			.mc-toolbar {
+				/*visibility: hidden;*/
+			}
+			
+			.mc-table-head {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				content: '';
+				position: absolute;
+				width: 50%;
+				left: 25%;
+				right: 0;
+				border-bottom: 2px solid #00b6f3;
+				bottom: 0;
+			}
+			
+			.mui-segmented-control {
+				font-size: 12px;
+				border: none;
+				border-bottom: 1px solid rgb(239, 233, 233)
+			}
+			
+			.mui-control-content div {
+				border-bottom: 1px solid rgb(239, 233, 233);
+				padding: 20px 0;
+				margin: 0 15px;
+			}
+			
+			.mui-control-content div:nth-child(2) {
+				border: none
+			}
+			
+			.mui-control-content h2 {
+				color: #4A4A4A;
+				font-size: 14px;
+			}
+			
+			.mui-control-content p {
+				color: rgb(176, 176, 176);
+				font-size: 13px;
+				padding: 10px 10px 0 5px;
+			}
+			
+			.mui-control-content span {
+				float: right;
+				color: #ACACB4;
+				margin-right: 15px;
+			}
+			
+			.consult {
+				padding: 20px;
+				text-align: center;
+				border-top: 10px solid rgb(242, 246, 249);
+			}
+			
+			.consult h3 {
+				font-size: 15px;
+				color: #00b6f3;
+				line-height: 30px;
+			}
+			
+			.consult a {
+				padding: 0;
+				line-height: 40px;
+				color: #fff;
+				background: #00b6f3;
+				border-radius: 8px;
+				font-size: 16px;
+				margin: 0;
+				margin-top: 10px;
+				font-family: "微软雅黑";
+			}
+			
+			.mui-content #item2 div {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			
+			.mui-content #item2 p {
+				color: #fff;
+				font-size: 14px;
+				padding: 0;
+			}
+			
+			.mui-content #item2 span {
+				float: none;
+				color: #333;
+				margin-right: 0;
+			}
+			
+			.mc-container,
+			.mc-container a {
+				color: #333;
+			}
+			
+			.mc-container {
+				background: #fff;
+			}
+			
+			.mc-table-head {
+				background: #fff;
+			}
+			
+			.mc-table-cell[disabled='disabled'] a {
+				color: #999;
+			}
+			
+			.mc-table-cell-today {}
+			
+			.mc-cell-selected {
+				background-color: none;
+			}
+			.mc-cell-selected-h a{
+				background: #ccc!important;
+			}
+			.mc-cell-selected a {
+				color: #fff;
+				background: #00b6f3;
+			}
+			
+			.mc-table-cell-today a {
+				border: 1px solid #00b6f3;
+			}
+			
+			#mc-btn-previous {
+				background: url(../../img/pharmacy_btn_angle_left@2x.png) no-repeat scroll center 15px;
+				background-size: 10px 17px;
+			}
+			
+			#mc-btn-next {
+				background: url(../../img/pharmacy_btn_angle_right@2x.png) no-repeat scroll center 15px;
+				background-size: 10px 17px;
+			}
+			
+			.mcTime {
+				padding-bottom: 40px;
+			}
+			
+			.mcTime small {
+				position: absolute;
+				bottom: 10px;
+				left: 15px;
+				color: #666;
+			}
+			
+			.mcTime small i,
+			.mcTime small em {
+				display: inline-block;
+				vertical-align: middle;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background: #ddd;
+				margin: 0 5px;
+			}
+			
+			.mcTime small i {
+				background: #00b6f3;
+			}
+			
+			.pup-body {
+				background: #fff;
+				height: 166px;
+				position: relative;
+			}
+			
+			.pup-body ol {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+			
+			.pup-body li {
+				width: 33.33%;
+				box-sizing: border-box;
+				padding: 0 3px;
+				float: left;
+			}
+			
+			.pup-body .selector span {
+				background: #00b6f3;
+				color: #fff;
+			}
+			
+			.pup-body span {
+				display: block;
+				line-height: 24px;
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				font-size: 12px;
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			
+			.pup {
+				position: absolute;
+				top: 35%;
+				-webkit-transform: translateY(-50%);
+				padding: 0 15px;
+			}
+			
+			.pup-header {
+				background: #fff!important;
+				line-height: 40px;
+				width: 100%;
+				color: #333;
+				font-size: 14px;
+				text-align: center;
+				border-radius: 5px 5px 0 0;
+			}
+			
+			.pup-foot {
+				border-top: 1px solid #ddd;
+			}
+			
+			.pup-foot .mui-btn {
+				background: #fff!important;
+				display:block;
+				float:left;
+				width: 50%;
+				border: 0;
+				line-height: 40px;
+				box-sizing:border-box;
+			}
+			
+			.pup-foot .btn-cancel {
+				border-right: 1px solid #ddd;
+				border-radius: 0 0 0 5px;
+			}
+			
+			.pup-foot .btn-ok {
+				border-radius: 0 0 5px 0;
+				color: #00b6f3;
+			}
+			.mui-media{
+				color:#8f8f94;
+				font-size:14px;
+			}
+			.mui-media strong{
+				font-weight:normal;
+				color:#D43131;
+				margin-left:10px;
+			}
+			.icon_address{
+				padding-left:30px;
+				background: url(../../img/familyDoctor/icon_address.png) no-repeat scroll 15px center;
+				background-size:12px 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="rebackPreloadSlowExpertsDetailsID"></a>
+			<h1 class="mui-title">医生详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="slowExpertsDoctorDetailID">
+				<!--<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+						<div class="mui-media-body">
+							<h2 class="mui-ellipsis">任天平<span>副主任医师</span></h2>
+							<p class="mui-ellipsis">接诊量：286 <span class="xingxing">★8.7</span></p>
+							<p class="mui-ellipsis">河间市妇幼保健院 妇产科</p>
+						</div>
+					</a>
+				</li>-->
+				<!--新增价格和地址标签-->
+				<!--<li class="mui-table-view-cell mui-media">价格<strong id="slowExpertsDetailsAskID"></strong></li>
+				<li class="mui-table-view-cell mui-media icon_address">上海市静安区乌鲁木齐中路12号</li>-->
+			</ul>
+
+			<!--<div class="consult">
+				<h3 id="slowExpertsDetailsAskID"></h3>
+				<a href="" class="mui-btn mui-btn-block" id="slowExpertsAskAppointmentID">预约咨询</a>
+			</div>-->
+
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1">
+				医生介绍
+				</a>
+				<a class="mui-control-item" href="#item2">
+				预约挂号
+				</a>
+				<a class="mui-control-item" href="#slowExpertsDetailsCommentsID">
+				用户评价
+				</a>
+			</div>
+
+			<div id="item1" class="mui-control-content mui-active ">
+				<div>
+					<h2>擅长</h2>
+					<p class="ellipsis" id="slowExpertsDetailsSkilledID"></p>
+				</div>
+				<div>
+					<h2>职业经历</h2>
+					<p class="ellipsis" id="slowExpertsDetailsCareerID"></p>
+				</div>
+			</div>
+			<div id="item2" class="mui-control-content">
+				<article class="mcTime">
+					<section id="container"></section>
+					<!--<button id="btn-confirm"class="mui-btn" type="button">确定</button>
+					<button id="btn-today"class="mui-btn" type="button">今天</button>
+					<div id="show-time"></div>-->
+					<small>注：<i></i>可预约<em></em>已预约</small>
+				</article>
+			</div>
+
+			<div id="slowExpertsDetailsCommentsID" class="mui-control-content">
+			</div>
+			<div id="appointmentTime" class="mui-popover mui-popover-bottom mui-popover-action pup">
+				<div class="pup-header">预约时间</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="mui-scroll" id="appointmentTimeOlID">
+							<!--<li><span>09:00-09:30</span></li>
+							<li class="selector"><span>09:30-10:00</span></li>
+							<li><span>10:00-10:30</span></li>
+							<li><span>10:30-11:00</span></li>
+							<li><span>11:00-11:30</span></li>
+							<li><span>11:30-12:00</span></li>
+							<li><span>12:00-12:30</span></li>
+							<li><span>12:30-13:00</span></li>
+							<li><span>13:00-13:30</span></li>
+							<li><span>13:30-14:00</span></li>
+							<li><span>14:00-14:30</span></li>
+							<li><span>14:30-15:30</span></li>
+							<li><span>15:30-16:30</span></li>
+							<li><span>16:30-17:00</span></li>-->
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#appointmentTime" class="mui-btn btn-cancel">取消</a>
+					<input type="hidden" id="slowDetailsAppoTimeID" value="" />
+					<input type="hidden" id="slowDetailsSourceID" value="" />
+					<a href="" class="mui-btn mui-pull-right btn-ok" onclick="slowExpertsDetails.editAppointment();">确定</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/SlowExpertsDetails.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/code/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		var test = function() {
+			var tomorrow = mui.DateUtil.addDate(mui.DateUtil.getToday(), 2);
+			var MC = mui("#container").MCalendar({
+				date: tomorrow
+			});
+			mui("#btn-confirm").each(function() {
+				this.addEventListener('tap', function() {
+					mui("#show-time")[0].innerHTML = MC.getDate().toString();
+				})
+			})
+			mui("#btn-today").each(function() {
+				this.addEventListener('tap', function() {
+					MC.changeDate(new Date())
+				})
+			})
+		};
+	</script>
+
+</html>

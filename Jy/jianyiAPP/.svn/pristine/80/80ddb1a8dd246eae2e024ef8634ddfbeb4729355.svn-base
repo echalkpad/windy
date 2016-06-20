@@ -1,0 +1,137 @@
+document.addEventListener('plusready', function() {
+	//添加按医院查询点击事件
+	//	document.getElementById("cancerExpertsList").addEventListener("tap",cancerExperts.onclickCancerExpertsList);
+	cancerExperts.initcancerExperts();
+});
+
+var cancerExperts = {
+	initcancerExperts: function() {
+		jyapp.getApi({
+			method: 'Tumour/HotActivity',
+			timeout: 10000,
+			onsuccess: function(data) {
+//				console.log("initcancerExperts---->:"+JSON.stringify(data));
+				var html = "<h2>热门活动</h2>";
+				var cancerExpertstuijianIdHtml = "<h2>推荐医师</h2>";
+				if(data.code != 1){
+					document.getElementById('cancerExpertsHavZanwuID').style.display = 'block';
+					document.getElementById('cancerExpertsRecZanwuID').style.display = 'block';
+					plus.nativeUI.alert(data.msg,'','健医宝','确认');
+					return false;
+				}else{
+					var datas = data.data;
+					if (datas != null && datas.list != null && datas.list.length > 0) {
+						var dataValue = datas.list;
+						document.getElementById('cancerExpertsHavZanwuID').style.display = 'none';
+						document.getElementById('cancerExpertsRecZanwuID').style.display = 'none';
+						for (var i = 0; i < dataValue.length; i++) {
+							var Name = dataValue[i].Name ? dataValue[i].Name : "--";
+							var Title = dataValue[i].Title ? dataValue[i].Title : "--";
+							var HospitalName = dataValue[i].HospitalName ? dataValue[i].HospitalName : "--";
+							var departmentName = dataValue[i].departmentName ? dataValue[i].departmentName : "--";
+							html += "<li class=\"mui-table-view-cell\">";
+							html += "<a href=\"#\">";
+							html += "<input type='hidden' value=" + dataValue[i].ID + " />"
+							html += "<img src=" + dataValue[i].Pic + " onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\"  />";
+							html += "<section>";
+							html += "<h3>" + Name + "&nbsp;" + Title + "</h3>";
+							html += "<p>" + HospitalName + "&nbsp;" + departmentName + "<span>预约量：<small>" + dataValue[i].OrderCount + "</small></span></p>";
+							html += "<strong>" + dataValue[i].Price + "<em>元</em></strong>";
+							html += "</section>";
+							html += "</a>";
+							html += "</li>";
+						}
+						var Name = dataValue[0].Name ? dataValue[0].Name : "--";
+						var Title = dataValue[0].Title ? dataValue[0].Title : "--";
+						var HospitalName = dataValue[0].HospitalName ? dataValue[0].HospitalName : "--";
+						var departmentName = dataValue[0].departmentName ? dataValue[0].departmentName : "--";
+						cancerExpertstuijianIdHtml += "<li class=\"mui-table-view-cell\">";
+						cancerExpertstuijianIdHtml += "<a href=\"#\">";
+						cancerExpertstuijianIdHtml += "<input type='hidden' value=" + dataValue[0].ID + " />"
+						cancerExpertstuijianIdHtml += "<img src=" + dataValue[0].Pic + " onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\"  />";
+						cancerExpertstuijianIdHtml += "<section>";
+						cancerExpertstuijianIdHtml += "<h3>" + Name + "&nbsp;" + Title + "</h3>";
+						cancerExpertstuijianIdHtml += "<p>" + HospitalName + "&nbsp;" + departmentName + "<span>预约量：<small>" + dataValue[0].OrderCount + "</small></span></p>";
+						cancerExpertstuijianIdHtml += "<strong>" + dataValue[0].Price + "<em>元</em></strong>";
+						cancerExpertstuijianIdHtml += "</section>";
+						cancerExpertstuijianIdHtml += "</a>";
+						cancerExpertstuijianIdHtml += "</li>";
+					} else {
+						document.getElementById('cancerExpertsHavZanwuID').style.display = 'block';
+						document.getElementById('cancerExpertsRecZanwuID').style.display = 'block';
+					}
+				}
+				document.getElementById("cancerExpertsHavId").innerHTML = html;
+				document.getElementById("cancerExpertstuijianId").innerHTML = cancerExpertstuijianIdHtml;
+			},
+			onerror: function(e) {
+				document.getElementById('cancerExpertsHavZanwuID').style.display = 'block';
+				document.getElementById('cancerExpertsRecZanwuID').style.display = 'block';
+				console.log("initcancerExperts-------->:" + e);
+			}
+		});
+		//初始化Banner
+		cancerExperts.initSliderBanner();
+	},
+	onclickCancerExpertsList: function() {
+		mui.openWindow({
+			id: 'cancerExpertsList',
+			url: "cancerExpertsList.html"
+		});
+
+	},
+	initSliderBanner: function() {
+		var requestPictures = "flag=nzhl001";
+//		console.log("requestPictures:" + requestPictures);
+		jyapp.getApi({
+			method: 'Comment/Pictures',
+			data: requestPictures,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("initSliderBanner:" + JSON.stringify(response));
+				var dataValues = response.data;
+				if (dataValues.list[dataValues.list.length - 1].URL == '' || dataValues.list[0].URL == '') {
+					dataValues.list[dataValues.list.length - 1].URL = null;
+					dataValues.list[0].URL = null;
+				}
+				dataValues.list[0].lastURL = dataValues.list[dataValues.list.length - 1].URL;
+				dataValues.list[0].lastPic = dataValues.list[dataValues.list.length - 1].Pic;
+				dataValues.list[0].lastDescription = dataValues.list[dataValues.list.length - 1].Description;
+				dataValues.list[dataValues.list.length - 1].firstURL = dataValues.list[0].URL;
+				dataValues.list[dataValues.list.length - 1].firstPic = dataValues.list[0].Pic;
+				dataValues.list[dataValues.list.length - 1].firstDescription = dataValues.list[0].Description;
+				var tpl = document.getElementById('tpl1').innerHTML;
+				document.getElementById('cancerExpertsBannerDivID').innerHTML = juicer(tpl, dataValues);
+				var tpl = document.getElementById('tpl2').innerHTML;
+				document.getElementById('cancerExpertsBannerDiv2ID').innerHTML = juicer(tpl, dataValues);
+				//获得slider插件对象
+				mui('.mui-slider').slider({
+					interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+				});
+			},
+			onerror: function(e) {
+				console.log("initSliderBanner:" + e);
+			}
+		});
+	},
+	cancerExpertsBackCell : function(){
+//		var wvs = plus.webview.all();
+//		for(var i=0;i<wvs.length;i++){
+//			console.log("webview"+i+":"+wvs[i].getURL());
+//		}
+//		var mianPage = plus.webview.getLaunchWebview();
+//		mui.openWindow({
+//			id : mianPage.id,
+//			url : mianPage.uri,
+//			extras : {
+//				index:1
+//			}
+//		});
+		var mianPage = plus.webview.getLaunchWebview();
+		jyapp.backWebView({id:"mainInterrogation",index:1});
+	}
+}
+
+//绑定回退事件
+document.getElementById("cancerExpertsBackCellId").addEventListener("click",cancerExperts.cancerExpertsBackCell);
+//mui.back = cancerExperts.cancerExpertsBackCell;

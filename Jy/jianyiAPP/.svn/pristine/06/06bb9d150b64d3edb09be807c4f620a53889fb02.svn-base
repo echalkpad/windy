@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,body{
+				background-color: #fff!important;
+				height:100%;
+			}
+			
+			.jkwd-nav {
+				background: #fff;
+				z-index: 1001;
+				position: fixed;
+				top: 90px;
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				border-bottom:2px solid rgb(244, 244, 244);
+			}
+			
+			.jkwd-nav a {
+				position: relative;
+				width: 25%;
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				float: left;
+				color: #4A4A4A;
+				font-size: 15px;
+				border-left: 1px solid rgb(240, 240, 240);
+			}
+			.jkwd-nav a img{
+				margin-left:5px;
+				width:10px;
+				height:auto;
+				position: relative;
+				top:-1px;
+			}
+			.jkwd-nav a:first-child {
+				border-left: none;
+			}
+			
+			ul {
+				margin: 0;
+				list-style: none;
+				padding-left: 0px;
+			}
+			
+			li {
+				padding: 10px 15px;
+				border-bottom: 2px solid rgb(240, 240, 240);
+				height: 97px;
+				width: 100%;
+				position: relative;
+				overflow:hidden;
+			}
+			
+			li .li-l {
+				border: 1px solid #ccc;
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				position:absolute;
+				left:10px;
+				top:10px;
+			}
+			
+			li .li-l img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			li .li-r {
+				padding-left:80px;
+			}
+			
+			li .li-r h2 {
+				margin-top: 0;
+				font-size: 16px;
+				color: #333;
+				height: 20px;
+				line-height: 20px;
+				text-overflow:ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			
+			li .li-r h2 span {
+				position: relative;
+				top: -2px;
+				color: #fff;
+				background: rgb(249, 157, 46);
+				padding: 0 1px;
+				font-size: 10px;
+				border-radius: 3px;
+				margin-left: 6px;
+			}
+			
+			li .li-r h3 {
+				font-size: 15px;
+				margin: 4px 0;
+				color: #000;
+			}
+			
+			li .li-r h3 .sp1 {
+				padding-right: 5px;
+				font-size: 20px;
+			}
+			
+			li .li-r p {
+				font-size: 12px;
+			}
+			
+			li .li-r p .sp1 {
+				padding-left: 5px;
+			}
+			
+			li .li-r p .sp2 {
+				position: absolute;
+				right: 20px
+			}
+			
+			.searchCriteria {}
+			
+			.search {
+				/*display: none;*/
+				z-index: 1000;
+				position: fixed;
+				width:100%;
+				background:rgba(0,0,0,.2);
+			}
+			
+			.search .mui-popover {
+				top:0;
+				height: 300px;
+				background: #fff;
+				transform: none!important;
+			}
+			
+			.search .mui-popover .mui-table-view {
+				background: #fff;
+			}
+			
+			.search ul li {
+				height: 44px;
+				padding-left: 15px;
+			}
+			
+			.search ul li a {
+				color: #4A4A4A;
+			}
+			
+			.mui-backdrop {
+				top: 294px;
+			}
+			
+			#healthNetworkUlId {
+				/*position: absolute;*/
+				width:100%;
+				/*top: 140px;*/
+				z-index: 2;
+			}
+			
+			#search-qbsq {}
+			
+			#search-qbsq .search-qbsq-l {
+				margin: 0;
+				left: initial;
+				width: 35%;
+			}
+			
+			#search-qbsq .search-qbsq-r {
+				background: rgba(234, 231, 231, 0.4);
+				right: 0;
+				left: initial;
+				width: 65%;
+				border-radius: 0;
+				margin: 0;
+			}
+			
+			#search-qbsq .search-qbsq-l ul,
+			#search-qbsq .search-qbsq-r ul,
+			#search-qt ul {
+				padding-left: 0;
+				list-style: none;
+			}
+			
+			#search-qbsq .search-qbsq-l ul li,
+			#search-qbsq .search-qbsq-r ul li,
+			#search-qt ul li {
+				border-bottom: 1px solid #E8E8E8;
+				margin: 0 10px;
+			}
+			
+			@media only screen and (min-width: 320px) and (max-width: 374px) {
+				.jkwd-nav a {
+					font-size: 14px;
+					letter-spacing: -1px;
+				}
+			}
+		}
+
+		.mui-title-add {
+			right: 0px;
+			float: right;
+			display: inline-block;
+			overflow: hidden;
+			width: auto;
+			margin: 0;
+			text-overflow: ellipsis;
+			height: 44px;
+			line-height: 44px;
+			font-size: 17px;
+		}
+		
+		.medicationSearch {
+			z-index: 1001;
+			clear: left;
+			height: 40px;
+			line-height: 40px;
+			position: fixed;
+			display: block;
+			top: 50px;
+			width: 100%;
+			background: #00b6f3;
+		}
+		
+		.medicationSearch .search {
+			z-index: 9;
+			position: absolute;
+			top: 6px;
+			left: 35px;
+			display: inline-block;
+			width: 18px;
+			height: 19px;
+			background: url(../../img/icon_search.png) no-repeat scroll top left;
+			background-size: cover;
+		}
+		
+		.medicationSearch input {
+			position: absolute;
+			background: #fff;
+			border-radius: 16px;
+			border: 0;
+			margin: 0 5%;
+			height: 30px;
+			width: 90%!important;
+			line-height: 30px;
+			padding-left: 40px;
+			font-size: 16px;
+			color: #444;
+		}
+		
+		#health-add {
+			display: none;
+			z-index: 1001;
+			top: 90px;
+			height: auto;
+			width: 100%;
+		}
+		
+		.mui-bar-nav~.mui-content{
+			height:100%;
+			overflow:hidden;
+			padding-top:134px!important;
+		}
+		#Jkpullrefresh{
+			top:134px;
+		}
+		
+		.zanwu_none{
+			display: none;
+			width:140px;
+			position: fixed;
+			top:30%;
+			left:50%;
+			margin-left:-70px;
+			text-align: center;
+			font-size:14px;
+			color:#999;
+		}
+		.zanwu_none i{
+			display:block;
+			width:38px;
+			height:36px;
+			margin:10px auto;
+			background: url(../../img/icon_zanwuwangdian.png) no-repeat scroll top left;
+			background-size:cover;
+		}
+	</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康网点</h1>
+			<a href="" class="mui-title-add" id="jkzx-city" style="float: right;line-height:44px;"></a>
+		</header>
+		<section class="medicationSearch">
+			<label for="" class="search"></label><!-- oninput="commomUtil.validateInput(event);"-->
+			<input type="text" name="" id="healthNetworkStoreNameValueID" placeholder="搜索"/>
+		</section>
+		<div class="mui-content">
+			<div class="jkwd-nav">
+				<a class="search-qbsq">附近<img src="../../img/common/btn_down.png"/></a>
+				<input type="hidden" id="healthNetworkRangeValueID" />
+				<a class="search-ck" id="search-ck-TypeID">全部类型<img src="../../img/common/btn_down.png"/></a>
+				<input type="hidden" id="healthNetworkTypeValueID" />
+				<a class="search-znpx">智能排序<img src="../../img/common/btn_down.png"/></a>
+				<input type="hidden" id="healthNetworkSortValueID" />
+				<a class="search-sx">筛选<img src="../../img/common/btn_down.png"/></a>
+				<input type="hidden" id="healthNetworkScreenValueID" />
+			</div>
+			<div class="search">
+				<div id="householdDevices" class="mui-popover mui-popover-action">
+					<div id="search-qbsq">
+						<input type="hidden" id="healthNetworkAreaValueID" />
+						<div class="mui-scroll-wrapper search-qbsq-l">
+							<div class="mui-scroll">
+								<ul class="search-ul" id="healthNetworkAreaID">
+									<li class="mui-table-view-cell" item=",5"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="mui-scroll-wrapper search-qbsq-r">
+							<div class="mui-scroll">
+								<ul class="search-ul" id="healthNetworkRangeID">
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="search-qt">
+						<div class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul id="healthNetworkTypeID">
+								</ul>
+								<ul id="healthNetworkSortID">
+								</ul>
+								<ul id="healthNetworkScreenID">
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-scroll-wrapper" id="Jkpullrefresh">
+				<div class="mui-scroll">
+					<ul id="healthNetworkUlId">
+						<!--<li>
+							<input type="hidden" value="" />
+							<div class="li-l">
+								<img src="../../img/default/pic_moren.png"/>
+							</div>
+							<div class="li-r">
+							<h2>1</h2>
+							<h3><span class="sp1 xingxing"></span></h3>
+							<p>
+								<span class="sp1"></span><span class="sp2"></span></p>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="zanwu_none" id="healthNetworkZanwuID">
+				<i></i>
+				没有筛选到网点
+			</div>
+		</div>
+
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/healthNetwork/healthNetwork.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		mui.plusReady(function() {
+			mui('header').on('tap', '#jkzx-city', function() {
+				var html = this.innerText;
+				mui.openWindow({
+					url: 'selectMap.html',
+					id: 'selectMap',
+					extras: {
+						html: html
+					},
+					show: {
+						aniShow: 'slide-in-bottom'
+					}
+				})
+			})
+			window.addEventListener('getadd', function(event) {
+				//获得事件参数
+				var html = event.detail.html;
+				var pid = event.detail.pid;
+				document.getElementById("jkzx-city").innerHTML = html + '<span class="mui-icon mui-icon-arrowdown"></span>';
+				mui('.search-qbsq')[0].innerHTML = '附近<img src="../../img/common/btn_down.png" alt="" width="15px"/>';
+				healthNetwork.addCity(pid);
+			});
+		})
+		healthNetwork.addCity = function(pid) {
+			var _ul = document.getElementById("healthNetworkAreaID");
+			var _ulValue = document.getElementById("healthNetworkAreaValueID");
+			_ul.innerHTML = '';
+			for (var i = 0, len = city.district.length; i < len; i++) {
+				if (city.district[i].PID == pid) {
+					var _li = document.createElement("li");
+					_li.setAttribute('class', 'mui-table-view-cell');
+					_li.setAttribute('district-id', city.district[i].ID);
+					_li.setAttribute('item', city.district[i].ID+",5");
+					_ulValue.value = city.district[i].ID;
+					_li.innerText = city.district[i].Name;
+					if (_li.innerText.length > 5) {
+						_li.innerText = _li.innerText.slice(0, 5)
+					}
+					_ul.appendChild(_li);
+				}
+			}
+		}
+		healthNetwork.addCityF = function(ohtml) {
+			for (var i = 0, len = city.city.length; i < len; i++) {
+				if (ohtml == city.city[i].Name) {
+					healthNetwork.addCity(city.city[i].ID);
+				}
+			}
+		}
+		
+		if(mui.os.ios){
+			mui.init({
+				//加载上拉刷新事件
+				pullRefresh: {
+					container: '#Jkpullrefresh',
+					up: {
+						callback: pullRefreshUp
+					}
+				}
+			});
+	
+			function pullRefreshUp() {
+				setTimeout(function() {
+					pageIndex++;
+					if (total == pageSize) {
+						healthNetwork.queryNetWork(storeName, areaNo, sortType, filter, areaType, areaLevel, storeType, distance, pageIndex, pageSize, lng, lat);
+					} else {
+						return false;
+					}
+					mui('#Jkpullrefresh').pullRefresh().endPulldownToRefresh();
+				}, 1000);
+			}
+		}else{
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+			});
+		}
+		
+	</script>
+
+</html>

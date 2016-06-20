@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.helthDetali-t {
+				text-align: center;
+			}
+			
+			.mui-content {
+				color: #4A4A4A;
+				font-size: 14px;
+			}
+			
+			.helthDetali-t h2 {
+				padding: 10px 0;
+				font-size: 18px;
+				color: #333;
+			}
+			
+			.helthDetali-t h3 {
+				padding: 5px 0;
+				font-size: 13px;
+				color: #9B9B9B;
+			}
+			
+			.helthDetali-t h4 {
+				font-size: 13px;
+				padding-bottom: 25px;
+				color: #9B9B9B;
+			}
+			
+			.helthDetali-t img {
+				display: block;
+				width: 90%;
+				margin: 0 auto;
+				height: 170px;
+				border: 1px solid rgb(194, 194, 194)
+			}
+			
+			.helthDetali-t .text {
+				text-align: left;
+			}
+			
+			.helthDetali-t .text p {
+				color: #4A4A4A;
+				margin: 0 auto;
+				width: 90%;
+				padding-top: 25px;
+				text-indent: 2em;
+			}
+			
+			.helthDetali-b {}
+			
+			.helthDetali-b ul {
+				padding-bottom: 50px;
+				list-style: none;
+				padding-left: 0;
+			}
+			
+			.helthDetali-b li:nth-child(1) {
+				padding: 0 0 20px;
+			}
+			
+			.helthDetali-b li {
+				padding: 20px 0;
+				overflow: hidden;
+				border-bottom: 1px solid #ECE9E9;
+			}
+			
+			.helthDetali-b .comment-t {
+				margin: 0 5%;
+				height: 55px;
+				line-height: 55px;
+			}
+			
+			.helthDetali-b .comment-t img {
+				border-radius: 50%;
+				display: block;
+				float: left;
+				width: 55px;
+				height: 55px;
+			}
+			
+			.helthDetali-b .comment-t span {
+				display: block;
+				float: left;
+				margin-left: 15px;
+			}
+			
+			.helthDetali-b .comment-t p {
+				text-align: right;
+				display: block;
+				float: right;
+				width: 40%;
+			}
+			
+			.helthDetali-b .comment-b {
+				margin: 0 auto!important;
+				width: 90%;
+				margin: 0;
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.comment {
+				position: fixed;
+				bottom: 0;
+				height: 50px;
+				line-height: 50px;
+				border-top: 1px solid rgba(000, 000, 000, .1);
+				width: 100%;
+				background: rgb(241, 241, 241);
+				z-index: 999;
+			}
+			
+			.comment .commet-text {
+				padding-left: 20px;
+				width: 80%;
+				box-sizing: border-box;
+				position: relative;
+				float: left;
+			}
+			
+			.comment .commet-text input[type=text] {
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 20px;
+				border: none;
+				outline: none;
+				margin: 10px 0;
+			}
+			
+			.comment .commet-text span {
+				position: absolute;
+				top: 0;
+				left: 15%;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.comment a {
+				width: 20%;
+				text-align: right;
+				box-sizing: border-box;
+				padding-right: 5%;
+				display: block;
+				float: right;
+				color: #00b6f3;
+				font-size: 18px;
+			}
+			
+			.zan {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				border: 1px solid #ddd;
+				margin: 30px auto;
+				background: #f5f5f5;
+				text-align: center;
+				padding-top: 8px;
+			}
+			
+			.zan img {
+				width: 20px;
+				height: auto;
+				border: 0;
+				margin: 0 auto;
+				display: block;
+			}
+			
+			.zan img.yzan {
+				display: none;
+			}
+			
+			.active img.yzan {
+				display: block!important;
+			}
+			
+			.active img.wzan {
+				display: none;
+			}
+			
+			.zan span {
+				font-size: 14px;
+				color: #666;
+			}
+			
+			.mui-scroll-wrapper {
+				top: 50px;
+				bottom: 50px;
+			}
+			
+			#pullrefresh {
+				background: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康咨询详情</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content mui-scroll-wrapper" id="pullrefreshIHDS">
+				<article class="mui-scroll">
+					<div class="helthDetali-t" id="indexHealthInfoDetailsDivID">
+						<!--<h2>什么东西越喝越胖，越胖越喝？</h2>
+						<h3>来源：键医在线</h3>
+						<h4>发布日期：05-05 12:00</h4>
+						<img src="../../img/common/pic_home_banner.png" />
+						<div class="text">
+							<p>医生咨询服务仅为建议，具体诊疗请到医院就诊医生咨询服务仅为建议，具体诊疗请到医院就诊医生咨询服务仅为建议，具体诊疗请到医院就诊</p>
+							<p>医生咨询服务仅为建议，具体诊疗请到医院就诊</p>
+						</div>
+						<section class="zan">
+							<img class="wzan" src="../../img/icon_good.png"/>
+							<img class="yzan" src="../../img/icon_good_pre.png"/>
+							<span>238</span>
+						</section>-->
+					</div>
+					<div class="helthDetali-b border-t">
+						<!--<p class="title">评论</p>-->
+						<ul id="indexHealthInfoCommentUlID">
+							<!--注释-->
+							<!--<li>
+									<div class="comment-t">
+										<img src="../../img/me/my_people.png" />
+										<span>苏勇</span>
+										<p>18小时前</p>
+									</div>
+									<p class="comment-b ellipsis">就诊医生咨询服务仅为建议，具体诊疗请咨询服务仅为建议，具体诊疗请到咨询服务仅为建议，具体诊疗请到到医院就诊</p>
+								</li>
+								<li>
+									<div class="comment-t">
+										<img src="../../img/me/my_people.png" />
+										<span>苏勇</span>
+										<p>18小时前</p>
+									</div>
+									<p class="comment-b ellipsis">咨询服务仅为建议，具体诊疗请到医院就诊医生咨询服务仅为建议，具体诊疗请到医院就诊</p>
+								</li>-->
+						</ul>
+					</div>
+				</article>
+			</div>
+
+		</div>
+		<div class="comment" id="indexHealthDetailsCommentDivID">
+			<div class="commet-text"><!--  oninput="commomUtil.validateInput(event);"  -->
+				<input type="text" maxLength="250" id="indexHealthDetailsCommentInputID" value="" placeholder="评论一下"/>
+			</div>
+			<a href="" id="submitCommentAID">发送</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/healthInformation/indexHealthDetails.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			//加载上拉刷新事件
+			pullRefresh: {
+				container: '#pullrefreshIHDS',
+				up: {
+					callback: pullRefreshUp
+				}
+			}
+		});
+
+		function pullRefreshUp() {
+			mui('#pullrefreshIHDS').pullRefresh().enablePullupToRefresh();
+			setTimeout(function() {
+				if (total == pageSize) {
+					pageIndex++;
+//					console.log(pageIndex);
+					indexHealthDetails.initIndexHealthDetails(healthConsultationId,pageIndex,pageSize);
+					mui('#pullrefreshIHDS').pullRefresh().endPullupToRefresh();
+				} else {
+					return false;
+				}
+			}, 1500);
+		}
+	</script>
+
+</html>

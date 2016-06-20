@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			.mui-content {
+				text-align: center;
+			}
+			
+			.mui-content img {
+				margin: 30px 0 0;
+				height: 80px;
+			}
+			
+			.mui-content p {
+				color: #4A4A4A;
+				font-size: 16px;
+			}
+			
+			.mui-content h2 {
+				color: rgb(252, 94, 37);
+				font-size: 38px;
+				padding: 10px 0 20px;
+			}
+			
+			.a1 {
+				width: 40%;
+				margin: 0 auto;
+				border-radius: 20px;
+				text-align: center;
+				border: 1px solid #00B6F3;
+				height: 45px;
+				font-size: 20px;
+				line-height: 45px;
+				color: #00B6F3;
+				display: block;
+				margin-bottom: 20px;
+			}
+			
+			.a2 {
+				width: 90%;
+				margin: 0 auto;
+				background: #00b6f3;
+				height: 55px;
+				font-size: 24px;
+				line-height: 55px;
+				color: #fff;
+				display: block;
+				text-align: center;
+				margin-top: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="payOrderSucceedRebackID"></a>
+			<h1 class="mui-title">支付完成</h1>
+		</header>
+		<div class="mui-content">
+			<img src="../../img/pay/icon_payFinished.png" alt="" />
+			<p>支付已完成</p>
+			<h2 id="PayOrderSucceedPriceId">元</h2>
+			<a href="" class="a1" id="payOrderDetailsSee">查看订单</a>
+
+		</div>
+		<!--<a href="" class="a2" id="orderDetailsEvaluate">去评价</a>-->
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/pay/payOrderSucceed.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

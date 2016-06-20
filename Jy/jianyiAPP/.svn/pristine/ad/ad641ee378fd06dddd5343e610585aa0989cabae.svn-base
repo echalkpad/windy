@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			article {
+				background: #00b6f3;
+				padding: 15px;
+				color: #fff;
+				text-align: center;
+			}
+			
+			article h2 {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			
+			article p {
+				line-height: 40px;
+				color: #fff;
+			}
+			
+			.mui-content ul {
+				background: #fff;
+				margin: 0;
+				padding: 15px;
+				*zoom: 1;
+			}
+			
+			.mui-content ul:after {
+				content: " ";
+				clear: both;
+				display: table;
+			}
+			
+			.mui-content li {
+				list-style: none;
+				width: 50%;
+				float: left;
+				padding-left: 45px;
+			}
+			
+			.mui-content li:first-child {
+				border-right: 1px solid #ddd;
+				background: url(../../img/me/icon_my_hongbao.png) no-repeat scroll 8px 5px;
+				background-size: 25px 25px;
+			}
+			
+			.mui-content li:nth-child(2) {
+				background: url(../../img/me/icon_my_baodan.png) no-repeat scroll 8px 5px;
+				background-size: 25px 25px;
+			}
+			
+			h3 {
+				font-size: 16px;
+				line-height: 30px;
+			}
+			
+			.mui-content li p {
+				font-size: 16px;
+				color: #333;
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健e卡</h1>
+		</header>
+		<div class="mui-content">
+			<article>
+				<h2 id='card_balance'></h2>
+				<p>账户余额（元）</p>
+			</article>
+			<ul>
+				<li>
+					<h3>红包金额(元)</h3>
+					<p id="bonus_total"></p>
+				</li>
+				<li>
+					<h3>保单金额(元)</h3>
+					<p id="policy_balance"></p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/me/jeCard.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

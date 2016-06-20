@@ -1,0 +1,91 @@
+//提交预约
+mui(".btn").on('tap', '#clientsGeneticOrder', function() {
+	mui.openWindow({
+		id: 'geneticOrder',
+		url: "geneticOrder.html"
+	});
+})
+
+//选择地址
+mui(".mui-content").on('tap', '#clientsShippingAddress', function() {
+	mui.openWindow({
+		id: 'shippingAddress',
+		url: "shippingAddress.html"
+	});
+})
+
+
+
+
+/*性别&被检人*/
+mui.init();
+mui.ready(function() {
+	var userSex = new mui.PopPicker();
+	userSex.setData([{
+		value: 'nan',
+		text: '男'
+	}, {
+		value: 'nv',
+		text: '女'
+	}]);
+	var showSexButton = document.getElementById('clientsSex');
+	var sexResult = document.getElementById('clientsSexResult');
+	showSexButton.addEventListener('tap', function(event) {
+		userSex.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			s = s.replace("\"", "").replace("\"", "");
+			sexResult.innerText = s;
+		});
+	}, false);
+	//	被检人
+	var clientsPatient = new mui.PopPicker();
+		clientsPatient.setData([{
+			value: 'benren',
+			text: '我'
+		}, {
+			value: 'family',
+			text: '家人'
+		}]);
+		var showClientsPatientButton = document.getElementById('clientsPatient');
+		var clientsPatientResult = document.getElementById('clientsPatientResult');
+		showClientsPatientButton.addEventListener('tap', function(event) {
+			clientsPatient.show(function(items) {
+				var s = JSON.stringify(items[0].text);
+				s = s.replace("\"", "").replace("\"", "");
+				clientsPatientResult.value = s;
+			});
+		}, false);
+	
+});
+
+function hasClass(elements, cName) {
+	return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
+};
+
+function addClass(elements, cName) {
+	if (!hasClass(elements, cName)) {
+		elements.className += " " + cName;
+	};
+};
+
+function removeClass(elements, cName) {
+	if (hasClass(elements, cName)) {
+		elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), " ");
+	};
+};
+function att(e) {
+	var aLi = e.parentNode.children;
+	for (var i = 0; i < aLi.length; i++) {
+		removeClass(aLi[i], 'selector');
+		addClass(e, 'selector');
+	}
+}
+mui('.clientsStyle').on('tap', 'li', function() {
+	if (hasClass(this, 'selector')) {
+		removeClass(this, 'selector');
+	} else {
+		att(this);
+	}
+})
+
+

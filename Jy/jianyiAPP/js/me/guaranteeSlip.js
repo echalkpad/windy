@@ -1,0 +1,30 @@
+mui.plusReady(function() {
+	var newDate = localStorage.getItem('oneInfo');
+	jyapp.getApi({
+		method: 'Profile/cardinfo',
+		onsuccess: function(data) {
+//						console.log(JSON.stringify(data));
+			JSON.parse(newDate).jycardnumber == null ? card_balance.innerHTML = '0000000000000000' : card_balance.innerHTML = JSON.parse(newDate).jycardnumber;
+			var ohtml = document.getElementById("guaranteeSlipUI");
+			var odiv = '';
+			if(!data.data.policys.length){
+				return
+			}
+			for (var i = 0, len = data.data.policys.length; i < len; i++) {
+				odiv += '<li class="mui-table-view-cell">';
+				odiv += '<h3><span id="carName" style="float: left;color: #4A4A4A;">' + data.data.policys[i].name + '</span><span id="endtime" style="font-size: 14px;float: right;color: #9B9B9B;">' + commomUtil.stringToDate(data.data.policys[i].endtime,1) + '</span></h3>';
+				odiv += '<p><span id="carNum" style="float: left;clear: left;">' + data.data.policys[i].id + '</span><span id="enddatetime">' + commomUtil.stringToDate(data.data.policys[i].enddatetime)+ '</span></p>';
+				odiv += '</li>';
+				odiv += '<li class="mui-table-view-cell">';
+				odiv += '<h3 class="cz">充值：<span id="balance" style="color: #4A4A4A!important;">' + data.data.policys[i].balance + '</span>元<strong>余额：<span id="recharge">' + data.data.policys[i].recharge + '</span>元</strong></h3>';
+				odiv += '</li>';
+			}
+			ohtml.innerHTML = odiv;
+			//			var tpl = document.getElementById('tpl').innerHTML;
+			//			document.getElementById('guaranteeSlipUI').innerHTML = juicer(tpl, data.data);
+		},
+		onerror: function(e) {
+			plus.nativeUI.alert(e);
+		}
+	})
+})

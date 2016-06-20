@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content,.mui-table-view{
+				background: none;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.mui-table-view-cell {
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+				padding-top: 10px;
+				padding-bottom: 10px;
+				background:#fff;
+				color:#666;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				margin: initial;
+				padding: initial;
+			}
+			.healthExaminationOrderDetali-t {
+				margin: 0;
+				height: 40px;
+				padding: 0 15px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.healthExaminationOrderDetali-t span {
+				font-size: 15px;
+				float: right;
+			}
+			
+			.healthExaminationOrderDetali-c1 a {
+				margin-left: 0px!important;
+			}
+			
+			.healthExaminationOrderDetali-c1 a p {
+				color: #4A4A4A;
+				position: relative;
+				width: 70%;
+				left: 5em;
+				padding: 5px 0;
+			}
+			
+			.healthExaminationOrderDetali-c1 a p span {
+				color: #9B9B9B;
+				position: absolute;
+				left: -5em;
+			}
+			
+			.healthExaminationOrderDetali-c1 i {
+				font-style: normal!important;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.healthExaminationOrderDetali-b {}
+			
+			.healthExaminationOrderDetali-b p {
+				position: relative;
+				line-height: 2;
+				left: 5em;
+				color: #4A4A4A;
+			}
+			
+			.healthExaminationOrderDetali-b p span {
+				color: #9B9B9B;
+				position: absolute;
+				left: -5em;
+			}
+			
+			.healthExaminationOrderDetali-remark {}
+			
+			.healthExaminationOrderDetali-remark article {
+				padding: 15px 15px 5px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			textarea {
+				border: none;
+				outline: none;
+				font-size: 14px;
+			}
+			
+			textarea::-webkit-input-placeholder {
+				color: #4A4A4A;
+			}
+			
+			.healthExaminationOrderDetali-b1 textarea {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.ellipsis {
+				-webkit-line-clamp: inherit!important;
+				overflow: initial!important;
+			}
+			
+			.healthExaminationOrderDetali-coupons .mui-table-view-cell a {
+				margin-left: 0px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.healthExaminationOrderDetali-coupons .mui-table-view-cell a span {
+				margin-left: 1em
+			}
+			
+			.healthExaminationOrderDetali-pay,
+			.healthExaminationOrderDetali-appraise {
+				color: #fff;
+				background: rgba(255, 000, 000, .6);
+				border-radius: 5px;
+				display: block;
+				width: 90%;
+				margin: 30px auto 20px;
+				text-align: center;
+				padding: 10px 0;
+			}
+			
+			.healthExaminationOrderDetali-appraise {
+				background: #00B6F3;
+			}
+			
+			.healthExaminationOrderDetali-b1 a {
+				font-size: 14px;
+				color: #4A4A4A;
+				margin-left: 0!important
+			}
+			
+			.healthExaminationOrderDetali-b1 a span {
+				float: right;
+				margin-right: 15px;
+			}
+			
+			.shippingAddress{
+				margin-top:10px;
+			}
+			.shippingAddress h2{
+				float:none;
+				width:100%;
+				line-height:30px;
+				font-size: 14px;
+				color:#666;
+			}
+			.shippingAddress span{
+				margin-right:10px;
+			}
+			.shippingAddress strong{
+				font-weight:normal;
+			}
+			.shippingAddress p{
+				font-size: 13px;
+				text-overflow:ellipsis;
+				overflow:hidden;
+				white-space:nowrap;
+				padding-right:30px;
+				padding-left:20px;
+				background: url(../../../img/familyDoctor/icon_address.png) no-repeat scroll 5px center;
+				background-size:10px 14px;
+			}
+			.note-information{
+				margin-top:40px;
+				margin-bottom:10px;
+				color:#9B9B9B;
+				position: relative;
+				background:#fff;
+				padding:11px 15px;
+				font-size:14px;
+				height:85px;
+			}
+			.note-information h3{
+				position:absolute;
+				top:-28px;
+				font-size:14px;
+			}
+			.coupons .mui-table-view-cell a,.healthExaminationOrderDetali-b1 a{
+				padding:inherit!important;
+				margin:-11px -15px!important;
+			}
+			.xing {
+			    background: url(../../../img/pay/icon_star.png) no-repeat;
+			    background-size: 20px 20px;
+			    width: 20px;
+			    height: 20px;
+			    float:right;
+			    margin-right:5px!important;
+			}
+			.xing-active {
+			    background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基因检测预约详情</h1>
+		</header>
+		<div class="mui-content">
+			<!--待确认的-->
+			<ul class="mui-table-view" style="display: none;" id="geneticOrderDetail1">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="dqrOrderNoId">
+					<article>订单编号：123123213 <span class="red">待客服确认</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1" id="dqrPackageNameid">
+					<a class="mui-navigate-right">
+						<p><span>选择套餐</span>尚未确定</p>
+						<p><span>套餐价格</span>尚未确定</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b" id="dqrryInfoId">
+					<p><span>被检人</span>李云青 ( 女 | 32岁 )<br>13112341234</p>
+				</li>
+				<li class="mui-table-view-cell shippingAddress" id="dqrgeneticAddressId">
+					<h2>收件人：<span>丁亚东</span><strong>13764883492</strong></h2>
+					<p>上海市杨浦区铁岭路32号同叶大厦16层1601</p>
+				</li>
+				<!--<li class="note-information" id="dqrCommonInfoId">
+					<h3>备注信息</h3>
+					这里是带过来的备注信息文字
+				</li>-->
+			</ul>
+
+			<!--待支付的-->
+			<ul class="mui-table-view"  style="display: none;" id="geneticOrderDetail2">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="dzfGeneticOrderDetailId">
+					<article>订单编号：123123213 <span class="red">待支付</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1" id="dzfGeneticOrderDetailPackageid">
+					<a class="mui-navigate-right">
+						<p><span>选择套餐</span>职场白领套餐</p>
+						<p><span>套餐价格</span><i>￥123</i></p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b" id="dzfGeneticOrderDetailrenInfo">
+					<p><span>被检人</span>李云青 ( 女 | 32岁 )<br>13112341234</p>
+				</li>
+				<li class="mui-table-view-cell shippingAddress" id="dzfGeneticOrderDetailAddressId">
+					<h2>收件人：<span>丁亚东</span><strong>13764883492</strong></h2>
+					<p>上海市杨浦区铁岭路32号同叶大厦16层1601</p>
+				</li>
+			</ul>
+			<!--预约成功-->
+			<ul class="mui-table-view" id="geneticOrderDetail3" style="display: none;">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="yycgGeneticOrderDetailId">
+					<article>订单编号：123123213 <span class="red">预约成功</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="yycgGeneticOrderDetailPackageId">
+					<a class="">
+						<p><span>选择套餐</span>职场白领套餐</p>
+						<p><span>被检人</span>李云迪</p>
+						<p><span>实付金额</span><i>￥123</i></p>
+						<p><span>体检取样</span>已完成</p>
+						<p><span>体检报告</span>已送达</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="yycgGeneticOrderDetailTimeHtml">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+			</ul>
+			<!--待评价的-->
+			<ul class="mui-table-view" style="display: block;" id="geneticOrderDetail4">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="dpjGeneticOrderDetailId">
+					<article>订单编号：123123213 <span class="red">待评价</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1" id="dpjGeneticOrderDetailPackageId">
+					<a class="">
+						<p><span>选择套餐</span>职场白领套餐</p>
+						<p><span>被检人</span>李云迪</p>
+						<p><span>实付金额</span><i>￥123</i></p>
+						<p><span>体检取样</span>已完成</p>
+						<p><span>体检报告</span>已送达</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="dpjGeneticOrderDetailTimeHtml">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b1 border-t">
+					<a class="xingxing">
+						评价<span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b1 border-t">
+					<textarea name="" rows="" cols="" placeholder='亲，您对本次体检还满意吗？留下您的评论吧～' id="pjGeneticcOrderDetailCommonsId"></textarea>
+				</li>
+			</ul>
+			<!--已完成的-->
+			<ul class="mui-table-view" style="display: none;" id="geneticOrderDetail5">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="ywcGeneticOrderDetailId">
+					<article>订单编号：123123213 <span>已完成</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="ywcGeneticOrderDetailPackageId">
+					<a class="">
+						<p><span>选择套餐</span>职场白领套餐</p>
+						<p><span>被检人</span>李云迪</p>
+						<p><span>实付金额</span><i>￥123</i></p>
+						<p><span>体检取样</span>已完成</p>
+						<p><span>体检报告</span>已送达</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="ywcGeneticOrderDetailTimeHtml">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b1 border-t">
+					<a class="" id="ywcGeneticOrderDetailXingId">
+						评价 <span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b1 border-t">
+					<textarea disabled="disabled" name="" rows="" cols="" placeholder='亲，您对本次体检还满意吗？留下您的评论吧～' id="ywcGeneticOrderDetailCommons"></textarea>
+				</li>
+			</ul>
+			<!--已取消-->
+			<ul class="mui-table-view" style="display: none;" id="geneticOrderDetail6">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="yqxOrderNoId">
+					<article>订单编号：123123213 <span class="red">已取消</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1" id="yqxPackageNameid">
+					<a class="mui-navigate-right">
+						<p><span>选择套餐</span>尚未确定</p>
+						<p><span>套餐价格</span>尚未确定</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-b" id="yqxryInfoId">
+					<p><span>被检人</span>李云青 ( 女 | 32岁 )<br>13112341234</p>
+				</li>
+				<li class="mui-table-view-cell shippingAddress" id="yqxgeneticAddressId">
+					<h2>收件人：<span>丁亚东</span><strong>13764883492</strong></h2>
+					<p>上海市杨浦区铁岭路32号同叶大厦16层1601</p>
+				</li>
+				<!--<li class="note-information">
+					<h3>备注信息</h3>
+					这里是带过来的备注信息文字
+				</li>-->
+			</ul>
+			<!--已退款-->
+			<ul class="mui-table-view" style="display: none;" id="geneticOrderDetail7">
+				<li class="mui-table-view-cell healthExaminationOrderDetali-t" id="ytkGeneticOrderDetailId">
+					<article>订单编号：123123213 <span class="red">已退款</span></article>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="ytkGeneticOrderDetailPackageId">
+					<a class="">
+						<p><span>选择套餐</span>职场白领套餐</p>
+						<p><span>被检人</span>李云迪</p>
+						<p><span>实付金额</span><i>￥123</i></p>
+						<p><span>体检取样</span>未完成</p>
+						<p><span>体检报告</span>未完成</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="ytkGeneticOrderDetailTimeHtml">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell healthExaminationOrderDetali-c1 border-t" id="ytkGeneticOrderDetailtuikHtml">
+					<a class="">
+						<p><span>已退金额</span><i>￥123</i></p>
+						<p><span>退款转入</span>支付宝</p>
+						<p><span>流水号</span>232311244</p>
+						<p><span>操作时间</span>2016-07-01</p>
+					</a>
+				</li>
+			</ul>
+			
+
+		</div>
+
+		<div class="healthExaminationOrderDetali-remark" id="geneticOrderDetail-remark" style="display: none;">
+			<article>备注信息</article>
+			<textarea name="" rows="" cols="" placeholder='写写您对体检的要求，客服会根据您的要求推荐' id="geneticCommonInfoId"></textarea>
+		</div>
+		<div class="healthExaminationOrderDetali-coupons" style="display: none;" id="geneticOrderDetail-coupons">
+			<ul class="mui-table-view coupons">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						优惠劵
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class=''>
+						实付金额<span class="red" id="dzfGeneticOrderDetailPayId">￥123</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="" class="healthExaminationOrderDetali-pay" style="display: none;" id="geneticOrderDetail-pay">支付</a>
+		<a href="" class="healthExaminationOrderDetali-appraise" style="display: none;" id="geneticOrderDetail-appraise">评价</a>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/geneticOrderDetali.js"></script>
+
+</html>

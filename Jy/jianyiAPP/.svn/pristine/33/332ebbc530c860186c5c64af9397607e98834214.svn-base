@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			body,
+			html,
+			.mui-content {
+				background: #fff;
+			}
+			
+			.medicationSearch {
+				overflow: hidden;
+				padding: 7px 0 0;
+				z-index: 1001;
+				clear: left;
+				height: 40px;
+				line-height: 40px;
+				position: fixed;
+				display: block;
+				top: 50px;
+				width: 100%;
+				background: #fff;
+			}
+			
+			.medicationSearch .search {
+				z-index: 9;
+				position: absolute;
+				top: 13px;
+				left: 35px;
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: url(../../../img/icon_search.png) no-repeat scroll top left;
+				background-size: cover;
+			}
+			
+			.medicationSearch input {
+				position: absolute;
+				background: rgb(241, 241, 240);
+				border-radius: 16px;
+				border: 0;
+				margin: 0 5%;
+				height: 30px;
+				width: 90%!important;
+				line-height: 30px;
+				padding-left: 40px;
+				font-size: 15px;
+				color: #444;
+			}
+			.mui-content ul{
+				border-top:1px solid rgba(000,000,000,.05);
+				margin-top: 47px;
+				list-style: none;
+				text-align: center;
+				overflow: hidden;
+				padding-left: 0;
+			}
+			.mui-content ul li{
+				border-right:1px solid rgba(000,000,000,.05);
+				border-bottom:1px solid rgba(000,000,000,.05);
+				width: 33.33%;
+				float: left;
+				box-sizing: border-box;
+			}
+			.mui-content ul li:nth-child(3n){
+				border-right:none;
+			}
+			.mui-content ul li img{
+				margin-top: 10px;
+				width: 86px;
+				height:65px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id=""></a>
+			<h1 class="mui-title">食物库</h1>
+		</header>
+		<div class="mui-content">
+			<section class="medicationSearch">
+				<label for="foodSearch" class="search"></label>
+				<input id="foodSearch" type="text" name="" placeholder="请输入食物名称，如:绿豆" />
+			</section>
+			<ul id="foodLibUl">
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_1_1.png" />
+					<p>谷薯类</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_1_2.png" />
+					<p>豆类</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_1_3.png" />
+					<p>蔬菜</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_2_1.png" />
+					<p>菌藻</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_2_2.png" />
+					<p>水果</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_2_3.png" />
+					<p>干果</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_3_1.png" />
+					<p>畜产</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_3_2.png" />
+					<p>禽类</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_3_3.png" />
+					<p>乳蛋类</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_4_1.png" />
+					<p>水产</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_4_2.png" />
+					<p>甜品饮料</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_4_3.png" />
+					<p>酒类</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_5_1.png" />
+					<p>调味品</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_5_2.png" />
+					<p>药材</p>
+				</li>
+				<li><img src="../../../img/healthy/dietNutrition/shiwuku_5_3.png" />
+					<p>食用油</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/healthy/dietNutrition/foodLib.js" type="text/javascript" charset="utf-8"></script>
+</html>

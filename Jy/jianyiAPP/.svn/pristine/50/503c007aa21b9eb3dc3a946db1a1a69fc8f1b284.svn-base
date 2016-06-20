@@ -1,0 +1,44 @@
+mui.plusReady(function() {
+	myOrder.init();
+})
+
+var myOrder = {
+	init: function() {
+		var url = 'Profile/OrderRecordSummariz';
+		jyapp.getApi({
+			method: url,
+			onsuccess: function(data) {
+//				console.log(JSON.stringify(data))
+				document.getElementById("docOnlin1").innerText = data.data.docOnlin.docOnlin1;
+				document.getElementById("docOnlin2").innerText = data.data.docOnlin.docOnlin2;
+				document.getElementById("treat1").innerText = data.data.treat.treat1;
+				document.getElementById("treat2").innerText = data.data.treat.treat2;
+				document.getElementById("treat3").innerText = data.data.treat.treat3;
+				document.getElementById("tumour1").innerText = data.data.tumour.tumour1;
+				document.getElementById("tumour2").innerText = data.data.tumour.tumour2;
+				document.getElementById("tumour3").innerText = data.data.tumour.tumour3;
+				document.getElementById("tumour4").innerText = data.data.tumour.tumour4;
+			},
+			onerror: function(e) {
+				mui.toast(e.msg);
+			}
+		});
+	},
+	myOrderBackCell : function(){
+		var mianPage = plus.webview.getLaunchWebview();
+		mianPage.show();
+		mui.openWindow({
+			id : mianPage.id,
+			url : mianPage.uri,
+			extras : {
+				index:4
+			}
+		});
+	}
+}
+
+//绑定回退事件
+document.getElementById("myOrderBackCellId").addEventListener("tap",myOrder.myOrderBackCell);
+mui.back = function(e){
+	myOrder.myOrderBackCell();
+}

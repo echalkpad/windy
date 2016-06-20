@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{
+				background:none;
+				padding-bottom:30px;
+			}
+			.mui-table-view{
+				margin-bottom: 15px;
+			}
+			.mui-table-view{
+				overflow: hidden;
+			}
+			.mui-table-view h2{
+				font-size:14px;
+				float:left;
+				width:75px;
+				line-height:21px;
+				color:#777;
+			}
+			.mui-table-view strong{
+				font-weight:normal;
+				color:#f00;
+				font-size:14px;
+			}
+			.mui-table-view span{
+				float:left;
+				font-size:14px;
+				color:#444;
+				display:inline-block;
+				vertical-align:middle;
+			}
+			.lettersapcing2 h2{
+				letter-spacing:12px;
+			}
+			.lettersapcing3 h2{
+				letter-spacing:7px;
+			}
+			.btn{
+				margin:20px 15px;
+			}
+			.btn button{
+				width:48%;
+				border:0;
+				float:left;
+				line-height:28px;
+				background:#9b9b9b;
+				color:#fff;
+			}
+			.btn .btn-ok{
+				float:right;
+				background:#ff5e5e ;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="orderDetailsPayReBackID"></a>
+			<h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><h2>订单状态</h2><strong id="slowOrderPayStrongID">待支付</strong></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>医&nbsp;生</h2><span id="slowOrderPaySpanNameID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊时间</h2><span id="slowOrderPaySpanTimeID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊地址</h2><span id="slowOrderPayAddressID"></span></li>
+				<input type="hidden" id="slowOrderPayOrderNoID" value="" />
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>就诊人</h2><span id="slowOrderPayPatientID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>身份证</h2><span id="slowOrderPayIdNumberID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>手&nbsp;机</h2><span id="slowOrderPayPhoneID"></span></li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>咨询费</h2><span id="slowOrderPayConsultingPriceID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>保证金</h2><span id="slowOrderPayEnsureID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>现金券</h2><span id="slowOrderPayCashCouponID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>合&nbsp;计</h2><strong id="slowOrderPayTotalPriceID"></strong></li>
+			</ul>
+			<div class="btn">
+				<button type="button" class="btn-cancel" id="slowCancel">取消</button>
+				<button type="submit" class="btn-ok" id="slowSubmitPayID">支付</button>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/orderDetailsPay.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

@@ -1,0 +1,52 @@
+var payinfo = "";
+document.addEventListener('plusready', function() {
+	checkId = 1;
+	var self = plus.webview.currentWebview();
+	payinfo = self.payinfo;
+	//初始化订单详情页面数据
+	payOrderSucceed.initpayOrderSucceed(payinfo);
+});
+
+var payOrderSucceed = {
+	initpayOrderSucceed : function(payinfo){
+		document.getElementById("PayOrderSucceedPriceId").innerHTML = payinfo.totalfee+"元";
+	},
+	jumpOrderList : function(){
+		if(payinfo && payinfo.type =="cancerOrder"){
+			commomUtil.closeWebviewById("cancerOrderList");
+			mui.openWindow({
+				id: 'cancerOrderList',
+				url: "../cancerExperts/cancerOrderList.html",
+				createNew: true,
+				extras: {
+					index: 2
+				}
+			});
+		}else if(payinfo && payinfo.type == "familyDoctor"){
+			var config = {
+				id : "consultingRecords",
+				method : "newIdsConsultingRecord",
+				extras : {
+					backurl: backurl,
+					backid : backid,
+					index: 1
+				}
+			}
+			commomUtil.backWebView(config);
+		}else if(payinfo && payinfo.type == "slowOrder"){
+			commomUtil.closeWebviewById("SlowOrderList");
+			mui.openWindow({
+				id: 'SlowOrderList',
+				url: "../SlowExperts/slowOrderList.html",
+				createNew: true,
+				extras: {
+					index: 1
+				}
+			});
+		}
+	}
+}
+//绑定返回相应的订单列表页->>查看订单
+document.getElementById('payOrderSucceedRebackID').addEventListener('click', payOrderSucceed.jumpOrderList);
+//肿瘤专家支付成功->>查看订单
+mui(".mui-content").on('tap', '#payOrderDetailsSee', payOrderSucceed.jumpOrderList);

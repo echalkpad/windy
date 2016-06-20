@@ -1,0 +1,70 @@
+var healthExaminationPackage = {};
+//初始化
+mui.plusReady(function() {
+	healthExaminationPackage.selectInit();
+})
+
+healthExaminationPackage.selectInit = function() {
+	//购买选择
+	var chooseBuy = new mui.PopPicker();
+	chooseBuy.setData([{
+		"value": 1,
+		"text": "男性"
+	}, {
+		"value": 2,
+		"text": "女已婚"
+	}, {
+		"value": 3,
+		"text": "女未婚"
+	}]);
+	var ohealthExaminationPackageBuy = document.getElementById('healthExaminationPackageBuy');
+	var ohealthExaminationPackageBuyResult = document.getElementById('healthExaminationPackageBuyResult');
+	ohealthExaminationPackageBuy.addEventListener('tap', function(event) {
+		chooseBuy.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			var sexid = JSON.stringify(items[0].id);
+			s = s.replace("\"", "").replace("\"", "");
+			ohealthExaminationPackageBuyResult.innerText = s;
+			ohealthExaminationPackageBuyResult.setAttribute('chooseBuyId', sexid);
+		});
+	}, false);
+}
+
+//检测项目
+mui('.mui-table-view').on('tap', '#healthExaminationPackageTestItems', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageTestItems',
+			url: "healthExaminationPackageTestItems.html"
+		})
+	})
+	//常见问题
+mui('.mui-table-view').on('tap', '#healthExaminationPackageProblems', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageProblems',
+			url: "healthExaminationPackageProblems.html"
+		})
+	})
+	//历史评价
+mui('.mui-table-view').on('tap', '#healthExaminationPackageEvaluation', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageEvaluation',
+			url: "healthExaminationPackageEvaluation.html"
+		})
+	})
+	//网点选择
+mui('.mui-table-view').on('tap', '#healthExaminationPackageNet', function() {
+		mui.openWindow({
+			id: 'indexHealthNetwork',
+			url: "../../healthNetwork/indexHealthNetwork.html",
+			extras: {
+				"mainMedication": 43
+			}
+		})
+	})
+	//立即预约
+mui('body').on('tap', '#healthExaminationInformation', function() {
+	mui.openWindow({
+		id: 'healthExaminationInformation',
+		url: "healthExaminationInformation.html"
+	})
+})

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			.xing-active {
+				background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+			
+			.xing {
+				background: url(../../../img/pay/icon_star.png) no-repeat;
+				background-size: 16px 16px;
+				width: 16px;
+				height: 16px;
+				display:block;
+				float:left;
+				margin-right:4px;
+			}
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.mui-table-view-cell {
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				margin: initial;
+				padding: initial;
+			}
+			.spaOrderDetali-t {
+				margin: 0;
+				height: 40px;
+				padding: 0 15px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.spaOrderDetali-t span {
+				font-size: 15px;
+				float: right;
+			}
+			
+			.spaOrderDetali-c1 a {
+				margin-left: 0px!important;
+			}
+			
+			.spaOrderDetali-c1 a p {
+				color: #4A4A4A;
+				position: relative;
+				width: 70%;
+				left: 5em;
+				padding: 5px 0;
+			}
+			
+			.spaOrderDetali-c1 a p span {
+				color: #9B9B9B;
+				position: absolute;
+				left: -5em;
+			}
+			
+			.spaOrderDetali-c1 i {
+				font-style: normal!important;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.spaOrderDetali-b {}
+			
+			.spaOrderDetali-b p {
+				position: relative;
+				line-height: 2;
+				left: 5em;
+				color: #4A4A4A;
+			}
+			
+			.spaOrderDetali-b p span {
+				color: #9B9B9B;
+				position: absolute;
+				left: -5em;
+			}
+			
+			.mui-content {
+				background: #fff;
+			}
+			
+			.spaOrderDetali-remark {}
+			
+			.spaOrderDetali-remark article {
+				padding: 15px 15px 5px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			textarea {
+				border: none;
+				outline: none;
+				font-size: 14px;
+			}
+			
+			textarea::-webkit-input-placeholder {
+				color: #4A4A4A;
+			}
+			
+			.spaOrderDetali-b1 textarea {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.ellipsis {
+				-webkit-line-clamp: inherit!important;
+				overflow: initial!important;
+			}
+			
+			.spaOrderDetali-coupons .mui-table-view-cell a {
+				margin-left: 0px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			.spaOrderDetali-coupons .mui-table-view-cell a span {
+				margin-left: 1em
+			}
+			
+			.spaOrderDetali-pay,
+			.spaOrderDetali-appraise {
+				color: #fff;
+				background: rgba(255, 000, 000, .6);
+				border-radius: 5px;
+				display: block;
+				width: 90%;
+				margin: 30px auto 20px;
+				text-align: center;
+				padding: 10px 0;
+			}
+			
+			.spaOrderDetali-appraise {
+				background: #00B6F3;
+			}
+			
+			.spaOrderDetali-b1 a {
+				font-size: 14px;
+				color: #4A4A4A;
+				margin-left: 0!important
+			}
+			
+			.spaOrderDetali-b1 a span {
+				float: right;
+				margin-right: 15px;
+			}
+			.coupons .mui-table-view-cell a,.spaOrderDetali-b1 a{
+				padding:inherit!important;
+				margin:-11px -15px!important;
+			}
+			.xing {
+			    background: url(../../../img/pay/icon_star.png) no-repeat;
+			    background-size: 20px 20px;
+			    width: 20px;
+			    height: 20px;
+			    float:right;
+			    margin-right:5px!important;
+			}
+			.xing-active {
+			    background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">疗养预约详情</h1>
+		</header>
+		<div class="mui-content">
+			<!--待支付的-->
+			<ul class="mui-table-view" style="display: none;" id="spaOrderDetali1">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="red">待支付</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="mui-navigate-right">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>套餐价格</span><i>￥123</i></p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b">
+					<p><span>疗养人</span>李云青 ( 女 | 未婚 )<br>13112341234<br>342425199112311231</p>
+				</li>
+			</ul>
+
+			<!--待评价的-->
+			<ul class="mui-table-view" style="display: block;" id="spaOrderDetali2">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="">待评价</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>疗养人</span>职场白领套餐</p>
+						<p><span>疗养金额</span><i>￥123</i></p>
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<a class="xingxing">
+						评价 <span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<textarea name="" rows="" cols="" placeholder='亲，您对本次体检还满意吗？留下您的评论吧～'></textarea>
+				</li>
+			</ul>
+			<!--已完成的-->
+			<ul class="mui-table-view" style="display: none;" id="spaOrderDetali3">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="">已完成</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>疗养人</span>职场白领套餐</p>
+						<p><span>疗养金额</span><i>￥123</i></p>
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<a class="">
+						评价 <span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<textarea disabled="disabled" name="" rows="" cols="" placeholder='亲，您对本次体检还满意吗？留下您的评论吧～'></textarea>
+				</li>
+			</ul>
+			<!--已取消的-->
+			<ul class="mui-table-view" style="display: none;" id="spaOrderDetali5">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="">已取消</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>疗养人</span>职场白领套餐</p>
+						<p><span>疗养金额</span><i>￥123</i></p>
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<a class="">
+						评价 <span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-b1 border-t">
+					<textarea disabled="disabled" name="" rows="" cols="" placeholder='亲，您对本次体检还满意吗？留下您的评论吧～'></textarea>
+				</li>
+			</ul>
+			<!--已退款的-->
+			<ul class="mui-table-view" style="display: none;" id="spaOrderDetali6">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="">已退款</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>疗养人</span>职场白领套餐</p>
+						<p><span>疗养金额</span><i>￥123</i></p>
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>已退金额</span><i>￥123</i></p>
+						<p><span>退款转入</span>2012-12-12 16:12:12</p>
+						<p><span>流水单号</span>2012-12-12 16:12:12</p>
+						<p><span>操作时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+			</ul>
+			<!--预约成功-->
+			<ul class="mui-table-view" style="display: none;" id="spaOrderDetali4">
+				<li class="mui-table-view-cell spaOrderDetali-t">
+					<article>订单编号：123123213 <span class="red">预约成功</span></article>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1">
+					<a class="">
+						<p><span>疗养套餐</span>职场白领套餐</p>
+						<p><span>疗养人</span>职场白领套餐</p>
+						<p><span>疗养金额</span><i>￥123</i></p>
+						<p><span>疗养时间</span>2012-12-12 上午</p>
+						<p><span>疗养机构</span>职场白领套餐</p>
+						<p class="ellipsis"><span>疗养地址</span>职场白职场职场白职场白领套餐职场白领套餐职场白领套餐领套餐白领套餐职场白领套餐职场白领套餐领套餐</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell spaOrderDetali-c1 border-t">
+					<a class="">
+						<p><span>交易号码</span>123232328093829</p>
+						<p><span>创建时间</span>2012-12-12 16:12:12</p>
+						<p><span>确认时间</span>2012-12-12 16:12:12</p>
+						<p><span>付款时间</span>2012-12-12 16:12:12</p>
+						<p><span>完成时间</span>2012-12-12 16:12:12</p>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="spaOrderDetali-remark" id="spaOrderDetali-remark" style="display: none;">
+			<article>备注信息</article>
+			<textarea name="" rows="" cols="" placeholder='写写您对体检的要求，客服会根据您的要求推荐'></textarea>
+		</div>
+		<div class="spaOrderDetali-coupons" style="display: none;" id="spaOrderDetali-coupons">
+			<ul class="mui-table-view coupons">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						优惠劵
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class=''>
+						实付金额<span class="red">￥123</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a href="" class="spaOrderDetali-pay" style="display: none;" id="spaOrderDetali-pay">支付</a>
+		<a href="" class="spaOrderDetali-appraise" style="display: none;" id="spaOrderDetali-appraise">评价</a>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/healthy/spa/spaOrderDetali.js"></script>
+
+</html>

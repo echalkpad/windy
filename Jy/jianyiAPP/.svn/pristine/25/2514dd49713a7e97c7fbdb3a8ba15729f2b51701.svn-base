@@ -1,0 +1,94 @@
+var newDate = JSON.parse(localStorage.getItem("oneInfo"));
+mui.plusReady(function() {
+	onBulr();
+	if (newDate.phone == null) {
+		document.querySelector('.mui-title').innerText = '绑定手机';
+		document.querySelector(".modifyphone2").style.display = 'block';
+		return
+	}
+	var ophone = document.getElementById("ModifyPhone");
+	document.querySelector(".modifyphone1").style.display = 'block';
+	newDate.phone == null || newDate.phone == '' ? ophone.innerHTML = '无' : ophone.innerHTML = newDate.phone.slice(0, 3) + '****' + newDate.phone.slice(7, 11);
+})
+
+mui('.mui-content').on('tap', '.sedPhoneCod', function() {
+	getPhoneCod()
+});
+
+function onBulr() {
+	var input = document.getElementsByTagName('input')[0];
+	var val = document.getElementsByTagName('input')[0].value;
+	input.focus();
+	input.value = '';
+	input.value = val;
+}
+
+function getPhoneCod() {
+	var oldPhoneCod = document.getElementById("oldPhoneCod");
+	var password0 = document.getElementById("password");
+	var newPhone = document.getElementById("newPhone");
+	var newPhoneCod = document.getElementById("newPhoneCod");
+	var newPhone1 = document.getElementById("newPhone1");
+	var newPhoneCod1 = document.getElementById("newPhoneCod1");
+	var password1 = document.getElementById("password1");
+	var url = 'Profile/ChangeMobile';
+	var data = '';
+	var reg = /0?(13|14|15|18|17)[0-9]{9}/,
+		data = 'pwd=' + password1.value.toString() + '&phone=' + newPhone1.value.toString() + '&checkpwd=1&authcode=' + newPhoneCod1.value.toString();
+	if (oldPhoneCod.value == '' || password0.value == '' || newPhone.value == '' || newPhoneCod.value == '' || newPhone1.value == '' || newPhoneCod1.value == '' || password1.value == '') {
+		mui.toast('请填写页面');
+		return false
+	}
+	if (!reg.test(newPhone.value) || !reg.test(newPhone1.value)) {
+		mui.toast('手机号码格式不正确！');
+		return false
+	}
+	if (newDate.phone != null) {
+		data = 'pwd=' + password0.value.toString() + '&phone=' + newPhone.value.toString() + '&checkpwd=1&authcode=' + newPhoneCod.value.toString() + '&oldPhone=' + newDate.phone.toString() + '&oldPhoneAuthcode=' + oldPhoneCod.value.toString();
+	}
+	console.log(data);
+	//	jyapp.getApi({
+	//		method: url,
+	//		data: data,
+	//		onsuccess: function(data) {
+	//			console.log(JSON.stringify(data));
+	//		},
+	//		onerror: function(e) {
+	//			alert(e);
+	//		}
+	//	});
+}
+
+function SmsSend(phone) {
+	phone.style.backgroundColor = '#ccc';
+	var ophone = phone.parentNode.querySelector('input').value;
+	var url = 'sms/send';
+	var data = 'mobile=' + ophone;
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			mui.toast(data.msg);
+		},
+		onerror: function(e) {
+			alert(e);
+		}
+	});
+}
+
+function SmsSend2() {
+	phone.style.backgroundColor = '#ccc';
+	var ophone = newDate.phone;
+	var url = 'sms/send';
+	var data = 'mobile=' + ophone;
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			mui.toast(data.msg);
+		},
+		onerror: function(e) {
+			mui.toast(e.msg);
+		}
+	});
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-table-view{
+				overflow: hidden;
+				margin-bottom:15px;
+			}
+			.mui-table-view h2{
+				font-size:14px;
+				float:left;
+				width:75px;
+				line-height:21px;
+				color:#777;
+			}
+			.mui-table-view strong{
+				font-weight:normal;
+				color:#f00;
+				font-size:14px;
+			}
+			.mui-table-view span{
+				float:left;
+				font-size:14px;
+				color:#444;
+				display:inline-block;
+				vertical-align:middle;
+			}
+			.lettersapcing2 h2{
+				letter-spacing:12px;
+			}
+			.lettersapcing3 h2{
+				letter-spacing:7px;
+			}
+			.btn{
+				margin:20px 15px;
+			}
+			.btn .mui-btn{
+				font-size:16px;
+				color:rgba(255,255,255,.8);
+				background:#00b6f3;
+				border:0;
+				padding:0;
+				line-height:40px;
+			}
+			.border-b{border:0;}
+			.doc-evaluation {
+				font-size: 14px;
+			}
+			
+			.doc-evaluation span {
+				float: right;
+			}
+			
+			.border-b li {
+				color: #9B9B9B;
+			}
+			
+			
+			
+			.xing {
+				background: url(../../img/pay/icon_star.png) no-repeat;
+				background-size: 20px 20px;
+				width: 20px;
+				height: 20px;
+			}
+			.xing-active {
+				background-image: url(../../img/pay/icon_star_fills.png)!important;
+			}
+			textarea {
+				border: none;
+				outline: none;
+				color: #9B9B9B;
+				font-size: 14px;
+				margin:0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="orderDetailsEvaluateBackCellId"></a>
+			<h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><h2>订单状态</h2><strong id="slowOrderDetailsEvaluateStrongid">待评价</strong></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>医&nbsp;生</h2><span id="slowOrderDetailsEvaluateSpanNameID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊时间</h2><span id="slowOrderDetailsEvaluateSpanTimeID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊地址</h2><span id="slowOrderDetailsEvaluateAddressID"></span></li>
+				<input type="hidden" id="slowOrderDetailsEvaluateOrderNoID" value="" />
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>就诊人</h2><span id="slowOrderDetailsEvaluatePatientID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>身份证</h2><span id="slowOrderDetailsEvaluateIdNumberID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>手&nbsp;机</h2><span id="slowOrderDetailsEvaluatePhoneID"></span></li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>咨询费</h2><span id="slowOrderDetailsEvaluateConsultingPriceID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>保证金</h2><span id="slowOrderDetailsEvaluateEnsureID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>现金券</h2><span id="slowOrderDetailsEvaluateCashCouponID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>合&nbsp;计</h2><strong id="slowOrderDetailsEvaluateTotalPriceID"></strong></li>
+			</ul>
+			<ul class="mui-table-view border-b doc-evaluation">
+				<li class="mui-table-view-cell" id="xingxing">
+					就诊评价 <span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>
+				</li>
+			</ul>
+			
+			<textarea name="" rows="3" cols="" id="slowOrderEvaluationTextarea" oninput="getnum (event)" maxlength="100" placeholder="对医生的诊疗还满意吗？分享下吧！" onkeyup="commomUtil.validateKeyUp(this,1);"></textarea>
+			<div class="btn">
+				<a href="" class="mui-btn mui-btn-block" id="slowEvaluateSubmitID">评价</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/orderDetailsEvaluate.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

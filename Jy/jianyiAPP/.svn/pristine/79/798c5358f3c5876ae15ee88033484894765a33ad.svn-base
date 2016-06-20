@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			.mui-content{background:none;}
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-segmented-control {
+				background-color: #fff;
+				border: none;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				position: relative;
+				background-color: #fff;
+				color: #00B6F3;
+
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				position: absolute;
+				content: '';
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				border-bottom: 1px solid #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				background-color: #fff;
+				color: #000;
+				border: none
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view-cell h2 {
+				letter-spacing: -1px;
+				overflow: hidden;
+			}
+			.mui-table-view-cell h2 span{
+				line-height:34px;
+				float:left;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(1) {
+				float: left;
+				font-size: 16px;
+			}
+			
+			.mui-ios .mui-table-view-cell {
+				border-bottom: 1px solid rgb(242, 246, 249);
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				margin-left: 10px;
+				font-size: 14px;
+
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(3) {
+				font-size: 13px;
+				color: #8f8f94;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-media-body p {
+				line-height:20px;
+				font-size:13px;
+			}
+			
+			.mui-media .pay {
+				text-align: center;
+				padding:0 15px;
+				line-height:20px;
+				display: block;
+				position: absolute;
+				right:0;
+				top:6px;
+				border:1px solid #f00;
+				color: #f00;
+				border-radius:3px;
+			}
+			
+			.pay-end {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: rgb(240, 145, 53);
+			}
+			.mui-media{
+				position: relative;
+			}
+			.pay-end img{
+				position: absolute;
+				bottom:-10px;
+				right:0;
+				width: 70px;
+			}
+			.mui-table-view{background:none;}
+			.mui-table-view-cell{
+				margin-bottom:10px;
+				background:#fff;
+			}
+			.mui-table-view-cell small{
+				display:block;
+				font-size:12px;
+				color:#666;
+				margin-top:20px;
+				padding-top:8px;
+				line-height:20px;
+				border-top:1px solid #eee;
+				position: relative;
+			}
+			.mui-table-view-cell small strong{
+				font-weight:normal;
+				color:#f00;
+			}
+			.mui-table-view-cell small em{
+				font-style:normal;
+				float: right;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="cancerOrderListBackCellId"></a>
+			<h1 class="mui-title">肿瘤</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div id="segmentedControl" class="mui-segmented-control border-b">
+				<a class="mui-control-item mui-active" href="#item1">
+				待确认
+				</a>
+				<a class="mui-control-item" href="#item2">
+				待支付
+				</a>
+				<a class="mui-control-item" href="#item3">
+				待就诊
+				</a>
+				<a class="mui-control-item" href="#item4">
+				待评价
+				</a>
+				<a class="mui-control-item" href="#item5">
+				已完成
+				</a>
+			</div>
+
+			<div id="item1" class="mui-control-content mui-active">
+				<ul class="mui-table-view" id="canccerConfirmed">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院 <span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><em>等待客服确认</em></small>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院 <span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><em>等待客服确认</em></small>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerOrderListzwddfirmedId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+			<div id="item2" class="mui-control-content">
+				<ul class="mui-table-view" id="non-payment">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay">支付</span></small>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay">支付</span></small>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerOrderListzwddpayId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+			
+			<div id="item3" class="mui-control-content ">
+				<ul class="mui-table-view" id="orderSee">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院 <span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><em>待就诊</em></small>
+						</a>
+					</li>-->
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院 <span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><em>待就诊</em></small>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerOrderListzwddseeId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+			<div id="item4" class="mui-control-content ">
+				<ul class="mui-table-view" id="orderEvaluation">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay">评价</span></small>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay">评价</span></small>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerOrderListzwddspjId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+			<div id="item5" class="mui-control-content ">
+				<ul class="mui-table-view" id="orderFinish">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay-end"><img src="../../img/familyDoctor/bg_wancheng.png"></span></small>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span>血液内科</span></p>
+							</div>
+							<small>实付金额：<strong>¥300</strong><span class="pay-end"><img src="../../img/familyDoctor/bg_wancheng.png"></span></small>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cancerOrderListzwddywcId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+		</div>
+		<input type="hidden" value="0" id="backcancerOrderListWebviewId"/>
+		<input type="hidden" value="0" id="backcancerOrderListWebviewUrl"/>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/cancerExperts/cancerOrderList.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

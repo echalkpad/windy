@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background-color: #fff!important;
+			}
+			
+			.bg {
+				background: url(../../img/familyDoctor/yisheng.png) no-repeat;
+				background-size: 100%;
+				position: relative;
+				z-index: 8;
+				margin-top: 50px;
+				height: 50%;
+			}
+			
+			.con {
+				height: 100%;
+				width: 100%;
+				top: -50px;
+				z-index: 9;
+				position: fixed;
+				padding-top: 0!important;
+			}
+			
+			.con2 {
+				height: 50%;
+				margin-top: -62.5px;
+			}
+			
+			.con a {
+				display: block;
+				text-align: center;
+			}
+			
+			.con .con-t {}
+			
+			.con .con-t img {
+				position: relative;
+				z-index: 9;
+			}
+			
+			.con .con-c {}
+			
+			.con .con-c p {
+				text-align: center;
+				color: rgb(154, 155, 156);
+			}
+			
+			.con .con-b {}
+			
+			.con .con-b a {
+				margin-left: 2.5%;
+				padding-top: 10px;
+				width: 30%;
+				display: block;
+				float: left;
+				box-sizing: border-box;
+				border: 1px solid rgb(221, 221, 222);
+				border-radius: 15px;
+			}
+			
+			.con .con-b p {
+				color: rgb(101, 98, 90);
+			}
+			
+			@media only screen and (min-width: 100px) and (max-width: 320px) {
+				.con-t img {
+					width: 95px;
+				}
+				.con-b img {
+					height: 30px;
+					width: 30px;
+				}
+				.con2 {
+					height: 50%;
+					margin-top: -45px;
+				}
+				.con .con-b a {
+					margin-left: 5%;
+					width: 27%;
+					height: 70px;
+				}
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="indexFamilyDoctorBackId"></a>
+			<h1 class="mui-title">家庭医生</h1>
+		</header>
+
+		<div class="mui-content con">
+			<div class="mui-content bg">
+
+			</div>
+			<div class="con2">
+
+				<div class="con-t">
+					<a href="" id="callDoctor"><img src="../../img/familyDoctor/btn_hujiaoyisheng.png" width="125px" /></a>
+				</div>
+				<div class="con-c">
+					<p>您暂时还未签订家庭医生哦！</p>
+				</div>
+				<div class="con-b">
+					<a href="" id="serviceFlow"><img src="../../img/familyDoctor/btn_fuwuliucheng.png" height="50px" />
+						<p>服务流程</p>
+					</a>
+					<a href="" id="doctorTeam"><img src="../../img/familyDoctor/btn_yishengtuandui.png" height="50px" />
+						<p>医生团队</p>
+					</a>
+					<a href="" id="consultingRecords"><img src="../../img/familyDoctor/btn_zixunjilu.png" height="50px" />
+						<p>咨询记录</p>
+					</a>
+					<!--<a href="" id="payorderSucceedId"><img src="../../img/familyDoctor/btn_zixunjilu.png" height="50px" />
+						<p>测试交易成功跳转</p>
+					</a>-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/familyDoctor/indexFamilyDoctor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

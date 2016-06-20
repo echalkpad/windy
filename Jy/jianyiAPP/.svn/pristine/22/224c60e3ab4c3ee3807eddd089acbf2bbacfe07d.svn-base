@@ -1,0 +1,421 @@
+var orderDetail1 = document.getElementById("healthExaminationOrderDetail1"),
+	orderDetail2 = document.getElementById("healthExaminationOrderDetail2"),
+	orderDetail3 = document.getElementById("healthExaminationOrderDetail3"),
+	orderDetail4 = document.getElementById("healthExaminationOrderDetail4"),
+	orderDetail5 = document.getElementById("healthExaminationOrderDetail5"),
+	orderDetail6 = document.getElementById("healthExaminationOrderDetail6"),
+	orderDetail7 = document.getElementById("healthExaminationOrderDetail7"),
+	oRemark = document.getElementById("healthExaminationOrderDetail-remark"),
+	oCoupons = document.getElementById("healthExaminationOrderDetail-coupons"),
+	oPay = document.getElementById("healthExaminationOrderDetail-pay"),
+	oAppraise = document.getElementById("healthExaminationOrderDetail-appraise");
+	
+var orderId = '';
+var type = '';
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	type = self.type;
+	orderId = self.orderId;
+	console.log(type+"----"+orderId);
+	healthExaminationOrderDetail.initHEOrderDetailShow(type);
+});
+
+//自定义刷新数据
+window.addEventListener("refreshHEOrderDetails",function(event){
+	type = event.detail.type;
+	orderId = event.detail.orderId;
+	//初始化订单详情页面显示
+	healthExaminationOrderDetail.initHEOrderDetailShow(type);
+});
+
+var healthExaminationOrderDetail = {
+	initHEOrderDetailShow : function() {
+		//异步初始化数据
+		healthExaminationOrderDetail.initHEOrderDetailsData();
+		switch (type) {
+			case 'healthExamOrderList1':
+				orderDetail1.style.display = 'block';
+				oRemark.style.display = 'block';
+				break;
+			case 'healthExamOrderList2':
+				orderDetail2.style.display = 'block';
+				oRemark.style.display = 'block';
+				oCoupons.style.display = 'block';
+				oPay.style.display = 'block';
+				break;
+			case 'healthExamOrderList3':
+				orderDetail3.style.display = 'block';
+				break;
+			case 'healthExamOrderList4':
+				orderDetail4.style.display = 'block';
+				break;
+			case 'healthExamOrderList5':
+				orderDetail5.style.display = 'block';
+				oAppraise.style.display = 'block';
+				break;
+			case 'cancal':
+				orderDetail6.style.display = 'block';
+				break;
+			case 'back':
+				orderDetail7.style.display = 'block';
+				break;
+		}
+	},
+	initHEOrderDetailsData : function(){
+		var requestOrderDetails = 'orderId='+orderId;
+		jyapp.getApi({
+			method: 'HealthExamination/OrderDetails',
+			data:requestOrderDetails,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderDetailsData---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','提示','确认');
+					return false;
+				}else{
+					if(response.data){
+						switch (type) {
+							case 'healthExamOrderList1':
+								//初始化待确认订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsDQR(response);
+								break;
+							case 'healthExamOrderList2':
+								//初始化待支付订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsDZF(response);
+								break;
+							case 'healthExamOrderList3':
+								//初始化预约成功订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsYYCG(response);
+								break;
+							case 'healthExamOrderList4':
+								//初始化待评价订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsDPJ(response);
+								break;
+							case 'healthExamOrderList5':
+								//初始化已完成订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsYWC(response);
+								break;
+							case 'cancal':
+								//初始化已取消订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsYQX(response);
+								break;
+							case 'back':
+								//初始化已退款订单详情
+								healthExaminationOrderDetail.initHEOrderDetailsYTK(response);
+								break;
+						}
+					}else{
+						plus.nativeUI.alert('体检订单详情查询失败','','提示','确认');
+						return false;
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("initHEOrderDetails:" + e);
+			}
+		});
+	},
+	initHEOrderDetailsDQR : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsDQR = '';
+		var PackageName = dataValue.PackageName ? dataValue.PackageName : "尚未确认";
+		var TotalFee = dataValue.TotalFee ? dataValue.TotalFee : "--";
+		var ShortName = dataValue.ShortName ? dataValue.ShortName : "尚未确认";
+		var VisitPlace = dataValue.VisitPlace ? dataValue.VisitPlace : "尚未确认";
+		var VisitDate = dataValue.VisitDate ? dataValue.VisitDate : "尚未确认";
+		htmlHEOrderDetailsDQR += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsDQR += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待客服确认</span></article>';
+		htmlHEOrderDetailsDQR += '</li>';
+		htmlHEOrderDetailsDQR += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsDQR += '	<a class="mui-navigate-right">';
+		htmlHEOrderDetailsDQR += '		<p><span>选择套餐</span>'+PackageName+'</p>';
+		htmlHEOrderDetailsDQR += '		<p><span>套餐价格</span><i>￥'+TotalFee+'</i></p>';
+		htmlHEOrderDetailsDQR += '		<p><span>体检网点</span>'+ShortName+'</p>';
+		htmlHEOrderDetailsDQR += '		<p class="ellipsis"><span>体检地址</span>'+VisitPlace+'</p>';
+		htmlHEOrderDetailsDQR += '	</a>';
+		htmlHEOrderDetailsDQR += '</li>';
+		htmlHEOrderDetailsDQR += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsDQR += '	<a class="">';
+		htmlHEOrderDetailsDQR += '	</a>';
+		htmlHEOrderDetailsDQR += '		<p><span>体检时间</span>'+VisitDate+' 上午</p>';
+		htmlHEOrderDetailsDQR += '</li>';
+		htmlHEOrderDetailsDQR += '<li class="mui-table-view-cell healthExaminationOrderDetail-b">';
+		htmlHEOrderDetailsDQR += '	<p><span>被检 人</span>'+dataValue.Name+' ( 女 | 未婚 )<br>13112341234<br>342425199112311231</p>';
+		htmlHEOrderDetailsDQR += '</li>';
+		document.getElementById('healthExaminationOrderDetaiRemarkID').value = dataValue.Remark;
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsDQR;
+	},
+	initHEOrderDetailsDZF : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsDZF = '';
+		htmlHEOrderDetailsDZF += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsDZF += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待支付</span></article>';
+		htmlHEOrderDetailsDZF += '</li>';
+		htmlHEOrderDetailsDZF += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsDZF += '	<a class="mui-navigate-right">';
+		htmlHEOrderDetailsDZF += '		<p><span>选择套餐</span>'+dataValue.PackageName+'</p>';
+		htmlHEOrderDetailsDZF += '		<p><span>套餐价格</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		htmlHEOrderDetailsDZF += '		<p><span>体检网点</span>'+dataValue.ShortName+'</p>';
+		htmlHEOrderDetailsDZF += '		<p class="ellipsis"><span>体检地址</span>'+dataValue.VisitPlace+'</p>';
+		htmlHEOrderDetailsDZF += '	</a>';
+		htmlHEOrderDetailsDZF += '</li>';
+		htmlHEOrderDetailsDZF += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsDZF += '	<a class="">';
+		htmlHEOrderDetailsDZF += '		<p><span>体检时间</span>'+dataValue.VisitDate+' 上午</p>';
+		htmlHEOrderDetailsDZF += '	</a>';
+		htmlHEOrderDetailsDZF += '</li>';
+		htmlHEOrderDetailsDZF += '<li class="mui-table-view-cell healthExaminationOrderDetail-b">';
+		htmlHEOrderDetailsDZF += '	<p><span>&nbsp;被&nbsp;检&nbsp;人</span>'+dataValue.Name+' ( 女 | 未婚 )<br>13112341234<br>342425199112311231</p>';
+		htmlHEOrderDetailsDZF += '</li>';
+		document.getElementById('healthExaminationOrderDetaiRemarkID').value = dataValue.Remark;
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsDZF;
+	},
+	initHEOrderDetailsYYCG : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsYYCG = '';
+		htmlHEOrderDetailsYYCG += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsYYCG += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">预约成功</span></article>';
+		htmlHEOrderDetailsYYCG += '</li>';
+		htmlHEOrderDetailsYYCG += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsYYCG += '	<a class="">';
+		htmlHEOrderDetailsYYCG += '		<p><span>选择套餐</span>'+dataValue.PackageName+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>&nbsp;体&nbsp;检&nbsp;人</span>'+dataValue.Name+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>实付金额</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>体检时间</span>'+dataValue.VisitDate+'上午</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>体检网点</span>'+dataValue.ShortName+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p class="ellipsis"><span>体检地址</span>'+dataValue.VisitPlace+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>体检报告</span>未完成</p>';
+		htmlHEOrderDetailsYYCG += '	</a>';
+		htmlHEOrderDetailsYYCG += '</li>';
+		htmlHEOrderDetailsYYCG += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsYYCG += '	<a class="">';
+		htmlHEOrderDetailsYYCG += '		<p><span>';
+		if(dataValue.PayTpye == 1){
+			htmlHEOrderDetailsYYCG += '健医交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 2){
+			htmlHEOrderDetailsYYCG += '微信交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 3){
+			htmlHEOrderDetailsYYCG += '支付宝交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 4){
+			htmlHEOrderDetailsYYCG += '银联交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 5){
+			htmlHEOrderDetailsYYCG += '无需支付';
+		}
+		htmlHEOrderDetailsYYCG += '		<p><span>创建时间</span>'+dataValue.CreateTime+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>确认时间</span>'+dataValue.OrderTime+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>付款时间</span>'+dataValue.PayTime+'</p>';
+		htmlHEOrderDetailsYYCG += '		<p><span>完成时间</span>'+dataValue.CompleteTime+'</p>';
+		htmlHEOrderDetailsYYCG += '	</a>';
+		htmlHEOrderDetailsYYCG += '</li>';
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsYYCG;
+	},
+	initHEOrderDetailsDPJ : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsDPJ = '';
+		htmlHEOrderDetailsDPJ += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsDPJ += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待评价</span></article>';
+		htmlHEOrderDetailsDPJ += '</li>';
+		htmlHEOrderDetailsDPJ += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsDPJ += '	<a class="">';
+		htmlHEOrderDetailsDPJ += '		<p><span>选择套餐</span>'+dataValue.PackageName+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>&nbsp;体&nbsp;检&nbsp;人</span>'+dataValue.Name+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>实付金额</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>体检时间</span>'+dataValue.VisitDate+'上午</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>体检网点</span>'+dataValue.ShortName+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p class="ellipsis"><span>体检地址</span>'+dataValue.VisitPlace+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>体检报告</span>已送达</p>';
+		htmlHEOrderDetailsDPJ += '	</a>';
+		htmlHEOrderDetailsDPJ += '</li>';
+		htmlHEOrderDetailsDPJ += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsDPJ += '	<a class="">';
+		htmlHEOrderDetailsDPJ += '		<p><span>';
+		if(dataValue.PayTpye == 1){
+			htmlHEOrderDetailsDPJ += '健医交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 2){
+			htmlHEOrderDetailsDPJ += '微信交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 3){
+			htmlHEOrderDetailsDPJ += '支付宝交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 4){
+			htmlHEOrderDetailsDPJ += '银联交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 5){
+			htmlHEOrderDetailsDPJ += '无需支付';
+		}
+		htmlHEOrderDetailsDPJ += '		<p><span>创建时间</span>'+dataValue.CreateTime+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>确认时间</span>'+dataValue.OrderTime+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>付款时间</span>'+dataValue.PayTime+'</p>';
+		htmlHEOrderDetailsDPJ += '		<p><span>完成时间</span>'+dataValue.CompleteTime+'</p>';
+		htmlHEOrderDetailsDPJ += '	</a>';
+		htmlHEOrderDetailsDPJ += '</li>';
+		htmlHEOrderDetailsDPJ += '<li class="mui-table-view-cell healthExaminationOrderDetail-b1 border-t">';
+		htmlHEOrderDetailsDPJ += '	<a class="xingxing" id="healthExamOrderDetailsDPJXingXingID">';
+		htmlHEOrderDetailsDPJ += '		评价<span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>';
+		htmlHEOrderDetailsDPJ += '	</a>';
+		htmlHEOrderDetailsDPJ += '</li>';
+		htmlHEOrderDetailsDPJ += '<li class="mui-table-view-cell healthExaminationOrderDetail-b1 border-t">';
+		htmlHEOrderDetailsDPJ += '	<textarea name="" rows="" cols="" placeholder="亲，您对本次体检还满意吗？留下您的评论吧～"></textarea>';
+		htmlHEOrderDetailsDPJ += '</li>';
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsDPJ;
+	},
+	initHEOrderDetailsYWC : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsYWC = '';
+		htmlHEOrderDetailsYWC += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsYWC += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待评价</span></article>';
+		htmlHEOrderDetailsYWC += '</li>';
+		htmlHEOrderDetailsYWC += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsYWC += '	<a class="">';
+		htmlHEOrderDetailsYWC += '		<p><span>选择套餐</span>'+dataValue.PackageName+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>&nbsp;体&nbsp;检&nbsp;人</span>'+dataValue.Name+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>实付金额</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		htmlHEOrderDetailsYWC += '		<p><span>体检时间</span>'+dataValue.VisitDate+'上午</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>体检网点</span>'+dataValue.ShortName+'</p>';
+		htmlHEOrderDetailsYWC += '		<p class="ellipsis"><span>体检地址</span>'+dataValue.VisitPlace+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>体检报告</span>已送达</p>';
+		htmlHEOrderDetailsYWC += '	</a>';
+		htmlHEOrderDetailsYWC += '</li>';
+		htmlHEOrderDetailsYWC += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsYWC += '	<a class="">';
+		htmlHEOrderDetailsYWC += '		<p><span>';
+		if(dataValue.PayTpye == 1){
+			htmlHEOrderDetailsYWC += '健医交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 2){
+			htmlHEOrderDetailsYWC += '微信交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 3){
+			htmlHEOrderDetailsYWC += '支付宝交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 4){
+			htmlHEOrderDetailsYWC += '银联交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 5){
+			htmlHEOrderDetailsYWC += '无需支付';
+		}
+		htmlHEOrderDetailsYWC += '		<p><span>创建时间</span>'+dataValue.CreateTime+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>确认时间</span>'+dataValue.OrderTime+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>付款时间</span>'+dataValue.PayTime+'</p>';
+		htmlHEOrderDetailsYWC += '		<p><span>完成时间</span>'+dataValue.CompleteTime+'</p>';
+		htmlHEOrderDetailsYWC += '	</a>';
+		htmlHEOrderDetailsYWC += '</li>';
+		htmlHEOrderDetailsYWC += '<li class="mui-table-view-cell healthExaminationOrderDetail-b1 border-t">';
+		htmlHEOrderDetailsYWC += '	<a class="xingxing" id="healthExamOrderDetailsYWCXingXingID">';
+		htmlHEOrderDetailsYWC += '		评价<span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>';
+		htmlHEOrderDetailsYWC += '	</a>';
+		htmlHEOrderDetailsYWC += '</li>';
+		htmlHEOrderDetailsYWC += '<li class="mui-table-view-cell healthExaminationOrderDetail-b1 border-t">';
+		htmlHEOrderDetailsYWC += '	<textarea name="" rows="" cols="" placeholder="亲，您对本次体检还满意吗？留下您的评论吧～">'+dataValue.Comment+'</textarea>';
+		htmlHEOrderDetailsYWC += '</li>';
+		//TODO 预期可能会拿不到healthExamOrderDetailsYWCXingXingID这个
+		var ulXingXing = document.getElementById('healthExamOrderDetailsYWCXingXingID');
+		var ul_lisXing = ulXingXing.getElementsByTagName('span');
+		var score = dataValue.Score ? dataValue.Score : 0;
+		for (var i = 0; i < parseInt(score); i++) {
+			ul_lisXing[i].className = 'xing xing-active';
+		}
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsYWC;
+	},
+	initHEOrderDetailsYQX : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsYQX = '';
+		var PackageName = dataValue.PackageName ? dataValue.PackageName : "尚未确认";
+		var TotalFee = dataValue.TotalFee ? dataValue.TotalFee : "--";
+		var ShortName = dataValue.ShortName ? dataValue.ShortName : "尚未确认";
+		var VisitPlace = dataValue.VisitPlace ? dataValue.VisitPlace : "尚未确认";
+		var VisitDate = dataValue.VisitDate ? dataValue.VisitDate : "尚未确认";
+		htmlHEOrderDetailsYQX += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsYQX += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待客服确认</span></article>';
+		htmlHEOrderDetailsYQX += '</li>';
+		htmlHEOrderDetailsYQX += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsYQX += '	<a class="mui-navigate-right">';
+		htmlHEOrderDetailsYQX += '		<p><span>选择套餐</span>'+PackageName+'</p>';
+		htmlHEOrderDetailsYQX += '		<p><span>套餐价格</span><i>￥'+TotalFee+'</i></p>';
+		htmlHEOrderDetailsYQX += '		<p><span>体检网点</span>'+ShortName+'</p>';
+		htmlHEOrderDetailsYQX += '		<p class="ellipsis"><span>体检地址</span>'+VisitPlace+'</p>';
+		htmlHEOrderDetailsYQX += '	</a>';
+		htmlHEOrderDetailsYQX += '</li>';
+		htmlHEOrderDetailsYQX += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsYQX += '	<a class="">';
+		htmlHEOrderDetailsYQX += '	</a>';
+		htmlHEOrderDetailsYQX += '		<p><span>体检时间</span>'+VisitDate+' 上午</p>';
+		htmlHEOrderDetailsYQX += '</li>';
+		htmlHEOrderDetailsYQX += '<li class="mui-table-view-cell healthExaminationOrderDetail-b">';
+		htmlHEOrderDetailsYQX += '	<p><span>被检 人</span>'+dataValue.Name+' ( 女 | 未婚 )<br>13112341234<br>342425199112311231</p>';
+		htmlHEOrderDetailsYQX += '</li>';
+		document.getElementById('healthExaminationOrderDetaiRemarkID').value = dataValue.Remark;
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsYQX;
+	},
+	initHEOrderDetailsYTK : function(response){
+		var dataValue = response.data;
+		var htmlHEOrderDetailsYTK = '';
+		htmlHEOrderDetailsYTK += '<li class="mui-table-view-cell healthExaminationOrderDetail-t">';
+		htmlHEOrderDetailsYTK += '	<article>订单编号：'+dataValue.OrderNo+' <span class="red">待评价</span></article>';
+		htmlHEOrderDetailsYTK += '</li>';
+		htmlHEOrderDetailsYTK += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1">';
+		htmlHEOrderDetailsYTK += '	<a class="">';
+		htmlHEOrderDetailsYTK += '		<p><span>选择套餐</span>'+dataValue.PackageName+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>&nbsp;体&nbsp;检&nbsp;人</span>'+dataValue.Name+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>实付金额</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		htmlHEOrderDetailsYTK += '		<p><span>体检时间</span>'+dataValue.VisitDate+'上午</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>体检网点</span>'+dataValue.ShortName+'</p>';
+		htmlHEOrderDetailsYTK += '		<p class="ellipsis"><span>体检地址</span>'+dataValue.VisitPlace+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>体检报告</span>已送达</p>';
+		htmlHEOrderDetailsYTK += '	</a>';
+		htmlHEOrderDetailsYTK += '</li>';
+		htmlHEOrderDetailsYTK += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsYTK += '	<a class="">';
+		htmlHEOrderDetailsYTK += '		<p><span>';
+		if(dataValue.PayTpye == 1){
+			htmlHEOrderDetailsYTK += '健医交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 2){
+			htmlHEOrderDetailsYTK += '微信交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 3){
+			htmlHEOrderDetailsYTK += '支付宝交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 4){
+			htmlHEOrderDetailsYTK += '银联交易号</span>'+dataValue.PayNo+'</p>';
+		}else if(dataValue.PayTpye == 5){
+			htmlHEOrderDetailsYTK += '无需支付';
+		}
+		htmlHEOrderDetailsYTK += '		<p><span>创建时间</span>'+dataValue.CreateTime+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>确认时间</span>'+dataValue.OrderTime+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>付款时间</span>'+dataValue.PayTime+'</p>';
+		htmlHEOrderDetailsYTK += '		<p><span>完成时间</span>'+dataValue.CompleteTime+'</p>';
+		htmlHEOrderDetailsYTK += '	</a>';
+		htmlHEOrderDetailsYTK += '</li>';
+		htmlHEOrderDetailsYTK += '<li class="mui-table-view-cell healthExaminationOrderDetail-c1 border-t">';
+		htmlHEOrderDetailsYTK += '	<a class="">';
+		htmlHEOrderDetailsYTK += '		<p><span>已退金额</span><i>￥'+dataValue.TotalFee+'</i></p>';
+		if(dataValue.PayTpye == 1){
+			htmlHEOrderDetailsYTK += '		<p><span>退款转入</span>健医卡</p>';
+		}else if(dataValue.PayTpye == 2){
+			htmlHEOrderDetailsYTK += '		<p><span>退款转入</span>微信</p>';
+		}else if(dataValue.PayTpye == 3){
+			htmlHEOrderDetailsYTK += '		<p><span>退款转入</span>支付宝</p>';
+		}else if(dataValue.PayTpye == 4){
+			htmlHEOrderDetailsYTK += '		<p><span>退款转入</span>银联卡</p>';
+		}else if(dataValue.PayTpye == 5){
+			htmlHEOrderDetailsYTK += '		<p><span>退款转入</span>无需支付</p>';
+		}
+		htmlHEOrderDetailsYTK += '		<p><span>流 水 号</span></p>';
+		htmlHEOrderDetailsYTK += '		<p><span>操作时间</span></p>';
+		htmlHEOrderDetailsYTK += '	</a>';
+		htmlHEOrderDetailsYTK += '</li>';
+		document.getElementById(type).innerHTML = htmlHEOrderDetailsYTK;
+	}
+}
+
+mui('#healthExaminationOrderDetail4').on('#healthExamOrderDetailsDPJXingXingID','click',function(){
+	//评价
+	var ul_lis = this.querySelectorAll('span');
+	clearAll = function() {
+		for (var i = 0; i < ul_lis.length; i++) {
+			ul_lis[i].className = 'xing';
+		}
+	}
+	for (var i = 0; i < ul_lis.length; i++) {
+		ul_lis[i].index = i;
+		ul_lis[i].onclick = function() {
+			clearAll();
+			var j = this.index + 1;
+			for (var i = 0; i < j; i++) {
+				ul_lis[i].className = 'xing xing-active';
+			}
+		}
+	}
+});

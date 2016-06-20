@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+				padding-bottom: 30px;
+			}
+			
+			.mui-table-view {
+				overflow: hidden;
+				margin: 0 0 15px;
+			}
+			
+			.mui-table-view h2 {
+				font-size: 14px;
+				float: left;
+				width: 75px;
+				line-height: 21px;
+				color: #777;
+			}
+			
+			.mui-table-view strong {
+				font-weight: normal;
+				color: #f00;
+				font-size: 14px;
+			}
+			
+			.mui-table-view span {
+				float: left;
+				font-size: 14px;
+				color: #444;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+			.lettersapcing2 h2 {
+				letter-spacing: 12px;
+			}
+			
+			.lettersapcing3 h2 {
+				letter-spacing: 7px;
+			}
+			
+			.doc-evaluation {
+				font-size: 14px;
+			}
+			
+			.doc-evaluation span {
+				float: right;
+			}
+			
+			.border-b li {
+				color: #9B9B9B;
+			}
+			
+			.border-b {
+				border: 0!important;
+			}
+			
+			.xing-active {
+				background-image: url(../../img/pay/icon_star_fills.png)!important;
+			}
+			
+			.xing {
+				background: url(../../img/pay/icon_star.png) no-repeat;
+				background-size: 20px 20px;
+				width: 20px;
+				height: 20px;
+			} 
+			
+			.serviceResults {
+				color: #9B9B9B;
+				font-size: 14px;
+				height: 125px;
+				background: #fff;
+				padding: 10px 15px;
+				word-wrap:break-word;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="orderDetailsFinishBackCellId"></a>
+			<h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<h2>订单状态</h2><strong id="slowConfirmedStrongid">已完成</strong></li>
+				<li class="mui-table-view-cell lettersapcing2">
+					<h2>医&nbsp;生</h2><span id="slowDetailsFinishSpanNameID"></span></li>
+				<li class="mui-table-view-cell">
+					<h2>就诊时间</h2><span id="slowDetailsFinishSpanTimeID"></span></li>
+				<li class="mui-table-view-cell">
+					<h2>就诊地址</h2><span id="slowDetailsFinishAddressID"></span></li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3">
+					<h2>就诊人</h2><span id="slowDetailsFinishPatientID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3">
+					<h2>身份证</h2><span id="slowDetailsFinishIdNumberID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2">
+					<h2>手&nbsp;机</h2><span id="slowDetailsFinishPhoneID"></span></li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3">
+					<h2>咨询费</h2><span id="slowDetailsFinishConsultingPriceID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3">
+					<h2>保证金</h2><span id="slowDetailsFinishEnsureID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3">
+					<h2>现金券</h2><span id="slowDetailsFinishCashCouponID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2">
+					<h2>合&nbsp;计</h2><strong id="slowDetailsFinishTotalPriceID"></strong></li>
+			</ul>
+			<ul class="mui-table-view border-b doc-evaluation">
+				<li class="mui-table-view-cell" id="slowDetailsFinishXingXingID">
+					就诊评价 <span class="xing xing-active"></span> <span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span>
+				</li>
+			</ul>
+			<div class="serviceResults" id="slowDetailsFinishEvaluateID"></div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/slowOrderDetailsFinish.js"></script>
+
+</html>

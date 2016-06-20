@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.diet-top{
+				height:180px;
+				width:100%;
+				background:#00b6f3;
+			}
+			.diet-top h2{
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id=""></a>
+			<h1 class="mui-title">饮食营养</h1>
+		</header>
+		<div class="mui-content">
+			<div class="diet-top">
+				<h2>今日应摄入热量：<strong>1652</strong>签卡</h2>
+				<a href="">食物库<i></i></a>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/dietNutrition/dietNutrition.js" type="text/javascript" charset="utf-8"></script>
+</html>

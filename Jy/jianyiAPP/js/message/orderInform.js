@@ -1,0 +1,29 @@
+//基因检测订单
+mui('.gene').on('tap','a',function(){
+	mui.openWindow({
+		id:'geneticOrder',
+		url:'../healthy/geneticDiagnosis/geneticOrder.html',
+	})
+})
+//健康检测订单
+mui('.health').on('tap','a',function(){
+	mui.openWindow({
+		id:'healthExaminationOrder',
+		url:'../healthy/healthExamination/healthExaminationOrder.html',
+	})
+})
+
+//基因检测订单
+mui('').on('tap','a',function(){
+	mui.openWindow({
+		id:'',
+		url:'',
+	})
+})
+//健康检测订单
+mui('').on('tap','a',function(){
+	mui.openWindow({
+		id:'',
+		url:'',
+	})
+})

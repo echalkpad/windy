@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-content p {
+				margin: 0;
+			}
+			
+			
+			.gene{
+				width:100%;
+			}
+			.gene img{
+				display:block;
+				width:100%;
+				height:auto;
+				max-height: 160px;
+			}
+			.gene-nav{
+				width:100%;
+				height:100px;
+				background:#fff;
+			}
+			.gene-nav a{
+				display:block;
+				width:33.33%;
+				height:100%;
+				float:left;
+				border-left:1px solid #f1f1f1;
+				color:#333;
+				text-align: center;
+				padding-top:60px;
+				font-size:14px;
+			}
+			.gene-nav a:nth-child(1){
+				border:0;
+				background: url(../../../img/healthy/geneticDiagnosis/icon_fuwujieshao.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			.gene-nav a:nth-child(2){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_taocan.png) no-repeat scroll center 20px;
+				background-size:30px 30px;
+			}
+			.gene-nav a:nth-child(3){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_kefu.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			
+			.jkwd-nav {
+				width: 100%;
+				top: 50px;
+				background: #fff;
+				z-index: 9;
+				position: fixed;
+				height: 44px;
+				line-height: 44px;
+				border-bottom: 1px solid rgb(244, 244, 244);
+			}
+			
+			.jkwd-nav a {
+				position: relative;
+				width: 33.33%;
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				float: left;
+				color: #4A4A4A;
+				font-size: 15px;
+				border-left: 1px solid rgb(240, 240, 240);
+			}
+			.jkwd-nav img{margin-left:5px;}
+			.jkwd-nav a:first-child {
+				border-left: none;
+			}
+			.search {
+				top: 94px;
+				background: #f2f6f9!important;
+				position: fixed;
+				width:100%;
+				z-index:999;
+			}
+			.search .mui-popover {
+				top: 0;
+				height: 300px;
+			}
+			/*.search-qg{
+				background:#fff;
+			}*/
+			.search .mui-popover .mui-table-view {
+				background: #fff;
+			}
+			.search .mui-popover{
+				-webkit-transition: none!important;
+			}
+			
+			.search ul{
+				list-style: none;
+				display:none;
+			}
+			.search .selector{
+				display:block;
+			}
+			
+			
+			.search ul li a {
+				color: #4A4A4A;
+			}
+			
+			.mui-backdrop {
+				top: 94px;
+			}
+			.search-qg .search-qg-l {
+				left: initial;
+				width: 100%;
+				background:#fff;
+			}
+			
+			.search-qg .search-qg-r {
+				background: rgba(000, 000, 000, .2);
+				right: 0;
+				left: initial;
+				width: 65%;
+				border-radius: 0;
+				margin: 0;
+			}
+			
+			.search-qg .search-qg-l ul,
+			.search-qg .search-qg-r ul {
+				padding-left: 0;
+				list-style: none;
+			}
+			
+			.search-qg .search-qg-l ul li,
+			.search-qg .search-qg-r ul li {}
+			
+			.search-qg .search-qg-l .search-qg-text {
+				background: rgba(158, 156, 156, 0.1);
+			}
+
+			.packageContent{
+				position: absolute;
+				width:100%;
+			    top:94px;
+			    min-height: 301px;
+			}
+			.search-default{
+				background:#fff;
+				padding:5px 15px;
+				font-size:14px;
+				display: none;
+			}
+			.mui-popover-action{
+				height:300px;
+			}
+			.mui-popover .mui-scroll-wrapper{
+				margin:0;
+				border-radius: 0;
+			}
+			.mui-popover.mui-popover-action .mui-table-view{
+				margin:0;
+				border-radius: 0;
+				background:#fff; 
+				color:#333;
+				text-align:left;
+			}
+			
+			.packageContent img{
+				border: 1px solid #ccc;
+			    display: inline-block;
+			    width: 70px;
+			    height: 70px;
+			    position: absolute;
+			    left: 10px;
+			    top: 10px;
+			}
+			.packageContent section{
+				padding-left:80px;
+				position:relative;
+			}
+			.packageContent h2{
+				font-size:16px;
+				line-height:28px;
+				color:#4A4A4A;
+				padding-right:85px;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				
+			}
+			.packageContent em{
+				display:block;
+				width:60px;
+				height:21px;
+			}
+			.packageContent .oldMan{
+				background: url(../../../img/healthy/tag_laoren.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.packageContent .man{
+				background: url(../../../img/healthy/tag_nanxing.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.packageContent .women{
+				background: url(../../../img/healthy/tag_nvxing.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.packageContent .child{
+				background: url(../../../img/healthy/tag_shaonianertong.png) no-repeat scroll top left;
+				background-size:cover;
+				width:90px;
+			}
+			.packageContent .mother{
+				background: url(../../../img/healthy/tag_yunfu.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.packageContent .other{
+				background: url(../../../img/healthy/tag_qita.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			.packageContent .allPeople{
+				background: url(../../../img/healthy/tag_quanbu.png) no-repeat scroll top left;
+				background-size:cover;
+				width:90px;
+			}
+			.packageContent section p{
+				color:#666;
+				line-height:24px;
+				font-size:13px;
+			}
+			.packageContent del {
+			    font-size: 14px;
+			    margin-right: 20px;
+			}
+			.packageContent strong {
+			    font-weight: normal;
+			    font-size: 16px;
+			    color: #F60404;
+			    margin-right: 10px;
+			}
+			.packageContent h2 span {
+			    display:block;
+			    position: absolute;
+			    color:#fff;
+			    top: 3px;
+			    right: -15px;
+			    width:auto;
+				padding:0 5px 0 8px;
+				max-width:85px;
+				overflow:hidden!important;
+			    height: 22px;
+			    text-align: center;
+			    line-height: 22px;
+			    background: url(../../../img/healthy/geneticDiagnosis/bg_tag.png) no-repeat scroll top left;
+			    background-size: cover;
+			    font-size: 14px;
+			}
+			#search-mrpx{
+				background:#fff;
+				padding:5px 15px;
+				font-size:14px;
+			}
+			.order_none {
+				width: 100px;
+				position: fixed;
+				top: 30%;
+				left: 50%;
+				margin-left: -50px;
+				text-align: center;
+				font-size: 14px;
+				color: #999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基因检测套餐</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-nav" id="jytc-nav">
+				<a href="" class="search-qg">全部类型<img src="../../../img/common/btn_down.png" width="15px"/></a>
+				<a href="" class="search-szn">全部人群<img src="../../../img/common/btn_down.png" width="15px"/></a>
+				<a href="" class="search-mrpx">智能排序<img src="../../../img/common/btn_down.png" width="15px"/></a>
+			</div>
+			<div class="search">
+				<div id="jytcSearch" class="mui-popover mui-popover-action">
+					<div class="search-qg">
+						<div class="mui-scroll-wrapper search-qg-l">
+							<div class="mui-scroll">
+								<ul class="mui-table-view selector" id="qblxchoosePackageId">
+									<!--<li class="mui-table-view-cell"><a href="">全部类型</a></li>
+									<li class="mui-table-view-cell"><a href="">类型1</a></li>
+									<li class="mui-table-view-cell"><a href="">类型2</a></li>
+									<li class="mui-table-view-cell"><a href="">类型3</a></li>
+									<li class="mui-table-view-cell"><a href="">类型4</a></li>
+									<li class="mui-table-view-cell"><a href="">类型5</a></li>
+									<li class="mui-table-view-cell"><a href="">类型6</a></li>
+									<li class="mui-table-view-cell"><a href="">类型7</a></li>
+									<li class="mui-table-view-cell"><a href="">类型8</a></li>-->
+								</ul>
+								<ul class="mui-table-view" id="qbrqchoosePackageId">
+									<!--<li class="mui-table-view-cell"><a href="">全部人群</a></li>
+									<li class="mui-table-view-cell"><a href="">少年儿童</a></li>
+									<li class="mui-table-view-cell"><a href="">孕妇</a></li>
+									<li class="mui-table-view-cell"><a href="">女性</a></li>
+									<li class="mui-table-view-cell"><a href="">男性</a></li>
+									<li class="mui-table-view-cell"><a href="">老人</a></li>
+									<li class="mui-table-view-cell"><a href="">其他</a></li>-->
+								</ul>
+								<ul class="mui-table-view search-mrpx" id="znpxchoosePackageId">
+									<li class="mui-table-view-cell">智能排序<input type="hidden" value="0" /></li>
+									<li class="mui-table-view-cell">价格最低<input type="hidden" value="1" /></li>
+									<li class="mui-table-view-cell">人气最高<input type="hidden" value="2" /></li>
+									<li class="mui-table-view-cell">评价最好<input type="hidden" value="3" /></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="" class="search-default">
+						默认
+					</div>
+				</div>
+			</div>
+			<div class="packageContent" id="packageContent">
+				<ul class="mui-table-view" id="choosePackageUlId">
+					<!--<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>心脑血管基因检测<span>类型</span></h2>
+								<em class="man"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="oldMan"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测肿瘤全套基因检测<span>类型类型类型</span></h2>
+								<em class="child"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="mother"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li><li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="other"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="allPeople"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li><li class="mui-table-view-cell">
+						<a href="">
+							<img src="../../../img/default/pic_moren.png" />
+							<section>
+								<h2>肿瘤全套基因检测<span>类型</span></h2>
+								<em class="women"></em>
+								<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+							</section>
+						</a>
+					</li>-->
+					
+				</ul>
+			</div>
+			<div class="order_none" id="choosePackagezwddId" style="display: none;">
+				<i></i>
+				暂无套餐
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/mui.picker.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/choosePackage.js" type="text/javascript" charset="utf-8"></script>
+</html>

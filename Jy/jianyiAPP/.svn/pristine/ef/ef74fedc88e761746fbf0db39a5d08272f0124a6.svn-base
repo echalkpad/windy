@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view{
+				font-size:14px;
+				color:#4A4A4A;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin:0;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after{
+				background:#F1F1F1;
+			}
+			.mui-table-view-cell h2{
+				font-size:16px;
+				line-height:30px;
+			}
+			.mui-table-view-cell section{
+				position: relative;
+			}
+			.mui-table-view-cell em{
+				font-style: normal;
+				position: absolute;
+				right:0;
+				top:50%;
+				font-size:12px;
+				color:#666;
+				-webkit-transform:translateY(-50%);
+			}
+			.mui-table-view-cell img{
+				width:50px;
+				height:50px;
+				border-radius:50%;
+				background:#000;
+				float:left;
+				margin-right:10px;
+			}
+			.mui-table-view-cell section p{
+				overflow:hidden;
+				height:24px;
+			}
+			.xing-active {
+				background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+			
+			.xing {
+				background: url(../../../img/pay/icon_star.png) no-repeat;
+				background-size: 16px 16px;
+				width: 16px;
+				height: 16px;
+				display:block;
+				float:left;
+				margin-right:4px;
+			}
+			p{line-height:20px;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">历史评价</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<section>
+						<img src="" alt="" />
+						<h2>张**</h2>
+						<p><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing"></span></p>
+						<em>2016-02-13</em>
+					</section>
+					<p class="ellipsis">我真的好头痛啊，有没有一种方法可以放松一下自我的身心呢。丁丁说：要不咱们去做个大保健吧！</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<section>
+						<img src="" alt="" />
+						<h2>张**</h2>
+						<p><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing"></span></p>
+						<em>2016-02-13</em>
+					</section>
+					<p class="ellipsis">我真的好头痛啊，有没有一种方法可以放松一下自我的身心呢。丁丁说：要不咱们去做个大保健吧！</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<section>
+						<img src="" alt="" />
+						<h2>张**</h2>
+						<p><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing"></span></p>
+						<em>2016-02-13</em>
+					</section>
+					<p class="ellipsis">我真的好头痛啊，有没有一种方法可以放松一下自我的身心呢。丁丁说：要不咱们去做个大保健吧！</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+
+</html>

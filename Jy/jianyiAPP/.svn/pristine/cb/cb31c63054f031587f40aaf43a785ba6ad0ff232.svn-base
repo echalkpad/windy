@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.mui-table-view .mui-media-object {
+				line-height: 40px;
+				max-width: 40px;
+				height: 40px;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				background: #f1f1f1;
+			}
+			
+			.mui-media-body {
+				padding-top: 10px;
+				color: #4A4A4A;
+				font-size: 14px;
+			}
+			
+			.mui-media-body h3 {
+				line-height: 20px;
+			}
+			
+			.mui-media-body .mui-ellipsis {
+				color: #9b9b9b;
+				font-size: 13px;
+			}
+			
+			.mui-slider {
+				height: 150px;
+			}
+			
+			li p {
+				font-size: 12px!important;
+			}
+			
+			#noNetwork {
+				display: none;
+				position: relative;
+				top: 0px;
+				left: 0px;
+				z-index: 999;
+				background: rgb(254, 223, 224);
+				width: 100%;
+				height: 35px;
+				line-height: 32px;
+				padding-left: 20px;
+				border: 2px solid rgb(254, 224, 246)
+			}
+			
+			#noNetwork span {
+				position: relative;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				line-height: 22px;
+				border-radius: 50%;
+				background: rgb(245, 99, 100);
+				border: 1px solid rgb(254, 193, 194);
+				text-align: center;
+				color: #fff;
+				margin-right: 13px;
+			}
+			
+			#noNetwork p {
+				color: #9B9B9B;
+			}
+			
+			.mui-table-view-cell {
+				padding: 8px 15px
+			}
+			
+			.mui-media-body button {
+				color: #00B6F3;
+				line-height: 0;
+				outline: none;
+				float: right;
+				border: 1px solid #00B6F3;
+				border-radius: 15px;
+				padding: 15px;
+				margin-top: -7px;
+			}
+			
+			.mui-media-body button.popularServices-cancel {
+				color: rgba(255, 000, 000, .6);
+				border: 1px solid rgba(255, 000, 000, .6);
+			}
+			
+			.mui-table-view-cell:after {
+				left: 45px;
+			}
+			
+			.mui-content .title:nth-child(1) {
+				border-top: none!important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">热门服务</h1>
+		</header>
+		<div class="mui-content">
+			<div class="title f13 border-t">
+				寻医
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_jiatingyisheng@2x.png">
+						<div class="mui-media-body f16">
+							家庭医生
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_jiankangceliang.png">
+						<div class="mui-media-body f16">
+							健康测量
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_family.png">
+						<div class="mui-media-body f16">
+							我的家人
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_wangdian.png">
+						<div class="mui-media-body f16">
+							健康网点
+							<button href="" class="popularServices-cancel">取消</button>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="title f13 border-t">
+				用药
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_jiatingyisheng@2x.png">
+						<div class="mui-media-body f16">
+							家庭医生
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_jiankangceliang.png">
+						<div class="mui-media-body f16">
+							健康测量
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_family.png">
+						<div class="mui-media-body f16">
+							我的家人
+							<button href="">添加</button>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/icon_wangdian.png">
+						<div class="mui-media-body f16">
+							健康网点
+							<button href="" class="popularServices-cancel">取消</button>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui('.mui-table-view-cell').on('tap', 'button', function() {
+			var text = ['添加', '取消'];
+			if (this.innerText == text[0]) {
+				this.innerText = text[1];
+				this.setAttribute('class','popularServices-cancel');
+				return
+			}
+			this.setAttribute('class','');
+			this.innerText = text[0];
+		})
+	</script>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell span,
+			.mui-table-view-cell input {
+				max-width: 56%;
+				font-size: 14px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.mui-table-view-cell input {
+				border: 0;
+				text-align: right;
+			}
+			
+			.head-pic {
+				line-height: 60px;
+			}
+			
+			.head-pic img {
+				width: 60px;
+				height: 60px;
+				float: right;
+				border-radius: 50%;
+				margin-right: 25px;
+			}
+			
+			#userPicture .mui-table-view {
+				border-radius: 8px;
+			}
+			
+			#userPicture .mui-table-view-cell {
+				font-size: 14px;
+			}
+			/*修改头像*/
+			
+			#userPicture .avatar {
+				color: #999;
+				font-size: 12px;
+			}
+			
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			
+			.mui-dtpicker-title {
+				display: none;
+			}
+			
+			.mui-picker {
+				background: #fff;
+			}
+			
+			.btn-add {
+				line-height: 44px!important;
+			}
+			
+			.determine {
+				color: #fff!important;
+			}
+			
+			.mui-table-view:after,
+			.mui-table-view:before {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.addFamily-l {
+				float: left;
+				margin: 0!important;
+				padding-left: 0!important;
+				padding-top: 5px!important;
+				font-size: 16px!important;
+			}
+			
+			.addFamily-r {
+				height: 28px!important;
+				padding: 0!important;
+				float: right;
+				margin-bottom: 0!important;
+				color: #929292!important
+			}
+			
+			.healthExaminationCoustomer-remark {}
+			
+			.healthExaminationCoustomer-remark article {
+				padding: 15px 15px 5px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+
+			
+			.healthExaminationCoustomer-remark textarea {
+				border: none;
+				outline: none;
+				font-size: 14px;
+			}
+			
+			#healthExaminationCoustomer_btn {
+				border-top: 1px solid #ccc;
+				width: 100%;
+				background: #fff;
+				position: fixed;
+				bottom: 0px;
+				padding: 10px 0;
+				display: block;
+				color: #fff;
+				text-align: center;
+			}
+			
+			#healthExaminationCoustomer_btn span {
+				display: block;
+				height: 44px;
+				line-height: 44px;
+				border-radius: 5px;
+				color: #fff;
+				position: relative;
+				width: 90%;
+				left: 5%;
+				background: #00BFF5;
+			}
+			.healthExaminationCoustomer-wxts{
+				text-align: center;
+				padding-bottom: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约体检</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="mebirthday">预约日期<span class="mui-badge mui-badge-inverted" id="birthResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="meRelation" class="mui-navigate-right">体检人<span class="mui-badge mui-badge-inverted" id="relationResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">姓名</span><input style='max-width:80%' class="addFamily-r" type="text" name="" id="peopleNameID" placeholder="请输入姓名" />
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="meSex" class="mui-navigate-right">性别<span class="mui-badge mui-badge-inverted" id="sexResult">请选择</span><input type="hidden" id="healthExamGenderID" value="" /></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="marry" class="mui-navigate-right">婚否<span class="mui-badge mui-badge-inverted" id="marryResult">请选择</span><input type="hidden" id="healthExamMarryID" value="" /></a>
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">手机</span><input style='max-width:80%' class="addFamily-r" type="number" name="" id="healthExamPhoneNum" placeholder="请输入手机号" />
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">身份证</span><input class="addFamily-r" type="number" name="" id="healthExamIDnumber" placeholder="请输入身份证号" />
+				</li>
+			</ul>
+		</div>
+		<div class="healthExaminationCoustomer-remark" id="healthExaminationCoustomer-remark">
+			<article>备注信息</article>
+			<textarea name="" rows="" cols="" placeholder='写写您对体检的要求，如：价位、体检网点所在城市、区县，客服会根据您的要求推荐' id="healthExamRemarkID"></textarea>
+		</div>
+		<p class="healthExaminationCoustomer-wxts">温馨提示:提交后将由客服致电给您，确认体检网点和套餐哦！</p>
+		<a href="" id="healthExaminationCoustomer_btn"><span>提交预约</span></a>
+		<script src="../../../js/mui.min.js"></script>
+		<script src="../../../js/mui.picker.min.js"></script>
+		<script src="../../../js/core/config.js"></script>
+		<script src="../../../js/core/common.js"></script>
+		<script src="../../../js/util/common_util.js"></script>
+		<script src="../../../js/route.js"></script>
+		<script src="../../../js/healthy/healthExamination/healthExaminationCustomer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

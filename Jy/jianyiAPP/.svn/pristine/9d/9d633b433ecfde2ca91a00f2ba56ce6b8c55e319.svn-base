@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content p {
+				margin: 0;
+			}
+			
+			.spaAppointment {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image: -webkit-gradient(linear, left 0%, left 100%, from(transparent), to(#000));
+				background-image: -webkit-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: -moz-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);
+				background-repeat: repeat-x;
+				position: relative;
+				margin-top: 0;
+				height: 222px;
+			}
+			.spaAppointment:after{
+				display:block;
+				position: absolute;
+				width:100%;
+				height:100%;
+				background-image: -webkit-linear-gradient(top, transparent 40%, rgba(0,0,0,.8) 100%);
+				content:"";
+				
+			}
+			
+			.spaAppointment h2 {
+				color: #fff;
+				font-size: 17px;
+				position: absolute;
+				bottom: 60px;
+				margin-left: 15px;
+			}
+			
+			.spaAppointment p {
+				position: absolute;
+				color: #fff;
+				font-size: 16;
+				bottom: 15px;
+				margin-left: 15px;
+			}
+			
+			.spaAppointment1 {
+				background-color:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.3)), to(rgba(0,0,0,.5)));
+				background-image: url(../../../img/healthy/lyy2.png);
+				background-repeat:no-repeat;
+				background-position:center center;
+				background-size: cover;
+			}
+			
+			.spaAppointment2 {
+				background: url(../../../img/healthy/liaoyang_pic.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.spaAppointment3 {
+				background: url(../../../img/healthy/lyy1.png) no-repeat center center;
+				background-size: cover;
+			}
+			.spaContent{
+				position:absolute;
+				width:100%;
+				height:100%;
+				z-index:1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">疗养预约</h1>
+		</header>
+		<div class="mui-content">
+			<div class="spaAppointment spaAppointment1">
+				<div class="spaContent">
+					<h2>香江疗养院</h2>
+					<p class="ellipsis">香江健康山谷坐落在广州增城白水寨风景区，白水寨以中国大陆落差最大瀑布（落差达428.5米）闻名，被誉为“北回归线上的瑰丽翡翠”。茂密的森林、充足的日照与湍急的水流，具备了产生充沛空气负离子的三要素。据权威机构中南林学院测定，区域空气中的负离子含量高达11.25万个/立方厘米，是名副其实的天然大氧吧，优越独特的地理环境也造就了可以媲美瑞士的健康度假之都，其中的慢病调治及养老养生更是别有特色的国内著名的疗养休闲胜境——香江疗养院！</p>
+				</div>
+			</div>
+			<div class="spaAppointment spaAppointment2">
+				<div class="spaContent">
+					<h2>工人汤山疗养院</h2>
+					<p class="ellipsis">工人汤山疗养院位于世界著名温泉百家名镇--汤山，以“龙眼”温泉为福地，康复医疗设备和医技力量全省一流，享誉国内60余年，是温泉、疗养、休憩、休养的不二选择。下面我们将详细为您介绍：</p>
+				</div>
+			</div>
+			<div class="spaAppointment spaAppointment3">
+				<div class="spaContent">
+					<h2>杭州蓝熙健康玫瑰园体检中心</h2>
+					<p class="ellipsis">杭州蓝熙健康玫瑰园体检中心是一家集健康体检、休闲、疗养、保健为一体的高档体检中心，其建筑设计及内部装修都按照五星级宾馆标准，是的，你没看错，是五星级宾馆标准！专门定位为社会各界精英人士提供全方位、高端私密的医疗及健康管理服务。规范严谨的检前、检中、检后服务流程，并由享受国务院特殊津贴的资深内科专家担任总</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script type="text/javascript">
+		//		mui('.mui-content').on('tap', '.spaAppointment', function() {
+		//			var type = this.className;
+		//			mui.openWindow({
+		//				id: 'spaAppointmentDetail',
+		//				url: "spaAppointmentDetail.html",
+		//				extras: {
+		//					type: type,
+		//				}
+		//			})
+		//		})
+		mui('.mui-content').on('tap', '.spaAppointment1', function() {
+			mui.openWindow({
+				id: 'xiangshan.html',
+				url: "xiangshan.html"
+			})
+		})
+		mui('.mui-content').on('tap', '.spaAppointment2', function() {
+			mui.openWindow({
+				id: 'tangshan.html',
+				url: "tangshan.html"
+			})
+		})
+		mui('.mui-content').on('tap', '.spaAppointment3', function() {
+			mui.openWindow({
+				id: 'lanxin.html',
+				url: "lanxin.html"
+			})
+		})
+	</script>
+
+</html>

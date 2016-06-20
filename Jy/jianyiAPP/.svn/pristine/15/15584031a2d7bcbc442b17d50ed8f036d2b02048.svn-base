@@ -1,0 +1,8 @@
+//新增地址
+mui(".mui-content").on('tap', '#shippingNewAddress', function() {
+	commomUtil.closeWebviewById('newAddress');
+	mui.openWindow({
+		id: 'newAddress',
+		url: "../../../html/me/newAddress.html"
+	});
+})

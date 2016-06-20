@@ -1,0 +1,50 @@
+//我的预约
+mui('.mui-bar').on('tap', '#healthExaminationOrder', function() {
+	mui.openWindow({
+		id: 'healthExaminationOrder',
+		url: "healthExaminationOrder.html"
+	});
+});
+//服务介绍
+mui('.gene-nav').on('tap', '#healthExaminationService', function() {
+	plus.nativeUI.alert('敬请期待','','提示','确认');
+	return false;
+//	mui.openWindow({
+//		id: '',
+//		url: ".html"
+//	});
+});
+//体检机构
+mui('.gene-nav').on('tap', '#healthExaminationNet', function() {
+	commomUtil.closeWebviewById('indexHealthNetwork');
+	mui.openWindow({
+		id: 'indexHealthNetwork',
+		url: "../../healthNetwork/indexHealthNetwork.html",
+		extras: {
+			"mainMedication": 43
+		}
+	});
+});
+//客服代约
+mui('.gene-nav').on('tap', '#healthExaminationCustomer', function() {
+	mui.openWindow({
+		id: 'healthExaminationCustomer',
+		url: "healthExaminationCustomer.html"
+	});
+});
+//热门套餐
+mui('.mui-content').on('tap', '.spaAppointment', function() {
+	mui.openWindow({
+		id: 'healthExaminationPackage',
+		url: "healthExaminationPackage.html"
+	});
+});
+
+//初始化体检热门套餐
+document.addEventListener('plusready', function() {
+	
+});
+
+var healthExamination = {
+	
+}

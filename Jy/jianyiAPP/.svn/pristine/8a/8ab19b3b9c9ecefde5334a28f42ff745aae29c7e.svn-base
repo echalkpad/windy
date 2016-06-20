@@ -1,0 +1,16 @@
+mui('.mui-content').on('tap', 'li', function() {
+	var oid = this.parentNode.parentNode.id;
+	if (this.parentNode.className == 'spa-cancel') {
+		oid = 'cancal';
+	}
+	if (this.parentNode.className == 'spa-back') {
+		oid = 'back';
+	}
+	mui.openWindow({
+		id: 'spaOrderDetali',
+		url: "spaOrderDetali.html",
+		extras: {
+			"type": oid
+		}
+	})
+})

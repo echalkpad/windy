@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			body,
+			html,
+			.mui-content {
+				background: #fff;
+			}
+			
+			.mui-table-view .mui-media-object {
+				max-width: 75px;
+				height: 75px;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin-top: 0;
+			}
+			.mui-table-view:after,.mui-table-view:before{
+				height: 0;
+			}
+			.mui-table-view-cell:after{
+				left: 0;
+			}
+			.ellipsis{
+				padding-top: 5px;
+				font-size: 14px;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin:0!important;
+				-webkit-transform: translateX(-50%);
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id=""></a>
+			<h1 id="foodListTitle" class="mui-title">豆类</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="foodLibListUl">
+				<!--<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../../img/healthy/dietNutrition/shihuku_list_pic.png">
+						<div class="mui-media-body">
+							幸福
+							<p class="ellipsis">能和心爱的人一能和心爱的人一起睡觉能和心爱的人一起睡觉能和心爱的人一起睡觉能和心爱的人一起睡觉起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../../img/healthy/dietNutrition/shihuku_list_pic.png">
+						<div class="mui-media-body">
+							木屋
+							<p class="ellipsis">想要这样一间小木屋想要这样一间小木屋想要这样一间小木屋想要这样一间小木屋想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../../img/healthy/dietNutrition/shihuku_list_pic.png">
+						<div class="mui-media-body">
+							CBD
+							<p class="ellipsis">烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>-->
+			</ul>
+			<div class="order_none" style="display: block;">
+					<i></i>暂无评论
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/healthy/dietNutrition/foodLibList.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/mui.picker.min.css" />
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-segmented-control {
+				background-color: #fff;
+				border: none;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				position: relative;
+				background-color: #fff;
+				color: #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				position: absolute;
+				content: '';
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				border-bottom: 1px solid #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				background-color: #fff;
+				color: #000;
+				border: none
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view-cell h2 {
+				letter-spacing: -1px;
+				overflow: hidden;
+			}
+			
+			.mui-table-view-cell h2 span {
+				line-height: 34px;
+				float: left;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(1) {
+				float: left;
+				font-size: 16px;
+			}
+			
+			.mui-ios .mui-table-view-cell {
+				border-bottom: 1px solid rgb(242, 246, 249);
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				margin-left: 10px;
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				font-size: 13px;
+				color: #8f8f94;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-media-body p {
+				line-height: 20px;
+				font-size: 13px;
+			}
+			
+			.mui-media .pay {
+				text-align: center;
+				padding: 0 15px;
+				line-height: 20px;
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 6px;
+				border: 1px solid #f00;
+				color: #f00;
+				border-radius: 3px;
+			}
+			.xing-active {
+				background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+			
+			.xing {
+				background: url(../../../img/pay/icon_star.png) no-repeat;
+				background-size: 16px 16px;
+				width: 16px;
+				height: 16px;
+				display:block;
+				float:left;
+				margin-right:4px;
+			}
+			.pay-end {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: rgb(240, 145, 53);
+			}
+			
+			.mui-media {
+				position: relative;
+			}
+			
+			.pay-end img {
+				position: absolute;
+				bottom: -10px;
+				right: 0;
+				width: 70px;
+			}
+			
+			.mui-table-view {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				margin-bottom: 10px;
+				background: #fff;
+			}
+			
+			.mui-table-view-cell small {
+				display: block;
+				font-size: 12px;
+				color: #666;
+				margin-top: 20px;
+				padding-top: 8px;
+				line-height: 20px;
+				border-top: 1px solid #eee;
+				position: relative;
+			}
+			
+			.mui-table-view-cell small strong {
+				font-weight: normal;
+				color: #f00;
+			}
+			
+			.mui-table-view-cell small em {
+				font-style: normal;
+				float: right;
+			}
+			
+			.order_none {
+				width: 100px;
+				position: fixed;
+				top: 30%;
+				left: 50%;
+				margin-left: -50px;
+				text-align: center;
+				font-size: 14px;
+				color: #999;
+			}
+			
+			.mui-control-content {
+				background: #fff;
+			}
+			
+			.healthExamOrderList-t {
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+				height: 40px;
+				padding: 0 15px;
+				line-height: 40px;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.healthExamOrderList-t span {
+				font-size: 15px;
+				float: right;
+			}
+			
+			.healthExamOrderList-c {
+				padding: 10px 15px;
+			}
+			
+			.healthExamOrderList-c .healthExamOrderList-c-l,
+			.healthExamOrderList-c .healthExamOrderList-c-c,
+			.healthExamOrderList-c .healthExamOrderList-c-r {
+				float: left;
+			}
+			
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.healthExamOrderList-c {
+				overflow: hidden;
+				padding: 10px 15px 10px;
+				border-bottom: 1px solid rgba(000, 000, 000, .07);
+			}
+			
+			.healthExamOrderList-c p {
+				padding: 5px 0;
+				margin-bottom: 0;
+			}
+			
+			.healthExamOrderList-c p span.active {
+				color: #4A4A4A;
+			}
+			
+			.healthExamOrderList-b {
+				margin-right: 10px;
+				text-align: right;
+				overflow: hidden;
+				clear: both;
+			}
+			
+			.healthExamOrderList-b h2 {
+				padding: 10px 0;
+				font-size: 14px;
+				color: #4A4A4A;
+			}
+			
+			.healthExamOrderList-b p {
+				margin-top: 5px;
+				padding: 10px 0;
+			}
+			
+			.healthExamOrderList-b p span {
+				margin-left: 10px;
+				font-size: 14px;
+				float: left;
+			}
+			
+			.healthExamOrderList-b p span i {
+				font-style: normal!important;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.healthExamOrderList-b a:active {
+				border: 1px solid rgb(255, 255, 255)!important;
+				background: rgba(000, 000, 000, .3);
+				color: #fff!important;
+			}
+			
+			.healthExamOrderList-b a {
+				border: 1px solid rgba(255, 000, 000, .6);
+				border-radius: 5px;
+				margin: 10px 0 10px 10px;
+				padding: 5px 10px;
+				color: rgba(255, 000, 000, .6);
+			}
+			
+			.healthExamOrderList-b a.black {
+				border: 1px solid #9B9B9B;
+				color: #4A4A4A;
+			}
+			.xing {
+			    background: url(../../../img/pay/icon_star.png) no-repeat;
+			    background-size: 20px 20px;
+			    width: 20px;
+			    height: 20px;
+			    float:left;
+			    margin-left:5px!important;
+			}
+			.xing:nth-child(1){
+				margin-left:15px!important;
+			}
+			.xing-active {
+			    background-image: url(../../../img/pay/icon_star_fills.png)!important;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			.selector span{
+				background:#00b6f3;
+				color:#fff;
+			}
+			@-webkit-keyframes topRun{
+				from{bottom:-41px;}
+				to{bottom:0;}
+			}
+			
+			
+			.mui-pull-bottom-tips{
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				position:fixed;
+				line-height: 40px;
+				color: #777;
+				bottom:-41px;
+				width:100%;
+			}
+			.nomore{padding-bottom:41px;}
+			.nomore .mui-pull-bottom-tips{
+				-webkit-animation:topRun 1.5s ease-out;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="healthExamOrderListReBackID"></a>
+			<h1 class="mui-title">我的预约</h1>
+		</header>
+		<div class="mui-content nomore">
+			<div id="healthExamSegmentedControl" class="mui-segmented-control border-b">
+				<a class="mui-control-item mui-active" href="#healthExamOrderList1">
+					待确认
+				</a>
+				<a class="mui-control-item" href="#healthExamOrderList2">
+					待支付
+				</a>
+				<a class="mui-control-item" href="#healthExamOrderList3">
+					预约成功
+				</a>
+				<a class="mui-control-item" href="#healthExamOrderList4">
+					待评价
+				</a>
+				<a class="mui-control-item" href="#healthExamOrderList5">
+					已完成
+				</a>
+			</div>
+			<!--待确认-->
+			<div id="healthExamOrderList1" class="mui-control-content mui-active">
+				<ul id="healthExamOrderListDQRULID">
+					<!--<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="red">待客服确认</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><span>套餐价格<i>￥123</i></span><a href="" class="black cancle">取消预约<input type="hidden" value="" /><input type="hidden" value="" /></a><a href="tel:400-111-5289">电话催办</a></p>
+						</section>
+					</li>-->
+				</ul>
+				<div class="order_none" id="healthExamOrderListOrderNoneDQRID" style="display: block;">
+					<i></i>暂无订单
+				</div>
+				<div class="mui-pull-bottom-tips">
+					<div class="mui-pull-bottom-wrapper">
+						<span class="mui-pull-loading">已经到底了...</span>
+					</div>
+				</div>
+			</div>
+			<!--待支付-->
+			<div id="healthExamOrderList2" class="mui-control-content">
+				<ul id="healthExamOrderListDZFULID">
+					<!--<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="red">待支付</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><span>实付金额<i>￥123</i></span><a href="" class="black cancle">取消预约<input type="hidden" value="" /><input type="hidden" value="" /></a><a href="">支付<input type="hidden" value="" /></a></p>
+						</section>
+					</li>-->
+				</ul>
+				<div class="order_none" id="healthExamOrderListOrderNoneDZFID" style="display: block;">
+					<i></i>暂无订单
+				</div>
+			</div>
+			<!--预约成功-->
+			<div id="healthExamOrderList3" class="mui-control-content ">
+				<ul id="healthExamOrderListYYCGULID">
+					<!--<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="red">预约成功</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><a href="">申请退款<input type="hidden" value="" /></a></p>
+						</section>
+					</li>-->
+				</ul>
+				<div class="order_none" id="healthExamOrderListOrderNoneYYCGID" style="display: block;">
+					<i></i>暂无订单
+				</div>
+			</div>
+			<!--待评价-->
+			<div id="healthExamOrderList4" class="mui-control-content ">
+				<ul id="healthExamOrderListDPJULID">
+					<!--<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="red">待评价</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><span>实付金额<i>￥123</i></span><a href="">评价<input type="hidden" value="" /></a></p>
+						</section>
+					</li>-->
+				</ul>
+				<div class="order_none" id="healthExamOrderListOrderNoneDPJID" style="display: block;">
+					<i></i>暂无订单
+				</div>
+			</div>
+			<!--已完成-->
+			<div id="healthExamOrderList5" class="mui-control-content ">
+				<ul id="healthExamOrderListYWCULID">
+					<!--<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="">已完成</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span><span class="xing xing-active"></span>
+								<a href="">删除订单<input type="hidden" value="" /></a>
+							</p>
+						</section>
+					</li>-->
+				</ul>
+				<!--已取消-->
+				<!--<ul class="healthExamin-cancal">
+					<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="">已取消</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><a href="">删除订单<input type="hidden" value="" /></a></p>
+						</section>
+					</li>
+				</ul>-->
+				<!--已退款的-->
+				<!--<ul class="healthExamin-back">
+					<li class="border-b">
+						<input type="hidden" value="" />
+						<input type="hidden" value="1" />
+						<section class="healthExamOrderList-t">
+							<article>订单编号：123123213 <span class="">已退款</span></article>
+						</section>
+						<section class="healthExamOrderList-c">
+							<p>选择套餐 <span>尚未确认</span></p>
+							<p>体检人 <span class="active">受到法是否</span></p>
+							<p>体检时间 <span>尚未确认</span></p>
+							<p>体检地址 <span>尚未确认</span></p>
+						</section>
+						<section class="healthExamOrderList-b">
+							<p><a href="">删除订单<input type="hidden" value="" /></a></p>
+						</section>
+					</li>
+				</ul>-->
+				<div class="order_none" id="healthExamOrderListOrderNoneYWCID" style="display: block;">
+					<i></i>暂无订单
+				</div>
+			</div>
+			<input type="hidden" value="0" id="backHealthExamOrderListWebviewId"/>
+			<input type="hidden" value="0" id="backHealthExamOrderListWebviewUrl"/>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/mui.picker.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/healthExamination/healthExaminationOrder.js"></script>
+
+</html>

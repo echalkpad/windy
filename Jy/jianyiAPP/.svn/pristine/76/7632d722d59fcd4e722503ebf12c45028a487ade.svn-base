@@ -1,0 +1,348 @@
+//var type = '';
+//var directionNew = '';
+//var hasplus = '';
+
+
+var sugardata = "";
+var onclickIndex = 0;
+var datas = [
+	{key:0,name:"早餐",img:'<img src="../../img/pharmacy_icon_morning@2x.png" alt="" width="20px" style="margin-bottom:-2px" />'},
+	{key:1,name:"午餐",img:'<img src="../../img/pharmacy_icon_nooning@2x.png" alt="" width="20px" style="margin-bottom:-4px" />'},
+	{key:2,name:"晚餐",img:'<img src="../../img/pharmacy_icon_night@2x.png" alt="" width="20px" style="margin-bottom:-4px" />'},
+	{key:3,name:"其他",img:'<img src="../../img/pharmacy_icon_sleep@2x.png" alt="" width="20px" style="margin-bottom:-4px" />'}
+];
+var type = "";
+var oHealthyMeal = document.getElementById('healthy-meal');
+var departmentResult = document.getElementById('departmentResult');
+var accountType = "";
+var familyId = "";
+var bloodRecordId = "";
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	type = self.type;
+	bloodRecordId = self.bloodRecordId;
+	onclickIndex = self.onclickIndex;
+	sugardata = self.sugardata;
+	accountType = self.accountType;
+	familyId = self.familyId;
+//	console.log(JSON.stringify(sugardata));
+	//设置初始数据信息
+	bealthyBloodRecord.initbealthyBloodRecord(onclickIndex,type);
+});
+
+var bealthyBloodRecord = {
+	initbealthyBloodRecord : function(onclickIndex,type){
+		var contentHtml = "";
+		var contentIndex = 0;
+			if("xtafterOnclick" == type){
+				contentHtml = datas[onclickIndex].name + "后";
+				contentIndex = onclickIndex * 2 + 2;
+			}else{
+				contentIndex = onclickIndex * 2 + 1;
+				contentHtml = datas[onclickIndex].name + "前";
+			}
+			contentHtml = contentHtml == "其他前" ? "睡前" : contentHtml;
+			oHealthyMeal.innerHTML = html = datas[onclickIndex].img + contentHtml+ '-血糖值';
+			var deAID = document.getElementById('deleRecord');
+			var timest = "0";
+			if(sugardata){
+//				console.log(JSON.stringify(sugardata));
+				var cltime = "";
+				var remarks = "";
+				//设置血糖值数据
+				switch (contentIndex){
+				case 1 :
+					timest = sugardata.BeforeBreakfast ? sugardata.BeforeBreakfast : "1.5";
+					contentHtml = "早餐前";
+					remarks = sugardata.Remarks1;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate1);
+					break;
+				case 2:
+					timest = sugardata.AfterBreakfast ? sugardata.AfterBreakfast : "1.5";
+					contentHtml = "早餐后";
+					remarks = sugardata.Remarks2;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate2);
+					break;
+				case 3:
+					timest = sugardata.BeforeLunch ? sugardata.BeforeLunch : "1.5";
+					contentHtml = "午餐前";
+					remarks = sugardata.Remarks3;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate3);
+					break;
+				case 4:
+					timest = sugardata.AfterLunch ? sugardata.AfterLunch : "1.5";
+					contentHtml = "午餐后";
+					remarks = sugardata.Remarks4;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate4);
+					break;
+				case 5:
+					timest = sugardata.BeforeDinner ? sugardata.BeforeDinner : "1.5";
+					contentHtml = "晚餐前";
+					remarks = sugardata.Remarks5;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate5);
+					break;
+				case 6:
+					timest = sugardata.AfterDinner ? sugardata.AfterDinner : "1.5";
+					contentHtml = "晚餐后";
+					remarks = sugardata.Remarks6;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate6);
+					break;
+				case 7:
+					timest = sugardata.BedTime ? sugardata.BedTime : "1.5";
+					contentHtml = "睡前";
+					remarks = sugardata.Remarks7;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate7);
+					break;
+				case 8:
+					timest = sugardata.Other ? sugardata.Other : "1.5";
+					contentHtml = "其他";
+					remarks = sugardata.Remarks8;
+					cltime = bealthyBloodRecord.setClTimes(sugardata.MeasurementDate8);
+					break;
+				}
+				departmentResult.innerHTML = contentHtml;
+				document.getElementById("healthy-cod").innerText = timest;
+				//设置标尺位置信息
+				bealthyBloodRecord.setScrollIndex(timest,"scroll2");
+				document.getElementById("departmentResultInputId").value = contentIndex;
+				document.getElementById("healthy-cod").innerText = timest;
+				document.getElementById("healthBR-time").innerHTML = cltime;
+				if(remarks && remarks != ""){
+					document.getElementById("healthBR-remark").value = remarks;
+				}
+				if(sugardata.flag == 1){
+					deAID.innerHTML = '删除本条记录';
+					deAID.className = 'healthyR-btn';
+				}else{
+					deAID.innerHTML = '';
+					deAID.className = '';
+				}
+			}else{
+				departmentResult.innerHTML = contentHtml;
+				deAID.innerHTML = '';
+				deAID.className = '';
+			}
+	},
+	setClTimes : function(time){
+//		console.log(time);
+		var reCltime = "";
+		if(time){
+			var measurementDateTime = time;
+			var endLen = measurementDateTime.length - 2;
+			var time = measurementDateTime.substring(6, endLen);
+			reCltime = commomUtil.formatStringToDate(time,3);
+		}else{
+			reCltime = commomUtil.formatStringToDate(new Date().getTime(),3);
+		}
+		return reCltime;
+	},
+	meDepartmentOnclick : function(){
+		var meDepartment = new mui.PopPicker();
+		var mepartments = "";
+		if("xtBeforeOnclick" == type){
+			mepartments = [{value:'1',text:"早餐前"},{value:'3',text:"中餐前"},{value:'5',text:"晚餐前"},{value:'7',text:"睡前"}];
+		}else{
+			mepartments = [{value:'2',text:"早餐后"},{value:'4',text:"中餐后"},{value:'6',text:"晚餐后"},{value:'8',text:"其他"}];
+		}
+		meDepartment.setData(mepartments);
+		meDepartment.show(function(items) {
+//			console.log(JSON.stringify(items[0].text));
+			var texts = JSON.stringify(items[0].text);
+			texts = texts.replace("\"", "").replace("\"", "");
+			departmentResult.innerText = texts;
+			var textValue = JSON.stringify(items[0].value).replace("\"", "").replace("\"", "");
+			document.getElementById("departmentResultInputId").value = textValue;
+		});
+	},
+	healthBRtime1Onclick : function(){
+		var optionsJson = this.getAttribute('data-options') || '{}';
+		var options = JSON.parse(optionsJson);
+		var id = this.getAttribute('id');
+
+		var picker = new mui.DtPicker(options);
+		
+		picker.show(function(rs) {
+			var dt = new Date;
+			dt.setYear(rs.y.value);
+			dt.setMonth(rs.m.value - 1);
+			dt.setDate(rs.d.value);
+			dt.setHours(rs.h.value);
+			dt.setMinutes(rs.i.value);
+			
+			
+			var str = dt.getFullYear()+"-"+(dt.getMonth()+1)+"-"+dt.getDate();
+			var dttime = new Date().getTime();
+			if(dttime < dt.getTime()){
+				plus.nativeUI.alert('测量时间不能大于当前时间！','','提示','确认');
+				return false;
+			}
+			document.getElementById('healthBR-time').innerText =str+' '+rs.text;
+			
+			picker.dispose();
+		});
+	},
+	healthyBtnOnclick : function(){
+		//获取血糖值
+		var bloodSugarValue = document.getElementById("healthy-cod").innerText;
+		if(!bloodSugarValue){
+			plus.nativeUI.alert('血糖值不能为空！','','提示','确认');
+			return false;
+		}
+		if(bloodSugarValue == 0){
+			plus.nativeUI.alert('对不起，血糖不能为零，请测量后提交！','','提示','确认');
+			return false;
+		}
+		//获取测量时间
+		var dateTime = document.getElementById("healthBR-time").innerText;
+		if(!dateTime){
+			plus.nativeUI.alert('测量时间段不能为空！','','提示','确认');
+			return false;
+		}
+		//获取类型值
+		var timeStage = document.getElementById("departmentResultInputId").value;
+		if(!timeStage){
+			plus.nativeUI.alert('测量时间段类型不能为空！','','提示','确认');
+			return false;
+		}
+		//获取备注
+		var description = document.getElementById("healthBR-remark").value;
+//		if(!description){
+//			plus.nativeUI.alert('测量描述不能为空！','','提示','确认');
+//			return false;
+//		}
+		var requestData = "bloodSugarValue="+bloodSugarValue+"&dateTime="+dateTime+"&timeStage="+timeStage+"&description="+description+"&familyId="+familyId+"&accountType="+accountType;
+//		console.log("requestData--->:"+requestData);
+		jyapp.getApi({
+ 			method: 'HealthMeasure/BloodSugarAdd',
+ 			data:requestData,
+ 			timeout : 10000,
+ 			showWaiting: true,
+ 			onsuccess: function(data) {
+// 				console.log(JSON.stringify(data));
+				if(data.code == 1){
+					var config = {
+						id : "healthSelfTesting",
+						method : "newIdsHealthSelfTesting",
+						extras : {
+							index : 0,
+							onclickIndex : onclickIndex,
+							familyId : familyId,
+							accountType : accountType
+						}
+					}
+					commomUtil.backWebView(config);
+				}else{
+					plus.nativeUI.alert(data.msg,'','提示','确认');
+				}
+ 			},
+ 			onerror: function(e) {
+	   			console.log("healthyBtnOnclick------>:"+e);
+// 				plus.nativeUI.alert(e,'','提示','确认');
+ 			}
+ 		});
+	},
+	removeBloodRecordOnclick : function(){
+		//获取类型值
+		var requestData = "bloodSugarId="+bloodRecordId;
+		console.log(requestData);
+		jyapp.getApi({
+ 			method: 'HealthMeasure/BloodSugarDelete',
+ 			data:requestData,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+ 				console.log(JSON.stringify(data));
+				if(data.code == 1){
+					var config = {
+						id : "healthSelfTesting",
+						method : "newIdsHealthSelfTesting",
+						extras : {
+							index : 0,
+							onclickIndex : onclickIndex
+						}
+					}
+					commomUtil.backWebView(config);
+				}else{
+					plus.nativeUI.alert(data.msg,'','提示','确认');
+				}
+ 			},
+ 			onerror: function(e) {
+ 				console.log("e-------->:"+e);
+// 				plus.nativeUI.alert(e,'','提示','确认');
+ 			}
+ 		});
+	},
+	setScrollIndex : function(num,scrollId){
+		var S2=document.getElementById(scrollId);
+		var indexNum=88.8*(1.48-num);
+		if(-2800<indexNum && indexNum<=130){
+			S2.style.backgroundPosition=indexNum+"px";
+		}else if(indexNum<=-2800){
+			S2.style.backgroundPosition=-2800+"px";
+			indexNum=-2800+5;
+		}else if(indexNum>=140){
+			indexNum = 130;
+			S2.style.backgroundPosition = indexNum + "px";
+		}
+	}
+};
+
+//绑定测量时间段点击事件
+document.getElementById('meDepartment').addEventListener("click",bealthyBloodRecord.meDepartmentOnclick);
+//绑定测量时间控件
+document.getElementById("healthBR-time1").addEventListener("click",bealthyBloodRecord.healthBRtime1Onclick);
+//绑定完成按钮事件
+document.getElementById("healthy-btn").addEventListener("click",bealthyBloodRecord.healthyBtnOnclick);
+//绑定删除按钮事件
+document.getElementById("deleRecord").addEventListener("click",bealthyBloodRecord.removeBloodRecordOnclick);
+
+var S2=document.getElementById("scroll2");
+var perLow=document.getElementById("healthy-cod");
+
+Touch(S2,-2800,1.48,perLow);//低压
+
+function Touch(m,n,y,j){
+	var num=0;
+	m.addEventListener('touchstart',function(evt){
+    	var touch = evt.touches[0]; //获取开始触点
+        var x = (touch.pageX)|0; //页面开始触点X坐标
+        startX = x;
+	},false);
+	var t = 0;
+	var z=jQuery(m).parent().parent().parent().find('strong').html();
+	z=parseInt(z);
+	num=88.8*(y-z);
+	if(n<num && num<=130){
+		m.style.backgroundPosition=num+"px";
+	}else if(num<=n){
+		m.style.backgroundPosition=n+"px";
+		num=n+5;
+	}else if(num>=140){
+		num = 130;
+		m.style.backgroundPosition = num + "px";
+	}
+	m.addEventListener('touchmove',function(event){
+		event.preventDefault();
+        var touch = event.touches[0]; //获取结束触点
+        var endX = (touch.pageX)|0; //页面结束触点X坐标
+		t=startX-endX; //滑动距离
+
+		var d=jQuery(m).css('background-position-x');
+		d=parseInt(d);
+		num=d-t/10;
+		if(d<140){
+			if(n<num && num<=130){
+				m.style.backgroundPosition=num+"px";
+			}else if(num<=n){
+				m.style.backgroundPosition=n+"px";
+				num=n+5;
+			}else if(num>=140){
+				num = 130;
+				m.style.backgroundPosition = num + "px";
+			}
+		}
+		var Z=y-num/88.8;
+		Z=Z.toFixed(1);
+		j.innerHTML=Math.abs(Z);
+	},false)
+}
+

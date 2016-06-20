@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+			}
+			
+			.jkwd-ul {
+				margin: 0;
+				list-style: none;
+				padding-left: 0px;
+			}
+			
+			.jkwd-ul li {
+				padding: 10px 0;
+				border-bottom: 1px solid #F1F1F1;
+				height: 97px;
+				width: 100%;
+				position: relative;
+			}
+			
+			.jkwd-ul li .li-l {
+				border: 1px solid #ccc;
+				position:absolute;
+				left:10px;
+				top:10px;
+				width: 70px;
+				height: 70px;
+			}
+			
+			.jkwd-ul li .li-l img {
+				width: 70px;
+				height: 70px;
+			}
+			
+			.jkwd-ul li .li-r {
+				padding-left:90px;
+			}
+			
+			.jkwd-ul li .li-r h2 {
+				margin-top: 0;
+				font-size: 16px;
+				color: #000;
+				line-height: 20px;
+				white-space: normal;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				padding-right:15px;
+			}
+			
+			.jkwd-ul li .li-r h2 span {
+				position: relative;
+				top: -2px;
+				color: #fff;
+				background: rgb(249, 157, 46);
+				padding: 0 1px;
+				font-size: 10px;
+				border-radius: 3px;
+				margin-left: 6px;
+			}
+			
+			.jkwd-ul li .li-r h3 {
+				font-size: 15px;
+				margin: 4px 0;
+				color: #000;
+			}
+			
+			.jkwd-ul li .li-r h3 .sp1 {
+				padding-right: 5px;
+				color: rgb(249, 157, 46);
+				font-size: 20px;
+			}
+			
+			.jy-li:nth-child(3) .phone-btn {
+				/*padding-right: 200px;*/
+			}
+			
+			.jkwd-ul li .li-r p {
+				font-size: 12px;
+			}
+			
+			.jkwd-ul li .li-r p .sp1 {
+				padding-left: 5px;
+			}
+			
+			.jkwd-ul li .li-r p .sp2 {
+				position: absolute;
+				right: 20px
+			}
+			
+			.jkwd-ul li h4 {
+				margin-top: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp1 {
+				color: #f00;
+				font-size: 20px;
+			}
+			
+			.jkwd-ul li h4 .sp2 {
+				text-decoration: line-through;
+				padding-left: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp3 {
+				position: absolute;
+				right: 20px;
+				display: block;
+				margin-top: -10px;
+			}
+			
+			.jkwd-yhyh {}
+			
+			.jkwd-yhyh div {
+				padding: 10px;
+			}
+			
+			dl {
+				padding: 0 10px;
+			}
+			
+			dl dd {
+				margin-left: 0;
+			}
+			
+			dl dt span {
+				float: right;
+			}
+			
+			.jy-li{
+				padding-right:40px;
+			}
+			.jy-li .phone-btn {
+				background: none;
+				color: #4A4A4A;
+				float: none;
+			}
+			.jy-navigate-right{position:relative;}
+			.jy-navigate-right img{
+				position:absolute;
+				left:15px;
+				top:50%;
+				-webkit-transform:translateY(-50%);
+			}
+			.jy-navigate-right a{
+				display:block;
+				padding-left:25px;
+				width:100%;
+				text-align:left;
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				height:42px;
+				line-height:42px;
+				margin:0;
+				background:none;
+				color:#333;
+			}
+			
+			.rmtc h3 {
+				margin: 5px auto 10px;
+			}
+			
+			.rmtc h3,.rmtc p {
+				font-size: 14px;
+				color: #4A4A4A;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+				padding-right:20px;
+			}
+			
+			.rmtc p del{margin-right: 30px;}
+			
+			.rmtc p span:nth-child(2) {font-size: 12px;}
+			
+			.rmtc p span:nth-child(3) {
+				color: #f00;
+				font-size: 16px;
+			}
+			.jy-navigate-right small{
+			    display: inline-block;
+			    border-radius: 100px;
+				padding: 0 5px 0 0;
+			    color: #929292;
+			    background-color: transparent;
+			    position: absolute;
+			    top: 50%;
+			    right: 35px;
+			    -webkit-transform: translateY(-50%);
+			    transform: translateY(-50%);
+			}
+			.mui-table-view:before,.mui-table-view:after,.mui-table-view-cell:after, .mui-table-view-cell:before{
+				background:#F1F1F1;
+			}
+			.fixbottom{
+				width:100%;
+				background:#fff;
+				position: fixed;
+				bottom:0;
+				padding:5px 15px;
+			}
+			.fixbottom a{
+				display:block;
+				line-height:40px;
+				text-align:center;
+				color:#fff;
+				border-radius:5px;
+				background:#00b6f3;
+				font-size:16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康网点</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-top" id="healthNetworkDetailTopId">
+				 <ul class="jkwd-ul" id="hndutId">
+				 	<!--<li>
+				 		<div class="li-l">
+				 			<img src="http://222.73.216.65:7101/Images/Mo_Store/StoreImg/拜尔口腔.png" onerror="this.src='../../img/default/pic_moren.png';this.onerror=null"/>
+				 		</div>
+				 		<div class="li-r">
+				 			<h2>拜尔口腔-虹尔门诊部拜尔口腔-虹尔门诊部拜尔口腔-虹尔门诊部拜尔口腔-虹尔门诊部</h2>
+				 			<h3>	<span class="sp1 xingxing">★★★★★</span></h3>
+				 			<p><span class="sp2">2.11km</span></p>
+				 		</div>
+				 	</li>-->
+				 </ul>
+				 <p id="openSysMapID" class="jy-li jy-navigate-right">
+				 	<img src="../../img/familyDoctor/icon_address.png" width="10px" />
+				 	<!--<a class="phone-btn"><input type="hidden" value="121.49744" /><input type="hidden" value="31.26431" />天宝路280弄17号B1LG20天宝路280弄17号B1LG20</a>-->
+				 </p>
+				 <p class="jy-li jy-navigate-right">
+				 	<img src="../../img/familyDoctor/icon_phone.png" width="12px" />
+				 	<!--<a href="tel:021-65063065" class="phone-btn">021-65063065</a>-->
+				 </p>
+			</div>
+		</div>
+		<div class="jkwd-yd border-t" id="healthNetworkDetailProductId">
+			<p class="jy-li jy-navigate-right f12 weak" id="netPlan"><span style="top: -2px;position: relative;background: rgb(232,80,63);">热</span>热门套餐<small>更多</small></p>
+			<ul class="mui-table-view rmtc" id="healthNetworkDetailProductULId">
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<h3>职场白领套餐职场白领套餐职场白领套餐职场白领套餐</h3>
+						<p>门市价：<del>￥123起</del><span>健e价：</span><span>￥123起</span></p>
+					</a>
+				</li>-->
+			</ul>
+			<p class="jy-li jy-navigate-right f12 weak"><span style="background: rgb(38,204,114);">订</span>预定</p>
+			
+		</div>
+		<div class="jkwd-yhyh border-t" id="healthNetworkDetailDiscountId">
+		</div>
+		<div class="jkwd-kjcz border-t" id="healthNetworkDetailCouponsId">
+		</div>
+		<div class="jkwd-yhdp border-t" id="healthNetworkDetailCommentId">
+
+		</div>
+		<div id="showAddressMap" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="1" />
+					<a href="">苹果地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="2" />
+					<a href="">百度地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="3" />
+					<a href="">高德地图</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input type="hidden" name="" id="" value="4" />
+					<a href="#">腾讯地图</a>
+				</li>
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#showAddressMap"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+		<div class="fixbottom">
+			<a href="tel:400-111-5289">我要咨询/预约</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/util/gps.js"></script>
+	<script src="../../js/healthNetwork/healthNetworkDetail.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

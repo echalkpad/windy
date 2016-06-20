@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>对症寻药列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view h2 {
+				color: #4A4A4A;
+				font-size: 16px;
+			}
+			
+			.mui-table-view h3 {
+				padding-top: 5px;
+				font-size: 13px;
+				color: #9B9B9B;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin-top: 0;
+			}
+			.mui-table-view .mui-media-object {
+				line-height: 55px;
+				max-width: 55px;
+				height: 55px;
+				border:1px solid #F1F1F1;
+			}
+			.mui-table-view  .mui-ellipsis{
+				color: #9B9B9B;
+			}
+			.mui-content article p{
+				font-size: 12px;
+				margin-bottom: 10px;
+				padding: 10px ;
+				background: rgb(242,246,249);
+			}
+			.mui-content article span{
+				color: #f00;
+			}
+			.searchMedicine{
+				position:relative;
+				padding:10px 15px;
+				background:#fff;
+				border-bottom:#F1F1F1;
+			}
+			.searchMedicine .search{
+			    position: absolute;
+			    top:16px;
+			    left:25px;
+			    display: inline-block;
+			    width:18px;
+			    height:19px;
+			    background: url(../../../img/icon_search.png) no-repeat scroll top left;
+			    background-size:cover;
+			}
+			
+			.searchMedicine input{
+				background:#f1f1f1;
+				border-radius:16px;
+				border:0;
+				margin:0;
+				height:32px;
+				line-height:32px;
+				padding-left:35px;
+				color:#444;
+				display:block;
+			}
+			#searchMedicine,#searchTitle{
+				/*display: none;*/
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			@-webkit-keyframes topRun{
+				from{bottom:-41px;}
+				to{bottom:0;}
+			}
+			
+			
+			.mui-pull-bottom-tips{
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				position:fixed;
+				line-height: 40px;
+				color: #777;
+				bottom:-41px;
+				width:100%;
+			}
+			.nomore{padding-bottom:41px;}
+			.nomore .mui-pull-bottom-tips{
+				-webkit-animation:topRun 1.5s ease-out;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">对症药品</h1>
+		</header>
+		<div class="mui-content" id="symptomaticMedicineDivId">
+			<section class="searchMedicine" id="searchMedicine" style="display: none;">
+				<label for="" class="search"></label>
+				<input type="text" name="" id="searchMedicine" placeholder="搜索药品"/>
+			</section>
+			<article id="searchTitle">
+				<!--<p>清热解毒相关药品（<span>982</span>）</p>-->
+			</article>
+			<ul class="mui-table-view" id="symptomaticMedicineDetailUlId">
+				<!--<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../../img/medication/symptomaticMedicine/yao_pic.png">
+						<div class="mui-media-body">
+							<h2>药品名</h2>
+							<h3>中性药</h3>
+							<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../../img/medication/symptomaticMedicine/yao_pic.png">
+						<div class="mui-media-body">
+							<h2>药品名</h2>
+							<h3>中性药</h3>
+							<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>-->
+			</ul>
+			<div class="order_none" id="symptomaticMeddicineListzwddId" style="display: none;">
+				<i></i>
+				暂无药品信息
+			</div>
+			<div class="mui-pull-bottom-tips">
+				<div class="mui-pull-bottom-wrapper">
+					<span class="mui-pull-loading" id="symptomaticMedicinespanId">上拉加载更多...</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/medication/symptomaticMedicine/symptomaticMedicineList.js" type="text/javascript" charset="utf-8"></script>
+</html>

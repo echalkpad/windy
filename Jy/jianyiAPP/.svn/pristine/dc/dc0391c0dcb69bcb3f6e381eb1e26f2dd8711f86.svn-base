@@ -1,0 +1,149 @@
+var ul = document.getElementById('xingxing');
+var ul_lis = ul.getElementsByTagName('span');
+clearAll = function() {
+	for (var i = 0; i < ul_lis.length; i++) {
+		ul_lis[i].className = 'xing';
+	}
+}
+for (var i = 0; i < ul_lis.length; i++) {
+	ul_lis[i].index = i;
+	ul_lis[i].onclick = function() {
+		clearAll();
+		var j = this.index + 1;
+		for (var i = 0; i < j; i++) {
+			ul_lis[i].className = 'xing xing-active';
+		}
+	}
+}
+
+var checkId = 1;
+var orderId = "";
+var backid = "";
+var backurl = "";
+//判断字符长度
+function getnum(e) {
+	if (e.srcElement.textLength > 100) {
+		return false;
+	}
+}
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	orderId = self.orderId;
+	backid = self.backid;
+	backurl = self.backurl;
+	//初始化订单详情页面数据
+	slowOrderDetailsEvaluate.initSlowOrderDetailsEvaluate(orderId);
+});
+
+var slowOrderDetailsEvaluate = {
+		initSlowOrderDetailsEvaluate: function() {
+			jyapp.getApi({
+				method: 'Treat/OrderDetails',
+				data: 'orderId=' + orderId,
+				timeout: 10000,
+				onsuccess: function(response) {
+					// 				console.log("initSlowOrderDetailsEvaluate---->:"+JSON.stringify(response));
+					var dataValue = response.data;
+					if (dataValue != null) {
+						orders = dataValue;
+						var strTime = dataValue.VisitDate;
+						var endLen = strTime.length - 2;
+						var time = strTime.substring(6, endLen);
+						var visit = commomUtil.formatStringToDate(time, 2);
+						var VisitDate = (visit.substring(0, visit.length - 3));
+						var week = commomUtil.formatDateToWeek(time);
+						document.getElementById("slowOrderDetailsEvaluateSpanNameID").innerHTML = dataValue.doctorName;
+						document.getElementById("slowOrderDetailsEvaluateSpanTimeID").innerHTML = VisitDate + '(' + week + ')';
+						document.getElementById("slowOrderDetailsEvaluateAddressID").innerHTML = dataValue.VisitPlace;
+						document.getElementById("slowOrderDetailsEvaluatePatientID").innerHTML = dataValue.patientName;
+						document.getElementById("slowOrderDetailsEvaluateIdNumberID").innerHTML = dataValue.IDCard;
+						document.getElementById("slowOrderDetailsEvaluatePhoneID").innerHTML = dataValue.Phone;
+						document.getElementById("slowOrderDetailsEvaluateConsultingPriceID").innerHTML = "¥" + dataValue.Fee;
+						document.getElementById("slowOrderDetailsEvaluateEnsureID").innerHTML = "¥" + dataValue.Deposit;
+						var cashCoupon = dataValue.TotalFee - (dataValue.Deposit + dataValue.Fee);
+						document.getElementById("slowOrderDetailsEvaluateCashCouponID").innerHTML = "¥" + cashCoupon;
+						document.getElementById("slowOrderDetailsEvaluateTotalPriceID").innerHTML = "¥" + dataValue.TotalFee;
+						document.getElementById("slowOrderDetailsEvaluateOrderNoID").value = dataValue.OrderNo;
+					}
+				},
+				onerror: function(e) {
+					console.log("initSlowOrderDetailsEvaluate:" + e);
+					// 				plus.nativeUI.alert(e,'','健医宝','确认');
+					return false;
+				}
+			});
+		},
+		submitSlowOrderDetailsEvaluate: function() {
+			//获取评价评分
+			var score = 0;
+			for (var i = 0; i < ul_lis.length; i++) {
+				if (ul_lis[i].className == "xing xing-active") {
+					score = i + 1;
+				}
+			}
+			if (score == 0) {
+				plus.nativeUI.alert('请选择评分', '','健医宝', '确认');
+				return false;
+			}
+			//获取评论内容
+			var comments = document.getElementById("slowOrderEvaluationTextarea").value;
+			comments = comments ? escape(comments).replace(/%/g,"\\") : "";
+			var requestData = "orderId=" + orderId + "&score=" + score + "&comment=" + comments + "&isAnonymous=0";
+
+			if (checkId == 1) {
+				checkId++;
+				jyapp.getApi({
+					method: 'Treat/CommentOrder',
+					data: requestData,
+					timeout: 10000,
+					showWaiting: true,
+					onsuccess: function(data) {
+						checkId = 1;
+						var code = data.code;
+						order = data;
+						if (code == 1) {
+							var config = {
+								id : "slowOrderList",
+								url: "slowOrderList.html",
+								method : "newIdsSlowOrderList",
+								extras : {
+									backurl: backurl,
+									backid : backid,
+									index : 3
+								}
+							}
+							jyapp.backWebView(config);
+						} else {
+							plus.nativeUI.alert(data.msg, '','健医宝', '确认');
+							return false;
+						}
+					},
+					onerror: function(e) {
+						checkId = 1;
+						console.log("submitSlowOrderDetailsEvaluate---->:" + e);
+						//	   				plus.nativeUI.alert(e,'','健医宝','确认');
+					}
+				});
+			}
+		},
+		orderDetailsEvaluateBackCell: function() {
+			var config = {
+				id : "slowOrderList",
+				url: "slowOrderList.html",
+				method : "newIdsSlowOrderList",
+				extras : {
+					backurl: backurl,
+					backid : backid,
+					index : 2
+				}
+			}
+			jyapp.backWebView(config);
+		}
+	}
+	//绑定评价按钮事件
+document.getElementById("slowEvaluateSubmitID").addEventListener('tap', slowOrderDetailsEvaluate.submitSlowOrderDetailsEvaluate);
+//绑定回退事件
+document.getElementById("orderDetailsEvaluateBackCellId").addEventListener("tap", slowOrderDetailsEvaluate.orderDetailsEvaluateBackCell);
+//mui.back = function(e){
+//	slowOrderDetailsEvaluate.orderDetailsEvaluateBackCell();
+//}

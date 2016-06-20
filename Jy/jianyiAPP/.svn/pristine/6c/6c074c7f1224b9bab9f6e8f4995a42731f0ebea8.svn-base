@@ -1,0 +1,166 @@
+var twouploadfiles = new Array();
+// 扩展API加载完毕后调用onPlusReady回调函数
+document.addEventListener("plusready", onPlusReady, false);
+// 扩展API加载完毕，现在可以正常调用扩展API 
+function onPlusReady() {
+}
+// 从相册中选择图片 
+function galleryImg() {
+	// 从相册中选择图片
+//	console.log("从相册中选择图片:");
+	plus.gallery.pick(function(path) {
+		var upload = document.getElementById("upload");
+		var div = document.createElement('div');
+		div.setAttribute('class', 'img-div');
+		var img = document.createElement('img');
+		img.setAttribute('src', path);
+		var a = document.createElement('a');
+		a.setAttribute('id', 'img-a');
+		div.appendChild(img);
+		div.appendChild(a);
+		upload.appendChild(div);
+	}, function(e) {
+//		console.log("取消选择图片");
+	}, {
+		filter: "image"
+	});
+}
+// 从相册中选择多张图片 
+function galleryImgs() {
+	var childsNodes = document.getElementById("upload").querySelectorAll("img");
+	if(childsNodes.length >= 4){
+		plus.nativeUI.alert('最多添加4张哦','','提示','确认');
+		return false
+	}
+	// 从相册中选择图片
+	console.log("从相册中选择多张图片:");
+	plus.gallery.pick(function(e) {
+		var num = twouploadfiles.length + e.files.length ;
+		console.log(num);
+		if (e.files.length > 4 || num > 4) {
+			plus.nativeUI.alert('最多添加4张哦','','提示','确认');
+			return false
+		} else {
+			for (var i = 0, len = e.files.length; i < len; i++) {
+				var files = {
+					name:e.files[i],
+					path:e.files[i]
+				}
+				twouploadfiles.push(files);
+				var div = document.createElement('div');
+				div.setAttribute('class', 'img-div');
+				var img = document.createElement('img');
+				img.setAttribute('src', e.files[i]);
+				var a = document.createElement('a');
+				a.setAttribute('id', 'img-a');
+				div.appendChild(img);
+				div.appendChild(a);
+				upload.appendChild(div);
+			}
+		}
+
+	}, function(e) {
+		console.log(e.message);
+	}, {
+		filter: "image",
+		multiple: true
+	});
+}
+//删除照片
+mui("#upload").on('tap', '#img-a', function() {
+	twouploadfiles = new Array();
+	var odivv = document.getElementById("upload");
+	odivv.removeChild(this.parentNode);
+	var childsNodes = document.getElementById("upload").querySelectorAll("img");
+	for(var i=0;i<childsNodes.length;i++){
+		var files = {
+			name:childsNodes[i].src,
+			path:childsNodes[i].src
+		}
+		twouploadfiles.push(files);
+	}
+})
+	//审核
+//选择科室
+document.getElementById("chooseClass_click").addEventListener("tap",function(e){
+	mui.openWindow({
+		id: 'chooseClass',
+		url: "chooseClass.html"
+	});
+});
+	//咨询记录
+mui(".mui-bar").on('click', 'h1 a', function() {
+		mui.openWindow({
+			id: 'consultingRecords',
+			url: "consultingRecords.html"
+		});
+	})
+	//判断字符串长度
+function getnum(e) {
+	/*if (e.srcElement.textLength > 200) {
+		plus.nativeUI.alert('请填写性别，年龄，症状,最少10字，最多200字','','提示','确认');
+		return false;
+	}*/
+	var num = document.getElementById("textarea-num");
+	num.innerHTML = e.srcElement.textLength;
+}
+function onClickhealthyCod(){
+	//获取科室id
+	var chooseClassId = document.getElementById("chooseClassId").value;
+	if (!chooseClassId || chooseClassId == "") {
+		plus.nativeUI.alert('请选择科室！','','提示','确认');
+		return false;
+	}
+	//获取电话号码
+	var phone = document.getElementById("phoneId").value;
+	if (!phone || phone == "") {
+		plus.nativeUI.alert('电话号码必须填写！','','提示','确认');
+		return false;
+	}
+	//获取年龄症状性别
+	var ageName = document.getElementById("textarea").value;
+	if (!ageName || ageName == "" || ageName.length < 10) {
+		plus.nativeUI.alert('请填写性别，年龄，症状,最少10字，最多200字','','提示','确认');
+		return false;
+	}
+	var requestData ={
+		'departmentId': chooseClassId,
+		'phoneNumber': phone,
+		'problemDescription': ageName
+	};
+//	console.log(JSON.stringify(requestData));
+//	console.log(JSON.stringify(twouploadfiles));
+	if(commomUtil.closeWebviewById("check")){
+		mui.openWindow({
+			id: 'check',
+			url: "check.html",
+			extras : {
+				data : requestData,
+				files:twouploadfiles
+			}
+		});
+	}
+//	commomUtil.closeAllWebview();
+	
+}
+window.addEventListener('newsId', function(event) {
+	//设置科室内容
+	var odiv = document.querySelectorAll(".jkda .notes")[0];
+	var ohtml = event.detail.ohtml;
+	odiv.innerHTML = ohtml;
+	document.getElementById("chooseClassId").value=event.detail.chooseClassId;
+});
+
+//绑定回退事件
+document.getElementById("callDoctorBackCellId").addEventListener("tap",function(e){
+	jyapp.backWebView({id:"indexFamilyDoctor"});
+});
+
+
+//文本域清空
+
+/*mui('.mui-content').on('tap','#textarea',function(){
+	this.focus();
+	this.innerHTML = '';
+})
+*/

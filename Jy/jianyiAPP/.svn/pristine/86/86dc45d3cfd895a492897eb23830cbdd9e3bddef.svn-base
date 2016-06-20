@@ -1,0 +1,15 @@
+mui.plusReady(function() {
+	var newDate = localStorage.getItem('oneInfo');
+	jyapp.getApi({
+		method: 'Profile/cardinfo',
+		onsuccess: function(data) {
+//			console.log(JSON.stringify(data));
+			JSON.parse(newDate).jycardnumber == null ? card_balance.innerHTML = '0000000000000000' : card_balance.innerHTML = JSON.parse(newDate).jycardnumber;
+			var tpl = document.getElementById('tpl').innerHTML;
+			document.getElementById('guaranteeSlipUI').innerHTML = juicer(tpl, data.data);
+		},
+		onerror: function(e) {
+			plus.nativeUI.alert(e);
+		}
+	})
+})

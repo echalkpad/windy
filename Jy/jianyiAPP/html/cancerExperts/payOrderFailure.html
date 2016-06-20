@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+		html,body{
+			padding-bottom: 50px;
+		}
+			.order-failure-t {
+				text-align: center;
+				padding-bottom: 20px;
+			}
+			
+			.order-failure-t p {
+				padding-top: 25px;
+				color: #4A4A4A;
+			}
+			
+			.order-failure-t p:nth-child(2) {
+				margin-top: -35px;
+				padding-bottom: 20px;
+			}
+			
+			.order-failure-t h2 {
+				margin-top: -20px;
+				font-size: 35px;
+				color: rgb(252, 94, 97);
+			}
+			
+			.order-failure-b {}
+			
+			.order-failure-b .mui-table-view {}
+			
+			.mui-media-body {
+				padding-top: 14px;
+				font-size: 18px;
+				color: #4A4A4A;
+			}
+			.mui-media-body span{
+				font-size: 16px;
+				margin-left: 10px;
+			}
+			
+			.mui-media-body p {
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.mui-table-view .mui-media-object {
+				width: 70px;
+				max-width: 70px;
+				height: 70px;
+				border-radius: 50%;
+			}
+			
+			.order-failure-b .mui-table-view li {}
+			
+			.order-failure-b .ul {
+				list-style: none;
+				padding-left: 0;
+			}
+			
+			.order-failure-b .ul li {
+				padding: 0 15px;
+			}
+			
+			.order-failure-b .ul li h1 {
+				padding-bottom: 5px;
+				color: #4A4A4A;
+				font-size: 18px;
+			}
+			
+			.order-failure-b .ul li p {
+				color: #9B9B9B;
+				font-size: 16px;
+			}
+			
+			.order-failure-b .ul li img {
+				width: 50px;
+			}
+			
+			.order-failure-b .ul li .question {
+				border-bottom: 1px solid #EFECEC;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+			
+			.all-question {
+				display: block;
+				height: 35px;
+				line-height: 35px;
+				font-size: 14px;
+				color: #00B6F3;
+				text-align: center;
+				border-top: 1px solid #EFECEC;
+			}
+			.all-question span{
+				position: relative;
+				bottom: -3px;
+			}
+			.fw {
+				position: fixed;
+				bottom: 0;
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.fw a {
+				font-size: 18px;
+				color: #fff;
+				display: block;
+				box-sizing: border-box;
+			}
+			
+			.fw .al {
+				float: left;
+				width: 40%;
+				background: #00B6F3;
+			}
+			
+			.fw .ar {
+				margin-left: 1px;
+				width: 59.5%;
+				float: right;
+				background: rgb(155,155,155);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">未支付订单</h1>
+		</header>
+		<div class="mui-content">
+			<div class="order-failure-t border-b">
+				<p>您有一笔未支付的订单，请处理</p>
+				<p>订单完成前不能再次下单</p>
+				<h2 id="payOrderFailurepriceId"></h2>
+			</div>
+			<div class="order-failure-b ">
+				<ul class="mui-table-view" id="payOrderFailureoneHtmlId">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png" id="payOrderFailureImgId">
+							<div class="mui-media-body">
+								任天平<span>副主任医师</span>
+								<p class="mui-ellipsis">北京和谐医院</p>
+							</div>
+						</a>
+					</li>-->
+				</ul>
+				<ul class="ul" id="payOrderFailuretwoHtmlId">
+					<li>
+						<div class="question">
+							<h1>咨询问题：</h1>
+							<!--<p class="ellipsis">都是问题都是问题都是问题都是问题都是问题都是问题都是问题都是问题都是问题都是问题都是问题都是问题</p>
+							<div class="qs-img"><img src="../../img/pic_people.png" /></div>-->
+						</div>
+						<div class="sum">
+							<!--<h1>诊断总结：</h1>
+							<p class="ellipsis">都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结都是总结</p>-->
+						</div>
+					</li>
+				</ul>
+				<a href="" class="all-question">查看全部<span class="mui-icon mui-icon-arrowdown"></span></a>
+			</div>
+		</div>
+		<div class="fw">
+			<a href="" class="al" id="payOrderFailureId">支付服务费用</a>
+			<a href="" class="ar" id="noPayOrderFailureId">服务不好，拒绝支付</a>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/pay/payOrderFailure.js"></script>
+
+</html>

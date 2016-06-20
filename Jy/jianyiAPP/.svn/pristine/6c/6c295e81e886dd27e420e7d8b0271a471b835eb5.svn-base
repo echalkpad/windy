@@ -1,0 +1,233 @@
+//重复提交标识
+var pageIndex = 1;
+var pageSize = 10;
+var total = 0;
+var commontListHtml = '';
+var healthConsultationId=0;
+var submitflag = false;
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	healthConsultationId = self.healthConsultationId;
+	//初始化健康咨询详细
+	indexHealthDetails.initIndexHealthDetails(healthConsultationId,pageIndex,pageSize);
+
+});
+
+var indexHealthDetails = {
+	initIndexHealthDetails: function(healthConsultationId,pageIndex,pageSize) {
+		var requestHealthConsultation = "healthConsultationId=" + healthConsultationId;
+//		console.log("requestHealthConsultation---->:"+requestHealthConsultation);
+		jyapp.getApi({
+			method: 'HealthConsultation/HealthConsultation',
+			data: requestHealthConsultation,
+			timeout: 10000,
+			onsuccess: function(response) {
+				if (response.code == 1) {
+					var dataValue = response.data;
+					var endLen = dataValue.CreateTime.length - 2;
+					var createTime = dataValue.CreateTime.substring(6, endLen);
+					var time = commomUtil.formatStringToDate(createTime, 2);
+					var html = '';
+					html += '<input type="hidden" id="healthConsultationId" value="' + healthConsultationId + '" />';
+					html += '<h2>' + dataValue.Title + '</h2>';
+					html += '<h3>来源：' + dataValue.Source + '</h3>';
+					html += '<h4>发布日期：' + time + '</h4>';
+					//				html += '<img src="'+dataValue.Pic1+'" />';
+					html += '<div class= "text">';
+					html += '	<p>' + dataValue.Content + '</p>';
+					//				html += '	<p>'+dataValue.Description+'</p>';
+					html += '</div>';
+					if (dataValue.LikeStatus == 1) {
+						html += '<input type="hidden" id="clickPraiseID" value="1" />';
+						html += '<section class="zan active">';
+						html += '	<img class="wzan" src="../../img/icon_good.png"/>';
+						html += '	<img class="yzan" src="../../img/icon_good_pre.png"/>';
+						html += '	<span>' + dataValue.Popularity + '</span>';
+						html += '</section>';
+					} else {
+						html += '<input type="hidden" id="clickPraiseID" value="0" />';
+						html += '<section class="zan">';
+						html += '	<img class="wzan" src="../../img/icon_good.png"/>';
+						html += '	<img class="yzan" src="../../img/icon_good_pre.png"/>';
+						html += '	<span>' + dataValue.Popularity + '</span>';
+						html += '</section>';
+					}
+					document.getElementById("indexHealthInfoDetailsDivID").innerHTML = html;
+					zan();
+					//初始化健康咨询评论
+					indexHealthDetails.initCommentList(healthConsultationId, pageIndex, pageSize);
+				} else {
+					plus.nativeUI.alert(response.msg, "", "提示", "确认");
+					return false;
+				}
+			},
+			onerror: function(e) {
+				console.log("quertHealthConsultation:" + e);
+			}
+		});
+	},
+	initCommentList: function(healthConsultationId, pageIndex, pageSize) {
+		var requestCommentList = "healthConsultationId=" + healthConsultationId + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+//		console.log("requestCommentList---->:"+requestCommentList);
+		jyapp.getApi({
+			method: 'HealthConsultation/CommentList',
+			data: requestCommentList,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("initCommentList---->:"+JSON.stringify(response));
+				if (response.code == 1) {
+					var dataValues = response.data.list;
+//					var commontListHtml = '';
+					total = dataValues.length;
+					for (var i = 0; i < dataValues.length; i++) {
+						var endLen = dataValues[i].CreateTime.length - 2;
+						var createTime = dataValues[i].CreateTime.substring(6, endLen);
+						var time = commomUtil.getDataFloor(createTime, "", 0);
+						commontListHtml += '<li>';
+						commontListHtml += '		<div class="comment-t">';
+						commontListHtml += '			<img src="' + dataValues[i].Head + '" onerror="this.src=\'../../img/default/huiyuan_touxiang.png\';this.onerror=null"/>';
+						commontListHtml += '			<span>' + dataValues[i].NickName + '</span>';
+						if (time.indexOf("天") > 0) {
+							time = commomUtil.formatStringToDate(createTime, 1);
+							commontListHtml += '			<p>' + time + '</p>';
+						} else {
+							commontListHtml += '			<p>' + time + '前</p>';
+						}
+						commontListHtml += '		</div>';
+						commontListHtml += '		<p class="comment-b ellipsis">' + dataValues[i].Content + '</p>';
+						commontListHtml += '	</li>';
+					}
+					document.getElementById("indexHealthInfoCommentUlID").innerHTML = commontListHtml;
+				} else {
+					plus.nativeUI.alert(response.msg, "", "提示", "确认");
+					return false;
+				}
+			},
+			onerror: function(e) {
+				console.log("initCommentList:" + e);
+			}
+		});
+	},
+	submitComment: function() {
+		var commontContentID = document.getElementById("indexHealthDetailsCommentInputID");
+		commontContentID.blur();
+		if(submitflag){
+			submitflag = false;
+			return submitflag;
+		}else{
+			submitflag = true;
+		}
+		var healthConsultationId = document.getElementById("healthConsultationId").value;
+		var commentContent = commontContentID.value;
+		if (commentContent && typeof(commentContent) != "undefined" && commentContent != "") {
+			var commentContentLen = commomUtil.GetLength(commentContent);
+			if (commentContentLen < 10) {
+				submitflag = false;
+				plus.nativeUI.alert("评论内容不能少于5个汉字", "", "提示", "确认");
+				return;
+			}
+			if (commentContentLen > 500) {
+				submitflag = false;
+				plus.nativeUI.alert("评论内容不能超过250个汉字", "", "提示", "确认");
+				return;
+			}
+			var requestComment = "healthConsultationId=" + healthConsultationId + "&commentContent=" + commentContent;;
+			jyapp.getApi({
+				method: 'HealthConsultation/CommentHealthCon',
+				data: requestComment,
+				timeout: 10000,
+				onsuccess: function(response) {
+					submitflag = false;
+//					console.log(JSON.stringify(response));
+					if (response.code != 1) {
+						plus.nativeUI.alert(response.msg, "", "提示", "确认");
+						return;
+					} else {
+//						//开启上拉加载
+						commontContentID.value = "";
+						//初始化健康咨询评论
+						indexHealthDetails.initCommentList(healthConsultationId, 1, 10);
+						plus.nativeUI.alert("评论内容成功", "", "提示", "OK");
+						return;
+					}
+				},
+				onerror: function(e) {
+					submitflag = false;
+					plus.nativeUI.alert("评论提交失败", "", "提示", "确认");
+					console.log("commentSubmit:" + e);
+				}
+			});
+		} else {
+			submitflag = false;
+			plus.nativeUI.alert("请填写评论内容", "", "提示", "确认");
+			document.getElementById("indexHealthDetailsCommentInputID").blur();
+			return;
+		}
+	},
+	submitClickPraise: function() {
+		var clickPraise = document.getElementById("clickPraiseID").value;
+		if (clickPraise == 0) {
+			clickPraise = 1;
+		} else {
+			clickPraise = 0;
+		}
+		var healthConsultationId = document.getElementById("healthConsultationId").value;
+		var requestClickPraise = "healthConsultationId=" + healthConsultationId + "&type=" + clickPraise;
+		jyapp.getApi({
+			method: 'HealthConsultation/ClickPraise',
+			data: requestClickPraise,
+			timeout: 10000,
+			onsuccess: function(response) {
+				if (response.code == 0) {
+					plus.nativeUI.alert(response.msg, "", "提示", "确认");
+					return false;
+				}
+			},
+			onerror: function(e) {
+				console.log("ClickPraise:" + e);
+			}
+		});
+	}
+}
+function zan(){
+	function hasClass(elements, cName) {
+		return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
+	};
+	
+	function addClass(elements, cName) {
+		if (!hasClass(elements, cName)) {
+			elements.className += " " + cName;
+		};
+	};
+	
+	function removeClass(elements, cName) {
+		if (hasClass(elements, cName)) {
+			elements.className = elements.className.replace(new RegExp("(\\s|^)" + cName + "(\\s|$)"), " ");
+		};
+	};
+	
+	var Zan=document.querySelector(".zan")
+	Zan.addEventListener('tap', function() {
+		indexHealthDetails.submitClickPraise();
+		var num = parseInt(this.children[2].innerHTML);
+		if (hasClass(this, 'active')) {
+			removeClass(this, 'active');
+			num = num - 1;
+			this.children[2].innerHTML = num.toString();
+		} else {
+			addClass(this, 'active')
+			num = num + 1;
+			this.children[2].innerHTML = num.toString();
+		};
+	})
+}
+
+//绑定咨询评论发送按钮事件
+document.getElementById('submitCommentAID').addEventListener('click',indexHealthDetails.submitComment);
+
+document.addEventListener('keyup', function(event) {
+	//键盘回车事件
+	if (event.keyCode == 13) {
+		indexHealthDetails.submitComment();
+	}
+});

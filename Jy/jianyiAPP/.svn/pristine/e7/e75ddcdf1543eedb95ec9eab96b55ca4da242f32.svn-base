@@ -1,0 +1,201 @@
+var total = 0;
+var pageIndex = 1;
+var pageSize = 6;
+var type = 1;
+var healthCategoryId = "";
+var healthCategorHtml = '';
+document.addEventListener('plusready', function() {
+	//初始化健康咨询
+	indexHealthInformantion.initHealthCategoryList();
+	//绑定上拉加载数据事件
+	/*document.addEventListener("plusscrollbottom", function() {
+		pageIndex++;
+		if (total == pageSize) {
+			indexHealthInformantion.initHealthCategory(healthCategoryId, pageIndex, pageSize, type);
+		} else {
+			return false;
+		}
+	});*/
+});
+
+
+var indexHealthInformantion = {
+	initHealthCategoryList: function() {
+		jyapp.getApi({
+			method: 'HealthConsultation/HealthCategoryList',
+			data: '',
+			timeout: 10000,
+			onsuccess: function(response) {
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data != null && response.data.length > 0){
+						var dataValues = response.data;
+						var html = '';
+						var indexHealthDetailsHtml = '';
+						total = dataValues.length;
+//						console.log("initHealthCategoryList---->:"+JSON.stringify(response));
+						for (var i = 0; i < dataValues.length; i++) {
+								html += '<a href="#item' + [i + 1] + '" class="mui-control-item">';
+								html += '<input type="hidden" value="'+dataValues[i].ID+'" /> ';
+								html += '<input type="hidden" value="' + [i + 1] + '" />';
+								html += dataValues[i].CategoryName + '</a>';
+								indexHealthDetailsHtml += '<div id="item' + [i + 1] + '" class="mui-control-content">';
+								indexHealthDetailsHtml += '<div class="mui-scroll-wrapper">';
+								indexHealthDetailsHtml += '	<div class="mui-scroll">';
+								indexHealthDetailsHtml += '		<div class="banner" id="indexHealthInfoBunnerID' + [i + 1] + '">';
+								indexHealthDetailsHtml += '		</div>';
+								indexHealthDetailsHtml += '		<ul class="mui-table-view" id="indexHealthInfoCategoryID' + [i + 1] + '">';
+								indexHealthDetailsHtml += '		</ul>';
+								indexHealthDetailsHtml += '		<div class="mui-pull-bottom-tips">';
+								indexHealthDetailsHtml += '			<div class="mui-pull-bottom-wrapper">';
+								indexHealthDetailsHtml += '				<span class="mui-pull-loading">上拉显示更多</span>';
+								indexHealthDetailsHtml += '			</div>';
+								indexHealthDetailsHtml += '		</div>';
+
+								indexHealthDetailsHtml += '	</div>';
+								indexHealthDetailsHtml += '</div>';
+								indexHealthDetailsHtml += '</div>';
+						}
+						document.getElementById('indexHealthInfoTitleAID').innerHTML = html;
+						document.getElementById('indexHealthDetails').innerHTML = indexHealthDetailsHtml;
+						healthCategoryId = dataValues[0].ID;
+						indexHealthInformantion.initHealthCategory(healthCategoryId, 1, 6, type);
+						mui('.mui-scroll-wrapper').scroll({
+							bounce: false,
+							indicators: true, //是否显示滚动条
+							deceleration: 0.0005
+						});
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("initHealthCategoryList:" + e);
+			}
+		});
+	},
+	initHealthCategory: function(healthCategoryId, pageIndex, pageSize, type) {
+		var requestHealthCategory = "healthCategoryId=" + healthCategoryId + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+		jyapp.getApi({
+			method: 'HealthConsultation/HealthCategory',
+			data: requestHealthCategory,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log('initHealthCategory---->:'+JSON.stringify(response))
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data != null && response.data.list != null && response.data.list.length > 0){
+						var dataValues = response.data.list;
+						total = dataValues.length;
+						for (var i = 0; i < dataValues.length; i++) {
+							if(i == 0 && dataValues[0].IsTop == 1){
+								continue;
+							}else{ 
+								healthCategorHtml += '<li class="mui-table-view-cell">';
+								healthCategorHtml += '		<a href="" onclick="indexHealthInformantion.quertHealthConsultation(' + dataValues[i].ID + ');">';
+								healthCategorHtml += '			<input type="hidden" value="' + dataValues[i].ID + '" />';
+								healthCategorHtml += '			<img class="mui-media-object mui-pull-left meta-img" src="' + dataValues[i].Pic2 + '">';
+								healthCategorHtml += '			<div class="mui-media-body">';
+								healthCategorHtml += '				' + dataValues[i].Title + '';
+								healthCategorHtml += '				<p class="ellipsis">' + dataValues[i].Summary + '</p>';
+								healthCategorHtml += '				<p class="rq f12"><span>人气 ' + dataValues[i].Popularity + '</span></p>';
+								healthCategorHtml += '			</div>';
+								healthCategorHtml += '		</a>';
+								healthCategorHtml += '</li>';
+							}
+						}
+						document.getElementById('indexHealthInfoCategoryID' + type).innerHTML = healthCategorHtml;
+						if (dataValues[0].IsTop == 1) {
+							document.getElementById("indexHealthInfoBunnerID" + type).style.display = 'block';
+							var htmlTop = '<a href="" onclick="indexHealthInformantion.quertHealthConsultation(' + dataValues[0].ID + ');"><img src="' + dataValues[0].Pic1 + '" width="" /><p>'+dataValues[0].Title+'</p></a>';
+							document.getElementById('indexHealthInfoBunnerID' + type).innerHTML = htmlTop;
+						} else {
+							document.getElementById("indexHealthInfoBunnerID" + type).setAttribute("display", "none");
+						}
+						var titleDivs = document.getElementById('indexHealthInfoTitleAID');
+						var titleAs = titleDivs.getElementsByTagName("a");
+						for(var i=0;i<titleAs.length;i++){
+							titleAs[i].setAttribute('class','mui-control-item');
+							if((i+1) == type){
+								titleAs[i].setAttribute('class','mui-control-item mui-active');
+							}
+						}
+						var detailsAs = document.getElementsByClassName("mui-control-content");
+						for(var i=0;i<detailsAs.length;i++){
+							detailsAs[i].setAttribute("class","mui-control-content");
+							if((i+1) == type){
+								detailsAs[i].setAttribute("class","mui-control-content mui-active");
+							}
+						}
+						
+						//滑动
+						mui('.mui-scroll-wrapper').scroll({
+							deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+						});
+						
+						//循环初始化所有上拉加载。
+						mui.each(document.querySelectorAll('#indexHealthDetails .mui-scroll'), function(index, pullRefreshEl) {
+							mui(pullRefreshEl).pullToRefresh({
+								up: {
+									callback:function() {
+										var self = this;
+										setTimeout(function() {
+											indexHealthInformantion.pullToRefreshUpHealthCategory();
+											self.endPullUpToRefresh();
+										}, 1000);
+									} 
+									
+								}
+							});
+						});
+						
+						
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("initHealthCategory:" + e);
+			}
+		});
+	},
+	quertHealthConsultation: function(healthConsultationId) {
+		commomUtil.closeWebviewById('indexHealthDetails');
+		mui.openWindow({
+			id: 'indexHealthDetails',
+			url: "indexHealthDetails.html",
+			createNew:true,
+			extras: {
+				"healthConsultationId": healthConsultationId
+			}
+		});
+		return false;
+	},
+	pullToRefreshUpHealthCategory : function(){
+//		console.log(pageIndex+"----"+healthCategoryId);
+		if(total == pageSize){
+			pageIndex ++;
+			//健康资讯--下拉列表模块
+			indexHealthInformantion.initHealthCategory(healthCategoryId, pageIndex, pageSize, type);
+		}else{
+			return false;
+		}
+	}
+}
+
+mui('#indexHealthInfoTitleAID').on('tap', 'a', function() {
+	total = 0;
+	pageIndex=0;
+	pageSize = 6;
+	type=1;
+	healthCategoryId = this.querySelectorAll('input')[0].value;
+	var typeChange = this.querySelectorAll('input')[1].value;
+	if(typeChange != type){
+		healthCategorHtml = '';
+		document.getElementById('indexHealthInfoCategoryID' + type).innerHTML = healthCategorHtml;
+	}
+	type = typeChange;
+	indexHealthInformantion.initHealthCategory(healthCategoryId, 1, 6, type);
+});

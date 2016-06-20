@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.healthExamAppointment article {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				/*background-image: -webkit-gradient(linear, left 0%, left 100%, from(transparent), to(#000));
+				background-image: -webkit-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: -moz-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);*/
+				background-repeat: repeat-x;
+				position: relative;
+				margin-top: 0;
+				height: 222px;
+			}
+			
+			.healthExamAppointment article:after {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image: -webkit-linear-gradient(top, transparent 40%, rgba(0, 0, 0, .8) 100%);
+				content: "";
+			}
+			
+			.healthExamAppointment h2 {
+				color: #fff;
+				font-size: 17px;
+				position: absolute;
+				bottom: 15px;
+				width: 100%;
+				margin-left: 15px;
+			}
+			
+			.healthExamAppointment1 article {
+				background-color: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, .3)), to(rgba(0, 0, 0, .5)));
+				/*background-image: url(../../../img/healthy/lyy2.png);*/
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+			}
+			
+			.healthExamAppointment2 article {
+				background: url(../../../img/healthy/liaoyang_pic.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.healthExamAppointment3 article {
+				background: url(../../../img/healthy/lyy1.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.spaContent {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			
+			.healthExamAppointment p {
+				height: 40px;
+				line-height: 45px;
+				margin-bottom: 10px;
+				padding: 0 15px;
+				background: #fff;
+			}
+			
+			.healthExamAppointment del {
+				font-size: 16px;
+				margin-right: 20px;
+			}
+			
+			.healthExamAppointment strong {
+				font-weight: normal;
+				font-size: 16px;
+				color: #F60404;
+				margin-right: 10px;
+			}
+			
+			.gene {
+				width: 100%;
+			}
+			
+			.gene img {
+				display: block;
+				width: 100%;
+				height: auto;
+				max-height: 160px;
+			}
+			
+			.gene-nav {
+				width: 100%;
+				height: 100px;
+				background: #fff;
+			}
+			
+			.gene-nav a {
+				display: block;
+				width: 33.33%;
+				height: 100%;
+				float: left;
+				border-left: 1px solid #f1f1f1;
+				color: #333;
+				text-align: center;
+				padding-top: 60px;
+				font-size: 14px;
+			}
+			
+			.gene-nav a:nth-child(1) {
+				background: url('../../../img/healthy/icon_fuwujieshao.png') no-repeat center center;
+				background-size: 20%;
+				background-position: center 25px;
+				border: 0;
+			}
+			
+			.gene-nav a:nth-child(2) {
+				background: url('../../../img/healthy/icon_tijianjigou.png') no-repeat center center;
+				background-position: center 25px;
+				background-size: 20%;
+			}
+			
+			.gene-nav a:nth-child(3) {
+				background: url('../../../img/healthy/icon_kefu.png') no-repeat center center;
+				background-position: center 25px;
+				background-size: 20%;
+			}
+			
+			.gene-tc {
+				background: #f2f6f9!important;
+				padding: 20px 0 10px 15px;
+				color: #9B9B9B;
+				font-size: 14px;
+			}
+			
+			#healthExaminationOrder {
+				float: right;
+				line-height: 44px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">体检</h1>
+			<a class="" id="healthExaminationOrder">我的预约</a>
+		</header>
+		<div class="mui-content">
+			<div class="gene">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop" id="healthExaminationBannerSlderID">
+						<!--<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/tijian.png">
+							</a>
+						</div>-->
+					</div>
+					<div class="mui-slider-indicator" id="healthExaminationBannerSlderPointID">
+						<!--<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>-->
+					</div>
+				</div>
+			</div>
+			<div class="gene-nav">
+				<a href="" id="healthExaminationService">服务介绍</a>
+				<a href="" id='healthExaminationNet'>体检机构</a>
+				<a href="" id="healthExaminationCustomer">客服代约</a>
+			</div>
+			<h2 class="gene-tc">热门套餐</h2>
+			<div class="healthExamAppointment healthExamAppointment1" id="HotPackageListID">
+				<!--<article>
+					<div class="spaContent">
+						<h2>职场白领套餐 <span></span></h2>
+					</div>
+				</article>
+				<p>门市价：<del>¥600起</del>健e价：<strong>¥303起</strong></p>-->
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/healthy/healthExamination/healthExamination.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,42 @@
+//检测项目
+mui('.mui-table-view').on('tap', '#healthExaminationPackageTestItems', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageTestItems',
+			url: "healthExaminationPackageTestItems.html"
+		})
+	})
+	//常见问题
+mui('.mui-table-view').on('tap', '#healthExaminationPackageProblems', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageProblems',
+			url: "healthExaminationPackageProblems.html"
+		})
+	})
+	//历史评价
+mui('.mui-table-view').on('tap', '#healthExaminationPackageEvaluation', function() {
+		mui.openWindow({
+			id: 'healthExaminationPackageEvaluation',
+			url: "healthExaminationPackageEvaluation.html"
+		})
+	})
+	//网点选择
+mui('.mui-table-view').on('tap', '#healthExaminationPackageNet', function() {
+		mui.openWindow({
+			id: 'indexHealthNetwork',
+			url: "../../healthNetwork/indexHealthNetwork.html"
+		})
+	})
+	//购买选择
+mui('.mui-table-view').on('tap', '#healthExaminationPackageBuy', function() {
+	mui.openWindow({
+		id: 'healthExaminationPackageBuy',
+		url: "healthExaminationPackageBuy.html"
+	})
+})
+	//立即预约
+mui('body').on('tap', '#healthExaminationInformation', function() {
+	mui.openWindow({
+		id: 'healthExaminationInformation',
+		url: "healthExaminationInformation.html"
+	})
+})

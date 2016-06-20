@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after,.mui-table-view:after{
+				background: #f1f1f1;
+			}
+			.me-top {
+				background: #00b6f3;
+				text-align: center;
+				height: 170px;
+				position: relative;
+			}
+			
+			.me-top h1 {
+				border-radius: 50%;
+				margin: 10px auto;
+				width: 80px;
+				height: 80px;
+			}
+			
+			.me-top h1 img {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				border:1px solid #fff;
+			}
+			
+			.me-top h2 {
+				color: #fff;
+				font-size: 22px;
+				padding-top: 30px;
+			}
+			
+			.me-top h3 {
+				color: #fff;
+				font-size: 14px;
+			}
+			
+			.me-top h3 span {
+				font-size: 12px;
+				padding-left: 6px;
+				color: #f8e71c;
+			}
+			
+			.me-top p {
+				color: #fff;
+				font-size: 12px;
+			}
+			
+			.me-l {
+				width: 25%;
+				float: left;
+				height: 10px;
+			}
+			
+			.me-c {
+				position: relative;
+				width: 50%;
+				float: left;
+			}
+			
+			.me-r {
+				width: 25%;
+				float: left;
+				position: absolute;
+				right: 20px;
+				top: 0;
+			}
+			
+			.me-r a {
+				float: right;
+				display: block;
+				width: 40px;
+				height: 30px;
+			}
+			
+			.mui-table-view {
+				border-top: 10px solid #f2f6f9;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0
+			}
+			
+			.mui-table-view:last-child {
+				border-bottom: 10px solid #f2f6f9;
+			}
+			
+			.mui-table-view:before {
+				background-color: #fff;
+			}
+			
+			.mui-table-view:after {
+				background-color: #fff;
+			}
+			
+			.mui-navigate-right {
+				padding-left: 50px!important;
+				font-size: 14px;
+			}
+			
+			.jkda {
+				background: url(../img/my_icon_jiankangdangan@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.wdjr {
+				background: url(../img/my_icon_wodejiaren@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.wdbd {
+				background: url(../img/my_icon_wodebaodan@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.JeCard {
+				background: url(../img/me/icon_my_card.png) no-repeat 20px center;
+				background-size: 20px 15px;
+			}
+			
+			.wdfw {
+				background: url(../img/my_icon_wodefuwu@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.wddd {
+				background: url(../img/my_icon_wodedingdan@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.jf {
+				background: url(../img/my_icon_wodejifen@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.jkd {
+				background: url(../img/my_icon_jiankangdian@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.kj {
+				background: url(../img/my_icon_kaquan@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.sc {
+				background: url(../img/my_icon_shoucang@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.sz {
+				background: url(../img/my_icon_shezhi@2x.png) no-repeat 20px center;
+				background-size: 20px 20px;
+			}
+			
+			.me-c .sex-man {
+				position: relative;
+			}
+			
+			.me-c .sex-man:after {
+				width: 36px;
+				height: 36px;
+				display: block;
+				position: absolute;
+				content: '';
+				bottom: -10px;
+				right: 5px;
+				background: url(../img/icon_man@2x.png) no-repeat center center;
+				background-size: 20px 20px;
+			}
+			
+			.me-c .sex-wuman:after {
+				width: 36px;
+				height: 36px;
+				display: block;
+				position: absolute;
+				content: '';
+				top: 55px;
+				right: 30px;
+				background: url(../img/icon_woman@2x.png) no-repeat center center;
+				background-size: 20px 20px;
+			}
+			
+			.exit {
+				border: 0;
+				margin: 30px 0;
+				font-family: "微软雅黑";
+				color: #FF6363;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="mui-content me-top">
+						<div class="me-l">
+							<!--<h2>65</h2>
+					<p>积分</p>-->
+						</div>
+						<div class="me-c">
+							<h1 id="sex"><img src="" alt="" id='mePic' onerror="this.src='../img/default/huiyuan_touxiang.png';this.onerror=null"/></h1>
+							<h3 id="fullname"></h3>
+							<p id="sign" class="ellipsis"></p>
+						</div>
+						<div class="me-r">
+							<a id="personalData" href=""><img src="../img/my_btn_redact@2x.png" width="22px" /></a>
+							<!--<h2>268</h2>
+					<p>健康点</p>-->
+						</div>
+					</div>
+					<div class="mui-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right jkda" id="healthRecordsOne">健康档案</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right wdjr" id="meFamily">我的家人</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a href="" class="mui-navigate-right JeCard" id="JeCard">健e卡<span class="mui-badge mui-badge-inverted"></span></a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right wdbd" id="guaranteeSlip">我的保单</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right wdfw" id="myOrder">我的订单</a>
+							</li>
+						</ul>
+						<!--<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right jf">积分</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right jkd">健康点</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right kj">卡卷</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right sc">收藏</a>
+					</li>
+				</ul>-->
+						<!--<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right sz">设置</a>
+					</li>
+				</ul>-->
+						<a href="" class="mui-btn mui-btn-block exit" id="logout">注销</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/core/config.js"></script>
+	<script src="../js/core/common.js"></script>
+	<script src="../js/mainMe.js"></script>
+	<script src="../js/route.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				mainMe.init();
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}
+	</script>
+
+</html>

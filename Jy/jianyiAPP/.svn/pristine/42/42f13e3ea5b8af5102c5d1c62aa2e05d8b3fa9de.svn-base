@@ -1,0 +1,23 @@
+//客服代约
+mui(".mui-content").on('tap', '#clientsAbout', function() {
+	mui.openWindow({
+		id: 'clientsAbout',
+		url: "clientsAbout.html"
+	});
+})
+
+//我的预约
+mui(".mui-bar").on('tap', '#geneticOrder', function() {
+	mui.openWindow({
+		id: 'geneticOrder',
+		url: "geneticOrder.html"
+	});
+})
+
+//基因检测套餐详情
+mui(".spaAppointment").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'testingPlan',
+		url: "testingPlan.html"
+	});
+})

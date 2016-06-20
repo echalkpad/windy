@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<script src="../../js/mui.min.js"></script>
+		<style type="text/css">
+			
+			#spaAppointmentDetail_btn {
+				border-top:1px solid #ccc;
+				width: 100%;
+				background: #fff;
+				position: fixed;
+				bottom: 0px;
+				padding: 10px 0;
+				display: block;
+				color: #fff;
+				text-align: center;
+			}
+			
+			#spaAppointmentDetail_btn span {
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 5px;
+				position: relative;
+				width: 90%;
+				left: 5%;
+				background: #00BFF5;
+			}
+			h3{
+				font-size: 16px;
+				line-height: 30px;
+				padding-top:10px;
+			}
+			table{
+				border-spacing:1px;
+				border-collapse:inherit;
+				width:100%;
+				background:#dedede;
+				margin-top:10px;
+			}
+			td{
+				height:36px;
+				padding-left:5px;
+				font-size:14px;
+				color:#333;
+			}
+			td i{font-style:normal;}
+		</style>
+		<title>杭州蓝熙健康玫瑰园体检中心</title>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">杭州蓝熙健康玫瑰园体检中心</h1>
+		</header>
+		<a href="tel:400-111-5289" id="spaAppointmentDetail_btn"><span>我要咨询/预约</span></a>
+		<div style="line-height:30px;padding: 60px 10px; font-family: Microsoft YaHei;">
+			<p>杭州蓝熙健康玫瑰园体检中心是一家集健康<span style="color:red;">体检、休闲、疗养、保健</span>为一体的高档体检中心，其建筑设计及内部装修都按照<span style="color:red;">五星级宾馆标准</span>，是的，你没看错，是五星级宾馆标准！专门定位为社会各界精英人士提供全方位、高端私密的医疗及健康管理服务。规范严谨的检前、检中、检后服务流程，并<span style="color:red;">由享受国务院特殊津贴的资深内科专家担任总检医师</span>。
+				享受国务院特殊津贴的专家。
+			</p>
+			<p><img src="lanxin/1.jpg" style="width:100%;"></p>
+			<p>杭州蓝熙健康玫瑰园体检中心位于杭州市之江路128号，毗邻宋城，背枕五云山，面眺钱江水，周邻云栖竹径、九溪烟树，环境优美，景色怡人。</p>
+			<p><img src="lanxin/2.jpg" style="width:100%;"></p>
+			<p>体检中心硬件设施宾馆化，配套的生活、保健、休闲、度假、会议功能齐全。体检中心设备精良，引进国际最先进的科学检测仪器，选自美国GE公司及日本名牌专业厂商：放射科DR、彩色超声、双能X线骨密度仪、动脉硬化检测仪、脑血管多普勒检测仪、血、尿分析仪、心电图机、口腔数字全景机等现代化医疗设备。</p>
+			<p><img src="lanxin/3.jpg" style="width:100%;"></p>
+			<p>体检中心毗临绿城玫瑰园度假酒店，所有酒店的休闲及娱乐设施可以共用，包括：五星级标准客房、由国际知名品牌马来西亚LIFESTYLE管理经营的SPA水浴中心、健身房、室内外游泳池、室外网球场、壁球室、乒乓球室、豪华棋牌室、中式餐厅、英式酒吧等。</p>
+			<p><img src="lanxin/4.jpg" style="width:100%;"></p>
+			<p>来这里体检，简直是一种享受啊！<br> 专家这么流弊，环境这么美，设备这么高端，是不是很贵啊？
+				<br> NO，NO，NO！为了庆祝杭州蓝熙健康玫瑰园体检中心与我司的成功合作，健医科技特推出3款健e专享体检套餐，价格更亲民哦~
+			</p>
+			<h3>热门套餐</h3>
+			<table>
+				<tbody>
+					<tr>
+						<td bgcolor="#FFFFFF">健e专享-基础版体检套餐<i>(针对加班族的健康体检套餐)</i></td>
+						<td bgcolor="#FFFFFF">原价：<span style="text-decoration:line-through">633元</span></td>
+						<td bgcolor="#FFFFFF">健e价：<span style="color:red;">500元</span></td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">健e专享-高级版体检套餐<i>(针对熬夜族的升级版体检套餐)</i></td>
+						<td bgcolor="#FFFFFF">原价：<span style="text-decoration:line-through">1278元</span></td>
+						<td bgcolor="#FFFFFF">健e价：<span style="color:red;">1000元</span></td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF">健e专享-至尊版体检套餐<i>(针对应酬族的专享体检套餐)</i></td>
+						<td bgcolor="#FFFFFF">原价：<span style="text-decoration:line-through">1600元</span></td>
+						<td bgcolor="#FFFFFF">健e价：<span style="color:red;">1778元</span></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</body>
+
+</html>

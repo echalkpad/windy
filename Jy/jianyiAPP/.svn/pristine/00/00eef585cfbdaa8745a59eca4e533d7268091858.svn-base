@@ -1,0 +1,77 @@
+var isF = false; //判断是不是添加地址
+var Mobile = document.getElementById("Mobile");
+var ConsigneeName = document.getElementById("ConsigneeName");
+var Addr1 = document.getElementById("Addr1");
+var Addr2 = document.getElementById("Addr2");
+var submitAddress = document.getElementById("submitAddress");
+
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	if (self.addid != undefined) {
+		isF = self.addid;
+		var Addr1 = self.Addr1;
+		var Addr2 = self.Addr2;
+		var ConsigneeName = self.ConsigneeName;
+		var Mobile = self.Mobile;
+		newAddress.init(Addr1, Addr2, ConsigneeName, Mobile);
+	}
+})
+
+mui('.mui-bar-nav').on('tap', '#submitAddress', function() {
+		newAddress.submitAddress()
+	})
+	//submitAddress.addEventListener('tap', function() {
+	//	newAddress.submitAddress()
+	//})
+
+var newAddress = {
+	init: function(Addr1N, Addr2N, ConsigneeNameN, MobileN) {
+		Mobile.value = MobileN;
+		ConsigneeName.value = ConsigneeNameN;
+		Addr1.value = Addr1N;
+		Addr2.value = Addr2N;
+		submitAddress.value = ConsigneeNameN;
+	},
+	submitAddress: function() {
+		var reg = /0?(13|14|15|18|17)[0-9]{9}/;
+		if (!reg.test(Mobile.value)) {
+			mui.toast('手机号码格式不正确！');
+			return false
+		}
+		var url = 'Profile/AddresList';
+		var data1 = 'ConsigneeName=' + ConsigneeName.value + '&Mobile=' + Mobile.value.toString() + '&Addr=' + Addr1.value + '|' + Addr2.value;
+		if (!!isF) {
+			data1 = data1 + '&ID=' + isF
+		}
+		ajax(url, data1, function(data) {
+			if (!!isF) {
+				mui.toast('修改地址成功！');
+				return
+			}
+			mui.toast('增加地址成功！');
+			mui.openWindow({
+				id: 'addressManagement',
+				url: "addressManagement.html",
+				createNew: true
+			});
+		})
+	}
+}
+
+function ajax(url, data, ca) {
+	console.log(url, data)
+	jyapp.getApi({
+		method: url,
+		data: data,
+		onsuccess: function(data) {
+			console.log(JSON.stringify(data))
+			if (data.code == 1) {
+				if (ca) ca(data.data);
+			}
+		},
+		onerror: function(e) {
+			console.log(JSON.stringify(e))
+			mui.toast(e.msg);
+		}
+	});
+}

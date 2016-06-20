@@ -1,0 +1,76 @@
+var geneticOrderDetail = {};
+var orderDetali1 = document.getElementById("geneticOrderDetail1"),
+	orderDetali2 = document.getElementById("geneticOrderDetail2"),
+	orderDetali3 = document.getElementById("geneticOrderDetail3"),
+	orderDetali4 = document.getElementById("geneticOrderDetail4"),
+	orderDetali5 = document.getElementById("geneticOrderDetail5"),
+	orderDetali6 = document.getElementById("geneticOrderDetail6"),
+	orderDetali7 = document.getElementById("geneticOrderDetail7"),
+	oRemark = document.getElementById("geneticOrderDetail-remark"),
+	oCoupons = document.getElementById("geneticOrderDetail-coupons"),
+	oPay = document.getElementById("geneticOrderDetail-pay"),
+	oAppraise = document.getElementById("geneticOrderDetail-appraise");
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	var type = self.type;
+	geneticOrderDetail.type(type);
+})
+geneticOrderDetail.type = function(type) {
+	switch (type) {
+		case 'geneticOrderList1':
+			orderDetali1.style.display = 'block';
+			oRemark.style.display = 'block';
+			break;
+		case 'geneticOrderList2':
+			orderDetali2.style.display = 'block';
+			oRemark.style.display = 'block';
+			oCoupons.style.display = 'block';
+			oPay.style.display = 'block';
+			break;
+		case 'geneticOrderList3':
+			orderDetali3.style.display = 'block';
+			oAppraise.style.display = 'block';
+			break;
+		case 'geneticOrderList4':
+			orderDetali4.style.display = 'block';
+			break;
+		case 'geneticOrderList5':
+			orderDetali5.style.display = 'block';
+			break;
+		case 'cancel':
+			orderDetali6.style.display = 'block';
+			break;
+		case 'refund':
+			orderDetali7.style.display = 'block';
+			break;
+	}
+}
+
+
+var ul = document.querySelector('.xingxing');
+var ul_lis = ul.getElementsByTagName('span');
+clearAll = function() {
+	for (var i = 0; i < ul_lis.length; i++) {
+		ul_lis[i].className = 'xing';
+	}
+}
+for (var i = 0; i < ul_lis.length; i++) {
+	ul_lis[i].index = i;
+	ul_lis[i].onclick = function() {
+		clearAll();
+		var j = this.index + 1;
+		for (var i = 0; i < j; i++) {
+			ul_lis[i].className = 'xing xing-active';
+		}
+	}
+}
+
+//选择支付方式
+mui(document).on('tap', '#geneticOrderDetail-pay', function() {
+	commomUtil.closeWebviewById('choosePayment');
+	mui.openWindow({
+		id: 'choosePayment',
+		url: "choosePayment.html"
+	});
+	
+})

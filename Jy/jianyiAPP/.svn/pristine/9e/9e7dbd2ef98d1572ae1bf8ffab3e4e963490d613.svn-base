@@ -1,0 +1,67 @@
+//客服代约
+mui(".mui-content").on('tap', '#clientsAbout', function() {
+	mui.openWindow({
+		id: 'clientsAbout',
+		url: "clientsAbout.html"
+	});
+})
+
+//我的预约
+mui(".mui-bar").on('tap', '#geneticOrder', function() {
+	mui.openWindow({
+		id: 'geneticOrder',
+		url: "geneticOrder.html"
+	});
+})
+
+//基因检测套餐详情
+mui(".spaAppointment").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'testingPlan',
+		url: "testingPlan.html"
+	});
+})
+
+//套餐选择
+mui(".mui-content").on('tap', '#choosePackage', function() {
+	mui.openWindow({
+		id: 'choosePackage',
+		url: "choosePackage.html"
+	});
+})
+
+document.addEventListener("plusready",function(){
+	//初始化数据
+	geneticDiagnosis.initData();
+});
+
+var geneticDiagnosis = {
+	initData : function(){
+		jyapp.getApi({
+   			method: 'GeneDetection/HotPackageList',
+   			data:'pageIndex=1&pageSize=10',
+   			timeout : 10000,
+   			onsuccess: function(data) {
+   				console.log(JSON.stringify(data));
+   				var geneticDiagnosisHtml = "";
+				if(data.code == 1 && data.data && data.data.orders && data.data.orders.length > 0){
+					document.getElementById("geneticDiagnosiszwsjId").style.display = "none";
+					var dataValue = data.data.orders;
+					dzfpagetatel = dataValue.length;
+					for(var i=0;i<dataValue.length;i++){
+						
+						
+					}
+				}else{
+					if(dzfgeneticOrderHtml == ""){
+						document.getElementById("geneticDiagnosiszwsjId").style.display = "";
+					}
+				}
+				document.getElementById("geneticDiagnosisDataId").innerHTML = geneticDiagnosisHtml;
+   			},
+   			onerror: function(e) {
+   				console.log(e);
+   			}
+   		});
+	}
+};

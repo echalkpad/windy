@@ -1,0 +1,16 @@
+mui('.mui-content').on('tap', 'li', function() {
+	var oid = this.parentNode.parentNode.id;
+	if (this.parentNode.className == 'healthExamin-cancal') {
+		oid = 'cancal';
+	}
+	if (this.parentNode.className == 'healthExamin-back') {
+		oid = 'back';
+	}
+	mui.openWindow({
+		id: 'healthExaminationOrderDetali',
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": oid,
+		}
+	})
+})

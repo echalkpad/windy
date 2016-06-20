@@ -1,0 +1,596 @@
+var doctorId = "";
+var dateA = [];
+var dateT = [];
+var appDate = "";
+//添加newId自定义事件监听
+window.addEventListener('mainInterrLoadSlowExpertsList', function(event) {
+	//获得事件参数
+	var slowExpertsId = event.detail.slowExpertsIdMainInterr;
+	//根据id向服务器请求新闻详情
+	slowExpertsDetails.initSlowExpertsDetails(slowExpertsId);
+});
+//添加newId自定义事件监听
+window.addEventListener('loadSlowExpertsList', function(event) {
+	//获得事件参数
+	var slowExpertsId = event.detail.slowExpertsIdList;
+	//根据id向服务器请求新闻详情
+	slowExpertsDetails.initSlowExpertsDetails(slowExpertsId);
+});
+//添加newId自定义事件监听
+window.addEventListener('loadSlowExpertsListSearch', function(event) {
+	//获得事件参数
+	var slowExpertsId = event.detail.slowExpertsIdSearch;
+	//根据id向服务器请求新闻详情
+	slowExpertsDetails.initSlowExpertsDetails(slowExpertsId);
+});
+//添加newId自定义事件监听
+window.addEventListener('loadSlowExpertsListDoctorList', function(event) {
+	//获得事件参数
+	var slowExpertsId = event.detail.slowExpertsIdDoctorList;
+	//根据id向服务器请求新闻详情
+	slowExpertsDetails.initSlowExpertsDetails(slowExpertsId);
+});
+var htmlSlowExpertsDetails = "";
+var htmlCustomerComments = "";
+var slowExpertsDetails = {
+	initSlowExpertsDetails: function(slowExpertsId) {
+//		var allPage = plus.webview.all();
+//		for(var i = 0;i < allPage.length; i++){
+//			console.log(i+" ----:"+allPage[i].getURL());
+//		}
+		//设置显示tab
+		document.getElementById('itemA1').setAttribute('class','mui-control-item mui-active');
+		document.getElementById('itemA2').setAttribute('class','mui-control-item');
+		document.getElementById('itemA3').setAttribute('class','mui-control-item');
+		document.getElementById('item1').setAttribute('class','mui-control-content mui-active');
+		document.getElementById('item2').setAttribute('class','mui-control-content');
+		document.getElementById('slowExpertsDetailsCommentsID').setAttribute('class','mui-control-content');
+		htmlSlowExpertsDetails = '';
+		document.getElementById('slowExpertsDoctorDetailID').innerHTML = htmlSlowExpertsDetails;
+		htmlCustomerComments = '';
+		document.getElementById('slowExpertsDetailsCommentsID').innerHTML = htmlCustomerComments;
+		document.getElementById('slowExpertsDetailsSkilledID').innerHTML = '';
+		document.getElementById('slowExpertsDetailsCareerID').innerHTML = '';
+		doctorId = slowExpertsId;
+		var requestSlowExpertsDetails = "doctorId=" + doctorId;
+		jyapp.getApi({
+			method: 'Treat/DoctorDetails',
+			data: requestSlowExpertsDetails,
+			timeout: 10000,
+	   		showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initSlowExpertsDetails---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','提示','确认');
+					plus.webview.getWebviewById('SlowExpertsDetails').reload();
+					return false;
+				}else{
+					var dataValue = response.data;
+					if (dataValue != null) {
+						var Name = dataValue.Name ? dataValue.Name : "--";
+						var Title = dataValue.Title ? dataValue.Title : "--";
+						var HospitalName = dataValue.HospitalName ? dataValue.HospitalName : "--";
+						var DepartmentName = dataValue.DepartmentName ? dataValue.DepartmentName : "--";
+						htmlSlowExpertsDetails += "<li class=\"mui-table-view-cell mui-media\">";
+						htmlSlowExpertsDetails += "	<a href=\"javascript:;\">";
+						htmlSlowExpertsDetails += "		<img class=\"mui-media-object mui-pull-left\" src=\"" + dataValue.Pic + "\" onerror=\"this.src='../../img/default/yisheng_touxiang.png';this.onerror=null\">";
+						htmlSlowExpertsDetails += "		<div class=\"mui-media-body\">";
+						htmlSlowExpertsDetails += "			<h2 class=\"mui-ellipsis\">" + Name + "<span>" + dataValue.Title + "</span></h2>";
+						htmlSlowExpertsDetails += "			<p class=\"mui-ellipsis\">接诊量：" + dataValue.OrderCount + " <span class=\"xingxing\">★" + dataValue.Score + "</span></p>";
+						htmlSlowExpertsDetails += "			<p class=\"mui-ellipsis\">" + HospitalName + " " + DepartmentName + "</p>";
+						htmlSlowExpertsDetails += "		</div>";
+						htmlSlowExpertsDetails += "	</a>";
+						htmlSlowExpertsDetails += "</li>";
+						htmlSlowExpertsDetails += "<li class=\"mui-table-view-cell mui-media\">价格<strong>¥"+dataValue.Price+"</strong></li>";
+						htmlSlowExpertsDetails += "<li class=\"mui-table-view-cell mui-media icon_address\" id=\"slowExpertsDetailOpenMapID\">"+dataValue.Address+"<input type=\"hidden\" value=\""+dataValue.lng+"\" /><input type=\"hidden\" value=\""+dataValue.lat+"\" /></li>";
+						document.getElementById('slowExpertsDoctorDetailID').innerHTML = htmlSlowExpertsDetails;
+						document.getElementById('slowExpertsDetailsSkilledID').innerHTML = dataValue.Skilled;
+						document.getElementById('slowExpertsDetailsCareerID').innerHTML = dataValue.Introduction;
+						var htmlItem2 = '';
+						htmlItem2 += '<article class="mcTime">';
+						htmlItem2 += '	<section id="container"></section>';
+						htmlItem2 += '	<small>注：<i></i>可预约<em></em>已预约</small>';
+						htmlItem2 += '</article>';
+						document.getElementById("item2").innerHTML = htmlItem2;
+						//初始化医生排班信息
+						slowExpertsDetails.initDoctorSources(doctorId);
+						//初始化客户评论内容
+						slowExpertsDetails.initCustomerComments(dataValue.ID);
+					}
+				}
+			},
+			onerror: function(e) {
+				mui.reload();
+				console.log("initSlowExpertsDetails:" + e);
+			}
+		});
+	},
+	initCustomerComments: function(doctorId) {
+		var requestCustomerComments = "doctorId=" + doctorId + "&pageIndex=1&pageSize=10";
+//		console.log("requestCustomerComments---->:"+requestCustomerComments);
+		jyapp.getApi({
+			method: 'Treat/Comments',
+			data: requestCustomerComments,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("initCustomerComments---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg, '', '提示', '确认');
+					return false;
+				}else{
+					if(response.data != null && response.data.list != null ){
+						var dataValue = response.data.list;
+						if (dataValue.length > 0) {
+							for (var i = 0; i < dataValue.length; i++) {
+								var endLen = dataValue[i].CreateTime.length - 2;
+								var time = dataValue[i].CreateTime.substring(6, endLen);
+								time = commomUtil.formatStringToDate(time, 1);
+								htmlCustomerComments += "<div >";
+								htmlCustomerComments += "	<h2>" + dataValue[i].Name + "<span>" + time + "</span></h2>";
+								htmlCustomerComments += "	<p class=\"ellipsis\">" + dataValue[i].Comment + "</p>";
+								htmlCustomerComments += "</div>";
+							}
+						}
+						document.getElementById('slowExpertsDetailsCommentsID').innerHTML = htmlCustomerComments;
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("initCustomerComments:" + e);
+			}
+		});
+	},
+	initDoctorSources: function(doctorId) { //根据医生ID获取该医生未来两个星期的排班信息
+		var requestDoctorSources = "doctorId=" + doctorId;
+		jyapp.getApi({
+			method: 'Treat/DocatorArrange',
+			data: requestDoctorSources,
+			timeout: 10000,
+			onsuccess: function(response) {
+				var data = JSON.parse(response.data);
+				var dataValues = data.scheduleList;
+				var oppDate = new Array();
+				for (var i = 0; i < dataValues.length; i++) {
+					var dateValue = commomUtil.get_unix_time(dataValues[i].date + " 00:00:00");
+					var dataDate = new Date(parseInt(dateValue));
+					var dateAValue = dataDate.getYear() + 1900 + "-" + (dataDate.getMonth() + 1) + "-" + dataDate.getDate();
+					oppDate.push(dateAValue);
+				}
+				dateA = uniqueArray(oppDate);
+				initCalendar();
+				test();
+			},
+			onerror: function(e) {
+				console.log("initDoctorSources:" + e);
+			}
+		});
+	},
+	queryDocatorArranges: function(doctorId, queryDate) { //根据医生ID和日期获取该医生的号源信息
+		var requestQueryDocatorArranges = "doctorId=" + doctorId + "&date=" + queryDate;
+		jyapp.getApi({
+			method: 'Treat/DocatorArrangeDetails',
+			data: requestQueryDocatorArranges,
+			timeout: 10000,
+			onsuccess: function(response) {
+				var data = JSON.parse(response.data);
+				var dataValues = data.arrangeList;
+				var html = '';
+				for (var i = 0; i < dataValues.length; i++) {
+					if (!dataValues[i].hasBooked) {
+						html += '<li><span>' + dataValues[i].time + '</span><input type="hidden" value="' + dataValues[i].id + '" /></li>';
+					}
+				}
+				mui('#appointmentTime').popover('toggle');
+				document.getElementById("appointmentTimeOlID").innerHTML = html;
+				
+				//时间表滚动
+				mui('.mui-scroll-wrapper').scroll({
+					deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+				});
+			},
+			onerror: function(e) {
+				console.log("queryDocatorArranges:" + e);
+				plus.nativeUI.alert('医生号源信息获取失败！', '', '提示', '确认');
+				return false;
+				mui('#appointmentTime').popover('toggle');
+			}
+		});
+	},
+	editAppointment: function() {
+		var appointmentTimeValue = document.getElementById("slowDetailsAppoTimeID").value;
+		if (!appointmentTimeValue || typeof(appointmentTimeValue) == 'undefined' || appointmentTimeValue == "") {
+			plus.nativeUI.alert('请选择预约时间', '', '提示', '确认');
+			return false;
+		}
+		var reserveSourceID = document.getElementById("slowDetailsSourceID").value;
+		commomUtil.closeWebviewById('reserveInformation');
+		mui.openWindow({
+			id: 'reserveInformation',
+			url: "reserveInformation.html",
+			createNew:true,
+			extras: {
+				"doctorId": doctorId,
+				"appointmentTimeValue": appointmentTimeValue,
+				"reserveSourceID": reserveSourceID
+			}
+		});
+		mui('#appointmentTime').popover('toggle');
+	},
+	rebackPreloadSlowExpertsDetails : function(){
+		document.getElementById('slowExpertsDetailsSkilledID').innerHTML = '';
+		document.getElementById('slowExpertsDetailsCareerID').innerHTML = '';
+		document.getElementById('itemA1').setAttribute('class','mui-control-item');
+		document.getElementById('itemA2').setAttribute('class','mui-control-item');
+		document.getElementById('itemA3').setAttribute('class','mui-control-item');
+		document.getElementById('item1').setAttribute('class','mui-control-content');
+		document.getElementById('item2').setAttribute('class','mui-control-content');
+		document.getElementById('slowExpertsDetailsCommentsID').setAttribute('class','mui-control-content');
+		plus.webview.getWebviewById('SlowExpertsDetails').reload();
+	}
+}
+
+function uniqueArray(dataA) {
+	dataA.sort();
+	var result = [dataA[0]];
+	for (var i = 1; i < dataA.length; i++) {
+		if (dataA[i] !== result[result.length - 1]) {
+			result.push(dataA[i]);
+		}
+	}
+	return result;
+}
+
+mui('.mui-content').on('tap', '.on', function() {
+	var appYear = parseInt(document.getElementById("mc-date-label").innerHTML.slice(0, 4));
+	var oMouth = parseInt(document.getElementById("mc-date-label").innerHTML.slice(5).split('月'));
+	var appDays = this.innerText;
+	if (appDays == "") {
+		plus.nativeUI.alert('请选择预约日期', '', '提示', '确认');
+		return false;
+	}
+	appMouth = oMouth < 10 ? "0" + oMouth : oMouth;
+	var appDay = appDays < 10 ? "0" + appDays : appDays;
+	appDate = appYear + "-" + appMouth + "-" + appDay;
+	//初始化医生当天号源信息
+	slowExpertsDetails.queryDocatorArranges(doctorId, appDate);
+});
+
+mui('#appointmentTimeOlID').on('tap', 'li', function(e) {
+	document.getElementById("slowDetailsSourceID").value = "";
+	var ols = document.getElementById("appointmentTimeOlID");
+	var lis = ols.getElementsByTagName("li");
+	for(var i = 0; i < lis.length; i++){
+		lis[i].setAttribute('class', '');
+	}
+	this.setAttribute('class', 'selector');
+	var slowDetailsAppoTimeIDs = this.innerText;
+	var slowDetailsAppoTimeID = slowDetailsAppoTimeIDs.split("-")[0];
+	document.getElementById("slowDetailsAppoTimeID").value = appDate + " " + slowDetailsAppoTimeID;
+	var slowDetailsSourceID = this.querySelectorAll('input')[0].value;
+	document.getElementById("slowDetailsSourceID").value = slowDetailsSourceID;
+});
+
+//绑定打开地图事件
+mui('#slowExpertsDoctorDetailID').on('click','#slowExpertsDetailOpenMapID',function(){
+	var targetLng = this.querySelectorAll('input')[0].value;
+	var targetLat = this.querySelectorAll('input')[1].value;
+	//des: ( DOMString ) 必选 导航目的地描述
+	var des = desStoreName;
+	// 设置目标位置坐标点和其实位置坐标点 Point(lng,lat): 创建Point对象
+	//dst: ( Point ) 必选 导航目的地坐标
+	var dst = new plus.maps.Point(targetLng,targetLat);
+//	console.log(targetLng+"--1--"+targetLat)
+//	console.log(dst.getLng()+"--1--"+dst.getLat())
+	//src: ( Point ) 必选 导航起始地坐标
+	var src = new plus.maps.Point(lng,lat);
+//	console.log(lng+"--2--"+lat)
+//	console.log(src.getLng()+"--2--"+src.getLat())
+	// 调用系统地图显示
+	plus.maps.openSysMap( dst, des, src );
+});
+
+//绑定详情回退事件
+document.getElementById('rebackPreloadSlowExpertsDetailsID').addEventListener('click',slowExpertsDetails.rebackPreloadSlowExpertsDetails);
+
+function initCalendar() {
+
+	var year = [],
+		month = [],
+		odata = [],
+		yearT = [],
+		monthT = [],
+		odataT = [];
+	(function() {
+
+		for (var i = 0, len = dateA.length; i < len; i++) {
+			var data = dateA[i].split('-');
+			year.push(data[0]);
+		}
+		for (var i = 0, len = dateA.length; i < len; i++) {
+			var data = dateA[i].split('-');
+			month.push(data[1]);
+		}
+		for (var i = 0, len = dateA.length; i < len; i++) {
+			var data = dateA[i].split('-');
+			odata.push(data[2]);
+		}
+		for (var i = 0, len = dateT.length; i < len; i++) {
+			var data = dateT[i].split('-');
+			yearT.push(data[0]);
+		}
+		for (var i = 0, len = dateT.length; i < len; i++) {
+			var data = dateT[i].split('-');
+			monthT.push(data[1]);
+		}
+		for (var i = 0, len = dateT.length; i < len; i++) {
+			var data = dateT[i].split('-');
+			odataT.push(data[2]);
+		}
+
+	}())
+	var newDate = {
+		'year': year,
+		'month': month,
+		'odata': odata,
+		'yearT': yearT,
+		'monthT': monthT,
+		'odataT': odataT
+	};
+	(function($, newDate) {
+		$.hasClass = function(obj, cls) {
+			return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+		}
+
+		$.addClass = function(obj, cls) {
+			if (!$.hasClass(obj, cls)) obj.className += " " + cls;
+		}
+
+		$.removeClass = function(obj, cls) {
+			if ($.hasClass(obj, cls)) {
+				var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+				obj.className = obj.className.replace(reg, ' ');
+			}
+		}
+
+		$.DateUtil = {};
+		$.DateUtil.addDate = function(date, inc) {
+			var d = new Date(date);
+			d.setTime(date.getTime() + inc * 24 * 3600 * 1000);
+			return d;
+		}
+		$.DateUtil.getDateDiff = function(base, target) {
+			return (target.getTime() - base.getTime()) / (24 * 3600 * 1000);
+		}
+		$.DateUtil.getToday = function() {
+			var d = new Date();
+			d.setHours(0, 0, 0, 0);
+			return d;
+		}
+
+	}(mui, newDate));
+
+	//日历控件
+	(function($, newDate) {
+		var MonthView = (function($, newDate) {
+
+			var MonthViewTemplate = '' +
+				'<div class="mc-toolbar">' +
+				'<button class="mui-btn" id="mc-btn-previous" type="button"></button>' +
+				'<button class="mui-btn" id="mc-btn-today" type="button">今</button>' +
+				'<button class="mui-btn" id="mc-btn-next" type="button"></button>' +
+				'<p><span id="mc-date-label" class="mui-action-back">date</span></p>' +
+				'</div>' +
+				'<div><table class="mc-table">' +
+				'<tr class="mc-table-head mc-table-row">' +
+				'<th>周日</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th>' +
+				'</tr>' +
+				'</table></div>' +
+				'<div>' +
+				'<table id = "mc-table-body" class="mc-table"></table>' +
+				'</div>';
+
+			var CellViewTemplate = '<td class="mc-table-cell"><a>1</a></td>';
+			var cell_selected;
+			var date_selected;
+			var firstDateinMonthView;
+
+			var renderSkelekon = function(container) {
+				var  div  =  document.createElement("div");
+				div.className = "mc-container"
+				div.innerHTML  =  MonthViewTemplate;
+				container.appendChild(div);
+
+				var html = "";
+				for (var i = 0; i < options.row_len; i++) {
+					html += '<tr class="mc-table-row">';
+					for (var j = 0; j < 7; j++) {
+						html += CellViewTemplate;
+					}
+					html += '</tr>';
+				}
+				$("#mc-table-body")[0].innerHTML = html;
+
+				var i = 0;
+				$(".mc-table-cell").each(function() {
+					this.setAttribute("mc-cell-familyDoctor", i++);
+				});
+			};
+			var changeMonth = function(date) {
+				var firstDate = getFirstDateInMonth(date);
+				firstDateinMonthView = firstDate;
+				var i = 0
+				$(".mc-table-cell").each(function() {
+					var d = $.DateUtil.addDate(firstDate, i++);
+					this.firstChild.innerHTML = "" + d.getDate();
+					if (d.getMonth() != date.getMonth()) {
+						//						this.setAttribute("disabled","disabled");
+						this.style.visibility = "hidden";
+					} else {
+						//						this.removeAttribute("disabled");
+						this.style.visibility = "inherit";
+					}
+					if (d.getTime() == date.getTime()) {
+						$.addClass(this, "mc-cell-selected on");
+						cell_selected = this;
+						date_selected = d;
+					}
+
+					if (d.getTime() == $.DateUtil.getToday().getTime()) {
+						$.addClass(this, "mc-table-cell-today")
+					} else {
+						$.removeClass(this, "mc-table-cell-today")
+					}
+
+				});
+
+			};
+			var changeDate = function(date) {
+				date && date.setHours(0, 0, 0, 0)
+				if (cell_selected) {
+					$.removeClass(cell_selected, "mc-cell-selected");
+					if (date_selected.getFullYear() == date.getFullYear() && date_selected.getMonth() == date.getMonth()) {
+						var index = 1 * cell_selected.getAttribute("mc-cell-familyDoctor") + $.DateUtil.getDateDiff(date_selected, date);
+						cell_selected = $(".mc-table-cell")[index];
+						$.addClass(cell_selected, "mc-cell-selected");
+						date_selected = date;
+					} else {
+						changeMonth(date);
+					}
+				} else {
+					changeMonth(date);
+				}
+
+				$("#mc-date-label")[0].innerHTML = date_selected.getFullYear() + '年' + (date_selected.getMonth() + 1) + '月';
+
+				clearDay()
+
+				setDatenow(newDate.year, newDate.month, newDate.odata, newDate.yearT, newDate.monthT, newDate.odataT);
+			}
+			var setDatenow = function(year, month, odata, yearT, monthT, odataT) {
+				var odiv = mui(".mc-table-cell");
+				var oyear = parseInt(document.getElementById("mc-date-label").innerHTML.slice(0, 4));
+				var omonth = parseInt(document.getElementById("mc-date-label").innerHTML.slice(5).split('月'));
+				var c = 0;
+				for (var i = 0, len = odiv.length; i < len; i++) {
+					odiv[i].setAttribute('class', 'mc-table-cell');
+				}
+				for (var i = 0, len = odata.length; i < len; i++) {
+					for (var j = 0, len = odiv.length; j < len; j++) {
+
+						if (odiv[j].querySelector('a').innerHTML == odata[i] && month[i] == omonth && year[i] == oyear) {
+							odiv[j].setAttribute('class', 'mc-table-cell mc-cell-selected on');
+						}
+						if (odiv[j].querySelector('a').innerHTML == odataT[i] && monthT[i] == omonth && yearT[i] == oyear) {
+							odiv[j].setAttribute('class', 'mc-table-cell mc-cell-selected  on mc-cell-selected-h');
+						}
+					}
+				}
+			}
+
+			function getFirstDateInMonth(date) {
+				var d = new Date(date);
+				d.setDate(1)
+				var fd = $.DateUtil.addDate(d, (0 - d.getDay()));
+				return fd;
+			}
+
+			return {
+				date_selected: function() {
+					return date_selected
+				},
+				init: function(o, c) {
+
+					options = o;
+					renderSkelekon(o.container);
+
+					this.changeDate(o.date || $.DateUtil.getToday());
+
+					$("#mc-table-body").on('tap', '.mc-table-cell', function() {
+						//var idx = this.getAttribute("mc-cell-familyDoctor");
+						//changeDate($.DateUtil.addDate(firstDateinMonthView,idx))
+
+					});
+					var swipeMonth = function(direction) {
+						var d = new Date(date_selected);
+						var m = d.getMonth() + direction;
+						if (m == 12) {
+							d.setMonth(0);
+							d.setFullYear(d.getFullYear() + 1);
+						} else if (m == -1) {
+							d.setMonth(11);
+							d.setFullYear(d.getFullYear() - 1);
+						} else {
+							d.setMonth(m);
+						}
+						changeDate(d);
+					}
+
+					o.container.addEventListener('swipeleft', function() {
+						swipeMonth(1);
+					})
+					o.container.addEventListener('swiperight', function() {
+						swipeMonth(-1);
+					})
+					$('.mc-toolbar').on('tap', '#mc-btn-previous', function() {
+						swipeMonth(-1);
+					})
+					$('.mc-toolbar').on('tap', '#mc-btn-next', function() {
+						swipeMonth(1);
+
+					})
+
+				},
+
+				changeDate: changeDate,
+			}
+		}($, newDate));
+
+		$.fn.MCalendar = function(option) {
+			var options = {
+				container: this[0],
+				row_len: 6,
+				date: undefined,
+			}
+
+			$.extend(options, option || {});
+			options.date && options.date.setHours(0, 0, 0, 0);
+
+			var mc = {
+				options: {},
+				getDate: function() {
+					return MonthView.date_selected();
+				},
+				init: function() {
+					var el;
+					this.options = options;
+					MonthView.init(options);
+				},
+
+				show: function() {
+					options.container.style.display = "initial";
+
+				},
+				hide: function() {
+					options.container.style.display = 'none';
+				},
+
+				changeDate: function(date) {
+					MonthView.changeDate(date);
+				},
+
+			};
+
+			mc.init();
+			return mc;
+		};
+
+	}(mui, newDate));
+
+	function clearDay() {
+		var oselecte = document.querySelectorAll(".mc-cell-selected");
+		for (var i = 0, len = oselecte.length; i < len; i++) {
+			oselecte[i].setAttribute('class', 'mc-table-cell');
+		}
+	}
+
+}

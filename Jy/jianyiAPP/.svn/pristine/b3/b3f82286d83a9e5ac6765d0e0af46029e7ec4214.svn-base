@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: #00B6F3!important;
+				max-height: 100%;
+				margin: 0;
+			}
+			
+			.mui-content {
+				top: 50px;
+				position: fixed;
+				text-align: center;
+				background: none;
+				width: 300px;
+				left: 50%;
+				margin-left: -150px;
+			}
+			
+			.pay-img {
+				padding-top: 39px;
+				position: relative;
+				height: 360px;
+				background-image: url(../../img/pay/bg_zhifuma.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-color: #00B6F3!important;
+				background-position: center;
+			}
+			
+			.pay-img p {
+				position: absolute;
+				top: 320px;
+				left: 0;
+				right: 0;
+				color: rgb(140, 138, 142);
+				font-size: 14px;
+			}
+			
+			.pay-text {
+				margin-top: 30px;
+			}
+			
+			.pay-text a {
+				color: #fff;
+				font-size: 14px;
+				display: block;
+				width: 50%;
+				float: left;
+				text-decoration: none;
+			}
+			
+			.pay-text a p {
+				color: #fff;
+				margin-top: -2px;
+			}
+			
+			.pay-text .noactive,
+			.noactive img {
+				opacity: .5;
+			}
+			
+			.pay-img-top {
+				height: 66px!important;
+				margin: 0 auto 50px;
+				-webkit-transform: scale(1.5);
+			}
+			
+			.pay-img-top div {
+				height: 30px!important;
+			}
+			
+			.pay-img-bottom {
+				width: 70%;
+				height: 65.5%;
+				margin: -40px auto 0;
+				-webkit-transform: scale(.8);
+				overflow: hidden;
+			}
+			
+			@media only screen and (min-width: 320px) and (max-width: 374px) {
+				.mui-content {
+					top: 0px;
+				}
+				.pay-text {
+					margin-top: 8px;
+				}
+				.pay-text img {
+					width: 40px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">支付码</h1>
+		</header>
+		<div class="mui-content">
+			<div class="pay-img">
+				<div class="pay-img-top" id="barcode"></div>
+				<div class="pay-img-bottom" id="qrcode"></div>
+				<p id="refresh"><img src="../../img/familyDoctor/icon_shuaxin.png" width="15px" style="margin-right: 5px;margin-bottom: -2px;" />每分钟自动更换</p>
+			</div>
+			<div class="pay-text">
+				<a id="randomCode" href="" class="fukanma"><img src="../../img/familyDoctor/btn_zhifu_dongtaifukuan.png" width="65px" />
+					<p>动态付款码</p>
+				</a>
+				<a id="ecardNo" href="" class="kahao noactive"><img src="../../img/familyDoctor/btn_zhifu_dianzikahao.png" width="65px" />
+					<p>电子卡号</p>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+
+	<script src="../../js/code/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../../js/code/jquery.qrcode.min.js"></script>
+	<script type="text/javascript" src="../../js/code/qrcode.js"></script>
+	<script type="text/javascript" src="../../js/code/jquery-barcode.min.js"></script>
+
+	<script>
+		//生成条码和二维码
+		function generateCode(code) {
+			$("#barcode").barcode(code, "code128");
+			document.getElementById("qrcode").innerHTML = "";
+			jQuery('#qrcode').qrcode({
+				render: "table",
+				text: code
+			});
+		};
+		//获取动态支付码
+		function getRandomCode(cardNo, channelId) {
+			jyapp.getApi({
+				method: 'PayCode/GetPayCode',
+				data: 'cardNo=' + cardNo + '&channelId=' + channelId,
+				showWaiting: true,
+				onsuccess: function(data) {
+					if (data.code == 1) {
+						generateCode(data.data);
+					} else {
+						plus.nativeUI.alert(data.msg);
+					}
+				},
+				onerror: function(e) {
+					alert(e);
+				}
+			});
+		};
+		
+		mui.plusReady(function() {
+			//获取卡号和设备标识
+			var channelId = plus.storage.getItem("channelId");
+			var cardNo = JSON.parse(localStorage.getItem('oneInfo')).jycardnumber;
+			var timer = null;
+			getRandomCode(cardNo, channelId);
+			var randomCode = document.getElementById('randomCode');
+			var ecardNo = document.getElementById('ecardNo');
+			var refresh = document.getElementById('refresh');
+			randomCode.addEventListener('tap', function(event) {
+				refresh.style.display = "";
+				randomCode.setAttribute("class", "fukanma");
+				ecardNo.setAttribute("class", "kahao noactive");
+				timer = setInterval(getRandomCode(cardNo, channelId), 120000);
+			});
+			ecardNo.addEventListener('tap', function(event) {
+				refresh.style.display = "none";
+				randomCode.setAttribute("class", "fukanma noactive");
+				ecardNo.setAttribute("class", "kahao");
+				if (timer) {
+					clearInterval(timer);
+				}
+				generateCode(cardNo);
+			});
+			refresh.addEventListener('tap', function(event) {
+				getRandomCode(cardNo, channelId);
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,78 @@
+mui('.mui-content').on('tap', '.spaOrderList-c', function() {
+	var oid = this.parentNode.parentNode.parentNode.id;
+	if (this.parentNode.parentNode.className == 'spa-cancel') {
+		oid = 'cancal';
+	}
+	if (this.parentNode.parentNode.className == 'spa-back') {
+		oid = 'back';
+	}
+	mui.openWindow({
+		id: 'spaOrderDetali',
+		url: "spaOrderDetali.html",
+		extras: {
+			"type": oid
+		}
+	})
+})
+
+/*原因*/
+//取消预约原因详细----明星东2016-5-23 17:43更新
+	function reasonDetail(m){
+		var userCancle = new mui.PopPicker();
+		userCancle.setData([{
+			value: 'nobuy',
+			text: '我不想买了'
+		}, {
+			value: 'noappropriate',
+			text: '时间/套餐/网点不理想'
+		}, {
+			value: 'error',
+			text: '信息填写错误,重新下单'
+		}, {
+			value: 'nohere',
+			text: '不在这里预约'
+		}]);
+		
+		var cancleButton = document.querySelector(m);
+		var cancleResult = document.querySelector(m).children[0];
+		cancleButton.addEventListener('tap', function(event) {
+			userCancle.show(function(items) {
+				var s = JSON.stringify(items[0].text);
+				s = s.replace("\"", "").replace("\"", "");
+				cancleResult.value = s;
+				console.log(cancleResult.value);
+			});
+		}, false);
+	}
+	reasonDetail('.cancle');
+	
+	
+/*mui.init();
+mui.ready(function() {
+	var userCancle = new mui.PopPicker();
+	userCancle.setData([{
+		value: 'nobuy',
+		text: '我不想买了'
+	}, {
+		value: 'noappropriate',
+		text: '时间/套餐/网点不理想'
+	}, {
+		value: 'error',
+		text: '信息填写错误,重新下单'
+	}, {
+		value: 'nohere',
+		text: '不在这里预约'
+	}]);
+	var cancleButton = document.querySelector(".cancle");
+	var cancleResult = document.querySelector('.cancleResult');
+	cancleButton.addEventListener('tap', function(event) {
+		userCancle.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			s = s.replace("\"", "").replace("\"", "");
+			cancleResult.value = s;
+//			console.log(cancleResult.value);
+		});
+
+	}, false);
+	
+});*/

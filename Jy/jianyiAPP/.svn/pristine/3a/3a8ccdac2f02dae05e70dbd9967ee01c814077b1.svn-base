@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<!--<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>-->
+		<style type="text/css">
+			html,body{background:#fff!important;}
+			.jkwd-nav {
+				width: 100%;
+				top: 50px;
+				background: #fff;
+				z-index: 9;
+				position: fixed;
+				height: 44px;
+				line-height: 44px;
+				border-bottom: 1px solid rgb(244, 244, 244);
+			}
+			
+			.jkwd-nav a {
+				position: relative;
+				width: 50%;
+				box-sizing: border-box;
+				display: block;
+				text-align: center;
+				float: left;
+				color: #4A4A4A;
+				font-size: 15px;
+				border-left: 1px solid rgb(240, 240, 240);
+			}
+			
+			.jkwd-nav a:first-child {
+				border-left: none;
+			}
+			
+			.events {
+				margin: 0 auto;
+				background: #fff;
+			}
+			
+			.events h2 {
+				color: #999;
+				font-size: 16px;
+				padding: 15px 0 5px 15px;
+			}
+			
+			.events .mui-table-view:before {
+				display: none;
+			}
+			
+			.events img {
+				border-radius: 50%;
+				float: left;
+				width: 70px;
+				height: 70px;
+				margin-right: 10px;
+			}
+			
+			.events p {
+				font-size: 14px;
+				line-height: 22px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.events section {
+				position: relative;
+			}
+			
+			.events section h3 {
+				padding-right: 55px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 24px;
+				font-size: 16px;
+			}
+			
+			.events span {
+				display: block;
+			}
+			
+			.events small {
+				font-size: 16px;
+			}
+			
+			.events strong {
+				position: absolute;
+				right: 0;
+				top: 2px;
+				color: #ff5e5e;
+				font-size: 18px;
+			}
+			
+			.events em {
+				font-style: normal;
+				font-size: 16px;
+				color: #333;
+			}
+			
+			.search {
+				top: 44px;
+				background: #f2f6f9!important;
+				/*display: none;*/
+				height: 300px;
+				position: relative;
+			}
+			
+			.search .mui-popover {
+				top: 0;
+				height: 300px;
+			}
+			#search-qg{
+				height:300px;
+				background:#fff;
+			}
+			.search .mui-popover .mui-table-view {
+				background: #fff;
+			}
+			
+			.search ul {
+				list-style: none;
+			}
+			
+			.search ul li {
+				line-height: 44px;
+				height: 44px;
+				padding-left: 15px;
+			}
+			
+			.search ul li a {
+				color: #4A4A4A;
+			}
+			
+			.mui-backdrop {
+				top: 94px;
+			}
+			
+			#cancerExpertsDetails {
+				position: relative;
+				top: -256px;
+				min-height:301px;
+			}
+			
+			#search-qg {}
+			
+			#search-qg .search-qg-l {
+				left: initial;
+				width: 35%;
+			}
+			
+			#search-qg .search-qg-r {
+				background: rgba(000, 000, 000, .2);
+				right: 0;
+				left: initial;
+				width: 65%;
+				border-radius: 0;
+				margin: 0;
+			}
+			
+			#search-qg .search-qg-l ul,
+			#search-qg .search-qg-r ul {
+				padding-left: 0;
+				list-style: none;
+			}
+			
+			#search-qg .search-qg-l ul li,
+			#search-qg .search-qg-r ul li {}
+			
+			#search-qg .search-qg-l .search-qg-text {
+				background: rgba(158, 156, 156, 0.1);
+			}
+			
+			#search-szn {}
+			
+			#search-szn #btn-today {
+				padding: 10px 30px;
+				display: block;
+				float: left;
+				margin-top: 20px;
+				margin-left: 20%;
+				box-sizing: border-box;
+				background: #C0C0C0;
+				color: #4A4A4A;
+			}
+			
+			#search-szn #btn-confirm {
+				box-sizing: border-box;
+				padding: 10px 30px;
+				margin-top: 20px;
+				margin-right: 20%;
+				display: block;
+				float: right;
+				background: #00B6F3;
+				color: #fff;
+			}
+			/*日历样式*/
+			
+			#container {}
+			
+			#container .mc-table {}
+			
+			#container .mc-table .mc-table-head th {
+				background: #fff;
+				color: #4A4A4A;
+			}
+			
+			#container #mc-btn-previous,
+			#container #mc-btn-next {
+				position: relative;
+			}
+			
+			#container #mc-btn-previous:before,
+			#container #mc-btn-next:before {
+				content: '<';
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				font-size: 20px;
+				color: #4A4A4A;
+			}
+			
+			#container #mc-btn-next:before {
+				content: '>';
+			}
+			
+			#container #mc-date-label {
+				color: #4A4A4A;
+			}
+			
+			#container .mc-table .mc-table-head th:nth-child(1),
+			#container .mc-table .mc-table-head th:nth-child(7) {
+				color: #00B6F3;
+			}
+			
+			#container .mc-table .mc-table-cell a {
+				color: #4A4A4A;
+			}
+			
+			#container .mc-table .mc-table-cell[disabled] a {
+				/*visibility: hidden;*/
+				color: #9B9B9B;
+			}
+			
+			#container .mc-cell-selected a {
+				position: relative;
+				/*right: -10px;*/
+				background: #00B6F3;
+				color: #fff!important;
+			}
+			
+			#container .mc-container {
+				background: #fff;
+			}
+			
+			.mui-popover.mui-popover-action {
+				transform: none;
+			}
+			#search-mrpx{
+				background:#fff;
+				padding:5px 15px;
+				font-size:14px;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" id="diseaseNameHlId">医生列表</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-nav">
+				<a href="" class="search-qg" style="width:50%;" id="search-qgahtmlId">全国&nbsp;&nbsp;<img src="../../img/common/btn_down.png" alt="" width="15px"/></a>
+				<!--<a href="" class="search-szn">三周内<img src="../../img/common/btn_down.png" alt=""  width="15px"/></a>-->
+				<a href="" class="search-mrpx">默认排序&nbsp;&nbsp;<img src="../../img/common/btn_down.png" alt=""  width="15px"/></a>
+			</div>
+			<div class="search">
+				<div id="householdDevices" class="mui-popover mui-popover-action">
+					<div id="search-qg">
+						<div class="mui-scroll-wrapper search-qg-l">
+							<div class="mui-scroll">
+								<ul class="search-ul" id="Doc-city">
+									<!--									<li class="search-qg-text">B</li>-->
+								</ul>
+							</div>
+						</div>
+						<div class="mui-scroll-wrapper search-qg-r">
+							<div class="mui-scroll" id="content1">
+								<ul class="search-ul" id="Doc-district">
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--<div id="search-szn">
+						<article class="mcTime" style="position:absolute;">
+							<section id="container"></section>
+							<button id="btn-today" class="mui-btn" type="button">取消</button>
+							<button id="btn-confirm" class="mui-btn" type="button">确定</button>
+							<div id="show-time"></div>
+						</article>
+					</div>-->
+					<div id="search-mrpx">
+						默认
+					</div>
+				</div>
+			</div>
+			<div class="events" id="cancerExpertsDetails">
+				<ul class="mui-table-view " id="cancerExpertsDoctorListId">
+					<!--<li class="mui-table-view-cell">
+						<a href="#">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>任天平&nbsp;副主任医师</h3>
+								<p>北京大学第一医院&nbsp;血液内科<span>预约量：<small>0</small></span></p>
+								<strong>300<em>元</em></strong>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#">
+							<img src="../../img/pic_people.png" />
+							<section>
+								<h3>任天平&nbsp;副主任医师</h3>
+								<p>北京大学第一医院&nbsp;血液内科<span>预约量：<small>0</small></span></p>
+								<strong>300<em>元</em></strong>
+							</section>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="cewsjId" style="display: none;">
+					<i></i>暂无数据
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/cancerExperts/cancerExpertsDoctorList.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/city.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

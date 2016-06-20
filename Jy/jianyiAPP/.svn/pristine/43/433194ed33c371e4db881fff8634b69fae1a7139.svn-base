@@ -1,0 +1,14 @@
+mui.plusReady(function() {
+//	jyapp.getApi({
+//		method: 'Profile/CardInfo',
+//		onsuccess: function(data) {
+//			console.log(JSON.stringify(data));
+//			
+//		},
+//		onerror: function(e) {
+//			alert(e);
+//		}
+//	});
+	var newDate = plus.storage.getItem('oneInfo');
+	console.log(newDate)
+})

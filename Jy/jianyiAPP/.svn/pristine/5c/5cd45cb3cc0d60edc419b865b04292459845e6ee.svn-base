@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+				text-align: center;
+			}
+			.xtjl-h2 {
+				font-size: 15px;
+				padding: 20px 30px;
+			}
+			
+			.xtjl-h3 {
+				font-size: 35px;
+				color: rgb(253, 177, 46);
+			}
+			
+			.xtjl-h4 {
+				padding: 10px 0 20px;
+				font-size: 12px;
+			}
+			
+			.xtjl-p {
+				border: none;
+				background: #fff;
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+			
+			.medicationSave {
+				padding: 0;
+				border-right: 20px solid #f2f6f9;
+				border-left: 20px solid #f2f6f9;
+			}
+			
+			textarea.xtjl-p.ellipsis.weak.border-t.border-b {
+				padding-bottom: 50px;
+				border-bottom: 50px solid #f2f6f9!important;
+			}
+			
+			.medicationSave a {
+				margin-bottom: 0;
+			}
+			
+			.mui-table-view:before,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				text-align: left;
+				color: #4A4A4A;
+				font-size: 15px;
+			}
+			
+			.mui-badge {
+				font-size: 16px;
+			}
+			
+			.healthyR-btn {
+				background: rgb(252, 94, 98);
+				width: 95%;
+				margin: 0 auto;
+				color: #fff;
+				display: block;
+				box-sizing: border-box;
+				padding: 15px 0;
+				border-radius: 5px;
+				font-size: 17px;
+			}
+			
+			.healthyr-succed {
+				float: right;
+				line-height: 44px;
+			}
+			
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			button.mui-btn {
+				float: left;
+			}
+			
+			button.mui-btn-blue {
+				float: right;
+			}
+			
+			.mui-dtpicker-title {
+				clear: left;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			
+			.xymzys h2 {
+				color: #9B9B9B;
+				font-size: 17px;
+			}
+			article{
+				width:100%;
+				position: relative;
+			}
+			.xtjl-h3{
+				font-size: 35px;
+				color: rgb(253, 177, 46);
+				width:100%;
+				overflow:hidden;
+			}
+			.xtjl-h3 input{
+				display:none;
+			}
+			.xtjl-h3 section{
+				width:1880px;
+				background: url(../../img/healthy/pic_kedu_shousuo.png) no-repeat scroll 0 0;
+				background-size:cover;
+				height:40px;
+			}
+			.xtjl-h3 #scroll2{
+				width:1350px;
+				background: url(../../img/healthy/pic_kedu_shuzhang.png) no-repeat scroll 0 0;
+				background-size:cover;
+			}
+			.xtjl-h3 #scroll3{
+				width:2240px;
+				background: url(../../img/healthy/pic_kedu_xinlv.png) no-repeat scroll 0 0;
+				background-size:cover;
+			}
+			.list{
+				padding-bottom:15px;
+				border-bottom:1px solid #ddd;
+				width:290px;
+				margin:0 auto;
+			}
+			.list strong{
+				color:#FFB000;
+				font-size:40px;
+				display:block;
+				font-weight:normal;
+			}
+			.list small{
+				display:block;
+				color:#9B9B9B;
+				padding:10px 0;
+				font-size:14px;
+			}
+			.list i{
+				display:block;
+				position: absolute;
+				width:2px;
+				height:18px;
+				background:#F73333;
+				top:0;
+				left:50%;
+				margin-left:-1px;
+			}
+			.mui-dtpicker-title{
+				overflow:hidden;
+			}
+			.mui-dtpicker-title h5{
+				box-sizing:border-box;
+				display:block;
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">血压记录</h1>
+			<a class="healthyr-succed" id="healthyPressureSubmit">完成</a>
+		</header>
+		<div class="mui-content">
+			<!--<div id="xy-ssy" class="xymzys">
+				<h2>收缩压(高压)</h2>
+				<p><input type="number" name="" value="" id="systolicPressure" style="width: 200px;" /></p>
+				<h4 class="xtjl-h4 weak">mmol/l</h4>
+			</div>
+			<div id="xy-szy" class="xymzys">
+				<h2>舒张压(低压)</h2>
+				<p><input type="number" name="" value="" id="diastolicPressure" style="width: 200px;" /></p>
+				<h4 class="xtjl-h4 weak">mmol/l</h4>
+			</div>
+			<div id="xy-xl" class="xymzys">
+				<h2>心率</h2>
+				<p><input type="number" name="" value="" id="heartRate" style="width: 200px;" /></p>
+				<h4 class="xtjl-h4 weak">mmol/l</h4>
+			</div>-->
+
+
+			<div class="list">
+				<h2 class="xtjl-h2 weak">收缩压(高压)</h2>
+				<strong id="systolicPressure">55</strong>
+				<small>mmHg</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+			<div class="list">
+				<h2 class="xtjl-h2 weak">舒张压(低压)</h2>
+				<strong id="diastolicPressure">45</strong>
+				<small>mmHg</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll2"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+			<div class="list">
+				<h2 class="xtjl-h2 weak">心率</h2>
+				<strong id="heartRate">15</strong>
+				<small>次/分钟</small>
+				<article>
+					<h3 class="xtjl-h3">
+						<section id="scroll3"></section>
+					</h3>
+					<i></i>
+				</article>
+			</div>
+
+			<ul class="mui-table-view border-t">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="healthBP-time2" data-options='{"type":"time"}'>测量时间<span class="mui-badge mui-badge-inverted" id="dateTime"></span></a>
+				</li>
+			</ul>
+			<textarea class="xtjl-p ellipsis weak border-t border-b" placeholder="此处记录您要备注说明的信息" id="description"></textarea>
+		</div>
+		<!--<a href="" class="healthyR-btn" id="deleRecord">删除本条记录</a>-->
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/mui.picker.min.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/healthy/healthyPressureRecord.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/code/jquery-1.8.3.min.js"></script>
+</html>

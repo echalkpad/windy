@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+			}
+			
+			.jkwd-ul {
+				margin: 0;
+				list-style: none;
+				padding-left: 0px;
+			}
+			
+			.jkwd-ul li {
+				padding: 10px 0;
+				border-bottom: 2px solid rgb(240, 240, 240);
+				height: 97px;
+				width: 100%;
+			}
+			
+			.jkwd-ul li .li-l {
+				border: 1px solid #ccc;
+				display: inline-block;
+				float: left;
+				width: 70px;
+				height: 70px;
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+			
+			.jkwd-ul li .li-l img {
+				width: 70px;
+				height: 70px;
+			}
+			
+			.jkwd-ul li .li-r {
+				display: inline-block;
+				float: left;
+			}
+			
+			.jkwd-ul li .li-r h2 {
+				margin-top: 0;
+				font-size: 16px;
+				color: #000;
+				height: 20px;
+				line-height: 20px;
+			}
+			
+			.jkwd-ul li .li-r h2 span {
+				position: relative;
+				top: -2px;
+				color: #fff;
+				background: rgb(249, 157, 46);
+				padding: 0 1px;
+				font-size: 10px;
+				border-radius: 3px;
+				margin-left: 6px;
+			}
+			
+			.jkwd-ul li .li-r h3 {
+				font-size: 15px;
+				margin: 4px 0;
+				color: #000;
+			}
+			
+			.jkwd-ul li .li-r h3 .sp1 {
+				padding-right: 5px;
+				color: rgb(249, 157, 46);
+				font-size: 20px;
+			}
+			
+			.jkwd-ul li .li-r p {
+				font-size: 12px;
+			}
+			
+			.jkwd-ul li .li-r p .sp1 {
+				padding-left: 5px;
+			}
+			
+			.jkwd-ul li .li-r p .sp2 {
+				position: absolute;
+				right: 20px
+			}
+			
+			.jkwd-ul li h4 {
+				margin-top: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp1 {
+				color: #f00;
+				font-size: 20px;
+			}
+			
+			.jkwd-ul li h4 .sp2 {
+				text-decoration: line-through;
+				padding-left: 10px;
+			}
+			
+			.jkwd-ul li h4 .sp3 {
+				position: absolute;
+				right: 20px;
+				display: block;
+				margin-top: -10px;
+			}
+			
+			.jkwd-yhyh {}
+			
+			.jkwd-yhyh div {
+				padding: 10px;
+			}
+			
+			dl {
+				padding: 0 10px;
+			}
+			
+			dl dd {
+				margin-left: 0;
+			}
+			
+			dl dt span {
+				float: right;
+			}
+			
+			.jy-li .phone-btn {
+				background: none;
+				color: #4A4A4A;
+				float: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康网点</h1>
+		</header>
+		<div class="mui-content">
+			<div class="jkwd-top" id="healthNetworkDetailTopId">
+			</div>
+		</div>
+		<div class="jkwd-yd border-t" id="healthNetworkDetailProductId">
+		</div>
+		<div class="jkwd-yhyh border-t" id="healthNetworkDetailDiscountId">
+		</div>
+		<div class="jkwd-kjcz border-t" id="healthNetworkDetailCouponsId">
+		</div>
+		<div class="jkwd-yhdp border-t" id="healthNetworkDetailCommentId">
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/healthNetwork/healthNetworkDetail.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

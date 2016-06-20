@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			html,body{
+				height:100%;
+			}
+			.yy-top {
+				background: #00b6f3;
+				text-align: center;
+				height: 205px;
+			}
+			
+			.yy-top p {
+				color: #fff;
+				font-size: 15px;
+			}
+			
+			.yy-top .yy-lu {
+				padding-top: 65px;
+			}
+			
+			.yy-top h2 {
+				color: rgba(255, 255, 255, .5);
+				font-size: 13px;
+			}
+			
+			.yy-top h3 {
+				font-size: 27px;
+				color: #F7DB65;
+			}
+			
+			.yy-bottom a {
+				-webkit-box-sizing: border-box;
+				display: block;
+				float: left;
+				box-sizing: border-box;
+				width: 33%;
+				border-left: 1px solid #d1d1d1
+			}
+			
+			.yy-bottom a:nth-child(1) {
+				border: none
+			}
+			
+			.yy-bottom h2 {
+				font-size: 17px;
+				padding-left: 10px;
+				padding-top: 10px;
+				padding-bottom: 4px;
+			}
+			
+			.yy-bottom h3 {
+				padding-left: 10px;
+				font-size: 12px;
+				color: #9B9B9B;
+			}
+			
+			.yy-bottom a:nth-child(1) h2 {
+				color: #35a235;
+			}
+			
+			.yy-bottom a:nth-child(2) h2 {
+				color: #ff9805;
+			}
+			
+			.yy-bottom a:nth-child(3) h2 {
+				color: #07a9f4;
+			}
+			
+			.yy-time {
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				border-bottom: 1px solid #f2f6f9;
+			}
+			
+			.yy-time .yy-time-l,
+			.yy-time .yy-time-r {
+				display: block;
+				width: 20%;
+				float: left;
+			}
+			
+			.yy-time .yy-time-c {
+				height: 50px;
+				line-height: 50px;
+				font-size: 16px;
+				text-align: center;
+				width: 60%;
+				float: left;
+			}
+			
+			.morning {
+				color: rgb(255, 142, 53);
+			}
+			
+			.noon {
+				color: rgb(53, 162, 53);
+			}
+			
+			.night {
+				color: rgb(7, 169, 244);
+			}
+			
+			.bed {
+				color: rgb(59, 63, 59);
+			}
+			
+			.yy-time .yy-time-c img {
+				margin-right: 5px;
+				margin-bottom: -2px;
+			}
+			.con {
+				display: none;
+			}
+			
+			.active {
+				display: block;
+			}
+			.mui-content{position: relative;}
+			.mc-bottom{
+				height:100%;
+			}
+			.mcPup{
+				height:100%;
+				width:100%;
+				background:rgba(0,0,0,.3);
+				position:absolute;
+				top:0;
+			}
+			.mc-toolbar p span{
+				color:#fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content mcTime">
+			<div id="container"></div>
+		</div>
+		<div class="mui-content mc-bottom">
+			<div class="mui-content tab">
+				<div class="yy-time" id="time">
+					<a href="javascript:void(0)" class="yy-time-l" id="prev"><img src="../img/pharmacy_btn_angle_left@2x.png" width="8px" /></a>
+					<div id="ctime" class='yy-time-c '>
+						<p class="morning"><img src="../img/pharmacy_icon_morning@2x.png" alt="" width="20px" />早上</p>
+					</div>
+					<a href="javascript:void(0)" class="yy-time-r" id="next"><img src="../img/pharmacy_btn_angle_right@2x.png" width="8px" /></a>
+				</div>
+				<div class="mui-conten tab-con" id="con">
+					<div class="con con1 active" id="con1">
+						<div class="mui-input-row mui-checkbox">
+							<label>1药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>1药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>1药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+					<div class="con con2 " id="con2">
+						<div class="mui-input-row mui-checkbox">
+							<label>2药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>2药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>2药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+					<div class="con con3" id="con3">
+						<div class="mui-input-row mui-checkbox">
+							<label>3药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>3药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>3药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+					<div class="con con4 " id="con4">
+						<div class="mui-input-row mui-checkbox">
+							<label>4药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>4药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+						<div class="mui-input-row mui-checkbox">
+							<label>4药名</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-content yy-bottom border-t">
+				<a href="">
+					<h2>用药安全</h2>
+					<h3>用药安全有我保障</h3>
+					<img src="../img/pic_yongyaoanquan@2x.png" height="95" />
+				</a>
+				<a href="">
+					<h2>附近药店</h2>
+					<h3>快速寻找附近药店</h3>
+					<img src="../img/pic_fujingyaodian@2x.png" height="95" />
+				</a>
+				<a href="">
+					<h2>送药上门</h2>
+					<h3>足不出户送药直达</h3>
+					<img src="../img/pic_songyaoshangmen@2x.png" height="95" />
+				</a>
+			</div>
+			<div class="mcPup mui-action-back"></div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/mainMedication.js"></script>
+	<script src="../js/route.js"></script>
+	<script>
+			var test = function(){
+				var yesterday = mui.DateUtil.addDate(mui.DateUtil.getToday(),-1);
+				var MC = mui("#container").MCalendar({date:yesterday});
+				
+				mui("#btn-confirm").each(function(){
+					this.addEventListener('tap', function(){
+						mui("#show-time")[0].innerHTML = MC.getDate().toString();
+					})
+				})
+				mui("#btn-today").each(function(){
+					this.addEventListener('tap', function(){
+						MC.changeDate(new Date())
+					})
+				})
+	
+			};
+			
+			mui.plusReady(test)
+
+	</script>
+</html>

@@ -1,0 +1,237 @@
+var accountType = 0;
+var familyId = 0;
+var detailPage = null;
+var isFamilyType = 0;
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	accountType = self.accountType;
+	if (!accountType || typeof(accountType) == 'undefined' || accountType == "") {
+		accountType = 0;
+	}
+	familyId = self.familyId;
+	if (!familyId || typeof(familyId) == 'undefined' || familyId == "") {
+		familyId = 0;
+	}
+	isFamilyType = self.isFamilyType;
+	if (!isFamilyType || typeof(isFamilyType) == 'undefined' || isFamilyType == "") {
+		isFamilyType = 0;
+	}
+//	console.log(isFamilyType+" :medicationManage: "+familyId);
+	//初始化用药方案管理列表
+	medicationManage.initMedicationSchemeList();
+});
+var medicationManage = {
+	initMedicationSchemeList: function() {
+		var requestMedicationManage = '';
+		if (accountType == 1) {
+			requestMedicationManage = 'accountType=' + accountType + '&familyId=' + familyId;
+		} else {
+			requestMedicationManage = '';
+		}
+		document.getElementById('accountTypeEditor').value = accountType;
+		document.getElementById('familyIdEditor').value = familyId;
+		document.getElementById('isFamilyTypeEditor').value = isFamilyType;
+		document.getElementById('accountTypeAdd').value = accountType;
+		document.getElementById('familyIdAdd').value = familyId;
+		document.getElementById('isFamilyTypeAdd').value = isFamilyType;
+//		console.log("requestMedicationManage--->:"+requestMedicationManage);
+		jyapp.getApi({
+			method: 'Medication/MedicationSchemeList',
+			data: requestMedicationManage,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("initMedicationSchemeList---->:"+JSON.stringify(response));
+				var html = '';
+				var mslUlID = document.getElementById("medicationSchemeListUlID");
+				if (response.code == 1 && response.data != null && response.data != "") {
+					var dataValues = response.data;
+					for (var i = 0; i < dataValues.length; i++) {
+						if (dataValues[i].IsRemind == 1) {
+							html += '<li class="mui-table-view-cell on">';
+						} else {
+							html += '<li class="mui-table-view-cell">';
+						}
+						html += '	<a href="" class="mui-navigate-right" >';
+						html += '		' + unescape((dataValues[i].DrugName).replace(/\\/g, "%"));
+						var ruleName = '每日';
+						if(dataValues[i].Rule != 0){
+							ruleName = '隔日';
+						}
+						html += '		<span class="mui-badge mui-badge-inverted">'+ ruleName + dataValues[i].Count + '次，每次' + unescape((dataValues[i].Dosage).replace(/\\/g, "%")) + '</span>';
+						html += '		<input name="checkbox1" value="' + dataValues[i].ID + '" type="checkbox">';
+						html += '		<i></i>';
+						html += '	</a>';
+						html += '</li>';
+					}
+					mslUlID.innerHTML = html;
+				}
+			},
+			onerror: function(e) {
+				console.log("initMedicationSchemeList:" + e);
+			}
+		});
+	},
+	beforeback: function(accountType, familyId) {
+//		if(!commomUtil.closeWebviewById('mainMedication')){
+//			commomUtil.closeWebviewById('mainMedication');
+//		}
+//		var subpage_style = {
+//			top: '50px',
+//			bottom: '50px'
+//		};
+//		//预加载返回页面
+////		medicationManage.preloadMainMed(accountType,familyId);
+//		var mainPage = plus.webview.getLaunchWebview();
+//		var extras = {
+//			accountType: accountType,
+//			familyId: familyId
+//		};
+////		var sub = plus.webview.open("../mainMedication.html", "mainMedication", subpage_style);
+//		var sub = plus.webview.create("../mainMedication.html", "mainMedication", subpage_style,extras);
+//		mainPage.append(sub);
+//		mainPage.show();
+		var rebackRefreshPage = plus.webview.getWebviewById('mainMedication');
+		//触发详情页面的newsId事件
+		mui.fire(rebackRefreshPage, 'rebackRefresh', {
+			accountType: accountType,
+			familyId: familyId
+		});
+		var mainPage = plus.webview.getLaunchWebview();
+		mainPage.append(rebackRefreshPage);
+		mainPage.show();
+	},
+	rebackcell : function(){
+		if (isFamilyType == 1) {
+			commomUtil.closeWebviewById('meFamily');
+			mui.openWindow({
+				id: 'meFamily',
+				url: "../me/meFamily.html",
+				createNew: true
+			});
+		} else {
+			var html = "";
+			if (accountType == 0) {
+				html = "我";
+				//获得详情页面
+				if (!detailPage) {
+					detailPage = plus.webview.getLaunchWebview();
+				}
+				//触发详情页面的newsId事件
+				mui.fire(detailPage, 'switchFamily', {
+					html: html,
+					accountType: accountType,
+					familyId: familyId
+				});
+				medicationManage.beforeback(accountType, familyId);
+			} else {
+				accountType = 1;
+				var requestFamilyInformation = 'familyId=' + familyId;
+	//			alert(requestFamilyInformation);
+				jyapp.getApi({
+					method: 'Profile/FamilyInformation',
+					data: requestFamilyInformation,
+					timeout: 10000,
+					onsuccess: function(response) {
+	//					console.log("FamilyInformation--->:"+JSON.stringify(response))
+						if (response.code != 1) {
+							plus.nativeUI.alert(response.msg, '', '提示', '确认');
+							return false;
+						} else {
+							if (response.data != null) {
+								html = response.data.Name;
+								//获得详情页面
+								if (!detailPage) {
+									detailPage = plus.webview.getLaunchWebview();
+								}
+								//触发详情页面的newsId事件
+								mui.fire(detailPage, 'switchFamily', {
+									html: html,
+									accountType: accountType,
+									familyId: familyId
+								});
+								medicationManage.beforeback(accountType, familyId);
+							}
+						}
+					},
+					onerror: function(e) {
+						console.log("FamilyInformation:" + e);
+					}
+				});
+			}
+		}
+	},
+	preloadMainMed : function(accountType,familyId){
+		mui.preload({
+		    url: '../mainMedication.html',
+			id: 'mainMedication',//默认使用当前页面的url作为id
+		    styles:{
+		    	top: '50px',
+				bottom: '50px'
+		    },//窗口参数
+		    extras:{
+				accountType: accountType,
+				familyId: familyId
+		    }//自定义扩展参数
+		});
+	}
+}
+
+mui('#medicationSchemeListUlID').on('click', 'li', function() {
+	commomUtil.closeWebviewById('medicationPlanEdit');
+	var medPlanID = this.querySelectorAll('input')[0].value;
+	mui.openWindow({
+		id: 'medicationPlanEdit',
+		url: "medicationPlanEdit.html",
+		createNew: true,
+		extras: {
+			"medPlanID": medPlanID,
+			"accountType": accountType,
+			"familyId": familyId,
+			"isFamilyType": isFamilyType
+		}
+	});
+});
+
+//用药方案管理-添加用药
+document.getElementById('medManageAddMoreID').addEventListener('tap', function() {
+	plus.webview.close(plus.webview.getWebviewById("medicationPlan"));
+	var accountType = this.querySelectorAll('input')[0].value
+	var familyId = this.querySelectorAll('input')[1].value
+	var isFamilyType = this.querySelectorAll('input')[2].value
+	mui.openWindow({
+		id: 'medicationPlan',
+		url: "medicationPlan.html",
+		createNew: true,
+		extras: {
+			"accountType": accountType,
+			"familyId": familyId,
+			"isFamilyType": isFamilyType
+		}
+	});
+});
+//用药方案管理-编辑
+document.getElementById('editorMedicationSchameID').addEventListener('tap', function() {
+	plus.webview.close(plus.webview.getWebviewById("editorMedicationManage"));
+	var accountTypeEditor = this.querySelectorAll('input')[0].value;
+	var familyIdEditor = this.querySelectorAll('input')[1].value;
+	var isFamilyType = this.querySelectorAll('input')[2].value;
+	mui.openWindow({
+		id: 'editorMedicationManage',
+		url: "editorMedicationManage.html",
+		createNew: true,
+		extras: {
+			"accountType": accountTypeEditor,
+			"familyId": familyIdEditor,
+			"isFamilyType": isFamilyType
+		}
+	});
+});
+// 绑定返回到用药主页按钮事件
+document.getElementById('managementRebackMedIndexID').addEventListener('click', function() {
+	medicationManage.rebackcell();
+});
+
+/*mui.back = function(event){
+	medicationManage.rebackcell();
+}
+*/

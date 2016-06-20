@@ -1,0 +1,659 @@
+mui.init({
+	swipeBack: false
+});
+var index = 0;
+var htmls = {
+	1: '<p class="morning"><img src="../img/pharmacy_icon_morning@2x.png" alt="" width="20px" style="margin-bottom:-2px" />早上</p>',
+	2: '<p class="noon"><img src="../img/pharmacy_icon_nooning@2x.png" alt="" width="20px" style="margin-bottom:-4px" />中午</p>',
+	3: '<p class="pm"><img src="../img/pharmacy_icon_pm@2x.png" alt="" width="20px" style="margin-bottom:-4px" />下午</p>',
+	4: '<p class="night"><img src="../img/pharmacy_icon_night@2x.png" alt="" width="20px" style="margin-bottom:-4px" />晚上</p>',
+	5: '<p class="bed"><img src="../img/pharmacy_icon_sleep@2x.png" alt="" width="20px" style="margin-bottom:-4px" />凌晨</p>'
+};
+var requirements = {
+	0: '空腹服用',
+	1: '随餐服用',
+	2: '餐后服用',
+	3: '外用',
+	4: '吸入',
+	5: '不限',
+}
+var htmlInfos = new Object;
+var accountTypeMain = 0;
+var familyIdMain = 0;
+var datas = new Object;
+var chooseUseTimeValue = document.getElementById("chooseUseTimeID");
+
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	accountTypeMain = self.accountType;
+	if(!accountTypeMain || typeof(accountTypeMain) == 'undefined' || accountTypeMain == ""){
+		accountTypeMain = 0;
+	}
+	familyIdMain = self.familyId;
+	if(!familyIdMain || typeof(familyIdMain) == 'undefined' || familyIdMain == ""){
+		familyIdMain = 0;
+	}
+//	console.log(accountTypeMain+" :mainMedication: "+familyIdMain);
+	//初始化是否存在用药方案
+	mainMedication.initMedicationSchemeListMain(accountTypeMain,familyIdMain);
+});
+
+/*自定义返回刷新事件*/
+window.addEventListener('rebackRefresh',function(event){
+	accountTypeMain = event.detail.accountType;
+	if(!accountTypeMain || typeof(accountTypeMain) == 'undefined' || accountTypeMain == ""){
+		accountTypeMain = 0;
+	}
+	familyIdMain = event.detail.familyId;
+	if(!familyIdMain || typeof(familyIdMain) == 'undefined' || familyIdMain == ""){
+		familyIdMain = 0;
+	}
+//	console.log(accountTypeMain+" :rebackRefresh: "+familyIdMain);
+	//初始化是否存在用药方案
+	mainMedication.initMedicationSchemeListMain(accountTypeMain,familyIdMain);
+});
+
+var mainMedication = {
+	initMedicationSchemeListMain: function(accountTypeMain,familyIdMain) {
+		document.getElementById('cons').innerHTML = '';
+		var requestMedicationManageMain = '';
+		if (accountTypeMain == 1) {
+			requestMedicationManageMain = 'accountType=' + accountTypeMain + '&familyId=' + familyIdMain;
+		} else {
+			requestMedicationManageMain = '';
+		}
+//		console.log("requestMedicationManageMain--->:"+requestMedicationManageMain);
+		jyapp.getApi({
+			method: 'Medication/MedicationSchemeList',
+			data: requestMedicationManageMain,
+			timeout: 10000,
+	   		showWaiting : true,
+			onsuccess: function(response) {
+				document.getElementById('accountTypeMain').value = accountTypeMain;
+				document.getElementById('familyIdMain').value = familyIdMain;
+				document.getElementById('accountTypeToManage').value = accountTypeMain;
+				document.getElementById('familyIdToManage').value = familyIdMain;
+				document.getElementById('accountTypeMainPull').value = accountTypeMain;
+				document.getElementById('familyIdMainPull').value = familyIdMain;
+//				console.log("initMedicationSchemeListMain---->:"+JSON.stringify(response));
+				if (response.code == 1 && response.data != null && response.data != "") {
+					var dataValues = response.data;
+					if(dataValues.length > 0){
+						document.getElementById("circleCon").style.display = "block";
+						document.getElementById("con").style.display = "block";
+						document.getElementById("initConMainMedication").style.display = "none";
+						document.getElementById("con-none").style.display = "none";
+						//存在用药计划则---->初始化用药计划列表
+						mainMedication.initMedicationPlanListAll(accountTypeMain,familyIdMain);
+					}else{
+						document.getElementById("circleCon").style.display = "none";
+						document.getElementById("con").style.display = "none";
+						document.getElementById("initConMainMedication").style.display = "block";
+						document.getElementById("con-none").style.display = "block";
+						mainMedication.showAdaptiveTime();
+					}
+				}else{
+					document.getElementById("circleCon").style.display = "none";
+					document.getElementById("con").style.display = "none";
+					document.getElementById("initConMainMedication").style.display = "block";
+					document.getElementById("con-none").style.display = "block";
+					mainMedication.showAdaptiveTime();
+				}
+			},
+			onerror: function(e) {
+				document.getElementById("circleCon").style.display = "none";
+				document.getElementById("con").style.display = "none";
+				document.getElementById("initConMainMedication").style.display = "block";
+				document.getElementById("con-none").style.display = "block";
+				mainMedication.showAdaptiveTime();
+				console.log("initMedicationSchemeListMain:" + e);
+			}
+		});
+	},
+	initMedicationPlanListAll: function(accountTypeMain,familyIdMain) {
+		var chooseUseTime = chooseUseTimeValue.value;
+		var requestMedicationPlanListAll = '';
+		if (accountTypeMain == 1) {
+			requestMedicationPlanListAll = 'planDate=' + commomUtil.formatStringToDate(new Date().getTime(), 1) + '&accountType=' + accountTypeMain + '&familyId=' + familyIdMain;
+		} else {
+			requestMedicationPlanListAll = '';
+		}
+//		console.log("requestMedicationPlanListAll---->:" + requestMedicationPlanListAll);
+		jyapp.getApi({
+			method: 'Medication/MedicationPlanListAll',
+			data: requestMedicationPlanListAll,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log("MedicationPlanListAll---->:" + JSON.stringify(response));
+				response = JSON.parse(response);
+				htmlInfos = new Object;
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','提示','确认');
+					return false;
+				}else{
+					if (response.data != null && response.data.newList != null && response.data.newList.length > 0) {
+						var dataValues = response.data.newList;
+						datas = dataValues;
+						for (var i = 0; i < dataValues.length; i++) {
+							var html = '';
+							var strTime = dataValues[i].UseTime;
+							var endLen = strTime.length - 2;
+							var time = strTime.substring(6, endLen);
+							var UseTimeLen = commomUtil.formatStringToDate(time, 2);
+							var UseTime = UseTimeLen.substring(11, UseTimeLen.length - 3);
+							html += '	<div class="mui-input-row mui-checkbox" id="checkDivID' + index + '" checkItem="' + dataValues[i].ID + '">';
+							html += '		<label>';
+							html += '				<h3>' + dataValues[i].DrugName + '</h3>';
+							html += '				<time>' + UseTime + '<span>' + requirements[dataValues[i].Requirement] + '</span></time>';
+							html += '		</label>';
+							if (dataValues[i].IsUse == 1) {
+								html += '		<input type="hidden" id="useTypeCheckID' + [i + 1] + "" + index + '" value="' + dataValues[i].IsUse + '" />';
+								html += '		<input name="useTypeCheckBox" value="' + dataValues[i].ID + '" type="checkbox" checked onclick="mainMedication.checkMedicationUse(' + dataValues[i].ID + ',' + [i + 1] + "" + index + ');">';
+							} else {
+								html += '		<input type="hidden" id="useTypeCheckID' + [i + 1] + "" + index + '" value="' + dataValues[i].IsUse + '" />';
+								html += '		<input name="useTypeCheckBox" value="' + dataValues[i].ID + '" type="checkbox" onclick="mainMedication.checkMedicationUse(' + dataValues[i].ID + ',' + [i + 1] + "" + index + ');">';
+							}
+							html += '	</div>';
+							if (htmlInfos[dataValues[i].UseTimeType]) {
+								htmlInfos[dataValues[i].UseTimeType] += html;
+							} else {
+								htmlInfos[dataValues[i].UseTimeType] = html;
+							}
+						}
+						mainMedication.showAdaptiveTime();
+						mainMedication.initPieChart(response.data.usePercent);
+					} else {
+						mainMedication.showAdaptiveTime();
+						mainMedication.initPieChart(0);
+					}
+				}
+			},
+			onerror: function(e) {
+				mainMedication.showAdaptiveTime();
+				mainMedication.initPieChart(0);
+				console.log("initMedicationPlanListAll:" + e);
+			}
+		});
+	},
+	reloadMainMedication: function() {
+		htmlInfos = new Object;
+		for (var i = 0; i < datas.length; i++) {
+			var html = '';
+			var strTime = datas[i].UseTime;
+			var endLen = strTime.length - 2;
+			var time = strTime.substring(6, endLen);
+			var UseTimeLen = commomUtil.formatStringToDate(time, 2);
+			var UseTime = UseTimeLen.substring(11, UseTimeLen.length - 3);
+			html += '	<div class="mui-input-row mui-checkbox" id="checkDivID' + index + '" checkItem="' + datas[i].ID + '">';
+			html += '		<label>';
+			html += '				<h3>' + datas[i].DrugName + '</h3>';
+			html += '				<time>' + UseTime + '<span>' + requirements[datas[i].Requirement] + '</span></time>';
+			html += '		</label>';
+			if (datas[i].IsUse == 1) {
+				html += '		<input type="hidden" id="useTypeCheckID' + [i + 1] + "" + index + '" value="' + datas[i].IsUse + '" />';
+				html += '		<input name="useTypeCheckBox" value="' + datas[i].ID + '" type="checkbox" checked onclick="mainMedication.checkMedicationUse(' + datas[i].ID + ',' + [i + 1] + "" + index + ');">';
+			} else {
+				html += '		<input type="hidden" id="useTypeCheckID' + [i + 1] + "" + index + '" value="' + datas[i].IsUse + '" />';
+				html += '		<input name="useTypeCheckBox" value="' + datas[i].ID + '" type="checkbox" onclick="mainMedication.checkMedicationUse(' + datas[i].ID + ',' + [i + 1] + "" + index + ');">';
+			}
+			html += '	</div>';
+			if (htmlInfos[datas[i].UseTimeType]) {
+				htmlInfos[datas[i].UseTimeType] += html;
+			} else {
+				htmlInfos[datas[i].UseTimeType] = html;
+			}
+		}
+	},
+	checkMedicationUse: function(planId, useType) {
+		/*用药服用更新*/
+		var useTypeCheckID = document.getElementById("useTypeCheckID" + useType).value;
+		if (useTypeCheckID == 1) {
+			document.getElementById("useTypeCheckID" + useType).value = 0;
+			useType = 0;
+		} else {
+			document.getElementById("useTypeCheckID" + useType).value = 1;
+			useType = 1;
+		}
+		useFlag = planId;
+		for (var i = 0; i < datas.length; i++) {
+			if (planId == datas[i].ID) {
+				datas[i].IsUse = useType;
+			}
+		}
+		var requestMedicationUse = "planId=" + planId + "&useType=" + useType;
+		jyapp.getApi({
+			method: 'Medication/MedicationUse',
+			data: requestMedicationUse,
+			timeout: 10000,
+			onsuccess: function(response) {
+				if (response.code != 1) {
+					plus.nativeUI.alert(response.msg, "", "提示", "确认");
+					return false;
+				} else {
+					//获取刷新页面的百分比
+					mainMedication.initUsePercent();
+					//刷新页面缓存
+					mainMedication.reloadMainMedication();
+				}
+			},
+			onerror: function(e) {
+				console.log("checkMedicationUse:" + e);
+			}
+		});
+	},
+	initUsePercent: function() {
+		/*服用更新进度饼图*/
+		var requestMedicationPlanListAll = '';
+		if (accountTypeMain == 1) {
+			requestMedicationPlanListAll = 'planDate=' + commomUtil.formatStringToDate(new Date().getTime(), 1) + '&accountType=' + accountTypeMain + '&familyId=' + familyIdMain;
+		} else {
+			requestMedicationPlanListAll = '';
+		}
+		jyapp.getApi({
+			method: 'Medication/MedicationPlanListAll',
+			data: requestMedicationPlanListAll,
+			timeout: 10000,
+			onsuccess: function(response) {
+				if (response.code == 1 && response.data != null && response.data != "") {
+					//刷新页面饼图
+					mainMedication.initPieChart(response.data.usePercent);
+				} else {
+					plus.nativeUI.alert(response.msg, '', '提示', '确认');
+					return false;
+				}
+			},
+			onerror: function(e) {
+				console.log("initMedicationPlanListAll:" + e);
+				plus.nativeUI.alert('请下拉手动刷新页面！', '', '提示', '确认');
+				return false;
+			}
+		});
+	},
+	initPieChart: function(usePercent) {
+		/*初始化服用进度元饼图*/
+		document.getElementById("usePercentHID").innerHTML = usePercent + "%";
+		// 进度条圆饼图
+		jQuery('.yy-top .circle').each(function(familyDoctor, el) {
+			var num = usePercent;
+			num = parseInt(num) * 3.6;
+			if (num <= 180) {
+				jQuery(this).find('.right').css({
+					'-webkit-transform': "rotate(" + num + "deg)"
+				});
+				jQuery(this).find('.left').css({
+					'-webkit-transform': "rotate(0deg)"
+				});
+			} else {
+				jQuery(this).find('.right').css({
+					'-webkit-transform': "rotate(180deg)"
+				});
+				jQuery(this).find('.left').css({
+					'-webkit-transform': "rotate(" + (num - 180) + "deg)"
+				});
+			};
+		});
+
+	},
+	showAdaptiveTime: function() {
+		/*显示当前时间的分区*/
+		/*上午为6:00-11:00
+		 * 中午为11:00-13:00
+		 * 下午为13:00-19:00
+		 * 晚上为19:00-0:00
+		 * 凌晨为0:00-6:00*/
+		var date = new Date();
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var seconds = date.getSeconds();
+		var date10 = commomUtil.formatStringToDate(date.getTime(), 1);
+		var localDate = commomUtil.get_unix_time(date10 + " " + hours + ":" + minutes + ":" + seconds);
+		var am6 = commomUtil.get_unix_time(date10 + " 6:00:00");
+		var am11 = commomUtil.get_unix_time(date10 + " 10:59:59");
+		var af11 = commomUtil.get_unix_time(date10 + " 11:00:00");
+		var af13 = commomUtil.get_unix_time(date10 + " 12:59:59");
+		var pm13 = commomUtil.get_unix_time(date10 + " 13:00:00");
+		var pm19 = commomUtil.get_unix_time(date10 + " 18:59:59");
+		var ni19 = commomUtil.get_unix_time(date10 + " 19:00:00");
+		var ni0 = commomUtil.get_unix_time(date10 + " 23:59:59");
+		var wh0 = commomUtil.get_unix_time(date10 + " 0:00:00");
+		var wh6 = commomUtil.get_unix_time(date10 + " 5:59:59");
+		var ctime = document.getElementById('ctime');
+		if (localDate > am6 && localDate < am11) {
+			index = 1;
+		} else if (localDate > af11 && localDate < af13) {
+			index = 2;
+		} else if (localDate > pm13 && localDate < pm19) {
+			index = 3;
+		} else if (localDate > ni19 && localDate < ni0) {
+			index = 4;
+		} else {
+			index = 5;
+		}
+		ctime.innerHTML = htmls[index];
+//		document.getElementById('con-none').style.display = 'block';
+		var obj = document.getElementById('cons');
+		var zanwuhtmls = '';
+		if(!htmlInfos[index] || typeof(htmlInfos[index]) == 'undefined' || htmlInfos[index] == ""){
+			zanwuhtmls = "<p style='width: 100%;text-align: center;'><img src='../img/icon_zanwuyongyao.png' style='width:65px;margin:22px auto' /></p>";
+		}else{
+			zanwuhtmls = htmlInfos[index];
+		}
+		obj.innerHTML = zanwuhtmls;
+	}
+}
+
+//用药方案管理
+document.getElementById('manageMyMedPlanAID').addEventListener('tap',function(){
+	plus.webview.close(plus.webview.getWebviewById("medicationManage"));
+	var accountType = this.querySelectorAll('input')[0].value;
+	var familyId = this.querySelectorAll('input')[1].value;
+	mui.openWindow({
+		id: 'medicationManage',
+		url: "../html/medication/medicationManage.html",
+		createNew: true,
+		extras: {
+			"accountType": accountType,
+			"familyId": familyId,
+			"isFamilyType": 0
+		}
+	});
+})
+
+//用药首页-添加用药
+document.getElementById('initConMainMedication').addEventListener('tap',function() {
+	plus.webview.close(plus.webview.getWebviewById("medicationPlan"));
+	var accountType = this.querySelectorAll('input')[0].value;
+	var familyId = this.querySelectorAll('input')[1].value;
+//	console.log(accountType+" -用药首页-添加用药- "+familyId);
+	mui.openWindow({
+		id: 'medicationPlan',
+		url: "../html/medication/medicationPlan.html",
+		createNew: true,
+		extras: {
+			"accountType": accountType,
+			"familyId": familyId,
+			"isFamilyType": 0
+		}
+	});
+});
+
+//跳转到健康网点
+document.getElementById('jumpNearMedicationAID').addEventListener('tap', function() {
+	mui.openWindow({
+		id: 'indexHealthNetworkNearby',
+		url: "../html/healthNetwork/indexHealthNetwork.html",
+		extras: {
+			"mainMedication": 41
+		}
+	});
+	return false;
+});
+
+var odians = document.getElementById("con").querySelectorAll('div');
+(function($) {
+	var oPrev = document.getElementById('prev');
+	var oNext = document.getElementById('next');
+	var ctime = document.getElementById('ctime');
+
+	function tab(type) {
+		if (type == "next") {
+			if (index == 5) {
+				index = 1;
+			} else {
+				index++;
+			}
+		} else {
+			if (index == 1) {
+				index = 5;
+			} else {
+				index--;
+			}
+		}
+		var ctime = document.getElementById('ctime');
+		ctime.innerHTML = htmls[index];
+		setAttr(index);
+	}
+
+	function setAttr(num) {
+		var obj = document.getElementById('cons');
+		var zanwuhtmls = '';
+		if(!htmlInfos[index] || typeof(htmlInfos[index]) == 'undefined' || htmlInfos[index] == ""){
+			zanwuhtmls = "<p style='width: 100%;text-align: center;'><img src='../img/icon_zanwuyongyao.png' style='width:65px;margin:22px auto' /></p>";
+		}else{
+			zanwuhtmls = htmlInfos[index];
+		}
+		obj.innerHTML = zanwuhtmls;
+//		document.getElementById('con-none').style.display = 'block';
+		ctime.innerHTML = htmls[num];
+	}
+	oPrev.addEventListener('tap', function() {
+		var type = 'prev';
+		tab(type);
+	})
+	oNext.addEventListener('tap', function() {
+		var type = 'next';
+		tab(type);
+	})
+})
+
+(function($) {
+	$.hasClass = function(obj, cls) {
+		return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+	}
+
+	$.addClass = function(obj, cls) {
+		if (!$.hasClass(obj, cls)) obj.className += " " + cls;
+	}
+
+	$.removeClass = function(obj, cls) {
+		if ($.hasClass(obj, cls)) {
+			var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+			obj.className = obj.className.replace(reg, ' ');
+		}
+	}
+
+	$.DateUtil = {};
+	$.DateUtil.addDate = function(date, inc) {
+		var d = new Date(date);
+		d.setTime(date.getTime() + inc * 24 * 3600 * 1000);
+		return d;
+	}
+	$.DateUtil.getDateDiff = function(base, target) {
+		return (target.getTime() - base.getTime()) / (24 * 3600 * 1000);
+	}
+	$.DateUtil.getToday = function() {
+		var d = new Date();
+		d.setHours(0, 0, 0, 0);
+		return d;
+	}
+
+}(mui));
+
+//日历控件
+(function($) {
+
+	var MonthView = (function($) {
+		var MonthViewTemplate = '' +
+			'<div class="mc-toolbar">' +
+			'<button class="mui-btn" id="mc-btn-previous" type="button"></button>' +
+			'<button class="mui-btn" id="mc-btn-today" type="button">今</button>' +
+			'<button class="mui-btn" id="mc-btn-next" type="button"></button>' +
+			'<p><img class="mui-action-back" src="../img/pharmacy_btn_date@2x.png" width="20px"><span id="mc-date-label" class="mui-action-back">date</span></p>' +
+			'</div>' +
+			'<div><table class="mc-table">' +
+			'<tr class="mc-table-head mc-table-row">' +
+			'<th>周日</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th>' +
+			'</tr>' +
+			'</table></div>' +
+			'<div>' +
+			'<table id = "mc-table-body" class="mc-table"></table>' +
+			'</div>';
+
+		var CellViewTemplate = '<td class="mc-table-cell"><a>1</a></td>';
+		var cell_selected;
+		var date_selected;
+		var firstDateinMonthView;
+
+		var renderSkelekon = function(container) {
+			var  div  =  document.createElement("div");
+			div.className = "mc-container"
+			div.innerHTML  =  MonthViewTemplate;
+			container.appendChild(div);
+
+			var html = "";
+			for (var i = 0; i < options.row_len; i++) {
+				html += '<tr class="mc-table-row">';
+				for (var j = 0; j < 7; j++) {
+					html += CellViewTemplate;
+				}
+				html += '</tr>';
+			}
+			$("#mc-table-body")[0].innerHTML = html;
+
+			var i = 0;
+			$(".mc-table-cell").each(function() {
+				this.setAttribute("mc-cell-familyDoctor", i++);
+			});
+		};
+		var changeMonth = function(date) {
+			var firstDate = getFirstDateInMonth(date);
+			firstDateinMonthView = firstDate;
+			var i = 0
+			$(".mc-table-cell").each(function() {
+				var d = $.DateUtil.addDate(firstDate, i++);
+				this.firstChild.innerHTML = "" + d.getDate();
+				if (d.getMonth() != date.getMonth()) {
+					this.setAttribute("disabled", "disabled");
+				} else {
+					this.removeAttribute("disabled");
+				}
+				if (d.getTime() == date.getTime()) {
+					$.addClass(this, "mc-cell-selected");
+					cell_selected = this;
+					date_selected = d;
+				}
+
+				if (d.getTime() == $.DateUtil.getToday().getTime()) {
+					$.addClass(this, "mc-table-cell-today")
+				} else {
+					$.removeClass(this, "mc-table-cell-today")
+				}
+			});
+
+		};
+		var changeDate = function(date) {
+			date && date.setHours(0, 0, 0, 0)
+			if (cell_selected) {
+				$.removeClass(cell_selected, "mc-cell-selected");
+				if (date_selected.getFullYear() == date.getFullYear() && date_selected.getMonth() == date.getMonth()) {
+					var index = 1 * cell_selected.getAttribute("mc-cell-familyDoctor") + $.DateUtil.getDateDiff(date_selected, date);
+					cell_selected = $(".mc-table-cell")[index];
+					$.addClass(cell_selected, "mc-cell-selected");
+					date_selected = date;
+				} else {
+					changeMonth(date);
+				}
+			} else {
+				changeMonth(date);
+			}
+
+			$("#mc-date-label")[0].innerHTML = date_selected.getFullYear() + '年' + (date_selected.getMonth() + 1) + '月';
+
+		}
+
+		function getFirstDateInMonth(date) {
+			var d = new Date(date);
+			d.setDate(1)
+			var fd = $.DateUtil.addDate(d, (0 - d.getDay()));
+			return fd;
+		}
+
+		return {
+			date_selected: function() {
+				return date_selected
+			},
+			init: function(o, c) {
+				options = o
+				renderSkelekon(o.container);
+
+				this.changeDate(o.date || $.DateUtil.getToday());
+
+				$("#mc-table-body").on('tap', '.mc-table-cell', function() {
+					var idx = this.getAttribute("mc-cell-familyDoctor");
+					changeDate($.DateUtil.addDate(firstDateinMonthView, idx))
+
+				});
+				var swipeMonth = function(direction) {
+					var d = new Date(date_selected);
+					var m = d.getMonth() + direction;
+					if (m == 12) {
+						d.setMonth(0);
+						d.setFullYear(d.getFullYear() + 1);
+					} else if (m == -1) {
+						d.setMonth(11);
+						d.setFullYear(d.getFullYear() - 1);
+					} else {
+						d.setMonth(m);
+					}
+					changeDate(d);
+				}
+				o.container.addEventListener('swipeleft', function() {
+					swipeMonth(1);
+				})
+				o.container.addEventListener('swiperight', function() {
+					swipeMonth(-1);
+				})
+				$('.mc-toolbar').on('tap', '#mc-btn-previous', function() {
+					swipeMonth(-1);
+				})
+				$('.mc-toolbar').on('tap', '#mc-btn-next', function() {
+					swipeMonth(1);
+				})
+
+			},
+
+			changeDate: changeDate,
+		}
+	}($));
+
+	$.fn.MCalendar = function(option) {
+		var options = {
+			container: this[0],
+			row_len: 6,
+			date: undefined,
+		}
+
+		$.extend(options, option || {});
+		options.date && options.date.setHours(0, 0, 0, 0);
+
+		var mc = {
+			options: {},
+			getDate: function() {
+				return MonthView.date_selected();
+			},
+			init: function() {
+				var el;
+				this.options = options;
+				MonthView.init(options);
+
+			},
+
+			show: function() {
+				options.container.style.display = "initial";
+
+			},
+			hide: function() {
+				options.container.style.display = 'none';
+			},
+
+			changeDate: function(date) {
+				MonthView.changeDate(date)
+			},
+
+		};
+
+		mc.init();
+		return mc;
+	};
+
+}(mui));

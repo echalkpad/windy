@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+				border-top: 10px solid rgb(242, 246, 249)
+			}
+			
+			.mui-table-view-cell h2 {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell h2 span {
+				font-size: 14px;
+				color: #4A4A4A;
+				padding-left: 10px;
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view:after,
+			.mui-table-view:before,
+			.mui-table-view-cell:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell {
+				border-bottom: 10px solid rgb(242, 246, 249);
+			}
+			
+			.mui-media-body p {
+				padding-top: 5px;
+			}
+			
+			.mui-media-p {
+				padding-top: 10px;
+				padding-left: 75px;
+				border-top: 1px solid rgb(245, 245, 245);
+			}
+			@-webkit-keyframes topRun{
+				from{bottom:-41px;}
+				to{bottom:0;}
+			}
+			.mui-pull-bottom-tips{
+				text-align: center;
+				background-color: #efeff4;
+				font-size: 15px;
+				position:fixed;
+				line-height: 40px;
+				color: #777;
+				bottom:-41px;
+				width:100%;
+			}
+			.nomore{padding-bottom:41px;}
+			.nomore .mui-pull-bottom-tips{
+				-webkit-animation:topRun 1.5s ease-out;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">医生团队</h1>
+		</header>
+		<div class="mui-content" id="doctorTeamContent">
+			<ul class="mui-table-view" id="doctorTeamId">
+				
+			</ul>
+			<div class="mui-pull-bottom-tips">
+				<div class="mui-pull-bottom-wrapper">
+					<span class="mui-pull-loading" id="doctorTeamTips">上拉加载更多...</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/familyDoctor/doctorTeam.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

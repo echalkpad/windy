@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+				padding-top: 10px;
+			}
+			
+			.mui-table-view-cell h2 {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell p {
+				font-size: 13px;
+			}
+			
+			.mui-table-view-cell h2 span {
+				font-size: 14px;
+				color: #4A4A4A;
+				padding-left: 10px;
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view:after,
+			.mui-table-view:before,
+			.mui-table-view-cell:after {
+				height: 0;
+			}
+			
+			.mui-table-view-cell {
+				border-bottom: 10px solid rgb(242, 246, 249);
+			}
+			
+			.xingxing {
+				font-size: 18px;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				border-left: none;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				color: #000;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				color: #000;
+				background: none;
+				position: relative;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				content: '';
+				position: absolute;
+				width: 50%;
+				left: 25%;
+				right: 0;
+				border-bottom: 2px solid #00b6f3;
+				bottom: 0;
+			}
+			
+			.mui-segmented-control {
+				font-size: 12px;
+				border: none;
+				border-bottom:1px solid rgb(239, 233, 233)
+			}
+			.mui-control-content div{
+				/*padding: 20px 0;*/
+				margin: 0 0 0 15px;
+				height: auto;
+				overflow: hidden;
+			}
+			.mui-control-content div h2:nth-child(1){border:0;}
+			.mui-control-content div h2{
+				border-top:1px solid rgb(239, 233, 233);
+				line-height:40px;
+			}
+			.mui-control-content div:nth-child(2){
+				border:none
+			}
+			.mui-control-content h2{
+				color: #4A4A4A;
+				font-size: 14px;
+			}
+			.mui-control-content p{
+				color: rgb(176,176,176);
+				font-size: 13px;
+				padding: 0 10px 0 5px;
+				
+			}
+			.mui-control-content span{
+				float: right;
+				color: #ACACB4;
+				margin-right: 15px;
+			}
+			.consult{
+				padding:20px;
+				text-align: center;
+			}
+			.consult h3{
+				font-size:15px;
+				color:#00b6f3;
+				line-height:30px;
+			}
+			.consult a{
+				padding:0;
+				line-height: 40px;
+				color:#fff;
+				background:#00b6f3;
+				border-radius:8px;
+				font-size: 16px;
+				margin:0;
+				margin-top:10px;
+				font-family: "微软雅黑";
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:65%;
+				left:50%;
+				margin:0!important;
+				-webkit-transform: translateX(-50%);
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">医生详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="cancerExpertsDetailsId">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<input type="hidden" id="cancerExpertsDetailsInputId" value='0'/>
+						<img class="mui-media-object mui-pull-left" src="../../img/default/yisheng_touxiang.png" id="cancerExpertsDetailsImgId">
+						<div class="mui-media-body">
+							<h2 class="mui-ellipsis" id="cancerExpertsDetailsH2Id"></h2>
+							<p class="mui-ellipsis" id="cancerExpertsDetailsP1Id">接诊量： <span class="xingxing"></span></p>
+							<p class="mui-ellipsis" id="cancerExpertsDetailsP2Id"></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="consult">
+				<!--<h3 id="phoneH3Id">电话咨询：¥300/15分钟</h3>-->
+				<h3 id="phoneH3Id"></h3>
+				<a href="" class="mui-btn mui-btn-block" id="cancerOrder">预约咨询</a>
+			</div>
+			
+			<div id="segmentedControl" class="mui-segmented-control">
+				<a class="mui-control-item mui-active" href="#item1">
+					医生介绍
+				</a>
+				<a class="mui-control-item" href="#item2">
+					用户评价
+				</a>
+			</div>
+
+			<div id="item1" class="mui-control-content mui-active ">
+				<!--<div >
+					<h2>擅长</h2>
+					<p class="ellipsis">大家哦啊减肥的发觉地方啊风景啊大家哦啊减肥的发觉地方啊风景啊大家哦啊减肥的发觉地方啊风景啊大家哦啊减肥的发觉地方啊风景啊大家哦啊减肥的发觉地方啊风景啊</p>
+				</div>-->
+				<div>
+					<h2>职业经历</h2>
+					<p class="ellipsis" id="cancerExpertsDetailsIntroductionId"></p>
+				</div>
+			</div>
+			<div id="item2" class="mui-control-content ">
+				<div id="cancerExpertsDetailUserId">
+					<!--<h2>张**<span>12-11 10:12</span></h2>
+					<p class="ellipsis">大家哦啊剪短发放假撒放到几时发的范德萨减肥绝色赌妃啊舒服啊大是大非啊是</p>-->
+				</div>
+				<!--<div>
+					<h2>职业经历<span>12-11 10:12</span></h2>
+					<p class="ellipsis">大家哦啊剪短发放假撒放到几时发的范德萨减肥绝色赌妃啊舒服啊大是大非啊是</p>
+				</div>-->
+				<div class="order_none" id="cancerExpertsDetailszwddspjId" style="display: none;">
+					<i></i>暂无评论
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/cancerExperts/cancerExpertsDetails.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

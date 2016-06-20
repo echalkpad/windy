@@ -1,0 +1,7 @@
+//食物类
+mui('#foodLibUl').on('tap','li',function(){
+	mui.openWindow({
+		id:'foodLibList',
+		url:'foodLibList.html',
+	})
+})

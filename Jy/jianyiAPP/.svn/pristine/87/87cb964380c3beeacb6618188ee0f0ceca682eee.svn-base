@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #00b6f3;
+			}
+			
+			.mui-bar {
+				background-color: #f9f9f9;
+				box-shadow: none;
+			}
+			
+			.mui-bar-tab .mui-tab-item {
+				height: 49px;
+				color: #b3bec4;
+			}
+			
+			.btn-pay {
+				height: 50px;
+				line-height: 50px;
+				vertical-align: middle;
+				padding-left: 10px;
+			}
+			
+			.btn-msg,
+			.btn-add {
+				position: relative;
+				float: right;
+				line-height: 44px;
+			}
+			
+			.btn-add {
+				display: none;
+			}
+			
+			.btn-msg-more:after {
+				content: '';
+				position: absolute;
+				top: 12px;
+				right: 6px;
+				border: 5px solid #f00;
+				border-radius: 50%;
+			}
+			
+			.btn-date img {
+				margin-bottom: -3px;
+				margin-right: 10px;
+			}
+			
+			.mui-action-back {
+				color: #fff;
+			}
+			
+			#showyygh {
+				display: none;
+			}
+			
+			.mui-bar-tab {
+				border-top: 1px solid rgba(000,000,000,.05);
+			}
+			#btn-swich{
+				width:35%;
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space:normal;
+				text-align:right;
+				position:relative;
+				padding-right:18px;
+				color:#fff;
+			}
+			#btn-swich img{
+				position: absolute;
+				right:0;
+				top:50%;
+				margin-top:-6px;
+			}
+			
+			.mui-backdrop {
+			    position: fixed;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    z-index: 998;
+			    background: url(../img/guide/guidePage1.png) no-repeat scroll center center;
+				-webkit-background-size: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #00B6F3;height: 50px;line-height: 50px;">
+			<a href="" class="btn-pay" id="btn-pay"><img src="../img/btn_pay@2x.png" width="20px" /></a>
+			<h1 id="title" class="mui-title" style="color: #fff;">首页</h1>
+			<a href="" class="btn-msg" id="btn-msg"><img src="../img/btn_xiaoxi@2x.png" width="20px" /></a>
+			<a href="" class="btn-add" id="btn-add"><img src="../img/pharmacy_btn_add@2x.png" width="20px" /></a>
+			<a href="" class="btn-add" id="btn-swich">我<img src="../img/me/btn_qiehuan.png" width="14px" style='margin-left:5px'/>
+				<input type="hidden" value="0" id="accountTypeSwitchReback" />
+				<input type="hidden" value="0" id="familyIdSwitchReback" />
+			</a>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="mainIndex.html">
+				<span class="mui-icon iconfont icon-tabhomepre"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="mainInterrogation.html">
+				<span class="mui-icon iconfont icon-tabinquirypre"></span>
+				<span class="mui-tab-label">寻医</span>
+			</a>
+			<a id="defaultTab" class="mui-tab-item" href="mainMedication.html">
+				<span class="mui-icon iconfont icon-tabpharmacy"></span>
+				<span class="mui-tab-label">用药</span>
+			</a>
+			<a class="mui-tab-item" href="mainHealthy.html">
+				<span class="mui-icon iconfont icon-tabhealth"></span>
+				<span class="mui-tab-label">健康</span>
+			</a>
+			<a class="mui-tab-item" href="mainMe.html">
+				<span class="mui-icon iconfont icon-tabmy"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/route.js"></script>
+		<script src="../js/core/config.js"></script>
+		<script src="../js/core/common.js"></script>
+		<script src="../js/util/common_util.js"></script>
+		<script src="../js/core/update.js"></script>
+	</body>
+
+</html>

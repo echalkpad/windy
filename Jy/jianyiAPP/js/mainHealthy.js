@@ -1,0 +1,166 @@
+
+document.addEventListener('plusready', function() {
+//	mui.init();
+	//初始化页面数据
+	mainHealthy.initMainHealthy();
+	var ws=plus.webview.currentWebview();
+	ws.setPullToRefresh({support:true,
+		height:"50px",
+		range:"200px",
+		contentdown:{
+			caption:"下拉可以刷新"
+		},
+		contentover:{
+			caption:"释放立即刷新"
+		},
+		contentrefresh:{
+			caption:"正在刷新..."
+		}
+	},mainHealthy.onRefresh);
+//	plus.nativeUI.toast("下拉可以刷新");
+
+});
+var mainHealthy = {
+	initMainHealthy: function() {
+		jyapp.getApi({
+			method: 'HealthMeasure/HealthStatus',
+			timeout: 10000,
+			onsuccess: function(data) {
+//				console.log(JSON.stringify(data));
+				var dataValue = data.data;
+				document.getElementById("mainHealthyssH2Id").innerHTML = dataValue.diastolicPressure;
+				document.getElementById("mainHealthyszH2Id").innerHTML = dataValue.systolicPressure;
+				document.getElementById("mainHealthyxtH2Id").innerHTML = dataValue.bloodSugarValue;
+				document.getElementById("mainHealthyjbH2Id").innerHTML = "0";
+			},
+			onerror: function(e) {
+	 				console.log("initMainHealthy---->:"+e);
+//	 				plus.nativeUI.alert(e,'','健医宝','确认');
+			}
+		});
+	},
+	onRefresh : function(){
+		setTimeout(function(){
+			var ws=plus.webview.currentWebview();
+			mainHealthy.initMainHealthy();
+			ws.endPullToRefresh();
+		},2000);
+	}
+};
+
+//健康测量
+document.getElementById("mainHealthyclId").addEventListener("tap",function(){
+	plus.webview.close(plus.webview.getWebviewById("healthSelfTesting"));
+	mui.openWindow({
+		id: 'healthSelfTesting',
+		url: "../html/healthy/healthSelfTesting.html",
+		createNew : true
+	});
+	
+});
+
+function HealthAssessmentAndroid(){
+	//获取主Activity对象的实例
+	var main = plus.android.runtimeMainActivity();	
+	//导入MMHealthEvaluate
+	var MMHealthEvaluate = plus.android.importClass("cn.funtalk.miao.sdk.healthevaluate.MMHealthEvaluate");
+	
+	var imp = plus.android.implements("cn.funtalk.miao.sdk.healthevaluate.IMMHealthEvaluate",{
+		"onResult":function(i,s){
+		}
+	});	
+	var loginimp = plus.android.implements("cn.funtalk.miao.sdk.healthevaluate.IMMHealthEvaluate",{
+		"onResult":function(i,s){
+			if(i==2){
+				//跳转
+				MMHealthEvaluate.getInstance().jumpEvaluate(main,jumpimp);
+			}
+		}
+	});	
+	var jumpimp = plus.android.implements("cn.funtalk.miao.sdk.healthevaluate.IMMHealthEvaluate",{
+		"onResult":function(i,s){
+		   if(i==5){			   
+			   jyapp.getApi({
+					method: 'MiaoJk/SetMiaoJkAccount',
+					data: '',
+					showWaiting:true,
+					onsuccess: function(r) {
+						if (r.data) {
+							//初始化
+							MMHealthEvaluate.getInstance().init(main,"6","9cb3920352f41ffe38dc2f9178a73c7e", imp);
+							//登录
+							MMHealthEvaluate.getInstance().login(r.data+"",loginimp);	
+						}
+					},
+					onerror: function(e) {
+						console.log(e);
+					}
+				});			
+		   }					   
+		}
+	});
+	//跳转
+	MMHealthEvaluate.getInstance().jumpEvaluate(main,jumpimp);
+}
+
+function HealthAssessmentIOS(){
+		jyapp.getApi({
+		method: 'MiaoJk/SetMiaoJkAccount',
+		data: '',
+		showWaiting:true,
+		onsuccess: function(r) {
+//			console.log(JSON.stringify(r));
+			if (r.data) {
+				var notiClass = plus.ios.importClass("NSNotificationCenter");
+				notiClass.defaultCenter().postNotificationNameobject("kMiaoMoreLoginNotification", ""+r.data);
+				setTimeout(function(){
+					notiClass.defaultCenter().postNotificationNameobject("kPushToNativeVCKey", null);
+				},0);
+			}
+		},
+		onerror: function(e) {
+			console.log(e);
+		}
+	});
+}
+
+//健康评估
+document.getElementById("HealthAssessment").addEventListener('tap', function() {
+    switch (plus.os.name) {
+        case "Android":
+        	HealthAssessmentAndroid();
+        break;
+        case "iOS":   
+        	HealthAssessmentIOS();
+        break;
+        default:
+        break;
+    }  
+});
+
+
+//2016/5/31 71:36 明星东
+//饮食健康
+mui('.mui-content').on('tap','#DietNutrition',function(){
+	mui.openWindow({
+		id:'',
+		url:'healthy/dietNutrition/dietNutrition.html',
+	})
+})
+
+window.addEventListener("newIdsMainHealthy",function(event){
+	//初始化页面数据
+	mainHealthy.initMainHealthy();
+});
+
+//绑定跳转到健康网点页面
+document.getElementById('mainHealthNetwork').addEventListener('click',function(){
+	mui.openWindow({
+		id: 'healthNetworkMain',
+		url: "../html/healthNetwork/healthNetworkMain.html",
+		extras: {
+			"backid": "mainHealthy",
+			"backurl":"../mainHealthy.html"
+		}
+	});
+});

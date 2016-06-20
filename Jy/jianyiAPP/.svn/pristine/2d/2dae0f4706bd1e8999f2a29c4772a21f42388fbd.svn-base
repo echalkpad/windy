@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: #f2f6f9!important;
+			}
+			
+			.notes {
+				color: #9B9B9B;
+				float: right;
+				padding-right: 25px;
+			}
+			
+			textarea {
+				text-align: left;
+				height: 100px;
+				border: none;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				color: #9B9B9B;
+				font-size: 13px;
+				border-top: 10px solid #f2f6f9!important;
+				margin-bottom: 20px;
+			}
+			
+			.textarea {
+				color: #9B9B9B;
+				font-size: 13px;
+				position: relative;
+				top: -20px;
+				right: 10px;
+				text-align: right;
+			}
+			
+			.upload {
+				position: relative;
+				border-top: 1px solid #CCCCCC;
+				padding-bottom: 30px;
+				padding-left: 15px;
+				padding-top: 10px;
+				overflow: hidden;
+			}
+			
+			.upload div {}
+			
+			.upload div span {
+				position: absolute;
+				right: 10px;
+				color: #8f8f94;
+				font-size: 13px;
+				bottom:5px;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.callDoctor-p {
+				background: #f2f6f9!important;
+				border: 10px solid #f2f6f9!important;
+				margin-bottom: 0;
+			}
+			
+			.medicationSave {
+				border: 20px solid #f2f6f9;
+				padding: 0;
+			}
+			
+			.medicationSave a {
+				margin-bottom: 0;
+			}
+			
+			.button-select {
+				float: left;
+				display: block;
+				background: rgb(174, 174, 174);
+				width: 50px;
+				height: 50px;
+			}
+			.button-select i{
+				display:block;
+				width:30px;
+				height:30px;
+				margin:10px auto;
+				background: url(../../img/btn_yongyao_add.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			
+			.upload .img-div {
+				width: 50px;
+				height: 50px;
+				position: relative;
+				float: left;
+				margin: 0 0px 0 10px;
+			}
+			
+			.upload img {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.upload .img-div a:after {
+				font-size: 50px;
+				text-align: center;
+				content: '-';
+				position: absolute;
+				display: block;
+				width: 20px;
+				height: 20px;
+				line-height: 15px;
+				background: #f00;
+				border-radius: 50%;
+				color: #fff;
+				top: -5px;
+				right: -5px;
+			}
+			.mui-title {
+				right: 15px!important;
+			}
+			.mui-title a{
+				float: right;
+				font-size: 14px;
+				line-height: 3.5;
+			}
+			.mui-content input[type=number]{
+				border:none;
+				outline: none;
+				text-align: right;
+				width:55%;
+				float: right;
+				margin:0;
+				height:auto;
+				padding:0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="callDoctorBackCellId"></a>
+			<h1 class="mui-title">呼叫医生<a href="">咨询记录</a></h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right jkda" id="chooseClass_click">请选择科室<span class="redstars"></span>
+						<span class="notes"></span>
+						<input type="hidden" id="chooseClassId" />
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="wdjr">联系电话<span class="redstars"></span><input type="number" class="notes mui-input-clear" placeholder="请输入手机号码" id="phoneId"/></a>
+				</li>
+			</ul>
+			<textarea name="" rows="" cols="" id="textarea" oninput="getnum (event)" maxlength="201" placeholder="请填写性别，年龄，症状,最少10字，最多200字"></textarea>
+			<div class="textarea"><span id="textarea-num">0</span>/200</div>
+			<div class="upload">
+				<p>上传图片,检验单等   (最多添加四张)</p>
+				<div id="upload">
+					<a class="button button-select" onclick="galleryImgs()"><i></i></a><span></span>
+				</div>
+			</div>
+			<p class="callDoctor-p">
+				医生咨询服务仅为建议，具体诊疗请到医院就诊
+			</p>
+			<div class="medicationSave">
+				<a href="" class="mui-btn mui-btn-primary mui-btn-block" id="healthy-cod" onclick="onClickhealthyCod()">呼叫医生</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/familyDoctor/callDoctor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

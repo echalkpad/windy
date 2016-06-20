@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.diet-top{
+				height:140px;
+				width:100%;
+				background:#00b6f3;
+				color:#fff;
+				text-align: center;
+				padding:20px 0;
+			}
+			.diet-top h2{
+				font-size:16px;
+				line-height:30px;
+			}
+			.diet-top strong{
+				font-weight:normal;
+				color:#EFE523;
+				font-size:24px;
+				margin:0 4px;
+				font-family: Arail;
+			}
+			.diet-top a{
+				color:#fff;
+				display:block;
+				width:100px;
+				background:rgba(255,255,255,.5);
+				border-radius:20px;
+				padding:5px 0;
+				margin:20px auto;
+			}
+			.diet-top i{
+				display:inline-block;
+				margin-left:6px;
+				width:7px;
+				height:12px;
+				background: url(../../../img/btn_next.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			h3{font-size:15px;}
+			.mui-table-view{
+				margin-top:15px;
+			}
+			li{
+				overflow:hidden;
+				padding:6px 0;
+			}
+			.menuList a{
+				display:block;
+				width:25%;
+				float:left;
+				text-align: center;
+				line-height:20px;
+				border-right:1px solid #F1F1F1;
+				margin:5px 0;
+				color:#666;
+				font-size:14px;
+			}
+			.menuList a:nth-child(4),.menuList a:nth-child(8){
+				border:0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id=""></a>
+			<h1 class="mui-title">饮食营养</h1>
+		</header>
+		<div class="mui-content">
+			<div class="diet-top">
+				<h2>今日应摄入热量:<strong>1652</strong>签卡</h2>
+				<a href="">食物库<i></i></a>
+			</div>
+			<div class="diet-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>养生保健</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">养心</a>
+						<a href="">养肝</a>
+						<a href="">宜肺</a>
+						<a href="">健脾胃</a>
+						<a href="">美容</a>
+						<a href="">减肥</a>
+						<a href="">术后</a>
+						<a href="">补血</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>呼吸系统</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">发烧</a>
+						<a href="">感冒</a>
+						<a href="">志气管炎</a>
+						<a href="">咳嗽</a>
+						<a href="">肺炎</a>
+						<a href="">哮喘</a>
+						<a href="">咳血</a>
+						<a href="">肺结核</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>消化系统</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">慢性胃炎</a>
+						<a href="">腹泻</a>
+						<a href="">消化不良</a>
+						<a href="">腹胀</a>
+						<a href="">呕吐</a>
+						<a href="">便秘</a>
+						<a href="">食欲不良</a>
+						<a href="">脂肪肝</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>循环系统</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">盗汗</a>
+						<a href="">水肿</a>
+						<a href="">心血管病</a>
+						<a href="">高血压</a>
+						<a href="">糖尿病</a>
+						<a href="">冠心病</a>
+						<a href="">高血脂</a>
+						<a href="">脱发</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>女性</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">孕妇</a>
+						<a href="">产妇</a>
+						<a href="">乳腺增生</a>
+						<a href="">月经不调</a>
+						<a href="">乳腺增生</a>
+						<a href="">痛经</a>
+						<a href="">不孕</a>
+						<a href="">更年期</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>婴幼儿</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">小儿咳嗽</a>
+						<a href="">百日咳</a>
+						<a href="">小儿感冒发烧</a>
+						<a href="">小儿呕吐</a>
+						<a href="">小儿腹泻</a>
+						<a href="">小儿消化不良</a>
+						<a href="">小儿遗尿</a>
+						<a href="">小儿夜啼</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right"><h3>生殖泌尿</h3></a>
+					</li>
+					<li class="menuList">
+						<a href="">慢性肾炎</a>
+						<a href="">小便不利</a>
+						<a href="">尿频</a>
+						<a href="">阳痿</a>
+						<a href="">早泄</a>
+						<a href="">痢疾</a>
+						<a href="">尿血</a>
+						<a href="">大便出血</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/dietNutrition/dietNutrition.js" type="text/javascript" charset="utf-8"></script>
+</html>

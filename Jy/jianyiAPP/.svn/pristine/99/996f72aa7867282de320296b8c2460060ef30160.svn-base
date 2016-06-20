@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content p {
+				margin: 0;
+			}
+			
+			.geneticTesting {
+				position: relative;
+				margin-top: 0;
+				height: 222px;
+				padding-bottom: 60px;
+			}
+			
+			.geneticTesting h2 {
+				color: rgba(255,255,255,.8);
+				font-size: 17px;
+				position: absolute;
+				bottom: 60px;
+				margin-left: 15px;
+			}
+			
+			.geneticTesting p {
+				position: absolute;
+				color: rgba(255,255,255,.8);
+				font-size: 16;
+				bottom: 15px;
+				margin-left: 15px;
+			}
+			
+			.geneticTesting1 {
+				background: url(../../img/healthy/jyjc-zl.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.geneticTesting2 {
+				background: url(../../img/healthy/jyjc-xnxg.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.geneticTesting3 {
+				background: url(../../img/healthy/jyjc-jj.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.geneticTesting4 {
+				background: url(../../img/healthy/Jjyy-jk.png) no-repeat center center;
+				background-size: cover;
+			}
+			
+			.geneticTesting_b {
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			.geneticTesting_b .geneticTesting_b_p {
+				box-sizing: border-box;
+				padding-left: 15px;
+				width: 50%;
+				float: left;
+			}
+			
+			.geneticTesting_b span {
+				padding-left: 5px;
+			}
+			
+			.geneticTesting_b .sp1 {
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+			
+			.geneticTesting_b .sp2 {
+				font-size: 17px;
+				color: #f00;
+			}
+			
+			.geneticTesting_b .sp3 {
+				text-decoration: line-through;
+				font-size: 15px;
+				color: #9B9B9B;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基因检测</h1>
+		</header>
+		<div class="mui-content">
+			<div class="geneticTesting geneticTesting1">
+				<h2>肿瘤全套基因检测</h2>
+			</div>
+			<div class="geneticTesting_b">
+				<div class="geneticTesting_b_p">
+					<span class="sp1">市场价：</span><span class="sp2">￥6800元</span><span style="float: right;color: #9B9B9B;">|</span>
+				</div>
+				<div class="geneticTesting_b_p">
+					<span class="sp1">健e价：</span><span class="sp2">￥3160元</span>
+				</div>
+			</div>
+			<div class="geneticTesting geneticTesting2">
+				<h2>心脑血管基因检测</h2>
+			</div>
+			<div class="geneticTesting_b">
+				<div class="geneticTesting_b_p">
+					<span class="sp1">市场价：</span><span class="sp2">￥4900元</span><span style="float: right;color: #9B9B9B;">|</span>
+				</div>
+				<div class="geneticTesting_b_p">
+					<span class="sp1">健e价：</span><span class="sp2">￥3160元</span>
+				</div>
+			</div>
+			<div class="geneticTesting geneticTesting3">
+				<h2>烟酒茶（咖啡）损伤及成瘾套餐</h2>
+			</div>
+			<div class="geneticTesting_b">
+				<div class="geneticTesting_b_p">
+					<span class="sp1">市场价：</span><span class="sp2">￥600元</span><span style="float: right;color: #9B9B9B;">|</span>
+				</div>
+				<div class="geneticTesting_b_p">
+					<span class="sp1">健e价：</span><span class="sp2">￥303元</span>
+				</div>
+			</div>
+			<div class="geneticTesting geneticTesting4">
+				<h2>健康尊享套餐（150项）</h2>
+			</div>
+			<div class="geneticTesting_b">
+				<div class="geneticTesting_b_p">
+					<span class="sp1">市场价：</span><span class="sp2">￥27160元</span><span style="float: right;color: #9B9B9B;">|</span>
+				</div>
+				<div class="geneticTesting_b_p">
+					<span class="sp1">健e价：</span><span class="sp2">￥4000元</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+	<script type="text/javascript">
+		mui('.mui-content').on('tap', '.geneticTesting', function() {
+			var type = this.className;
+			mui.openWindow({
+				id: 'geneticTestingDetail',
+				url: "geneticTestingDetail.html",
+				extras: {
+					type: type,
+				}
+			})
+		})
+	</script>
+
+</html>

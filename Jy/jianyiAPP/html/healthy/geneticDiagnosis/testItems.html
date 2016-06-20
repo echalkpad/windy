@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view{
+				font-size:14px;
+				color:#4A4A4A;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin:0;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after{
+				background:#F1F1F1;
+			}
+			.mui-table-view-cell div {
+				display: none;
+				padding: 15px 0;
+				font-size:13px;
+				color:#4b4b4b;
+			}
+			
+			.mui-icon-arrowdown {
+				font-family: inherit;
+				line-height: inherit;
+				-webkit-font-smoothing: auto;
+				color: #4A4A4A!important;
+				font-size: 14px;
+			}
+			
+			.mui-icon-arrowdown:before {
+				font-family: Muiicons;
+				float: right;
+				color: #bbb;
+				font-size: x-large;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">检测项目</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="testItemsId">
+				<!--<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">高甘油三脂血症</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">脑动脉瘤</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">高血压</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">外周动脉病变</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">冠状动脉硬化性心脏病</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">心房颤动</a>
+					<div class="">
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">静脉血栓栓塞</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">心机梗死</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">中风</a>
+					<div>
+						千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩千万我去额千万额去玩
+					</div>
+				</li>-->
+			</ul>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script type="text/javascript">
+		mui(".mui-content").on('tap', 'li', function() {
+			var odiv = this.querySelector("div");
+			var oa = this.querySelector("a");
+			odiv.style.display == 'none' || odiv.style.display == '' ? odiv.style.display = 'block' : odiv.style.display = 'none';
+			oa.classList != 'mui-navigate-right mui-active' ? oa.setAttribute('class', 'mui-navigate-right mui-active') : oa.setAttribute('class', 'mui-icon mui-icon-arrowdown');
+		})
+		document.addEventListener("plusready",function(){
+			var self = plus.webview.currentWebview();
+			var items = self.items;
+			if(items && items.length > 0){
+				var html = "";
+				for(var i=0;i<items.length;i++){
+					var item = items[i];
+					var Description = item.Description ? item.Description : "--";
+					html += "<li class=\"mui-table-view-cell\">";
+					html += "<a class=\"mui-navigate-right\">"+item.ProductName+"</a>";
+					html += "<div>"+Description+"</div>";
+					html += "</li>";
+				}
+				document.getElementById("testItemsId").innerHTML = html;
+			}
+		});
+	</script>
+</html>

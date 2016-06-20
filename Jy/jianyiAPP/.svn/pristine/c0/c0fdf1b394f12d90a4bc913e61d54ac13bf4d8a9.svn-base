@@ -1,0 +1,53 @@
+var backid = "";
+var backurl = "";
+
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	var orderId = self.orderId;
+	var status = self.status;
+	backid = self.backid;
+	backurl = self.backurl;
+	//初始化订单详情页面数据
+	cancerConfirmed.initCancerConfirmed(orderId,status);
+});
+
+var cancerConfirmed = {
+	initCancerConfirmed : function(orderId,status){
+		jyapp.getApi({
+ 			method: 'Tumour/OrderDetails',
+ 			data:'orderId='+orderId,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+// 				console.log(JSON.stringify(data));
+				document.getElementById("cancerConfirmedStrongid").innerHTML = status;
+				document.getElementById("cancerConfirmedSpanNameId").innerHTML = data.data.doctorName;
+				document.getElementById("cancerConfirmedSpansyNameId").innerHTML = data.data.diseaseName;
+				document.getElementById("cancerConfirmedPhoneId").innerHTML = data.data.Phone;
+				document.getElementById("cancerConfirmedTypeId").innerHTML = "电话咨询(15分钟)";
+				document.getElementById("cancerConfirmedMonery").innerHTML = data.data.TotalFee;
+ 			},
+ 			onerror: function(e) {
+ 				console.log("e-------->:"+e);
+ 			}
+ 		});
+	},
+	canccerConfirmedBack : function(e){
+		var config = {
+			id : "cancerOrderList",
+			url: "cancerOrderList.html",
+			method : "newIdsCancerOrderList",
+			extras : {
+				backurl: backurl,
+				backid : backid,
+				index : status == '待确认' ? 0 : 2
+			}
+		}
+		jyapp.backWebView(config);
+	}
+};
+//绑定回退按钮事件
+document.getElementById("canccerConfirmedBackId").addEventListener("tap",cancerConfirmed.canccerConfirmedBack);
+//mui.back = function(e){
+//	cancerConfirmed.canccerConfirmedBack();
+//};
+

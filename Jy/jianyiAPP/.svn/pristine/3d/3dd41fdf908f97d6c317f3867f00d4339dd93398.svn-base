@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../../css/mui.picker.min.css" />
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-table-view{
+				overflow: hidden;
+			}
+			.mui-table-view h2{
+				font-size:14px;
+				float:left;
+				width:50px;
+				line-height:21px;
+				color:#777;
+			}
+			.lettersapcing2 h2{
+				letter-spacing:4px;
+			}
+			.btn{
+				padding:5px 15px;
+				background:#fff;
+			}
+			.btn .mui-btn{
+				font-size:16px;
+				color:rgba(255,255,255,.8);
+				background:#00b6f3;
+				border:0;
+				padding:0;
+				line-height:40px;
+				margin:0;
+			}
+			.border-b{border:0;}
+
+			.border-b li {
+				color: #9B9B9B;
+			}
+			.mui-table-view-cell input{
+				width:auto;
+				max-width:70%;
+				float:right;
+				margin:0;
+				height:21px;
+				border:0;
+				color:#666;
+				font-size: 14px;
+				text-align: right;
+			}
+			h3{
+				padding:0 15px;
+				font-size:14px;
+				height:40px;
+				line-height:45px;
+				color:#666;
+			}
+			ol{
+				list-style:none;
+				padding:5px 15px;
+				margin:0;
+				background:#fff;
+				overflow:hidden;
+				margin-bottom:10px;
+			}
+			ol li{
+				width:33.33%;
+				float:left;
+				font-size:13px;
+				text-align: center;
+				padding:5px;
+			}
+			ol span{
+				display:block;
+				width:100%;
+				border:1px solid #F1F1F1;
+				border-radius:3px;
+				line-height:30px;
+				color:#666;
+			}
+			.haveAddress{
+				position: relative;
+				padding:18px;
+			}
+			.mui-table-view-cell.haveAddress>a{
+				margin:-18px;
+			}
+			.shippingAddress section{display:none;}
+			.haveAddress article{display:none;}
+			.haveAddress section{display: block;}
+			.haveAddress h2{
+				float:none;
+				width:100%;
+				line-height:30px;
+				font-size: 14px;
+			}
+			.shippingAddress span{
+				margin-right:10px;
+			}
+			.shippingAddress strong{
+				font-weight:normal;
+			}
+			.shippingAddress p{
+				font-size: 13px;
+				text-overflow:ellipsis;
+				overflow:hidden;
+				white-space:nowrap;
+				padding-right:30px;
+				padding-left:20px;
+				background: url(../../../img/familyDoctor/icon_address.png) no-repeat scroll 5px center;
+				background-size:10px 14px;
+			}
+			.shippingAddress em{
+				font-size:12px;
+				font-style:normal;
+				display:none;
+				padding:0 20px;
+				top:6px;
+				left:-16px;
+				color:#fff;
+				position:absolute;
+				background:#ff5e5e;
+				-webkit-transform:rotate(-45deg);
+			}
+			.shippingAddress .mui-navigate-right .mui-badge{
+				right: 35px;
+				position: absolute;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			.default em{
+				display:block;
+			}
+			small{
+				display:block;
+				margin:15px 0;
+				text-align: center;
+				font-size:12px;
+				color:#666;
+			}
+			textarea {
+				border: none;
+				outline: none;
+				color: #9B9B9B;
+				font-size: 14px;
+				margin:0;
+			}
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			.selector span{
+				background:#00b6f3;
+				color:#fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约基因检测</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><a href="" class="mui-navigate-right" id="clientsPatient"><h2>被检人</h2><input type="hidden" class="mui-badge mui-badge-inverted" id="clientsPatientResult"/></a></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>姓&nbsp;名</h2><input type="text" class="mui-badge mui-badge-inverted"/></li>
+				<li class="mui-table-view-cell lettersapcing2"><a href="" class="mui-navigate-right" id="clientsSex"><h2>性&nbsp;别</h2><span class="mui-badge mui-badge-inverted" id="clientsSexResult">请选择</span></a></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>年&nbsp;龄</h2><input type="text" class="mui-badge mui-badge-inverted" placeholder="请填写周岁年龄"/></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>手&nbsp;机</h2><input type="text" class="mui-badge mui-badge-inverted" placeholder="用于接听客服确认来电"/></li>
+			</ul>
+			<h3>预约的基因检测类型</h3>
+			<ol class="clientsStyle">
+				<li class="selector"><span>肿瘤癌症类</span></li>
+				<li><span>心脑血管类</span></li>
+				<li><span>烟酒损伤类</span></li>
+				<li><span>过敏类</span></li>
+				<li><span>成长天赋类</span></li>
+				<li><span>美容类</span></li>
+			</ol>
+			<ul class="mui-table-view shippingAddress">
+				<li class="mui-table-view-cell default haveAddress"><a href="" class="mui-navigate-right" id="clientsShippingAddress">
+					<section>
+						<h2>收件人：<span>丁亚东</span><strong>13764883492</strong></h2>
+						<p>上海市杨浦区铁岭路32号同叶大厦16层1601</p>
+						<em>默认</em>
+					</section>
+					<article>
+						<h2>收货地址</h2>
+						<span class="mui-badge mui-badge-inverted">请添加收货地址</span>
+					</article>
+				</a></li>
+			</ul>
+			<h3>备注信息</h3>
+			<textarea name="" rows="3" cols="" id="" maxlength="100" placeholder="写写您对基因检测的要求，客服会根据要求推荐"></textarea>
+			<small>温馨提示：提交后将由客服致电给您确认预约哦!</small>
+			<div class="btn">
+				<a href="" class="mui-btn mui-btn-block" id="clientsGeneticOrder">提交预约</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/mui.picker.min.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/clientsAbout.js" type="text/javascript" charset="utf-8"></script>
+</html>

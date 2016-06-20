@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-table-view{
+				font-size:14px;
+				color:#4A4A4A;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin:0;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after{
+				background:#F1F1F1;
+			}
+			.mui-table-view-cell p{
+				line-height:24px;
+				position:relative;
+				padding-left:22px;
+			}
+			.mui-table-view-cell strong{
+				font-weight:normal;
+				font-size:14px;
+			}
+			.mui-table-view-cell i{
+				font-style:normal;
+				font-size:14px;
+				position: absolute;
+				left:0;
+			}
+			.question{
+				color:#EA3939;
+			}
+			.answer{
+				color:#666;
+				padding-top:5px;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">常见问题</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="healthExaminationPackageProblemsID">
+				<!--<li class="mui-table-view-cell">
+					<p class="question"><i>Q：</i><strong>这是很简单的问题这是很简单的问题这是很简单的问题这是很简单的问题</strong></p>
+					<p class="answer"><i>A：</i><strong>这是回答的答案</strong></p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="question"><i>Q：</i><strong>这是很简单的问题这是很简单的问题这是很简单的问题这是很简单的问题</strong></p>
+					<p class="answer"><i>A：</i><strong>这是回答的答案</strong></p>
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="question"><i>Q：</i><strong>这是很简单的问题这是很简单的问题这是很简单的问题这是很简单的问题</strong></p>
+					<p class="answer"><i>A：</i><strong>这是回答的答案</strong></p>
+				</li>-->
+			</ul>
+			<div class="order_none" id="healthExaminationPackageProblemsOrderNoneID" style="display: block;">
+				<i></i>暂无问题
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/healthExamination/healthExaminationPackageProblems.js"></script>
+</html>

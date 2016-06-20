@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>紧急救援</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.er-t {
+				padding: 10px 0 25px;
+			}
+			
+			.er-t .title {
+				font-size: 15px;
+			}
+			
+			.er-t h2:nth-child(3),
+			.er-t h2:nth-child(5) {
+				margin-top: -10px;
+			}
+			
+			.er-t .title img {
+				margin: 0 5px 0 0;
+				margin-bottom: -2px;
+				width: 12px;
+			}
+			
+			.er-sp {
+				color: rgb(241, 160, 72);
+			}
+			
+			.er-t p {
+				margin-top: -4px;
+				font-size: 18px;
+				color: #4A4A4A;
+				padding-left: 25px;
+			}
+			
+			.er-border {
+				border-bottom: 1px solid #F0F0F0;
+				padding-bottom: 10px;
+			}
+			
+			.er-c {
+				text-align: center;
+				background: #f2f6f9!important;
+				padding: 15px 0 30px;
+			}
+			
+			.er-c img {
+				margin: 40px auto 90px;
+				width: 140px;
+			}
+			
+			.er-c p {
+				margin-top: 30px;
+				margin-bottom: 0;
+				text-align: left;
+				padding: 0 15px;
+			}
+			
+			.er-c h1 {
+				height: 16px;
+				line-height: 16px;
+				text-align: center;
+				font-size: 16px;
+				position: relative;
+			}
+			
+			.er-c h1 span {
+				z-index: 4;
+				position: relative;
+				background: #f2f6f9;
+				padding: 0 10px;
+			}
+			
+			.er-c h1:before {
+				z-index: 3;
+				position: absolute;
+				content: '';
+				border-top: 1px solid rgb(207, 208, 209);
+				border-bottom: 1px solid #fff;
+				background: #fff;
+				width: 100%;
+				top: 8px;
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">紧急救援</h1>
+		</header>
+		<div class="mui-content">
+			<section class="er-t">
+				<h2 class="title"><img src="../img/familyDoctor/icon_address.png" />我现在位于</h2>
+				<p class="er-border">上海市杨浦区铁岭路39号</p>
+				<h2 class="title"><img src="../img/familyDoctor/icon_address.png"/>离我最近的急救中心位于</h2>
+				<p>上海市杨浦区铁岭路39号(同叶大厦旁)</p>
+				<h2 class="title">
+					<img src="../img/familyDoctor/icon_phone.png"/>急救电话:
+					<span class="er-sp ">021-120</span>
+				</h2>
+			</section>
+			<section class="er-c">
+				<a href="tel:120" style=""><img src="../img/btn_jijiubohao.png" /></a>
+				<h1><span>急救说明</span></h1>
+				<p>我们可以为您提供<span class="er-sp ">24小时人工辅助救援热线</span>服务、专业急救指导。万一不幸遭受意外伤害，有需要急救的情况发生时，专业的急救医生可以根据会员的描述在线提供应急帮助。全年365天7*24小时随时随地为您守候。</p>
+			</section>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+
+</html>

@@ -1,0 +1,78 @@
+var doctor = "";
+document.addEventListener('plusready', function(){
+	var self = plus.webview.currentWebview();
+	var doctorId = self.doctorId;
+	//初始化医生详情信息数据
+	cancerExpertsDetails.initdoctorInfo(doctorId);
+	//初始化医生用户评论信息
+	cancerExpertsDetails.initcancerExpertsDetailUserInfo(doctorId);
+})
+
+var cancerExpertsDetails = {
+	initdoctorInfo : function(doctorId){
+		var requestData = "doctorId="+doctorId;
+		jyapp.getApi({
+ 			method: 'Tumour/DoctorDetails',
+ 			data:requestData,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+ 				doctor = data;
+ 				var pic = data.data.Pic ? data.data.Pic : '../../img/default/yisheng_touxiang.png';
+				document.getElementById("cancerExpertsDetailsInputId").value = data.data.ID
+				document.getElementById("cancerExpertsDetailsImgId").src = pic;
+				document.getElementById("cancerExpertsDetailsImgId").onerror = function(){
+					this.src='../../img/default/yisheng_touxiang.png';
+					this.onerror=null;
+				}
+				var name = data.data.Name ? data.data.Name : "--";
+				var Title = data.data.Title ? data.data.Title : "--";
+				var HospitalName = data.data.HospitalName ? data.data.HospitalName : "--";
+				var departmentName = data.data.departmentName ? data.data.departmentName : "--";
+				document.getElementById("cancerExpertsDetailsH2Id").innerHTML = name+"<span>"+Title+"</span>";
+				document.getElementById("cancerExpertsDetailsP1Id").innerHTML = "接诊量："+data.data.OrderCount+" <span class=\"xingxing\">★"+data.data.Score+"</span>";
+				document.getElementById("cancerExpertsDetailsP2Id").innerHTML = HospitalName+" "+departmentName;
+				var phoneH3Idhtml = "电话咨询：¥"+data.data.price+"/15分钟";
+				document.getElementById("phoneH3Id").innerHTML = phoneH3Idhtml;
+				var introductionIdHtml = data.data.Introduction;
+				document.getElementById("cancerExpertsDetailsIntroductionId").innerHTML = introductionIdHtml;
+ 			},
+ 			onerror: function(e) {
+ 				console.log("e-------->:"+e);
+ 			}
+ 		});
+	},
+	initcancerExpertsDetailUserInfo : function(doctorId){
+		var requestData = "doctorId="+doctorId+"&pageIndex=1&pageSize=10";
+		jyapp.getApi({
+ 			method: 'Tumour/DoctorCommentList',
+ 			data:requestData,
+ 			timeout : 10000,
+ 			onsuccess: function(data) {
+				var dataValue = data.data.list;
+				var _cedudivs = document.getElementById('cancerExpertsDetailUserId');
+				for(var i=0;i<dataValue.length;i++){
+					var _ceduh2s = document.createElement('h2');
+					_ceduh2s.innerHTML = "<h2>"+dataValue[i].Name+"<span>"+commomUtil.stringToDate(dataValue[i].CreateTime)+"</span></h2>";
+					_cedudivs.appendChild(_ceduh2s);
+					var _cedups = document.createElement('p');
+					_cedups.innerText = unescape(dataValue[i].Comment ? dataValue[i].Comment : "").replace(/\\/g, "%");
+					_cedudivs.appendChild(_cedups);
+				}
+ 			},
+ 			onerror: function(e) {
+ 				console.log("e-------->:"+e);
+ 			}
+ 		});
+	},
+	cancerExpertsreserveInformation : function(){
+		mui.openWindow({
+			id: 'cancerOrder',
+			url: "cancerOrder.html",
+			extras: {
+				doctor : doctor
+			}
+		});
+	}
+}
+//绑定预约咨询按钮事件
+document.getElementById("cancerOrder").addEventListener('tap',cancerExpertsDetails.cancerExpertsreserveInformation);

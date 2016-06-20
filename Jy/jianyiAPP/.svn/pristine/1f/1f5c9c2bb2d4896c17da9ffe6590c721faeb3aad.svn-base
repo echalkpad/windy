@@ -1,0 +1,116 @@
+mui.plusReady(function() {
+	//存储字典里的信息
+	(function($, doc) {
+		$.init();
+		$.ready(function() {
+			var url = 'system/GetAllDictionaryRe';
+			jyapp.getApi({
+				method: url,
+				onsuccess: function(data) {
+					var FamilyDate = {
+						'Gender': data.data.Gender,
+						'Relation': data.data.Relation,
+						'IDCard': data.data.IDCard,
+					};
+					plus.storage.setItem("FamilyDate", JSON.stringify(FamilyDate));
+				},
+				onerror: function(e) {
+					alert(e);
+				}
+			});
+		});
+	})(mui, document);
+	//初始化
+	mainMe.init();
+	//绑定注销事件
+	document.getElementById('logout').addEventListener('tap', function(event) {
+		jyapp.logout();
+	});
+})
+
+var mainMe = {
+	init: function() {
+		jyapp.getApi({
+			method: 'Profile/Index',
+			onsuccess: function(data) {
+//				console.log('-----------' + JSON.stringify(data));
+				var oFullname = document.getElementById("fullname");
+				var oSex = document.getElementById("sex");
+				var oCard = document.getElementById("JeCard");
+					//个性签名和设置头像
+				jyapp.getApi({
+					method: 'Profile/PersonData',
+					onsuccess: function(data) {
+//						console.log(JSON.stringify(data))
+						if (data.data == null) {
+							return false
+						}
+						document.getElementById("sign").innerHTML = data.data.sign == '' ? '' : data.data.sign;
+						var mePic = document.getElementById('mePic');
+						if (data.data.Head != null) {
+							mePic.setAttribute('src', data.data.Head);
+							mePic.setAttribute('onerror', "this.src='../img/default/huiyuan_touxiang.png';this.onerror=null");
+						}
+					},
+					onerror: function(e) {
+						alert(e);
+					}
+				});
+				var newData = {
+					'fullname': data.data.cusinfo.fullname, //全名
+					'jycardnumber': data.data.cusinfo.jycardnumber, //卡号
+					'phone': data.data.cusinfo.phone, //手机号
+					'idtype': data.data.cusinfo.idtype, //证件类型
+					'gender': data.data.cusinfo.gender, //性别
+					'idnumber': data.data.cusinfo.idnumber, //证件号码
+					'nickname': data.data.cusinfo.nickname, //昵称
+					'card_balance': data.data.card_balance, //原则上红包余额+保单余额,实际使用字段值
+					'policy_balance': data.data.policy_balance, //保单额
+					'coupon_count': data.data.coupon_count, //卡券数
+					'bonus_count': data.data.bonus_count, //红包个数
+					'bonus_total': data.data.bonus_total, //红包额
+					'effc_days': data.data.effc_days, //保单过期天数
+					'nickname': data.data.nickname, //昵称
+					'Head': data.data.Head //头像
+				}
+				oFullname.innerHTML = newData.fullname;
+				newData.jycardnumber == null ? oCard.querySelector('span').innerHTML = '0000000000000000' : oCard.querySelector('span').innerHTML = newData.jycardnumber;
+				newData.gender == 1 ? oSex.setAttribute('class', 'sex-man') : oSex.setAttribute('class', 'sex-wuman');
+				plus.storage.setItem("oneInfo", JSON.stringify(newData));
+			},
+			onerror: function(e) {
+				alert(e);
+			}
+		});
+	},
+	isGoMeFamily: function() {
+		var url = 'profile/family';
+		jyapp.getApi({
+			method: url,
+			onsuccess: function(data) {
+//				console.log(JSON.stringify(data))
+				if (JSON.stringify(data.code) == '0') {
+					mui.openWindow({
+						id: 'meFamily',
+						url: "../html/me/meFamilyNone.html",
+						createNew: true,
+					});
+				} else {
+					mui.openWindow({
+						id: 'meFamily',
+						url: "../html/me/meFamily.html",
+						createNew: true,
+					});
+				}
+			},
+			onerror: function(e) {
+				alert(e);
+			}
+		});
+	}
+}
+
+//我的家人
+document.getElementById("meFamily").addEventListener('tap', function() {
+	mainMe.isGoMeFamily();
+})

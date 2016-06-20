@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			article {
+				background: #00b6f3;
+				padding: 15px;
+				color: #fff;
+				text-align: center;
+			}
+			
+			article h2 {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			
+			article p {
+				line-height: 40px;
+				font-size: 16px;
+				color: #fff;
+			}
+			
+			section>h2 {
+				line-height: 40px;
+				padding: 0 15px;
+				font-size: 16px;
+				color: #666;
+			}
+			
+			.mui-content .mui-table-view {
+				background: #fff;
+				margin: 0;
+			}
+			
+			.mui-table-view h3 {
+				font-size: 16px;
+				line-height: 24px;
+			}
+			
+			.mui-table-view h3 span {
+				color: #999;
+			}
+			
+			.cz span {
+				color: #FF6262!important;
+			}
+			
+			.mui-table-view h3 strong {
+				color: #FF6262;
+				float: right;
+				font-weight: normal;
+			}
+			
+			.mui-table-view p span {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">保单</h1>
+		</header>
+		<div class="mui-content">
+			<article>
+				<h2 id="card_balance"></h2>
+				<p>健e卡号</p>
+			</article>
+			<section>
+				<h2 style="color: #9B9B9B;font-size: 14px;">关联保单</h2>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<h3><span id="carName" style="float: left;color: #4A4A4A;">健医信息科技(上海)股份</span><span id="endtime" style="float: right;color: #9B9B9B;"></span></h3>
+						<p><span id="carNum" style="float: left;clear: left;"></span><span id="enddatetime"></span></p>
+					</li>
+					<li class="mui-table-view-cell">
+						<h3 class="cz">充值：<span id="balance" style="color: #4A4A4A!important;"></span>元<strong>余额：<span id="recharge"></span>元</strong></h3>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/me/guaranteeSlip.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

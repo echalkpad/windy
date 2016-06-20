@@ -1,0 +1,769 @@
+var healthExamDQRPageIndex = 1;
+var healthExamDZFPageIndex = 1;
+var healthExamYYCGPageIndex = 1;
+var healthExamDPJPageIndex = 1;
+var healthExamYWCPageIndex = 1;
+
+var healthExamDQRTotal = 0;
+var healthExamDZFTotal = 0;
+var healthExamYYCGTotal = 0;
+var healthExamDPJTotal = 0;
+var healthExamYWCTotal = 0;
+
+var pageSize = 8;
+
+var healthExamDQRhtml = '';
+var healthExamDZFhtml = '';
+var healthExamYYCGhtml = '';
+var healthExamDPJhtml = '';
+var healthExamYWChtml = '';
+//定位订单列表tab页面
+var index = 0;
+
+var backid = "";
+var backurl = "";
+
+var orders = {};
+
+//初始化体检订单列表页
+document.addEventListener('plusready', function() {
+	//设置显示页面
+	var self = plus.webview.currentWebview();
+	index = self.index;
+	backid = self.backid ? self.backid : "0";
+	backurl = self.backurl ? self.backurl : "0";
+	if(!index || typeof(index) == 'undefined' || index == ""){
+		index = 0;
+	}
+	//调用初始化数据方法
+	healthExaminationOrderList.initOrderListPage(index);
+});
+
+//自定义刷新数据事件
+window.addEventListener("newIdsHealthExaminationList",function(event){
+	healthExamDQRPageIndex = 1;
+	healthExamDZFPageIndex = 1;
+	healthExamYYCGPageIndex = 1;
+	healthExamDPJPageIndex = 1;
+	healthExamYWCPageIndex = 1;
+	
+	healthExamDQRTotal = 0;
+	healthExamDZFTotal = 0;
+	healthExamYYCGTotal = 0;
+	healthExamDPJTotal = 0;
+	healthExamYWCTotal = 0;
+	
+	pageSize = 8;
+	
+	healthExamDQRhtml = '';
+	healthExamDZFhtml = '';
+	healthExamYYCGhtml = '';
+	healthExamDPJhtml = '';
+	healthExamYWChtml = '';
+	document.getElementById('healthExamOrderListDQRULID').innerHTML = healthExamDQRhtml;
+	document.getElementById('healthExamOrderListDZFULID').innerHTML = healthExamDZFhtml;
+	document.getElementById('healthExamOrderListYYCGULID').innerHTML = healthExamYYCGhtml;
+	document.getElementById('healthExamOrderListDPJULID').innerHTML = healthExamDPJhtml;
+	document.getElementById('healthExamOrderListYWCULID').innerHTML = healthExamYWChtml;
+	index = event.detail.index;
+	backid = event.detail.backid ? event.detail.backid : "0";
+	backUrl = event.detail.backurl ? event.detail.backurl : "0";
+	//调用初始化数据方法
+	healthExaminationOrderList.initOrderListPage(index);
+});
+
+var healthExaminationOrderList = {
+	initOrderListPage : function(index){
+		document.getElementById("backHealthExamOrderListWebviewId").value = backid;
+		document.getElementById("backHealthExamOrderListWebviewUrl").value = backurl;
+		//初始化订单列表页面--待确认模块
+		healthExaminationOrderList.initHEOrderListDQR(healthExamDQRPageIndex, pageSize);
+		//初始化订单列表页面--待支付模块
+		healthExaminationOrderList.initHEOrderListDZF(healthExamDZFPageIndex, pageSize);
+		//初始化订单列表页面--预约成功模块
+		healthExaminationOrderList.initHEOrderListYYCG(healthExamYYCGPageIndex, pageSize);
+		//初始化订单列表页面--待评价模块
+		healthExaminationOrderList.initHEOrderListDPJ(healthExamYWCPageIndex, pageSize);
+		//初始化订单列表页面--已完成模块
+		healthExaminationOrderList.initHEOrderListYWC(healthExamYWCPageIndex, pageSize);
+		var divs = document.getElementById("healthExamSegmentedControl");
+		var consultingas = divs.getElementsByTagName("a");
+		if (index) {
+			for (var i = 0; i < consultingas.length; i++) {
+				consultingas[i].setAttribute('class', 'mui-control-item');
+				document.getElementById("healthExamOrderList" + (i + 1)).setAttribute("class", "mui-control-content");
+				if (i == index) {
+					consultingas[i].setAttribute('class', 'mui-control-item mui-active');
+					document.getElementById("healthExamOrderList" + (i + 1)).setAttribute("class", "mui-control-content mui-active");
+				}
+			}
+		}
+		//加载上拉刷新事件
+		document.addEventListener("plusscrollbottom", function() {
+			var divid = 0;
+			for (var i = 0; i < consultingas.length; i++) {
+				if (consultingas[i].className == "mui-control-item mui-active") {
+					divid = i + 1;
+					break;
+				}
+			}
+			if(divid == 1){
+				if(healthExamDQRTotal == pageSize){
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',0);
+					healthExamDQRPageIndex ++;
+					//初始化订单列表页面--待确认模块
+					healthExaminationOrderList.initHEOrderListDQR(healthExamDQRPageIndex, pageSize);
+				}else{
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',1);
+					return false;
+				}
+			}else if(divid == 2){
+				if(healthExamDZFTotal == pageSize){
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',0);
+					healthExamDZFPageIndex++;
+					//初始化订单列表页面--待支付模块
+					healthExaminationOrderList.initHEOrderListDZF(healthExamDZFPageIndex, pageSize);
+				}else{
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',1);
+					return false;
+				}
+			}else if(divid == 3){
+				if(healthExamYYCGTotal == pageSize){
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',0);
+					healthExamYYCGPageIndex++;
+					//初始化订单列表页面--预约完成模块
+					healthExaminationOrderList.initHEOrderListYYCG(healthExamYYCGPageIndex, pageSize);
+				}else{
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',1);
+					return false;
+				}
+			}else if(divid == 4){
+				if(healthExamDPJTotal == pageSize){
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',0);
+					healthExamDPJPageIndex++;
+					//初始化订单列表页面--待评价模块
+					healthExaminationOrderList.initHEOrderListDPJ(healthExamDPJPageIndex, pageSize);
+				}else{
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',1);
+					return false;
+				}
+			}else if(divid == 5){
+				if(healthExamYWCTotal == pageSize){
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',0);
+					healthExamYWCPageIndex++;
+					//初始化订单列表页面--已完成模块
+					healthExaminationOrderList.initHEOrderListYWC(healthExamYWCPageIndex, pageSize);
+				}else{
+					healthExaminationOrderList.setTs('healthExaminationOrderContent','healthExaminationOrderTips',1);
+					return false;
+				}
+			}
+		});
+	},
+	initHEOrderListDQR : function(healthExamDQRPageIndex, pageSize){
+		document.getElementById('healthExamOrderListOrderNoneDQRID').style.display = 'none';
+		var requestHEOrderListDQR = 'orderType=1&pageIndex='+healthExamDQRPageIndex+'&pageSize='+pageSize;
+//		console.log("requestHEOrderListDQR---->:"+requestHEOrderListDQR);
+		jyapp.getApi({
+			method: 'HealthExamination/OrderList',
+			data: requestHEOrderListDQR,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderListDQR---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					healthExamDQRTotal = 0;
+					document.getElementById('healthExamOrderListDQRULID').innerHTML = "";
+					document.getElementById('healthExamOrderListOrderNoneDQRID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.orders && response.data.orders.length > 0){
+						var dataValues = response.data.orders;
+						healthExamDQRTotal = dataValues.length;
+						for(var i = 0;i < dataValues.length; i++){
+							var PackageName = dataValues[i].PackageName != "--" ? dataValues[i].PackageName : "尚未确认";
+							var VisitDate = dataValues[i].VisitDate != null ? dataValues[i].VisitDate : "尚未确认";
+							if(dataValues[i].VisitDate != null){
+								var endLen = VisitDate.length - 2;
+								var time = VisitDate.substring(6, endLen);
+								time = commomUtil.formatStringToDate(time,1)+'&nbsp;上午';
+							}else{
+								time = VisitDate;
+							}
+							var VisitPlace = dataValues[i].VisitPlace ? dataValues[i].VisitPlace : "尚未确认";
+							healthExamDQRhtml += '<li class="border-b">';
+							healthExamDQRhtml += '	<section class="healthExamOrderList-t">';
+							healthExamDQRhtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">待客服确认</span></article>';
+							healthExamDQRhtml += '	</section>';
+							healthExamDQRhtml += '	<section class="healthExamOrderList-c">';
+							healthExamDQRhtml += '		<input type="hidden" value="'+dataValues[i].ID+'" />';
+							healthExamDQRhtml += '		<input type="hidden" value="'+dataValues[i].Status+'" />';
+							healthExamDQRhtml += '		<p>选择套餐 <span>'+PackageName+'</span></p>';
+							healthExamDQRhtml += '		<p>&nbsp;体&nbsp;检&nbsp;人&nbsp; <span class="active">'+dataValues[i].Name+'</span></p>';
+							healthExamDQRhtml += '		<p>体检时间 <span>'+time+'</span></p>';
+							healthExamDQRhtml += '		<p>体检地址 <span>'+VisitPlace+'</span></p>';
+							healthExamDQRhtml += '	</section>';
+							healthExamDQRhtml += '	<section class="healthExamOrderList-b">';
+							if(dataValues[i].TotalFee){
+								healthExamDQRhtml += '		<p><span>套餐价格<i>￥'+dataValues[i].TotalFee+'</i></span><a href="" class="black cancle">取消预约<input type="hidden" value="'+dataValues[i].ID+'" /></a><a href="tel:400-111-5289">电话催办</a></p>';
+							}else{
+								//取消预约单更换为取消预约  同时结构有所增加（2016/5/23 明星东）
+								healthExamDQRhtml += '		<p><a href="" class="black cancle">取消预约<input type="hidden" value="'+dataValues[i].ID+'" /></a><a href="tel:400-111-5289">电话催办</a></p>';
+							}
+							healthExamDQRhtml += '	</section>';
+							healthExamDQRhtml += '</li>';
+						}
+						document.getElementById('healthExamOrderListDQRULID').innerHTML = healthExamDQRhtml;
+					} else {
+						healthExamDQRTotal = 0;
+						if(healthExamDQRhtml == ""){
+							document.getElementById('healthExamOrderListDQRULID').innerHTML = healthExamDQRhtml;
+							document.getElementById('healthExamOrderListOrderNoneDQRID').style.display = 'block';
+						}
+					}
+				}
+			},
+			onerror: function(e) {
+				healthExamDQRTotal = 0;
+				if(healthExamDQRhtml == ""){
+					document.getElementById('healthExamOrderListDQRULID').innerHTML = healthExamDQRhtml;
+					document.getElementById('healthExamOrderListOrderNoneDQRID').innerHTML = '<i></i>数据加载失败';
+					document.getElementById('healthExamOrderListOrderNoneDQRID').style.display = 'block';
+				}
+				console.log("initHEOrderListDQR:" + e);
+			}
+		});
+	},
+	initHEOrderListDZF : function(healthExamDZFPageIndex, pageSize){
+		document.getElementById('healthExamOrderListOrderNoneDZFID').style.display = 'none';
+		var requestHEOrderListDZF = 'orderType=2&pageIndex='+healthExamDZFPageIndex+'&pageSize='+pageSize;
+//		console.log("requestHEOrderListDZF---->:"+requestHEOrderListDZF);
+		jyapp.getApi({
+			method: 'HealthExamination/OrderList',
+			data: requestHEOrderListDZF,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderListDZF---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					healthExamDZFTotal = 0;
+					document.getElementById('healthExamOrderListDZFULID').innerHTML = "";
+					document.getElementById('healthExamOrderListOrderNoneDZFID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.orders && response.data.orders.length > 0){
+						var dataValues = response.data.orders;
+						orders = response.data.orders;
+						healthExamDZFTotal = dataValues.length;
+						for(var i = 0;i < dataValues.length; i++){
+							var PackageName = dataValues[i].PackageName != "--" ? dataValues[i].PackageName : "尚未确认";
+							var VisitDate = dataValues[i].VisitDate != null ? dataValues[i].VisitDate : "尚未确认";
+							if(dataValues[i].VisitDate != null){
+								var endLen = VisitDate.length - 2;
+								var time = VisitDate.substring(6, endLen);
+								time = commomUtil.formatStringToDate(time,1)+'&nbsp;上午';
+							}else{
+								time = VisitDate;
+							}
+							var VisitPlace = dataValues[i].VisitPlace ? dataValues[i].VisitPlace : "尚未确认";
+							var TotalFee = dataValues[i].TotalFee ? dataValues[i].TotalFee : "--";
+							healthExamDZFhtml += '<li class="border-b">';
+							healthExamDZFhtml += '	<section class="healthExamOrderList-t">';
+							healthExamDZFhtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">待支付</span></article>';
+							healthExamDZFhtml += '	</section>';
+							healthExamDZFhtml += '	<section class="healthExamOrderList-c">';
+							healthExamDZFhtml += '		<input type="hidden" value="'+dataValues[i].ID+'" />';
+							healthExamDZFhtml += '		<input type="hidden" value="'+dataValues[i].Status+'" />';
+							healthExamDZFhtml += '		<p>选择套餐 <span>'+PackageName+'</span></p>';
+							healthExamDZFhtml += '		<p>&nbsp;体&nbsp;检&nbsp;人&nbsp;<span class="active">'+dataValues[i].Name+'</span></p>';
+							healthExamDZFhtml += '		<p>体检时间 <span>'+time+'</span></p>';
+							healthExamDZFhtml += '		<p>体检地址 <span>'+VisitPlace+'</span></p>';
+							healthExamDZFhtml += '	</section>';
+							healthExamDZFhtml += '	<section class="healthExamOrderList-b">';
+							healthExamDZFhtml += '		<p><span>套餐价格<i>￥'+TotalFee+'</i></span><a href="" class="black cancle">取消预约<input type="hidden" value="'+dataValues[i].ID+'" /></a><a href="" id="healthExaminationOrderList-pay">支付<input type="hidden" value="'+i+'" /></a></p>';
+							healthExamDZFhtml += '	</section>';
+							healthExamDZFhtml += '</li>';
+						}
+						document.getElementById('healthExamOrderListDZFULID').innerHTML = healthExamDZFhtml;
+					} else {
+						healthExamDZFTotal = 0;
+						if(healthExamDZFhtml == ""){
+							document.getElementById('healthExamOrderListDZFULID').innerHTML = healthExamDZFhtml;
+							document.getElementById('healthExamOrderListOrderNoneDZFID').style.display = 'block';
+						}
+					}
+				}
+			},
+			onerror: function(e) {
+				healthExamDZFTotal = 0;
+				if(healthExamDZFhtml == ""){
+					document.getElementById('healthExamOrderListDZFULID').innerHTML = healthExamDZFhtml;
+					document.getElementById('healthExamOrderListOrderNoneDZFID').innerHTML = '<i></i>数据加载失败';
+					document.getElementById('healthExamOrderListOrderNoneDZFID').style.display = 'block';
+				}
+				console.log("initHEOrderListDZF:" + e);
+			}
+		});
+	},
+	initHEOrderListYYCG : function(healthExamYYCGPageIndex, pageSize){
+		document.getElementById('healthExamOrderListOrderNoneYYCGID').style.display = 'none';
+		var requestHEOrderListYYCG = 'orderType=3&pageIndex='+healthExamYYCGPageIndex+'&pageSize='+pageSize;
+//		console.log("requestHEOrderListYYCG---->:"+requestHEOrderListYYCG);
+		jyapp.getApi({
+			method: 'HealthExamination/OrderList',
+			data: requestHEOrderListYYCG,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderListYYCG---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					healthExamYYCGTotal = 0;
+					document.getElementById('healthExamOrderListYYCGULID').innerHTML = "";
+					document.getElementById('healthExamOrderListOrderNoneYYCGID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.orders && response.data.orders.length > 0){
+						var dataValues = response.data.orders;
+						healthExamYYCGTotal = dataValues.length;
+						for(var i = 0;i < dataValues.length; i++){
+							var PackageName = dataValues[i].PackageName ? dataValues[i].PackageName : "尚未确认";
+							var VisitDate = dataValues[i].VisitDate ? dataValues[i].VisitDate : "尚未确认";
+							var endLen = VisitDate.length - 2;
+							var time = VisitDate.substring(6, endLen);
+							var VisitPlace = dataValues[i].VisitPlace ? dataValues[i].VisitPlace : "尚未确认";
+//							var TotalFee = dataValues[i].TotalFee ? dataValues[i].TotalFee : "--";
+							healthExamYYCGhtml += '<li class="border-b">';
+							healthExamYYCGhtml += '	<section class="healthExamOrderList-t">';
+							healthExamYYCGhtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">预约成功</span></article>';
+							healthExamYYCGhtml += '	</section>';
+							healthExamYYCGhtml += '	<section class="healthExamOrderList-c">';
+							healthExamYYCGhtml += '		<input type="hidden" value="'+dataValues[i].ID+'" />';
+							healthExamYYCGhtml += '		<input type="hidden" value="'+dataValues[i].Status+'" />';
+							healthExamYYCGhtml += '		<p>选择套餐 <span>'+PackageName+'</span></p>';
+							healthExamYYCGhtml += '		<p>&nbsp;体&nbsp;检&nbsp;人&nbsp;<span class="active">'+dataValues[i].Name+'</span></p>';
+							healthExamYYCGhtml += '		<p>体检时间 <span>'+commomUtil.formatStringToDate(time,1)+'</span></p>';
+							healthExamYYCGhtml += '		<p>体检地址 <span>'+VisitPlace+'</span></p>';
+							healthExamYYCGhtml += '	</section>';
+							healthExamYYCGhtml += '	<section class="healthExamOrderList-b">';
+							healthExamYYCGhtml += '		<p><a href="tel:400-111-5289">申请退款</a></p>';
+							healthExamYYCGhtml += '	</section>';
+							healthExamYYCGhtml += '</li>';
+						}
+						document.getElementById('healthExamOrderListYYCGULID').innerHTML = healthExamYYCGhtml;
+					} else {
+						healthExamYYCGTotal = 0;
+						if(healthExamYYCGhtml == ""){
+							document.getElementById('healthExamOrderListYYCGULID').innerHTML = healthExamYYCGhtml;
+							document.getElementById('healthExamOrderListOrderNoneYYCGID').style.display = 'block';
+						}
+					}
+				}
+			},
+			onerror: function(e) {
+				healthExamYYCGTotal = 0;
+				if(healthExamYYCGhtml == ""){
+					document.getElementById('healthExamOrderListYYCGULID').innerHTML = healthExamYYCGhtml;
+					document.getElementById('healthExamOrderListOrderNoneYYCGID').innerHTML = '<i></i>数据加载失败';
+					document.getElementById('healthExamOrderListOrderNoneYYCGID').style.display = 'block';
+				}
+				console.log("initHEOrderListYYCG:" + e);
+			}
+		});
+	},
+	initHEOrderListDPJ : function(healthExamDPJPageIndex, pageSize){
+		document.getElementById('healthExamOrderListOrderNoneDPJID').style.display = 'none';
+		var requestHEOrderListDPJ = 'orderType=4&pageIndex='+healthExamDPJPageIndex+'&pageSize='+pageSize;
+//		console.log("requestHEOrderListDPJ---->:"+requestHEOrderListDPJ);
+		jyapp.getApi({
+			method: 'HealthExamination/OrderList',
+			data: requestHEOrderListDPJ,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderListDPJ---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					healthExamDPJTotal = 0;
+					document.getElementById('healthExamOrderListDPJULID').innerHTML = "";
+					document.getElementById('healthExamOrderListOrderNoneDPJID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.orders && response.data.orders.length > 0){
+						var dataValues = response.data.orders;
+						healthExamDPJTotal = dataValues.length;
+						for(var i = 0;i < dataValues.length; i++){
+							var PackageName = dataValues[i].PackageName ? dataValues[i].PackageName : "尚未确认";
+							var VisitDate = dataValues[i].VisitDate ? dataValues[i].VisitDate : "尚未确认";
+							var endLen = VisitDate.length - 2;
+							var time = VisitDate.substring(6, endLen);
+							var VisitPlace = dataValues[i].VisitPlace ? dataValues[i].VisitPlace : "尚未确认";
+							var TotalFee = dataValues[i].TotalFee ? dataValues[i].TotalFee : "--";
+							healthExamDPJhtml += '<li class="border-b">';
+							healthExamDPJhtml += '	<section class="healthExamOrderList-t">';
+							healthExamDPJhtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">待评价</span></article>';
+							healthExamDPJhtml += '	</section>';
+							healthExamDPJhtml += '	<section class="healthExamOrderList-c">';
+							healthExamDPJhtml += '		<input type="hidden" value="'+dataValues[i].ID+'" />';
+							healthExamDPJhtml += '		<input type="hidden" value="'+dataValues[i].Status+'" />';
+							healthExamDPJhtml += '		<p>选择套餐 <span>'+PackageName+'</span></p>';
+							healthExamDPJhtml += '		<p>&nbsp;体&nbsp;检&nbsp;人&nbsp;<span class="active">'+dataValues[i].Name+'</span></p>';
+							healthExamDPJhtml += '		<p>体检时间 <span>'+commomUtil.formatStringToDate(time,1)+'</span></p>';
+							healthExamDPJhtml += '		<p>体检地址 <span>'+VisitPlace+'</span></p>';
+							healthExamDPJhtml += '	</section>';
+							healthExamDPJhtml += '	<section class="healthExamOrderList-b">';
+							healthExamDPJhtml += '		<p><span>实付金额<i>￥'+TotalFee+'</i></span><a href="">评价<input type="hidden" value="'+dataValues[i].ID+'" /></a></p>';
+							healthExamDPJhtml += '	</section>';
+							healthExamDPJhtml += '</li>';
+						}
+						document.getElementById('healthExamOrderListDPJULID').innerHTML = healthExamDPJhtml;
+					} else {
+						healthExamDPJTotal = 0;
+						if(healthExamDPJhtml == ""){
+							document.getElementById('healthExamOrderListDPJULID').innerHTML = healthExamDPJhtml;
+							document.getElementById('healthExamOrderListOrderNoneDPJID').style.display = 'block';
+						}
+					}
+				}
+			},
+			onerror: function(e) {
+				healthExamDPJTotal = 0;
+				if(healthExamDPJhtml == ""){
+					document.getElementById('healthExamOrderListDPJULID').innerHTML = healthExamDPJhtml;
+					document.getElementById('healthExamOrderListOrderNoneDPJID').innerHTML = '<i></i>数据加载失败';
+					document.getElementById('healthExamOrderListOrderNoneDPJID').style.display = 'block';
+				}
+				console.log("initHEOrderListDPJ:" + e);
+			}
+		});
+	},
+	initHEOrderListYWC : function(healthExamYWCPageIndex, pageSize){
+		document.getElementById('healthExamOrderListOrderNoneYWCID').style.display = 'none';
+		var requestHEOrderListYWC = 'orderType=5&pageIndex='+healthExamYWCPageIndex+'&pageSize='+pageSize;
+		jyapp.getApi({
+			method: 'HealthExamination/OrderList',
+			data: requestHEOrderListYWC,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEOrderListYWC---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					healthExamYWCTotal = 0;
+					document.getElementById('healthExamOrderListYWCULID').innerHTML = "";
+					document.getElementById('healthExamOrderListOrderNoneYWCID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.orders && response.data.orders.length > 0){
+						var dataValues = response.data.orders;
+						healthExamYWCTotal = dataValues.length;
+						for(var i = 0;i < dataValues.length; i++){
+							var PackageName = dataValues[i].PackageName ? (dataValues[i].PackageName != "--" ? dataValues[i].PackageName : "尚未确认") : "尚未确认";
+							var VisitDate = dataValues[i].VisitDate != null ? dataValues[i].VisitDate : "尚未确认";
+							if(dataValues[i].VisitDate != null){
+								var endLen = VisitDate.length - 2;
+								var time = VisitDate.substring(6, endLen);
+								time = commomUtil.formatStringToDate(time,1)+'&nbsp;上午';
+							}else{
+								time = VisitDate;
+							}
+							var VisitPlace = dataValues[i].VisitPlace ? dataValues[i].VisitPlace : "尚未确认";
+//							var TotalFee = dataValues[i].TotalFee ? dataValues[i].TotalFee : "--";
+							healthExamYWChtml += '<li class="border-b">';
+							healthExamYWChtml += '	<section class="healthExamOrderList-t">';
+							if(dataValues[i].Status == 0){
+								healthExamYWChtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">已取消</span></article>';
+							}else if(dataValues[i].Status == 8){
+								healthExamYWChtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">已退款</span></article>';
+							}else{
+								healthExamYWChtml += '		<article>订单编号：'+dataValues[i].OrderNo+' <span class="red">已完成</span></article>';
+							}
+							healthExamYWChtml += '	</section>';
+							healthExamYWChtml += '	<section class="healthExamOrderList-c">';
+							healthExamYWChtml += '		<input type="hidden" value="'+dataValues[i].ID+'" />';
+							healthExamYWChtml += '		<input type="hidden" value="'+dataValues[i].Status+'" />';
+							healthExamYWChtml += '		<p>选择套餐 <span>'+PackageName+'</span></p>';
+							healthExamYWChtml += '		<p>&nbsp;体&nbsp;检&nbsp;人&nbsp;<span class="active">'+dataValues[i].Name+'</span></p>';
+							healthExamYWChtml += '		<p>体检时间 <span>'+time+'</span></p>';
+							healthExamYWChtml += '		<p>体检地址 <span>'+VisitPlace+'</span></p>';
+							healthExamYWChtml += '	</section>';
+							if(dataValues[i].Status == 6){
+								healthExamYWChtml += '	<section class="healthExamOrderList-b" id="healthExamYWCXingXingID'+i+'">';
+								healthExamYWChtml += '		<p>';
+								for(var s = 0; s < 5; s++){
+									if(s > [5 - parseInt(dataValues[i].Score)] || s == [5 - parseInt(dataValues[i].Score)]){
+										healthExamYWChtml += '<span class="xing xing-active"></span>';
+									}else{
+										healthExamYWChtml += '<span class="xing"></span>';
+									}
+								}
+								healthExamYWChtml += '			<a href="">删除订单<input type="hidden" value="'+dataValues[i].ID+'" /></a>';
+								healthExamYWChtml += '		</p>';
+								healthExamYWChtml += '	</section>';
+							}else{
+								healthExamYWChtml += '	<section class="healthExamOrderList-b">';
+								healthExamYWChtml += '		<p><a href="">删除订单<input type="hidden" value="'+dataValues[i].ID+'" /></a></p>';
+								healthExamYWChtml += '	</section>';
+							}
+							healthExamYWChtml += '</li>';
+						}
+						document.getElementById('healthExamOrderListYWCULID').innerHTML = healthExamYWChtml;
+					} else {
+						healthExamYWCTotal = 0;
+						if(healthExamYWChtml == ""){
+							document.getElementById('healthExamOrderListYWCULID').innerHTML = healthExamYWChtml;
+							document.getElementById('healthExamOrderListOrderNoneYWCID').style.display = 'block';
+						}
+					}
+				}
+			}, 
+			onerror: function(e) {
+				healthExamYWCTotal = 0;
+				if(healthExamYWChtml == ""){
+					document.getElementById('healthExamOrderListYWCULID').innerHTML = healthExamYWChtml;
+					document.getElementById('healthExamOrderListOrderNoneYWCID').innerHTML = '<i></i>数据加载失败';
+					document.getElementById('healthExamOrderListOrderNoneYWCID').style.display = 'block';
+				}
+				console.log("initHEOrderListYWC:" + e);
+			}
+		});
+	},
+	rebackHealthExamination: function() {
+		var config = {};
+		if(backid && typeof(backid) != 'undefined' && backurl && backurl != "0"){
+			config = {
+				id : backid,
+				url : backurl,
+				method : "newidsMyOrder"
+			}
+		}else{
+			config = {
+				id : "healthExamination",
+				url : "healthExamination.html"
+			}
+		}
+		jyapp.backWebView(config);
+	},
+	orderOperate : function(operateType,orderOperateID,orderCancelContent){
+		var requestCancelOrder  = 'orderId='+orderOperateID+'&operateType='+operateType+'&content='+orderCancelContent;
+//		console.log("requestCancelOrder---->:"+requestCancelOrder);
+		jyapp.getApi({
+			method: 'HealthExamination/OrderOperate',
+			data: requestCancelOrder,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("orderCancel---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					//初始化订单列表页面--跳转到已完成模块
+					healthExamDQRhtml = '';
+					healthExamDZFhtml = '';
+					healthExamYYCGhtml = '';
+					healthExamDPJhtml = '';
+					healthExamYWChtml = '';
+					document.getElementById('healthExamOrderListDQRULID').innerHTML = healthExamDQRhtml;
+					document.getElementById('healthExamOrderListDZFULID').innerHTML = healthExamDZFhtml;
+					document.getElementById('healthExamOrderListYYCGULID').innerHTML = healthExamYYCGhtml;
+					document.getElementById('healthExamOrderListDPJULID').innerHTML = healthExamDPJhtml;
+					document.getElementById('healthExamOrderListYWCULID').innerHTML = healthExamYWChtml;
+					healthExaminationOrderList.initOrderListPage(4);
+				}
+			},
+			onerror: function(e) {
+				console.log("orderOperate:" + e);
+			}
+		});
+	},
+	submitOrderDetailsPay: function(ordersIndex) {
+		var payinfo = {
+			subject: '体检预约订单',
+			body: "您预约的体检套餐: '" + orders[ordersIndex].PackageName + "',体检时间:" + commomUtil.formatStringToDate(commomUtil.stringSplit(orders[ordersIndex].CreateTime),1) + "&nbsp;上午",
+			orderno: orders[ordersIndex].OrderNo,
+			totalfee: orders[ordersIndex].TotalFee,
+			orderId: orders[ordersIndex].ID,
+			type: "healthExamination",
+			backurl: backurl,
+			backid : backid,
+			method : "newIdsHealthExaminationList",
+			successpage: {
+				id: 'payOrderSucceed',
+				url: '../pay/payOrderSucceed.html'
+			},
+			backCell: {
+				id: "healthExaminationOrder",
+				url: "../../healthy/healthExamination/healthExaminationOrder.html",
+				index: 1
+			}
+		}
+		mui.openWindow({
+			id: 'payment',
+			url: "../../core/payment.html",
+			extras: {
+				payinfo: payinfo
+			}
+		});
+	},
+	setTs : function(parentId,spanId,type){
+		document.getElementById(parentId).setAttribute("class","mui-content nomore");
+		if(type == 1){
+			document.getElementById(spanId).innerHTML = "没有更多数据了";
+		}
+		setTimeout(function(){
+			document.getElementById(parentId).setAttribute("class","mui-content");
+		},1500);
+	}
+}
+
+//取消预约原因详细----明星东2016-5-23 17:43更新
+mui('.mui-content').on('tap','.cancle',function(){
+	var orderOperateID = this.querySelectorAll('input')[0].value;
+	var userCancle = new mui.PopPicker();
+		userCancle.setData([{
+			value: 'nobuy',
+			text: '我不想买了'
+		}, {
+			value: 'noappropriate',
+			text: '时间/套餐/网点不理想'
+		}, {
+			value: 'error',
+			text: '信息填写错误,重新下单'
+		}, {
+			value: 'nohere',
+			text: '不在这里预约'
+		}]);
+		var cancleButton = this;
+		var cancleResult = this.children[0];
+		userCancle.show(function(items) {
+			var s = JSON.stringify(items[0].text);
+			s = s.replace("\"", "").replace("\"", "");
+			cancleResult.value = s;
+			plus.nativeUI.confirm('您确认取消预约',function(e){
+//				console.log(orderCancelID+":====:"+cancleResult.value);
+				if(e.index == 0){
+					//取消预约订单
+					healthExaminationOrderList.orderOperate(1,orderOperateID,cancleResult.value);
+				}
+			},'取消预约',["确认","取消"]);
+		});
+});
+
+mui('#healthExamOrderList1').on('tap', '.healthExamOrderList-c', function() {
+	var orderId = this.querySelectorAll('input')[0].value;
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: "healthExaminationOrderDetali",
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": 'healthExamOrderList1',
+			"orderId":orderId,
+			backid : backid,
+			backurl : backurl
+		}
+	});
+});
+
+mui('#healthExamOrderList2').on('tap', '.healthExamOrderList-c', function() {
+	var orderId = this.querySelectorAll('input')[0].value;
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: "healthExaminationOrderDetali",
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": "healthExamOrderList2",
+			"orderId":orderId,
+			backid : backid,
+			backurl : backurl
+		}
+	});
+});
+
+mui('#healthExamOrderList3').on('tap', '.healthExamOrderList-c', function() {
+	var orderId = this.querySelectorAll('input')[0].value;
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: "healthExaminationOrderDetali",
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": "healthExamOrderList3",
+			"orderId":orderId,
+			backid : backid,
+			backurl : backurl
+		}
+	});
+});
+
+mui('#healthExamOrderList4').on('tap', '.healthExamOrderList-c', function() {
+	var orderId = this.querySelectorAll('input')[0].value;
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: "healthExaminationOrderDetali",
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": "healthExamOrderList4",
+			"orderId":orderId,
+			backid : backid,
+			backurl : backurl
+		}
+	});
+});
+
+mui('#healthExamOrderList5').on('tap', '.healthExamOrderList-c', function() {
+	var oid = "healthExamOrderList5";
+	var orderId = this.querySelectorAll('input')[0].value;
+	var status = this.querySelectorAll('input')[1].value;
+	if (status == 0) {
+		oid = "cancal";
+	}else if (status == 8) {
+		oid = "back";
+	}
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: "healthExaminationOrderDetali",
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": oid,
+			"orderId":orderId,
+			backid : backid,
+			backurl : backurl
+		}
+	});
+});
+
+//绑定评价按钮事件
+mui('#healthExamOrderList2').on('click','#healthExaminationOrderList-pay',function(){
+	var ordersIndex = this.querySelectorAll('input')[0].value;
+	healthExaminationOrderList.submitOrderDetailsPay(ordersIndex);
+});
+
+//绑定评价按钮事件
+mui('#healthExamOrderList4').on('click','a',function(){
+	var orderEvaluateID = this.querySelectorAll('input')[0].value;
+	commomUtil.closeWebviewById('healthExaminationOrderDetali');
+	mui.openWindow({
+		id: 'healthExaminationOrderDetali',
+		url: "healthExaminationOrderDetali.html",
+		extras: {
+			"type": "healthExamOrderList4",
+			"orderId":orderEvaluateID
+		}
+	});
+});
+
+//绑定删除订单按钮事件
+mui('#healthExamOrderList5').on('click','a',function(){
+	var orderDeleteID = this.querySelectorAll('input')[0].value;
+	plus.nativeUI.confirm('您确认删除订单',function(e){
+		if(e.index == 0){
+			//删除订单
+			healthExaminationOrderList.orderOperate(2,orderDeleteID,'');
+		}
+	},'删除订单',["确认","取消"]);
+});
+
+//绑定回退按钮事件
+document.getElementById('healthExamOrderListReBackID').addEventListener('click', healthExaminationOrderList.rebackHealthExamination);

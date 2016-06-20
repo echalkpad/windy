@@ -1,0 +1,60 @@
+//初始化
+document.addEventListener('plusready', function() {
+	var self = plus.webview.currentWebview();
+	var packageId = self.packageId;
+	//初始化历史评价详情页面
+	healthExaminationPackageEvaluation.initHEPCommentList(packageId);
+});
+
+var healthExaminationPackageEvaluation = {
+	initHEPCommentList : function(packageId){
+		var requestHEPCommentList = 'packageId='+packageId;
+		jyapp.getApi({
+			method: 'HealthExamination/CommentList',
+			data:requestHEPCommentList,
+			timeout: 10000,
+			showWaiting : true,
+			onsuccess: function(response) {
+//				console.log("initHEPCommentList---->:"+JSON.stringify(response));
+				if(response.code != 1){
+					document.getElementById('healthExaminationPackageEvaluationOrderNoneID').style.display = 'block';
+					plus.nativeUI.alert(response.msg,'','健医宝','确认');
+					return false;
+				}else{
+					if(response.data && response.data.length > 0){
+						document.getElementById('healthExaminationPackageEvaluationOrderNoneID').style.display = 'none';
+						var dataValues = response.data;
+						var htmlHealthExaminationPackageEvaluation = '';
+						for(var i = 0; i < dataValues.length; i++){
+							htmlHealthExaminationPackageEvaluation += '<li class="mui-table-view-cell">';
+							htmlHealthExaminationPackageEvaluation += '	<section>';
+							htmlHealthExaminationPackageEvaluation += '		<img src="'+dataValues[i].Head+'" alt="" />';
+							htmlHealthExaminationPackageEvaluation += '		<h2>'+dataValues[i].NickName+'</h2>';
+							htmlHealthExaminationPackageEvaluation += '		<p id="healthExaminationPackageEvaluationXingXingID"><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span><span class="xing"></span></p>';
+							htmlHealthExaminationPackageEvaluation += '		<em>'+commomUtil.formatStringToDate(commomUtil.stringSplit(dataValues[i].CreateTime),1)+'</em>';
+							htmlHealthExaminationPackageEvaluation += '	</section>';
+							htmlHealthExaminationPackageEvaluation += '	<p class="ellipsis" id="healthExaminationPackageEvaluationpID"></p>';
+							htmlHealthExaminationPackageEvaluation += '</li>';
+							var ulXingXing = document.getElementById('healthExaminationPackageEvaluationXingXingID');
+							var ul_lisXing = ulXingXing.getElementsByTagName('span');
+							if(dataValues[i].Score){
+								dataValues[i].Score = 0;
+							}
+							for (var i = 0; i < parseInt(dataValues[i].Score); i++) {
+								ul_lisXing[i].className = 'xing xing-active';
+							}
+						}
+						document.getElementById('healthExaminationPackageEvaluationID').innerHTML = htmlHealthExaminationPackageEvaluation;
+						var hepeps = document.getElementById('healthExaminationPackageEvaluationpID');
+						hepeps.innerText = unescape((dataValues[i].Comment ? dataValues[i].Comment : "").replace(/\\/g, "%"));
+					}else{
+						document.getElementById('healthExaminationPackageEvaluationOrderNoneID').style.display = 'block';
+					}
+				}
+			},
+			onerror: function(e) {
+				console.log("initHEPCommentList:" + e);
+			}
+		});
+	}
+}

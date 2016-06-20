@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: #f2f6f9!important;
+			}
+			
+			.notes {
+				color: #9B9B9B;
+				float: right;
+				padding-right: 25px;
+				max-width:60%;
+			}
+			
+			textarea {
+				text-align: left;
+				height: 100px;
+				border: none;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				color: #9B9B9B;
+				font-size: 13px;
+				border-top: 10px solid #f2f6f9!important;
+			}
+			
+			.textarea {
+				color: #9B9B9B;
+				font-size: 13px;
+				overflow:hidden;
+				padding-bottom:20px;
+				position: relative;
+			}
+			.textarea small{
+				display:block;
+				position:absolute;
+				right:15px;
+				bottom:5px;
+			}
+			.upload {
+				position: relative;
+				border-top: 1px solid #CCCCCC;
+				padding-bottom: 30px;
+				padding-left: 15px;
+				padding-top: 10px;
+				overflow: hidden;
+			}
+			
+			.upload div {}
+			
+			.upload div span {
+				position: absolute;
+				right: 10px;
+				color: #8f8f94;
+				font-size: 13px;
+				bottom:5px;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.callDoctor-p {
+				background: #f2f6f9!important;
+				border: 10px solid #f2f6f9!important;
+				margin-bottom: 0;
+			}
+			
+			.medicationSave {
+				border: 20px solid #f2f6f9;
+				padding: 0;
+			}
+			
+			.medicationSave a {
+				margin-bottom: 0;
+				padding:0;
+				line-height:40px;
+				border-radius:5px;
+				font-size:16px;
+			}
+			
+			.button-select {
+				float: left;
+				display: block;
+				background: rgb(174, 174, 174);
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+			}
+			.button-select i{
+				display:block;
+				width:30px;
+				height:30px;
+				margin:10px auto;
+				background: url(../../img/btn_yongyao_add.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			
+			.upload .img-div {
+				width: 50px;
+				height: 50px;
+				position: relative;
+				float: left;
+				margin: 0 0px 0 10px;
+			}
+			
+			.upload img {
+				width: 50px;
+				height: 50px;
+			}
+			
+			.upload .img-div a:after {
+				font-size: 50px;
+				text-align: center;
+				content: '-';
+				position: absolute;
+				display: block;
+				width: 20px;
+				height: 20px;
+				line-height: 15px;
+				background: #f00;
+				border-radius: 50%;
+				color: #fff;
+				top: -5px;
+				right: -5px;
+			}
+			.mui-title {
+				right: 15px!important;
+			}
+			.mui-title a{
+				float: right;
+				font-size: 14px;
+				line-height: 3.5;
+			}
+			.mui-content input{
+				border:none;
+				outline: none;
+				text-align: right;
+				margin:0;
+				padding:0;
+				height:auto;
+			}
+			.mui-table-view-cell h2 {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell p {
+				font-size: 13px;
+			}
+			
+			.mui-table-view-cell h2 span {
+				font-size: 14px;
+				color: #4A4A4A;
+				padding-left: 10px;
+			}
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			.xingxing {
+				font-size: 18px;
+				float: right;
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">订购</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="cancerExpertsDetailsId">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../../img/default/yisheng_touxiang.png" id="cancerOrderImgId">
+						<div class="mui-media-body">
+							<h2 class="mui-ellipsis" id="cancerOrderH2Id"><span></span></h2>
+							<p class="mui-ellipsis" id="cancerOrderP1Id">接诊量： <span class="xingxing">★</span></p>
+							<p class="mui-ellipsis" id="cancerOrderP2Id"></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					填写使用者信息
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="">姓名<span class="redstars"></span><input type="text" class="notes mui-input-clear" placeholder="请输入姓名" id="nameId"/></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="wdjr">联系电话<span class="redstars"></span><input type="number" class="notes mui-input-clear" placeholder="请输入手机号码" id="phoneId"/></a>
+				</li>
+				
+			</ul>
+			<div class="textarea">
+				<textarea name="" rows="" cols="" id="textarea" oninput="getnum (event,1)" maxlength="201" placeholder="病情简要描述(不少于10字)"></textarea>
+				<small><span id="textarea-num">0</span>/200</small>
+			</div>
+			<div class="textarea">
+				<textarea name="" rows="" cols="" id="textarea2" oninput="getnum2 (event,0)" maxlength="201" placeholder="你希望得到什么帮助(不少于10字)"></textarea>
+				<small><span id="textarea-num2">0</span>/200</small>
+			</div>
+			<div class="upload">
+				<p>上传图片,检验单等    (最多添加四张)</p>
+				<div id="upload">
+					<a class="button button-select" onclick="galleryImgs()"><i></i></a><span></span>
+				</div>
+			</div>
+			<div class="medicationSave">
+				<a href="" class="mui-btn mui-btn-primary mui-btn-block" id="cancerOrderList">提交订单</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/cancerExperts/cancerOrder.js"></script>
+</html>

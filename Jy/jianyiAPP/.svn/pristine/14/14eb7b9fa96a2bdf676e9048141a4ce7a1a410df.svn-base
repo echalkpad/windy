@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{
+				background:none;
+				padding-bottom:60px;
+			}
+			.plan-info{
+				/*margin-top:25px ;*/
+				padding:5px 15px 0;
+				background:#fff;
+			}
+			.plan-info h2{
+				font-size:16px;
+				color:#333;
+				line-height:30px;
+			}
+			.plan-info small{
+				font-size:14px;
+				display:block;
+				color:#777;
+				padding-bottom:5px;
+			}
+			.plan-info article{
+				color:#777;
+				line-height:24px;
+				font-size: 14px;
+			}
+			.plan-info p{
+				border-top:1px solid #f1f1f1;
+				margin-top:8px;
+				line-height:36px;
+				margin-bottom:10px;
+				padding:0 15px 0 20px;
+				background: url(../../../img/healthy/icon_jigou.png) no-repeat scroll left center;
+				background-size:17px 16px;
+			}
+			.plan-info del{
+				font-size:16px;
+				margin-right:20px;
+			}
+			.plan-info strong{
+				font-weight:normal;
+				font-size:16px;
+				color:#F60404;
+				margin-right:10px;
+			}
+			.mui-table-view{
+				font-size:14px;
+				color:#4A4A4A;
+			}
+			.mui-table-view:before,.mui-table-view-cell:after{
+				background:#F1F1F1;
+			}
+			h3{
+				height:1px;
+				background:#ddd;
+				margin:30px 0;
+				text-align: center;
+			}
+			h3 span{
+				font-size:14px;
+				background:#f2f6f9;
+				padding:0 8px;
+				position: relative;
+				top:-15px;
+				color:#4A4A4A;
+			}
+			section p{
+				padding:0 15px;
+				font-size:14px;
+				color:#666;
+			}
+			.fixbottom{
+				width:100%;
+				background:#fff;
+				position: fixed;
+				bottom:0;
+				padding:5px 15px;
+			}
+			.fixbottom a{
+				display:block;
+				line-height:40px;
+				text-align:center;
+				color:#fff;
+				border-radius:5px;
+				background:#00b6f3;
+				font-size:16px;
+			}
+			.mui-slider {
+			    height: 160px;
+			}
+			.mui-slider p{
+				position:absolute;
+				background: url(../../../img/healthy/icon_tupianshibai.png) no-repeat scroll left center;
+				background-size:20px 18px;
+				padding-left:30px;
+				text-align:center;
+				top:50%;
+				left:50%;
+				margin-top:-5px;
+				-webkit-transform:translate(-50%);
+			}
+			.plan-banner img{
+				width:100%;
+				display:block;
+				height:auto;
+				max-height:160px;
+			}
+			
+			.function li a{
+				padding-left:50px!important;
+			}
+			.function li:nth-child(1) a{
+				background: url(../../../img/healthy/geneticDiagnosis/icon_jiancexiangmu.png) no-repeat scroll 15px center;
+				background-size:20px 12px;
+			}
+			.function li:nth-child(2) a{
+				background: url(../../../img/healthy/geneticDiagnosis/icon_changjianwenti.png) no-repeat scroll 15px center;
+				background-size:20px 20px;
+			}
+			.function li:nth-child(3) a{
+				background: url(../../../img/healthy/geneticDiagnosis/icon_lishipingjia.png) no-repeat scroll 15px center;
+				background-size:20px 16px;
+			}
+			.btn-add{
+				background: url(../../../img/healthy/btn_shoucang.png) no-repeat center center;
+   				background-size: 20px 20px;
+   				width:40px;
+			}
+			.collect{
+				background: url(../../../img/healthy/btn_shoucang_2.png) no-repeat center center;
+   				background-size: 20px 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">基因检测套餐</h1>
+			<a href="" class="btn-add mui-pull-right collect" style="font-size:14px;height: 44px;" id=""></a>
+		</header>
+		<div class="mui-content">
+			<div class="plan-banner">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop" id="testingPlanBannerSlderID">
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/tijian_1.png">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator" id="testingPlanBannerSlderPointID">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+					<p style="display: block;" id="testingPlanBannerPid">图片获取失败</p>
+				</div>
+			</div>
+			<div class="plan-info">
+				<h2 id="testingPlanh2id"><!--心脑血管基因检测--></h2>
+				<small id="testingPlanSmallId"><!--北京诺禾致源生物信息科技有限公司--></small>
+				<article id="testingarticleId"><!--针对心脑血管疾病、肝病、肾病、高血脂、骨质疏松等慢性病及常见肿瘤进行筛查，提供准确的早期预警，让你更好的了解目前身体状况，及早发现潜在的危险因素。--></article>
+				<p>市场价：<del id="testingdelId"><!--¥600--></del>健e价：<strong id="testingstrongId"><!--¥303--></strong></p>
+			</div>
+			<ul class="mui-table-view function">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="testItems">
+						检测项目<span id="testingPlanjcxmSumId">(5)</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="commonProblems">
+						常见问题<span id="cjwtNumId">(10)</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="historicalEvaluation">
+						历史评价<span id="lspjNumId">(6)</span>
+					</a>
+				</li>
+			</ul>
+			<h3><span>检测须知</span></h3>
+			<section>
+				<p>基因检测方法:唾液采集</p>
+				<p>1、样本采集前请使用清水漱口，漱口后30分钟内请勿进食、吸烟和饮酒等。</p>
+				<p>2、具体采集方法请参照采集器说明书进行采集。</p>
+				<p>3、如客户采样失败，并表示终止此次检测，需收工本费350元。</p>
+				<p>4、各类套餐包含一份检测样本采集器及一次检测样本采集器往返邮寄客户的快递费用。如第一次采集失败，客户需自行承担后续寄送的采集器及来回运费100元。</p>
+			</section>
+			<div class="fixbottom">
+				<a href="" id="package-about">立即预约</a>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/testingPlan.js" type="text/javascript" charset="utf-8"></script>
+</html>

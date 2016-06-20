@@ -1,0 +1,112 @@
+var pays = {};
+var payinfo = null;
+document.addEventListener("plusready", function() {
+	var self = plus.webview.currentWebview();
+	payinfo = self.payinfo;
+	var t = document.getElementById("totalfee")
+	t.innerText = payinfo.totalfee;
+	plus.payment.getChannels(function(channels) {
+		for (var i in channels) {
+			var channel = channels[i];
+			if (channel.id == 'qhpay' || channel.id == 'qihoo') { // 过滤掉不支持的支付通道：暂不支持360相关支付
+				continue;
+			}
+			pays[channel.id] = channel;
+		}
+	}, function(e) {
+		//console.log("获取支付通道列表失败：" + e.message);
+	});
+}, false);
+
+var paymentInfo = {
+	paymentInfobackCell: function() {
+		//		console.log(JSON.stringify(payinfo));
+		var backCells = payinfo.backCell;
+		var config = {
+			id: backCells.id,
+			url : backCells.url,
+			method: payinfo.method,
+			extras: {
+				backurl: payinfo.backid,
+				backid: payinfo.backurl,
+				index: backCells.index
+			}
+		}
+		commomUtil.backWebView(config);
+	}
+};
+//回退
+document.getElementById("paymentBackcell").addEventListener("click", paymentInfo.paymentInfobackCell);
+//取消支付
+document.getElementById("payment-cancel").addEventListener("click", paymentInfo.paymentInfobackCell);
+//绑定键盘回退事件
+//mui.back = function(e){
+//	paymentInfo.paymentInfobackCell();
+//}
+
+function numMulti(num1, num2) {
+	var baseNum = 0;
+	try {
+		baseNum += num1.toString().split(".")[1].length;
+	} catch (e) {}
+	try {
+		baseNum += num2.toString().split(".")[1].length;
+	} catch (e) {}
+	return Number(num1.toString().replace(".", "")) * Number(num2.toString().replace(".", "")) / Math.pow(10, baseNum);
+};
+
+var w = null;
+// 支付
+function pay(id) {
+	if (w) {
+		return;
+	} //检查是否请求订单中	
+	if (id == 'alipay' || id == 'wxpay') {} else {
+		plus.nativeUI.alert("当前环境不支持此支付通道！", null, "健医宝", "确认");
+		return;
+	}
+	if (!pays[id].serviceReady) {
+		plus.nativeUI.alert("当前环境不支持此支付通道！", null, "健医宝", "确认");
+		return
+	}
+	var totalfee = null;
+	if (id == 'wxpay') {
+		totalfee = parseInt(numMulti(payinfo.totalfee, 100));
+	} else {
+		totalfee = payinfo.totalfee;
+	}
+	w = plus.nativeUI.showWaiting();
+	//请求支付订单
+	jyapp.getApi({
+		method: 'Payment/' + id,
+		data: 'subject=' + payinfo.subject + '&body=' + payinfo.body + '&orderno=' + payinfo.orderno + '&totalfee=' + totalfee,
+		onsuccess: function(data) {
+			w.close();
+			w = null;
+			if (data.code == 1) {
+				plus.payment.request(pays[id], data.data, function(result) {
+					var openW = plus.webview.getWebviewById(payinfo.successpage.id);
+					plus.webview.close(openW);
+					//支付成功后跳转							
+					mui.openWindow({
+						id: payinfo.successpage.id,
+						url: payinfo.successpage.url,
+						createNew: true,
+						extras: {
+							payinfo: payinfo
+						}
+					});
+				}, function(e) {
+					plus.nativeUI.alert("", null, "支付失败：" + e.code, "确认");
+				});
+			} else {
+				plus.nativeUI.alert(data.msg, null, "支付失败", "确认");
+			}
+		},
+		onerror: function(e) {
+			w.close();
+			w = null;
+			plus.nativeUI.alert("获取订单信息失败！", null, "健医宝", "确认");
+		}
+	});
+}

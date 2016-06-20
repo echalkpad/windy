@@ -1,0 +1,36 @@
+var orderDetali1 = document.getElementById("healthExaminationOrderDetali1"),
+	orderDetali2 = document.getElementById("healthExaminationOrderDetali2"),
+	orderDetali3 = document.getElementById("healthExaminationOrderDetali3"),
+	orderDetali4 = document.getElementById("healthExaminationOrderDetali4"),
+	oRemark = document.getElementById("healthExaminationOrderDetali-remark"),
+	oCoupons = document.getElementById("healthExaminationOrderDetali-coupons"),
+	oPay = document.getElementById("healthExaminationOrderDetali-pay"),
+	oAppraise = document.getElementById("healthExaminationOrderDetali-appraise");
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	var type = self.type;
+	healthExaminationOrderDetali.type(type);
+})
+var healthExaminationOrderDetali = {
+	init: function() {},
+	type: function(type) {
+		switch (type) {
+			case 'spaOrderList1':
+				orderDetali1.style.display = 'block';
+				oRemark.style.display = 'block';
+				break;
+			case 'spaOrderList2':
+				orderDetali2.style.display = 'block';
+				oRemark.style.display = 'block';
+				oCoupons.style.display = 'block';
+				oPay.style.display = 'block';
+				break;
+			case 'spaOrderList3':
+				orderDetali3.style.display = 'block';
+				oAppraise.style.display = 'block';
+				break;
+			default:
+				orderDetali4.style.display = 'block';
+		}
+	}
+}

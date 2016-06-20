@@ -1,0 +1,24 @@
+mui('.mui-content').on('tap', '.spaAppointment1', function() {
+	mui.openWindow({
+		id: 'xiangshan.html',
+		url: "xiangshan.html"
+	})
+})
+mui('.mui-content').on('tap', '.spaAppointment2', function() {
+	mui.openWindow({
+		id: 'tangshan.html',
+		url: "tangshan.html"
+	})
+})
+mui('.mui-content').on('tap', '.spaAppointment3', function() {
+	mui.openWindow({
+		id: 'lanxin.html',
+		url: "lanxin.html"
+	})
+})
+mui('.mui-bar').on('tap', '#spaOrder', function() {
+	mui.openWindow({
+		id: 'spaOrder.html',
+		url: "spaOrder.html"
+	})
+})

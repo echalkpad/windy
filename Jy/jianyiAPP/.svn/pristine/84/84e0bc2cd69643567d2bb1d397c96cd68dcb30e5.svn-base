@@ -1,0 +1,77 @@
+function getnum(e) {
+	if (e.srcElement.textLength > 200) {
+		plus.nativeUI.alert( "请填写原因,最少10字，最多200字", "", "提示", "好的" );
+
+		return false;
+	}
+	var num = document.getElementById("textarea-num");
+	num.innerHTML = e.srcElement.textLength;
+
+}
+mui('.mui-content').on('tap','#textarea',function(){
+	this.focus();
+	this.innerHTML = '';
+})
+var checkId = 0;
+var orderId = 0;
+var backid = "";
+var backurl = "";
+document.addEventListener("plusready", function() {
+	checkId = 1;
+	var self = plus.webview.currentWebview();
+	orderId = self.orderId;
+//	console.log(self.orderId);
+	backid = self.backid;
+	backurl = self.backurl;
+});
+
+var nonPayment = {
+	initnonPayment : function(){
+		if(checkId == 1){
+			checkId ++;
+			var reason = document.getElementById("textarea").value;
+			if(!reason || reason == ""){
+				plus.nativeUI.alert("投诉原因不能为空!",'','健医宝','确认');
+				return false;
+			}
+//			console.log('orderId='+orderId+"&reason="+reason);
+			jyapp.getApi({
+	   			method: 'DoctorOnline/OrderReject',
+	   			data:'orderId='+orderId+"&reason="+reason,
+	   			timeout : 10000,
+	   			showWaiting: true,
+	   			onsuccess: function(data) {
+	   				checkId = 1;
+	   				var code = data.code;
+	   				if(code == 1){
+	   					var webviewId = "";
+	   					if(backid && backurl && backurl !="0"){
+	   						webviewId = backid;
+						}else{
+							webviewId = 'indexFamilyDoctor';
+						}
+						jyapp.backWebView({id:webviewId});
+	   				}else{
+	   					plus.nativeUI.alert(data.msg,'','健医宝','确认');
+	   				}
+	   			},
+	   			onerror: function(e) {
+	   				checkId = 1;
+	   				console.log("initnonPayment------>:"+e);
+//	   				plus.nativeUI.alert(e,'','健医宝','确认');
+	   			}
+	   		});
+	   	}
+	},
+	nonPaymentBackCell : function(){
+		jyapp.backWebView({id : "payOrderFailure"});
+	}
+}
+//绑定服务不好拒绝支付
+document.getElementById("nonPayMentRefer").addEventListener('click',nonPayment.initnonPayment);
+
+//绑定回退事件
+document.getElementById("nonPaymentBackCellId").addEventListener("click",nonPayment.nonPaymentBackCell);
+//mui.back = function(e){
+//	nonPayment.nonPaymentBackCell();
+//}

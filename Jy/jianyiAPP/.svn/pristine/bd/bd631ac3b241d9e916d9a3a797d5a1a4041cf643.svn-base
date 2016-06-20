@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+		</script>
+		<style type="text/css">
+			html,
+			body {
+				background: rgb(242, 246, 249)!important;
+			}
+			
+			.mui-table-view-cell:after,
+			.mui-table-view:after {
+				height: 0;
+			}
+			
+			.mui-segmented-control {
+				background-color: #fff;
+				border: none;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				position: relative;
+				background-color: #fff;
+				color: #00B6F3;
+
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active:after {
+				position: absolute;
+				content: '';
+				width: 100px;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				border-bottom: 1px solid #00B6F3;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				background-color: #fff;
+				color: #000;
+				border: none
+			}
+			
+			.mui-table-view .mui-media-object.mui-pull-left {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border-radius: 50%;
+				max-width: 60px;
+			}
+			
+			.mui-table-view-cell h2 {
+				letter-spacing: -1px;
+				overflow: hidden;
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(1) {
+				float: left;
+				height: 20px;
+				line-height: 20px;
+				font-size: 16px;
+			}
+			
+			.mui-ios .mui-table-view-cell {
+				border-bottom: 1px solid rgb(242, 246, 249);
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(2) {
+				float: left;
+				margin-left: 10px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 13px;
+
+			}
+			
+			.mui-table-view-cell h2 span:nth-child(3) {
+				height: 20px;
+				line-height: 20px;
+				font-size: 13px;
+				color: #8f8f94;
+				float: right;
+				margin-right: 10px;
+			}
+			
+			.mui-media-body p {
+				height: 40px;
+				line-height: 40px;
+				position: relative;
+				padding-right:80px;
+			}
+			
+			.mui-media-body p .pay {
+				text-align: center;
+				position: absolute;
+				top:6px;
+				right:0;
+				width: 70px;
+				height: 30px;
+				line-height: 30px;
+				display: block;
+				border:1px solid #f00;
+				color: #f00;
+				border-radius: 5px;
+			}
+			
+			.mui-media-body p .pay-end {
+				display: block;
+				float: right;
+				margin-right: 10px;
+				color: rgb(240, 145, 53);
+			}
+			.mui-media{
+				position: relative;
+			}
+			.mui-media-body p .pay-end img{
+				position: absolute;
+				bottom: 0;
+				right: 20px;
+				width: 70px;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:30%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="hidden" value="0" id="backWebviewId"/>
+		<input type="hidden" value="0" id="backWebviewUrl"/>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="familyDoctorBackId"></a>
+			<h1 class="mui-title">咨询记录</h1>
+		</header>
+		<div class="mui-content">
+			<div id="segmentedControl" class="mui-segmented-control border-b">
+				<a class="mui-control-item mui-active" href="#item1">
+					待支付
+				</a>
+				<a class="mui-control-item" href="#item2">
+					待评价
+				</a>
+				<a class="mui-control-item" href="#item3">
+					已完成
+				</a>
+			</div>
+
+			<div id="item1" class="mui-control-content mui-active ">
+				<ul class="mui-table-view" id="consultingRecordItem1Id">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院北京协和医院<span class="pay">支付</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span class="pay">支付</span></p>
+							</div>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="zwddpayId" style="display: none;">
+					<i></i>
+					暂无订单
+				</div>
+			</div>
+
+			<div id="item2" class="mui-control-content ">
+				<ul class="mui-table-view" id="consultingRecordItem2Id">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span class="pay">评价</span></p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span class="pay">评价</span></p>
+							</div>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="zwdddpjId" style="display: none;">
+					<i></i>
+					暂无订单
+				</div>
+			</div>
+			<div id="item3" class="mui-control-content ">
+				<ul class="mui-table-view" id="consultingRecordItem3Id">
+					<!--<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span class="pay-end"><img src="../../img/familyDoctor/bg_wancheng.png"/></span></p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="../../img/pic_people.png">
+							<div class="mui-media-body">
+								<h2><span>张三</span><span>主治医生</span><span>12-12 15:00</span></h2>
+								<p class="mui-ellipsis">北京协和医院<span class="pay-end"><img src="../../img/familyDoctor/bg_wancheng.png"/></span></p>
+							</div>
+						</a>
+					</li>-->
+				</ul>
+				<div class="order_none" id="zwddywcId" style="display: none;">
+					<i></i>
+					暂无订单
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/familyDoctor/consultingRecords.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

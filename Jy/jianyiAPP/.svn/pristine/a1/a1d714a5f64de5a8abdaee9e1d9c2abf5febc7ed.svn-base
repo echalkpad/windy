@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>JianyiAPP</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<style type="text/css">
+			.wz-top {
+				height: 200px;
+			}
+			
+			.wz-top a {
+				text-align: center;
+				display: block;
+			}
+			
+			.wz-t-l {
+				width: 33%;
+				float: left;
+			}
+			
+			.wz-t-r {
+				float: right;
+				width: 67%;
+			}
+			
+			.wz-t-r .wz-t-r-b .wz-t-r-bl {
+				width: 50%;
+				float: left;
+			}
+			
+			.wz-t-r .wz-t-r-b .wz-t-r-br {
+				width: 50%;
+				float: left;
+			}
+			
+			.jtys {
+				background: url(../img/icon_jiatingyisheng@2x.png) no-repeat center 50px;
+				background-size: 42px 42px;
+				border-right: 1px solid #f1f1f1;
+				height: 200px;
+				padding-top: 105px;
+			}
+			
+			.jtys h2,
+			.yygh h2 {
+				color: #000;
+				font-size: 16px;
+			}
+			
+			.jtys p,
+			.yygh p {
+				font-size: 13px;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+				overflow:hidden;
+				padding:0 2px;
+			}
+			.jtys p{
+				line-height:18px;
+				padding-top:5px;
+			}
+			.yygh {
+				width:200px;
+				margin:0 auto;
+				background: url(../img/icon_yuyueguahao@2x.png) no-repeat 28px center;
+				padding-top:35px;
+				padding-left: 78px;
+				background-size: 42px 42px;
+				height: 100px;
+				text-align: left!important;
+			}
+			.wz-t-r-b{
+				overflow:hidden;
+				border-top: 1px solid #f1f1f1;
+			}
+			.zlzj {
+				background: url(../img/icon_zhongliuzhuanjia@2x.png) no-repeat center 14px;
+				background-size: 42px 42px;
+				padding-top: 58px;
+				border-right: 1px solid #f1f1f1;
+				height:99px
+			}
+			
+			.mbzj {
+				background: url(../img/icon_manbinzhuanjia@2x.png) no-repeat center 14px;
+				background-size: 42px 42px;
+				padding-top: 58px;
+				height:99px
+			}
+			
+			.zlzj h2,
+			.mbzj h2 {
+				color: #000;
+				font-size: 16px;
+				margin-top: 8px;
+			}
+			
+			.wz-bottom ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				outline: 0;
+				border: 0
+			}
+			
+			.wz-bottom li {
+				width: 25%;
+				float: left;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			
+			.wz-bottom a {
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding-bottom: 5px;
+			}
+			
+			.wz-bottom a p {
+				width: 60px;
+				margin: 0 auto;
+				height: 60px;
+			}
+			
+			.wz-bottom a p img {
+				border-radius: 50%;
+			}
+			
+			.wz-bottom a h2 {
+				color: #000;
+				font-size: 14px;
+				padding-top: 8px;
+				padding-bottom: 4px;
+			}
+			
+			.wz-bottom a h3 {
+				color: #9B9B9B;
+				font-size: 13px;
+				line-height:16px;
+			}
+			
+			.mui-ellipsis {
+				padding: 0 5px;
+			}
+			
+			.maininer-nav {
+				position: relative;
+				height: 167px;
+				z-index: 6;
+				border-bottom: 6px solid #fff;
+			}
+			
+			.maininer-nav:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: #F1F1F1;
+				top: 83.5px;
+			}
+			
+			.maininer-nav:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 1px;
+				left: 50%;
+				height: 167px;
+				background: #F1F1F1;
+			}
+			
+			#initInterrogationRecommendID {
+				width: 100%;
+			}
+			
+			.maininer-nav a h2 {
+				padding-top: 5px;
+				color: #4A4A4A;
+				font-size: 13px;
+			}
+			
+			.maininer-nav img {
+				width: 45px;
+			}
+			
+			.maininer-nav a {
+				padding: 10px;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.maininer-nav .maininer-nav-l,
+			.maininer-nav .maininer-nav-c,
+			.maininer-nav .maininer-nav-r {
+				display: block;
+				float: left;
+				width: 30%;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			
+			.maininer-nav .maininer-nav-l a:nth-child(2),
+			.maininer-nav .maininer-nav-r a:nth-child(2) {
+				padding-bottom: 10px;
+			}
+			
+			.maininer-nav .maininer-nav-c {
+				width: 40%;
+				height: 167px;
+				position: relative;
+			}
+			
+			.maininer-nav .maininer-nav-c a {
+				margin-top: 43.25px;
+				position: relative;
+				z-index: 7;
+			}
+			
+			.maininer-nav .maininer-nav-c:after {
+				z-index: 6;
+				background: #fff;
+				top: 26.67125px;
+				left: 50%;
+				margin-left: -55px;
+				height: 110px;
+				transform: rotate(45deg);
+				width: 110px;
+				position: absolute;
+				display: block;
+				content: '';
+				border: 1px solid #F1F1F1;
+				border-radius: 30px;
+			}
+			.zwtj{
+				padding-left: 10px;
+			}
+			.mui-content{background:none;}
+			.mui-scroll{background:#fff;}
+			.info-none{
+				display:none;
+				width:80px;
+				height:auto;
+				top:50px;
+				position: absolute;
+				left:50%;
+				-webkit-transform:translateX(-50%);
+			}
+			.wz-bottom{
+				height:190px;
+				position:relative;
+			}
+			.wz-bottom h3{
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="mui-content wz-top">
+						<div class="wz-t-l">
+							<a href="" class="jtys" id="familyDoctor">
+								<h2>家庭医生</h2>
+								<p>描述症状<br />快速解答</p>
+							</a>
+						</div>
+						<div class="wz-t-r">
+							<div class="wz-t-r-t">
+								<a href="" class="yygh" id="appointmentRegister">
+									<h2>预约挂号</h2>
+									<p>三甲医院知名专家</p>
+								</a>
+							</div>
+							<div class="wz-t-r-b">
+								<div class="wz-t-r-bl">
+									<a href="" class="zlzj" id="cancerExperts"><h2>肿瘤专家</h2></a>
+								</div>
+								<div class="wz-t-r-br">
+									<a href="" class="mbzj" id="SlowExperts"><h2>慢病专家</h2></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mui-content wz-bottom border-t" id="initInterrogationRecommendID" style="width: 100%;">
+						<div class="title f13">
+							肿瘤专家推荐
+						</div>
+						<ul id="mainInterrogationFeatureId">
+							<!--<li>
+								<a href="">
+									<p><img src="../img/pic_people.png" alt="" /></p>
+									<h2>医生甲</h2>
+									<h3>主治医师</h3>
+									<h3 class="mui-ellipsis">复旦大学华但是发觉得舒服大家佛多久啊分</h3>
+									<h3>外科</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p><img src="../img/pic_people.png" alt="" /></p>
+									<h2>医生甲</h2>
+									<h3>主治医师</h3>
+									<h3 class="mui-ellipsis">复旦大学华但是发觉得舒服大家佛多久啊分</h3>
+									<h3>外科</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p><img src="../img/pic_people.png" alt="" /></p>
+									<h2>医生甲</h2>
+									<h3>主治医师</h3>
+									<h3 class="mui-ellipsis">复旦大学华但是发觉得舒服大家佛多久啊分</h3>
+									<h3>外科</h3>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p><img src="../img/pic_people.png" alt="" /></p>
+									<h2>医生甲</h2>
+									<h3>主治医师</h3>
+									<h3 class="mui-ellipsis">复旦大学华但是发觉得舒服大家佛多久啊分</h3>
+									<h3>外科</h3>
+								</a>
+							</li>	-->
+						</ul>
+						<img class="info-none" id="maincancerImgzwsj" src="../img/icon_zanwutuijian.png"/>
+					</div>
+					<div class="mui-content wz-bottom border-t" id="mainShow">
+						<div class="title f13">
+							慢病专家推荐
+						</div>
+						<ul id="mainSlowRecommendDoctorID">
+						</ul>
+						<img class="info-none" id="mainShowImgzwsj" src="../img/icon_zanwutuijian.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/core/config.js"></script>
+	<script src="../js/core/common.js"></script>
+	<script type="text/javascript" src="../js/util/common_util.js"></script>
+	<script src="../js/route.js"></script>
+	<script src="../js/mainInterrogation.js"></script>
+	<script type="text/javascript">
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					callback: pulldownRefresh
+				}
+			}
+		});
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				//初始化推荐医生数据列表
+				mainInterrogation.initInterrogationRecommend();
+				//初始化特色医生数据列表
+				mainInterrogation.initMainSlowRecommend();
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+			}, 1500);
+		}
+	</script>
+
+</html>

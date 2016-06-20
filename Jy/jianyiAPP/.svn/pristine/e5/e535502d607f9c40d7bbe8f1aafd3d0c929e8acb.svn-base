@@ -1,0 +1,16 @@
+mui('.mui-content').on('tap', 'li', function() {
+	var oid = this.parentNode.parentNode.id;
+	if (this.parentNode.className == 'canceledList') {
+		oid = 'cancel';
+	}else if(this.parentNode.className == 'refundedList'){
+		oid = 'refund';
+	}
+	console.log(oid);
+	mui.openWindow({
+		id: 'geneticOrderDetail',
+		url: "geneticOrderDetail.html",
+		extras: {
+			"type": oid
+		}
+	})
+})

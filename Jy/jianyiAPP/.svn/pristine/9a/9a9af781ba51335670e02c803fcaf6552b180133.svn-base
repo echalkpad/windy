@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			.mui-content p {
+				margin: 0;
+			}
+			
+			.spaAppointment article{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				/*background-image: -webkit-gradient(linear, left 0%, left 100%, from(transparent), to(#000));
+				background-image: -webkit-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: -moz-linear-gradient(top, transparent 0%, #000 100%);
+				background-image: linear-gradient(to bottom, transparent 0%, #000000 100%);*/
+				background-repeat: repeat-x;
+				position: relative;
+				margin-top: 0;
+			}
+			.spaAppointment article:after{
+				display:block;
+				position: absolute;
+				top:0;
+				width:100%;
+				height:100%;
+				background-image: -webkit-linear-gradient(top, transparent 75%, rgba(0,0,0,.8) 100%);
+				content:"";
+				
+			}
+			
+			.spaAppointment h2{
+				color: #fff;
+				font-size: 17px;
+				position: absolute;
+				bottom: 10px;
+				width:100%;
+				margin-left: 15px;
+				padding-right:85px;
+				overflow:hidden;
+				text-overflow: ellipsis;
+				white-space:nowrap;
+			}
+			.spaContent span{
+				display:block;
+				position:absolute;
+				color:#fff;
+				bottom:10px;
+				right:0;
+				width:auto;
+				padding:0 5px 0 8px;
+				max-width:85px;
+				overflow:hidden;
+				height:22px;
+				text-align: center;
+				line-height:22px;
+				background: url(../../../img/healthy/geneticDiagnosis/bg_tag.png) no-repeat scroll top left;
+				background-size:cover;
+				font-size:14px;
+			}
+			.spaAppointment article{
+				background-color:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.3)), to(rgba(0,0,0,.5)));
+				background-repeat:no-repeat;
+				background-position:center center;
+				background-size: cover;
+			}
+			.spaAppointment article img{
+				display:block;
+				width:100%;
+				height:auto;
+			}
+			
+			.spaContent{
+				position:absolute;
+				width:100%;
+				height:100%;
+				z-index:1;
+				top:0;
+			}
+			.spaAppointment p{
+				height:40px;
+				line-height:45px;
+				margin-bottom:10px;
+				padding:0 15px;
+				background:#fff;
+			}
+			.spaAppointment del{
+				font-size:16px;
+				margin-right:20px;
+			}
+			.spaAppointment strong{
+				font-weight:normal;
+				font-size:16px;
+				color:#F60404;
+				margin-right:10px;
+			}
+			.gene{
+				width:100%;
+			}
+			.gene img{
+				display:block;
+				width:100%;
+				height:auto;
+				max-height: 160px;
+			}
+			.gene-nav{
+				width:100%;
+				height:100px;
+				background:#fff;
+				margin-bottom:10px;
+			}
+			.gene-nav a{
+				display:block;
+				width:33.33%;
+				height:100%;
+				float:left;
+				border-left:1px solid #f1f1f1;
+				color:#333;
+				text-align: center;
+				padding-top:60px;
+				font-size:14px;
+			}
+			.gene-nav a:nth-child(1){
+				border:0;
+				background: url(../../../img/healthy/geneticDiagnosis/icon_fuwujieshao.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			.gene-nav a:nth-child(2){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_taocan.png) no-repeat scroll center 20px;
+				background-size:30px 30px;
+			}
+			.gene-nav a:nth-child(3){
+				background: url(../../../img/healthy/geneticDiagnosis/icon_kefu.png) no-repeat scroll center 20px;
+				background-size:24px 30px;
+			}
+			.order_none{
+				width:100px;
+				position: fixed;
+				top:40%;
+				left:50%;
+				margin-left:-50px;
+				text-align: center;
+				font-size:14px;
+				color:#999;
+			}
+			.order_none i{
+				display:block;
+				width:30px;
+				height:36px;
+				margin:10px auto;
+				background: url(../../../img/icon_dingdan.png) no-repeat scroll top left;
+				background-size:cover;
+			}
+			/*.mui-slider{
+				height:165px;
+				position: relative;
+			}*/
+			.gene .mui-slider p{
+				position:relative;
+				height:150px;
+			}
+			.gene .mui-slider p a{
+				position:absolute;
+				background: url(../../../img/healthy/icon_tupianshibai.png) no-repeat scroll left center;
+				background-size:20px 18px;
+				padding-left:30px;
+				text-align:center;
+				top:50%;
+				left:50%;
+				margin-top:-5px;
+				-webkit-transform:translate(-50%);
+				color:#666;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="geneticDiagnosisBackCellId"></a>
+			<h1 class="mui-title">基因检测</h1>
+			<a href="" class="btn-add mui-pull-right" style="line-height: 44px;" id="geneticOrder">我的预约</a>
+		</header>
+		<div class="mui-content">
+			<div class="gene">
+				<div id="slider" class="mui-slider geneBanner">
+					<div class="mui-slider-group mui-slider-loop" id="geneticDiagnosisSliderId">
+						<script id="geneticDiagnosisSlidertpl1" type="text/template">
+							{@each list as it,index} {@if index==0}
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate" URL=${it.lastURL} description=${it.lastDescription}>
+								<a href="#">
+									<img src=${it.lastPic}>
+									<!--<img src="../img/common/pic_home_banner.png">-->
+								</a>
+							</div>
+							{@/if}
+							<!-- 第N张 -->
+							<div class="mui-slider-item" URL=${it.URL} description=${it.Description}>
+								<a href="#">
+									<img src=${it.Pic}>
+								</a>
+							</div>
+							{@if index==(list.length-1)}
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate" URL=${it.firstURL} description=${it.firstDescription}>
+								<a href="#">
+									<img src=${it.firstPic}>
+								</a>
+							</div>
+							{@/if} {@/each}
+						</script>
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<!--<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+						<!-- 第一张 -->
+						<!--<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+						<!-- 第二张 -->
+						<!--<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+						<!-- 第三张 -->
+						<!--<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+						<!-- 第四张 -->
+						<!--<div class="mui-slider-item">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<!--<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../../../img/healthy/geneticDiagnosis/pic_jiyinjiance_banner.png">
+							</a>
+						</div>-->
+					</div>
+					<div class="mui-slider-indicator" id="geneticDiagnosisSliderId2">
+						<div class="mui-indicator mui-active"></div>
+						<script id="geneticDiagnosisSlidertpl2" type="text/template">
+							{@each list as it} {@if index != (list.length-1)}
+							<div class="mui-indicator"></div>
+							{@/if} {@/each}
+						</script>
+					</div>
+					<p style="display: none;" id="geneticDiagnosisPid"><a href="">图片获取失败</a></p>
+				</div>
+			</div>
+			<div class="gene-nav">
+				<a href="" id="serviceIntroduce">服务介绍</a>
+				<a href="" id="choosePackage">套餐选择</a>
+				<a href="" id="clientsAbout">客服代约</a>
+			</div>
+			<div id="geneticDiagnosisDataId">
+				<!--<div class="spaAppointment spaAppointment1">
+					<a href="">
+						<article>
+							<img src="../../../img/healthy/geneticDiagnosis/taocan_1.png" alt="" />
+							<div class="spaContent">
+								<h2>肿瘤全套基因检测</h2>
+								<span>类型</span>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment2">
+					<a href="">
+						<article>
+							<img src="../../../img/healthy/geneticDiagnosis/taocan_2.png" alt="" />
+							<div class="spaContent">
+								<h2>心脑血管基因检测</h2>
+								<span>类型</span>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment3">
+					<a href="">
+						<article>
+							<img src="../../../img/healthy/geneticDiagnosis/taocan_3.png" alt="" />
+							<div class="spaContent">
+								<h2>烟酒茶(咖啡)损伤及成瘾套餐</h2>
+								<span>类型</span>
+							</div>
+						</article>
+						<p>市场价：<del>¥600</del>健e价：<strong>¥303</strong></p>
+					</a>
+				</div>
+				<div class="spaAppointment spaAppointment4">
+					<a href="">
+						<article>
+							<img src="../../../img/healthy/geneticDiagnosis/taocan_4.png" alt="" />
+							<div class="spaContent">
+								<h2>健康尊享套餐</h2>
+								<span>类型</span>
+							</div>
+						</article>
+						<p><strong>¥303</strong>赠送价值4000元十五号不耐受检测</p>
+					</a>
+				</div>-->
+			</div>
+			<div class="order_none" id="geneticDiagnosiszwsjId" style="display: none;">
+				<i></i>
+				暂无套餐
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/core/config.js"></script>
+	<script src="../../../js/core/common.js"></script>
+	<script src="../../../js/util/common_util.js"></script>
+	<script src="../../../js/route.js"></script>
+	<script src="../../../js/healthy/geneticDiagnosis/geneticDiagnosis.js" type="text/javascript" charset="utf-8"></script>
+</html>

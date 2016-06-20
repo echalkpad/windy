@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{background:none;}
+			h2{
+				font-size:14px;
+				color:#333;
+			}
+			article{
+				height:50px;
+				margin-top:10px;
+				background: #fff;
+				padding:0 15px;
+			}
+			article h2{
+				line-height: 50px;
+			}
+			section{
+				width:55%;
+				float:right;
+			}
+			section span{
+				display:block;
+				width:25%;
+				float: left;
+				height:50px;
+				background: url(../../img/medication/icon_deng1.png) no-repeat scroll center 10px;
+				background-size:15px 20px;
+				box-sizing:border-box;
+				padding-top:30px;
+			}
+			section span:nth-child(2){
+				background: url(../../img/medication/icon_deng2.png) no-repeat scroll center 10px;
+				background-size:15px 20px;
+			}
+			section span:nth-child(3){
+				background: url(../../img/medication/icon_deng3.png) no-repeat scroll center 10px;
+				background-size:15px 20px;
+			}
+			section span:nth-child(4){
+				background: url(../../img/medication/icon_deng4.png) no-repeat scroll center 10px;
+				background-size:15px 20px;
+			}
+			section i{
+				display: none;
+				height:12px;
+				background: url(../../img/medication/icon_choose.png) no-repeat scroll center bottom;
+				background-size: 16px 12px;
+			}
+			section .active i{
+				display: block;
+			}
+			.mui-table-view h2 i{
+				display:block;
+				float:right;
+				width:28px;
+				height:16px;
+				background: url(../../img/btn_down.png) no-repeat scroll center center;
+				background-size: 12px 7px;
+			}
+			.mui-table-view-cell{padding:20px 15px;}
+			.mui-table-view p{
+				margin-top:10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">用药安全查询结果</h1>
+		</header>
+		<div class="mui-content">
+			<article>
+				<h2 class="mui-pull-left">警示级别：<span>黑灯&nbsp;严重</span></h2>
+				<section>
+					<span class="active"><i></i></span>
+					<span><i></i></span>
+					<span><i></i></span>
+					<span><i></i></span>
+				</section>
+			</article>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<h2>互相作用<i></i></h2>
+					<p>地高辛可通过肠胃中的某些生物破坏而从机体内排除，而头孢为第二代头孢菌素类抗生素，它可间接增加地高辛的吸收使用浓度升高而引起中毒反应，且地高辛治疗窗极窄，毒副反应严重可致死。</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<h2>配伍浓度<i></i></h2>
+					<p>无</p>
+				</li>
+				<li class="mui-table-view-cell">
+					<h2>重复用药<i></i></h2>
+					<p>无</p>
+				</li><li class="mui-table-view-cell">
+					<h2>药物禁忌<i></i></h2>
+					<p>无</p>
+				</li>
+				
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+
+</html>

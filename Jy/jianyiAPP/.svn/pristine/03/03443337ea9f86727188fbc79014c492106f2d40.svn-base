@@ -1,0 +1,104 @@
+//倒计时
+var num = 600;
+var otime = document.getElementById("time");
+var refresh = document.getElementById("refresh");
+var cltime = document.getElementById("cleartimeDoctorIng")
+var gohome = document.getElementById("gohome");
+var orderId = 0;
+var check = 1;
+
+function minusOne() {
+	var m = num / 60;
+	var s = num % 60;
+	num--;
+	if (num < -1) {
+		var img = document.querySelector(".mui-content img");
+		var oh2 = document.getElementById("h2");
+		var oh3 = document.getElementById("h3");
+		cltime.style.display = 'none';
+		refresh.style.display = 'block';
+		gohome.style.display = 'block';
+		oh2.innerHTML = '您好，很抱歉暂时没有医生接您的单，';
+		oh3.innerHTML = '可能是医生比较忙，可以再发一次试哦～';
+		img.src = '../../img/familyDoctor/gif_phone_fail.png';
+		img.setAttribute('style', 'height:100px;width:100px;margin:100px auto');
+		clearInterval(time);
+		return false
+	}
+	if (!(s.toString().length != 1)) {
+		s = '0' + s.toString();
+	}
+	otime.innerHTML = Math.floor(m) + ':' + s;
+
+}
+var time = setInterval(function() {
+	minusOne()
+}, 1000);
+window.onload = function() {
+	minusOne();
+}
+document.getElementById("gohome").addEventListener('tap', function() {
+	clearInterval(time);
+	mui.openWindow({
+		id: "indexFamilyDoctor",
+		url: "indexFamilyDoctor.html",
+	});
+})
+document.getElementById("refresh").addEventListener('tap', function() {
+	clearInterval(time);
+	mui.openWindow({
+		id: 'callDoctor',
+		url: "callDoctor.html"
+	});
+})
+
+document.addEventListener("plusready", function() {
+	setTimeout(function() {
+		commomUtil.closeWebviewById("check");
+	}, 10000);
+	
+	var self = plus.webview.currentWebview();
+	orderId = self.orderId;
+	//绑定取消呼叫事件
+	check = 1;
+	document.getElementById("cleartimeDoctorIng").addEventListener('tap', callDoctorIng.cleartimeDoctorIngClick);
+}, false);
+
+var callDoctorIng = {
+	cleartimeDoctorIngClick: function() {
+		if (check == 1) {
+			check++;
+//			console.log("calldoctoring");
+			clearInterval(time);
+			//取消呼叫医生
+			jyapp.getApi({
+				method: 'DoctorOnline/CancelCall',
+				data: 'orderId=' + orderId,
+				timeout: 10000,
+				onsuccess: function(data) {
+					check = 1;
+//					console.log(JSON.stringify(data));
+					var code = data.code;
+					if (code == 1) {
+						jyapp.backWebView({id:"callDoctor"});
+					} else {
+						plus.nativeUI.alert(data.msg, '', '提示', '确认');
+					}
+				},
+				onerror: function(e) {
+					check = 1;
+					console.log("initcancerExperts:" + e);
+//					plus.nativeUI.alert(e,'','提示','确认');
+				}
+			});
+		}
+	},
+	callDocIngBackCell : function(){
+		jyapp.backWebView({id:"indexFamilyDoctor"});
+	}
+}
+//绑定回退按钮
+document.getElementById("callDocIngBackCellId").addEventListener("tap",callDoctorIng.callDocIngBackCell);
+//mui.back = function(e){
+//	callDoctorIng.callDocIngBackCell();
+//}

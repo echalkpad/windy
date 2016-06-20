@@ -1,0 +1,15 @@
+//高血压菜谱
+mui(".diet-content").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'highPressureMenu',
+		url: "highPressureMenu.html",
+	});
+})
+
+//食物库
+mui(".diet-top").on('tap', 'a', function() {
+	mui.openWindow({
+		id: 'foodLib',
+		url: "foodLib.html",
+	});
+})

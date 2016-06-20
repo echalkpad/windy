@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>对症寻药详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+		<link rel="stylesheet" href="../../../css/common.css">
+		<style type="text/css">
+			.symptomaticTop img {
+				padding: 20px;
+			}
+			.symptomaticTop h2 {
+				padding: 10px 0 0 17px;
+				border-top: 1px solid rgba(000, 000, 000, .08);
+				color: #4A4A4A;
+				font-size: 16px;
+			}
+			
+			.symptomaticTop h3 {
+				padding: 10px 0 0 17px;
+				font-size: 13px;
+				color: #9B9B9B;
+			}
+			.ellipsis{
+				color: #9B9B9B;
+				padding-left: 17px;
+			}
+			.symptomaticBottom{
+				overflow: hidden;
+				padding: 10px;
+			}
+
+			.symptomaticBottom h2{
+				padding-bottom: 7px;
+				color: rgb(241,151,44);
+				font-size: 14px;
+			}
+			.symptomaticBottom p{
+				padding-left: 7px;
+				color: #9B9B9B;
+				margin-bottom: 20px;
+			}
+			.symptomaticBottom article{
+				margin-bottom: 20px;
+				height: 50px;
+				line-height: 50px;
+				position: relative;
+			}
+			.symptomaticBottom article h2{
+				padding-bottom: 0;
+				z-index: 6;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				background: #9B9B9B;
+				content: '';
+				width: 100%;
+				height: 1px;
+			}
+			.symptomaticBottom article p{
+				text-align: center;
+				background: #fff;
+				z-index: 7;
+				width: 90px;
+				margin-left: -45px;
+				left: 50%;
+				position: absolute;
+				font-size: 14px;
+				color: #9B9B9B;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">对症药品</h1>
+		</header>
+		<div class="mui-content">
+			<div class="symptomaticTop">
+				<img src="../../../img/medication/symptomaticMedicine/yao_pic_big.png" alt="" onerror="this.src='../img/default/huiyuan_touxiang.png';this.onerror=null" />
+				<h2>药品名</h2>
+				<h3>中性药</h3>
+				<p class="ellipsis">啊的发奋啊的发髻万恶就哦我</p>
+			</div>
+			<div class="symptomaticBottom border-t">
+				<article>
+					<h2></h2>
+					<p>药品说明书</p>
+				</article>
+				<h2>【药品名称】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【成分】</h2>
+				<p>的哦啊解放的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊多久啊</p>
+				<h2>【性状】</h2>
+				<p>的哦啊解的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊放多久啊</p>
+				<h2>【功能主治】</h2>
+				<p>的哦的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊啊解放多久啊</p>
+				<h2>【规格】</h2>
+				<p>的哦啊解放多的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊久啊</p>
+				<h2>【用法用量】</h2>
+				<p>的哦啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊解放多久啊</p>
+				<h2>【不良反应】</h2>
+				<p>的哦啊解放多的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊久啊</p>
+				<h2>【禁忌】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【注意事项】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【药物相互作用】</h2>
+				<p>的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊</p>
+				<h2>【药理作用】</h2>
+				<p>的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊的哦啊解放多久啊</p>
+				<h2>【贮藏】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【包装】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【有效期】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【批准文号】</h2>
+				<p>的哦啊解放多久啊</p>
+				<h2>【生产企业】</h2>
+				<p>企业名称：的哦啊解放多久啊<br>生产地址：的哦啊解放多久啊<br>联系电话：020-287978<br>如有问题可与生产企业联系</p>
+			</div>
+		</div>
+	</body>
+	<script src="../../../js/mui.min.js"></script>
+	<script src="../../../js/route.js"></script>
+
+</html>

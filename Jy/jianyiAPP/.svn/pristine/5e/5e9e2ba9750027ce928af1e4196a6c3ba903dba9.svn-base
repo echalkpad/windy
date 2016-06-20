@@ -1,0 +1,32 @@
+//检测项目
+mui("#packageContent").on('tap', 'a', function() {
+	commomUtil.closeWebviewById('testingPlan');
+	mui.openWindow({
+		id: 'testingPlan',
+		url: "testingPlan.html"
+	});
+})
+
+
+
+var Jynav=document.getElementById("jytc-nav").children;
+var JySearch=document.getElementById("jytcSearch");
+var ulSearch=JySearch.getElementsByTagName('ul');
+
+//筛选
+mui.each(ulSearch,function(i,t){
+  Jynav[i].index = i;
+  Jynav[i].onclick=function(){
+  	mui('#jytcSearch').popover('show');
+  	var j=this.index;
+  	for(var k=0;k<3;k++){
+  		ulSearch[k].setAttribute('class','mui-table-view');
+  	}
+  	ulSearch[j].setAttribute('class','mui-table-view selector');
+  }
+})
+
+//滑动
+mui('.mui-scroll-wrapper').scroll({
+	deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+});

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			article img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			
+			.expertsEntrance {
+				margin: 0;
+				padding: 0;
+				background: #fff;
+			}
+			
+			.expertsEntrance:after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			
+			.expertsEntrance li {
+				list-style: none;
+				width: 33.33%;
+				float: left;
+			}
+			
+			.expertsEntrance a {
+				display: block;
+				height: 110px;
+				padding-top: 70px;
+				text-align: center;
+				border-right: 1px solid #f2f6f9;
+			}
+			
+			.expertsEntrance li:nth-child(1) a {
+				background: url(../../img/cancerExperts/btn_yiyuan.png) no-repeat scroll center 24px;
+				background-size: 40px 36px;
+			}
+			
+			.expertsEntrance li:nth-child(2) a {
+				background: url(../../img/cancerExperts/btn_jibin.png) no-repeat scroll center 24px;
+				background-size: 40px 34px;
+			}
+			
+			.expertsEntrance li:nth-child(3) a {
+				background: url(../../img/cancerExperts/btn_sousuo.png) no-repeat scroll center 20px;
+				background-size: 40px 40px;
+				border: 0;
+			}
+			
+			.expertsEntrance h2 {
+				font-size: 18px;
+				color: #333;
+			}
+			
+			.events {
+				margin: 15px auto;
+				background: #fff;
+			}
+			
+			.events ul:last-child {
+				border-top: 15px solid #f2f6f9;
+			}
+			
+			.events h2 {
+				color: #999;
+				font-size: 16px;
+				padding: 15px 0 5px 15px;
+			}
+			
+			.events .mui-table-view:before {
+				display: none;
+			}
+			
+			.events img {
+				border-radius: 50%;
+				float: left;
+				width: 70px;
+				height: auto;
+				margin-right: 10px;
+			}
+			
+			.events p {
+				font-size: 14px;
+				line-height: 22px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.events section {
+				position: relative;
+			}
+			
+			.events section h3 {
+				padding-right: 55px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				line-height: 24px;
+				font-size: 16px;
+			}
+			
+			.events span {
+				display: block;
+			}
+			
+			.events small {
+				font-size: 16px;
+			}
+			
+			.events strong {
+				position: absolute;
+				right: 0;
+				top: 2px;
+				color: #ff5e5e;
+				font-size: 18px;
+			}
+			
+			.events em {
+				font-style: normal;
+				font-size: 16px;
+				color: #333;
+			}
+			
+			.zl-title-yy {
+				float: right;
+				line-height: 44px;
+			}
+			
+			.mui-slider {
+				height: 160px;
+			}
+			
+			#pullrefresh3 {
+				top: 50px
+			}
+			
+			.mui-bar-nav~.mui-content .mui-pull-top-pocket {
+				top: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="rebackMainInterrogationID"></a>
+			<h1 class="mui-title">慢病专家</h1>
+			<a href="" class="zl-title-yy" id="goSlowOrderList">我的预约</a>
+		</header>
+		<div class="mui-content">
+
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/route.js"></script>
+	<!--<script src="../../js/SlowExperts/SlowExperts.js"></script>-->
+	<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			gestureConfig:{
+				doubletap:true
+			},
+			subpages:[{
+				url:'SlowExperts.html',
+				id:'SlowExperts.html',
+				styles:{
+					top: '50px',
+					bottom: '0px',
+				}
+				
+			}]
+		});
+		
+		var slowExperts1={
+			rebackMainInterrogation : function(){
+				var mianPage = plus.webview.getLaunchWebview();
+				mui.openWindow({
+					id : mianPage.id,
+					url : mianPage.uri,
+					extras : {
+						index:1
+					}
+				});
+			}
+		}
+		
+		//绑定回退事件
+		document.getElementById("rebackMainInterrogationID").addEventListener("click",slowExperts1.rebackMainInterrogation);
+//		//绑定手机虚拟回退键
+//		mui.back = slowExperts1.rebackMainInterrogation;
+	</script>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<script src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/jquery.fullPage.css">
+		<style type="text/css">
+			html,
+			body {
+				background: #fff!important;
+			}
+			
+			.mui-content {
+				text-align: center;
+			}
+			.section { text-align: center; font: 14px "Microsoft Yahei"; color: #fff;}
+			
+			.section article{
+				margin-top:50px;
+				position: relative;
+			}
+			article img{
+				display:block;
+				width:72%;
+				height:auto;
+				margin:0 auto;
+			}
+			.section strong{
+				display:block;
+				font-size:20px;
+				font-weight:normal;
+			}
+			.click{
+				width:35%;
+				position: absolute;
+				top:60%;
+				left:50%;
+				-webkit-animation:click 1.5s ease infinite;
+			}
+			@-webkit-keyframes click{
+				from{
+					-webkit-transform:translate(0,0);
+				}
+				to{
+					-webkit-transform:translate(-30%,-30%);
+				}
+			}
+			.section p {
+				position: absolute;
+				left: 200%;
+				font-size:16px;
+				color:#fff;
+				width:90%;
+				border-radius:8px;
+				background:rgba(0,0,0,.6);
+				top:26%;
+				line-height:26px;
+				text-align: center;
+				padding:10px;
+				-webkit-transform:translate(-50%);
+			}
+			section{
+				width:60%;
+				height:30px;
+				margin:0 auto;
+				position:absolute;
+				top:-30px;
+				left:50%;
+				-webkit-transform:translateX(-50%);
+			}
+			section span{
+				display:inline-block;
+				width:20px;
+				height:20px;
+				font-size:12px;
+				line-height:20px;
+				background:#ADA7A7;
+				border-radius:50%;
+				margin-right:5px;
+				position: relative;
+			}
+			section .on{
+				background:#00b6f3;
+			}
+			section i,section em{
+				font-style:normal;
+				display:block;
+				width:20px;
+				height:20px;
+				border-radius: 50%;
+				top:0;
+				left:0;
+				position:absolute;
+				
+			}
+			section i{
+				display:none;
+				background:#ADA7A7;
+			}
+			section em{z-index:3;}
+			.section2 p{
+				top:11%;
+				border-radius:0;
+				padding:12px 0;
+				width:72%;
+			}
+			.section2 .p2{
+				top:25%;
+				padding:6px 0;
+			}
+			.section2 .p3{
+				top:43%;
+				padding:6px 0;
+			}
+			@media screen and (min-width:375px) {
+				.section2 p{padding:18px 0;}
+				.section2 .p2{padding:10px 0;}
+				.section2 .p3{padding:12px 0;}
+			}
+			
+			.section2 h3{
+				position: absolute;
+				width:72%;
+				font-size:18px;
+				left:-200%;
+				-webkit-transform:translateX(-50%);
+				bottom:25%;
+				color:red;
+			}
+			.section3 p {
+				top:78%;
+				left:50%;
+				display:none;
+			}
+			.section3 section i{
+				display:block;
+				clip: rect(0, auto, auto, 10px);
+			}
+			.call{
+				width:80%;
+				position: absolute;
+				top:10%;
+				left:50%;
+				-webkit-transform:translateX(-50%);
+			}
+			.section4 p,.section5 p,.section6 p,.section7 p{
+				top:40%;
+				left:50%;
+				display:none;
+			}
+			.section5 p,.section6 p{text-align:left;}
+			.section6 p{top:22%;}
+			.more{
+				position:fixed;
+				width:100%;
+				bottom:5px;
+				padding:5px 0;
+			}
+			.more img{width:20px;height:auto;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">服务流程</h1>
+		</header>
+		<div class="mui-content">
+			<div id="dowebok">
+				<div class="section section1">
+					<article>
+						<section>
+							<span class="on"><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/01.png" />
+						<div class="click"><img src="../../img/service_hyperesources/hand.png"/></div>
+						<p>
+							<strong>第一步</strong>
+							点击"呼叫医生"
+						</p>
+					</article>
+				</div>
+				<div class="section section2">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span class="on"><em>2</em><i></i></span>
+							<span><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/02.png" />
+						<p>选择科室,填写联系电话</p>
+						<p class="p2">描述患者情况</p>
+						<p class="p3">最好附上患处照片或见检查单据</p>
+						<h3>最后选择"呼叫医生"</h3>
+					</article>
+				</div>
+				<div class="section section3">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span class="on"><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/03.png" />
+						<div class="call"><img src="../../img/familyDoctor/gif_phone.gif" alt="" /></div>
+						<p>问题提交后，系统会为你您匹配合适<br />的医生，通常需要1~3分钟</p>
+					</article>
+				</div>
+				<div class="section section4">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span class="on"><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/04.png" />
+						<p>医生接单后，你可以看到接单医生的信息，并查看医生的详细介绍。</p>
+					</article>
+				</div>
+				<div class="section section5">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span class="on"><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/05.png" />
+						<p>医生会仔细阅读您的病情和图片，一般在接单后1分钟内来电。来电号码为400开头，注意不要拒接</p>
+					</article>
+				</div>
+				<div class="section section6">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span class="on"><em>5</em><i></i></span>
+							<span><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/06.jpg" />
+						<p>通常在10分钟内医生为您解答"是什么问题"、"下一步怎么办"等问题，挂断电话后，您需要回到APP中支付医生19.9元的咨询费，并对医生的服务做出评价，如果您认为服务不好，可以拒绝支付，提出申诉，会有专门的客服人员为您解决(因您购买的保险责任范围不同，可能会出现健e卡不能使用，需要支付现金的情况)</p>
+					</article>
+				</div>
+				<div class="section section7">
+					<article>
+						<section>
+							<span><em>1</em><i></i></span>
+							<span><em>2</em><i></i></span>
+							<span><em>3</em><i></i></span>
+							<span><em>4</em><i></i></span>
+							<span><em>5</em><i></i></span>
+							<span class="on"><em>6</em><i></i></span>
+						</section>
+						<img src="../../img/service_hyperesources/07.png" />
+						<p>咨询结束后，即可在咨询记录里收听本次咨询的录音哟。此外医生还会给您发送文字总计，供您查看</p>
+					</article>
+				</div>
+			</div>
+			<div class="more"><img src="../../img/btn_down.png"/></div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/code/jquery-1.8.3.min.js"></script>
+	<script src="../../js/code/jquery.fullPage.min.js"></script>
+	<script src="../../js/code/jquery.easing.min.js"></script>
+	<script src="../../js/familyDoctor/Service_process.js"></script>
+</html>

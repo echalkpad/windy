@@ -1,0 +1,44 @@
+var healthExaminationOrderDetali = {};
+var orderDetali1 = document.getElementById("healthExaminationOrderDetali1"),
+	orderDetali2 = document.getElementById("healthExaminationOrderDetali2"),
+	orderDetali3 = document.getElementById("healthExaminationOrderDetali3"),
+	orderDetali4 = document.getElementById("healthExaminationOrderDetali4"),
+	orderDetali5 = document.getElementById("healthExaminationOrderDetali5"),
+	orderDetali6 = document.getElementById("healthExaminationOrderDetali6"),
+	orderDetali7 = document.getElementById("healthExaminationOrderDetali7"),
+	oRemark = document.getElementById("healthExaminationOrderDetali-remark"),
+	oCoupons = document.getElementById("healthExaminationOrderDetali-coupons"),
+	oPay = document.getElementById("healthExaminationOrderDetali-pay"),
+	oAppraise = document.getElementById("healthExaminationOrderDetali-appraise");
+mui.plusReady(function() {
+	var self = plus.webview.currentWebview();
+	var type = self.type;
+	healthExaminationOrderDetali.type(type);
+})
+healthExaminationOrderDetali.type = function(type) {
+	switch (type) {
+		case 'spaOrderList1':
+			orderDetali1.style.display = 'block';
+			oRemark.style.display = 'block';
+			break;
+		case 'spaOrderList2':
+			orderDetali2.style.display = 'block';
+			oRemark.style.display = 'block';
+			oCoupons.style.display = 'block';
+			oPay.style.display = 'block';
+			break;
+		case 'spaOrderList3':
+			orderDetali3.style.display = 'block';
+			oAppraise.style.display = 'block';
+			break;
+		case 'spaOrderList4':
+			orderDetali4.style.display = 'block';
+			break;
+		case 'spaOrderList5':
+			orderDetali5.style.display = 'block';
+		case 'cancal':
+			orderDetali6.style.display = 'block';
+		case 'back':
+			orderDetali7.style.display = 'block';
+	}
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				font-size: 16px;
+			}
+			
+			.mui-table-view-cell span,
+			.mui-table-view-cell input {
+				max-width: 56%;
+				font-size: 14px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.mui-table-view-cell input {
+				border: 0;
+				text-align: right;
+			}
+			
+			.head-pic {
+				line-height: 60px;
+			}
+			
+			.head-pic img {
+				width: 60px;
+				height: 60px;
+				float: right;
+				border-radius: 50%;
+				margin-right: 25px;
+			}
+			
+			#userPicture .mui-table-view {
+				border-radius: 8px;
+			}
+			
+			#userPicture .mui-table-view-cell {
+				font-size: 14px;
+			}
+			/*修改头像*/
+			
+			#userPicture .avatar {
+				color: #999;
+				font-size: 12px;
+			}
+			
+			.mui-btn,
+			button,
+			input[type=button],
+			input[type=reset],
+			input[type=submit] {
+				border: 0;
+				background: none;
+			}
+			
+			.mui-btn-blue,
+			.mui-btn-primary,
+			input[type=submit] {
+				background: none;
+				border: 0;
+				color: #333;
+			}
+			
+			.mui-dtpicker-title {
+				display: none;
+			}
+			
+			.mui-picker {
+				background: #fff;
+			}
+			
+			.btn-add {
+				line-height: 44px!important;
+			}
+			
+			.determine {
+				color: #fff!important;
+			}
+			
+			.mui-table-view:after,
+			.mui-table-view:before {
+				height: 0;
+			}
+			
+			.mui-content>.mui-table-view:first-child {
+				margin-top: 0;
+			}
+			
+			.addFamily-l {
+				float: left;
+				margin: 0!important;
+				padding-left: 0!important;
+				padding-top: 5px!important;
+				font-size: 16px!important;
+			}
+			
+			.addFamily-r {
+				height: 28px!important;
+				padding: 0!important;
+				float: right;
+				margin-bottom: 0!important;
+				color: #929292!important
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">新增家人</h1>
+			<a href="" class="btn-add mui-pull-right" id="submitFamily" style="font-size:14px;line-height: 40px;">完成</a>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right head-pic">头像<img src="" onerror="this.src='../../img/default/huiyuan_touxiang.png';this.onerror=null" id="mePic"/></a>
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">家人姓名</span><input class="addFamily-r" type="text" name="" id="nameResult" placeholder="请输入家人姓名" />
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="meRelation" class="mui-navigate-right">关系<span class="mui-badge mui-badge-inverted" id="relationResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="meSex" class="mui-navigate-right">性别<span class="mui-badge mui-badge-inverted" id="sexResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" class="mui-navigate-right" id="mebirthday" data-options='{"type":"date","beginYear":1969,"endYear":2016}'>生日<span class="mui-badge mui-badge-inverted" id="birthResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">手机</span><input style='max-width:80%' class="addFamily-r" type="number" name="" id="phoneNum" placeholder="用于接收预约的短信，请谨慎填写" />
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="" id="mePapers" class="mui-navigate-right">证件类型<span class="mui-badge mui-badge-inverted" id="papersResult">请选择</span></a>
+				</li>
+				<li class="mui-table-view-cell" id="">
+					<span class="addFamily-l">证件号码</span><input class="addFamily-r" type="number" name="" id="idnumber" placeholder="请输入证件号码" />
+				</li>
+			</ul>
+			<ul class="mui-table-view border-t">
+				<li class="mui-table-view-cell">
+					<div>生日提醒</div>
+					<div class="mui-switch mui-switch-mini mui-active" id="birthReminder">
+						<div class="mui-switch-handle "></div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div>接收用药提醒</div>
+					<div class="mui-switch mui-switch-mini mui-active" id="medicationReminder">
+						<div class="mui-switch-handle "></div>
+					</div>
+				</li>
+			</ul>
+			<div id="userPicture" class="mui-popover mui-popover-bottom mui-popover-action ">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell avatar"><a href="#">修改头像</a></li>
+					<li class="mui-table-view-cell">
+						<a href="#" id="getCamera">拍照</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="#" id="getCameraFOrPhone">从手机相册选择</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="#userPicture">取消</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/core/config.js"></script>
+		<script src="../../js/core/common.js"></script>
+		<script src="../../js/mui.picker.min.js"></script>
+		<script src="../../js/me/addFamily.js"></script>
+		<script src="../../js/route.js"></script>
+	</body>
+
+</html>

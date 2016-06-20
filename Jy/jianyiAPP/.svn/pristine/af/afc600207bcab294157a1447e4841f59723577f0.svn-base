@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JianyiAPP</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content{
+				background:none;
+			}
+			.mui-table-view{
+				margin:0 0 15px;
+			}
+			.mui-table-view{
+				overflow: hidden;
+			}
+			.mui-table-view h2{
+				font-size:14px;
+				float:left;
+				width:75px;
+				line-height:21px;
+				color:#777;
+			}
+			.mui-table-view strong{
+				font-weight:normal;
+				color:#f00;
+				font-size:14px;
+			}
+			.mui-table-view span{
+				float:left;
+				font-size:14px;
+				color:#444;
+				display:inline-block;
+				vertical-align:middle;
+			}
+			.lettersapcing2 h2{
+				letter-spacing:12px;
+			}
+			.lettersapcing3 h2{
+				letter-spacing:7px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav mui-pull-left" id="orderDetailsSeeBackCellId"></a>
+			<h1 class="mui-title">订单详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><h2>订单状态</h2><strong id="slowDetailsSeeStrongid">待就诊</strong></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>医&nbsp;生</h2><span id="slowDetailsSeeSpanNameID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊时间</h2><span id="slowDetailsSeeSpanTimeID"></span></li>
+				<li class="mui-table-view-cell"><h2>就诊地址</h2><span id="slowDetailsSeeAddressID"></span></li>
+				<input type="hidden" id="slowDetailsSeeOrderNoID" value="" />
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>就诊人</h2><span id="slowDetailsSeePatientID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>身份证</h2><span id="slowDetailsSeeIdNumberID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>手&nbsp;机</h2><span id="slowDetailsSeePhoneID"></span></li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell lettersapcing3"><h2>咨询费</h2><span id="slowDetailsSeeConsultingPriceID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>保证金</h2><span id="slowDetailsSeeEnsureID"></span></li>
+				<li class="mui-table-view-cell lettersapcing3"><h2>现金券</h2><span id="slowDetailsSeeCashCouponID"></span></li>
+				<li class="mui-table-view-cell lettersapcing2"><h2>合&nbsp;计</h2><strong id="slowDetailsSeeTotalPriceID"></strong></li>
+			</ul>
+		</div>
+	</body>
+	<script src="../../js/juicer-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/SlowExperts/slowOrderDetailsSee.js"></script>
+	<script src="../../js/route.js"></script>
+</html>

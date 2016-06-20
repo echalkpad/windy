@@ -1,0 +1,169 @@
+//我的家人页面
+document.getElementById("goMefamily").addEventListener('tap', function() {
+	mainIndex.isGoMeFamily();
+})
+document.addEventListener('plusready', function() {
+	//初始化首页轮播图片
+	mainIndex.initSliderBanner();
+	//初始化主页健康咨询
+	mainIndex.initMainConsultationList(1, 10);
+	var indexHealthNetworkPage = plus.webview.getWebviewById('indexHealthNetwork');
+	if (indexHealthNetworkPage) {
+		indexHealthNetworkPage.appendJsFile('../js/city.js');
+	}
+	//网络监控
+	document.addEventListener("netchange", function() {
+		var nt = plus.networkinfo.getCurrentType();
+		switch (nt) {
+			case plus.networkinfo.CONNECTION_ETHERNET:
+			case plus.networkinfo.CONNECTION_WIFI:
+				document.getElementById("noNetwork").style.display = 'none';
+				break;
+			case plus.networkinfo.CONNECTION_CELL2G:
+			case plus.networkinfo.CONNECTION_CELL3G:
+			case plus.networkinfo.CONNECTION_CELL4G:
+				document.getElementById("noNetwork").style.display = 'none';
+				break;
+			default:
+				document.getElementById("noNetwork").style.display = 'block';
+				break;
+		}
+	}, false);
+});
+var mainIndex = {
+	initSliderBanner: function() {
+		var requestPictures = "flag=nindex";
+		jyapp.getApi({
+			method: 'Comment/Pictures',
+			data: requestPictures,
+			timeout: 10000,
+			onsuccess: function(response) {
+				if (response.data && response.data.list && response.data.list.length > 0) {
+					var dataValues = response.data.list;
+					var html = '';
+					var html2 = '';
+					if (dataValues) {
+						html += '<div class="mui-slider-item mui-slider-item-duplicate" url="' + dataValues[dataValues.length - 1].URL + '" description="' + dataValues[dataValues.length - 1].Description + '">';
+						html += '<a href="#">';
+						html += '<img src="' + dataValues[dataValues.length - 1].Pic + '"}>';
+						html += '</a>'
+						html += '</div>';
+						for (var i in dataValues) {
+							html += '<div class="mui-slider-item mui-slider-item-duplicate" url="' + dataValues[i].URL + '" description="' + dataValues[i].Description + '">';
+							html += '<a href="#">';
+							html += '<img src="' + dataValues[i].Pic + '"}>';
+							html += '</a>'
+							html += '</div>';
+							if (i == 0) {
+								html2 += '<div class="mui-indicator mui-active"></div>';
+							} else {
+								html2 += '<div class="mui-indicator"></div>';
+							}
+						}
+
+						html += '<div class="mui-slider-item mui-slider-item-duplicate" url="' + dataValues[0].URL + '" description="' + dataValues[0].Description + '">';
+						html += '<a href="#">';
+						html += '<img src="' + dataValues[0].Pic + '"}>';
+						html += '</a>'
+						html += '</div>';
+					}
+
+					document.getElementById('mainIndexBannerDivID').innerHTML = html;
+					document.getElementById('mainIndexBannerDiv2ID').innerHTML = html2;
+
+					//获得slider插件对象
+					mui('.mui-slider').slider({
+						interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+					});
+				} else {
+					document.getElementById('sliderDivShowID').style.display = 'none';
+				}
+			},
+			onerror: function(e) {
+				console.log("initSliderBanner:" + e);
+			}
+		});
+	},
+	initMainConsultationList: function(pageIndex, pageSize) {
+		var requestConsultation = "pageIndex=" + pageIndex + "&pageSize=" + pageSize;
+		jyapp.getApi({
+			method: 'HealthConsultation/HealthConsultationList',
+			data: requestConsultation,
+			timeout: 10000,
+			onsuccess: function(response) {
+//				console.log(JSON.stringify(response));
+				if (response && response.data && response.data.list && response.data.list.length > 0) {
+					var dataValues = response.data.list;
+					var html = '';
+					if (dataValues) {
+						for (var i in dataValues) {
+							var endLen = dataValues[i].CreateTime.length - 2;
+							var time = dataValues[i].CreateTime.substring(6, endLen);
+							html += '<li class="mui-table-view-cell mui-media ">';
+							html += '<a href="">';
+							html += '<input type="hidden" value="' + dataValues[i].ID + '" />';
+							html += '<img class="mui-media-object mui-pull-left meta-img" src="' + dataValues[i].Pic2 + '" }>';
+							html += '<div class="mui-media-body">';
+							html += '<h3 class="f15 ellipsis">' + dataValues[i].Title + '</h3>';
+							html += '<time>' + commomUtil.formatStringToDate(time) + '</time>';
+							html += '<span class="rq f12">人气 ' + dataValues[i].Popularity + '</span>';
+							html += '</div>';
+							html += '</a>';
+							html += '</li>';
+						}
+					}
+					document.getElementById('jkzx').innerHTML = html;
+				}
+
+			},
+			onerror: function(e) {
+				console.log("initMainConsultationList:" + e);
+			}
+		});
+	},
+	familyDoctorInfo: function() {
+		mui.openWindow({
+			id: 'indexFamilyDoctor',
+			url: "../html/familyDoctor/indexFamilyDoctor.html"
+		});
+	},
+	isGoMeFamily: function() {
+		var url = 'profile/family';
+		jyapp.getApi({
+			method: url,
+			onsuccess: function(data) {
+				//				console.log(JSON.stringify(data))
+				if (data.data == null) {
+					mui.openWindow({
+						id: 'meFamily',
+						url: "../html/me/meFamilyNone.html",
+						createNew: true,
+					});
+				} else {
+					mui.openWindow({
+						id: 'meFamily',
+						url: "../html/me/meFamily.html",
+						createNew: true,
+					});
+				}
+			},
+			onerror: function(e) {
+				console.log(JSON.stringify(e))
+				mui.toast(e);
+			}
+		});
+	}
+}
+
+mui.init({
+	preloadPages: [{
+		url: 'healthNetwork/indexHealthNetwork.html',
+		id: 'indexHealthNetwork'
+	}, {
+		url: 'healthInformation/indexHealthInformation.html',
+		id: 'indexHealthInformation'
+	}],
+	preloadLimit: 5 //预加载窗口数量限制(一旦超出,先进先出)默认不限制
+});
+//绑定家庭医生按钮事件
+document.getElementById("familyDoctor").addEventListener("tap", mainIndex.familyDoctorInfo);

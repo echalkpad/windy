@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<style type="text/css">
+			.mui-content {
+				background: none;
+			}
+			
+			.mui-table-view-cell {
+				font-size: 14px;
+			}
+			
+			.mui-table-view-cell span i {
+				margin: 0 3px;
+				color: #ddd;
+			}
+			
+			.head-pic h3 {
+				font-size: 16px;
+				line-height: 36px;
+			}
+			
+			.head-pic img {
+				width: 60px;
+				height: 60px!important;
+				height: auto;
+				float: left;
+				border-radius: 50%;
+				margin-right: 15px;
+			}
+			
+			h2 {
+				font-size: 16px;
+				padding: 25px 0 15px 50px;
+			}
+			
+			.healthy-info h2 {
+				background: url(../../img/me/icon_my_tijian.png) no-repeat scroll 10px 17px;
+				background-size: 30px 30px;
+			}
+			
+			.basic-info h2 {
+				background: url(../../img/me/icon_my_jiben.png) no-repeat scroll 10px 17px;
+				background-size: 30px 30px;
+			}
+			
+			.medication-info h2 {
+				background: url(../../img/me/icon_my_yongyao.png) no-repeat scroll 10px 17px;
+				background-size: 30px 30px;
+			}
+			
+			.medical-info h2 {
+				background: url(../../img/me/icon_my_jiangkang.png) no-repeat scroll 10px 17px;
+				background-size: 30px 30px;
+			}
+			
+			.mui-table-view-cell span,
+			.mui-table-view-cell input {
+				max-width: 45%;
+				font-size: 14px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.mui-table-view-cell input {
+				border: 0;
+				text-align: right;
+			}
+			
+			.medical-info article {
+				background: #fff;
+				margin-bottom: 10px;
+			}
+			
+			.medical-info article h3 {
+				color: #666;
+				padding: 15px 14px;
+				font-size: 15px;
+			}
+			
+			.medical-info p {
+				margin: 0;
+			}
+			
+			.btn-add {
+				color: rgba(255, 255, 255, .9);
+			}
+			
+			.determine {
+				color: #fff!important;
+			}
+			
+			.mui-popover.mui-popover-action {
+				bottom: 30%;
+				width: 92%;
+				left: 50%;
+				-webkit-transform: translateX(-50%)!important;
+			}
+			
+			.pup {
+				background: #fff!important;
+				border-radius: 10px!important;
+			}
+			
+			.pup-header {
+				text-align: center;
+				line-height: 50px;
+				height: 40px;
+				font-size: 16px;
+				color: #666;
+			}
+			
+			.pup-foot {
+				width: 100%;
+				color: #888;
+				font-size: 14px;
+				overflow: hidden;
+				border-top: 1px solid #ddd;
+			}
+			
+			.pup-foot .mui-btn {
+				background: none;
+				border: 0;
+				padding: 0 15px;
+				line-height: 50px;
+				width: 50%;
+				float: left;
+			}
+			
+			.pup-foot .btn-ok {
+				border-right: 1px solid #ddd;
+				color: #00b6f3;
+			}
+			
+			.pup-foot .btn-cancel {
+				color: #ff5e5e;
+			}
+			
+			.mui-checkbox label,
+			.mui-radio label {
+				color: #666;
+			}
+			
+			.pup-body {
+				background: #fff;
+				height: 130px;
+				position: relative;
+			}
+			
+			.pup-body ol {
+				overflow: hidden;
+				padding: 0 15px;
+				margin: 0;
+			}
+			
+			.pup-body li {
+				width: 33.33%;
+				padding: 0 5px;
+				float: left;
+				list-style: none;
+				margin-bottom: 10px;
+			}
+			
+			.pup-body span {
+				display: block;
+				line-height: 34px;
+				border: 1px solid #ddd;
+				text-align: center;
+				border-radius: 17px;
+				font-size: 14px;
+				color: #666;
+			}
+			
+			.pup-body .selector span {
+				background: #00b6f3;
+				color: #fff;
+			}
+			
+			.twoTable li {
+				width: 43%;
+				float: left;
+			}
+			
+			.twoTable li:nth-child(even) {
+				float: right;
+			}
+			
+			.pup-body .one {
+				width: 100%;
+			}
+			
+			.mui-radio input[type=radio]:checked:before {
+				content: '\e442';
+				color: #00b6f3;
+			}
+			
+			#longWeight span {
+				line-height: 20px;
+			}
+			.mui-table-view-cell span, .mui-table-view-cell input{
+				overflow:hidden!important
+			}
+			.mui-badge{
+				border-radius:initial!important
+			}
+			.mol input[type=number]{
+				padding-right:48px;
+			}
+			.mol i,.persent i{
+				font-style:normal;
+				font-size:13px;
+			}
+			.persent input[type=number]{
+				padding-right:20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康档案</h1>
+			<a class="btn-add mui-pull-right" id="hr-submit" style="font-size:14px;line-height: 40px;">保存</a>
+		</header>
+		<div class="mui-content">
+			<div class="basic-info">
+				<h2>基本信息</h2>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="head-pic" id="basicInfo">
+							<img src="" onerror="this.src='../../img/default/huiyuan_touxiang.png';this.onerror=null" id='mePic' />
+							<section>
+								<h3 id="Name"></h3>
+								<p><span id="Sex"></span><span id='Birthday'></span></p>
+							</section>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" id="longWeight">身高体重<span class="mui-badge mui-badge-inverted"><span id="Height"></span><span id="Weight"></span></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="healthy-info">
+				<h2>健康信息</h2>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right select" id="meHabit">习惯<span class="mui-badge mui-badge-inverted" id="habitResult" me-Habit = '0'></span></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="meLabourStrength">劳动强度<span class="mui-badge mui-badge-inverted" id="labourStrengthResult" LabourIntensity = '0'></span></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="meHouseholdDevices">家用设备<span class="mui-badge mui-badge-inverted" id="householdDevicesResult" HouseholdEquipment = '0'></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="medication-info">
+				<h2>用药信息</h2>
+				<ul class="mui-table-view">
+					<!--<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="drugInfo">我的用药信息<span class="mui-badge mui-badge-inverted"></span></a>
+					</li>-->
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="meAllergy">药物过敏史<span class="mui-badge mui-badge-inverted" id="allergyResult"></span></a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="meMedicalContraindications">用药禁忌症<span class="mui-badge mui-badge-inverted" id="medicalContraindicationsResult" ></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="medical-info">
+				<h2>体检信息</h2>
+				<article>
+					<h3>疾病史</h3>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meGxy">高血压<span class="mui-badge mui-badge-inverted" id="gxyResult" ></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meGxyb">高血压并发症<span class="mui-badge mui-badge-inverted" id="gxybResult" ></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meTnb">糖尿病<span class="mui-badge mui-badge-inverted" id="tnbResult" ></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meTnbb">糖尿病并发症<span class="mui-badge mui-badge-inverted" id="tnbbResult" ></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meGxz">高血脂<span class="mui-badge mui-badge-inverted" id="gxzResult" ></span></a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="" class="mui-navigate-right" id="meXnxg">心脑血管疾病<span class="mui-badge mui-badge-inverted" id="xnxgResult" ></span></a>
+						</li>
+					</ul>
+				</article>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="" class="mui-navigate-right" id="meMedicationHistory">用药史<span class="mui-badge mui-badge-inverted" id="medicationHistoryResult" ></span></a>
+					</li>
+					<li class="mui-table-view-cell sr mol">
+						<a class="mui-navigate-right">空腹血糖<input type="number" class="mui-badge mui-badge-inverted" value="" placeholder="0" id="FastingBloodGlucose" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">mmol/l</i></a>
+					</li>
+					<li class="mui-table-view-cell sr persent">
+						<a class="mui-navigate-right">糖化血红蛋白<input type="number" class="mui-badge mui-badge-inverted" value=""  placeholder="0.0" id="GlycosylatedHemoglobin" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">%</i></a>
+					</li>
+					<li class="mui-table-view-cell sr mol">
+						<a class="mui-navigate-right">总胆固醇<input type="number" class="mui-badge mui-badge-inverted" value="" placeholder="0.0" id="TotalCholesterol" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">mmol/l</i></a>
+					</li>
+					<li class="mui-table-view-cell sr mol">
+						<a class="mui-navigate-right">甘油三脂<input type="number" class="mui-badge mui-badge-inverted" value="" placeholder="0.0" id="GlycerinThreeFat" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">mmol/l</i></a>
+					</li>
+					<li class="mui-table-view-cell sr mol">
+						<a class="mui-navigate-right">高密度脂蛋白<input type="number" class="mui-badge mui-badge-inverted" value="" placeholder="0.0" id="HighDensityLipoprotein" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">mmol/l</i></a>
+					</li>
+					<li class="mui-table-view-cell sr mol">
+						<a class="mui-navigate-right">低密度脂蛋白<input type="number" class="mui-badge mui-badge-inverted" value=""  placeholder="0.0" id="LowDensityLipoprotein" oninput="commomUtil.telInput(event);" onkeyup="obtain(this)"/><i class="mui-badge mui-badge-inverted">mmol/l</i></a>
+					</li>
+				</ul>
+			</div>
+			<div id="habit" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">习惯</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="mui-scroll">
+							<li cod='1'><span>饮酒</span></li>
+							<li cod='2'><span>吸烟</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#habit" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="labourStrength" class="mui-popover mui-popover-bottom mui-popover-action pup">
+				<div class="pup-header">劳动强度</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='0'><span>卧床休息</span></li>
+							<li cod='1'><span>轻体力</span></li>
+							<li cod='2'><span>中体力</span></li>
+							<li cod='3'><span>重体力</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#labourStrength" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="householdDevices" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">家用设备</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="mui-scroll">
+							<li cod='1'><span>血糖仪</span></li>
+							<li cod='2'><span>血压仪</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#householdDevices" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="allergy" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">药物过敏史</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="mui-scroll">
+							<li cod='1'><span>青霉素类</span></li>
+							<li cod='2'><span>头孢类</span></li>
+							<li cod='3'><span>磺胺类</span></li>
+							<li cod='4'><span>阿司匹林</span></li>
+							<li cod='5'><span>别嘌呤</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#allergy" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="medicalContraindications" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">用药禁忌症</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>肝功能异常</span></li>
+							<li cod='2'><span>肾功能异常</span></li>
+							<li cod='3'><span>心功能异常</span></li>
+							<li cod='4'><span>肺功能异常</span></li>
+							<li cod='5'><span>水肿</span></li>
+							<li cod='6'><span>胃肠道反应</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#medicalContraindications" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="medicationHistory" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">用药史</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>利尿剂</span></li>
+							<li cod='2'><span>非甾体抗炎药</span></li>
+							<li cod='3'><span>抗高血压药</span></li>
+							<li cod='4'><span>抗凝药</span></li>
+							<li cod='5'><span>降低脂质药物</span></li>
+							<li cod='8'><span>抗糖尿病药</span></li>
+							<li cod='6'><span>抗心律失常药物</span></li>
+							<li cod='9'><span>正性肌力药物</span></li>
+							<li cod='10'><span>抗心绞痛药</span></li>
+							<li class="one" cod='7'><span>β肾上腺素受体阻断剂</span></li>
+							<li style="float:left;" cod='11'><span>抗血栓药</span></li>
+							<li style="float:right;" cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#medicationHistory" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="gxy" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">高血压</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>原发性高血压</span></li>
+							<li cod='2'><span>继发性高血压</span></li>
+							<li cod='2'><span>高血压家族史</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#gxy" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="gxyb" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">高血压并发症</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>高血压脑病</span></li>
+							<li cod='2'><span>主动脉夹层</span></li>
+							<li class="one" cod='3'><span>高血压引起动脉硬化</span></li>
+							<li class="one" cod='4'><span>高血压性肾损害</span></li>
+							<li class="one" cod='5'><span>高血压引起视网膜动脉硬化</span></li>
+							<li style="float:left;" cod='6'><span>眼底改变</span></li>
+							<li style="float: right;" cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#gxyb" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="tnb" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">糖尿病</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='4'><span>糖尿病家族史</span></li>
+							<li cod='1' id="tn1"><span>1型糖尿病</span></li>
+							<li cod='2' id="tn2"><span>2型糖尿病</span></li>
+							<li cod='3'><span>妊娠期糖尿病</span></li>
+							<li cod='5'><span>特殊类型糖尿病</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#tnb" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="tnbb" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">糖尿病并发症</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>糖尿病肾病</span></li>
+							<li cod='3'><span>糖尿病足</span></li>
+							<li class="one" cod='2'><span>糖尿病性视网膜病变</span></li>
+							<li class="one" cod='4'><span>糖尿病合并感染</span></li>
+							<li class="one" cod='5'><span>呼吸道/泌尿道/皮肤/口腔</span></li>
+							<li class="one" cod='6'><span>糖尿病并发神经末梢感觉障碍</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#tnbb" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="gxz" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">高血脂</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='0'><span>无高血脂</span></li>
+							<li cod='1'><span>高血脂</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#gxz" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+			<div id="xnxg" class="mui-popover mui-popover-bottom mui-popover-action pup more">
+				<div class="pup-header">心脑血管疾病</div>
+				<div class="pup-body">
+					<div class="mui-scroll-wrapper">
+						<ol class="twoTable mui-scroll">
+							<li cod='1'><span>心绞痛</span></li>
+							<li cod='2'><span>心力衰竭</span></li>
+							<li cod='3'><span>心肌梗塞</span></li>
+							<li cod='5'><span>其他心脏病</span></li>
+							<li class="one" cod='4'><span>心血管疾病家族史</span></li>
+							<li cod='6'><span>出血性脑卒中</span></li>
+							<li cod='7'><span>缺血性脑卒中</span></li>
+							<li cod='8'><span>脑卒中家族史</span></li>
+							<li cod='0'><span>无</span></li>
+						</ol>
+					</div>
+				</div>
+				<div class="pup-foot">
+					<a href="#xnxg" class="mui-btn btn-ok">确定</a>
+					<a href="javascript:;" class="mui-btn btn-cancel">清除</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/core/config.js"></script>
+	<script src="../../js/core/common.js"></script>
+	<script src="../../js/route.js"></script>
+	<script src="../../js/me/healthRecords.js"></script>
+	<script src="../../js/util/common_util.js"></script>
+	<script src="../../js/code/jquery-1.3.2.min.js"></script>
+
+</html>
